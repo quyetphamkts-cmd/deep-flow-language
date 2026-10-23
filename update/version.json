@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.9",
- "notes": "Màn hình Nghe mới (biểu tượng chế độ phát, sóng âm để tua, nút Luyện nói); sửa tra từ, đọc từ, tạo phụ đề nhiều bài.",
+ "ver": "1.0.1-beta.10",
+ "notes": "Sóng âm trên thanh phát nhỏ, chạm để tua.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.10",
+   "d": "23/10/2026",
+   "items": [
+    "Thanh phát nhỏ ở Thư viện / Từ vựng hiện sóng âm cả bài: phần đã nghe màu cam, chạm hoặc kéo trên sóng để tua"
+   ]
+  },
   {
    "v": "1.0.1-beta.9",
    "d": "23/10/2026",
