@@ -1,81 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Widget màn hình chính: giống màn hình Nghe — câu đang phát, tên bài, nút điều khiển -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Widget màn hình chính: giống bảng phát nhạc trên thông báo — tên bài, câu đang đọc (đủ cả câu),
+     thanh tiến độ + thời gian, nút chế độ phát · lùi · phát/dừng · tiếp · tắt -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/w_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/widget_bg"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp">
+    android:padding="14dp">
+
+    <ImageView
+        android:id="@+id/w_art"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-6dp"
+        android:alpha="0.18"
+        android:scaleType="fitCenter"
+        android:importantForAccessibility="no"
+        android:src="@mipmap/ic_launcher_foreground"/>
 
     <LinearLayout
-        android:id="@+id/w_body"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/w_line"
+        <LinearLayout
+            android:id="@+id/w_body"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:text="Deep Flow Language"
-            android:textColor="#FFE9EDF4"
-            android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/w_title"
+            <TextView
+                android:id="@+id/w_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Deep Flow Language"
+                android:textColor="#FF9AA4B8"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/w_line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:text="Chạm để mở app"
+                android:textColor="#FFFFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="11sp"
+                android:autoSizeMaxTextSize="19sp"
+                android:autoSizeStepGranularity="1sp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/w_prog"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="8dp"
+            android:max="1000"
+            android:progress="0"
+            android:progressTint="#FFFFB020"
+            android:progressBackgroundTint="#55FFFFFF"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:gravity="center"
-            android:singleLine="true"
-            android:ellipsize="end"
-            android:text="Chạm để mở app"
-            android:textColor="#FF8B95A9"
-            android:textSize="12sp"/>
+            android:orientation="horizontal">
+
+            <Chronometer
+                android:id="@+id/w_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFB8C0D0"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/w_dur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#FFB8C0D0"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/w_mode"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Chế độ phát"
+                android:src="@drawable/ic_pm_ralb"/>
+
+            <ImageButton
+                android:id="@+id/w_prev"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Lùi"
+                android:src="@drawable/ic_w_prev"/>
+
+            <ImageButton
+                android:id="@+id/w_play"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/widget_play_bg"
+                android:contentDescription="Phát / dừng"
+                android:src="@drawable/ic_w_play"/>
+
+            <ImageButton
+                android:id="@+id/w_next"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Tiếp"
+                android:src="@drawable/ic_w_next"/>
+
+            <ImageButton
+                android:id="@+id/w_close"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Tắt"
+                android:src="@drawable/ic_df_close"/>
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/w_prev"
-            android:layout_width="48dp"
-            android:layout_height="44dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Lùi"
-            android:src="@drawable/ic_w_prev"/>
-
-        <ImageButton
-            android:id="@+id/w_play"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
-            android:background="@drawable/widget_play_bg"
-            android:contentDescription="Phát / dừng"
-            android:src="@drawable/ic_w_play"/>
-
-        <ImageButton
-            android:id="@+id/w_next"
-            android:layout_width="48dp"
-            android:layout_height="44dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Tiếp"
-            android:src="@drawable/ic_w_next"/>
-    </LinearLayout>
-</LinearLayout>
+</FrameLayout>

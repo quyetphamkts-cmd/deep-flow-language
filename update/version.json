@@ -1,16 +1,24 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.47",
- "notes": "Bảng phát nhạc ở thanh thông báo / màn hình khoá: mỗi lần mở app đều kiểm tra quyền thông báo (trước đây chỉ hỏi 1 lần và cờ “đã hỏi” có thể bị đồng bộ từ máy khác sang nên không hỏi lại); thiếu quyền thì xin lại, bị tắt hẳn thì báo cách bật · Cài đặt → Phiên bản: dòng chẩn đoán hiện thêm trạng thái quyền thông báo",
+ "ver": "1.0.1-beta.48",
+ "notes": "Widget màn hình chính làm lại giống bảng phát nhạc trên thông báo (cần cài APK beta 48): tên bài ở trên, câu đang đọc hiện ĐẦY ĐỦ cả câu (chữ tự thu nhỏ cho vừa), thanh tiến độ + thời gian đang phát / tổng thời gian, 5 nút: chế độ phát · lùi · phát/dừng · tiếp · tắt; chạm vào chữ để mở app · Widget mặc định cao hơn (4×3 ô) và kéo giãn được",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 11,
-  "versionName": "1.0.1-beta.34",
+  "versionCode": 12,
+  "versionName": "1.0.1-beta.48",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.48",
+   "d": "23/10/2026",
+   "items": [
+    "Widget màn hình chính làm lại giống bảng phát nhạc trên thông báo (cần cài APK beta 48): tên bài ở trên, câu đang đọc hiện ĐẦY ĐỦ cả câu (chữ tự thu nhỏ cho vừa), thanh tiến độ + thời gian đang phát / tổng thời gian, 5 nút: chế độ phát · lùi · phát/dừng · tiếp · tắt; chạm vào chữ để mở app",
+    "Widget mặc định cao hơn (4×3 ô) và kéo giãn được"
+   ]
+  },
   {
    "v": "1.0.1-beta.47",
    "d": "23/10/2026",

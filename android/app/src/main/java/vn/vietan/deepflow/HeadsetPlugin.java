@@ -115,6 +115,9 @@ public class HeadsetPlugin extends Plugin {
                 .putString("wLine", call.getString("line", ""))
                 .putString("wTitle", call.getString("title", ""))
                 .putBoolean("wPlaying", Boolean.TRUE.equals(call.getBoolean("playing", false)))
+                .putFloat("wPos", call.getFloat("pos", 0f))
+                .putFloat("wDur", call.getFloat("dur", 0f))
+                .putLong("wAt", System.currentTimeMillis())
                 .apply();
             DfWidget.refresh(ctx);
         }
