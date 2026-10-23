@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.16",
- "notes": "Vốn từ theo gói từ thông dụng (600–5000 từ).",
+ "ver": "1.0.1-beta.17",
+ "notes": "Thêm Claude + ChatGPT, vốn từ theo trình độ A1–C2/HSK/JLPT/TOPIK, chi tiết từ kèm ví dụ, mức nhớ khi đã học, đồng bộ tự động, tiết kiệm pin.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,20 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.17",
+   "d": "23/10/2026",
+   "items": [
+    "Tích hợp Claude và ChatGPT cùng Gemini: app tự chọn AI mạnh nhất cho từng việc (Claude dịch & giải nghĩa, ChatGPT Whisper tạo phụ đề có mốc thời gian chính xác, Gemini dự phòng/miễn phí); AI nào hết lượt thì chuyển AI khác, hết tất cả mới dùng Google Dịch / Whisper trên máy. Cài đặt → 🔑 API key có chế độ Hiệu quả nhất / Tiết kiệm",
+    "Vốn từ theo trình độ: CEFR A1–C2 (tiếng Anh, Pháp, Đức, Tây Ban Nha, Ý, Nga), HSK 3.0 (Trung), JLPT (Nhật), TOPIK (Hàn); ước tính trình độ vốn từ hiện tại; xem từ mới của từng cấp",
+    "Từ vựng: chạm vào từ để xem chi tiết — nghĩa, câu trong bài (nghe lại được) và ví dụ song ngữ theo nhiều tình huống",
+    "“Đã thuộc” đổi thành “Đã học”; khi đánh dấu đã học chọn mức nhớ (%), mục Đã học xếp bài/album nhớ ít lên trước để ôn lại",
+    "Đồng bộ Google Drive hoàn toàn tự động, chỉ cần chọn Bài học hoặc Bài học + âm thanh",
+    "Chạy nền tiết kiệm pin hơn: không vẽ giao diện khi tắt màn hình / ở nền, giảm số lần ghi dữ liệu",
+    "Nhận diện câu dịch tiếng Việt chính xác hơn khi học tiếng Pháp, Tây Ban Nha, Ý, Đức…; bỏ mục ghi chú “Tự động khớp chữ (AI)”",
+    "Cài đặt: tách “🌐 Ngôn ngữ” (ngôn ngữ học, ngôn ngữ mẹ đẻ) và “🔤 Dịch tự động”; tách “🤖 API AI” (nghe, chép lời, dịch — thêm Claude/ChatGPT bằng nút ＋ Thêm AI khác) và “🔑 API lưu trữ — Google Drive”"
+   ]
+  },
   {
    "v": "1.0.1-beta.16",
    "d": "23/10/2026",
