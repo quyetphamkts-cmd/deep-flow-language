@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.44",
- "notes": "📘 Đánh dấu Chưa học cho bài nghe thử / bấm nhầm: ở ⋯ của bài, ⋯ của album, hoặc chọn nhiều bài rồi bấm 📘 Chưa học. App hỏi xác nhận (bài đã học xong phải xác nhận 2 lần); xoá thời gian nghe, số lần nghe, trạng thái học xong & mức nhớ — giữ phụ đề, bản dịch, điểm phát âm, từ đã lưu · 📊 Thanh Tiến độ tổng ở đầu Thư viện: % bài học xong, kèm số bài đang học / chưa học. Mỗi khoá học cũng có thanh tiến độ và % xong ngay dưới tên · 🐞 Sửa lỗi đổi tên khoá học bị tự đổi lại tên cũ khi đồng bộ Google Drive giữa nhiều máy: mỗi cài đặt giờ ghi thời điểm sửa riêng, bản sửa mới hơn luôn được giữ, và đổi tên / sắp xếp khoá học được đồng bộ lên ngay",
+ "ver": "1.0.1-beta.45",
+ "notes": "Phụ đề đã khớp thời gian mà câu bị đảo vị trí: app tự sắp xếp lại ngay khi mở bài (không đợi nghe hết) và lưu lại. App thử cả 2 cách — xếp câu theo mốc thời gian, hoặc giữ thứ tự chữ rồi xếp lại mốc thời gian — và chọn cách mà độ dài câu khớp với thời lượng nói hơn; sau đó căn lại từng câu theo giọng nói trong âm thanh",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.45",
+   "d": "23/10/2026",
+   "items": [
+    "Phụ đề đã khớp thời gian mà câu bị đảo vị trí: app tự sắp xếp lại ngay khi mở bài (không đợi nghe hết) và lưu lại. App thử cả 2 cách — xếp câu theo mốc thời gian, hoặc giữ thứ tự chữ rồi xếp lại mốc thời gian — và chọn cách mà độ dài câu khớp với thời lượng nói hơn; sau đó căn lại từng câu theo giọng nói trong âm thanh"
+   ]
+  },
   {
    "v": "1.0.1-beta.44",
    "d": "23/10/2026",
