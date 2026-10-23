@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.22",
- "notes": "Hình minh hoạ: tìm ảnh + AI chọn; nút i mô tả cấp vốn từ.",
+ "ver": "1.0.1-beta.23",
+ "notes": "Chuỗi ngày học (streak) trong Thư viện.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.23",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện: hộp thời gian học đổi thành chuỗi ngày học (streak) — số ngày liên tục, các ngày đã học trong tuần, chuỗi dài nhất, tổng thời gian, số bài đã học, số từ vựng"
+   ]
+  },
   {
    "v": "1.0.1-beta.22",
    "d": "23/10/2026",
