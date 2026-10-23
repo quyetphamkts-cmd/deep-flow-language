@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.69",
-  "notes": "Từ điển chung: mỗi từ chỉ tra 1 lần rồi lưu mãi trong máy (phiên âm, từ loại, nghĩa, từ điển Anh – Anh, câu ví dụ). Gặp lại từ đó ở câu hay bài khác thì hiện ngay, không cần mạng, không tốn lượt AI; muốn nghĩa đúng theo câu mới thì bấm 🎯 Nghĩa trong câu này (nghĩa theo từng câu cũng được ghi nhớ). Số từ trong từ điển hiện ở dòng bộ nhớ của Thư viện",
+  "ver": "1.0.1-beta.70",
+  "notes": "Phụ đề tự sửa ngay khi đang nghe: app theo dõi từng câu trong lúc phát — câu nhảy cóc, câu hiện ra lúc không có tiếng, hoặc có tiếng mà không có câu. Thấy lệch liên tục là tự sắp xếp & căn lại phụ đề theo giọng đọc ngay (không đợi nghe hết bài, vẫn giữ đúng chỗ đang nghe); vẫn chưa khớp thì tự nhờ AI nghe lại và căn lại từng câu của bài đang nghe trước tiên",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.70",
+      "d": "24/10/2026",
+      "items": [
+        "Phụ đề tự sửa ngay khi đang nghe: app theo dõi từng câu trong lúc phát — câu nhảy cóc, câu hiện ra lúc không có tiếng, hoặc có tiếng mà không có câu. Thấy lệch liên tục là tự sắp xếp & căn lại phụ đề theo giọng đọc ngay (không đợi nghe hết bài, vẫn giữ đúng chỗ đang nghe); vẫn chưa khớp thì tự nhờ AI nghe lại và căn lại từng câu của bài đang nghe trước tiên"
+      ]
+    },
     {
       "v": "1.0.1-beta.69",
       "d": "24/10/2026",
