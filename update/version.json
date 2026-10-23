@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.46",
- "notes": "Phát dưới nền ổn định hơn: các việc nặng phải giải mã cả file âm thanh (tự tạo phụ đề AI, tự kiểm tra & sắp xếp lại phụ đề) không chạy khi tắt màn hình / app ở nền nữa mà đợi lúc mở app — tránh Android đóng app làm mất nhạc và mất bảng điều khiển phát nhạc",
+ "ver": "1.0.1-beta.47",
+ "notes": "Bảng phát nhạc ở thanh thông báo / màn hình khoá: mỗi lần mở app đều kiểm tra quyền thông báo (trước đây chỉ hỏi 1 lần và cờ “đã hỏi” có thể bị đồng bộ từ máy khác sang nên không hỏi lại); thiếu quyền thì xin lại, bị tắt hẳn thì báo cách bật · Cài đặt → Phiên bản: dòng chẩn đoán hiện thêm trạng thái quyền thông báo",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.47",
+   "d": "23/10/2026",
+   "items": [
+    "Bảng phát nhạc ở thanh thông báo / màn hình khoá: mỗi lần mở app đều kiểm tra quyền thông báo (trước đây chỉ hỏi 1 lần và cờ “đã hỏi” có thể bị đồng bộ từ máy khác sang nên không hỏi lại); thiếu quyền thì xin lại, bị tắt hẳn thì báo cách bật",
+    "Cài đặt → Phiên bản: dòng chẩn đoán hiện thêm trạng thái quyền thông báo"
+   ]
+  },
   {
    "v": "1.0.1-beta.46",
    "d": "23/10/2026",
