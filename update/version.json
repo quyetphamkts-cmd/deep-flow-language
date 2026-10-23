@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.68",
-  "notes": "Hộp chọn (Mô hình, Ngôn ngữ, Cách dịch, Lọc…) mở bảng chọn mới gọn đẹp thay cho bảng mặc định của Android: chữ nhỏ vừa vặn, tên chính đậm + mô tả nhỏ màu xám, dấu ✓ màu cam ở mục đang chọn, nút Quay lại hoặc chạm ra ngoài để đóng",
+  "ver": "1.0.1-beta.69",
+  "notes": "Từ điển chung: mỗi từ chỉ tra 1 lần rồi lưu mãi trong máy (phiên âm, từ loại, nghĩa, từ điển Anh – Anh, câu ví dụ). Gặp lại từ đó ở câu hay bài khác thì hiện ngay, không cần mạng, không tốn lượt AI; muốn nghĩa đúng theo câu mới thì bấm 🎯 Nghĩa trong câu này (nghĩa theo từng câu cũng được ghi nhớ). Số từ trong từ điển hiện ở dòng bộ nhớ của Thư viện",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.69",
+      "d": "24/10/2026",
+      "items": [
+        "Từ điển chung: mỗi từ chỉ tra 1 lần rồi lưu mãi trong máy (phiên âm, từ loại, nghĩa, từ điển Anh – Anh, câu ví dụ). Gặp lại từ đó ở câu hay bài khác thì hiện ngay, không cần mạng, không tốn lượt AI; muốn nghĩa đúng theo câu mới thì bấm 🎯 Nghĩa trong câu này (nghĩa theo từng câu cũng được ghi nhớ). Số từ trong từ điển hiện ở dòng bộ nhớ của Thư viện"
+      ]
+    },
     {
       "v": "1.0.1-beta.68",
       "d": "24/10/2026",
