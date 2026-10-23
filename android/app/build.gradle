@@ -7,8 +7,8 @@ android {
         applicationId "vn.vietan.deepflow"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode (project.findProperty('dfVersionCode') ?: '1') as int
-        versionName (project.findProperty('dfVersionName') ?: '1.0.0')
+        versionCode Integer.parseInt((project.findProperty('dfVersionCode') ?: '1').toString())
+        versionName((project.findProperty('dfVersionName') ?: '1.0.0').toString())
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
