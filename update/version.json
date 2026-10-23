@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.21",
- "notes": "Sửa lỗi không đọc được từ / câu ví dụ (cần APK mới).",
+ "ver": "1.0.1-beta.22",
+ "notes": "Hình minh hoạ: tìm ảnh + AI chọn; nút i mô tả cấp vốn từ.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.22",
+   "d": "23/10/2026",
+   "items": [
+    "Hình minh hoạ từ vựng: tìm ảnh giấy phép mở (Openverse, Wikimedia Commons) rồi để AI xem và chọn ảnh hợp nghĩa nhất trong câu; không có ảnh phù hợp thì AI (Gemini) vẽ. Có lựa chọn Nguồn hình ở tab Từ vựng; ảnh hiện cả trong chi tiết từ, kèm ghi nguồn",
+    "Mỗi cấp vốn từ có nút i tròn bên phải để xem mô tả cấp đó",
+    "Đổi “Ngôn ngữ ứng dụng” thành “Ngôn ngữ phần mềm”"
+   ]
+  },
   {
    "v": "1.0.1-beta.21",
    "d": "23/10/2026",
