@@ -1,16 +1,24 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.18",
- "notes": "Cài đặt chia 3 nhóm; tiết kiệm pin; câu ví dụ khi tra từ.",
+ "ver": "1.0.1-beta.19",
+ "notes": "Sửa nút chế độ phát trên màn hình khoá (cần APK mới); ẩn câu màn hình khoá nằm trong Tiết kiệm pin.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 8,
-  "versionName": "1.0.1-beta.15",
+  "versionCode": 9,
+  "versionName": "1.0.1-beta.19",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.19",
+   "d": "23/10/2026",
+   "items": [
+    "Sửa nút chế độ phát trên màn hình khoá: bấm là đổi chế độ, biểu tượng đổi theo và hiện tên chế độ mới trong 2–3 giây (cần APK mới)",
+    "“Ẩn câu đang đọc trên màn hình khoá” chuyển vào mục Tiết kiệm pin; bật Chế độ tiết kiệm pin là tự ẩn, tắt thì chữ chạy lại"
+   ]
+  },
   {
    "v": "1.0.1-beta.18",
    "d": "23/10/2026",

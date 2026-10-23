@@ -81,4 +81,16 @@ if (!svc.includes('dfDiag')) {
     '            dfDiag = "sdk=" + Build.VERSION.SDK_INT + " icMode=" + dfIcon("dfmode") + " icClose=" + dfIcon("dfclose") + " hMode=" + (plugin != null && plugin.hasActionHandler("dfmode")) + " hClose=" + (plugin != null && plugin.hasActionHandler("dfclose")) + " t=" + System.currentTimeMillis() / 1000;\n', 'diag');
   fs.writeFileSync(svcF, svc);
 }
+// mỗi chế độ phát dùng mã nút riêng để màn hình khoá (Samsung…) chịu cập nhật biểu tượng khi đổi chế độ
+if (!svc.includes('DF_UID')) {
+  svc = rep(svc, 'b.addCustomAction(new PlaybackStateCompat.CustomAction.Builder(n, dfLabel(n), ic).build());',
+    'b.addCustomAction(new PlaybackStateCompat.CustomAction.Builder(n.equals("dfmode") ? n + ":" + getSharedPreferences("deepflow", MODE_PRIVATE).getString("pm", "ralb") : n, dfLabel(n), ic).build()); // DF_UID', 'unique id');
+  fs.writeFileSync(svcF, svc);
+}
+cb = fs.readFileSync(cbF, 'utf8');
+if (!cb.includes('DF_UID')) {
+  cb = rep(cb, '    public void onCustomAction(String action, android.os.Bundle extras) {\n        plugin.actionCallback(action);',
+    '    public void onCustomAction(String action, android.os.Bundle extras) {\n        plugin.actionCallback(action != null && action.startsWith("dfmode") ? "dfmode" : action); // DF_UID', 'callback map');
+  fs.writeFileSync(cbF, cb);
+}
 console.log('[patch-media-session] OK');
