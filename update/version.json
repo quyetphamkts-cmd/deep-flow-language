@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.58",
- "notes": "Album lồng nhau như thư mục nguồn: album tên “Unit 1 / Part A” hiện thành thư mục Part A nằm trong Unit 1 (thụt lề theo cấp); thư mục trung gian không có bài riêng hiện 📂 kèm số bài bên trong; bấm để mở / thu gọn cả nhánh · Nút ⊟ Thu gọn tất cả / ⊞ Mở rộng tất cả ở đầu danh sách khoá học: thu gọn mọi album và thư mục, hoặc mở rộng toàn bộ",
+ "ver": "1.0.1-beta.59",
+ "notes": "Bài nguồn từ Google Drive phát không được: app tự thử cách khác — tải cả file bằng API key, rồi bằng tài khoản Google đã đăng nhập — phát tiếp đúng chỗ và giữ bản tải để lần sau nghe ngay · Nếu vẫn không được, app báo rõ lý do: Google tạm giới hạn lượt tải file (quá nhiều lượt tải), file chưa chia sẻ / đã xoá, chủ file tắt quyền tải, API key sai hoặc chưa bật Google Drive API, hay mất mạng",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.59",
+   "d": "23/10/2026",
+   "items": [
+    "Bài nguồn từ Google Drive phát không được: app tự thử cách khác — tải cả file bằng API key, rồi bằng tài khoản Google đã đăng nhập — phát tiếp đúng chỗ và giữ bản tải để lần sau nghe ngay",
+    "Nếu vẫn không được, app báo rõ lý do: Google tạm giới hạn lượt tải file (quá nhiều lượt tải), file chưa chia sẻ / đã xoá, chủ file tắt quyền tải, API key sai hoặc chưa bật Google Drive API, hay mất mạng"
+   ]
+  },
   {
    "v": "1.0.1-beta.58",
    "d": "23/10/2026",
