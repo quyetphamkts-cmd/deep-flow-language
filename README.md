@@ -47,3 +47,4 @@ App chỉ dùng 2 quyền: thư mục ẩn riêng của app (`drive.appdata`) v�
 - **Cách đánh số:** bản thử nghiệm là `x.y.z-beta.N` (vd `1.0.1-beta.1`, `1.0.1-beta.2`…), mỗi lần sửa chỉ tăng N. Khi ổn định thì phát hành bản chính thức `x.y.z` (vd `1.0.1`) — bản chính thức luôn mới hơn mọi bản beta cùng số.
 - Trường `"web"` giữ dạng số thường (vd `1.0.1`) chỉ để APK bản đầu (giao diện 1.0.0) nhận ra có cập nhật; app từ 1.0.1-beta.1 trở đi đọc `"ver"`.
 - **Đổi phần lõi Android:** tăng `apk.versionCode` và `apk.versionName` trong `update/version.json` (và `minNative` nếu bản web mới cần lõi mới) → GitHub tự build APK mới.
+- **Ghi chú phát hành:** mỗi bản mới thêm một mục vào đầu `CHANGELOG` trong `www/index.html` và mảng `"changelog"` trong `update/version.json` (cùng nội dung, mới nhất ở trên). App hiện ghi chú khi báo có bản mới và một lần sau khi cập nhật xong.

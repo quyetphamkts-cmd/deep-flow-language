@@ -133,6 +133,7 @@ select{background:var(--p2);border:1px solid var(--ln);border-radius:10px;paddin
 .box .sw>span{flex:none}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center;z-index:20}
 .modal.on{display:flex}
+.rel h4{margin:12px 0 4px;font-size:14px}.rel h4 small{color:var(--mu);font-weight:400;margin-left:6px}.rel ul{margin:0;padding-left:20px}.rel li{margin:3px 0;font-size:13.5px;line-height:1.45}
 .box{background:var(--p1);width:100%;max-width:680px;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom));max-height:88dvh;overflow:auto}
 .box h3{margin:0 0 8px}
 .sheet button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--ln);padding:14px 4px;font-size:15px}
@@ -422,6 +423,8 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    <div class="card">
     <div class="sw"><span>Phiên bản app: <b id="verWeb"></b><span class="nat-on"> · lõi Android <b id="verNat"></b></span></span><button class="btn nat-on" id="updCheck">Kiểm tra cập nhật</button></div>
     <div class="mu" id="updMsg"></div>
+    <div id="relNow" class="rel"></div>
+    <div class="row2" style="justify-content:flex-start"><button class="btn" id="relBtn">📝 Ghi chú phát hành</button></div>
     <div class="row2 nat-on" style="justify-content:flex-start"><button class="btn" id="updReset" hidden>↩ Quay về bản cài gốc</button></div>
    </div>
    <h3>Bộ nhớ</h3>
@@ -517,6 +520,11 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
  <div class="pbar"><i id="aBar"></i></div>
  <div class="mu" id="aMsg">Sẵn sàng.</div>
  <div class="row2"><button class="btn" id="aStop" hidden>Dừng</button><button class="btn" id="aClose">Đóng</button><button class="btn pri" id="aGo">Bắt đầu</button></div>
+</div></div>
+<div class="modal" id="mRel"><div class="box">
+ <h3 id="relTitle">📝 Ghi chú phát hành</h3>
+ <div id="relList" class="rel"></div>
+ <div class="row2"><button class="btn" data-close id="relClose">Đóng</button><button class="btn pri" id="relGo" hidden>Cập nhật ngay</button></div>
 </div></div>
 <div class="modal" id="mOut"><div class="box">
  <h3 id="outTitle">Phụ đề</h3>
@@ -642,6 +650,8 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
 const APP_VER='1.0.1-beta.2';
+// Ghi chú phát hành (mới nhất ở trên)
+const CHANGELOG=[{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -2844,6 +2854,19 @@ $('#miniPrev').onclick=()=>goTrack(-1);$('#miniNext').onclick=()=>goTrack(1);
 $('#miniOpen').onclick=()=>showView('vPlay');
 function showView(id){if(id==='vLib')updStorage();setTimeout(updMini,0);if(id!=='vVoc'&&!$('#vocRev').hidden){endReview();}if(id==='vVoc')renderVoc();if(id==='vLib')renderStats();document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===id));}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showView(b.dataset.v));
+function relHtml(list){return list.map(e=>`<h4>${esc(verLabel(e.v))}<small>${esc(e.d||'')}</small></h4><ul>${(e.items||[]).map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`).join('')||'<div class="mu">Chưa có ghi chú.</div>';}
+// Mở ghi chú: list = các mục cần hiện; onUpd = hàm cập nhật (nếu đang báo có bản mới)
+window.showRelNotes=(list,title,onUpd)=>{$('#relTitle').textContent=title||'📝 Ghi chú phát hành';$('#relList').innerHTML=relHtml(list||CHANGELOG);
+  const g=$('#relGo');g.hidden=!onUpd;g.onclick=()=>{closeModals();onUpd&&onUpd();};openModal('mRel');};
+function initRelNotes(){
+  const curE=CHANGELOG.find(e=>e.v===APP_VER);
+  $('#relNow').innerHTML=curE?'<div class="mu" style="margin-top:6px">Có gì mới ở bản này:</div><ul>'+curE.items.map(i=>`<li>${esc(i)}</li>`).join('')+'</ul>':'';
+  $('#relBtn').onclick=()=>showRelNotes(CHANGELOG);
+  // vừa cập nhật lên bản mới → hiện "Có gì mới" một lần
+  const seen=S.seenVer;S.seenVer=APP_VER;save();
+  if(seen&&seen!==APP_VER){const nw=CHANGELOG.filter(e=>!CHANGELOG.some(x=>x.v===seen)||CHANGELOG.indexOf(e)<CHANGELOG.findIndex(x=>x.v===seen));if(nw.length)setTimeout(()=>showRelNotes(nw,'🎉 Đã cập nhật lên '+verLabel(APP_VER)),1200);}
+}
+setTimeout(initRelNotes,0);
 function openModal(id){$('#'+id).classList.add('on');}
 function closeModals(){if(linkBusy)return;document.querySelectorAll('.modal').forEach(m=>m.classList.remove('on'));updAsrUI();}
 document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m||e.target.hasAttribute('data-close'))closeModals();}));
@@ -3048,7 +3071,8 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
       }
       if(vcmp(V,APP_VER)>0&&(!j.minNative||nativeBuild>=j.minNative)){
         msg.textContent='Có phiên bản '+verLabel(V)+': '+(j.notes||'');
-        bar(`Có cập nhật <b>${verLabel(V)}</b>${j.notes?': '+esc(j.notes):''}`,'Cập nhật',()=>applyUpdate(j,V));return;
+        const nw=(j.changelog||[]).filter(e=>vcmp(e.v,APP_VER)>0);const upd=()=>applyUpdate(j,V);
+        bar(`Có cập nhật <b>${verLabel(V)}</b>${j.notes?': '+esc(j.notes):''}`,nw.length?'Xem & cập nhật':'Cập nhật',nw.length?()=>showRelNotes(nw,'Có bản mới '+verLabel(V),upd):upd);return;
       }
       if(manual)msg.textContent='Bạn đang dùng bản mới nhất ('+verLabel(APP_VER)+').';
     }catch(e){if(manual)msg.textContent='Không kiểm tra được (cần mạng): '+(e.message||e);}

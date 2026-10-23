@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
  "ver": "1.0.1-beta.2",
- "notes": "Sửa lỗi đăng nhập Google/đồng bộ và phát dưới nền trong APK; mục Ngôn ngữ & dịch tự động chuyển xuống dưới Google Drive.",
+ "notes": "Sửa lỗi đăng nhập Google, đồng bộ và phát dưới nền trong APK; thêm ghi chú phát hành.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -9,5 +9,35 @@
   "versionName": "1.0.1-beta.1",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
- }
+ },
+ "changelog": [
+  {
+   "v": "1.0.1-beta.2",
+   "d": "23/10/2026",
+   "items": [
+    "Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động",
+    "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)",
+    "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive",
+    "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"
+   ]
+  },
+  {
+   "v": "1.0.1-beta.1",
+   "d": "23/10/2026",
+   "items": [
+    "Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá",
+    "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy",
+    "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive",
+    "EQ tắt thì tự ẩn các thanh chỉnh",
+    "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"
+   ]
+  },
+  {
+   "v": "1.0.0",
+   "d": "23/10/2026",
+   "items": [
+    "Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"
+   ]
+  }
+ ]
 }
