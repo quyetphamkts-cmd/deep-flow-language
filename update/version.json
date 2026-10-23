@@ -1,16 +1,25 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.13",
- "notes": "Tốc độ 0.5×–2×.",
+ "ver": "1.0.1-beta.14",
+ "notes": "Phiên âm IPA chuẩn; số tốc độ phía trên thanh kéo; sửa thông báo phát nhạc.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 6,
-  "versionName": "1.0.1-beta.12",
+  "versionCode": 7,
+  "versionName": "1.0.1-beta.14",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.14",
+   "d": "23/10/2026",
+   "items": [
+    "Tra từ: phiên âm tiếng Anh hiện đúng ký hiệu IPA dạng /…/ (lấy từ từ điển), không còn kiểu phiên âm của Google Dịch; dùng phông chữ hiển thị đủ ký tự IPA",
+    "Bảng tốc độ: số tốc độ nằm phía trên thanh kéo và có nhãn chạy theo nút kéo, không bị ngón tay che",
+    "Thông báo phát nhạc: bỏ dấu “-” thừa ở dòng dưới; bản APK mới có nút chế độ phát và nút tắt"
+   ]
+  },
   {
    "v": "1.0.1-beta.13",
    "d": "23/10/2026",

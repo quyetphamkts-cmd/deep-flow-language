@@ -33,6 +33,11 @@ jobs:
       - name: Cài thư viện
         run: npm ci
 
+      - name: Kiểm tra bản vá nút thông báo
+        run: |
+          F=node_modules/@jofr/capacitor-media-session/android/src/main/java/io/github/jofr/capacitor/mediasessionplugin/MediaSessionService.java
+          grep -q DF_PATCH "$F" && grep -q DF_TEXT "$F" && echo "::notice::Đã vá plugin media-session (nút chế độ phát + nút tắt)" || { echo "::error::Chưa vá plugin media-session"; exit 1; }
+
       - name: Đồng bộ phần web vào Android
         run: npx cap sync android
 

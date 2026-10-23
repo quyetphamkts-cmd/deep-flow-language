@@ -58,6 +58,11 @@ if (!svc.includes('DF_PATCH')) {
     '    public void updatePossibleActions() {', 'helpers');
   fs.writeFileSync(svcF, svc);
 }
+// dòng chữ phụ trên thông báo: không hiện " - " khi không có nghệ sĩ / album
+if (!svc.includes('DF_TEXT')) {
+  svc = rep(svc, '.setContentText(artist + " - " + album)', '.setContentText((artist.isEmpty() || album.isEmpty()) ? (artist + album) : (artist + " - " + album)) // DF_TEXT', 'content text');
+  fs.writeFileSync(svcF, svc);
+}
 if (!cb.includes('onCustomAction')) {
   cb = rep(cb, '    @Override\n    public void onStop() {',
     '    @Override\n    public void onCustomAction(String action, android.os.Bundle extras) {\n        plugin.actionCallback(action);\n    }\n\n    @Override\n    public void onStop() {', 'onCustomAction');
