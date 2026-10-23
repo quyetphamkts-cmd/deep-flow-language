@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.71",
-  "notes": "Dùng sóng âm thật cho cả bài phát từ Drive: trước đây bài trên Drive chỉ hiện sóng âm ước lượng (vẽ theo vị trí phụ đề) nên không dùng để kiểm tra phụ đề được — giờ app tải bài 1 lần (khi có Wi-Fi, app đang mở) để dựng sóng âm thật, hiện đúng trên màn hình Nghe và dùng để tự phát hiện phụ đề lệch. Khi bật EQ, app còn ghi sóng âm thật ngay trong lúc nghe nên kiểm tra được cả khi chưa tải xong",
+  "ver": "1.0.1-beta.72",
+  "notes": "Chuyển sang bài khác (bấm bài, Tiếp / Lùi, hết bài tự sang bài sau, phát album / khoá học) luôn phát từ đầu bài — trước đây app nhảy tới chỗ nghe dở lần trước (có khi là vị trí đồng bộ từ máy khác) nên trông như phát ở điểm ngẫu nhiên. Mở lại app thì vẫn tiếp tục đúng chỗ đang nghe",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.72",
+      "d": "24/10/2026",
+      "items": [
+        "Chuyển sang bài khác (bấm bài, Tiếp / Lùi, hết bài tự sang bài sau, phát album / khoá học) luôn phát từ đầu bài — trước đây app nhảy tới chỗ nghe dở lần trước (có khi là vị trí đồng bộ từ máy khác) nên trông như phát ở điểm ngẫu nhiên. Mở lại app thì vẫn tiếp tục đúng chỗ đang nghe"
+      ]
+    },
     {
       "v": "1.0.1-beta.71",
       "d": "24/10/2026",
