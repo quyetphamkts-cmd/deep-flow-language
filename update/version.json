@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.73",
-  "notes": "Ô 🔍 Tra từ ở đầu màn hình Từ vựng: gõ vài chữ là gợi ý ngay các từ đã có trong Từ điển chung (📚) và Hộp từ vựng (⭐), không cần mạng; từ mới thì tra online rồi tự lưu vào Từ điển chung. Bấm từ để mở bảng tra quen thuộc (nghĩa, phiên âm, Anh – Anh, ví dụ, đọc, ⭐ Lưu). Bên dưới hiện 🎧 Gặp trong bài — các câu chứa từ đó trong phụ đề các bài, bấm ▶ nghe lại đúng câu. Mục 📚 Từ điển chung xem lại mọi từ đã từng tra. Ô lọc cũ đổi tên thành “Lọc từ đã lưu…”",
+  "ver": "1.0.1-beta.74",
+  "notes": "Menu ⋯ của khoá học: “Đưa lên đầu / Đưa xuống cuối” đổi thành ⬆ Đưa lên trên / ⬇ Xuống dưới — mỗi lần bấm dời khoá học 1 bậc (khoá trên cùng không hiện “Đưa lên trên”, khoá dưới cùng không hiện “Xuống dưới”)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.74",
+      "d": "24/10/2026",
+      "items": [
+        "Menu ⋯ của khoá học: “Đưa lên đầu / Đưa xuống cuối” đổi thành ⬆ Đưa lên trên / ⬇ Xuống dưới — mỗi lần bấm dời khoá học 1 bậc (khoá trên cùng không hiện “Đưa lên trên”, khoá dưới cùng không hiện “Xuống dưới”)"
+      ]
+    },
     {
       "v": "1.0.1-beta.73",
       "d": "24/10/2026",
