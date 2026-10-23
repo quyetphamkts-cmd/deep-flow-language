@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.72",
-  "notes": "Chuyển sang bài khác (bấm bài, Tiếp / Lùi, hết bài tự sang bài sau, phát album / khoá học) luôn phát từ đầu bài — trước đây app nhảy tới chỗ nghe dở lần trước (có khi là vị trí đồng bộ từ máy khác) nên trông như phát ở điểm ngẫu nhiên. Mở lại app thì vẫn tiếp tục đúng chỗ đang nghe",
+  "ver": "1.0.1-beta.73",
+  "notes": "Ô 🔍 Tra từ ở đầu màn hình Từ vựng: gõ vài chữ là gợi ý ngay các từ đã có trong Từ điển chung (📚) và Hộp từ vựng (⭐), không cần mạng; từ mới thì tra online rồi tự lưu vào Từ điển chung. Bấm từ để mở bảng tra quen thuộc (nghĩa, phiên âm, Anh – Anh, ví dụ, đọc, ⭐ Lưu). Bên dưới hiện 🎧 Gặp trong bài — các câu chứa từ đó trong phụ đề các bài, bấm ▶ nghe lại đúng câu. Mục 📚 Từ điển chung xem lại mọi từ đã từng tra. Ô lọc cũ đổi tên thành “Lọc từ đã lưu…”",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.73",
+      "d": "24/10/2026",
+      "items": [
+        "Ô 🔍 Tra từ ở đầu màn hình Từ vựng: gõ vài chữ là gợi ý ngay các từ đã có trong Từ điển chung (📚) và Hộp từ vựng (⭐), không cần mạng; từ mới thì tra online rồi tự lưu vào Từ điển chung. Bấm từ để mở bảng tra quen thuộc (nghĩa, phiên âm, Anh – Anh, ví dụ, đọc, ⭐ Lưu). Bên dưới hiện 🎧 Gặp trong bài — các câu chứa từ đó trong phụ đề các bài, bấm ▶ nghe lại đúng câu. Mục 📚 Từ điển chung xem lại mọi từ đã từng tra. Ô lọc cũ đổi tên thành “Lọc từ đã lưu…”"
+      ]
+    },
     {
       "v": "1.0.1-beta.72",
       "d": "24/10/2026",
