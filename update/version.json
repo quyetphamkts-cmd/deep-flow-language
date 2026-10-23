@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.48",
- "notes": "Widget màn hình chính làm lại giống bảng phát nhạc trên thông báo (cần cài APK beta 48): tên bài ở trên, câu đang đọc hiện ĐẦY ĐỦ cả câu (chữ tự thu nhỏ cho vừa), thanh tiến độ + thời gian đang phát / tổng thời gian, 5 nút: chế độ phát · lùi · phát/dừng · tiếp · tắt; chạm vào chữ để mở app · Widget mặc định cao hơn (4×3 ô) và kéo giãn được",
+ "ver": "1.0.1-beta.49",
+ "notes": "Phụ đề khớp thứ tự tốt nhất có thể: app tự kiểm tra lại phụ đề của TẤT CẢ các bài (kể cả bài tạo từ trước), lần lượt từng bài khi app đang mở — sửa câu đảo vị trí / trùng / chồng nhau, dời & căn từng câu theo giọng nói trong âm thanh; xong báo tổng kết · Bài nào vẫn khớp kém (dưới 60%) sẽ được AI nghe lại âm thanh và căn lại từng câu (giữ nguyên chữ) — dùng ChatGPT Whisper hoặc Gemini, chạy khi app mở và có mạng; bài chỉ có trên Drive thì chỉ sửa thứ tự câu, không tải cả file về",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.49",
+   "d": "23/10/2026",
+   "items": [
+    "Phụ đề khớp thứ tự tốt nhất có thể: app tự kiểm tra lại phụ đề của TẤT CẢ các bài (kể cả bài tạo từ trước), lần lượt từng bài khi app đang mở — sửa câu đảo vị trí / trùng / chồng nhau, dời & căn từng câu theo giọng nói trong âm thanh; xong báo tổng kết",
+    "Bài nào vẫn khớp kém (dưới 60%) sẽ được AI nghe lại âm thanh và căn lại từng câu (giữ nguyên chữ) — dùng ChatGPT Whisper hoặc Gemini, chạy khi app mở và có mạng; bài chỉ có trên Drive thì chỉ sửa thứ tự câu, không tải cả file về"
+   ]
+  },
   {
    "v": "1.0.1-beta.48",
    "d": "23/10/2026",
