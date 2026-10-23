@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.23",
- "notes": "Chuỗi ngày học (streak) trong Thư viện.",
+ "ver": "1.0.1-beta.24",
+ "notes": "Gọn nút nạp bài trong Thư viện.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.24",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện: bỏ nút ＋ Thêm, thêm dấu cộng vào nút ＋📁 Thư mục và ＋🔗 Link"
+   ]
+  },
   {
    "v": "1.0.1-beta.23",
    "d": "23/10/2026",
