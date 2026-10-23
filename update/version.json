@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.50",
- "notes": "Giảm chạm trần hạn mức Gemini (lỗi 429): app tự giới hạn tốc độ gọi (khoảng 9 lượt/phút với Flash, 14 với Flash-Lite — dưới mức gói miễn phí), chờ đủ rồi mới gọi tiếp thay vì gọi dồn · Phân biệt hết lượt theo phút (chờ đúng thời gian Google báo rồi thử lại) và hết lượt theo ngày (khoá mô hình đó đến khi Google làm mới hạn mức ~15h giờ VN, nhớ cả khi tắt mở app — không gọi lại vô ích) · Gemini quá tải (5xx): chờ tăng dần 2 → 4 → 8 giây rồi thử lại · Dịch: gộp 60 câu vào 1 lượt gọi; câu đã dịch được lưu và dùng lại cho mọi bài (không gửi lại AI); dịch, tra từ, chọn hình dùng Gemini Flash-Lite trước (nhanh, hạn mức cao hơn) · Kết quả tra từ / ví dụ / chọn hình bằng AI được lưu 30 ngày: hỏi lại đúng câu đó thì lấy kết quả cũ, không tốn lượt",
+ "ver": "1.0.1-beta.51",
+ "notes": "Tối ưu cả Claude và ChatGPT: tự giới hạn tốc độ gọi (Claude ~40, ChatGPT ~60, Whisper ~20 lượt/phút); bị giới hạn theo phút (429) hoặc máy chủ quá tải (529 / 5xx) thì chờ đúng thời gian máy chủ báo, không thì chờ tăng dần 2 → 4 → 8 giây rồi thử lại, thay vì bỏ qua ngay · Hết tiền / hết hạn mức tài khoản (credit balance, insufficient_quota) thì khoá AI đó 6 giờ, nhớ cả khi tắt mở app, tự chuyển AI khác; quá tải tạm thời chỉ khoá khoảng 1 phút · Lưu kết quả & gộp câu khi dịch (từ bản trước) áp dụng chung cho Claude, ChatGPT và Gemini",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.51",
+   "d": "23/10/2026",
+   "items": [
+    "Tối ưu cả Claude và ChatGPT: tự giới hạn tốc độ gọi (Claude ~40, ChatGPT ~60, Whisper ~20 lượt/phút); bị giới hạn theo phút (429) hoặc máy chủ quá tải (529 / 5xx) thì chờ đúng thời gian máy chủ báo, không thì chờ tăng dần 2 → 4 → 8 giây rồi thử lại, thay vì bỏ qua ngay",
+    "Hết tiền / hết hạn mức tài khoản (credit balance, insufficient_quota) thì khoá AI đó 6 giờ, nhớ cả khi tắt mở app, tự chuyển AI khác; quá tải tạm thời chỉ khoá khoảng 1 phút",
+    "Lưu kết quả & gộp câu khi dịch (từ bản trước) áp dụng chung cho Claude, ChatGPT và Gemini"
+   ]
+  },
   {
    "v": "1.0.1-beta.50",
    "d": "23/10/2026",
