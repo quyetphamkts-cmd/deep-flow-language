@@ -640,8 +640,10 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 <div class="toast" id="toast"></div>
 
 <script>
-const APP_VER='1.0.1';
-document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=APP_VER;});
+// Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
+const APP_VER='1.1.0-beta.1';
+const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
+document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
 // ===== Phân tích văn bản, phụ đề, căn chỉnh (không phụ thuộc giao diện) =====
 const VI_RE=/[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹáàãéèíìóòõúùýĂÂĐÊÔƠƯẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼẾỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴỶỸÁÀÃÉÈÍÌÓÒÕÚÙÝ]/;
@@ -3017,7 +3019,8 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   setInterval(()=>{if(dirty&&acc&&S.syncOn!==false)sync(false);},10*60e3);
 
   // ---------- 6. Tự cập nhật phần giao diện (không cần cài lại APK) ----------
-  const vcmp=(a,b)=>{const x=String(a).split('.').map(Number),y=String(b).split('.').map(Number);for(let i=0;i<3;i++){if((x[i]||0)!==(y[i]||0))return (x[i]||0)-(y[i]||0);}return 0;};
+  const vparse=v=>{const m=String(v).match(/^(\d+)\.(\d+)\.(\d+)(?:-beta\.(\d+))?/)||[];return [+m[1]||0,+m[2]||0,+m[3]||0,m[4]!=null?+m[4]:Infinity];};
+  const vcmp=(a,b)=>{const x=vparse(a),y=vparse(b);for(let i=0;i<4;i++){if(x[i]!==y[i])return x[i]>y[i]?1:-1;}return 0;};
   function bar(html,btn,fn){let b=document.getElementById('updBar');if(b)b.remove();b=document.createElement('div');b.id='updBar';b.className='updbar';b.innerHTML=`<span>${html}</span><button class="btn pri">${btn}</button><button class="btn" aria-label="Đóng">✕</button>`;
     b.querySelector('.pri').onclick=fn;b.querySelectorAll('.btn')[1].onclick=()=>b.remove();document.body.appendChild(b);}
   async function checkUpdate(manual){
@@ -3030,10 +3033,10 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
         bar(`Có bản cài đặt mới <b>${j.apk.versionName}</b>. Tải về rồi mở file để cài đè (giữ nguyên dữ liệu).`,'Tải APK',()=>{location.href=j.apk.url;});return;
       }
       if(vcmp(j.web,APP_VER)>0&&(!j.minNative||nativeBuild>=j.minNative)){
-        msg.textContent='Có phiên bản '+j.web+': '+(j.notes||'');
-        bar(`Có cập nhật <b>${j.web}</b>${j.notes?': '+esc(j.notes):''}`,'Cập nhật',()=>applyUpdate(j));return;
+        msg.textContent='Có phiên bản '+verLabel(j.web)+': '+(j.notes||'');
+        bar(`Có cập nhật <b>${verLabel(j.web)}</b>${j.notes?': '+esc(j.notes):''}`,'Cập nhật',()=>applyUpdate(j));return;
       }
-      if(manual)msg.textContent='Bạn đang dùng bản mới nhất ('+APP_VER+').';
+      if(manual)msg.textContent='Bạn đang dùng bản mới nhất ('+verLabel(APP_VER)+').';
     }catch(e){if(manual)msg.textContent='Không kiểm tra được (cần mạng): '+(e.message||e);}
   }
   async function applyUpdate(j){

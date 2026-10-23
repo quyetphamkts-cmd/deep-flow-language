@@ -44,4 +44,5 @@ App chỉ dùng 2 quyền: thư mục ẩn riêng của app (`drive.appdata`) v�
 ## 4. Phát hành bản mới
 
 - **Chỉ đổi giao diện / tính năng web:** sửa `www/index.html`, tăng `APP_VER` trong file đó và `"web"` trong `update/version.json` → app trên điện thoại tự báo “Có cập nhật”.
+- **Cách đánh số:** bản thử nghiệm là `x.y.z-beta.N` (vd `1.1.0-beta.1`, `1.1.0-beta.2`…), mỗi lần sửa chỉ tăng N. Khi ổn định thì phát hành bản chính thức `x.y.z` (vd `1.1.0`) — bản chính thức luôn mới hơn mọi bản beta cùng số. Đợt nâng cấp lớn tiếp theo bắt đầu lại từ `1.2.0-beta.1`.
 - **Đổi phần lõi Android:** tăng `apk.versionCode` và `apk.versionName` trong `update/version.json` (và `minNative` nếu bản web mới cần lõi mới) → GitHub tự build APK mới.
