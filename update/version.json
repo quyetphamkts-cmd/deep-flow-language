@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.60",
- "notes": "Thêm từ Cloud chỉ nhập file âm thanh (mp3, m4a, wav, ogg, flac…) cùng tên thư mục chứa nó; file tài liệu và file khác được bỏ qua (báo số file đã bỏ qua) — nạp nhanh hơn, không tải tài liệu về",
+ "ver": "1.0.1-beta.61",
+ "notes": "Nút thu gọn / mở rộng chuyển vào tiêu đề từng khoá học (⊟ / ⊞ cạnh nút i): chỉ thu gọn hoặc mở rộng các album và thư mục của khoá học đó",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.61",
+   "d": "23/10/2026",
+   "items": [
+    "Nút thu gọn / mở rộng chuyển vào tiêu đề từng khoá học (⊟ / ⊞ cạnh nút i): chỉ thu gọn hoặc mở rộng các album và thư mục của khoá học đó"
+   ]
+  },
   {
    "v": "1.0.1-beta.60",
    "d": "23/10/2026",
