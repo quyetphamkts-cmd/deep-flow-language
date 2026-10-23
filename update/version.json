@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.54",
- "notes": "Tự cập nhật nhanh hơn: kiểm tra bản mới mỗi khi quay lại app (sau 3 phút) và mỗi 30 phút khi đang mở app (trước là 15 phút và 3 giờ)",
+ "ver": "1.0.1-beta.55",
+ "notes": "Thêm bài từ Cloud chạy nền: bấm “Ẩn — chạy nền” (hoặc nút Quay lại) để đóng hộp thoại, app vẫn tiếp tục tải; tiến độ hiện ở thanh nhỏ đầu Thư viện (chạm để mở lại), có nút ⏹ Dừng; xong hiện thông báo ngắn",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.55",
+   "d": "23/10/2026",
+   "items": [
+    "Thêm bài từ Cloud chạy nền: bấm “Ẩn — chạy nền” (hoặc nút Quay lại) để đóng hộp thoại, app vẫn tiếp tục tải; tiến độ hiện ở thanh nhỏ đầu Thư viện (chạm để mở lại), có nút ⏹ Dừng; xong hiện thông báo ngắn"
+   ]
+  },
   {
    "v": "1.0.1-beta.54",
    "d": "23/10/2026",
