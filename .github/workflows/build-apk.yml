@@ -9,7 +9,6 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'capacitor.config.json'
-      - 'update/version.json'
       - '.github/workflows/build-apk.yml'
 
 permissions:

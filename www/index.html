@@ -328,6 +328,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <button class="btn" id="bBak">💾 Sao lưu</button>
    </div>
    <div class="stat" id="statCard"></div>
+   <div class="mu" id="stoInfo" style="font-size:12px;margin:-4px 2px 8px"></div>
    <div class="libq"><input id="libQ" type="search" placeholder="🔍 Tìm bài hoặc album…" autocomplete="off"><select id="libF" aria-label="Lọc">
      <option value="all">Tất cả</option><option value="learn">📖 Đang học</option><option value="new">📘 Chưa học</option><option value="done">✅ Đã thuộc</option></select></div>
    <div class="help mu" id="tempNote" hidden style="margin:0 0 10px;border:1px solid var(--ac)">⚠️ Trình duyệt đang chặn bộ nhớ nên bài nạp vào chỉ dùng được đến khi đóng trang. Để lưu lâu dài, hãy mở app qua đường link (không mở file trực tiếp) hoặc tắt chế độ ẩn danh.</div>
@@ -421,6 +422,12 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <div class="sw"><span>Phiên bản app: <b id="verWeb"></b><span class="nat-on"> · lõi Android <b id="verNat"></b></span></span><button class="btn nat-on" id="updCheck">Kiểm tra cập nhật</button></div>
     <div class="mu" id="updMsg"></div>
     <div class="row2 nat-on" style="justify-content:flex-start"><button class="btn" id="updReset" hidden>↩ Quay về bản cài gốc</button></div>
+   </div>
+   <h3>Bộ nhớ</h3>
+   <div class="card">
+    <div class="sw"><span>Tự quản lý bộ nhớ theo trạng thái học<br><small class="mu">📖 Đang học: tự tải về máy · ✅ Đã học xong: xoá bản tải, nghe lại trực tuyến · 📘 Chưa học: chỉ danh sách. Chỉ áp dụng cho bài có bản trên Google Drive.</small></span><button class="tg" id="autoStoT"></button></div>
+    <div class="sw"><span>Chỉ tự tải khi dùng Wi-Fi</span><button class="tg" id="wifiT"></button></div>
+    <div class="row2" style="justify-content:flex-start"><button class="btn" id="polNow">Áp dụng ngay</button></div>
    </div>
    <h3>Tai nghe</h3>
    <div class="card">
@@ -522,7 +529,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 </div></div>
 <div class="modal" id="mLink"><div class="box">
  <h3>🔗 Thêm từ link</h3>
- <div class="mu">Dán mỗi link một dòng. Hỗ trợ:<br>• Link <b>thư mục</b> Google Drive: nạp cả thư mục (kể cả thư mục con), tự ghép âm thanh với tài liệu cùng tên<br>• Link <b>file</b> Google Drive, Google Docs<br>• Link tải trực tiếp khác (nếu trang đó cho phép)<br>Bài được tải về máy để nghe offline.</div>
+ <div class="mu">Dán mỗi link một dòng. Hỗ trợ:<br>• Link <b>thư mục</b> Google Drive: nạp cả thư mục (kể cả thư mục con), tự ghép âm thanh với tài liệu cùng tên<br>• Link <b>file</b> Google Drive, Google Docs<br>• Link tải trực tiếp khác (nếu trang đó cho phép)<br>Âm thanh trên Drive được <b>nghe trực tiếp</b> (☁, không chiếm bộ nhớ máy); muốn nghe offline thì bấm ⋯ → <b>Tải về máy</b> cho từng bài hoặc cả album.</div>
  <textarea id="linkTx" style="min-height:120px;margin-top:8px" placeholder="https://drive.google.com/drive/folders/..."></textarea>
  <div class="pbar"><i id="lBar"></i></div>
  <div class="mu" id="linkMsg"></div>
@@ -632,7 +639,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 <div class="toast" id="toast"></div>
 
 <script>
-const APP_VER='1.0.0';
+const APP_VER='1.0.1';
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=APP_VER;});
 /*PURE*/
 // ===== Phân tích văn bản, phụ đề, căn chỉnh (không phụ thuộc giao diện) =====
@@ -977,6 +984,60 @@ const putMeta=t=>{t.mt=Date.now();if(window.dfOnChange)dfOnChange();return putMe
 const putMeta0=t=>safe(()=>req(store('meta','readwrite').put(t)),()=>MEM.meta.set(t.id,t));
 const putAudio=(id,blob)=>safe(()=>req(store('audio','readwrite').put({id,blob})),()=>MEM.audio.set(id,blob));
 const getAudio=id=>safe(async()=>(await req(store('audio','readonly').get(id)))?.blob||MEM.audio.get(id),()=>MEM.audio.get(id));
+// ----- Âm thanh trong máy / trên Drive -----
+// Nếu Drive không cho phát kèm CORS (cần cho EQ) thì phát lại không kèm CORS
+audio.addEventListener('error',()=>{if(audio._surl&&audio.crossOrigin&&!audio._corsRetry){audio._corsRetry=true;const t0=audio.currentTime;audio.removeAttribute('crossorigin');audio.src=audio._surl;audio.load();audio.play().catch(()=>{});if(ctx)toast('Bài này đang phát trực tiếp từ Drive nên EQ tạm không áp dụng',4000);}else if(audio._surl&&audio.error){toast('Không phát được từ Drive (kiểm tra mạng, API key và quyền chia sẻ file)',5000);}});
+const isLocal=t=>t.loc!==false&&!t.noAudio;
+const streamUrl=t=>t.gid&&S.gKey?`https://www.googleapis.com/drive/v3/files/${t.gid}?alt=media&key=${encodeURIComponent(S.gKey)}&supportsAllDrives=true`:null;
+async function delLocalAudio(t){await safe(()=>req(store('audio','readwrite').delete(t.id)),()=>MEM.audio.delete(t.id));t.loc=false;await putMeta(t);}
+// Tải toàn bộ file về (dùng cho nghe offline, AI tạo phụ đề, phát câu gốc)
+async function fetchCloud(t,onProg,keep){
+  let b=null;
+  const u=streamUrl(t);
+  if(u){const r=await fetch(u);if(!r.ok)throw new Error(r.status===403?'Google từ chối (kiểm tra API key / quyền chia sẻ file)':'Lỗi tải '+r.status);
+    const total=+r.headers.get('content-length')||t.size||0;
+    if(r.body&&total&&onProg){const rd=r.body.getReader(),parts=[];let got=0;for(;;){const {done,value}=await rd.read();if(done)break;parts.push(value);got+=value.length;onProg(got/total,got,total);}b=new Blob(parts,{type:r.headers.get('content-type')||t.mime||'audio/mpeg'});}
+    else b=await r.blob();}
+  else if(window.dfFetchAudio&&(t.audDrive||t.gid)){return await dfFetchAudio(t);}
+  if(!b)throw new Error('Chưa có API key Google Drive (Cài đặt → Google Drive)');
+  if(keep){await putAudio(t.id,b);t.loc=true;delete t.noAudio;await putMeta(t);renderLib();}
+  return b;
+}
+async function audioOf(t){const b=await getAudio(t.id);if(b)return b;if(t.gid||t.audDrive)return await fetchCloud(t,null,false);return null;}
+async function downloadTracks(list,label){
+  const todo=list.filter(t=>!isLocal(t)&&(t.gid||t.audDrive));if(!todo.length){toast('Các bài đã có sẵn trong máy');return;}
+  let i=0;for(const t of todo){i++;
+    try{await fetchCloud(t,(p,got,tot)=>toast(`📥 ${label?label+' · ':''}${i}/${todo.length} "${t.name}" ${Math.round(p*100)}% (${(tot/1048576).toFixed(1)} MB)`,4000),true);}
+    catch(e){toast('Không tải được "'+t.name+'": '+e.message,5000);return;}}
+  toast('📥 Đã tải '+todo.length+' bài về máy — nghe được khi không có mạng',4000);updStorage();
+}
+// ----- Tự quản lý bộ nhớ theo trạng thái học -----
+// Đang học → tải về máy; Đã học xong → xoá bản tải (giữ phụ đề, nghe lại trực tuyến); Chưa học → chỉ danh sách
+let polBusy=false,polTimer=null;
+const onWifi=()=>{const c=navigator.connection;return !c||!c.type||c.type==='wifi'||c.type==='ethernet'||c.type==='unknown';};
+function schedulePolicy(ms){clearTimeout(polTimer);polTimer=setTimeout(applyStoragePolicy,ms||3000);}
+async function applyStoragePolicy(){
+  if(polBusy||S.autoSto===false||!navigator.onLine&&false)return;polBusy=true;
+  try{
+    const all=albums();let freed=0,got=0;
+    for(const [a,list] of all){
+      const st=albumInfo(a,list).status;
+      if(st==='done'){
+        for(const t of list){if(isLocal(t)&&(t.gid||t.audDrive)&&t!==cur){await delLocalAudio(t);freed+=t.size||0;}}
+      }else if(st==='learn'){
+        if(!navigator.onLine||(S.wifiOnly!==false&&!onWifi()))continue;
+        for(const t of list){
+          if(isLocal(t)||!(t.gid||t.audDrive))continue;
+          try{const el=document.getElementById('stoInfo');if(el)el.textContent='📥 Đang tải bài đang học: '+t.name+'…';await fetchCloud(t,null,true);got++;}catch(e){break;}
+        }
+      }
+    }
+    if(freed||got){renderLib();if(freed)toast('Đã giải phóng '+(freed/1048576).toFixed(0)+' MB của các bài đã học xong (vẫn nghe lại trực tuyến được)',4500);if(got)toast('📥 Đã tải '+got+' bài đang học về máy',3500);}
+  }finally{polBusy=false;updStorage();}
+}
+window.addEventListener('online',()=>schedulePolicy(5000));
+setInterval(()=>schedulePolicy(1000),10*60e3);
+async function updStorage(){try{const e=await navigator.storage.estimate();const el=document.getElementById('stoInfo');if(el)el.textContent='Bộ nhớ app đang dùng: '+(e.usage>=1073741824?(e.usage/1073741824).toFixed(2).replace('.',',')+' GB':Math.round(e.usage/1048576)+' MB');}catch(e){}}
 async function delTrack(id){if(!String(id).startsWith('img:')){S.delIds=S.delIds||{};S.delIds[id]=Date.now();save();if(window.dfOnChange)dfOnChange();}MEM.meta.delete(id);MEM.audio.delete(id);await safe(async()=>{await req(store('meta','readwrite').delete(id));await req(store('audio','readwrite').delete(id));},()=>{});}
 let tempShown=false;
 function tempMode(){if(tempShown)return;tempShown=true;$('#tempNote').hidden=false;}
@@ -1029,10 +1090,10 @@ async function importFilesInner(list,target){
     if(lost){await putAudio(lost.id,f);delete lost.noAudio;lost.size=f.size;changed.add(lost);reat++;continue;}
     // trùng tên và cùng dung lượng → bỏ qua
     if(tracks.some(x=>norm(x.name)===norm(nm)&&x.size===f.size)){dup++;continue;}
-    const t={id:uid(),name:nm,album:alb,size:f.size,gid:f._gid||undefined,subs:{},doc:'',added:Date.now()+newT.length};await putAudio(t.id,f);newT.push(t);tracks.push(t);changed.add(t);}
+    const t={id:uid(),name:nm,album:alb,size:f.size,loc:true,gid:f._gid||undefined,subs:{},doc:'',added:Date.now()+newT.length};await putAudio(t.id,f);newT.push(t);tracks.push(t);changed.add(t);}
   for(const f of texts){
     const {b,lang}=subKey(f.name);
-    let t=target||tracks.find(x=>norm(x.name)===norm(b));
+    let t=target||tracks.find(x=>norm(x.name)===norm(b)&&f._album!=null&&albumOf(x)===f._album)||tracks.find(x=>norm(x.name)===norm(b));
     if(!t&&newT.length===1)t=newT[0];
     if(!t){miss.push(f.name);continue;}
     try{await attachText(t,f,lang);changed.add(t);}catch(e){toast('Lỗi đọc '+f.name+': '+e.message,4000);}
@@ -1050,11 +1111,14 @@ async function importFilesInner(list,target){
 async function loadTrack(t,autoplay){
   if(tap)endTap(false);
   let blob=await getAudio(t.id);
-  if(!blob&&window.dfFetchAudio&&(t.audDrive||t.gid)){toast('Đang tải âm thanh "'+t.name+'" từ Google Drive…',4000);try{blob=await dfFetchAudio(t);}catch(e){toast('Không tải được: '+(e.message||e),5000);}}
-  if(!blob){toast(t.noAudio?'Bài "'+t.name+'" chưa có âm thanh (khôi phục từ sao lưu). Bấm ＋ Thêm và chọn file '+t.name+' để gắn lại.':'Không tìm thấy dữ liệu âm thanh',6000);return;}
+  let surl=null;
+  if(!blob&&t.gid&&S.gKey){surl=streamUrl(t);}
+  if(!blob&&!surl&&window.dfFetchAudio&&(t.audDrive||t.gid)){toast('Đang tải âm thanh "'+t.name+'" từ Google Drive…',4000);try{blob=await dfFetchAudio(t);}catch(e){toast('Không tải được: '+(e.message||e),5000);}}
+  if(!blob&&!surl){toast(t.noAudio?'Bài "'+t.name+'" chưa có âm thanh (khôi phục từ sao lưu). Bấm ＋ Thêm và chọn file '+t.name+' để gắn lại.':'Không tìm thấy dữ liệu âm thanh',6000);return;}
   if(audio.src)URL.revokeObjectURL(audio.src);
   cur=t;S.lastId=t.id;save();msText='';
-  audio.src=URL.createObjectURL(blob);
+  if(blob){audio._surl=null;audio.removeAttribute('crossorigin');audio.src=URL.createObjectURL(blob);}
+  else{audio.crossOrigin='anonymous';audio.src=surl;audio._surl=surl;audio._corsRetry=false;if(!navigator.onLine)toast('Bài này đang ở trên Drive — cần mạng để nghe (hoặc tải về máy để nghe offline)',5000);}
   AB={a:null,b:null};
   $('#ttl').textContent=t.name;
   refreshCues();
@@ -1186,6 +1250,7 @@ setInterval(()=>{ // đếm thời gian nghe thực tế
   if(audio.paused)return;rp.sec++;
   if(cur){cur.st=cur.st||{};cur.st.sec=(cur.st.sec||0)+1;cur.st.last=Date.now();if(!cur.st.first)cur.st.first=Date.now();
     {const dk=today();cur.st.ds=cur.st.ds||{};cur.st.ds[dk]=(cur.st.ds[dk]||0)+1;cur.st.d=cur.st.d||[];if(cur.st.d[cur.st.d.length-1]!==dk){cur.st.d.push(dk);if(cur.st.d.length>400)cur.st.d.shift();putMeta(cur);}}S.days=S.days||{};const k=today();S.days[k]=(S.days[k]||0)+1;
+    if(cur.st.sec===65)schedulePolicy(2000);
     if(++stSave%20===0){putMeta(cur);save();if($('#vLib').classList.contains('on'))renderStats();}}
   if(S.rpScope!=='off'&&S.rpLim==='time'&&rp.sec>=S.rpMin*60){rpStop(`Đã nghe đủ ${S.rpMin} phút — dừng lặp`);rp.sec=0;}
   if(!$('#mRep').classList.contains('on'))return;updRepInfo();
@@ -1327,7 +1392,7 @@ function buildEqUI(){
   $('#presets').innerHTML=Object.keys(PRESETS).map(k=>`<button data-p="${k}" class="${S.preset===k?'on':''}">${k}</button>`).join('');
   $('#eqRows').innerHTML=FREQ.map((f,i)=>`<div class="eqr"><span>${f>=1000?f/1000+'k':f}</span><input type="range" min="-12" max="12" step="0.5" data-b="${i}" value="${S.eq[i]}"><span>${S.eq[i]>0?'+':''}${S.eq[i]} dB</span></div>`).join('');
   $('#eqBass').value=S.bass;$('#eqBassV').textContent='+'+S.bass;$('#eqPre').value=S.pre;$('#eqPreV').textContent=S.pre+' dB';
-  $('#eqOn').classList.toggle('on',S.eqOn);$('#wakeT').classList.toggle('on',S.wake);$('#scrT').classList.toggle('on',S.scroll);$('#hpT').classList.toggle('on',!!S.hpAuto);$('#msT').classList.toggle('on',S.msLine!==false);
+  $('#eqOn').classList.toggle('on',S.eqOn);$('#wakeT').classList.toggle('on',S.wake);$('#scrT').classList.toggle('on',S.scroll);$('#autoStoT').classList.toggle('on',S.autoSto!==false);$('#wifiT').classList.toggle('on',S.wifiOnly!==false);$('#hpT').classList.toggle('on',!!S.hpAuto);$('#msT').classList.toggle('on',S.msLine!==false);
   {const opts=[12,14,16,18.5,21];const near=opts.reduce((a,b)=>Math.abs(b-S.fs)<Math.abs(a-S.fs)?b:a);$('#fsSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.f===near));}
 }
 $('#presets').addEventListener('click',e=>{const k=e.target.dataset.p;if(!k)return;S.preset=k;S.eq=[...PRESETS[k]];if(!S.eqOn){S.eqOn=true;ensureCtx();}save();buildEqUI();applyEq();});
@@ -1338,6 +1403,9 @@ $('#eqOn').onclick=()=>{S.eqOn=!S.eqOn;save();ensureCtx();if(ctx&&ctx.state==='s
 $('#wakeT').onclick=()=>{S.wake=!S.wake;save();buildEqUI();setWake();};
 $('#msT').onclick=()=>{S.msLine=S.msLine===false;save();buildEqUI();if(S.msLine===false)msMeta('');};
 $('#hpT').onclick=async()=>{S.hpAuto=!S.hpAuto;save();buildEqUI();if(window.dfHeadsetSet)dfHeadsetSet(S.hpAuto);if(S.hpAuto)toast('Đã bật. Hãy để Deep Flow mở hoặc chạy nền.');};
+$('#autoStoT').onclick=()=>{S.autoSto=S.autoSto===false;save();buildEqUI();if(S.autoSto!==false)schedulePolicy(500);};
+$('#wifiT').onclick=()=>{S.wifiOnly=S.wifiOnly===false;save();buildEqUI();};
+$('#polNow').onclick=()=>{if(S.autoSto===false){toast('Hãy bật "Tự quản lý bộ nhớ" trước');return;}toast('Đang áp dụng…');applyStoragePolicy();};
 $('#scrT').onclick=()=>{S.scroll=!S.scroll;save();buildEqUI();};
 $('#fsSeg').onclick=e=>{const b=e.target.closest('[data-f]');if(!b)return;S.fs=+b.dataset.f;save();applyMode();buildEqUI();};
 
@@ -1531,7 +1599,8 @@ function renderLib(){
   const isCol=a=>!searching&&(col[a]!=null?col[a]:info.get(a).status==='done');
   const albumHtml=([a,list])=>{const inf=info.get(a);const c=isCol(a)&&reorderAlb!==a;return (multi?`<div class="alb${c?' col':''}"><h4 data-tg="${esc(a)}"><span class="chev">${c?'▸':'▾'}</span>📁 ${esc(a||'Chưa có album')} <span class="mu">· ${inf.n} bài</span></h4><button class="pab" data-pa="${esc(a)}" aria-label="Phát album">${cur&&albumOf(cur)===a&&!audio.paused?'❚❚':'▶'}</button><button class="more" data-ra="${esc(a)}" aria-label="Tuỳ chọn album">⋯</button></div>${reorderAlb===a?`<div class="selbar" style="position:static;margin:0 0 8px"><span>Bấm ↑ ↓ để đổi thứ tự bài</span><span style="flex:1"></span><button class="btn pri" data-rdone="1">Xong</button></div>`:''}${albumProg(inf)}`:'')+(c?'':list.map(t=>{
     const timed=t.subs&&(t.subs.main||t.subs.en);
-    const b=t.noAudio?'<span class="bdg wa">Thiếu âm thanh</span>':timed?'<span class="bdg ok">Đã khớp thời gian</span>':t.doc?'<span class="bdg wa">Văn bản chưa khớp</span>':'<span class="bdg">Chỉ âm thanh</span>';
+    const cloud=!isLocal(t)&&(t.gid||t.audDrive)?'<span class="bdg">☁ Trên Drive</span>':(t.gid&&isLocal(t)?'<span class="bdg ok">📥 Đã tải</span>':'');
+    const b=cloud+(t.noAudio&&!t.gid&&!t.audDrive?'<span class="bdg wa">Thiếu âm thanh</span>':'')+(timed?'<span class="bdg ok">Đã khớp thời gian</span>':t.doc?'<span class="bdg wa">Văn bản chưa khớp</span>':'<span class="bdg">Chưa có phụ đề</span>');
     const tr=hasTr(t)?'<span class="bdg">+ bản dịch</span>':'';
     const st=t.st||{};const sp=st.spk&&st.spk.n?Math.round(st.spk.sum/st.spk.n):null;
     const wc=hasSub(t)?trackWords(t):null;const sv=savedIn(t);
@@ -1596,6 +1665,8 @@ function openAlbumSheet(a){
     ...(a?[['rename','✏️ Đổi tên album']]:[]),
     ...STATUS.map(s=>['st:'+s[0],(albumInfo(a,list).status===s[0]?'● ':'○ ')+'Trạng thái: '+s[1].slice(2)]),
     ...((S.albStatus||{})[a]?[['st:auto','↺ Trạng thái: tự động theo tiến độ']]:[]),
+    ...(list.some(t=>!isLocal(t)&&(t.gid||t.audDrive))?[['dlall','📥 Tải cả album về máy ('+(list.filter(t=>!isLocal(t)).reduce((s,t)=>s+(t.size||0),0)/1048576).toFixed(0)+' MB)']]:[]),
+    ...(list.some(t=>isLocal(t)&&(t.gid||t.audDrive))?[['undlall','🗑 Xoá bản tải của album (giữ bài, nghe từ Drive)']]:[]),
     ['done','✓ Đánh dấu cả album đã thuộc'],
     ['undone','↩️ Bỏ đánh dấu đã thuộc cả album'],
     ...(a?[['ungroup','📤 Bỏ album (giữ lại các bài)']]:[]),
@@ -1614,9 +1685,11 @@ function openAlbumSheet(a){
     else if(k==='rename'){const n=await askText('Tên mới cho album',a);if(n===null||!n.trim())return;const nn=n.trim();
       for(const t of L()){t.album=nn;await putMeta(t);}
       if(S.albSort&&S.albSort[a]){S.albSort[nn]=S.albSort[a];delete S.albSort[a];}if(S.albOrder)S.albOrder=S.albOrder.map(x=>x===a?nn:x);save();renderLib();toast('Đã đổi tên album');}
+    else if(k==='dlall'){downloadTracks(L(),a||'album');}
+    else if(k==='undlall'){const l=L().filter(t=>isLocal(t)&&(t.gid||t.audDrive));if(!await askConfirm('Xoá file âm thanh của '+l.length+' bài khỏi máy? Phụ đề, bản dịch, tiến độ vẫn giữ.'))return;for(const t of l){if(t===cur)audio.pause();await delLocalAudio(t);}renderLib();updStorage();toast('Đã giải phóng bộ nhớ');}
     else if(k.startsWith('st:')){const v=k.slice(3);S.albStatus={...(S.albStatus||{})};if(v==='auto')delete S.albStatus[a];else S.albStatus[a]=v;
-      if(v==='done'){S.albDoneAt={...(S.albDoneAt||{}),[a]:Date.now()};}save();renderLib();toast(v==='auto'?'Trạng thái album sẽ tự cập nhật theo tiến độ':'Đã chuyển album sang "'+STATUS.find(s=>s[0]===v)[1].slice(2)+'"');}
-    else if(k==='done'||k==='undone'){if(k==='done')S.albDoneAt={...(S.albDoneAt||{}),[a]:Date.now()};for(const t of L()){t.st=t.st||{};t.st.done=k==='done';await putMeta(t);}renderLib();toast(k==='done'?'Đã đánh dấu cả album đã thuộc':'Đã bỏ đánh dấu');}
+      if(v==='done'){S.albDoneAt={...(S.albDoneAt||{}),[a]:Date.now()};}save();renderLib();schedulePolicy(1500);toast(v==='auto'?'Trạng thái album sẽ tự cập nhật theo tiến độ':'Đã chuyển album sang "'+STATUS.find(s=>s[0]===v)[1].slice(2)+'"');}
+    else if(k==='done'||k==='undone'){schedulePolicy(2000);if(k==='done')S.albDoneAt={...(S.albDoneAt||{}),[a]:Date.now()};for(const t of L()){t.st=t.st||{};t.st.done=k==='done';await putMeta(t);}renderLib();toast(k==='done'?'Đã đánh dấu cả album đã thuộc':'Đã bỏ đánh dấu');}
     else if(k==='ungroup'){if(!await askConfirm('Bỏ album "'+a+'"? Các bài vẫn giữ lại trong thư viện (mục Chưa có album).'))return;for(const t of L()){t.album='';await putMeta(t);}renderLib();toast('Đã bỏ album');}
     else if(k==='delall'){const l=L();if(!await askConfirm('Xoá album "'+(a||'Chưa có album')+'" cùng '+l.length+' bài (cả âm thanh, phụ đề, tiến độ)? Không thể hoàn tác — nên sao lưu trước.'))return;
       for(const t of l){await delTrack(t.id);if(t===cur){audio.pause();audio.removeAttribute('src');cur=null;cues=[];$('#ttl').textContent='Chưa chọn bài';renderLyrics();}}
@@ -1636,6 +1709,8 @@ function openSheet(t){
     ...(t.doc||timed?[['words','📖 Từ vựng trong bài']]:[]),
     ['chart','📊 Biểu đồ thời gian & hiệu quả học'],
     [(t.st&&t.st.done)?'undone':'done',(t.st&&t.st.done)?'↩️ Bỏ đánh dấu đã thuộc':'✓ Đánh dấu đã thuộc'],
+    ...(!isLocal(t)&&(t.gid||t.audDrive)?[['dl','📥 Tải về máy (nghe offline)']]:[]),
+    ...(isLocal(t)&&(t.gid||t.audDrive)?[['undl','🗑 Xoá bản tải trong máy (giữ bài, nghe từ Drive)']]:[]),
     ['rename','✏️ Đổi tên'],
     ['album','📁 Chuyển vào album…'],
     ['del','🗑️ Xoá bài khỏi thư viện','dg'],
@@ -1652,7 +1727,9 @@ function openSheet(t){
     else if(a==='shift'){if(t!==cur)await loadTrack(t,false);showView('vPlay');openShift();}
     else if(a==='words'){openWordStats(t);}
     else if(a==='chart'){openChart([t],t.name);}
-    else if(a==='done'||a==='undone'){t.st=t.st||{};t.st.done=a==='done';await putMeta(t);renderLib();toast(a==='done'?'Đã đánh dấu thuộc bài':'Đã bỏ đánh dấu');}
+    else if(a==='done'||a==='undone'){t.st=t.st||{};t.st.done=a==='done';await putMeta(t);renderLib();schedulePolicy(1500);toast(a==='done'?'Đã đánh dấu thuộc bài':'Đã bỏ đánh dấu');}
+    else if(a==='dl'){downloadTracks([t]);}
+    else if(a==='undl'){if(!await askConfirm('Xoá file âm thanh của "'+t.name+'" khỏi máy? Phụ đề, bản dịch, tiến độ vẫn giữ; bài sẽ phát trực tiếp từ Drive.'))return;if(t===cur){audio.pause();}await delLocalAudio(t);renderLib();updStorage();toast('Đã giải phóng '+((t.size||0)/1048576).toFixed(1)+' MB');if(t===cur)loadTrack(t,false);}
     else if(a==='rename'){const n=await askText('Tên mới',t.name);if(n){t.name=n.trim();await putMeta(t);renderLib();if(t===cur){$('#ttl').textContent=t.name;setMS();}}}
     else if(a==='del'){if(!await askConfirm('Xoá "'+t.name+'" khỏi thư viện?'))return;await delTrack(t.id);tracks=tracks.filter(x=>x!==t);delete S.pos[t.id];save();if(t===cur){audio.pause();audio.removeAttribute('src');cur=null;cues=[];$('#ttl').textContent='Chưa chọn bài';renderLyrics();}renderLib();}
   };
@@ -1868,7 +1945,10 @@ async function runAuto(){
   aBusy=true;aCancel=false;$('#aGo').disabled=true;aBar(0);updAsrUI();
   try{
     aMsg('Đang giải mã âm thanh…');
-    const pcm=await decode16k(await getAudio(T.id));
+    let ab=await getAudio(T.id);
+    if(!ab&&(T.gid||T.audDrive)){aMsg('Đang tải âm thanh từ Drive để AI xử lý…');ab=await fetchCloud(T,p=>{aBar(p*0.3);aMsg('Đang tải âm thanh từ Drive… '+Math.round(p*100)+'%');},false);}
+    if(!ab)throw new Error('Bài này chưa có âm thanh');
+    const pcm=await decode16k(ab);
     const dur=pcm.length/16000;
     S.asr=$('#asrModel').value;save();
     keepAwake(true);
@@ -2060,7 +2140,7 @@ $('#spkGemBtn').onclick=async()=>{
 
 // ----- Sao lưu / khôi phục -----
 const bakMsg=m=>$('#bakMsg').textContent=m,bakBar=p=>$('#bakBar').style.width=Math.round(p*100)+'%';
-$('#bBak').onclick=async()=>{bakMsg('');bakBar(0);let sz=0;for(const t of tracks)sz+=t.size||0;$('#bakFullSz').textContent=sz?'– khoảng '+(sz/1048576).toFixed(0)+' MB':'';openModal('mBak');};
+$('#bBak').onclick=async()=>{bakMsg('');bakBar(0);let sz=0;for(const t of tracks)if(isLocal(t))sz+=t.size||0;$('#bakFullSz').textContent=sz?'– khoảng '+(sz/1048576).toFixed(0)+' MB':'';openModal('mBak');};
 function stamp(){const d=new Date();return d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');}
 function dlBlob(blob,name){if(window.dfSaveFile)return dfSaveFile(blob,name);const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),60000);}
 function bakData(){const s={...S};delete s.pos;return {app:'DeepFlowLanguage',v:1,date:new Date().toISOString(),settings:s,pos:S.pos,vocab:typeof vocab!=='undefined'?vocab:[],tracks:tracks.map(t=>{const x={...t};delete x.asrPart;return x;})};}
@@ -2400,8 +2480,9 @@ async function playClip(trackId,s,e){
   if(!trackId){toast('Không rõ bài gốc');return;}
   const go=()=>{clip.currentTime=Math.max(0,s);clipEnd=e+0.15;clip.playbackRate=S.rate||1;clip.play().catch(()=>{});};
   if(clipTrack===trackId&&clip.src){go();return;}
-  const b=await getAudio(trackId);if(!b){toast('Không còn âm thanh của bài gốc');return;}
-  if(clipUrl)URL.revokeObjectURL(clipUrl);clipUrl=URL.createObjectURL(b);clipTrack=trackId;clip.src=clipUrl;
+  const b=await getAudio(trackId);const tt=tracks.find(x=>x.id===trackId);const su=!b&&tt?streamUrl(tt):null;
+  if(!b&&!su){toast('Không còn âm thanh của bài gốc');return;}
+  if(clipUrl)URL.revokeObjectURL(clipUrl);clipUrl=b?URL.createObjectURL(b):'';clipTrack=trackId;clip.src=b?clipUrl:su;
   if(!audio.paused)audio.pause();
   clip.onloadedmetadata=()=>{clip.onloadedmetadata=null;go();};
 }
@@ -2564,7 +2645,7 @@ async function gList(folderId,depth,out,alb){
     const j=await (await gGet(`${GAPI}?q=${q}&fields=nextPageToken,files(id,name,mimeType,size)&pageSize=1000&includeItemsFromAllDrives=true${kq()}${tok?'&pageToken='+tok:''}`)).json();
     for(const f of j.files||[]){
       if(f.mimeType==='application/vnd.google-apps.folder'){if(depth<3)await gList(f.id,depth+1,out,f.name);}
-      else{f._album=alb;out.push(f);}
+      else{f._album=alb||'';out.push(f);}
     }
     tok=j.nextPageToken||'';
   }while(tok);
@@ -2585,10 +2666,10 @@ async function fetchWithProgress(url,label){
 async function gDownload(f,label){
   if(f.mimeType==='application/vnd.google-apps.document'){
     const b=await (await gGet(`${GAPI}/${f.id}/export?mimeType=text/plain${kq()}`)).blob();
-    const fl=new File([b],f.name+'.txt',{type:'text/plain'});fl._album=f._album;return fl;
+    const fl=new File([b],f.name+'.txt',{type:'text/plain'});fl._album=f._album||'';return fl;
   }
   const b=await fetchWithProgress(`${GAPI}/${f.id}?alt=media${kq()}`,label);
-  const fl=new File([b],f.name,{type:f.mimeType||b.type});fl._album=f._album;fl._gid=f.id;return fl;
+  const fl=new File([b],f.name,{type:f.mimeType||b.type});fl._album=f._album||'';fl._gid=f.id;return fl;
 }
 async function runLinks(){
   if(linkBusy)return;
@@ -2610,10 +2691,18 @@ async function runLinks(){
         }else jobs.push({url:u});
       }catch(e){errs.push(u.slice(0,60)+'…: '+e.message);}
     }
-    // 2) Tải về
+    // 2a) Âm thanh trên Drive: chỉ thêm vào thư viện, nghe trực tiếp từ Drive (chưa tải về máy)
+    let cloudN=0,cloudDup=0;
+    for(const j of jobs.filter(j=>j.g&&kindOf({name:j.g.name,type:j.g.mimeType})==='audio')){
+      if(tracks.some(t=>t.gid===j.g.id)){cloudDup++;j.done=true;continue;}
+      const t={id:uid(),name:baseName(j.g.name),album:j.g._album||'',size:+j.g.size||0,mime:j.g.mimeType||'',gid:j.g.id,loc:false,subs:{},doc:'',added:Date.now()+cloudN};
+      await putMeta(t);tracks.push(t);cloudN++;j.done=true;
+    }
+    if(cloudN)renderLib();
+    // 2b) Tài liệu / phụ đề (nhẹ) và link khác: tải về
     for(let i=0;i<jobs.length;i++){
       if(linkCancel)throw new Error('Đã dừng');
-      const j=jobs[i],label=`Tải ${i+1}/${jobs.length}: ${j.g?j.g.name:decodeURIComponent(j.url.split('/').pop().split('?')[0]).slice(0,40)}`;
+      const j=jobs[i];if(j.done)continue;const label=`Tải ${i+1}/${jobs.length}: ${j.g?j.g.name:decodeURIComponent(j.url.split('/').pop().split('?')[0]).slice(0,40)}`;
       lMsg(label);lBar(i/jobs.length);
       try{
         if(j.g)files.push(await gDownload(j.g,label));
@@ -2630,9 +2719,12 @@ async function runLinks(){
     }
     lBar(1);
     if(files.length){lMsg('Đang nạp vào thư viện…');await importFiles(files,null);}
-    lMsg((files.length?`Đã thêm ${files.length} file.`:'Không thêm được file nào.')+(errs.length?' Lỗi:\n• '+errs.join('\n• '):''));
+    const okN=files.length+cloudN;
+    lMsg((okN?`Đã thêm ${cloudN?cloudN+' bài nghe trực tiếp từ Drive (☁ chưa tải về máy)':''}${cloudN&&files.length?' và ':''}${files.length?files.length+' file':''}.`:'Không thêm được file nào.')+(cloudDup?` Bỏ qua ${cloudDup} bài đã có.`:'')+(errs.length?' Lỗi:\n• '+errs.join('\n• '):''));
     $('#linkMsg').style.whiteSpace='pre-line';
-    if(files.length&&!errs.length)setTimeout(()=>{if(!linkBusy){closeModals();$('#linkTx').value='';}},1200);
+    if(!cur&&cloudN){const t=tracks.find(x=>x.gid&&!x.loc);if(t)loadTrack(t,false);}
+    schedulePolicy(4000);
+    if(okN&&!errs.length)setTimeout(()=>{if(!linkBusy){closeModals();$('#linkTx').value='';}},1500);
   }catch(e){lMsg('Lỗi: '+e.message);}
   finally{linkBusy=false;$('#linkGo').disabled=false;}
 }
@@ -2669,7 +2761,7 @@ let miniT=0;audio.addEventListener('timeupdate',()=>{const n=Date.now();if(n-min
 $('#miniPP').onclick=()=>{audio.paused?play():(audio.pause(),clearAP());};
 $('#miniPrev').onclick=()=>goTrack(-1);$('#miniNext').onclick=()=>goTrack(1);
 $('#miniOpen').onclick=()=>showView('vPlay');
-function showView(id){setTimeout(updMini,0);if(id!=='vVoc'&&!$('#vocRev').hidden){endReview();}if(id==='vVoc')renderVoc();if(id==='vLib')renderStats();document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===id));}
+function showView(id){if(id==='vLib')updStorage();setTimeout(updMini,0);if(id!=='vVoc'&&!$('#vocRev').hidden){endReview();}if(id==='vVoc')renderVoc();if(id==='vLib')renderStats();document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===id));}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showView(b.dataset.v));
 function openModal(id){$('#'+id).classList.add('on');}
 function closeModals(){if(linkBusy)return;document.querySelectorAll('.modal').forEach(m=>m.classList.remove('on'));updAsrUI();}
@@ -2683,6 +2775,7 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   const t=tracks.find(x=>x.id===S.lastId)||tracks[0];
   if(t)loadTrack(t,false);else renderLyrics();
   if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});
+  schedulePolicy(8000);
 })();
 </script>
 <script>
@@ -2771,7 +2864,7 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   }
   function payload(){
     const s={...S};['pos','lastId','gKey','gemKey','syncAt','hpAuto','wake'].forEach(k=>delete s[k]);
-    return {app:'DeepFlowLanguage',v:1,at:Date.now(),settings:s,pos:S.pos||{},vocab,tracks:tracks.map(t=>{const x={...t};delete x.asrPart;delete x.noAudio;return x;})};
+    return {app:'DeepFlowLanguage',v:1,at:Date.now(),settings:s,pos:S.pos||{},vocab,tracks:tracks.map(t=>{const x={...t};delete x.asrPart;delete x.noAudio;delete x.loc;return x;})};
   }
   async function merge(rem){
     let changed=0;const del={...(S.delIds||{}),...((rem.settings||{}).delIds||{})};S.delIds=del;
@@ -2779,8 +2872,8 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
     for(const rt of rem.tracks||[]){
       if(del[rt.id])continue;
       const lt=tracks.find(t=>t.id===rt.id);
-      if(!lt){const n={...rt};const has=await getAudio(n.id);if(!has)n.noAudio=true;await putMeta0(n);tracks.push(n);changed++;}
-      else if((rt.mt||0)>(lt.mt||0)){const keepNo=lt.noAudio;Object.keys(lt).forEach(k=>delete lt[k]);Object.assign(lt,rt);if(keepNo)lt.noAudio=true;await putMeta0(lt);changed++;}
+      if(!lt){const n={...rt};const has=await getAudio(n.id);n.loc=!!has;if(!has)n.noAudio=true;await putMeta0(n);tracks.push(n);changed++;}
+      else if((rt.mt||0)>(lt.mt||0)){const keepNo=lt.noAudio,keepLoc=lt.loc;Object.keys(lt).forEach(k=>delete lt[k]);Object.assign(lt,rt);if(keepNo)lt.noAudio=true;lt.loc=keepLoc;await putMeta0(lt);changed++;}
     }
     for(const id of Object.keys(del)){const i=tracks.findIndex(t=>t.id===id);if(i>=0){const t=tracks[i];await delTrack(id);tracks.splice(i,1);if(t===cur){audio.pause();cur=null;}changed++;}}
     // từ vựng
