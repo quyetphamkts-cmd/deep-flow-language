@@ -641,7 +641,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.1.0-beta.1';
+const APP_VER='1.0.1-beta.1';
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -3028,24 +3028,25 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
     try{
       const j=await (await fetch(RAW+'update/version.json?t='+Date.now(),{cache:'no-store'})).json();
       S.updChecked=Date.now();save();
-      if(j.apk&&nativeBuild&&j.apk.versionCode>nativeBuild&&(j.apk.required||vcmp(j.web,APP_VER)>0&&j.minNative>nativeBuild)){
+      const V=j.ver||j.web; // "ver": số phiên bản thật (có beta); "web": số dạng cũ cho app bản đầu đọc được
+      if(j.apk&&nativeBuild&&j.apk.versionCode>nativeBuild&&(j.apk.required||vcmp(V,APP_VER)>0&&j.minNative>nativeBuild)){
         msg.textContent='Có bản APK mới '+j.apk.versionName+' (cần cài đè để có tính năng mới).';
         bar(`Có bản cài đặt mới <b>${j.apk.versionName}</b>. Tải về rồi mở file để cài đè (giữ nguyên dữ liệu).`,'Tải APK',()=>{location.href=j.apk.url;});return;
       }
-      if(vcmp(j.web,APP_VER)>0&&(!j.minNative||nativeBuild>=j.minNative)){
-        msg.textContent='Có phiên bản '+verLabel(j.web)+': '+(j.notes||'');
-        bar(`Có cập nhật <b>${verLabel(j.web)}</b>${j.notes?': '+esc(j.notes):''}`,'Cập nhật',()=>applyUpdate(j));return;
+      if(vcmp(V,APP_VER)>0&&(!j.minNative||nativeBuild>=j.minNative)){
+        msg.textContent='Có phiên bản '+verLabel(V)+': '+(j.notes||'');
+        bar(`Có cập nhật <b>${verLabel(V)}</b>${j.notes?': '+esc(j.notes):''}`,'Cập nhật',()=>applyUpdate(j,V));return;
       }
       if(manual)msg.textContent='Bạn đang dùng bản mới nhất ('+verLabel(APP_VER)+').';
     }catch(e){if(manual)msg.textContent='Không kiểm tra được (cần mạng): '+(e.message||e);}
   }
-  async function applyUpdate(j){
+  async function applyUpdate(j,V){
     const b=document.getElementById('updBar');if(b)b.querySelector('span').textContent='Đang tải bản cập nhật…';
     try{
       if(acc){await sync(false).catch(()=>{});}
       const html=await (await fetch((j.url||RAW+'www/index.html')+'?t='+Date.now(),{cache:'no-store'})).text();
       if(!/Deep Flow/.test(html)||html.length<50000)throw new Error('file cập nhật không hợp lệ');
-      const dir='web/'+j.web;
+      const dir='web/'+(V||j.ver||j.web);
       await FS.writeFile({path:dir+'/index.html',data:html,directory:'DATA',encoding:'utf8',recursive:true});
       const {uri}=await FS.getUri({path:dir,directory:'DATA'});
       const path=decodeURIComponent(uri.replace(/^file:\/\//,''));
