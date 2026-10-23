@@ -1,0 +1,12 @@
+{
+  "web": "1.0.0",
+  "notes": "Bản đầu tiên",
+  "minNative": 1,
+  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
+  "apk": {
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "required": false,
+    "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
+  }
+}

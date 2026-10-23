@@ -1,0 +1,80 @@
+name: Build APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'capacitor.config.json'
+      - 'update/version.json'
+      - '.github/workflows/build-apk.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cài thư viện
+        run: npm ci
+
+      - name: Đồng bộ phần web vào Android
+        run: npx cap sync android
+
+      - name: Đọc số phiên bản
+        id: ver
+        run: |
+          echo "code=$(jq -r '.apk.versionCode' update/version.json)" >> "$GITHUB_OUTPUT"
+          echo "name=$(jq -r '.apk.versionName' update/version.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Giải mã khoá ký
+        env:
+          DF_SIGN_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
+        run: |
+          if [ -z "$DF_SIGN_PASSWORD" ]; then
+            echo "::error::Chưa có secret DF_SIGN_PASSWORD (xem README, mục 1)"; exit 1
+          fi
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/deepflow-release.jks.enc -out "$RUNNER_TEMP/deepflow.jks" -pass env:DF_SIGN_PASSWORD
+
+      - name: Build APK
+        working-directory: android
+        env:
+          DF_KEYSTORE_FILE: ${{ runner.temp }}/deepflow.jks
+          DF_KEYSTORE_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
+          DF_KEY_ALIAS: deepflow
+          DF_KEY_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace -PdfVersionCode=${{ steps.ver.outputs.code }} -PdfVersionName=${{ steps.ver.outputs.name }}
+          mkdir -p ../dist
+          cp app/build/outputs/apk/release/app-release.apk ../dist/DeepFlowLanguage.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DeepFlowLanguage-${{ steps.ver.outputs.name }}
+          path: dist/DeepFlowLanguage.apk
+
+      - name: Phát hành
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.ver.outputs.name }}
+          name: Deep Flow Language ${{ steps.ver.outputs.name }}
+          files: dist/DeepFlowLanguage.apk
+          make_latest: true
+          body: |
+            Tải **DeepFlowLanguage.apk** bên dưới, mở trên điện thoại Android để cài (hoặc cài đè lên bản cũ — dữ liệu được giữ nguyên).

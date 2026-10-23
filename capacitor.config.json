@@ -1,0 +1,19 @@
+{
+  "appId": "vn.vietan.deepflow",
+  "appName": "Deep Flow Language",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": false,
+    "webContentsDebuggingEnabled": true
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_deepflow",
+      "iconColor": "#FFB020"
+    }
+  }
+}
