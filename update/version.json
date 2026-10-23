@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.15",
- "notes": "Tự chuyển mô hình / Google Dịch / Whisper khi Gemini hết lượt; sửa nút trên thông báo (cần APK mới).",
+ "ver": "1.0.1-beta.16",
+ "notes": "Vốn từ theo gói từ thông dụng (600–5000 từ).",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.16",
+   "d": "23/10/2026",
+   "items": [
+    "Từ vựng → 📚 Vốn từ theo gói 600 · 1000 · 1500 · 2000 · 3000 · 5000 từ tiếng Anh thông dụng nhất: tự đối chiếu với các bài đã học, chia Đã thuộc / Đang học / Chưa học, chạm vào gói để xem từng từ và tra nghĩa"
+   ]
+  },
   {
    "v": "1.0.1-beta.15",
    "d": "23/10/2026",
