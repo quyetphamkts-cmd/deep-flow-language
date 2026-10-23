@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.24",
- "notes": "Gọn nút nạp bài trong Thư viện.",
+ "ver": "1.0.1-beta.25",
+ "notes": "Thông tin album và bài thu vào nút (i).",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.25",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện gọn hơn: thông tin của album và từng bài (tiến độ, số từ, nhãn phụ đề, mức nhớ…) thu vào nút (i) ở mỗi album; bấm (i) để hiện / ẩn toàn bộ thông tin của album đó và các bài bên trong"
+   ]
+  },
   {
    "v": "1.0.1-beta.24",
    "d": "23/10/2026",
