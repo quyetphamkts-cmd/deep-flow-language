@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.51",
- "notes": "Tối ưu cả Claude và ChatGPT: tự giới hạn tốc độ gọi (Claude ~40, ChatGPT ~60, Whisper ~20 lượt/phút); bị giới hạn theo phút (429) hoặc máy chủ quá tải (529 / 5xx) thì chờ đúng thời gian máy chủ báo, không thì chờ tăng dần 2 → 4 → 8 giây rồi thử lại, thay vì bỏ qua ngay · Hết tiền / hết hạn mức tài khoản (credit balance, insufficient_quota) thì khoá AI đó 6 giờ, nhớ cả khi tắt mở app, tự chuyển AI khác; quá tải tạm thời chỉ khoá khoảng 1 phút · Lưu kết quả & gộp câu khi dịch (từ bản trước) áp dụng chung cho Claude, ChatGPT và Gemini",
+ "ver": "1.0.1-beta.52",
+ "notes": "Menu ⋯ của một bài gọn lại: ▶ Phát / Tạm dừng · ✨ Tự động tạo, kiểm tra, sắp xếp & khớp phụ đề với âm thanh (một nút: chưa có phụ đề → AI tạo; có văn bản chưa khớp → AI khớp; đã có phụ đề → kiểm tra, sắp xếp, căn theo giọng nói, vẫn kém thì hỏi để AI căn lại từng câu) · 📋 Copy / xuất phụ đề · 📖 Từ vựng có trong bài · ✏️ Đổi tên · 📁 Chuyển sang album khác · 🗑️ Xoá (vào thùng rác)",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.52",
+   "d": "23/10/2026",
+   "items": [
+    "Menu ⋯ của một bài gọn lại: ▶ Phát / Tạm dừng · ✨ Tự động tạo, kiểm tra, sắp xếp & khớp phụ đề với âm thanh (một nút: chưa có phụ đề → AI tạo; có văn bản chưa khớp → AI khớp; đã có phụ đề → kiểm tra, sắp xếp, căn theo giọng nói, vẫn kém thì hỏi để AI căn lại từng câu) · 📋 Copy / xuất phụ đề · 📖 Từ vựng có trong bài · ✏️ Đổi tên · 📁 Chuyển sang album khác · 🗑️ Xoá (vào thùng rác)"
+   ]
+  },
   {
    "v": "1.0.1-beta.51",
    "d": "23/10/2026",
