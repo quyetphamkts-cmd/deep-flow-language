@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.39",
- "notes": "Tự tạo phụ đề bằng AI: app tự nhận ra bài chỉ có âm thanh (hoặc có văn bản chưa khớp thời gian) — khi mới nạp từ máy, Drive, Cloud hoặc khi mở app — và tạo phụ đề trong nền, không cần chọn bài hay bấm nút; ưu tiên Bài đang học → Bài học tiếp theo → Chưa có album · Bật / tắt ở Cài đặt → Tài khoản & lưu trữ → Dịch tự động → “Tự tạo phụ đề bằng AI cho bài mới”; cần ít nhất một API AI; nếu bật “chỉ Wi-Fi” thì chỉ chạy khi có Wi-Fi; bấm Dừng thì app nghỉ tự tạo 6 giờ; bài lỗi 2 lần sẽ thử lại sau 1 ngày",
+ "ver": "1.0.1-beta.40",
+ "notes": "Mục Phiên bản gọn hơn: bỏ nút “Kiểm tra cập nhật” (app đã tự kiểm tra và tự cập nhật) và nút “Quay về bản cài gốc”; nút Tải APK chỉ hiện khi có bản cài APK mới",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.40",
+   "d": "23/10/2026",
+   "items": [
+    "Mục Phiên bản gọn hơn: bỏ nút “Kiểm tra cập nhật” (app đã tự kiểm tra và tự cập nhật) và nút “Quay về bản cài gốc”; nút Tải APK chỉ hiện khi có bản cài APK mới"
+   ]
+  },
   {
    "v": "1.0.1-beta.39",
    "d": "23/10/2026",
