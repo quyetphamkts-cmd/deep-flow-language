@@ -97,6 +97,21 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .play{width:66px;height:66px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(255,140,30,.35)}
 .play svg{width:32px;height:32px;fill:#1a1100}
 .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.tools{display:flex;justify-content:space-around;align-items:flex-start;margin:2px 0 0}
+.tl{background:none;border:0;color:var(--mu);display:flex;flex-direction:column;align-items:center;gap:2px;min-width:56px;padding:4px 2px;font-size:10px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation}
+.tl .ic{height:24px;display:flex;align-items:center;justify-content:center;font:700 15px/1 system-ui;color:var(--tx)}
+.tl svg{width:24px;height:24px;fill:currentColor}.tl svg.st{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tl.act .ic,.tl.act{color:var(--ac)}.tl .ic.dim{opacity:.45}
+.tl.mic .ic{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--ln);margin-top:-6px}.tl.mic.act .ic{border-color:var(--ac);background:rgba(255,176,32,.12)}
+.trw{position:relative;margin:6px -14px 0;height:92px;touch-action:none}
+#wave{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.trw .tr{position:relative;height:100%;margin:0;padding:0 14px;transition:opacity .15s}
+.trw.scrub .tr{opacity:0;pointer-events:none}.trw.scrub #wave{opacity:.95}
+.scrubT{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:700 22px/1 system-ui;font-variant-numeric:tabular-nums;color:var(--tx);background:rgba(13,16,23,.65);padding:6px 12px;border-radius:12px;display:none;pointer-events:none}
+.trw.scrub .scrubT{display:block}
+.prog{justify-content:space-between}
+.pmList{display:flex;flex-direction:column;gap:4px}.pmI{display:flex;align-items:center;gap:12px;background:var(--p2);border:1px solid var(--ln);border-radius:12px;padding:9px 12px;color:var(--tx);font-size:14px;text-align:left}
+.pmI.on{border-color:var(--ac);color:var(--ac)}.pmI .ic{width:26px;display:flex;justify-content:center}.pmI svg{width:24px;height:24px;fill:currentColor}.pmI svg.st{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.pmI .dim{opacity:.45}
 .chip{background:var(--p1);border:1px solid var(--ln);border-radius:11px;padding:7px 4px;font-size:12px;text-align:center;line-height:1.25}
 .chip small{display:block;color:var(--mu);font-size:10px}
 .chip.act{border-color:var(--ac);color:var(--ac)}
@@ -135,7 +150,7 @@ select{background:var(--p2);border:1px solid var(--ln);border-radius:10px;paddin
 .modal.on{display:flex}
 #vSet h3{display:flex;align-items:center;gap:8px}
 #vSet .sw select{max-width:62%;min-width:0;text-overflow:ellipsis}
-.hlp{margin-left:auto;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--mu);background:none;color:var(--mu);font:700 13px/1 system-ui;display:inline-flex;align-items:center;justify-content:center;padding:0;cursor:pointer;flex:none}
+.hlp{margin-left:auto;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--mu);background:none;color:var(--mu);font:italic 700 14px/1 Georgia,'Times New Roman',serif;display:inline-flex;align-items:center;justify-content:center;padding:0;cursor:pointer;flex:none}
 .hlp.on{border-color:var(--ac);background:var(--ac);color:#111}
 #vSet .help{display:none!important}#vSet .card.hopen .help{display:block!important}#vSet .card.hopen .sw small.help{display:block!important;margin-top:2px}
 .navdot{position:relative}.navdot::after{content:'';position:absolute;top:6px;right:calc(50% - 16px);width:8px;height:8px;border-radius:50%;background:#ff4d4f}
@@ -288,7 +303,6 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 <main>
  <!-- PLAYER -->
  <section class="view on" id="vPlay">
-  <div class="now"><div><div class="ttl" id="ttl">Chưa có bài nào</div><div class="subi" id="subInfo"></div></div><button class="more" id="bCurMore" aria-label="Tuỳ chọn bài">⋯</button></div>
   <div class="trst" id="asrSt" hidden><span id="asrMsg" style="flex:2;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">AI đang xử lý…</span><div class="pbar"><i id="asrBar"></i></div><button id="asrOpen">Xem</button></div>
   <div class="trst" id="trSt" hidden><span id="trMsg">Đang dịch…</span><div class="pbar"><i id="trBar"></i></div><button id="trStop">Dừng</button></div>
   <div class="syncbar" id="syncBar" hidden>
@@ -306,23 +320,27 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    <button class="btn pri" id="tapNext">Bắt đầu câu tiếp ⏎</button>
    <button class="btn" id="tapDone">Xong</button>
   </div>
+  <div class="now"><div><div class="ttl" id="ttl">Chưa có bài nào</div><div class="subi" id="subInfo"></div></div><button class="more" id="bCurMore" aria-label="Tuỳ chọn bài">⋯</button></div>
   <div class="ctl">
-   <div class="prog"><span id="tCur">0:00</span><input type="range" id="seek" min="0" max="1000" value="0"><span id="tDur">0:00</span></div>
-   <div class="tr">
-    <button class="ib sm" id="bPrevT" title="Bài trước"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg><span class="lb">Bài trước</span></button>
-    <button class="ib" id="bPrevS" title="Câu trước"><svg viewBox="0 0 24 24"><path d="M11 18V6l-8.5 6zm.5-6 8.5 6V6z"/></svg><span class="lb">Câu trước</span></button>
-    <button class="play" id="bPlay"><svg viewBox="0 0 24 24" id="icPlay"><path d="M8 5v14l11-7z"/></svg></button>
-    <button class="ib" id="bNextS" title="Câu sau"><svg viewBox="0 0 24 24"><path d="M4 18l8.5-6L4 6zm9-12v12l8.5-6z"/></svg><span class="lb">Câu sau</span></button>
-    <button class="ib sm" id="bNextT" title="Bài sau"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg><span class="lb">Bài sau</span></button>
+   <div class="tools">
+    <button class="tl" id="cLoop" aria-label="Chế độ phát"></button>
+    <button class="tl" id="cRate" aria-label="Tốc độ"></button>
+    <button class="tl" id="cMic" aria-label="Luyện nói"></button>
+    <button class="tl" id="cSub" aria-label="Phụ đề"></button>
+    <button class="tl" id="cMode" aria-label="Hẹn giờ tắt"></button>
    </div>
-   <div class="chips">
-    <button class="chip" id="cLoop"></button>
-    <button class="chip" id="cRate"></button>
-    <button class="chip" id="cSub"></button>
-    <button class="chip" id="cRep"></button>
-    <button class="chip" id="cAp"></button>
-    <button class="chip" id="cMode"></button>
+   <div class="trw" id="trw">
+    <canvas id="wave"></canvas>
+    <div class="scrubT" id="scrubT"></div>
+    <div class="tr">
+     <button class="ib sm" id="bPrevT" title="Bài trước"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg><span class="lb">Bài trước</span></button>
+     <button class="ib" id="bPrevS" title="Câu trước"><svg viewBox="0 0 24 24"><path d="M11 18V6l-8.5 6zm.5-6 8.5 6V6z"/></svg><span class="lb">Câu trước</span></button>
+     <button class="play" id="bPlay"><svg viewBox="0 0 24 24" id="icPlay"><path d="M8 5v14l11-7z"/></svg></button>
+     <button class="ib" id="bNextS" title="Câu sau"><svg viewBox="0 0 24 24"><path d="M4 18l8.5-6L4 6zm9-12v12l8.5-6z"/></svg><span class="lb">Câu sau</span></button>
+     <button class="ib sm" id="bNextT" title="Bài sau"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg><span class="lb">Bài sau</span></button>
+    </div>
    </div>
+   <div class="prog"><span id="tCur">0:00</span><input type="range" id="seek" min="0" max="1000" value="0" hidden><span id="tDur">0:00</span></div>
   </div>
  </section>
 
@@ -576,8 +594,13 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
  <div class="mu" id="linkMsg"></div>
  <div class="row2"><button class="btn" id="linkClose">Đóng</button><button class="btn pri" id="linkGo">Thêm</button></div>
 </div></div>
+<div class="modal" id="mMic"><div class="box">
+ <h3>🎙 Luyện nói</h3>
+ <div id="micBody"></div>
+ <div class="row2"><button class="btn pri" data-close>Xong</button></div>
+</div></div>
 <div class="modal" id="mRep"><div class="box">
- <h3>🔁 Lặp bài / album</h3>
+ <h3>Chế độ phát</h3>
  <div id="repBody"></div>
  <div class="row2"><button class="btn pri" data-close>Xong</button></div>
 </div></div>
@@ -681,9 +704,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.8';
+const APP_VER='1.0.1-beta.9';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]},{"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]},{"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]},{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.9", "d": "23/10/2026", "items": ["Màn hình Nghe mới: tên bài nằm dưới phụ đề; 5 nút nhỏ gọn (Chế độ phát · Tốc độ · 🎙 Luyện nói · Phụ đề · Hẹn giờ) ngay trên nút Play", "Chế độ phát dạng biểu tượng, bấm để chuyển lần lượt, nhấn giữ để chọn: Phát 1 bài · Phát hết album · Phát hết mục Đang học · Lặp bài · Lặp album · Lặp mục Đang học", "Nút Tốc độ và Phụ đề: bấm để chuyển nhanh, nhấn giữ để chọn", "Nút 🎙 Luyện nói gom: nghe lại mỗi câu, dừng để nói lại, nói đuổi (shadowing), chấm phát âm, luyện câu đang nghe", "Thanh tiến trình thành biểu đồ sóng âm chìm dưới nút Play: kéo vùng trống sang trái/phải để tua (các nút tạm ẩn khi kéo); thời gian đang phát bên trái, tổng thời gian bên phải", "Tra từ: hiện nghĩa nhanh trong lúc chờ, không còn treo ở “Đang tra…”; nút đọc từ dùng giọng Google nên đọc được trong bản APK", "Tạo phụ đề nhiều bài: bài lỗi không làm dừng cả hàng chờ (tự thử lại 1 lần), tự chờ khi Gemini giới hạn lượt gọi, báo tổng kết khi xong", "Màn hình khoá: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn tên bài chữ nhỏ", "Nút thông tin trong Cài đặt đổi thành chữ i"]},{"v": "1.0.1-beta.9", "d": "23/10/2026", "items": ["Màn hình khoá / thanh thông báo: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn dòng chữ nhỏ và tên bài phía dưới", "Bản APK: cải thiện giữ nhạc phát tiếp khi vuốt tắt app"]},{"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]},{"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]},{"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]},{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1171,7 +1194,7 @@ async function loadTrack(t,autoplay){
     audio.playbackRate=S.rate;
     const p=S.pos[t.id];if(p&&p<audio.duration-3)audio.currentTime=p;
     if(cues.length&&synced){const l=cues[cues.length-1];if(l.e>audio.duration||l.e<=l.s)l.e=audio.duration;}
-    $('#tDur').textContent=fmt(audio.duration);step();
+    $('#tDur').textContent=fmt(audio.duration);step();drawWave();setTimeout(()=>buildPeaks(t),1500);
   };
   setMS();renderLib();updChips();
   if(autoplay)play();
@@ -1236,7 +1259,7 @@ function step(){
   }
   if(!dragging&&audio.duration){$('#seek').value=Math.round(t/audio.duration*1000);$('#tCur').textContent=fmt(t);}
 }
-let rafId=0;function loop(){step();if(!audio.paused)rafId=requestAnimationFrame(loop);}
+let rafId=0;function loop(){step();drawWave();if(!audio.paused)rafId=requestAnimationFrame(loop);}
 audio.addEventListener('timeupdate',()=>{if(document.hidden)step();});
 function sentEnd(k,crossed){
   const c=cues[k];
@@ -1258,7 +1281,50 @@ async function play(){
   clearAP();ensureCtx();if(ctx&&ctx.state==='suspended')ctx.resume();
   try{await audio.play();}catch(e){}
 }
-function seekTo(t){clearAP();audio.currentTime=Math.max(0,t);lastIdx=-1;step();}
+function seekTo(t){clearAP();audio.currentTime=Math.max(0,t);lastIdx=-1;step();drawWave();}
+// ----- Biểu đồ sóng âm: chìm dưới các nút phát, mốc = tâm nút Play; kéo vùng trống để tua -----
+const WV_STEP=0.25,WV_PPS=12; // 1 cột = 0,25 giây; 12 px mỗi giây
+let wvScrub=null,wvSynth=null,wvSynthId=null;
+function hash01(n){n=Math.sin(n*12.9898)*43758.5453;return n-Math.floor(n);}
+function wavePeaks(){
+  if(!cur||!isFinite(audio.duration)||!audio.duration)return null;
+  if(cur.peaks&&cur.peaks.length)return cur.peaks;
+  const key=cur.id+'|'+cues.length+'|'+Math.round(audio.duration);
+  if(wvSynthId===key)return wvSynth;
+  // chưa có sóng thật: dựng sóng ước lượng theo vị trí các câu (có lời = cao, khoảng lặng = thấp)
+  const n=Math.ceil(audio.duration/WV_STEP),a=new Array(n);const tc=synced&&cues.length;
+  for(let k=0;k<n;k++){const t=k*WV_STEP;let sp=1;if(tc){sp=0;for(const c of cues){if(c.s<=t&&t<c.e){sp=1;break;}if(c.s>t)break;}}
+    a[k]=Math.round(sp?28+60*hash01(k)*(0.6+0.4*Math.sin(k/3)):6+8*hash01(k));}
+  wvSynth=a;wvSynthId=key;return a;
+}
+async function buildPeaks(t){
+  try{
+    if(!t||(t.peaks&&t.peaks.length)||!isLocal(t)||aBusy)return;
+    const blob=await getAudio(t.id);if(!blob||blob.size>80e6)return;
+    const AC=window.AudioContext||window.webkitAudioContext;const ac=new AC();
+    const ab=await blob.arrayBuffer();const buf=await new Promise((res,rej)=>ac.decodeAudioData(ab,res,rej)).catch(()=>null);try{ac.close();}catch(e){}
+    if(!buf)return;
+    const d=buf.getChannelData(0),sr=buf.sampleRate,stp=Math.max(1,Math.floor(sr*WV_STEP)),n=Math.ceil(d.length/stp),raw=new Float32Array(n);
+    for(let k=0;k<n;k++){let m=0;const e=Math.min(d.length,(k+1)*stp);for(let i=k*stp;i<e;i+=8){const v=Math.abs(d[i]);if(v>m)m=v;}raw[k]=m;}
+    const srt=Array.from(raw).sort((x,y)=>x-y),ref=srt[Math.floor(srt.length*0.98)]||1;
+    t.peaks=Array.from(raw,v=>Math.max(2,Math.min(100,Math.round(v/ref*100))));await putMeta0(t);if(t===cur)drawWave();
+  }catch(e){}
+}
+function drawWave(){
+  const c=$('#wave');if(!c||!$('#vPlay').classList.contains('on'))return;
+  const r=c.getBoundingClientRect();if(!r.width)return;const dpr=window.devicePixelRatio||1;
+  if(c.width!==Math.round(r.width*dpr)||c.height!==Math.round(r.height*dpr)){c.width=Math.round(r.width*dpr);c.height=Math.round(r.height*dpr);}
+  const g=c.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,r.width,r.height);
+  const pk=wavePeaks();if(!pk)return;
+  const pb=$('#bPlay').getBoundingClientRect();const cx=pb.width?pb.left+pb.width/2-r.left:r.width/2;
+  const t=wvScrub?wvScrub.t:audio.currentTime,bw=WV_PPS*WV_STEP,H=r.height,mid=H/2;
+  const cs=getComputedStyle(document.documentElement),ac=cs.getPropertyValue('--ac').trim()||'#ffb020',mu=cs.getPropertyValue('--mu').trim()||'#8b95a9';
+  const k0=Math.max(0,Math.floor((t-cx/WV_PPS)/WV_STEP)),k1=Math.min(pk.length-1,Math.ceil((t+(r.width-cx)/WV_PPS)/WV_STEP));
+  for(let k=k0;k<=k1;k++){const x=cx+(k*WV_STEP-t)*WV_PPS;const h=Math.max(2,pk[k]/100*(H*0.86));
+    g.fillStyle=k*WV_STEP<t?ac:mu;g.globalAlpha=k*WV_STEP<t?0.9:0.45;g.fillRect(x,mid-h/2,Math.max(1,bw-1),h);}
+  g.globalAlpha=1;g.fillStyle=ac;g.fillRect(cx-1,4,2,H-8);
+}
+
 function prevS(){
   if(!synced){seekTo(audio.currentTime-5);return;}
   const i=findIdx(audio.currentTime);if(i<0){seekTo(0);return;}
@@ -1270,7 +1336,14 @@ function nextS(){
 }
 // Danh sách phát: album của bài hiện tại (hoặc cả thư viện khi chọn "Lặp tất cả")
 const albumOf=t=>(t&&t.album)||'';
-function queue(){if(!cur)return tracks;return S.rpScope==='all'?libOrder():libOrder().filter(t=>albumOf(t)===albumOf(cur));}
+// Chế độ phát (S.pm): one=phát 1 bài · album=phát hết album · learn=phát hết mục Đang học · r1=lặp bài · ralb=lặp album · rlearn=lặp mục Đang học
+const PM=[['one','Phát 1 bài rồi dừng','Bài này'],['album','Phát hết album rồi dừng','Album'],['learn','Phát hết mục Đang học rồi dừng','Đang học'],['r1','Lặp lại bài hiện tại','Lặp bài'],['ralb','Lặp lại album','Lặp album'],['rlearn','Lặp lại mục Đang học','Lặp Đ.học']];
+if(!S.pm){S.pm={off:'album',one:'r1',album:'ralb',all:'rlearn'}[S.rpScope]||'ralb';}
+const pmRep=()=>['r1','ralb','rlearn'].includes(S.pm);
+function learnQueue(){const out=[];for(const [a,l] of albums())if(albumInfo(a,l).status==='learn')out.push(...l);return out;}
+function queue(){if(!cur)return tracks;const alb=libOrder().filter(t=>albumOf(t)===albumOf(cur));
+  if(S.pm==='learn'||S.pm==='rlearn'){const q=learnQueue();if(q.includes(cur))return q;}
+  return alb;}
 function goTrack(d,manual=true){
   const q=queue();if(!q.length)return;let i=q.indexOf(cur)+d;
   if(i<0)i=q.length-1;if(i>=q.length)i=0;if(manual)rpReset();loadTrack(q[i],true);
@@ -1278,11 +1351,7 @@ function goTrack(d,manual=true){
 // ----- Lặp bài / album -----
 let rp={plays:1,passes:1,sec:0,stopped:false};
 function rpReset(){rp={plays:1,passes:1,sec:0,stopped:false};updRepInfo();}
-function rpLabel(){
-  const sc=(SCOPES.find(s=>s[0]===S.rpScope)||SCOPES[0])[1];
-  if(S.rpScope==='off')return sc;
-  return sc+' · '+(S.rpLim==='inf'?'∞':S.rpLim==='count'?S.rpN+' lần':S.rpMin+' phút');
-}
+function rpLabel(){const m=PM.find(x=>x[0]===S.pm)||PM[4];return m[1]+(pmRep()&&S.rpLim!=='inf'?' · '+(S.rpLim==='count'?S.rpN+' lần':S.rpMin+' phút'):'');}
 function rpLeftOk(kind){ // kind: 'plays' | 'passes'
   if(S.rpLim==='count')return rp[kind]<S.rpN;
   if(S.rpLim==='time')return rp.sec<S.rpMin*60;
@@ -1297,43 +1366,44 @@ setInterval(()=>{ // đếm thời gian nghe thực tế
     {const dk=today();cur.st.ds=cur.st.ds||{};cur.st.ds[dk]=(cur.st.ds[dk]||0)+1;cur.st.d=cur.st.d||[];if(cur.st.d[cur.st.d.length-1]!==dk){cur.st.d.push(dk);if(cur.st.d.length>400)cur.st.d.shift();putMeta(cur);}}S.days=S.days||{};const k=today();S.days[k]=(S.days[k]||0)+1;
     if(cur.st.sec===65)schedulePolicy(2000);
     if(++stSave%20===0){putMeta(cur);save();if($('#vLib').classList.contains('on'))renderStats();}}
-  if(S.rpScope!=='off'&&S.rpLim==='time'&&rp.sec>=S.rpMin*60){rpStop(`Đã nghe đủ ${S.rpMin} phút — dừng lặp`);rp.sec=0;}
+  if(pmRep()&&S.rpLim==='time'&&rp.sec>=S.rpMin*60){rpStop(`Đã nghe đủ ${S.rpMin} phút — dừng lặp`);rp.sec=0;}
   if(!$('#mRep').classList.contains('on'))return;updRepInfo();
 },1000);
 function onEnded(){
   if(cur){cur.st=cur.st||{};cur.st.plays=(cur.st.plays||0)+1;putMeta(cur);save();}
   if(sleep==='end'){sleep=null;updChips();toast('Hẹn giờ: đã dừng khi hết bài');if(cur){delete S.pos[cur.id];save();}return;}
   if(cur){delete S.pos[cur.id];save();}
-  const sc=S.rpScope;
-  if(sc==='one'){
+  const pm=S.pm;
+  if(pm==='one'){toast('Đã phát xong bài — dừng');return;}
+  if(pm==='r1'){
     if(rpLeftOk('plays')){rp.plays++;seekTo(0);play();}
     else rpStop(`Đã phát ${rp.plays} lần — dừng`);
     updRepInfo();return;
   }
   const q=queue(),i=q.indexOf(cur);
   if(i>=0&&i<q.length-1){loadTrack(q[i+1],true);return;}
-  if(sc==='off'){toast('Đã phát hết '+(albumOf(cur)?'album':'danh sách'));return;}
+  const nm=(pm==='learn'||pm==='rlearn')&&learnQueue().includes(cur)?'mục Đang học':'album';
+  if(!pmRep()){toast('Đã phát hết '+nm+' — dừng');return;}
   if(rpLeftOk('passes')){rp.passes++;loadTrack(q[0],true);}
-  else rpStop(`Đã phát ${rp.passes} lượt ${sc==='album'?'album':'danh sách'} — dừng`);
+  else rpStop(`Đã phát ${rp.passes} lượt ${nm} — dừng`);
   updRepInfo();
 }
 function updRepInfo(){
   updChips();
   const el=$('#rpInfo');if(!el)return;
   let m='';
-  if(S.rpScope==='off')m='Phát hết album rồi dừng.';
+  if(!pmRep())m=(PM.find(x=>x[0]===S.pm)||PM[0])[1]+'.';
   else if(S.rpLim==='inf')m='Lặp mãi cho đến khi bạn dừng.';
-  else if(S.rpLim==='count')m=S.rpScope==='one'?`Bài này: đang phát lần ${rp.plays}/${S.rpN}.`:`Đang ở lượt ${rp.passes}/${S.rpN}.`;
+  else if(S.rpLim==='count')m=S.pm==='r1'?`Bài này: đang phát lần ${rp.plays}/${S.rpN}.`:`Đang ở lượt ${rp.passes}/${S.rpN}.`;
   else m=`Đã nghe ${fmt(rp.sec)} / ${S.rpMin} phút.`;
   el.textContent=m;
 }
 function openRep(){
   const seg=(name,opts,val)=>`<div class="seg" data-k="${name}">`+opts.map(o=>`<button data-v="${o[0]}" class="${o[0]===val?'on':''}">${o[1]}</button>`).join('')+'</div>';
-  $('#repBody').innerHTML=`
-   <div class="mu" style="margin-bottom:6px">Lặp</div>${seg('rpScope',[['off','Tắt'],['one','1 bài'],['album','Album'],['all','Tất cả']],S.rpScope)}
-   <div id="limBox" ${S.rpScope==='off'?'hidden':''}>
-    <div class="mu" style="margin:14px 0 6px">Giới hạn</div>${seg('rpLim',[['inf','Vô hạn'],['count','Số lần'],['time','Thời gian']],S.rpLim)}
-    <div class="stp" ${S.rpLim==='count'?'':'hidden'}><button data-d="-1" data-f="rpN">−</button><b id="vN">${S.rpN}</b><span>lần ${S.rpScope==='one'?'(số lần phát bài)':'(số lượt phát cả '+(S.rpScope==='album'?'album':'danh sách')+')'}</span><button data-d="1" data-f="rpN">＋</button></div>
+  $('#repBody').innerHTML=`<div class="pmList">${PM.map(m=>`<button class="pmI${m[0]===S.pm?' on':''}" data-pm="${m[0]}"><span class="ic">${pmIcon(m[0])}</span><span>${m[1]}</span></button>`).join('')}</div>
+   <div id="limBox" ${pmRep()?'':'hidden'}>
+    <div class="mu" style="margin:14px 0 6px">Giới hạn lặp</div>${seg('rpLim',[['inf','Vô hạn'],['count','Số lần'],['time','Thời gian']],S.rpLim)}
+    <div class="stp" ${S.rpLim==='count'?'':'hidden'}><button data-d="-1" data-f="rpN">−</button><b id="vN">${S.rpN}</b><span>lần ${S.pm==='r1'?'(số lần phát bài)':'(số lượt phát cả danh sách)'}</span><button data-d="1" data-f="rpN">＋</button></div>
     <div class="stp" ${S.rpLim==='time'?'':'hidden'}><button data-d="-5" data-f="rpMin">−</button><b id="vM">${S.rpMin}</b><span>phút nghe rồi tự dừng</span><button data-d="5" data-f="rpMin">＋</button></div>
    </div>
    <div class="mu" id="rpInfo" style="margin-top:14px;color:var(--vi)"></div>`;
@@ -1342,7 +1412,8 @@ function openRep(){
 $('#repBody').addEventListener('click',e=>{
   const b=e.target.closest('button');if(!b)return;
   const sg=b.closest('.seg');
-  if(sg){S[sg.dataset.k]=b.dataset.v;}
+  if(b.dataset.pm){S.pm=b.dataset.pm;}
+  else if(sg){S[sg.dataset.k]=b.dataset.v;}
   else if(b.dataset.f){const f=b.dataset.f,mn=f==='rpN'?1:5,mx=f==='rpN'?99:600;S[f]=Math.min(mx,Math.max(mn,S[f]+ +b.dataset.d));}
   save();rpReset();openRep();
 });
@@ -1365,39 +1436,37 @@ function setMS(){
   for(const k in h){try{navigator.mediaSession.setActionHandler(k,h[k]);}catch(e){}}
 }
 // Hiện câu đang đọc trên màn hình khoá / thanh thông báo
-// Màn hình khoá chỉ có 2 dòng 1 hàng (tiêu đề + dòng phụ) và tự chạy chữ khi dài,
-// nên chia câu thành các trang 2 dòng vừa khung, lật trang theo nhịp đọc.
-const MS_W=30;
+// Màn hình khoá: dòng tiêu đề (chữ to) chỉ vừa khoảng 1 hàng → chia câu thành từng đoạn 1 hàng,
+// tất cả hiện ở cỡ chữ to như nhau, lật theo nhịp đọc (thời gian chia theo số ký tự).
+const MS_W=25;
 function msPages(text){
-  const cjk=CJK.test(text);const W=cjk?16:MS_W,sep=cjk?'':' ';
+  const cjk=CJK.test(text);const W=cjk?14:MS_W,sep=cjk?'':' ';
   const ws=cjk?Array.from(text.replace(/\s+/g,'')):text.split(/\s+/).filter(Boolean),lines=[];let l='';
   for(const w of ws){if(l&&(l+sep+w).length>W){lines.push(l);l=w;}else l=l?l+sep+w:w;}
-  if(cjk){const pages=[];for(let i=0;i<lines.length;i+=2)pages.push([lines[i],lines[i+1]||'']);return pages;}
   if(l)lines.push(l);
-  // cân đối khi chỉ có 2 dòng: chia gần giữa câu
-  if(lines.length===2){const all=ws;let best=1,bd=1e9;for(let k=1;k<all.length;k++){const a=all.slice(0,k).join(' '),b=all.slice(k).join(' ');if(a.length>MS_W||b.length>MS_W)continue;const d=Math.abs(a.length-b.length);if(d<bd){bd=d;best=k;}}if(bd<1e9)return [[all.slice(0,best).join(' '),all.slice(best).join(' ')]];}
-  const pages=[];for(let i=0;i<lines.length;i+=2)pages.push([lines[i],lines[i+1]||'']);
-  return pages;
+  // tránh đoạn cuối quá ngắn: dồn bớt từ của đoạn trước sang
+  if(!cjk&&lines.length>=2){const a=lines[lines.length-2].split(' '),b=lines[lines.length-1];
+    while(a.length>1&&(a.slice(-1)[0]+' '+b).length<=W&&b.length<a.join(' ').length*0.45){lines[lines.length-1]=a.pop()+' '+lines[lines.length-1];lines[lines.length-2]=a.join(' ');if(lines[lines.length-1].length>=W*0.5)break;}}
+  return lines;
 }
 function msSet(title,artist){
   const k=title+'\n'+artist;if(k===msText)return;msText=k;
-  try{navigator.mediaSession.metadata=new MediaMetadata({title,artist,album:cur?cur.name:'Deep Flow Language',artwork:[{src:ART,sizes:'512x512',type:'image/svg+xml'}]});}catch(e){}
+  try{navigator.mediaSession.metadata=new MediaMetadata({title,artist:artist||'',album:'',artwork:[{src:ART,sizes:'512x512',type:'image/svg+xml'}]});}catch(e){}
 }
-let msCue=-1,msPg=null;
+let msCue=-1,msPg=null,msAcc=null;
 function msMeta(line){
   if(!('mediaSession'in navigator)||!cur)return;
-  if(!line){msCue=-1;msSet(cur.name,'Deep Flow Language');return;}
+  if(!line){msCue=-1;msSet(cur.name,'');return;}
   msSet(line,'');
 }
 function msTick(i,t){
   if(!('mediaSession'in navigator)||!cur||S.msLine===false)return;
-  if(i<0||!cues[i]){if(msCue!==-1){msCue=-1;msSet(cur.name,'Deep Flow Language');}return;}
+  if(i<0||!cues[i]){if(msCue!==-1){msCue=-1;msSet(cur.name,'');}return;}
   const c=cues[i];
-  if(msCue!==i){msCue=i;msPg=msPages(c.en||c.vi||'');}
+  if(msCue!==i){msCue=i;msPg=msPages(c.en||c.vi||'');let a=0;const tot=msPg.reduce((n,x)=>n+x.length+1,0)||1;msAcc=msPg.map(x=>(a+=x.length+1)/tot);}
   if(!msPg.length)return;
-  const n=msPg.length,dur=Math.max(0.5,c.e-c.s);
-  const p=Math.min(n-1,Math.max(0,Math.floor((t-c.s)/dur*n)));
-  const pg=msPg[p];msSet(pg[0],pg[1]||(n===1?cur.name:''));
+  const f=(t-c.s)/Math.max(0.5,c.e-c.s);let p=msAcc.findIndex(x=>f<x);if(p<0)p=msPg.length-1;
+  msSet(msPg[p],'');
 }
 function msPos(){
   if(!('mediaSession'in navigator)||!navigator.mediaSession.setPositionState||!isFinite(audio.duration))return;
@@ -1459,13 +1528,27 @@ $('#scrT').onclick=()=>{S.scroll=!S.scroll;save();buildEqUI();};
 $('#fsSeg').onclick=e=>{const b=e.target.closest('[data-f]');if(!b)return;S.fs=+b.dataset.f;save();applyMode();buildEqUI();};
 
 // ----- Chip học tập -----
+const IC_REP='<path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>';
+function pmIcon(m){
+  if(m==='one')return '<svg viewBox="0 0 24 24"><text x="12" y="18" text-anchor="middle" font-size="17" font-weight="800" font-family="system-ui">1</text><path d="M3 21h18" stroke="currentColor" stroke-width="1.6" opacity=".5"/></svg>';
+  if(m==='album')return '<svg viewBox="0 0 24 24" class="dim">'+IC_REP+'</svg>';
+  if(m==='ralb')return '<svg viewBox="0 0 24 24">'+IC_REP+'</svg>';
+  if(m==='r1')return '<svg viewBox="0 0 24 24">'+IC_REP+'<path d="M13 15V9h-1l-2 1v1h1.5v4H13z"/></svg>';
+  if(m==='learn')return '<svg viewBox="0 0 24 24" class="st"><path d="M2 12h12" stroke-dasharray="2.6 2.4"/><path d="M11 8l4 4-4 4"/><path d="M20 5v14"/></svg>';
+  return '<svg viewBox="0 0 24 24" class="st"><path d="M2 8h14" stroke-dasharray="2.6 2.4"/><path d="M13 4.5l3.5 3.5-3.5 3.5"/><path d="M20 8v5a4 4 0 0 1-4 4H6"/><path d="M9 14l-3 3 3 3"/></svg>';
+}
+const IC_MIC='<svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>';
+const IC_SLEEP='<svg viewBox="0 0 24 24"><path d="M12.3 2a10 10 0 1 0 9.7 12.4A8 8 0 0 1 12.3 2z"/></svg>';
+function subIcon(ss){return `<svg viewBox="0 0 24 24" class="st"><rect x="2.5" y="5" width="19" height="14" rx="3"/>${ss==='off'?'<path d="M4 20 20 4"/>':ss==='bi'?'<path d="M6 10.5h8M6 14h12"/>':'<path d="M6 12h12"/>'}</svg>`;}
 function updChips(){
-  $('#cMode').innerHTML=`<small>Hẹn giờ tắt</small>${!sleep?'Tắt':sleep==='end'?'Hết bài này':'Còn '+fmt(Math.max(0,(sleep-Date.now())/1000))}`;$('#cMode').classList.toggle('act',!!sleep);
-  const ss=subState();$('#cSub').innerHTML=`<small>Phụ đề</small>${ss==='off'?'Tắt':ss==='en'?'Đơn ngữ':'Song ngữ'}`;$('#cSub').classList.toggle('act',ss!=='off');
-  $('#cRate').innerHTML=`<small>Tốc độ</small>${S.rate}×`;$('#cRate').classList.toggle('act',S.rate!==1);
-  $('#cRep').innerHTML=`<small>Lặp mỗi câu</small>${S.rep===0?'Tắt':S.rep<0?'Mãi mãi':'×'+S.rep}`;$('#cRep').classList.toggle('act',S.rep!==0);
-  $('#cAp').innerHTML=`<small>Luyện nói</small>${APS[S.ap]}`;$('#cAp').classList.toggle('act',S.ap>0);
-  $('#cLoop').innerHTML=`<small>Lặp bài / album</small>${rpLabel()}`;$('#cLoop').classList.toggle('act',S.rpScope!=='off');
+  const pm=PM.find(x=>x[0]===S.pm)||PM[4];
+  $('#cLoop').innerHTML=`<span class="ic">${pmIcon(pm[0])}</span><span>${pm[2]}</span>`;$('#cLoop').classList.toggle('act',pmRep());
+  $('#cRate').innerHTML=`<span class="ic">${(+S.rate).toString().replace(/^0\./,'.')}×</span><span>Tốc độ</span>`;$('#cRate').classList.toggle('act',S.rate!==1);
+  const micOn=S.ap>0||S.rep!==0;
+  $('#cMic').className='tl mic'+(micOn?' act':'');$('#cMic').innerHTML=`<span class="ic">${IC_MIC}</span><span>${micOn?(S.rep!==0?'Lặp câu '+(S.rep<0?'∞':'×'+S.rep):APS[S.ap]):'Luyện nói'}</span>`;
+  const ss=subState();$('#cSub').innerHTML=`<span class="ic">${subIcon(ss)}</span><span>${ss==='off'?'Tắt p.đề':ss==='en'?'Đơn ngữ':'Song ngữ'}</span>`;$('#cSub').classList.toggle('act',ss!=='off');
+  $('#cMode').innerHTML=`<span class="ic">${IC_SLEEP}</span><span>${!sleep?'Hẹn giờ':sleep==='end'?'Hết bài':fmt(Math.max(0,(sleep-Date.now())/1000))}</span>`;$('#cMode').classList.toggle('act',!!sleep);
+  if($('#mMic').classList.contains('on'))renderMic();
 }
 const cyc=(arr,v)=>arr[(arr.indexOf(v)+1)%arr.length];
 // Hẹn giờ tắt: Tắt → 15 → 30 → 45 → 60 → 90 phút → Hết bài này → Tắt
@@ -1518,14 +1601,38 @@ function renderRate(){
   $('#rateGrid').innerHTML=RATES.map(r=>`<button data-r="${r}" class="${Math.abs(r-S.rate)<0.001?'on':''}">${r}×</button>`).join('');
   $('#rateV').textContent=S.rate.toFixed(2).replace(/0$/,'')+'×';$('#rateR').value=Math.min(2,S.rate);
 }
-$('#cRate').onclick=()=>{renderRate();openModal('mRate');};
 $('#rateGrid').addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(b){setRate(+b.dataset.r);setTimeout(()=>$('#mRate').classList.remove('on'),250);}});
 audio.addEventListener('loadedmetadata',()=>{audio.playbackRate=S.rate;});
 $('#rateR').oninput=e=>setRate(+e.target.value);
-$('#cRep').onclick=()=>{S.rep=cyc(REPS,S.rep);repLeft=S.rep<0?Infinity:S.rep;save();updChips();};
-$('#cAp').onclick=()=>{S.ap=(S.ap+1)%4;if(S.ap===3)toast('Chấm phát âm: hết mỗi câu, app dừng để bạn đọc lại và AI chấm điểm',4000);if(!S.ap)clearAP();save();updChips();if(S.ap&&!synced)toast('Cần văn bản đã khớp thời gian');};
 
-$('#cLoop').onclick=openRep;
+// Nút nhỏ: bấm = chuyển lần lượt, nhấn giữ = mở danh sách chọn
+function lpBtn(el,tap,long){let t=null,fired=false,x0=0,y0=0;
+  el.addEventListener('pointerdown',e=>{fired=false;x0=e.clientX;y0=e.clientY;clearTimeout(t);t=setTimeout(()=>{fired=true;if(navigator.vibrate)navigator.vibrate(25);long();},500);});
+  el.addEventListener('pointermove',e=>{if(t&&Math.hypot(e.clientX-x0,e.clientY-y0)>10){clearTimeout(t);t=null;}});
+  ['pointerup','pointercancel','pointerleave'].forEach(v=>el.addEventListener(v,()=>{clearTimeout(t);t=null;}));
+  el.addEventListener('contextmenu',e=>e.preventDefault());
+  el.addEventListener('click',e=>{if(fired){fired=false;return;}tap();});}
+lpBtn($('#cLoop'),()=>{S.pm=cyc(PM.map(x=>x[0]),S.pm);save();rpReset();updChips();toast((PM.find(x=>x[0]===S.pm)||[])[1]);},openRep);
+const RCYC=[1,1.25,1.5,2,3];
+lpBtn($('#cRate'),()=>{const n=RCYC.find(r=>r>S.rate+0.001);setRate(n||RCYC[0]);toast('Tốc độ '+S.rate+'×');},()=>{renderRate();openModal('mRate');});
+lpBtn($('#cSub'),()=>setSub({en:'bi',bi:'off',off:'en'}[subState()]),()=>{
+  sheetPick('Phụ đề',[['en',subIcon('en').replace('<svg','<svg style="width:20px;vertical-align:middle;margin-right:8px"')+'Đơn ngữ (chỉ ngôn ngữ đang học)'],['bi',subIcon('bi').replace('<svg','<svg style="width:20px;vertical-align:middle;margin-right:8px"')+'Song ngữ (kèm bản dịch)'],['off',subIcon('off').replace('<svg','<svg style="width:20px;vertical-align:middle;margin-right:8px"')+'Tắt phụ đề (nghe chay)']]).then(v=>{if(v)setSub(v);});});
+$('#cMic').onclick=()=>{renderMic();openModal('mMic');};
+// Bảng Luyện nói: lặp mỗi câu, dừng để nói lại / nói đuổi (shadowing), chấm phát âm
+function renderMic(){
+  const seg=(k,opts,val)=>`<div class="seg" data-k="${k}">`+opts.map(o=>`<button data-v="${o[0]}" class="${String(o[0])===String(val)?'on':''}">${o[1]}</button>`).join('')+'</div>';
+  $('#micBody').innerHTML=`
+   <div class="mu" style="margin-bottom:6px">🔁 Nghe lại mỗi câu</div>${seg('rep',[[0,'Tắt'],[1,'×1'],[2,'×2'],[3,'×3'],[5,'×5'],[-1,'∞']],S.rep)}
+   <div class="mu" style="margin:14px 0 6px">🗣 Sau mỗi câu</div>${seg('ap',[[0,'Phát tiếp'],[1,'Dừng chờ bấm'],[2,'Nói đuổi'],[3,'Chấm phát âm']],S.ap)}
+   <div class="mu" style="margin-top:8px;font-size:12px;line-height:1.5">${['Phát liên tục, không dừng.','Hết mỗi câu app dừng để bạn nói lại; bấm ▶ để nghe tiếp.','Shadowing: hết mỗi câu app dừng đúng bằng độ dài câu để bạn nói đuổi theo, rồi tự phát tiếp.','Hết mỗi câu app dừng để bạn đọc lại, AI chấm điểm từng từ đúng/sai.'][S.ap]}</div>
+   <div class="row2" style="justify-content:flex-start;margin-top:12px"><button class="btn pri" id="micNow">🎙 Luyện câu đang nghe</button></div>
+   <div class="mu" style="font-size:12px;margin-top:6px">Mẹo: nhấn giữ vào một câu bất kỳ trong phụ đề để luyện riêng câu đó.</div>`;
+  $('#micNow').onclick=()=>{if(!synced||!cues.length){toast('Cần phụ đề đã khớp thời gian — hãy tạo phụ đề trước');return;}closeModals();const i=Math.max(0,lastIdx>=0?lastIdx:findIdx(audio.currentTime));audio.pause();clearAP();highlight(i);lastIdx=i;openSpeak(i);};
+}
+$('#micBody').addEventListener('click',e=>{const b=e.target.closest('.seg button');if(!b)return;const k=b.closest('.seg').dataset.k,v=+b.dataset.v;
+  if(k==='rep'){S.rep=v;repLeft=S.rep<0?Infinity:S.rep;}
+  else{S.ap=v;if(S.ap===3)toast('Chấm phát âm: hết mỗi câu, app dừng để bạn đọc lại và AI chấm điểm',4000);if(!S.ap)clearAP();if(S.ap&&!synced)toast('Cần văn bản đã khớp thời gian',3000);}
+  save();updChips();renderMic();});
 
 // ----- Điều khiển -----
 $('#bPlay').onclick=()=>{if(tap&&audio.paused){play();return;}audio.paused?play():(audio.pause(),clearAP());};
@@ -1740,7 +1847,7 @@ let libLP=false;
 $('#libList').addEventListener('click',async e=>{
   if(libLP){libLP=false;return;}
   const pa=e.target.closest('[data-pa]');
-  if(pa){const a=pa.dataset.pa;const q=libOrder().filter(t=>albumOf(t)===a);if(q.length){if(S.rpScope==='one'){S.rpScope='album';save();}
+  if(pa){const a=pa.dataset.pa;const q=libOrder().filter(t=>albumOf(t)===a);if(q.length){if(S.pm==='one'||S.pm==='r1'){S.pm=S.pm==='one'?'album':'ralb';save();}
     if(cur&&albumOf(cur)===a&&!audio.paused){audio.pause();return;}if(cur&&albumOf(cur)===a&&audio.paused){play();return;}
     rpReset();await loadTrack(q[0],true);toast('▶ Phát album "'+(a||'Chưa có album')+'"');}return;}
   const pl=e.target.closest('[data-pl]');
@@ -1793,7 +1900,7 @@ function openAlbumSheet(a){
     const k=e.target.closest('[data-a]')?.dataset.a;if(!k)return;closeModals();
     const L=()=>tracks.filter(t=>albumOf(t)===a);
     if(k==='chart'){openChart(L(),'📁 '+(a||'Chưa có album'),true);}
-    else if(k==='play'){const q=libOrder().filter(t=>albumOf(t)===a);if(q.length){if(S.rpScope==='one'){S.rpScope='album';save();}rpReset();await loadTrack(q[0],true);}}
+    else if(k==='play'){const q=libOrder().filter(t=>albumOf(t)===a);if(q.length){if(S.pm==='one'||S.pm==='r1'){S.pm=S.pm==='one'?'album':'ralb';save();}rpReset();await loadTrack(q[0],true);}}
     else if(k.startsWith('sort:')){const m=k.slice(5);const prev=sortAlb(a,L());S.albSort={...(S.albSort||{}),[a]:m};
       if(m==='manual'){for(let q=0;q<prev.length;q++)if(prev[q].ord!==q){prev[q].ord=q;await putMeta(prev[q]);}reorderAlb=a;toast('Bấm ↑ ↓ để xếp lại thứ tự, xong bấm "Xong"');}
       save();renderLib();}
@@ -1931,14 +2038,14 @@ $('#bAuto').onclick=()=>{forceTr=false;openAuto();};
 $('#bTap').onclick=startTap;
 $('#asrModel').value=S.asr;
 $('#aClose').onclick=()=>{$('#mAuto').classList.remove('on');updAsrUI();};
-$('#aStop').onclick=()=>{if(aBusy){aCancel=true;aMsg('Đang dừng…');}};
+$('#aStop').onclick=()=>{if(aBusy){aCancel=true;if(batchOn)batchStop=true;aMsg('Đang dừng…');}};
 function updAsrUI(){
   $('#aStop').hidden=!aBusy;$('#aGo').hidden=aBusy;$('#aClose').textContent=aBusy?'Ẩn (vẫn chạy)':'Đóng';
   $('#asrSt').hidden=!(aBusy&&!$('#mAuto').classList.contains('on'));
 }
 $('#asrOpen').onclick=()=>{openModal('mAuto');updAsrUI();};
 $('#aGo').onclick=runAuto;
-let batchTag='',batchErr='',batchOn=false;
+let batchTag='',batchErr='',batchOn=false,batchStop=false;
 const aMsg=m=>{m=(batchTag?batchTag+' ':'')+m;$('#aMsg').textContent=m;$('#asrMsg').textContent=m;},aBar=p=>{$('#aBar').style.width=Math.round(p*100)+'%';$('#asrBar').style.width=Math.round(p*100)+'%';};
 async function decode16k(blob){
   const ab=await blob.arrayBuffer();
@@ -1984,7 +2091,7 @@ function b64(buf){let s='';const u=new Uint8Array(buf);for(let i=0;i<u.length;i+
 const toSec=x=>{if(typeof x==='number')return x;const m=String(x).match(/(?:(\d+):)?(\d+):(\d+(?:\.\d+)?)|(\d+(?:\.\d+)?)/);if(!m)return null;if(m[4])return +m[4];return (+m[1]||0)*3600+(+m[2])*60+(+m[3]);};
 async function gemClip(pcm,len){
   const body={contents:[{parts:[{inlineData:{mimeType:'audio/wav',data:b64(wav16(pcm))}},{text:`Transcribe the ${LN()[1]} speech in this ${len.toFixed(0)}-second audio clip verbatim, word for word, in the exact order spoken — do not skip, summarize, merge or reorder anything. Use correct punctuation and capitalization. Split it into sentences: one complete sentence per item; keep short questions and answers (e.g. "Was there a girl?" / "Yes, there was.") as separate items; split very long run-on sentences at natural clause boundaries (max about 25 words). Return ONLY a JSON array of objects {"start": "MM:SS", "text": "<one sentence>"} in time order, where start is when that sentence begins, measured from the beginning of THIS clip (format MM:SS, e.g. "01:07"). Ignore music and noise. If there is no speech return [].`}]}],generationConfig:{responseMimeType:'application/json',temperature:0}};
-  let timeouts=0;
+  let timeouts=0,gemWaits=0;
   for(let tryN=0;tryN<3;tryN++){
     if(aCancel)throw new Error('Đã dừng');
     // không để chờ mãi: quá 3 phút không có phản hồi thì huỷ và thử lại
@@ -1994,7 +2101,8 @@ async function gemClip(pcm,len){
       if(e.name==='AbortError'){if(++timeouts>=2)throw new Error('Gemini không phản hồi sau 3 phút. Kiểm tra mạng, hoặc đổi mô hình Gemini (ô Tên mô hình trong Cài đặt, ví dụ gemini-2.5-flash), hoặc chọn mô hình Base chạy trên máy.');continue;}
       throw new Error('Không kết nối được tới Gemini ('+(e.message||e)+'). Kiểm tra mạng rồi thử lại.');}
     clearTimeout(tm);clearInterval(stopW);
-    if(r.status===429||r.status>=500){await new Promise(z=>setTimeout(z,2000*(tryN+1)));continue;}
+    if(r.status===429||r.status>=500){let w=4000*(tryN+1);if(r.status===429){try{const ej=await r.json();const rd=JSON.stringify(ej).match(/"retryDelay":"(\d+)/);w=rd?(+rd[1]+2)*1000:20000*(tryN+1);}catch(e){w=20000*(tryN+1);}aMsg('Gemini đang giới hạn lượt gọi miễn phí — chờ '+Math.round(w/1000)+' giây rồi gửi tiếp…');}
+      await new Promise(z=>setTimeout(z,w));tryN=Math.min(tryN,1);if(++gemWaits>8)throw new Error(gemErr(r.status,'quá nhiều lần bị giới hạn'));continue;}
     if(!r.ok){let m='';try{m=(await r.json()).error.message;}catch(e){}throw new Error(gemErr(r.status,m));}
     const j=await r.json();
     try{const arr=JSON.parse(j.candidates[0].content.parts.map(p=>p.text).join(''));if(Array.isArray(arr))return arr;}catch(e){}
@@ -2022,7 +2130,7 @@ async function gemTranscribe(pcm,dur,pieces,words){
   const worker=async()=>{while(next<jobs.length){if(aCancel)throw new Error('Đã dừng');const k=next++;const [a,b]=jobs[k];
     const seg=pcm.subarray(Math.round(a*FR*16000),Math.min(pcm.length,Math.round(b*FR*16000)));
     res[k]=await gemClip(seg,seg.length/16000);done++;aBar(done/jobs.length);const el=(Date.now()-t1)/1000;aMsg(`Gemini đang nghe… ${done}/${jobs.length} đoạn${done<jobs.length?' · còn khoảng '+fmt(el/done*(jobs.length-done)):''}`);}};
-  try{await Promise.all([worker(),worker(),worker(),worker()]);}finally{clearInterval(tick);}
+  try{await Promise.all([worker(),worker()]);}finally{clearInterval(tick);}
   aMsg('Đang căn thời gian cho từng câu…');await new Promise(r=>setTimeout(r,20));
   let usedG=0;
   res.forEach((arr,k)=>{const [a,b]=jobs[k];const t0=a*FR,len=(b-a)*FR;
@@ -2156,14 +2264,17 @@ async function runAuto(arg){
 async function batchSubs(list){
   if(batchOn||aBusy){toast('AI đang bận xử lý bài khác — thử lại sau');return;}
   if(S.asr==='gemini'&&!S.gemKey){toast('Chưa có Gemini API key — chọn mô hình khác trong Tạo phụ đề hoặc nhập key ở Cài đặt',5000);return;}
-  batchOn=true;let okN=0;toast('Bắt đầu tạo phụ đề cho '+list.length+' bài (chạy nền, xem tiến độ ở màn hình Đang phát)',4000);
+  batchOn=true;batchStop=false;let okN=0;const fails=[];keepAwake(true);toast('Bắt đầu tạo phụ đề cho '+list.length+' bài (chạy nền, xem tiến độ ở màn hình Đang phát)',4000);
   try{for(let k=0;k<list.length;k++){const t=list[k];if(!tracks.includes(t))continue;
     batchTag=`[${k+1}/${list.length}] ${t.name}:`;batchErr='';
-    const ok=await runAuto({T:t,tr:!t.doc});
-    if(ok){okN++;if(S.autoTr!==false&&t!==cur)await translateTrack(t);renderLib();}
-    else{toast('Dừng ở "'+t.name+'": '+batchErr,6000);break;}}
-  }finally{batchOn=false;batchTag='';}
-  if(okN)toast('Đã tạo phụ đề cho '+okN+'/'+list.length+' bài',4000);
+    if(batchStop)break;
+    let ok=await runAuto({T:t,tr:!t.doc});
+    // lỗi tạm thời (mạng, Gemini quá tải) → nghỉ rồi thử lại 1 lần
+    if(!ok&&!batchStop&&!/Đã dừng|API key|không đúng|bị giới hạn/i.test(batchErr)){aMsg('Lỗi: '+batchErr+' — thử lại sau 20 giây…');await new Promise(r=>setTimeout(r,20000));if(!batchStop){batchErr='';ok=await runAuto({T:t,tr:!t.doc});}}
+    if(ok){okN++;if(S.autoTr!==false&&t!==cur)await Promise.race([translateTrack(t),new Promise(r=>setTimeout(r,120000))]);renderLib();}
+    else{fails.push(t.name+': '+batchErr);if(/Đã dừng/.test(batchErr))break;if(/API key|không đúng|bị giới hạn/i.test(batchErr)){toast('Dừng tạo phụ đề: '+batchErr,8000);break;}}}
+  }finally{batchOn=false;batchTag='';batchStop=false;}
+  const msg='Tạo phụ đề xong '+okN+'/'+list.length+' bài'+(fails.length?' · lỗi: '+fails.join(' | '):'');aMsg(msg);toast(msg,fails.length?9000:4000);
 }
 async function translateTrack(t){
   if(trBusy)return false;const tl=S.trLang||'vi';let eng=S.trEng||'google';if(eng==='local'&&(tl!=='vi'||(S.learn||'en')!=='en'))eng='google';
@@ -2190,7 +2301,7 @@ function updAutoUI(){
   const g=$('#asrModel').value==='gemini';
   $('#wordRow').hidden=g||(!!cues.length&&!forceTr);$('#wordT').classList.toggle('on',!!S.wordTs);
   $('#gpRow').hidden=!g||(!!cues.length&&!forceTr);$('#gpT').classList.toggle('on',!!S.gemPrecise);
-  if(g)$('#aDev').textContent=S.gemKey?'Gửi âm thanh lên Gemini, xử lý 4 đoạn cùng lúc. App tự căn thời gian từng câu theo khoảng lặng trong âm thanh.':'⚠️ Cần nhập Gemini API key ở Cài đặt → 🔑 API key.';
+  if(g)$('#aDev').textContent=S.gemKey?'Gửi âm thanh lên Gemini, xử lý 2 đoạn cùng lúc. App tự căn thời gian từng câu theo khoảng lặng trong âm thanh.':'⚠️ Cần nhập Gemini API key ở Cài đặt → 🔑 API key.';
   else if(!asrDev)$('#aDev').textContent='App sẽ tự dùng GPU điện thoại nếu được hỗ trợ.';
 }
 $('#asrModel').addEventListener('change',updAutoUI);
@@ -2344,7 +2455,12 @@ let vocab=[];try{vocab=JSON.parse(localStorage.getItem('dfl_vocab')||'[]');}catc
 function saveVocab(){if(window.dfOnChange)dfOnChange();try{localStorage.setItem('dfl_vocab',JSON.stringify(vocab));}catch(e){toast('Không lưu được từ vựng (bộ nhớ đầy?)');}updVocBadge();}
 const vkey=(w,lg)=>(lg||S.learn||'en')+':'+w.toLowerCase().normalize('NFC');
 const wcache=new Map();let wcur=null;
-function sayWord(text,lang){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang={en:'en-US',zh:'zh-CN',ja:'ja-JP',ko:'ko-KR',fr:'fr-FR',de:'de-DE',es:'es-ES',ru:'ru-RU',th:'th-TH',it:'it-IT'}[lang||S.learn||'en']||'en-US';u.rate=0.9;speechSynthesis.speak(u);}catch(e){toast('Máy không hỗ trợ đọc từ');}}
+function sayWord(text,lang){
+  const lg=lang||S.learn||'en';
+  const viaWeb=()=>{try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang={en:'en-US',zh:'zh-CN',ja:'ja-JP',ko:'ko-KR',fr:'fr-FR',de:'de-DE',es:'es-ES',ru:'ru-RU',th:'th-TH',it:'it-IT'}[lg]||'en-US';u.rate=0.9;speechSynthesis.speak(u);}catch(e){toast('Máy không hỗ trợ đọc từ');}};
+  // đọc bằng giọng Google (chạy được cả trong app APK, nơi máy không có giọng đọc cho trình duyệt)
+  try{if(window._ttsA)_ttsA.pause();const a=new Audio('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl='+encodeURIComponent(lg)+'&q='+encodeURIComponent(text.slice(0,200)));window._ttsA=a;a.playbackRate=1;a.play().catch(()=>{if(window.speechSynthesis)viaWeb();else toast('Không đọc được — kiểm tra mạng');});}catch(e){viaWeb();}
+}
 let wdResume=false;
 async function openWord(word,i){
   word=word.trim();if(!word)return;
@@ -2364,9 +2480,13 @@ async function openWord(word,i){
   try{
     let info=wcache.get(ck);
     if(!info){
+      // hiện nhanh nghĩa từ Google Dịch trong lúc chờ từ điển / Gemini
+      const gq=lookupGoogle(word,lg,tl).catch(()=>null);
+      gq.then(g=>{if(g&&wcur.word===word&&$('#wdMean').textContent==='Đang tra…'){$('#wdMean').textContent=g.mean||'…';if(g.ipa)$('#wdIpa').textContent=g.ipa;}});
       const ed=isEn?await enDict(word).catch(()=>null):null;
       info=S.gemKey?await lookupGemini(word,c.en,lg,tl,ed).catch(()=>null):null;
-      if(!info)info=await lookupGoogle(word,lg,tl);
+      if(!info)info=await gq;
+      if(!info)throw new Error('không kết nối được dịch vụ tra từ');
       info.ed=ed||(isEn&&info.lemma?await enDict(word,info.lemma).catch(()=>null):null);
       if(info.ed&&info.ed.phonetic)info.ipa=info.ed.phonetic;
       wcache.set(ck,info);
@@ -2391,7 +2511,7 @@ async function enDict(word,lemma){
   const cands=[...new Set([...(lemma?[lemma.toLowerCase()]:[]),...stemCands(word)])];
   for(const w of cands){
     if(edCache.has(w)){const v=edCache.get(w);if(v)return v;continue;}
-    try{const r=await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(w));
+    try{const r=await fetchT('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(w),{},7000);
       if(!r.ok){edCache.set(w,null);continue;}
       const d=await r.json();if(!Array.isArray(d)||!d.length){edCache.set(w,null);continue;}
       const phon=[],seen=new Set(),mm=new Map();
@@ -2416,12 +2536,12 @@ async function lookupGemini(word,sent,lg,tl,ed){ /* dịch nghĩa dựa trên t�
   const senses=ed?ed.meanings.flatMap(m=>m.defs.map(d=>`(${m.pos}) ${d.d}`)).slice(0,14):[];
   const ground=senses.length?`\nDictionary senses of "${ed.word}" (use ONLY these; never add senses that are not in this list):\n${senses.map((s,i)=>(i+1)+'. '+s).join('\n')}\n`:'\nOnly give real, common dictionary meanings. Never invent rare or unrelated meanings; if unsure, leave "more" empty.\n';
   const body={contents:[{parts:[{text:`You are a careful bilingual dictionary for a ${L}-speaking learner of ${LEARN[lg][1]}. Word as it appears: "${word}". Sentence: "${sent||''}".${ground}Return ONLY JSON: {"lemma": "<dictionary/base form>", "ipa": "<IPA for European languages, pinyin with tone marks for Chinese, kana+romaji for Japanese, romanization for Korean/Thai/Russian>", "pos": "<part of speech in ${L}>", "mean": "<the meaning that fits THIS SENTENCE, translated into natural ${L}, short>", "more": "<other meanings, translated into ${L}, separated by '; ' — only from the listed senses, at most 4, empty if none>"}`}]}],generationConfig:{responseMimeType:'application/json',temperature:0}};
-  const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(S.gemModel||'gemini-flash-latest')}:generateContent?key=${encodeURIComponent(S.gemKey)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  const r=await fetchT(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(S.gemModel||'gemini-flash-latest')}:generateContent?key=${encodeURIComponent(S.gemKey)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},15000);
   if(!r.ok)throw new Error('gemini '+r.status);
   const j=await r.json();return JSON.parse(j.candidates[0].content.parts.map(p=>p.text).join(''));
 }
 async function lookupGoogle(word,lg,tl){
-  const r=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl='+lg+'&tl='+tl+'&dt=t&dt=bd&dt=rm&q='+encodeURIComponent(word));
+  const r=await fetchT('https://translate.googleapis.com/translate_a/single?client=gtx&sl='+lg+'&tl='+tl+'&dt=t&dt=bd&dt=rm&q='+encodeURIComponent(word),{},8000);
   if(!r.ok)throw new Error('Google Dịch lỗi '+r.status);
   const j=await r.json();
   const mean=(j[0]||[]).filter(x=>x&&x[0]).map(x=>x[0]).join('');
@@ -2429,13 +2549,13 @@ async function lookupGoogle(word,lg,tl){
   let pos='',more='';
   if(Array.isArray(j[1])){pos=j[1].map(x=>x[0]).filter(Boolean).slice(0,2).join(', ');more=j[1].map(x=>(x[0]?x[0]+': ':'')+(x[1]||[]).slice(0,4).join(', ')).join(' · ');}
   let ipa=translit;
-  if(lg==='en'){try{const d=await (await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(word.toLowerCase()))).json();ipa=(d[0]&&(d[0].phonetic||(d[0].phonetics||[]).map(p=>p.text).find(Boolean)))||ipa;}catch(e){}}
+  if(lg==='en'){try{const d=await (await fetchT('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(word.toLowerCase()),{},6000)).json();ipa=(d[0]&&(d[0].phonetic||(d[0].phonetics||[]).map(p=>p.text).find(Boolean)))||ipa;}catch(e){}}
   return {lemma:'',ipa,pos,mean,more};
 }
 $('#wdSay').onclick=()=>{if(!wcur)return;clipStop();const ed=wcur.info&&wcur.info.ed;const same=ed&&ed.word.toLowerCase()===wcur.word.toLowerCase();const au=same&&((ed.phon.find(p=>p.acc==='US'&&p.audio)||ed.phon.find(p=>p.audio)||{}).audio);
   if(au){const a=new Audio(au);a.play().catch(()=>sayWord(wcur.word,wcur.lang));}else sayWord(wcur.word,wcur.lang);};
 $('#wdSent').onclick=()=>{if(!wcur||!wcur.ctx||!(wcur.ctx.s>=0)){toast('Câu này chưa có mốc thời gian');return;}try{speechSynthesis.cancel();}catch(e){}playClip(wcur.ctx.trackId,wcur.ctx.s,wcur.ctx.e);};
-function closeWord(){if(!$('#mWord').classList.contains('on'))return;$('#mWord').classList.remove('on');try{speechSynthesis.cancel();}catch(e){}clipStop();if(wdResume){wdResume=false;play();}}
+function closeWord(){if(!$('#mWord').classList.contains('on'))return;$('#mWord').classList.remove('on');try{speechSynthesis.cancel();}catch(e){}try{window._ttsA&&_ttsA.pause();}catch(e){}clipStop();if(wdResume){wdResume=false;play();}}
 $('#wdClose').onclick=closeWord;
 $('#mWord').addEventListener('click',e=>{if(e.target.id==='mWord'){e.stopPropagation();closeWord();}},true);
 $('#wdSave').onclick=()=>{
@@ -2666,13 +2786,20 @@ $('#autoTrT').onclick=()=>{S.autoTr=S.autoTr===false;save();trUI();};
 function subState(){return !S.subOn?'off':S.bi?'bi':'en';}
 function updBi(){updChips();}
 // Phụ đề: Đơn ngữ → Song ngữ → Tắt → Đơn ngữ
-$('#cSub').onclick=()=>{
-  const s={en:'bi',bi:'off',off:'en'}[subState()];
+function setSub(s){
   S.subOn=s!=='off';if(s!=='off')S.bi=s==='bi';save();applyMode();updChips();updBi();
   if(s!=='bi'&&trBusy){trJob++;trDone();}
   if(s==='bi'){if(cues.some(c=>c.en&&!c.vi))translateCues();else if(!cues.length)toast('Bài chưa có chữ — hãy tạo phụ đề bằng AI trước');}
   if(s!=='off'&&S.scroll){userScrollUntil=0;const el=$('#lyrics').children[lastIdx];if(el)scrollToLine(el);}
 };
+{const W=$('#trw');let x0=0;
+  W.addEventListener('pointerdown',e=>{if(e.target.closest('button')||!cur||!isFinite(audio.duration))return;x0=e.clientX;wvScrub={t0:audio.currentTime,t:audio.currentTime,moved:false};try{W.setPointerCapture(e.pointerId);}catch(_){}});
+  W.addEventListener('pointermove',e=>{if(!wvScrub)return;const dx=e.clientX-x0;if(!wvScrub.moved&&Math.abs(dx)<6)return;
+    if(!wvScrub.moved){wvScrub.moved=true;W.classList.add('scrub');}
+    dragging=true;wvScrub.t=Math.max(0,Math.min(audio.duration-0.2,wvScrub.t0-dx/WV_PPS));$('#scrubT').textContent=fmt(wvScrub.t);$('#tCur').textContent=fmt(wvScrub.t);drawWave();});
+  const end=()=>{if(!wvScrub)return;const s=wvScrub;wvScrub=null;dragging=false;W.classList.remove('scrub');if(s.moved)seekTo(s.t);else drawWave();};
+  W.addEventListener('pointerup',end);W.addEventListener('pointercancel',end);
+  window.addEventListener('resize',()=>drawWave());}
 $('#bCurMore').onclick=()=>{if(cur)openSheet(cur);else toast('Chưa chọn bài');};
 $('#trStop').onclick=()=>{trJob++;trDone('Đã dừng dịch');};
 function trDone(m){trBusy=false;$('#trSt').hidden=true;if(m)toast(m);}
@@ -2917,7 +3044,7 @@ let miniT=0;audio.addEventListener('timeupdate',()=>{const n=Date.now();if(n-min
 $('#miniPP').onclick=()=>{audio.paused?play():(audio.pause(),clearAP());};
 $('#miniPrev').onclick=()=>goTrack(-1);$('#miniNext').onclick=()=>goTrack(1);
 $('#miniOpen').onclick=()=>showView('vPlay');
-function showView(id){if(id==='vLib')updStorage();setTimeout(updMini,0);if(id!=='vVoc'&&!$('#vocRev').hidden){endReview();}if(id==='vVoc')renderVoc();if(id==='vLib')renderStats();document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===id));}
+function showView(id){if(id==='vPlay')setTimeout(drawWave,60);if(id==='vLib')updStorage();setTimeout(updMini,0);if(id!=='vVoc'&&!$('#vocRev').hidden){endReview();}if(id==='vVoc')renderVoc();if(id==='vLib')renderStats();document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===id));}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showView(b.dataset.v));
 // ----- API key: nhập qua hộp thoại, hiển thị dạng khoá (không sửa trực tiếp) -----
 const KEYN={gemKey:'Gemini API key',gKey:'Google Drive API key'};
@@ -2954,10 +3081,11 @@ function initHelp(){
     const h=[...c.querySelectorAll(':scope > .mu:not([id]):not(.lbl), :scope > .nat-on > .mu:not([id]):not(.lbl), :scope > .nat-on .sw small.mu, :scope > .sw small.mu, :scope .help')];
     if(!h.length)return;h.forEach(e=>e.classList.add('help'));
     const t=c.previousElementSibling;if(!t||t.tagName!=='H3'||t.querySelector('.hlp'))return;
-    const b=document.createElement('button');b.className='hlp';b.textContent='!';b.setAttribute('aria-label','Xem ghi chú, hướng dẫn');
+    const b=document.createElement('button');b.className='hlp';b.textContent='i';b.setAttribute('aria-label','Xem ghi chú, hướng dẫn');
     b.onclick=()=>{const o=c.classList.toggle('hopen');b.classList.toggle('on',o);};t.appendChild(b);});
 }
 setTimeout(initHelp,0);
+function fetchT(url,opt={},ms=15000){const ac=new AbortController();const t=setTimeout(()=>ac.abort(),ms);return fetch(url,{...opt,signal:ac.signal}).finally(()=>clearTimeout(t));}
 function relHtml(list){return list.map(e=>`<h4>${esc(verLabel(e.v))}<small>${esc(e.d||'')}</small></h4><ul>${(e.items||[]).map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`).join('')||'<div class="mu">Chưa có ghi chú.</div>';}
 // Mở ghi chú: list = các mục cần hiện; onUpd = hàm cập nhật (nếu đang báo có bản mới)
 window.showRelNotes=(list,title,onUpd)=>{$('#relTitle').textContent=title||'📝 Ghi chú phát hành';$('#relList').innerHTML=relHtml(list||CHANGELOG);
@@ -3091,7 +3219,7 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   }
   function payload(){
     const s={...S};['pos','lastId','gKey','gemKey','syncAt','hpAuto','wake'].forEach(k=>delete s[k]);
-    return {app:'DeepFlowLanguage',v:1,at:Date.now(),settings:s,pos:S.pos||{},vocab,tracks:tracks.map(t=>{const x={...t};delete x.asrPart;delete x.noAudio;delete x.loc;return x;})};
+    return {app:'DeepFlowLanguage',v:1,at:Date.now(),settings:s,pos:S.pos||{},vocab,tracks:tracks.map(t=>{const x={...t};delete x.asrPart;delete x.noAudio;delete x.loc;delete x.peaks;return x;})};
   }
   async function merge(rem){
     let changed=0;const del={...(S.delIds||{}),...((rem.settings||{}).delIds||{})};S.delIds=del;
@@ -3100,7 +3228,7 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
       if(del[rt.id])continue;
       const lt=tracks.find(t=>t.id===rt.id);
       if(!lt){const n={...rt};const has=await getAudio(n.id);n.loc=!!has;if(!has)n.noAudio=true;await putMeta0(n);tracks.push(n);changed++;}
-      else if((rt.mt||0)>(lt.mt||0)){const keepNo=lt.noAudio,keepLoc=lt.loc;Object.keys(lt).forEach(k=>delete lt[k]);Object.assign(lt,rt);if(keepNo)lt.noAudio=true;lt.loc=keepLoc;await putMeta0(lt);changed++;}
+      else if((rt.mt||0)>(lt.mt||0)){const keepNo=lt.noAudio,keepLoc=lt.loc,keepPk=lt.peaks;Object.keys(lt).forEach(k=>delete lt[k]);Object.assign(lt,rt);if(keepNo)lt.noAudio=true;lt.loc=keepLoc;if(keepPk)lt.peaks=keepPk;await putMeta0(lt);changed++;}
     }
     for(const id of Object.keys(del)){const i=tracks.findIndex(t=>t.id===id);if(i>=0){const t=tracks[i];await delTrack(id);tracks.splice(i,1);if(t===cur){audio.pause();cur=null;}changed++;}}
     // từ vựng
@@ -3111,7 +3239,7 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
     // thời gian học theo ngày: lấy giá trị lớn hơn
     const rd=(rem.settings||{}).days||{};S.days=S.days||{};for(const k in rd)if((rd[k]||0)>(S.days[k]||0))S.days[k]=rd[k];
     // các cài đặt album / hiển thị: lấy bản mới hơn
-    if((rem.at||0)>(S.syncAt||0)){const rs=rem.settings||{};['albOrder','albSort','albStatus','albDoneAt','learn','trLang','trEng','bi','subOn','fs','rpScope','rpLim','rpN','rpMin'].forEach(k=>{if(rs[k]!==undefined)S[k]=rs[k];});
+    if((rem.at||0)>(S.syncAt||0)){const rs=rem.settings||{};['albOrder','albSort','albStatus','albDoneAt','learn','trLang','trEng','bi','subOn','fs','pm','rpLim','rpN','rpMin'].forEach(k=>{if(rs[k]!==undefined)S[k]=rs[k];});
       const rp0=rem.pos||{};S.pos={...rp0,...(S.pos||{})};}
     save();tracks.sort((a,b)=>a.added-b.added);
     if(changed){renderLib();if(typeof renderVoc==='function'&&document.getElementById('vVoc').classList.contains('on'))renderVoc();updVocBadge();if(!cur&&tracks.length){const t=tracks.find(x=>x.id===S.lastId&&!x.noAudio)||tracks.find(x=>!x.noAudio);if(t)loadTrack(t,false);}}

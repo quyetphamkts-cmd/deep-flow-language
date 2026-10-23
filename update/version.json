@@ -1,16 +1,39 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.8",
- "notes": "Xác nhận rõ ràng trước khi xoá API key.",
+ "ver": "1.0.1-beta.9",
+ "notes": "Màn hình Nghe mới (biểu tượng chế độ phát, sóng âm để tua, nút Luyện nói); sửa tra từ, đọc từ, tạo phụ đề nhiều bài.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 4,
-  "versionName": "1.0.1-beta.6",
+  "versionCode": 5,
+  "versionName": "1.0.1-beta.9",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.9",
+   "d": "23/10/2026",
+   "items": [
+    "Màn hình Nghe mới: tên bài nằm dưới phụ đề; 5 nút nhỏ gọn (Chế độ phát · Tốc độ · 🎙 Luyện nói · Phụ đề · Hẹn giờ) ngay trên nút Play",
+    "Chế độ phát dạng biểu tượng, bấm để chuyển lần lượt, nhấn giữ để chọn: Phát 1 bài · Phát hết album · Phát hết mục Đang học · Lặp bài · Lặp album · Lặp mục Đang học",
+    "Nút Tốc độ và Phụ đề: bấm để chuyển nhanh, nhấn giữ để chọn",
+    "Nút 🎙 Luyện nói gom: nghe lại mỗi câu, dừng để nói lại, nói đuổi (shadowing), chấm phát âm, luyện câu đang nghe",
+    "Thanh tiến trình thành biểu đồ sóng âm chìm dưới nút Play: kéo vùng trống sang trái/phải để tua (các nút tạm ẩn khi kéo); thời gian đang phát bên trái, tổng thời gian bên phải",
+    "Tra từ: hiện nghĩa nhanh trong lúc chờ, không còn treo ở “Đang tra…”; nút đọc từ dùng giọng Google nên đọc được trong bản APK",
+    "Tạo phụ đề nhiều bài: bài lỗi không làm dừng cả hàng chờ (tự thử lại 1 lần), tự chờ khi Gemini giới hạn lượt gọi, báo tổng kết khi xong",
+    "Màn hình khoá: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn tên bài chữ nhỏ",
+    "Nút thông tin trong Cài đặt đổi thành chữ i"
+   ]
+  },
+  {
+   "v": "1.0.1-beta.9",
+   "d": "23/10/2026",
+   "items": [
+    "Màn hình khoá / thanh thông báo: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn dòng chữ nhỏ và tên bài phía dưới",
+    "Bản APK: cải thiện giữ nhạc phát tiếp khi vuốt tắt app"
+   ]
+  },
   {
    "v": "1.0.1-beta.8",
    "d": "23/10/2026",

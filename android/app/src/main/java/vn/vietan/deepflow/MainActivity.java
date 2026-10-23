@@ -57,7 +57,7 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onDestroy() {
         // Vuốt tắt app khi đang phát → giữ WebView sống để nhạc tiếp tục (dịch vụ nền giữ app không bị tắt)
-        if (playing && bgPlay && isFinishing() && bridge != null && orphan == null) {
+        if (playing && bgPlay && !isChangingConfigurations() && bridge != null && orphan == null) {
             orphan = bridge;
             bridge = null;
         }
