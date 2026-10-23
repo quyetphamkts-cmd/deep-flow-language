@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.6",
- "notes": "Công tắc phát dưới nền khi thoát app và tự phát tiếp khi mở lại app.",
+ "ver": "1.0.1-beta.7",
+ "notes": "Cài đặt gọn hơn với nút (!) mở ghi chú; tự kiểm tra cập nhật mỗi lần mở app.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.7",
+   "d": "23/10/2026",
+   "items": [
+    "Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại",
+    "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt",
+    "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"
+   ]
+  },
   {
    "v": "1.0.1-beta.6",
    "d": "23/10/2026",

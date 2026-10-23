@@ -133,6 +133,12 @@ select{background:var(--p2);border:1px solid var(--ln);border-radius:10px;paddin
 .box .sw>span{flex:none}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center;z-index:20}
 .modal.on{display:flex}
+#vSet h3{display:flex;align-items:center;gap:8px}
+#vSet .sw select{max-width:62%;min-width:0;text-overflow:ellipsis}
+.hlp{margin-left:auto;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--mu);background:none;color:var(--mu);font:700 13px/1 system-ui;display:inline-flex;align-items:center;justify-content:center;padding:0;cursor:pointer;flex:none}
+.hlp.on{border-color:var(--ac);background:var(--ac);color:#111}
+#vSet .help{display:none!important}#vSet .card.hopen .help{display:block!important}#vSet .card.hopen .sw small.help{display:block!important;margin-top:2px}
+.navdot{position:relative}.navdot::after{content:'';position:absolute;top:6px;right:calc(50% - 16px);width:8px;height:8px;border-radius:50%;background:#ff4d4f}
 .keyrow{padding:10px 0 4px}.keyrow+.keyrow{border-top:1px solid var(--ln);margin-top:6px}.keyrow .kh b{display:block}.keyrow .kh small{color:var(--mu);font-size:12px}.keyrow .kv{display:flex;gap:6px;align-items:center;margin:8px 0 4px}.keyrow .kval{flex:1;font:13px ui-monospace,monospace;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:9px 10px;color:var(--mu);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;user-select:none;-webkit-user-select:none}.keyrow .kval.ok{color:var(--tx)}.keyrow details{font-size:13px;margin-top:4px}.keyrow summary{color:var(--ac);cursor:pointer;padding:4px 0}.keyrow ol{margin:6px 0;padding-left:20px;line-height:1.55}.keyrow a{color:var(--ac)}
 .rel h4{margin:12px 0 4px;font-size:14px}.rel h4 small{color:var(--mu);font-weight:400;margin-left:6px}.rel ul{margin:0;padding-left:20px}.rel li{margin:3px 0;font-size:13.5px;line-height:1.45}
 .box{background:var(--p1);width:100%;max-width:680px;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom));max-height:88dvh;overflow:auto}
@@ -403,7 +409,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    </div>
    <h3>Hiển thị</h3>
    <div class="card">
-    <div class="mu" style="margin:4px 0 6px">Cỡ chữ phụ đề (theo cỡ chữ hệ thống của điện thoại)</div>
+    <div class="mu lbl" style="margin:4px 0 6px">Cỡ chữ phụ đề (theo cỡ chữ hệ thống của điện thoại)</div>
     <div class="seg" id="fsSeg"><button data-f="12">Rất nhỏ</button><button data-f="14">Nhỏ</button><button data-f="16">Vừa</button><button data-f="18.5">Lớn</button><button data-f="21">Rất lớn</button></div>
     <div class="mu" id="fsDemo" style="margin:8px 0 4px;line-height:1.4"><span style="font-size:calc(var(--fs) / 16 * 1rem);color:var(--tx);font-weight:500">Good morning, everyone.</span><br><span style="font-size:calc(var(--fs) / 16 * .9rem);color:var(--vi)">Chào buổi sáng mọi người.</span></div>
     <div class="sw"><span>Giữ màn hình sáng khi phát</span><button class="tg" id="wakeT"></button></div>
@@ -411,26 +417,18 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    </div>
    <h3>Tài khoản &amp; đồng bộ</h3>
    <div class="card">
-    <div class="nat-off mu">Đăng nhập Google để đồng bộ dữ liệu chỉ có trong bản ứng dụng Android (APK).</div>
+    <div class="nat-off mu lbl">Đăng nhập Google để đồng bộ dữ liệu chỉ có trong bản ứng dụng Android (APK).</div>
     <div class="nat-on">
      <div class="sw"><span id="gAcc" class="mu">Chưa đăng nhập</span><button class="btn pri" id="gSign">Đăng nhập Google</button></div>
      <div class="sw"><span>Tự động đồng bộ lên Google Drive</span><button class="tg" id="syncT"></button></div>
-     <div class="sw"><span>Đồng bộ cả file âm thanh<br><small class="mu">Tốn dung lượng Drive; dùng khi học trên nhiều máy</small></span><button class="tg" id="syncAudT"></button></div>
+     <div class="sw"><span>Đồng bộ cả file âm thanh<small class="mu">Tốn dung lượng Drive; dùng khi học trên nhiều máy</small></span><button class="tg" id="syncAudT"></button></div>
      <div class="row2" style="justify-content:flex-start;flex-wrap:wrap"><button class="btn" id="syncNow">⟳ Đồng bộ ngay</button><span class="mu" id="syncMsg" style="align-self:center"></span></div>
      <div class="mu" style="margin-top:6px">Dữ liệu (phụ đề, bản dịch, album, tiến độ, từ vựng, cài đặt) được lưu trong thư mục ẩn của Deep Flow trên Google Drive của bạn — các file khác trong Drive không bị đụng tới.</div>
     </div>
    </div>
-   <h3>Phiên bản &amp; cập nhật</h3>
-   <div class="card">
-    <div class="sw"><span>Phiên bản app: <b id="verWeb"></b><span class="nat-on"> · lõi Android <b id="verNat"></b></span></span><button class="btn nat-on" id="updCheck">Kiểm tra cập nhật</button></div>
-    <div class="mu" id="updMsg"></div>
-    <div id="relNow" class="rel"></div>
-    <div class="row2" style="justify-content:flex-start"><button class="btn" id="relBtn">📝 Ghi chú phát hành</button></div>
-    <div class="row2 nat-on" style="justify-content:flex-start"><button class="btn" id="updReset" hidden>↩ Quay về bản cài gốc</button></div>
-   </div>
    <h3>Bộ nhớ</h3>
    <div class="card">
-    <div class="sw"><span>Tự quản lý bộ nhớ theo trạng thái học<br><small class="mu">📖 Đang học: tự tải về máy · ✅ Đã học xong: xoá bản tải, nghe lại trực tuyến · 📘 Chưa học: chỉ danh sách. Chỉ áp dụng cho bài có bản trên Google Drive.</small></span><button class="tg" id="autoStoT"></button></div>
+    <div class="sw"><span>Tự quản lý bộ nhớ theo trạng thái học<small class="mu">📖 Đang học: tự tải về máy · ✅ Đã học xong: xoá bản tải, nghe lại trực tuyến · 📘 Chưa học: chỉ danh sách. Chỉ áp dụng cho bài có bản trên Google Drive.</small></span><button class="tg" id="autoStoT"></button></div>
     <div class="sw"><span>Chỉ tự tải khi dùng Wi-Fi</span><button class="tg" id="wifiT"></button></div>
     <div class="row2" style="justify-content:flex-start"><button class="btn" id="polNow">Áp dụng ngay</button></div>
    </div>
@@ -494,7 +492,17 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <div class="mu">AI trên máy tải mô hình khoảng 80 MB ở lần đầu, chất lượng dịch kém hơn Google/Gemini. Nếu Google Dịch lỗi, app tự chuyển sang AI trên máy.</div>
    </div>
    <h3>Tự động khớp chữ (AI)</h3>
-   <div class="card mu">Dùng mô hình nhận dạng giọng nói Whisper chạy ngay trên máy (không cần tài khoản, không gửi âm thanh đi đâu). Lần đầu cần mạng để tải mô hình, sau đó được lưu lại. Trên điện thoại, 1 phút âm thanh mất khoảng 20–60 giây xử lý.</div>
+   <div class="card"><div class="mu lbl">AI nhận dạng giọng nói chạy ngay trên máy (Whisper) hoặc online (Gemini).</div><div class="mu">Dùng mô hình nhận dạng giọng nói Whisper chạy ngay trên máy (không cần tài khoản, không gửi âm thanh đi đâu). Lần đầu cần mạng để tải mô hình, sau đó được lưu lại. Trên điện thoại, 1 phút âm thanh mất khoảng 20–60 giây xử lý.</div></div>
+   <h3>Phiên bản &amp; cập nhật</h3>
+   <div class="card">
+    <div class="sw"><span>Phiên bản app: <b id="verWeb"></b><span class="nat-on"> · lõi Android <b id="verNat"></b></span></span><button class="btn nat-on" id="updCheck">Kiểm tra cập nhật</button></div>
+    <div class="mu" id="updMsg"></div>
+    <div class="row2" id="updAct" hidden style="justify-content:flex-start;flex-wrap:wrap"></div>
+    <div id="relNow" class="rel help"></div>
+    <div class="row2" style="justify-content:flex-start"><button class="btn" id="relBtn">📝 Ghi chú phát hành</button></div>
+    <div class="row2 nat-on" style="justify-content:flex-start"><button class="btn" id="updReset" hidden>↩ Quay về bản cài gốc</button></div>
+   </div>
+
   </div>
  </section>
 </main>
@@ -672,9 +680,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.6';
+const APP_VER='1.0.1-beta.7';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]},{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]},{"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]},{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -2939,6 +2947,16 @@ document.querySelectorAll('.keyrow').forEach(r=>{const k=r.dataset.k;
 $('#keyPaste').onclick=async()=>{try{const t=await navigator.clipboard.readText();if(t){$('#keyIn').value=t.trim();$('#keyMsg').textContent='Đã dán — bấm OK để lưu.';}else $('#keyMsg').textContent='Bộ nhớ tạm trống — hãy copy key trước.';}catch(e){$('#keyIn').focus();$('#keyMsg').textContent='Không đọc được bộ nhớ tạm: hãy nhấn giữ trong ô và chọn Dán.';}};
 $('#keyIn').addEventListener('keydown',e=>{if(e.key==='Enter')$('#keyOk').click();});
 setTimeout(keyUI,0);
+// Thu gọn ghi chú / hướng dẫn trong Cài đặt: nút (!) ở tiêu đề mỗi mục để mở/thu
+function initHelp(){
+  document.querySelectorAll('#vSet .card').forEach(c=>{
+    const h=[...c.querySelectorAll(':scope > .mu:not([id]):not(.lbl), :scope > .nat-on > .mu:not([id]):not(.lbl), :scope > .nat-on .sw small.mu, :scope > .sw small.mu, :scope .help')];
+    if(!h.length)return;h.forEach(e=>e.classList.add('help'));
+    const t=c.previousElementSibling;if(!t||t.tagName!=='H3'||t.querySelector('.hlp'))return;
+    const b=document.createElement('button');b.className='hlp';b.textContent='!';b.setAttribute('aria-label','Xem ghi chú, hướng dẫn');
+    b.onclick=()=>{const o=c.classList.toggle('hopen');b.classList.toggle('on',o);};t.appendChild(b);});
+}
+setTimeout(initHelp,0);
 function relHtml(list){return list.map(e=>`<h4>${esc(verLabel(e.v))}<small>${esc(e.d||'')}</small></h4><ul>${(e.items||[]).map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`).join('')||'<div class="mu">Chưa có ghi chú.</div>';}
 // Mở ghi chú: list = các mục cần hiện; onUpd = hàm cập nhật (nếu đang báo có bản mới)
 window.showRelNotes=(list,title,onUpd)=>{$('#relTitle').textContent=title||'📝 Ghi chú phát hành';$('#relList').innerHTML=relHtml(list||CHANGELOG);
@@ -3168,6 +3186,11 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
       const j=await (await fetch(RAW+'update/version.json?t='+Date.now(),{cache:'no-store'})).json();
       S.updChecked=Date.now();save();
       const V=j.ver||j.web; // "ver": số phiên bản thật (có beta); "web": số dạng cũ cho app bản đầu đọc được
+      const act=$$('#updAct');act.innerHTML='';act.hidden=true;let dot=false;
+      const addBtn=(t,fn,pri)=>{const b=document.createElement('button');b.className='btn'+(pri?' pri':'');b.textContent=t;b.onclick=fn;act.appendChild(b);act.hidden=false;dot=true;};
+      const apkNew=j.apk&&nativeBuild&&j.apk.versionCode>nativeBuild;
+      if(apkNew)addBtn('📥 Tải APK '+verLabel(j.apk.versionName),()=>{location.href=j.apk.url;});
+      document.querySelector('nav button[data-v="vSet"]').classList.toggle('navdot',!!(apkNew||vcmp(V,APP_VER)>0));
       if(j.apk&&nativeBuild&&j.apk.versionCode>nativeBuild&&(j.apk.required||vcmp(V,APP_VER)>0&&j.minNative>nativeBuild)){
         msg.textContent='Có bản APK mới '+j.apk.versionName+' (cần cài đè để có tính năng mới).';
         bar(`Có bản cài đặt mới <b>${j.apk.versionName}</b>. Tải về rồi mở file để cài đè (giữ nguyên dữ liệu).`,'Tải APK',()=>{location.href=j.apk.url;});return;
@@ -3175,9 +3198,10 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
       if(vcmp(V,APP_VER)>0&&(!j.minNative||nativeBuild>=j.minNative)){
         msg.textContent='Có phiên bản '+verLabel(V)+': '+(j.notes||'');
         const nw=(j.changelog||[]).filter(e=>vcmp(e.v,APP_VER)>0);const upd=()=>applyUpdate(j,V);
+        addBtn('⬆ Cập nhật lên '+verLabel(V),nw.length?()=>showRelNotes(nw,'Có bản mới '+verLabel(V),upd):upd,true);
         bar(`Có cập nhật <b>${verLabel(V)}</b>${j.notes?': '+esc(j.notes):''}`,nw.length?'Xem & cập nhật':'Cập nhật',nw.length?()=>showRelNotes(nw,'Có bản mới '+verLabel(V),upd):upd);return;
       }
-      if(manual)msg.textContent='Bạn đang dùng bản mới nhất ('+verLabel(APP_VER)+').';
+      msg.textContent='Bạn đang dùng bản mới nhất ('+verLabel(APP_VER)+')'+(apkNew?'. Có bản cài đặt APK mới với tính năng của lõi Android — bấm Tải APK rồi cài đè (giữ nguyên dữ liệu).':'.');
     }catch(e){if(manual)msg.textContent='Không kiểm tra được (cần mạng): '+(e.message||e);}
   }
   async function applyUpdate(j,V){
@@ -3196,7 +3220,9 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   $$('#updCheck').onclick=()=>checkUpdate(true);
   $$('#updReset').onclick=async()=>{if(!await askConfirm('Quay về phiên bản giao diện có sẵn trong file APK?'))return;try{await WV.setServerAssetPath({path:'public'});await WV.persistServerBasePath();}catch(e){toast('Lỗi: '+(e.message||e));}};
   WV.getServerBasePath().then(r=>{if(r&&r.path&&!/public\/?$/.test(r.path))$$('#updReset').hidden=false;}).catch(()=>{});
-  AppP.getInfo().then(i=>{nativeBuild=+i.build||0;$$('#verNat').textContent=i.version+' ('+i.build+')';if(Date.now()-(S.updChecked||0)>6*3600e3)setTimeout(()=>checkUpdate(false),4000);}).catch(()=>{});
+  AppP.getInfo().then(i=>{nativeBuild=+i.build||0;$$('#verNat').textContent=i.version+' ('+i.build+')';setTimeout(()=>checkUpdate(false),3000);}).catch(()=>{});
+  // quay lại app sau một lúc → kiểm tra lại
+  AppP.addListener('resume',()=>{if(Date.now()-(S.updChecked||0)>15*60e3)checkUpdate(false);});
 })();
 </script>
 </body>
