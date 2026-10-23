@@ -59,6 +59,7 @@ public class HeadsetPlugin extends Plugin {
     @PluginMethod
     public void setPlaying(PluginCall call) {
         MainActivity.playing = call.getBoolean("playing", false);
+        MainActivity.bgPlay = call.getBoolean("bg", true);
         call.resolve();
     }
 

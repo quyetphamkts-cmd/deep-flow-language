@@ -1,16 +1,24 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.5",
- "notes": "Mục 🔑 API key có hướng dẫn lấy key, nhập khoá chống sửa nhầm, lưu key theo tài khoản Google.",
+ "ver": "1.0.1-beta.6",
+ "notes": "Công tắc phát dưới nền khi thoát app và tự phát tiếp khi mở lại app.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 3,
-  "versionName": "1.0.1-beta.4",
+  "versionCode": 4,
+  "versionName": "1.0.1-beta.6",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.6",
+   "d": "23/10/2026",
+   "items": [
+    "Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)",
+    "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"
+   ]
+  },
   {
    "v": "1.0.1-beta.5",
    "d": "23/10/2026",

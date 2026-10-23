@@ -2,6 +2,7 @@ package vn.vietan.deepflow;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.webkit.WebSettings;
 
 import com.getcapacitor.Bridge;
@@ -14,6 +15,8 @@ public class MainActivity extends BridgeActivity {
     public static volatile boolean pendingAutoplay = false;
     /** Đang phát nhạc (do app web báo qua plugin Headset) */
     public static volatile boolean playing = false;
+    /** Người dùng cho phép phát dưới nền khi rời app (Cài đặt → Chạy nền) */
+    public static volatile boolean bgPlay = true;
     /** Phiên cũ vẫn đang phát sau khi người dùng vuốt tắt app */
     private static Bridge orphan = null;
 
@@ -54,7 +57,7 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onDestroy() {
         // Vuốt tắt app khi đang phát → giữ WebView sống để nhạc tiếp tục (dịch vụ nền giữ app không bị tắt)
-        if (playing && isFinishing() && bridge != null && orphan == null) {
+        if (playing && bgPlay && isFinishing() && bridge != null && orphan == null) {
             orphan = bridge;
             bridge = null;
         }
@@ -81,7 +84,18 @@ public class MainActivity extends BridgeActivity {
     public void onPause() { super.onPause(); isForeground = false; keepWebViewAlive(); }
 
     @Override
-    public void onStop() { super.onStop(); keepWebViewAlive(); }
+    public void onStop() {
+        super.onStop();
+        // Tắt "phát dưới nền": rời app (không phải chỉ tắt màn hình) thì dừng phát
+        if (!bgPlay && playing && !isChangingConfigurations()) {
+            boolean screenOn = true;
+            try { screenOn = ((PowerManager) getSystemService(POWER_SERVICE)).isInteractive(); } catch (Exception ignored) {}
+            if (screenOn) {
+                try { getBridge().getWebView().evaluateJavascript("try{audio.pause()}catch(e){}", null); } catch (Exception ignored) {}
+            }
+        }
+        keepWebViewAlive();
+    }
 
     /** Giữ JavaScript (hẹn giờ, lặp câu, chuyển bài) tiếp tục chạy khi app ở dưới nền */
     private void keepWebViewAlive() {
