@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.75",
-  "notes": "Thanh dưới: mục “Từ vựng” đổi tên thành “Từ điển” (biểu tượng cuốn từ điển)",
+  "ver": "1.0.1-beta.76",
+  "notes": "Vốn từ theo trình độ: ghi rõ đang thống kê từ bao nhiêu bài đã học xong (→ Đã thuộc) và bao nhiêu bài đang học (→ Đang học) trong Thư viện; bài đã nghe (từ 30 giây) dù khoá học chưa chuyển sang Đang học cũng được tính từ vào Đang học; chưa có bài nào học xong thì có dòng nhắc cách để từ chuyển sang Đã thuộc",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.76",
+      "d": "24/10/2026",
+      "items": [
+        "Vốn từ theo trình độ: ghi rõ đang thống kê từ bao nhiêu bài đã học xong (→ Đã thuộc) và bao nhiêu bài đang học (→ Đang học) trong Thư viện; bài đã nghe (từ 30 giây) dù khoá học chưa chuyển sang Đang học cũng được tính từ vào Đang học; chưa có bài nào học xong thì có dòng nhắc cách để từ chuyển sang Đã thuộc"
+      ]
+    },
     {
       "v": "1.0.1-beta.75",
       "d": "24/10/2026",
