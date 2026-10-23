@@ -55,6 +55,16 @@ public class HeadsetPlugin extends Plugin {
         }
     }
 
+    /** Lưu chế độ phát hiện tại để thông báo phát nhạc hiện đúng biểu tượng nút chế độ */
+    @PluginMethod
+    public void setPlayMode(PluginCall call) {
+        getContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+            .putString("pm", call.getString("pm", "ralb"))
+            .putString("pmLabel", call.getString("label", "Chế độ phát"))
+            .apply();
+        call.resolve();
+    }
+
     /** App web báo đang phát hay dừng (để giữ app chạy tiếp khi người dùng vuốt tắt app) */
     @PluginMethod
     public void setPlaying(PluginCall call) {

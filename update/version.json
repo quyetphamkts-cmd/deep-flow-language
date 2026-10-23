@@ -1,16 +1,27 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.11",
- "notes": "Sóng âm dạng thanh bo tròn kiểu Poweramp.",
+ "ver": "1.0.1-beta.12",
+ "notes": "Nút chế độ phát và nút tắt trên thông báo phát nhạc (cần APK mới); sửa chữ, bỏ vạch cam.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 5,
-  "versionName": "1.0.1-beta.9",
+  "versionCode": 6,
+  "versionName": "1.0.1-beta.12",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.12",
+   "d": "23/10/2026",
+   "items": [
+    "Thông báo phát nhạc / màn hình khoá có thêm nút chế độ phát (bên trái, đổi biểu tượng theo chế độ) và nút tắt (bên phải) — cần cài APK mới",
+    "Bỏ vạch màu cam giữa sóng âm dưới nút Play",
+    "Sửa chữ các chế độ phát và chế độ phụ đề cho rõ nghĩa",
+    "Góc trên bên phải hiện tổng số album và số bài",
+    "Nhấn giữ vào nút không còn bị bôi đen chữ / hiện menu Dịch – Chép"
+   ]
+  },
   {
    "v": "1.0.1-beta.11",
    "d": "23/10/2026",
