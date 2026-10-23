@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.64",
- "notes": "Màn hình Nghe: bỏ dòng hướng dẫn “hoặc vào Thư viện → ⋯ → Gắn tài liệu / Dán văn bản” dưới nút tạo phụ đề · Tự tạo phụ đề ưu tiên lần lượt từ trên xuống: album đang nghe trước, rồi các album đang học, rồi bài chưa học — đúng thứ tự như Thư viện hiển thị (theo khoá học, album cha trước album con, bài trong album từ trên xuống)",
+ "ver": "1.0.1-beta.65",
+ "notes": "Bảng tạo phụ đề: bỏ công tắc “Mốc thời gian chính xác từng từ” — app luôn dùng mốc thời gian từng từ (lặp câu khớp hơn)",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.65",
+   "d": "24/10/2026",
+   "items": [
+    "Bảng tạo phụ đề: bỏ công tắc “Mốc thời gian chính xác từng từ” — app luôn dùng mốc thời gian từng từ (lặp câu khớp hơn)"
+   ]
+  },
   {
    "v": "1.0.1-beta.64",
    "d": "24/10/2026",
