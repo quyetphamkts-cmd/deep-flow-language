@@ -649,9 +649,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.2';
+const APP_VER='1.0.1-beta.3';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1670,12 +1670,35 @@ $('#selAct').onclick=async()=>{
     for(const t of L){await delTrack(t.id);delete S.pos[t.id];if(t===cur){audio.pause();audio.removeAttribute('src');cur=null;cues=[];$('#ttl').textContent='Chưa chọn bài';renderLyrics();}}
     save();tracks=tracks.filter(t=>!selSet.has(t.id));exitSel();toast('Đã xoá '+L.length+' bài');}
 };
-// Nhấn giữ một bài → vào chế độ chọn
-{let t0=null,x0=0,y0=0;const L=$('#libList');const stop=()=>{clearTimeout(t0);t0=null;};
+// Nhấn giữ một bài → vào chế độ chọn; giữ nguyên ngón tay rồi kéo lên/xuống để chọn liền nhiều bài
+{let t0=null,x0=0,y0=0,drag=null,lastY=0,raf=0;const L=$('#libList');const stop=()=>{clearTimeout(t0);t0=null;};
+  const rows=()=>[...L.querySelectorAll('.trk')];
+  const selDom=()=>{L.classList.add('selmode');$('#selBar').hidden=false;$('#selN').textContent='Đã chọn '+selSet.size;rows().forEach(r=>r.classList.toggle('sel',selSet.has(r.dataset.id)));};
+  const scroller=()=>{let e=L;while(e&&e!==document.body){const cs=getComputedStyle(e);if(/(auto|scroll)/.test(cs.overflowY)&&e.scrollHeight>e.clientHeight)return e;e=e.parentElement;}return document.scrollingElement;};
+  const visRange=()=>{const sc=drag.sc,rc=sc===document.scrollingElement?{top:0,bottom:innerHeight}:sc.getBoundingClientRect();const sb=$('#selBar').getBoundingClientRect();
+    let bottom=Math.min(rc.bottom,innerHeight);if(sb.height&&sb.top<bottom)bottom=sb.top;return [Math.max(rc.top,0),bottom];};
+  const pick=y=>{if(!drag)return;const [vt,vb]=visRange();y=Math.min(vb-8,Math.max(vt+8,y));const el=document.elementFromPoint(drag.x,y);const r=el&&el.closest&&el.closest('.trk');if(!r||!L.contains(r))return;
+    const rs=rows(),a=rs.findIndex(x=>x.dataset.id===drag.anchor),b=rs.indexOf(r);if(a<0||b<0||b===drag.last)return;drag.last=b;
+    selSet.clear();drag.base.forEach(id=>selSet.add(id));const [lo,hi]=a<b?[a,b]:[b,a];for(let k=lo;k<=hi;k++)selSet.add(rs[k].dataset.id);
+    if(navigator.vibrate)navigator.vibrate(8);selDom();};
+  // tự cuộn khi kéo tới mép trên/dưới màn hình
+  const auto=()=>{if(!drag){raf=0;return;}const sc=drag.sc;
+    const [vt,vb]=visRange(),top=vt+70,bot=vb-70;let v=0;
+    if(lastY<top)v=-Math.min(18,(top-lastY)/3+2);else if(lastY>bot)v=Math.min(18,(lastY-bot)/3+2);
+    if(v){sc.scrollTop+=v;pick(lastY);}raf=requestAnimationFrame(auto);};
+  const endDrag=()=>{if(!drag)return;drag=null;cancelAnimationFrame(raf);raf=0;renderLib();};
   L.addEventListener('pointerdown',e=>{libLP=false;const r=e.target.closest('.trk');if(!r||e.target.closest('button'))return;x0=e.clientX;y0=e.clientY;stop();
-    t0=setTimeout(()=>{t0=null;libLP=true;if(navigator.vibrate)navigator.vibrate(30);if(!selMode){selMode=true;selSet.clear();}selSet.add(r.dataset.id);renderLib();},550);});
-  L.addEventListener('pointermove',e=>{if(t0&&Math.hypot(e.clientX-x0,e.clientY-y0)>12)stop();});
-  ['pointerup','pointercancel','scroll'].forEach(ev=>L.addEventListener(ev,stop,true));
+    t0=setTimeout(()=>{t0=null;libLP=true;if(navigator.vibrate)navigator.vibrate(30);if(!selMode){selMode=true;selSet.clear();}
+      selSet.add(r.dataset.id);drag={anchor:r.dataset.id,base:new Set(selSet),last:-1,x:Math.min(innerWidth-20,Math.max(20,x0)),sc:scroller()};lastY=y0;selDom();
+      try{r.setPointerCapture&&e.pointerId!=null&&L.setPointerCapture(e.pointerId);}catch(_){}
+      if(!raf)raf=requestAnimationFrame(auto);},550);});
+  L.addEventListener('pointermove',e=>{if(t0&&Math.hypot(e.clientX-x0,e.clientY-y0)>12)stop();if(drag){lastY=e.clientY;pick(e.clientY);}});
+  // khi đang kéo chọn: chặn cuộn trang bằng tay (đã có tự cuộn ở mép)
+  L.addEventListener('touchmove',e=>{if(drag){e.preventDefault();const t=e.touches[0];if(t){lastY=t.clientY;pick(t.clientY);}}},{passive:false});
+  L.addEventListener('pointerup',()=>{stop();endDrag();},true);
+  L.addEventListener('pointercancel',e=>{stop();if(e.pointerType!=='touch')endDrag();},true);
+  L.addEventListener('touchend',()=>{stop();endDrag();});
+  L.addEventListener('scroll',stop,true);
   L.addEventListener('contextmenu',e=>{if(e.target.closest('.trk'))e.preventDefault();});}
 let libLP=false;
 $('#libList').addEventListener('click',async e=>{

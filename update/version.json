@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.2",
- "notes": "Sửa lỗi đăng nhập Google, đồng bộ và phát dưới nền trong APK; thêm ghi chú phát hành.",
+ "ver": "1.0.1-beta.3",
+ "notes": "Nhấn giữ rồi kéo để chọn nhiều bài.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.3",
+   "d": "23/10/2026",
+   "items": [
+    "Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"
+   ]
+  },
   {
    "v": "1.0.1-beta.2",
    "d": "23/10/2026",
