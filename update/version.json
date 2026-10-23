@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.66",
- "notes": "Bảng tạo phụ đề gọn hơn: bỏ công tắc “Căn thời gian chính xác bằng AI trên máy” — app luôn căn thời gian chính xác để phụ đề khớp chuẩn với bài nghe",
+ "ver": "1.0.1-beta.67",
+ "notes": "Menu ⋯ của bài: nút phụ đề đổi tên theo tình trạng bài — ✨ Tạo phụ đề ngay (chưa có phụ đề) · ✨ Khớp văn bản với âm thanh (có văn bản chưa khớp) · ✨ Kiểm tra lại phụ đề (đã có phụ đề)",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.67",
+   "d": "24/10/2026",
+   "items": [
+    "Menu ⋯ của bài: nút phụ đề đổi tên theo tình trạng bài — ✨ Tạo phụ đề ngay (chưa có phụ đề) · ✨ Khớp văn bản với âm thanh (có văn bản chưa khớp) · ✨ Kiểm tra lại phụ đề (đã có phụ đề)"
+   ]
+  },
   {
    "v": "1.0.1-beta.66",
    "d": "24/10/2026",
