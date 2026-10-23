@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.7",
- "notes": "Cài đặt gọn hơn với nút (!) mở ghi chú; tự kiểm tra cập nhật mỗi lần mở app.",
+ "ver": "1.0.1-beta.8",
+ "notes": "Xác nhận rõ ràng trước khi xoá API key.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.8",
+   "d": "23/10/2026",
+   "items": [
+    "Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"
+   ]
+  },
   {
    "v": "1.0.1-beta.7",
    "d": "23/10/2026",

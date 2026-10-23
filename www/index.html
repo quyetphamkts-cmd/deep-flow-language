@@ -145,6 +145,7 @@ select{background:var(--p2);border:1px solid var(--ln);border-radius:10px;paddin
 .box h3{margin:0 0 8px}
 .sheet button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--ln);padding:14px 4px;font-size:15px}
 .sheet button.dg{color:#ff7b7b}
+.btn.dgb{background:#d9363e!important;border-color:#d9363e!important;color:#fff!important}
 textarea{width:100%;min-height:200px;background:var(--bg);border:1px solid var(--ln);border-radius:12px;padding:10px;font-size:13px}
 .row2{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
 .pbar{height:8px;background:var(--ln);border-radius:5px;overflow:hidden;margin:12px 0 6px}
@@ -563,7 +564,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
  <div class="row2"><button class="btn" data-close>Đóng</button><button class="btn" id="outDl">Tải về</button><button class="btn pri" id="outCopy">Copy</button></div>
 </div></div>
 <div class="modal" id="mAsk" style="z-index:25"><div class="box">
- <div id="askMsg" style="font-size:15px;line-height:1.5"></div>
+ <div id="askMsg" style="font-size:15px;line-height:1.5;white-space:pre-line"></div>
  <input id="askIn" style="width:100%;margin-top:10px;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px">
  <div class="row2"><button class="btn" id="askNo">Huỷ</button><button class="btn pri" id="askOk">Đồng ý</button></div>
 </div></div>
@@ -680,9 +681,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.7';
+const APP_VER='1.0.1-beta.8';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]},{"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]},{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]},{"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]},{"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]},{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1866,9 +1867,9 @@ function exportSRT(t){
   openModal('mOut');
 }
 // Hộp thoại trong trang (thay confirm/prompt – một số trình duyệt chặn hộp thoại hệ thống)
-function askConfirm(msg){return askText(msg,null);}
-function askText(msg,def){
-  return new Promise(res=>{
+function askConfirm(msg,okLabel,danger){return askText(msg,null,okLabel,danger);}
+function askText(msg,def,okLabel,danger){
+  return new Promise(res=>{const ok=$('#askOk');ok.textContent=okLabel||'Đồng ý';ok.classList.toggle('dgb',!!danger);
     $('#askMsg').textContent=msg;const inp=$('#askIn');inp.hidden=def==null;inp.value=def||'';
     const done=v=>{$('#mAsk').classList.remove('on');res(v);};
     $('#askOk').onclick=()=>done(def==null?true:inp.value.trim()||null);
@@ -2943,7 +2944,7 @@ document.querySelectorAll('.keyrow').forEach(r=>{const k=r.dataset.k;
       $('#keyOk').disabled=true;$('#keyMsg').textContent='Đang kiểm tra key…';const t=await testKey(k,v);$('#keyOk').disabled=false;
       if(!t.ok){$('#keyMsg').textContent='⚠️ '+t.msg;return;}
       setKey(k,v);closeModals();toast(t.offline?'Đã lưu key (chưa kiểm tra được vì không có mạng)':'✓ Đã lưu '+KEYN[k]);};};
-  r.querySelector('.kdel').onclick=async()=>{if(!await askConfirm('Xoá '+KEYN[k]+' khỏi app?'))return;setKey(k,'');toast('Đã xoá key');};});
+  r.querySelector('.kdel').onclick=async()=>{if(!await askConfirm('Xoá '+KEYN[k]+'?\n\nCác tính năng dùng key này sẽ ngừng hoạt động cho tới khi bạn nhập lại key.'+(document.body.classList.contains('native')?' Nếu đang đăng nhập Google, key cũng bị xoá khỏi tài khoản (các máy khác sẽ mất key ở lần đồng bộ sau).':''),'Xoá key',true))return;setKey(k,'');toast('Đã xoá key');};});
 $('#keyPaste').onclick=async()=>{try{const t=await navigator.clipboard.readText();if(t){$('#keyIn').value=t.trim();$('#keyMsg').textContent='Đã dán — bấm OK để lưu.';}else $('#keyMsg').textContent='Bộ nhớ tạm trống — hãy copy key trước.';}catch(e){$('#keyIn').focus();$('#keyMsg').textContent='Không đọc được bộ nhớ tạm: hãy nhấn giữ trong ô và chọn Dán.';}};
 $('#keyIn').addEventListener('keydown',e=>{if(e.key==='Enter')$('#keyOk').click();});
 setTimeout(keyUI,0);
