@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.61",
- "notes": "Nút thu gọn / mở rộng chuyển vào tiêu đề từng khoá học (⊟ / ⊞ cạnh nút i): chỉ thu gọn hoặc mở rộng các album và thư mục của khoá học đó",
+ "ver": "1.0.1-beta.62",
+ "notes": "⋯ của mỗi khoá học có thêm 📁 Thêm bài từ thư mục và ☁️ Thêm bài từ Cloud — bài mới vào thẳng khoá học đó (thư mục Cloud giữ cấu trúc album bên trong khoá); bỏ 2 nút Thư mục / Cloud ở đầu Thư viện, thanh trên chỉ còn Tìm và Lọc; Thư viện trống hiện sẵn 2 nút thêm bài · Thêm link Cloud: bấm Thêm là hộp thoại đóng ngay, app tạo nhanh tên thư mục (album) và tên bài — đọc xong thư mục nào hiện bài của thư mục đó ngay trong Thư viện; phần còn lại chạy nền, tiến độ ở đầu Thư viện",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.62",
+   "d": "23/10/2026",
+   "items": [
+    "⋯ của mỗi khoá học có thêm 📁 Thêm bài từ thư mục và ☁️ Thêm bài từ Cloud — bài mới vào thẳng khoá học đó (thư mục Cloud giữ cấu trúc album bên trong khoá); bỏ 2 nút Thư mục / Cloud ở đầu Thư viện, thanh trên chỉ còn Tìm và Lọc; Thư viện trống hiện sẵn 2 nút thêm bài",
+    "Thêm link Cloud: bấm Thêm là hộp thoại đóng ngay, app tạo nhanh tên thư mục (album) và tên bài — đọc xong thư mục nào hiện bài của thư mục đó ngay trong Thư viện; phần còn lại chạy nền, tiến độ ở đầu Thư viện"
+   ]
+  },
   {
    "v": "1.0.1-beta.61",
    "d": "23/10/2026",
