@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.55",
- "notes": "Thêm bài từ Cloud chạy nền: bấm “Ẩn — chạy nền” (hoặc nút Quay lại) để đóng hộp thoại, app vẫn tiếp tục tải; tiến độ hiện ở thanh nhỏ đầu Thư viện (chạm để mở lại), có nút ⏹ Dừng; xong hiện thông báo ngắn",
+ "ver": "1.0.1-beta.56",
+ "notes": "Bài đã có file văn bản (txt, docx, pdf, md) nhưng chưa có mốc thời gian: app tự khớp văn bản thành phụ đề theo âm thanh, không cần bấm. Có API AI và mạng → AI nghe và khớp từng câu chính xác; chưa có AI / không có mạng / AI lỗi → khớp ngay trên máy theo chỗ có tiếng nói và độ dài câu, sau đó bước tự kiểm tra căn lại từng câu",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.56",
+   "d": "23/10/2026",
+   "items": [
+    "Bài đã có file văn bản (txt, docx, pdf, md) nhưng chưa có mốc thời gian: app tự khớp văn bản thành phụ đề theo âm thanh, không cần bấm. Có API AI và mạng → AI nghe và khớp từng câu chính xác; chưa có AI / không có mạng / AI lỗi → khớp ngay trên máy theo chỗ có tiếng nói và độ dài câu, sau đó bước tự kiểm tra căn lại từng câu"
+   ]
+  },
   {
    "v": "1.0.1-beta.55",
    "d": "23/10/2026",
