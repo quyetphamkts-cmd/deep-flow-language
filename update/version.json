@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.29",
- "notes": "Mục tiêu thời gian học cho từng album; Cách nạp bài vào nút (i); Sao lưu chuyển vào Cài đặt.",
+ "ver": "1.0.1-beta.30",
+ "notes": "Mục tiêu album theo số ngày, thanh album tô đầy dần.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.30",
+   "d": "23/10/2026",
+   "items": [
+    "Mục tiêu album tính theo số ngày: mỗi ngày nghe album từ 30 phút = hoàn thành 1 ngày, đủ 2 giờ = ngày đạt chuẩn ⭐; thanh tên album được tô màu đầy dần theo tiến độ (cả phần đang nghe dở trong ngày)"
+   ]
+  },
   {
    "v": "1.0.1-beta.29",
    "d": "23/10/2026",
