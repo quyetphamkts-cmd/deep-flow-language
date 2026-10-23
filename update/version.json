@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.4",
- "notes": "Tự phát tiếp khi mở app; sửa tạo phụ đề Gemini bị đứng; nhạc chạy tiếp khi vuốt tắt app.",
+ "ver": "1.0.1-beta.5",
+ "notes": "Mục 🔑 API key có hướng dẫn lấy key, nhập khoá chống sửa nhầm, lưu key theo tài khoản Google.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,16 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.5",
+   "d": "23/10/2026",
+   "items": [
+    "Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí",
+    "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)",
+    "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy",
+    "File sao lưu không còn chứa API key"
+   ]
+  },
   {
    "v": "1.0.1-beta.4",
    "d": "23/10/2026",

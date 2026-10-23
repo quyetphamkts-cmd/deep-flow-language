@@ -133,6 +133,7 @@ select{background:var(--p2);border:1px solid var(--ln);border-radius:10px;paddin
 .box .sw>span{flex:none}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center;z-index:20}
 .modal.on{display:flex}
+.keyrow{padding:10px 0 4px}.keyrow+.keyrow{border-top:1px solid var(--ln);margin-top:6px}.keyrow .kh b{display:block}.keyrow .kh small{color:var(--mu);font-size:12px}.keyrow .kv{display:flex;gap:6px;align-items:center;margin:8px 0 4px}.keyrow .kval{flex:1;font:13px ui-monospace,monospace;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:9px 10px;color:var(--mu);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;user-select:none;-webkit-user-select:none}.keyrow .kval.ok{color:var(--tx)}.keyrow details{font-size:13px;margin-top:4px}.keyrow summary{color:var(--ac);cursor:pointer;padding:4px 0}.keyrow ol{margin:6px 0;padding-left:20px;line-height:1.55}.keyrow a{color:var(--ac)}
 .rel h4{margin:12px 0 4px;font-size:14px}.rel h4 small{color:var(--mu);font-weight:400;margin-left:6px}.rel ul{margin:0;padding-left:20px}.rel li{margin:3px 0;font-size:13.5px;line-height:1.45}
 .box{background:var(--p1);width:100%;max-width:680px;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom));max-height:88dvh;overflow:auto}
 .box h3{margin:0 0 8px}
@@ -448,16 +449,30 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     3. Máy Xiaomi/Oppo/Vivo/Samsung: bật thêm <b>Tự khởi chạy</b>, và <b>khoá Chrome</b> trong danh sách ứng dụng gần đây (vuốt xuống trên thẻ Chrome hoặc bấm biểu tượng ổ khoá).<br>
     4. Nếu thấy mất tiếng khi tắt màn hình lúc đang bật EQ, hãy thử tắt EQ.</div>
    </div>
-   <h3>Google Drive</h3>
+   <h3>🔑 API key</h3>
    <div class="card">
-    <div class="mu" style="margin-bottom:8px">Để thêm bài từ link Google Drive, app cần một <b>API key</b> (miễn phí, làm 1 lần):</div>
-    <input id="gKey" placeholder="Dán API key vào đây (AIza…)" autocomplete="off" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px">
-    <div class="mu" style="margin-top:8px">
-     1. Vào <b>console.cloud.google.com</b>, đăng nhập Gmail, tạo một Project mới.<br>
-     2. Mục <b>APIs &amp; Services → Library</b>, tìm <b>Google Drive API</b> → bấm <b>Enable</b>.<br>
-     3. Mục <b>Credentials → Create credentials → API key</b>, copy key và dán vào ô trên.<br>
-     4. Ở Drive, chia sẻ file/thư mục ở chế độ <b>"Bất kỳ ai có đường liên kết"</b>.<br>
-     Lưu ý: nếu giới hạn key thì chỉ giới hạn theo <i>API (Google Drive API)</i>, đừng giới hạn theo website.
+    <div class="mu" style="margin-bottom:6px">Mỗi người dùng tự tạo key miễn phí của mình bằng tài khoản Google (khoảng 2 phút, làm 1 lần). Key chỉ lưu trong máy này<span class="nat-on"> và trong tài khoản Google bạn đăng nhập ở mục Tài khoản &amp; đồng bộ — máy khác đăng nhập cùng tài khoản sẽ tự có key, đăng xuất thì key được gỡ khỏi máy</span>. Key không nằm trong file sao lưu.</div>
+    <div class="keyrow" data-k="gemKey">
+     <div class="kh"><b>Gemini API key</b><small>Tạo phụ đề bằng Gemini, dịch bằng Gemini, vẽ hình minh hoạ từ vựng</small></div>
+     <div class="kv"><span class="kval"></span><button class="btn kset">Nhập key</button><button class="btn kdel" hidden>Xoá</button></div>
+     <details><summary>Cách lấy Gemini API key</summary><ol>
+      <li>Mở <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> và đăng nhập tài khoản Google.</li>
+      <li>Lần đầu: đồng ý điều khoản sử dụng.</li>
+      <li>Bấm <b>Create API key</b> (Tạo khoá API). Nếu được hỏi project, chọn project có sẵn hoặc để Google tự tạo.</li>
+      <li>Bấm biểu tượng <b>copy</b> cạnh key vừa tạo (key bắt đầu bằng <code>AIza</code>, dài 39 ký tự).</li>
+      <li>Quay lại app, bấm <b>Nhập key</b> → <b>📋 Dán</b> → <b>OK</b>.</li>
+     </ol><div class="mu">Gói miễn phí có giới hạn số lần gọi mỗi phút/ngày, đủ cho học cá nhân. Không chia sẻ key cho người khác.</div></details>
+    </div>
+    <div class="keyrow" data-k="gKey">
+     <div class="kh"><b>Google Drive API key</b><small>Thêm bài từ link hoặc thư mục Google Drive, nghe trực tiếp từ Drive</small></div>
+     <div class="kv"><span class="kval"></span><button class="btn kset">Nhập key</button><button class="btn kdel" hidden>Xoá</button></div>
+     <details><summary>Cách lấy Google Drive API key</summary><ol>
+      <li>Mở <a href="https://console.cloud.google.com/projectcreate" target="_blank" rel="noopener">console.cloud.google.com</a>, đăng nhập tài khoản Google, tạo một <b>Project</b> mới (đặt tên tuỳ ý, ví dụ <i>Deep Flow</i>) → <b>Create</b>.</li>
+      <li>Mở <a href="https://console.cloud.google.com/apis/library/drive.googleapis.com" target="_blank" rel="noopener">trang Google Drive API</a> (chọn đúng project vừa tạo ở góc trên) → bấm <b>Enable</b> (Bật).</li>
+      <li>Mở <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener">Credentials</a> → <b>Create credentials → API key</b> → copy key.</li>
+      <li>(Nên làm) Bấm vào key → mục <b>API restrictions</b> chọn <b>Restrict key → Google Drive API</b> → <b>Save</b>. Đừng giới hạn theo website.</li>
+      <li>Quay lại app, bấm <b>Nhập key</b> → <b>📋 Dán</b> → <b>OK</b>.</li>
+     </ol><div class="mu">Ở Google Drive, file/thư mục muốn nghe phải chia sẻ ở chế độ <b>“Bất kỳ ai có đường liên kết”</b>.</div></details>
     </div>
    </div>
    <h3>Ngôn ngữ &amp; dịch tự động</h3>
@@ -470,7 +485,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
       <option value="local">AI trên máy – offline (chỉ Anh → Việt)</option>
     </select></div>
     <div id="gemBox">
-     <input id="gemKey" placeholder="Gemini API key (AIza…) – lấy tại aistudio.google.com" autocomplete="off" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin:4px 0">
+     <div class="mu" style="margin:4px 0">Gemini cần API key — nhập ở mục 🔑 API key phía trên.</div>
      <input id="gemModel" placeholder="Tên mô hình" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px">
      <input id="imgModel" placeholder="Mô hình vẽ hình minh họa (mặc định gemini-2.5-flash-image)" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin-top:4px">
     </div>
@@ -521,6 +536,12 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
  <div class="pbar"><i id="aBar"></i></div>
  <div class="mu" id="aMsg">Sẵn sàng.</div>
  <div class="row2"><button class="btn" id="aStop" hidden>Dừng</button><button class="btn" id="aClose">Đóng</button><button class="btn pri" id="aGo">Bắt đầu</button></div>
+</div></div>
+<div class="modal" id="mKey"><div class="box">
+ <h3 id="keyT">Nhập API key</h3>
+ <input id="keyIn" placeholder="AIza…" autocomplete="off" autocapitalize="off" spellcheck="false" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:12px;font:14px ui-monospace,monospace;color:var(--tx)">
+ <div class="mu" id="keyMsg" style="margin-top:8px;min-height:1.2em"></div>
+ <div class="row2"><button class="btn" id="keyPaste">📋 Dán</button><button class="btn" data-close>Huỷ</button><button class="btn pri" id="keyOk">OK</button></div>
 </div></div>
 <div class="modal" id="mRel"><div class="box">
  <h3 id="relTitle">📝 Ghi chú phát hành</h3>
@@ -650,9 +671,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.4';
+const APP_VER='1.0.1-beta.5';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]},{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1968,7 +1989,7 @@ async function gemClip(pcm,len){
   throw new Error('Gemini không trả kết quả, thử lại sau');
 }
 async function gemTranscribe(pcm,dur,pieces,words){
-  if(!S.gemKey)throw new Error('Chưa có Gemini API key (EQ & Cài đặt → Dịch tự động)');
+  if(!S.gemKey)throw new Error('Chưa có Gemini API key (Cài đặt → 🔑 API key)');
   aMsg('Đang phân tích khoảng lặng…');await new Promise(r=>setTimeout(r,20));
   const sp=speechMask(pcm,16000);
   // Cắt đoạn ~2 phút tại khoảng lặng dài nhất gần mốc cắt, để không cắt ngang câu
@@ -2156,7 +2177,7 @@ function updAutoUI(){
   const g=$('#asrModel').value==='gemini';
   $('#wordRow').hidden=g||(!!cues.length&&!forceTr);$('#wordT').classList.toggle('on',!!S.wordTs);
   $('#gpRow').hidden=!g||(!!cues.length&&!forceTr);$('#gpT').classList.toggle('on',!!S.gemPrecise);
-  if(g)$('#aDev').textContent=S.gemKey?'Gửi âm thanh lên Gemini, xử lý 4 đoạn cùng lúc. App tự căn thời gian từng câu theo khoảng lặng trong âm thanh.':'⚠️ Cần nhập Gemini API key ở EQ & Cài đặt → Dịch tự động.';
+  if(g)$('#aDev').textContent=S.gemKey?'Gửi âm thanh lên Gemini, xử lý 4 đoạn cùng lúc. App tự căn thời gian từng câu theo khoảng lặng trong âm thanh.':'⚠️ Cần nhập Gemini API key ở Cài đặt → 🔑 API key.';
   else if(!asrDev)$('#aDev').textContent='App sẽ tự dùng GPU điện thoại nếu được hỗ trợ.';
 }
 $('#asrModel').addEventListener('change',updAutoUI);
@@ -2268,7 +2289,7 @@ const bakMsg=m=>$('#bakMsg').textContent=m,bakBar=p=>$('#bakBar').style.width=Ma
 $('#bBak').onclick=async()=>{bakMsg('');bakBar(0);let sz=0;for(const t of tracks)if(isLocal(t))sz+=t.size||0;$('#bakFullSz').textContent=sz?'– khoảng '+(sz/1048576).toFixed(0)+' MB':'';openModal('mBak');};
 function stamp(){const d=new Date();return d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');}
 function dlBlob(blob,name){if(window.dfSaveFile)return dfSaveFile(blob,name);const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),60000);}
-function bakData(){const s={...S};delete s.pos;return {app:'DeepFlowLanguage',v:1,date:new Date().toISOString(),settings:s,pos:S.pos,vocab:typeof vocab!=='undefined'?vocab:[],tracks:tracks.map(t=>{const x={...t};delete x.asrPart;return x;})};}
+function bakData(){const s={...S};delete s.pos;delete s.gKey;delete s.gemKey;delete s.keysAt;return {app:'DeepFlowLanguage',v:1,date:new Date().toISOString(),settings:s,pos:S.pos,vocab:typeof vocab!=='undefined'?vocab:[],tracks:tracks.map(t=>{const x={...t};delete x.asrPart;return x;})};}
 $('#bakData').onclick=()=>{dlBlob(new Blob([JSON.stringify(bakData())],{type:'application/json'}),'deepflow-dulieu-'+stamp()+'.json');bakMsg('Đã tạo file sao lưu dữ liệu (thư mục Tải xuống). Khi khôi phục, nạp lại các file âm thanh — app tự gắn vào đúng bài.');};
 $('#bakFull').onclick=async()=>{
   bakMsg('Đang gom âm thanh…');const data=bakData(),parts=[];let off=0;
@@ -2619,14 +2640,13 @@ function trUI(){
   $('#learnSel').innerHTML=Object.entries(LEARN).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join('');$('#learnSel').value=S.learn||'en';
   $('#trLang').innerHTML=Object.entries(LANGS).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');
   $('#trLang').value=S.trLang||'vi';$('#trEng').value=S.trEng||'google';
-  $('#gemKey').value=S.gemKey||'';$('#gemModel').value=S.gemModel||'gemini-flash-latest';
+$('#gemModel').value=S.gemModel||'gemini-flash-latest';
   $('#gemBox').hidden=$('#trEng').value!=='gemini';$('#autoTrT').classList.toggle('on',S.autoTr!==false);
   updBi();
 }
 $('#learnSel').onchange=e=>{S.learn=e.target.value;save();if(S.learn!=='en'&&S.trEng==='local'){S.trEng='google';}trUI();updAutoUI();toast('Ngôn ngữ đang học: '+LN()[0]+'. Bài mới sẽ được nghe và dịch theo ngôn ngữ này.',4000);};
 $('#trLang').onchange=e=>{S.trLang=e.target.value;save();if(S.trLang!=='vi'&&S.trEng==='local'){S.trEng='google';trUI();toast('AI trên máy chỉ dịch được tiếng Việt — đã chuyển sang Google Dịch');}};
 $('#trEng').onchange=e=>{S.trEng=e.target.value;save();trUI();};
-$('#gemKey').onchange=e=>{S.gemKey=e.target.value.trim();save();};
 $('#imgModel').value=S.imgModel||'';$('#imgModel').onchange=e=>{S.imgModel=e.target.value.trim();save();};
 $('#gemModel').onchange=e=>{S.gemModel=e.target.value.trim()||'gemini-flash-latest';save();};
 $('#autoTrT').onclick=()=>{S.autoTr=S.autoTr===false;save();trUI();};
@@ -2667,12 +2687,12 @@ async function trCheck(){if(trTok!==trJob)throw new Error('__stop');}
 function gemErr(st,m){
   if(/blocked/i.test(m))return 'API key này đang bị giới hạn, không được phép gọi Gemini. Cách sửa: vào aistudio.google.com/apikey tạo key mới (bấm "Create API key") rồi dán vào ô Gemini API key. Hoặc trong console.cloud.google.com → Credentials → mở key → API restrictions → thêm "Generative Language API".';
   if(st===400&&/API key not valid/i.test(m))return 'Gemini API key không đúng — kiểm tra lại key đã dán.';
-  if(st===404)return 'Không tìm thấy mô hình "'+(S.gemModel||'')+'" — sửa tên mô hình trong EQ & Cài đặt → Dịch tự động (ví dụ gemini-flash-latest).';
+  if(st===404)return 'Không tìm thấy mô hình "'+(S.gemModel||'')+'" — sửa tên mô hình trong Cài đặt → Ngôn ngữ & dịch tự động (ví dụ gemini-flash-latest).';
   if(st===429)return 'Gemini báo vượt giới hạn miễn phí — đợi 1 phút rồi thử lại, hoặc dùng AI trên máy.';
   return 'Gemini lỗi '+st+': '+m;
 }
 async function trGemini(lines,tl){
-  if(!S.gemKey)throw new Error('Chưa có Gemini API key (EQ & Cài đặt → Dịch tự động)');
+  if(!S.gemKey)throw new Error('Chưa có Gemini API key (Cài đặt → 🔑 API key)');
   const out=new Array(lines.length);const B=40;
   for(let i=0;i<lines.length;i+=B){
     const part=lines.slice(i,i+B);
@@ -2743,9 +2763,7 @@ async function translateCues(){
 const GAPI='https://www.googleapis.com/drive/v3/files';
 let linkBusy=false,linkCancel=false;
 const lMsg=m=>$('#linkMsg').textContent=m,lBar=p=>$('#lBar').style.width=Math.round(p*100)+'%';
-$('#gKey').value=S.gKey||'';
-$('#gKey').onchange=e=>{S.gKey=e.target.value.trim();save();toast('Đã lưu API key');};
-$('#bLink').onclick=()=>{lMsg(S.gKey?'':'Chưa có API key Google Drive: link Drive sẽ không dùng được. Xem mục EQ & Cài đặt → Google Drive.');lBar(0);openModal('mLink');};
+$('#bLink').onclick=()=>{lMsg(S.gKey?'':'Chưa có API key Google Drive: link Drive sẽ không dùng được. Nhập key ở Cài đặt → 🔑 API key.');lBar(0);openModal('mLink');};
 $('#linkClose').onclick=()=>{if(linkBusy){linkCancel=true;lMsg('Đang dừng…');}else closeModals();};
 $('#linkGo').onclick=runLinks;
 function driveId(u){
@@ -2809,7 +2827,7 @@ async function runLinks(){
       const d=driveId(u);
       try{
         if(d){
-          if(!S.gKey)throw new Error('Chưa có API key Google Drive (EQ & Cài đặt → Google Drive)');
+          if(!S.gKey)throw new Error('Chưa có API key Google Drive (Cài đặt → 🔑 API key)');
           if(d.folder){lMsg('Đang đọc thư mục…');let rn='';try{rn=(await (await gGet(`${GAPI}/${d.id}?fields=name${kq()}`)).json()).name||'';}catch(e){}
             const list=(await gList(d.id,0,[],rn)).filter(wanted);if(!list.length)throw new Error('Thư mục không có file âm thanh/tài liệu phù hợp');list.forEach(f=>jobs.push({g:f}));}
           else{const f=await (await gGet(`${GAPI}/${d.id}?fields=id,name,mimeType,size${kq()}`)).json();jobs.push({g:f});}
@@ -2888,6 +2906,35 @@ $('#miniPrev').onclick=()=>goTrack(-1);$('#miniNext').onclick=()=>goTrack(1);
 $('#miniOpen').onclick=()=>showView('vPlay');
 function showView(id){if(id==='vLib')updStorage();setTimeout(updMini,0);if(id!=='vVoc'&&!$('#vocRev').hidden){endReview();}if(id==='vVoc')renderVoc();if(id==='vLib')renderStats();document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===id));}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showView(b.dataset.v));
+// ----- API key: nhập qua hộp thoại, hiển thị dạng khoá (không sửa trực tiếp) -----
+const KEYN={gemKey:'Gemini API key',gKey:'Google Drive API key'};
+const maskKey=k=>k?k.slice(0,4)+'••••••'+k.slice(-4):'';
+function keyUI(){document.querySelectorAll('.keyrow').forEach(r=>{const k=r.dataset.k,v=S[k]||'';const el=r.querySelector('.kval');
+  el.textContent=v?'🔒 '+maskKey(v):'Chưa có key';el.classList.toggle('ok',!!v);r.querySelector('.kset').textContent=v?'Đổi key':'Nhập key';r.querySelector('.kdel').hidden=!v;});}
+async function testKey(k,v){
+  try{
+    if(k==='gemKey'){const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1&key='+encodeURIComponent(v));
+      if(r.ok)return {ok:true};let m='';try{m=(await r.json()).error.message;}catch(e){}return {ok:false,msg:gemErr(r.status,m)};}
+    const r=await fetch('https://www.googleapis.com/drive/v3/files/deepflow-test?key='+encodeURIComponent(v));
+    if(r.ok||r.status===404)return {ok:true};let m='';try{m=(await r.json()).error.message;}catch(e){}
+    if(/not been used|disabled/i.test(m))return {ok:false,msg:'Key đúng nhưng project chưa bật Google Drive API. Làm bước 2 trong hướng dẫn (Enable Google Drive API) rồi thử lại sau 1–2 phút.'};
+    if(/not valid/i.test(m))return {ok:false,msg:'Key không đúng — kiểm tra lại đã copy đủ.'};
+    if(/referer|blocked/i.test(m))return {ok:false,msg:'Key đang bị giới hạn theo website. Vào Credentials → bấm key → Application restrictions chọn None, chỉ giới hạn theo Google Drive API.'};
+    return {ok:false,msg:'Google báo lỗi '+r.status+': '+m};
+  }catch(e){return {ok:true,offline:true};}
+}
+function setKey(k,v){S[k]=v;S.keysAt=Date.now();save();keyUI();if(window.dfKeysChanged)dfKeysChanged();}
+document.querySelectorAll('.keyrow').forEach(r=>{const k=r.dataset.k;
+  r.querySelector('.kset').onclick=()=>{$('#keyT').textContent='Nhập '+KEYN[k];$('#keyIn').value='';$('#keyMsg').textContent='Bấm 📋 Dán để dán key đã copy, rồi bấm OK.';$('#keyOk').disabled=false;openModal('mKey');
+    $('#keyOk').onclick=async()=>{const v=$('#keyIn').value.replace(/\s+/g,'');
+      if(!/^AIza[0-9A-Za-z_\-]{35}$/.test(v)){$('#keyMsg').textContent=v?'Key chưa đúng dạng: phải bắt đầu bằng AIza và dài 39 ký tự (đang có '+v.length+'). Kiểm tra đã copy đủ chưa.':'Chưa có key.';return;}
+      $('#keyOk').disabled=true;$('#keyMsg').textContent='Đang kiểm tra key…';const t=await testKey(k,v);$('#keyOk').disabled=false;
+      if(!t.ok){$('#keyMsg').textContent='⚠️ '+t.msg;return;}
+      setKey(k,v);closeModals();toast(t.offline?'Đã lưu key (chưa kiểm tra được vì không có mạng)':'✓ Đã lưu '+KEYN[k]);};};
+  r.querySelector('.kdel').onclick=async()=>{if(!await askConfirm('Xoá '+KEYN[k]+' khỏi app?'))return;setKey(k,'');toast('Đã xoá key');};});
+$('#keyPaste').onclick=async()=>{try{const t=await navigator.clipboard.readText();if(t){$('#keyIn').value=t.trim();$('#keyMsg').textContent='Đã dán — bấm OK để lưu.';}else $('#keyMsg').textContent='Bộ nhớ tạm trống — hãy copy key trước.';}catch(e){$('#keyIn').focus();$('#keyMsg').textContent='Không đọc được bộ nhớ tạm: hãy nhấn giữ trong ô và chọn Dán.';}};
+$('#keyIn').addEventListener('keydown',e=>{if(e.key==='Enter')$('#keyOk').click();});
+setTimeout(keyUI,0);
 function relHtml(list){return list.map(e=>`<h4>${esc(verLabel(e.v))}<small>${esc(e.d||'')}</small></h4><ul>${(e.items||[]).map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`).join('')||'<div class="mu">Chưa có ghi chú.</div>';}
 // Mở ghi chú: list = các mục cần hiện; onUpd = hàm cập nhật (nếu đang báo có bản mới)
 window.showRelNotes=(list,title,onUpd)=>{$('#relTitle').textContent=title||'📝 Ghi chú phát hành';$('#relList').innerHTML=relHtml(list||CHANGELOG);
@@ -3067,11 +3114,21 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
     if(!b)throw new Error(acc?'không tìm thấy file trên Drive':'hãy đăng nhập Google trong Cài đặt');
     await putAudio(t.id,b);delete t.noAudio;await putMeta0(t);renderLib();return b;
   };
+  // API key: lưu riêng trong thư mục ẩn của app trên Drive (chỉ tài khoản này đọc được), bản mới hơn thắng
+  async function syncKeys(){
+    const f=await findApp('deepflow-keys.json');let rem=null;
+    if(f){try{rem=await (await api(`${DRV}/${f.id}?alt=media`)).json();}catch(e){}}
+    const la=S.keysAt||0,ra=rem&&rem.at||0;
+    if(rem&&ra>la){S.gemKey=rem.gemKey||'';S.gKey=rem.gKey||'';S.keysAt=ra;save();if(window.keyUI)keyUI();if(!la&&(S.gemKey||S.gKey))toast('🔑 Đã lấy API key từ tài khoản Google');}
+    else if(la>ra){await putApp('deepflow-keys.json',JSON.stringify({at:la,gemKey:S.gemKey||'',gKey:S.gKey||''}),f&&f.id);}
+  }
+  window.dfKeysChanged=()=>{if(acc)syncKeys().catch(e=>toast('Lưu key lên tài khoản lỗi: '+e.message,5000));};
   async function sync(manual){
     if(syncing||!acc)return;syncing=true;$$('#syncMsg').textContent='Đang đồng bộ…';
     try{
       const f=await findApp('deepflow-sync.json');
       if(f){const rem=await (await api(`${DRV}/${f.id}?alt=media`)).json();await merge(rem);}
+      await syncKeys().catch(e=>console.warn('keys',e));
       const up=await uploadAudio().catch(e=>{toast('Đồng bộ âm thanh: '+e.message,5000);return 0;});
       dirty=false;S.syncAt=Date.now();save();
       await putApp('deepflow-sync.json',JSON.stringify(payload()),f&&f.id);
@@ -3082,7 +3139,9 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   window.dfSync=sync;
   window.dfOnChange=()=>{dirty=true;if(S.syncOn===false||!acc)return;clearTimeout(syncTimer);syncTimer=setTimeout(()=>sync(false),45000);};
   $$('#gSign').onclick=async()=>{
-    if(acc){if(!await askConfirm('Đăng xuất Google? Dữ liệu trong máy vẫn giữ nguyên.'))return;await GD.signOut().catch(()=>{});acc=null;tok=null;accUI();return;}
+    if(acc){if(!await askConfirm('Đăng xuất Google? Bài học và từ vựng trong máy vẫn giữ nguyên; API key sẽ được gỡ khỏi máy này (vẫn lưu trong tài khoản, đăng nhập lại là có).'))return;
+      try{await syncKeys();}catch(e){}
+      await GD.signOut().catch(()=>{});acc=null;tok=null;S.gemKey='';S.gKey='';S.keysAt=0;save();if(window.keyUI)keyUI();accUI();return;}
     try{const r=await GD.signIn();tok=r.accessToken;tokAt=Date.now();acc={email:r.email,name:r.name};accUI();toast('Đã đăng nhập '+r.email);sync(true);}
     catch(e){toast('Đăng nhập không thành công: '+(e.message||e)+'. Xem hướng dẫn tạo OAuth Client trong README của kho GitHub.',8000);}
   };
