@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.62",
- "notes": "⋯ của mỗi khoá học có thêm 📁 Thêm bài từ thư mục và ☁️ Thêm bài từ Cloud — bài mới vào thẳng khoá học đó (thư mục Cloud giữ cấu trúc album bên trong khoá); bỏ 2 nút Thư mục / Cloud ở đầu Thư viện, thanh trên chỉ còn Tìm và Lọc; Thư viện trống hiện sẵn 2 nút thêm bài · Thêm link Cloud: bấm Thêm là hộp thoại đóng ngay, app tạo nhanh tên thư mục (album) và tên bài — đọc xong thư mục nào hiện bài của thư mục đó ngay trong Thư viện; phần còn lại chạy nền, tiến độ ở đầu Thư viện",
+ "ver": "1.0.1-beta.63",
+ "notes": "Kéo thả để chuyển giữa các cấp thư mục: nhấn giữ để chọn, rồi giữ ☰ kéo bài (hoặc nhóm bài) thả vào một album / thư mục 📂 / bài của album khác để chuyển vào đó; kéo album thả vào album / thư mục khác để lồng vào bên trong (kéo theo cả thư mục con); thả lên tiêu đề khoá học để đưa lên cấp ngoài cùng hoặc sang khoá học khác. Chỗ sẽ thả được viền nét đứt màu cam; kéo giữa các bài cùng album vẫn là đổi thứ tự · Không ảnh hưởng việc thêm bài từ Cloud đang chạy nền: album bị đổi tên / chuyển chỗ thì bài mới từ thư mục Drive đó vẫn vào đúng chỗ mới (không tạo lại album cũ); Thư viện không vẽ lại khi đang kéo",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.63",
+   "d": "23/10/2026",
+   "items": [
+    "Kéo thả để chuyển giữa các cấp thư mục: nhấn giữ để chọn, rồi giữ ☰ kéo bài (hoặc nhóm bài) thả vào một album / thư mục 📂 / bài của album khác để chuyển vào đó; kéo album thả vào album / thư mục khác để lồng vào bên trong (kéo theo cả thư mục con); thả lên tiêu đề khoá học để đưa lên cấp ngoài cùng hoặc sang khoá học khác. Chỗ sẽ thả được viền nét đứt màu cam; kéo giữa các bài cùng album vẫn là đổi thứ tự",
+    "Không ảnh hưởng việc thêm bài từ Cloud đang chạy nền: album bị đổi tên / chuyển chỗ thì bài mới từ thư mục Drive đó vẫn vào đúng chỗ mới (không tạo lại album cũ); Thư viện không vẽ lại khi đang kéo"
+   ]
+  },
   {
    "v": "1.0.1-beta.62",
    "d": "23/10/2026",
