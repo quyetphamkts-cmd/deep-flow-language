@@ -61,7 +61,15 @@ jobs:
           DF_KEY_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon --stacktrace -PdfVersionCode=${{ steps.ver.outputs.code }} -PdfVersionName=${{ steps.ver.outputs.name }}
+          set +e
+          ./gradlew assembleRelease --no-daemon -PdfVersionCode=${{ steps.ver.outputs.code }} -PdfVersionName=${{ steps.ver.outputs.name }} 2>&1 | tee build.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          if [ $rc -ne 0 ]; then
+            msg=$(grep -E "error:|warning: \[|e: |What went wrong|Could not|FAILURE|> " build.log | head -80 | sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g')
+            echo "::error title=Gradle build failed::$msg"
+            exit $rc
+          fi
           mkdir -p ../dist
           if [ "$DF_NOKEY" = "1" ]; then exit 0; fi
           cp app/build/outputs/apk/release/app-release.apk ../dist/DeepFlowLanguage.apk
