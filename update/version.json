@@ -1,16 +1,31 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.33",
- "notes": "Giữ nút ⋯ rồi kéo lên/xuống để sắp xếp bài trong album, album hoặc bài lẻ trong cùng mục · Menu album gọn lại: Mục tiêu học · Biểu đồ · Đổi tên · Trạng thái · Đánh dấu cả album đã học · Xoá album (có xác nhận) · “Bài học sắp tới” đổi thành “Bài học tiếp theo”; album mới thêm vào tự nằm ở Bài học tiếp theo · Bài lẻ (không có album) nằm ở mục mới 📥 Chưa có album; từ ⋯ của bài có thể đưa riêng bài đó vào Bài đang học / Bài học tiếp theo / Bài đã học và kéo sắp xếp thứ tự cùng các album · Chọn nhiều bài → nút 📁 Album để gom các bài thành một album (nhóm bài học) hoặc thêm vào album có sẵn",
+ "ver": "1.0.1-beta.34",
+ "notes": "Thư viện: nút ▶ chuyển vào menu ⋯ của từng album / bài (mục đầu tiên: Phát / Tạm dừng); album hoặc bài đang phát có dấu ♪ · Chọn nhiều: nhấn giữ tên album để chọn album; thanh chọn có ↑ Lên · ↓ Xuống, nút Bỏ chọn, và nút ☰ ở mục đã chọn để kéo cả nhóm lên/xuống · Nút 📁 Album: “＋ Tạo album mới” nằm đầu tiên, các album xếp theo đúng thứ tự trong danh sách · Phụ đề tự kiểm tra sau lần nghe đầu tiên (gần hết bài): tự sắp xếp lại câu bị lệch thứ tự / trùng / chồng nhau, đối chiếu với giọng nói trong âm thanh để dời và căn lại mốc câu, báo độ khớp; nếu khớp kém sẽ gợi ý tạo lại phụ đề. Có thể chạy tay: ⋯ của bài → 🩺 Kiểm tra & sắp xếp lại phụ đề · Widget màn hình chính (cần APK mới): hiện câu đang phát, tên bài, nút lùi · phát/dừng · tiếp; chạm vào chữ để mở app · Từ vựng: thẻ mới “📖 Từ vựng trong bài học” tự đếm từ của Bài đã học và Bài đang học, phân loại Đã thuộc / Cần ôn / Đang học theo từng cấp độ; chạm để xem danh sách từ · Màn hình Nghe: Hẹn giờ dùng biểu tượng đồng hồ; bỏ chữ nhỏ mô tả dưới các nút (hẹn giờ đang chạy vẫn hiện thời gian còn lại) · Cài đặt: “Ẩn câu đang đọc…” đổi thành công tắc “Phụ đề trên màn hình khoá” trong mục Tiết kiệm pin; “Ngôn ngữ của bạn” thay cho Ngôn ngữ phần mềm và Ngôn ngữ mẹ đẻ · Bỏ thanh thông báo cập nhật nổi trên màn hình; có bản mới thì nút Cài đặt hiện dấu ! nhỏ",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 10,
-  "versionName": "1.0.1-beta.21",
+  "versionCode": 11,
+  "versionName": "1.0.1-beta.34",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.34",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện: nút ▶ chuyển vào menu ⋯ của từng album / bài (mục đầu tiên: Phát / Tạm dừng); album hoặc bài đang phát có dấu ♪",
+    "Chọn nhiều: nhấn giữ tên album để chọn album; thanh chọn có ↑ Lên · ↓ Xuống, nút Bỏ chọn, và nút ☰ ở mục đã chọn để kéo cả nhóm lên/xuống",
+    "Nút 📁 Album: “＋ Tạo album mới” nằm đầu tiên, các album xếp theo đúng thứ tự trong danh sách",
+    "Phụ đề tự kiểm tra sau lần nghe đầu tiên (gần hết bài): tự sắp xếp lại câu bị lệch thứ tự / trùng / chồng nhau, đối chiếu với giọng nói trong âm thanh để dời và căn lại mốc câu, báo độ khớp; nếu khớp kém sẽ gợi ý tạo lại phụ đề. Có thể chạy tay: ⋯ của bài → 🩺 Kiểm tra & sắp xếp lại phụ đề",
+    "Widget màn hình chính (cần APK mới): hiện câu đang phát, tên bài, nút lùi · phát/dừng · tiếp; chạm vào chữ để mở app",
+    "Từ vựng: thẻ mới “📖 Từ vựng trong bài học” tự đếm từ của Bài đã học và Bài đang học, phân loại Đã thuộc / Cần ôn / Đang học theo từng cấp độ; chạm để xem danh sách từ",
+    "Màn hình Nghe: Hẹn giờ dùng biểu tượng đồng hồ; bỏ chữ nhỏ mô tả dưới các nút (hẹn giờ đang chạy vẫn hiện thời gian còn lại)",
+    "Cài đặt: “Ẩn câu đang đọc…” đổi thành công tắc “Phụ đề trên màn hình khoá” trong mục Tiết kiệm pin; “Ngôn ngữ của bạn” thay cho Ngôn ngữ phần mềm và Ngôn ngữ mẹ đẻ",
+    "Bỏ thanh thông báo cập nhật nổi trên màn hình; có bản mới thì nút Cài đặt hiện dấu ! nhỏ"
+   ]
+  },
   {
    "v": "1.0.1-beta.33",
    "d": "23/10/2026",

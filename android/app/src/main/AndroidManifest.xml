@@ -34,6 +34,14 @@
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
 
+        <!-- Widget màn hình chính: câu đang phát + nút điều khiển -->
+        <receiver android:name=".DfWidget" android:exported="false" android:label="Deep Flow – Đang nghe">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_player_info" />
+        </receiver>
+
         <!-- Tai nghe Bluetooth kết nối khi app không mở → hiện thông báo "chạm để nghe tiếp" -->
         <receiver android:name=".HeadsetReceiver" android:exported="true">
             <intent-filter>

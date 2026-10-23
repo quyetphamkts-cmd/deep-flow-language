@@ -29,9 +29,12 @@ import com.getcapacitor.annotation.PermissionCallback;
 public class HeadsetPlugin extends Plugin {
     static final String PREFS = "deepflow";
     private BroadcastReceiver receiver;
+    /** Plugin đang chạy (để widget gửi lệnh vào app) */
+    static volatile HeadsetPlugin inst = null;
 
     @Override
     public void load() {
+        inst = this;
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context ctx, Intent intent) {
@@ -81,12 +84,43 @@ public class HeadsetPlugin extends Plugin {
     public void setPlaying(PluginCall call) {
         MainActivity.playing = call.getBoolean("playing", false);
         MainActivity.bgPlay = call.getBoolean("bg", true);
+        try { DfWidget.refresh(getContext()); } catch (Exception ignored) {}
         call.resolve();
     }
 
     @Override
     protected void handleOnDestroy() {
+        if (inst == this) inst = null;
         try { getContext().unregisterReceiver(receiver); } catch (Exception ignored) {}
+    }
+
+    /** Widget màn hình chính bấm nút → báo cho app web */
+    boolean fireWidget(String cmd) {
+        try {
+            if (getBridge() == null || getBridge().getWebView() == null) return false;
+            JSObject d = new JSObject();
+            d.put("cmd", cmd);
+            notifyListeners("widget", d);
+            return true;
+        } catch (Exception e) { return false; }
+    }
+
+    /** App web gửi câu đang phát / tên bài / trạng thái phát cho widget. Trả về số widget đang đặt. */
+    @PluginMethod
+    public void setWidget(PluginCall call) {
+        Context ctx = getContext();
+        int n = DfWidget.ids(ctx).length;
+        if (n > 0) {
+            ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+                .putString("wLine", call.getString("line", ""))
+                .putString("wTitle", call.getString("title", ""))
+                .putBoolean("wPlaying", Boolean.TRUE.equals(call.getBoolean("playing", false)))
+                .apply();
+            DfWidget.refresh(ctx);
+        }
+        JSObject r = new JSObject();
+        r.put("n", n);
+        call.resolve(r);
     }
 
     @PluginMethod
