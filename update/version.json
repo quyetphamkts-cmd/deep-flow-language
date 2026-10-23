@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.35",
- "notes": "Mở app: phụ đề mặc định là đơn ngữ · Dấu ! ở nút Cài đặt tự mất sau khi cập nhật xong (bản APK mới chỉ báo đến khi bạn mở tab Phiên bản) · Thư viện: thẻ chuỗi ngày thu nhỏ (số ngày + các ngày trong tuần), chạm để mở trang Chuỗi ngày học đầy đủ (giai đoạn thói quen, huy hiệu, thống kê) · Thư mục · Cloud · Tìm · Lọc nằm cùng một hàng, chia đều; chạm ô Tìm thì ô mở rộng hết chiều ngang · Nút ⋯ không còn kéo được (tránh nhầm khi vuốt). Nhấn giữ tên bài hoặc album để chọn: hiện ngay bảng Chọn hết · Bỏ chọn · Đổi tên · Lên đầu · Xuống cuối · Album · Phụ đề AI · Đã học · Biểu đồ · Xoá (có xác nhận); nút ⋯ đổi thành ☰ để giữ và kéo sắp xếp · Từ vựng: từ trong Bài đã học tính là Đã thuộc, từ trong Bài đang học là Đang học, còn lại là Chưa học (cả ở thẻ Từ vựng trong bài học và Vốn từ theo trình độ)",
+ "ver": "1.0.1-beta.36",
+ "notes": "Từ vựng trong bài học xếp theo 📖 Đang học · ✅ Đã học · 📘 Sẽ học, khớp với các mục bài học trong Thư viện và tự cập nhật khi bạn chuyển bài giữa các mục · Nút 🔁 Ôn tập cho từng nhóm (và trong danh sách từ): thẻ lật kèm nghĩa, câu gốc trong bài (nghe lại được); mỗi lượt 20 từ, ưu tiên từ lâu chưa ôn; từ bấm Quên / Khó tự vào Hộp từ vựng để ôn lặp lại · Nhấn giữ trong Thư viện không còn bôi đen chữ và hiện bảng Dịch · Chép · Chọn tất cả",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.36",
+   "d": "23/10/2026",
+   "items": [
+    "Từ vựng trong bài học xếp theo 📖 Đang học · ✅ Đã học · 📘 Sẽ học, khớp với các mục bài học trong Thư viện và tự cập nhật khi bạn chuyển bài giữa các mục",
+    "Nút 🔁 Ôn tập cho từng nhóm (và trong danh sách từ): thẻ lật kèm nghĩa, câu gốc trong bài (nghe lại được); mỗi lượt 20 từ, ưu tiên từ lâu chưa ôn; từ bấm Quên / Khó tự vào Hộp từ vựng để ôn lặp lại",
+    "Nhấn giữ trong Thư viện không còn bôi đen chữ và hiện bảng Dịch · Chép · Chọn tất cả"
+   ]
+  },
   {
    "v": "1.0.1-beta.35",
    "d": "23/10/2026",
