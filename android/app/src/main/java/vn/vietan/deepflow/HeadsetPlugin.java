@@ -55,6 +55,13 @@ public class HeadsetPlugin extends Plugin {
         }
     }
 
+    /** App web báo đang phát hay dừng (để giữ app chạy tiếp khi người dùng vuốt tắt app) */
+    @PluginMethod
+    public void setPlaying(PluginCall call) {
+        MainActivity.playing = call.getBoolean("playing", false);
+        call.resolve();
+    }
+
     @Override
     protected void handleOnDestroy() {
         try { getContext().unregisterReceiver(receiver); } catch (Exception ignored) {}

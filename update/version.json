@@ -1,16 +1,25 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.3",
- "notes": "Nhấn giữ rồi kéo để chọn nhiều bài.",
+ "ver": "1.0.1-beta.4",
+ "notes": "Tự phát tiếp khi mở app; sửa tạo phụ đề Gemini bị đứng; nhạc chạy tiếp khi vuốt tắt app.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 2,
-  "versionName": "1.0.1-beta.1",
+  "versionCode": 3,
+  "versionName": "1.0.1-beta.4",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.4",
+   "d": "23/10/2026",
+   "items": [
+    "Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)",
+    "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi",
+    "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"
+   ]
+  },
   {
    "v": "1.0.1-beta.3",
    "d": "23/10/2026",

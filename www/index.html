@@ -440,6 +440,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    </div>
    <h3>Chạy nền</h3>
    <div class="card">
+    <div class="sw"><span>Mở app là tự phát tiếp bài đang nghe dở</span><button class="tg" id="resT"></button></div>
     <div class="sw"><span>Hiện câu đang đọc trên màn hình khoá</span><button class="tg" id="msT"></button></div>
     <div class="mu">App vẫn phát khi bạn thoát ra màn hình chính hoặc tắt màn hình (điều khiển ở thanh thông báo và màn hình khoá, nút ⏮ ⏭ chuyển câu). Để Android không tắt app:<br>
     1. Mở bằng <b>Chrome</b>, không đóng tab Deep Flow (chỉ bấm nút Home để thoát ra).<br>
@@ -649,9 +650,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.3';
+const APP_VER='1.0.1-beta.4';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]},{"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]},{"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1405,7 +1406,7 @@ function buildEqUI(){
   $('#presets').innerHTML=Object.keys(PRESETS).map(k=>`<button data-p="${k}" class="${S.preset===k?'on':''}">${k}</button>`).join('');
   $('#eqRows').innerHTML=FREQ.map((f,i)=>`<div class="eqr"><span>${f>=1000?f/1000+'k':f}</span><input type="range" min="-12" max="12" step="0.5" data-b="${i}" value="${S.eq[i]}"><span>${S.eq[i]>0?'+':''}${S.eq[i]} dB</span></div>`).join('');
   $('#eqBass').value=S.bass;$('#eqBassV').textContent='+'+S.bass;$('#eqPre').value=S.pre;$('#eqPreV').textContent=S.pre+' dB';
-  $('#eqOn').classList.toggle('on',S.eqOn);$('#eqBody').hidden=!S.eqOn;$('#eqOffNote').hidden=!!S.eqOn;$('#wakeT').classList.toggle('on',S.wake);$('#scrT').classList.toggle('on',S.scroll);$('#autoStoT').classList.toggle('on',S.autoSto!==false);$('#wifiT').classList.toggle('on',S.wifiOnly!==false);$('#hpT').classList.toggle('on',!!S.hpAuto);$('#msT').classList.toggle('on',S.msLine!==false);
+  $('#eqOn').classList.toggle('on',S.eqOn);$('#resT').classList.toggle('on',S.resume!==false);$('#eqBody').hidden=!S.eqOn;$('#eqOffNote').hidden=!!S.eqOn;$('#wakeT').classList.toggle('on',S.wake);$('#scrT').classList.toggle('on',S.scroll);$('#autoStoT').classList.toggle('on',S.autoSto!==false);$('#wifiT').classList.toggle('on',S.wifiOnly!==false);$('#hpT').classList.toggle('on',!!S.hpAuto);$('#msT').classList.toggle('on',S.msLine!==false);
   {const opts=[12,14,16,18.5,21];const near=opts.reduce((a,b)=>Math.abs(b-S.fs)<Math.abs(a-S.fs)?b:a);$('#fsSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.f===near));}
 }
 $('#presets').addEventListener('click',e=>{const k=e.target.dataset.p;if(!k)return;S.preset=k;S.eq=[...PRESETS[k]];if(!S.eqOn){S.eqOn=true;ensureCtx();}save();buildEqUI();applyEq();});
@@ -1415,6 +1416,7 @@ $('#eqPre').oninput=e=>{S.pre=+e.target.value;$('#eqPreV').textContent=S.pre+' d
 $('#eqOn').onclick=()=>{S.eqOn=!S.eqOn;save();ensureCtx();if(ctx&&ctx.state==='suspended')ctx.resume();applyEq();buildEqUI();};
 $('#wakeT').onclick=()=>{S.wake=!S.wake;save();buildEqUI();setWake();};
 $('#msT').onclick=()=>{S.msLine=S.msLine===false;save();buildEqUI();if(S.msLine===false)msMeta('');};
+$('#resT').onclick=()=>{S.resume=S.resume===false;save();buildEqUI();};
 $('#hpT').onclick=async()=>{S.hpAuto=!S.hpAuto;save();buildEqUI();if(window.dfHeadsetSet)dfHeadsetSet(S.hpAuto);if(S.hpAuto)toast('Đã bật. Hãy để Deep Flow mở hoặc chạy nền.');};
 $('#autoStoT').onclick=()=>{S.autoSto=S.autoSto===false;save();buildEqUI();if(S.autoSto!==false)schedulePolicy(500);};
 $('#wifiT').onclick=()=>{S.wifiOnly=S.wifiOnly===false;save();buildEqUI();};
@@ -1948,8 +1950,16 @@ function b64(buf){let s='';const u=new Uint8Array(buf);for(let i=0;i<u.length;i+
 const toSec=x=>{if(typeof x==='number')return x;const m=String(x).match(/(?:(\d+):)?(\d+):(\d+(?:\.\d+)?)|(\d+(?:\.\d+)?)/);if(!m)return null;if(m[4])return +m[4];return (+m[1]||0)*3600+(+m[2])*60+(+m[3]);};
 async function gemClip(pcm,len){
   const body={contents:[{parts:[{inlineData:{mimeType:'audio/wav',data:b64(wav16(pcm))}},{text:`Transcribe the ${LN()[1]} speech in this ${len.toFixed(0)}-second audio clip verbatim, word for word, in the exact order spoken — do not skip, summarize, merge or reorder anything. Use correct punctuation and capitalization. Split it into sentences: one complete sentence per item; keep short questions and answers (e.g. "Was there a girl?" / "Yes, there was.") as separate items; split very long run-on sentences at natural clause boundaries (max about 25 words). Return ONLY a JSON array of objects {"start": "MM:SS", "text": "<one sentence>"} in time order, where start is when that sentence begins, measured from the beginning of THIS clip (format MM:SS, e.g. "01:07"). Ignore music and noise. If there is no speech return [].`}]}],generationConfig:{responseMimeType:'application/json',temperature:0}};
+  let timeouts=0;
   for(let tryN=0;tryN<3;tryN++){
-    const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(S.gemModel||'gemini-flash-latest')}:generateContent?key=${encodeURIComponent(S.gemKey)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(aCancel)throw new Error('Đã dừng');
+    // không để chờ mãi: quá 3 phút không có phản hồi thì huỷ và thử lại
+    const ac=new AbortController();const tm=setTimeout(()=>ac.abort(),180000);const stopW=setInterval(()=>{if(aCancel)ac.abort();},500);let r;
+    try{r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(S.gemModel||'gemini-flash-latest')}:generateContent?key=${encodeURIComponent(S.gemKey)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:ac.signal});}
+    catch(e){clearTimeout(tm);clearInterval(stopW);if(aCancel)throw new Error('Đã dừng');
+      if(e.name==='AbortError'){if(++timeouts>=2)throw new Error('Gemini không phản hồi sau 3 phút. Kiểm tra mạng, hoặc đổi mô hình Gemini (ô Tên mô hình trong Cài đặt, ví dụ gemini-2.5-flash), hoặc chọn mô hình Base chạy trên máy.');continue;}
+      throw new Error('Không kết nối được tới Gemini ('+(e.message||e)+'). Kiểm tra mạng rồi thử lại.');}
+    clearTimeout(tm);clearInterval(stopW);
     if(r.status===429||r.status>=500){await new Promise(z=>setTimeout(z,2000*(tryN+1)));continue;}
     if(!r.ok){let m='';try{m=(await r.json()).error.message;}catch(e){}throw new Error(gemErr(r.status,m));}
     const j=await r.json();
@@ -1964,7 +1974,7 @@ async function gemTranscribe(pcm,dur,pieces,words){
   // Cắt đoạn ~2 phút tại khoảng lặng dài nhất gần mốc cắt, để không cắt ngang câu
   const cuts=[0];const L=sp.length;
   while(true){
-    const last=cuts[cuts.length-1],tgt=last+Math.round(120/FR);
+    const last=cuts[cuts.length-1],tgt=last+Math.round(60/FR);
     if(tgt>=L-Math.round(20/FR))break;
     let best=tgt,bl=-1,i=tgt-Math.round(15/FR),run=0;
     for(;i<Math.min(L,tgt+Math.round(10/FR));i++){if(!sp[i]){run++;if(run>bl){bl=run;best=i-Math.floor(run/2);}}else run=0;}
@@ -1974,10 +1984,11 @@ async function gemTranscribe(pcm,dur,pieces,words){
   const jobs=[];for(let k=0;k<cuts.length-1;k++)jobs.push([cuts[k],cuts[k+1]]);
   const res=new Array(jobs.length);let done=0,next=0;const t1=Date.now();
   aMsg(`Gửi ${jobs.length} đoạn lên Gemini…`);
+  const tick=setInterval(()=>{if(done<jobs.length)aMsg(`Gemini đang nghe… ${done}/${jobs.length} đoạn · đã chờ ${fmt((Date.now()-t1)/1000)}`);},1000);
   const worker=async()=>{while(next<jobs.length){if(aCancel)throw new Error('Đã dừng');const k=next++;const [a,b]=jobs[k];
     const seg=pcm.subarray(Math.round(a*FR*16000),Math.min(pcm.length,Math.round(b*FR*16000)));
     res[k]=await gemClip(seg,seg.length/16000);done++;aBar(done/jobs.length);const el=(Date.now()-t1)/1000;aMsg(`Gemini đang nghe… ${done}/${jobs.length} đoạn${done<jobs.length?' · còn khoảng '+fmt(el/done*(jobs.length-done)):''}`);}};
-  await Promise.all([worker(),worker(),worker(),worker()]);
+  try{await Promise.all([worker(),worker(),worker(),worker()]);}finally{clearInterval(tick);}
   aMsg('Đang căn thời gian cho từng câu…');await new Promise(r=>setTimeout(r,20));
   let usedG=0;
   res.forEach((arr,k)=>{const [a,b]=jobs[k];const t0=a*FR,len=(b-a)*FR;
@@ -2900,7 +2911,9 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   catch(e){db=null;tempMode();}
   renderLib();
   const t=tracks.find(x=>x.id===S.lastId)||tracks[0];
-  if(t)loadTrack(t,false);else renderLyrics();
+  if(t){const auto=S.resume!==false&&!t.noAudio;await loadTrack(t,auto);
+    if(auto)setTimeout(()=>{if(audio.paused&&cur===t)toast('Bấm ▶ để nghe tiếp "'+t.name+'"');},1500);}
+  else renderLyrics();
   if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});
   schedulePolicy(8000);
 })();
@@ -2967,6 +2980,9 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
 
   // ---------- 4. Tai nghe ----------
   window.dfHeadsetSet=async on=>{try{if(on){await LN.requestPermissions().catch(()=>{});}await HS.setAutoLaunch({enabled:!!on});}catch(e){}};
+  // báo lõi Android trạng thái phát → vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp
+  const hsPlay=v=>HS.setPlaying({playing:v}).catch(()=>{});
+  audio.addEventListener('playing',()=>hsPlay(true));audio.addEventListener('pause',()=>hsPlay(false));audio.addEventListener('ended',()=>hsPlay(false));
   HS.addListener('connected',()=>{if(S.hpAuto&&cur&&audio.paused&&!rp.stopped){play();toast('🎧 Đã kết nối tai nghe — tiếp tục phát');}});
   const autoStart=()=>{const go=()=>{if(cur){play();}else setTimeout(go,500);};setTimeout(go,600);};
   window.addEventListener('dfAutoplay',autoStart);
