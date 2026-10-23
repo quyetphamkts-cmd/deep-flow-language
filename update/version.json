@@ -1,16 +1,23 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.20",
- "notes": "Gom tuỳ chọn ngôn ngữ vào Thiết lập.",
+ "ver": "1.0.1-beta.21",
+ "notes": "Sửa lỗi không đọc được từ / câu ví dụ (cần APK mới).",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 9,
-  "versionName": "1.0.1-beta.19",
+  "versionCode": 10,
+  "versionName": "1.0.1-beta.21",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.21",
+   "d": "23/10/2026",
+   "items": [
+    "Sửa lỗi không phát âm thanh khi bấm nghe từ và câu ví dụ: bản APK dùng giọng đọc có sẵn của điện thoại (chạy cả khi không có mạng); bản Chrome dùng giọng Google (cần APK mới)"
+   ]
+  },
   {
    "v": "1.0.1-beta.20",
    "d": "23/10/2026",

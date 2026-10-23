@@ -2,12 +2,13 @@
   "name": "deep-flow-language",
   "version": "1.0.0",
   "private": true,
-  "description": "Deep Flow Language - nghe ngo\u1ea1i ng\u1eef v\u1edbi ph\u1ee5 \u0111\u1ec1 ch\u1ea1y theo \u00e2m thanh",
+  "description": "Deep Flow Language - nghe ngoại ngữ với phụ đề chạy theo âm thanh",
   "scripts": {
     "sync": "cap sync android",
     "postinstall": "node scripts/patch-media-session.js"
   },
   "dependencies": {
+    "@capacitor-community/text-to-speech": "5.1.0",
     "@capacitor/android": "6.2.2",
     "@capacitor/app": "6.0.3",
     "@capacitor/core": "6.2.2",
