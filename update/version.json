@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.31",
- "notes": "Giai đoạn hình thành thói quen và huy hiệu trong chuỗi ngày học.",
+ "ver": "1.0.1-beta.32",
+ "notes": "Đổi tên mục bài học; tự chuyển album sắp tới lên đang học.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.32",
+   "d": "23/10/2026",
+   "items": [
+    "Đổi tên mục: Bài đang học · Bài học sắp tới · Bài đã học",
+    "Khi một album chuyển từ Bài đang học sang Bài đã học, app tự đưa album đầu tiên của Bài học sắp tới lên Bài đang học"
+   ]
+  },
   {
    "v": "1.0.1-beta.31",
    "d": "23/10/2026",
