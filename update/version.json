@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.10",
- "notes": "Sóng âm trên thanh phát nhỏ, chạm để tua.",
+ "ver": "1.0.1-beta.11",
+ "notes": "Sóng âm dạng thanh bo tròn kiểu Poweramp.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.11",
+   "d": "23/10/2026",
+   "items": [
+    "Sóng âm kiểu thanh bo tròn (giống Poweramp): phần sắp phát sáng, phần đã phát mờ, vạch mốc dọc bo tròn ở giữa; thời gian đang phát / tổng thời gian chữ to hơn"
+   ]
+  },
   {
    "v": "1.0.1-beta.10",
    "d": "23/10/2026",
