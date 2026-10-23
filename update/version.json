@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.19",
- "notes": "Sửa nút chế độ phát trên màn hình khoá (cần APK mới); ẩn câu màn hình khoá nằm trong Tiết kiệm pin.",
+ "ver": "1.0.1-beta.20",
+ "notes": "Gom tuỳ chọn ngôn ngữ vào Thiết lập.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.20",
+   "d": "23/10/2026",
+   "items": [
+    "Thiết lập → 🌐 Tuỳ chọn ngôn ngữ gồm: Ngôn ngữ ứng dụng, Ngôn ngữ cần học, Ngôn ngữ mẹ đẻ"
+   ]
+  },
   {
    "v": "1.0.1-beta.19",
    "d": "23/10/2026",
