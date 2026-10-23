@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.40",
- "notes": "Mục Phiên bản gọn hơn: bỏ nút “Kiểm tra cập nhật” (app đã tự kiểm tra và tự cập nhật) và nút “Quay về bản cài gốc”; nút Tải APK chỉ hiện khi có bản cài APK mới",
+ "ver": "1.0.1-beta.41",
+ "notes": "Thư viện: nút (i) chuyển lên tiêu đề từng mục lớn (Bài đang học · Bài học tiếp theo · Bài đã học · Chưa có album) — bấm để hiện / ẩn thông tin của tất cả album và bài trong mục; bỏ nút (i) ở từng album · Bài và album đang nghe có biểu tượng loa; sóng loa chạy khi đang phát, mờ khi tạm dừng",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.41",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện: nút (i) chuyển lên tiêu đề từng mục lớn (Bài đang học · Bài học tiếp theo · Bài đã học · Chưa có album) — bấm để hiện / ẩn thông tin của tất cả album và bài trong mục; bỏ nút (i) ở từng album",
+    "Bài và album đang nghe có biểu tượng loa; sóng loa chạy khi đang phát, mờ khi tạm dừng"
+   ]
+  },
   {
    "v": "1.0.1-beta.40",
    "d": "23/10/2026",
