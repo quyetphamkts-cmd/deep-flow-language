@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.56",
- "notes": "Bài đã có file văn bản (txt, docx, pdf, md) nhưng chưa có mốc thời gian: app tự khớp văn bản thành phụ đề theo âm thanh, không cần bấm. Có API AI và mạng → AI nghe và khớp từng câu chính xác; chưa có AI / không có mạng / AI lỗi → khớp ngay trên máy theo chỗ có tiếng nói và độ dài câu, sau đó bước tự kiểm tra căn lại từng câu",
+ "ver": "1.0.1-beta.57",
+ "notes": "Thêm từ Cloud giữ cấu trúc thư mục: thư mục gốc → khoá học cùng tên (tự tạo nếu chưa có), thư mục con → album (nhiều cấp: “Unit 1 / Part A”), file nằm ngay thư mục gốc → album tên thư mục gốc; đọc được tới 6 cấp thư mục · Bị ngắt giữa chừng (mất mạng, tắt app…) thì lần sau mở app hoặc có mạng lại sẽ tự tiếp tục thêm phần còn lại ở chế độ nền; bài đã có (theo mã file Drive, kể cả bài trong thùng rác) và tài liệu đã gắn đều được bỏ qua nên không bị trùng · Mạng chập chờn: mỗi file tự thử lại 3 lần (chờ 2 → 5 → 10 giây); tài liệu được tải và nạp từng file một nên phần đã xong không phải làm lại",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.57",
+   "d": "23/10/2026",
+   "items": [
+    "Thêm từ Cloud giữ cấu trúc thư mục: thư mục gốc → khoá học cùng tên (tự tạo nếu chưa có), thư mục con → album (nhiều cấp: “Unit 1 / Part A”), file nằm ngay thư mục gốc → album tên thư mục gốc; đọc được tới 6 cấp thư mục",
+    "Bị ngắt giữa chừng (mất mạng, tắt app…) thì lần sau mở app hoặc có mạng lại sẽ tự tiếp tục thêm phần còn lại ở chế độ nền; bài đã có (theo mã file Drive, kể cả bài trong thùng rác) và tài liệu đã gắn đều được bỏ qua nên không bị trùng",
+    "Mạng chập chờn: mỗi file tự thử lại 3 lần (chờ 2 → 5 → 10 giây); tài liệu được tải và nạp từng file một nên phần đã xong không phải làm lại"
+   ]
+  },
   {
    "v": "1.0.1-beta.56",
    "d": "23/10/2026",
