@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.34",
- "notes": "Thư viện: nút ▶ chuyển vào menu ⋯ của từng album / bài (mục đầu tiên: Phát / Tạm dừng); album hoặc bài đang phát có dấu ♪ · Chọn nhiều: nhấn giữ tên album để chọn album; thanh chọn có ↑ Lên · ↓ Xuống, nút Bỏ chọn, và nút ☰ ở mục đã chọn để kéo cả nhóm lên/xuống · Nút 📁 Album: “＋ Tạo album mới” nằm đầu tiên, các album xếp theo đúng thứ tự trong danh sách · Phụ đề tự kiểm tra sau lần nghe đầu tiên (gần hết bài): tự sắp xếp lại câu bị lệch thứ tự / trùng / chồng nhau, đối chiếu với giọng nói trong âm thanh để dời và căn lại mốc câu, báo độ khớp; nếu khớp kém sẽ gợi ý tạo lại phụ đề. Có thể chạy tay: ⋯ của bài → 🩺 Kiểm tra & sắp xếp lại phụ đề · Widget màn hình chính (cần APK mới): hiện câu đang phát, tên bài, nút lùi · phát/dừng · tiếp; chạm vào chữ để mở app · Từ vựng: thẻ mới “📖 Từ vựng trong bài học” tự đếm từ của Bài đã học và Bài đang học, phân loại Đã thuộc / Cần ôn / Đang học theo từng cấp độ; chạm để xem danh sách từ · Màn hình Nghe: Hẹn giờ dùng biểu tượng đồng hồ; bỏ chữ nhỏ mô tả dưới các nút (hẹn giờ đang chạy vẫn hiện thời gian còn lại) · Cài đặt: “Ẩn câu đang đọc…” đổi thành công tắc “Phụ đề trên màn hình khoá” trong mục Tiết kiệm pin; “Ngôn ngữ của bạn” thay cho Ngôn ngữ phần mềm và Ngôn ngữ mẹ đẻ · Bỏ thanh thông báo cập nhật nổi trên màn hình; có bản mới thì nút Cài đặt hiện dấu ! nhỏ",
+ "ver": "1.0.1-beta.35",
+ "notes": "Mở app: phụ đề mặc định là đơn ngữ · Dấu ! ở nút Cài đặt tự mất sau khi cập nhật xong (bản APK mới chỉ báo đến khi bạn mở tab Phiên bản) · Thư viện: thẻ chuỗi ngày thu nhỏ (số ngày + các ngày trong tuần), chạm để mở trang Chuỗi ngày học đầy đủ (giai đoạn thói quen, huy hiệu, thống kê) · Thư mục · Cloud · Tìm · Lọc nằm cùng một hàng, chia đều; chạm ô Tìm thì ô mở rộng hết chiều ngang · Nút ⋯ không còn kéo được (tránh nhầm khi vuốt). Nhấn giữ tên bài hoặc album để chọn: hiện ngay bảng Chọn hết · Bỏ chọn · Đổi tên · Lên đầu · Xuống cuối · Album · Phụ đề AI · Đã học · Biểu đồ · Xoá (có xác nhận); nút ⋯ đổi thành ☰ để giữ và kéo sắp xếp · Từ vựng: từ trong Bài đã học tính là Đã thuộc, từ trong Bài đang học là Đang học, còn lại là Chưa học (cả ở thẻ Từ vựng trong bài học và Vốn từ theo trình độ)",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,18 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.35",
+   "d": "23/10/2026",
+   "items": [
+    "Mở app: phụ đề mặc định là đơn ngữ",
+    "Dấu ! ở nút Cài đặt tự mất sau khi cập nhật xong (bản APK mới chỉ báo đến khi bạn mở tab Phiên bản)",
+    "Thư viện: thẻ chuỗi ngày thu nhỏ (số ngày + các ngày trong tuần), chạm để mở trang Chuỗi ngày học đầy đủ (giai đoạn thói quen, huy hiệu, thống kê)",
+    "Thư mục · Cloud · Tìm · Lọc nằm cùng một hàng, chia đều; chạm ô Tìm thì ô mở rộng hết chiều ngang",
+    "Nút ⋯ không còn kéo được (tránh nhầm khi vuốt). Nhấn giữ tên bài hoặc album để chọn: hiện ngay bảng Chọn hết · Bỏ chọn · Đổi tên · Lên đầu · Xuống cuối · Album · Phụ đề AI · Đã học · Biểu đồ · Xoá (có xác nhận); nút ⋯ đổi thành ☰ để giữ và kéo sắp xếp",
+    "Từ vựng: từ trong Bài đã học tính là Đã thuộc, từ trong Bài đang học là Đang học, còn lại là Chưa học (cả ở thẻ Từ vựng trong bài học và Vốn từ theo trình độ)"
+   ]
+  },
   {
    "v": "1.0.1-beta.34",
    "d": "23/10/2026",
