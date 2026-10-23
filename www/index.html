@@ -2865,7 +2865,18 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   const C=window.Capacitor;
   if(!C||!C.isNativePlatform||!C.isNativePlatform())return;
   document.body.classList.add('native');
-  const P=n=>C.registerPlugin(n);
+  // File HTML một mình không có thư viện @capacitor/core → tự tạo cầu nối gọi plugin gốc
+  const P=n=>{
+    if(typeof C.registerPlugin==='function')return C.registerPlugin(n);
+    const hdr=(C.PluginHeaders||[]).find(x=>x.name===n);
+    return new Proxy({},{get(_,m){
+      if(typeof m!=='string'||m==='then'||m==='toJSON')return undefined;
+      if(m==='addListener')return (ev,cb)=>{const r=C.addListener(n,ev,cb);const pr=Promise.resolve(r);pr.remove=()=>r&&r.remove&&r.remove();return pr;};
+      const md=hdr&&(hdr.methods||[]).find(x=>x.name===m);
+      if(md&&md.rtype==='callback')return (o,cb)=>{try{return Promise.resolve(C.nativeCallback(n,m,o||{},cb?((d,err)=>{if(!err)cb(d);}):undefined));}catch(e){return Promise.reject(e);}};
+      return o=>{try{return C.nativePromise(n,m,o||{});}catch(e){return Promise.reject(e);}};
+    }});
+  };
   const MS=P('MediaSession'),FS=P('Filesystem'),Share=P('Share'),AppP=P('App'),GD=P('GDrive'),HS=P('Headset'),LN=P('LocalNotifications'),WV=P('WebView');
   const REPO='quyetphamkts-cmd/deep-flow-language';
   const RAW='https://raw.githubusercontent.com/'+REPO+'/main/';
@@ -2915,6 +2926,8 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
   window.addEventListener('dfAutoplay',autoStart);
   HS.consumeAutoplay().then(r=>{if(r&&r.autoplay)autoStart();}).catch(()=>{});
   if(S.hpAuto)HS.setAutoLaunch({enabled:true}).catch(()=>{});
+  // Android 13+: cần quyền thông báo để hiện điều khiển phát nhạc ở màn hình khoá / thanh thông báo
+  if(!S.notifAsked){S.notifAsked=1;save();setTimeout(()=>LN.requestPermissions().catch(()=>{}),1500);}
 
   // ---------- 5. Đăng nhập Google + đồng bộ Google Drive ----------
   let tok=null,tokAt=0,acc=null,syncing=false,dirty=false,syncTimer=null;

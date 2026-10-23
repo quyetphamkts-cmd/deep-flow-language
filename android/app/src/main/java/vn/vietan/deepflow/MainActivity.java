@@ -44,5 +44,13 @@ public class MainActivity extends BridgeActivity {
     public void onResume() { super.onResume(); isForeground = true; }
 
     @Override
-    public void onPause() { super.onPause(); isForeground = false; }
+    public void onPause() { super.onPause(); isForeground = false; keepWebViewAlive(); }
+
+    @Override
+    public void onStop() { super.onStop(); keepWebViewAlive(); }
+
+    /** Giữ JavaScript (hẹn giờ, lặp câu, chuyển bài) tiếp tục chạy khi app ở dưới nền */
+    private void keepWebViewAlive() {
+        try { getBridge().getWebView().onResume(); getBridge().getWebView().resumeTimers(); } catch (Exception ignored) {}
+    }
 }
