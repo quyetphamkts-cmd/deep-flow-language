@@ -106,7 +106,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .libtop{display:flex;gap:6px;margin:6px 0 10px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .libtop::-webkit-scrollbar{display:none}
 .libtop .btn{flex:none;padding:8px 11px;font-size:13px;white-space:nowrap}
-.trk{display:flex;align-items:center;gap:10px;padding:11px 12px;background:var(--p1);border:1px solid var(--ln);border-radius:14px;margin-bottom:8px}
+.trk{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;display:flex;align-items:center;gap:10px;padding:11px 12px;background:var(--p1);border:1px solid var(--ln);border-radius:14px;margin-bottom:8px}
 .trk.cur{border-color:var(--ac)}
 .trk .nm{flex:1;min-width:0}
 .trk .nm div:first-child{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -324,7 +324,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <button class="btn pri" id="bAdd">＋ Thêm</button>
     <button class="btn" id="bFolder">📁 Thư mục</button>
     <button class="btn" id="bLink">🔗 Link</button>
-    <button class="btn" id="bSel">☑ Chọn</button>
+    
     <button class="btn" id="bBak">💾 Sao lưu</button>
    </div>
    <div class="stat" id="statCard"></div>
@@ -333,7 +333,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
      <option value="all">Tất cả</option><option value="learn">📖 Đang học</option><option value="new">📘 Chưa học</option><option value="done">✅ Đã thuộc</option></select></div>
    <div class="help mu" id="tempNote" hidden style="margin:0 0 10px;border:1px solid var(--ac)">⚠️ Trình duyệt đang chặn bộ nhớ nên bài nạp vào chỉ dùng được đến khi đóng trang. Để lưu lâu dài, hãy mở app qua đường link (không mở file trực tiếp) hoặc tắt chế độ ẩn danh.</div>
    <div id="libList"></div>
-   <div class="selbar" id="selBar" hidden><span id="selN">0</span><button class="btn" id="selAll">Chọn tất cả</button><button class="btn" id="selAlb">📁 Album</button><button class="btn" id="selDel">🗑 Xoá</button><button class="btn pri" id="selDone">Xong</button></div>
+   <div class="selbar" id="selBar" hidden><button class="btn" id="selDone" aria-label="Thoát chọn">✕</button><span id="selN" style="flex:1">0</span><button class="btn" id="selAll">Chọn tất cả</button><button class="btn pri" id="selAct">⋯ Thao tác</button></div>
    <div class="help mu">
     <b style="color:var(--tx)">Cách nạp bài:</b> chọn cùng lúc file âm thanh và file tài liệu có <b>cùng tên</b>, ví dụ <code>bai1.mp3</code> + <code>bai1.docx</code>. Nếu chỉ chọn 1 file âm thanh thì mọi tài liệu đi kèm sẽ tự gắn vào nó.<br>
     • Âm thanh: mp3, m4a, aac, wav, ogg, opus, flac<br>
@@ -392,11 +392,12 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    <h3>Bộ chỉnh âm (Equalizer)</h3>
    <div class="card">
     <div class="sw"><span>Bật EQ</span><button class="tg" id="eqOn"></button></div>
-    <div class="presets" id="presets"></div>
+    <div id="eqBody"><div class="presets" id="presets"></div>
     <div id="eqRows"></div>
     <div class="eqr"><span>Bass+</span><input type="range" id="eqBass" min="0" max="12" step="0.5"><span id="eqBassV"></span></div>
     <div class="eqr"><span>Preamp</span><input type="range" id="eqPre" min="-12" max="6" step="0.5"><span id="eqPreV"></span></div>
-    <div class="mu">Mẹo: preset <b>Rõ giọng nói</b> giúp nghe rõ phụ âm khi học.</div>
+    <div class="mu">Mẹo: preset <b>Rõ giọng nói</b> giúp nghe rõ phụ âm khi học.</div></div>
+    <div class="mu" id="eqOffNote">EQ đang tắt — bật lên để chỉnh âm.</div>
    </div>
    <h3>Hiển thị</h3>
    <div class="card">
@@ -639,7 +640,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 <div class="toast" id="toast"></div>
 
 <script>
-const APP_VER='1.0.1';
+const APP_VER='1.0.2';
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=APP_VER;});
 /*PURE*/
 // ===== Phân tích văn bản, phụ đề, căn chỉnh (không phụ thuộc giao diện) =====
@@ -1392,7 +1393,7 @@ function buildEqUI(){
   $('#presets').innerHTML=Object.keys(PRESETS).map(k=>`<button data-p="${k}" class="${S.preset===k?'on':''}">${k}</button>`).join('');
   $('#eqRows').innerHTML=FREQ.map((f,i)=>`<div class="eqr"><span>${f>=1000?f/1000+'k':f}</span><input type="range" min="-12" max="12" step="0.5" data-b="${i}" value="${S.eq[i]}"><span>${S.eq[i]>0?'+':''}${S.eq[i]} dB</span></div>`).join('');
   $('#eqBass').value=S.bass;$('#eqBassV').textContent='+'+S.bass;$('#eqPre').value=S.pre;$('#eqPreV').textContent=S.pre+' dB';
-  $('#eqOn').classList.toggle('on',S.eqOn);$('#wakeT').classList.toggle('on',S.wake);$('#scrT').classList.toggle('on',S.scroll);$('#autoStoT').classList.toggle('on',S.autoSto!==false);$('#wifiT').classList.toggle('on',S.wifiOnly!==false);$('#hpT').classList.toggle('on',!!S.hpAuto);$('#msT').classList.toggle('on',S.msLine!==false);
+  $('#eqOn').classList.toggle('on',S.eqOn);$('#eqBody').hidden=!S.eqOn;$('#eqOffNote').hidden=!!S.eqOn;$('#wakeT').classList.toggle('on',S.wake);$('#scrT').classList.toggle('on',S.scroll);$('#autoStoT').classList.toggle('on',S.autoSto!==false);$('#wifiT').classList.toggle('on',S.wifiOnly!==false);$('#hpT').classList.toggle('on',!!S.hpAuto);$('#msT').classList.toggle('on',S.msLine!==false);
   {const opts=[12,14,16,18.5,21];const near=opts.reduce((a,b)=>Math.abs(b-S.fs)<Math.abs(a-S.fs)?b:a);$('#fsSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',+b.dataset.f===near));}
 }
 $('#presets').addEventListener('click',e=>{const k=e.target.dataset.p;if(!k)return;S.preset=k;S.eq=[...PRESETS[k]];if(!S.eqOn){S.eqOn=true;ensureCtx();}save();buildEqUI();applyEq();});
@@ -1587,7 +1588,7 @@ function renderLib(){
   const L=$('#libList');
   $('#hdrInfo').textContent=tracks.length?tracks.length+' bài':'';
   renderStats();
-  L.classList.toggle('selmode',selMode);$('#selBar').hidden=!selMode;$('#selN').textContent='Đã chọn '+selSet.size;
+  L.classList.toggle('selmode',selMode);$('#selBar').hidden=!selMode;$('#selN').textContent='Đã chọn '+selSet.size;if(selMode&&!selSet.size){selMode=false;L.classList.remove('selmode');$('#selBar').hidden=true;}
   if(!tracks.length){L.innerHTML='<div class="empty">Thư viện trống.</div>';return;}
   const all=albums();const info=new Map(all.map(([a,l])=>{const x=albumInfo(a,l);x.words=wordSet(l);return [a,x];}));
   const searching=!!($('#libQ').value||'').trim()||$('#libF').value!=='all';
@@ -1613,16 +1614,60 @@ function renderLib(){
     return `<div class="sect sect-${s}${sc?' col':''}" data-sec="${s}" role="button" aria-expanded="${!sc}"><span class="chev">${sc?'▸':'▾'}</span><span>${label}</span><small>${gs.length} album · ${nb} bài${us.size?' · '+us.size+' từ':''}</small></div>`+(sc?'':gs.map(albumHtml).join(''));}).join('');
 }
 $('#libQ').addEventListener('input',renderLib);$('#libF').addEventListener('change',renderLib);
-$('#bSel').onclick=()=>{selMode=!selMode;selSet.clear();renderLib();};
 $('#selDone').onclick=()=>{selMode=false;selSet.clear();renderLib();};
 $('#selAll').onclick=()=>{const vis=[...$('#libList').querySelectorAll('.trk')].map(e=>e.dataset.id);const all=vis.every(id=>selSet.has(id));vis.forEach(id=>all?selSet.delete(id):selSet.add(id));renderLib();};
-$('#selAlb').onclick=async()=>{if(!selSet.size){toast('Chưa chọn bài nào');return;}const ex=[...new Set(tracks.map(albumOf).filter(Boolean))];
-  const n=await askText('Chuyển '+selSet.size+' bài vào album'+(ex.length?' (đang có: '+ex.join(', ')+')':'')+'. Để trống = bỏ khỏi album.','');if(n===null)return;
-  for(const t of tracks)if(selSet.has(t.id)){t.album=n.trim();await putMeta(t);}selSet.clear();renderLib();toast('Đã chuyển album');};
-$('#selDel').onclick=async()=>{if(!selSet.size){toast('Chưa chọn bài nào');return;}if(!await askConfirm('Xoá '+selSet.size+' bài khỏi thư viện? (xoá cả âm thanh và phụ đề đã lưu)'))return;
-  for(const id of [...selSet]){await delTrack(id);if(cur&&cur.id===id){audio.pause();audio.removeAttribute('src');cur=null;cues=[];$('#ttl').textContent='Chưa chọn bài';renderLyrics();}}
-  tracks=tracks.filter(t=>!selSet.has(t.id));selSet.clear();renderLib();toast('Đã xoá');};
+const selList=()=>tracks.filter(t=>selSet.has(t.id));
+function exitSel(){selMode=false;selSet.clear();renderLib();}
+function sheetPick(title,items){return new Promise(res=>{
+  $('#sheetBox').innerHTML=`<h3>${esc(title)}</h3>`+items.map(i=>`<button data-a="${esc(i[0])}" class="${i[2]||''}">${i[1]}</button>`).join('')+'<button data-a="__x">Đóng</button>';
+  let done=false;const fin=v=>{if(done)return;done=true;res(v);};
+  $('#sheetBox').onclick=e=>{const b=e.target.closest('button[data-a]');if(!b)return;closeModals();fin(b.dataset.a==='__x'?null:b.dataset.a);};
+  const m=$('#mSheet');const off=e=>{if(e.target===m){m.removeEventListener('click',off);fin(null);}};m.addEventListener('click',off);
+  openModal('mSheet');});}
+async function pickAlbum(n){
+  const ex=[...new Set(tracks.map(albumOf).filter(Boolean))];
+  const a=await sheetPick('Chuyển '+n+' bài vào album',[...ex.map((x,k)=>['a'+k,'📁 '+esc(x)]),['__new','＋ Tạo album mới…'],['__none','📤 Bỏ khỏi album']]);
+  if(a==null)return null;if(a==='__none')return '';
+  if(a==='__new'){const v=await askText('Tên album mới','');return v?v.trim():null;}
+  return ex[+a.slice(1)];}
+$('#selAct').onclick=async()=>{
+  const L=selList();if(!L.length){toast('Chưa chọn bài nào — chạm vào bài để chọn');return;}
+  const noSub=L.filter(t=>!(t.subs&&(t.subs.main||t.subs.en))).length;
+  const noTr=L.filter(t=>hasSub(t)&&!hasTr(t)).length;
+  const cloud=L.filter(t=>!isLocal(t)&&(t.gid||t.audDrive)).length;
+  const dled=L.filter(t=>isLocal(t)&&(t.gid||t.audDrive)).length;
+  const allDone=L.every(t=>t.st&&t.st.done);
+  const a=await sheetPick('Đã chọn '+L.length+' bài',[
+    ['alb','📁 Thêm / chuyển vào album…'],
+    ['sub','✨ Tạo phụ đề bằng AI'+(noSub?' ('+noSub+' bài chưa có)':' (tất cả đã có)')],
+    ...(noTr?[['tr','🌐 Dịch song ngữ ('+noTr+' bài chưa dịch)']]:[]),
+    [allDone?'undone':'done',allDone?'↩️ Bỏ đánh dấu đã thuộc':'✓ Đánh dấu đã thuộc'],
+    ...(cloud?[['dl','📥 Tải về máy ('+cloud+' bài trên Drive)']]:[]),
+    ...(dled?[['undl','🗑 Xoá bản tải trong máy ('+dled+' bài, nghe lại từ Drive)']]:[]),
+    ['chart','📊 Biểu đồ học các bài đã chọn'],
+    ['del','🗑️ Xoá khỏi thư viện','dg']]);
+  if(!a)return;
+  if(a==='alb'){const n=await pickAlbum(L.length);if(n==null)return;for(const t of L){t.album=n;await putMeta(t);}exitSel();toast(n?'Đã chuyển '+L.length+' bài vào "'+n+'"':'Đã bỏ '+L.length+' bài khỏi album');}
+  else if(a==='sub'){const q=L.filter(t=>!(t.subs&&(t.subs.main||t.subs.en)));if(!q.length){toast('Các bài đã chọn đều có phụ đề rồi');return;}exitSel();batchSubs(q);}
+  else if(a==='tr'){exitSel();batchTranslate(L.filter(t=>hasSub(t)&&!hasTr(t)));}
+  else if(a==='done'||a==='undone'){for(const t of L){t.st=t.st||{};t.st.done=a==='done';await putMeta(t);}exitSel();schedulePolicy(1500);toast(a==='done'?'Đã đánh dấu thuộc '+L.length+' bài':'Đã bỏ đánh dấu');}
+  else if(a==='dl'){exitSel();downloadTracks(L.filter(t=>!isLocal(t)&&(t.gid||t.audDrive)));}
+  else if(a==='undl'){const q=L.filter(t=>isLocal(t)&&(t.gid||t.audDrive));if(!await askConfirm('Xoá file âm thanh của '+q.length+' bài khỏi máy? Phụ đề, bản dịch, tiến độ vẫn giữ; bài sẽ phát trực tiếp từ Drive.'))return;let mb=0;for(const t of q){if(t===cur)audio.pause();mb+=(t.size||0);await delLocalAudio(t);}exitSel();updStorage();toast('Đã giải phóng '+(mb/1048576).toFixed(1)+' MB');if(cur&&q.includes(cur))loadTrack(cur,false);}
+  else if(a==='chart'){openChart(L,L.length+' bài đã chọn');}
+  else if(a==='del'){if(!await askConfirm('Xoá '+L.length+' bài khỏi thư viện? (xoá cả âm thanh và phụ đề đã lưu)'))return;
+    for(const t of L){await delTrack(t.id);delete S.pos[t.id];if(t===cur){audio.pause();audio.removeAttribute('src');cur=null;cues=[];$('#ttl').textContent='Chưa chọn bài';renderLyrics();}}
+    save();tracks=tracks.filter(t=>!selSet.has(t.id));exitSel();toast('Đã xoá '+L.length+' bài');}
+};
+// Nhấn giữ một bài → vào chế độ chọn
+{let t0=null,x0=0,y0=0;const L=$('#libList');const stop=()=>{clearTimeout(t0);t0=null;};
+  L.addEventListener('pointerdown',e=>{libLP=false;const r=e.target.closest('.trk');if(!r||e.target.closest('button'))return;x0=e.clientX;y0=e.clientY;stop();
+    t0=setTimeout(()=>{t0=null;libLP=true;if(navigator.vibrate)navigator.vibrate(30);if(!selMode){selMode=true;selSet.clear();}selSet.add(r.dataset.id);renderLib();},550);});
+  L.addEventListener('pointermove',e=>{if(t0&&Math.hypot(e.clientX-x0,e.clientY-y0)>12)stop();});
+  ['pointerup','pointercancel','scroll'].forEach(ev=>L.addEventListener(ev,stop,true));
+  L.addEventListener('contextmenu',e=>{if(e.target.closest('.trk'))e.preventDefault();});}
+let libLP=false;
 $('#libList').addEventListener('click',async e=>{
+  if(libLP){libLP=false;return;}
   const pa=e.target.closest('[data-pa]');
   if(pa){const a=pa.dataset.pa;const q=libOrder().filter(t=>albumOf(t)===a);if(q.length){if(S.rpScope==='one'){S.rpScope='album';save();}
     if(cur&&albumOf(cur)===a&&!audio.paused){audio.pause();return;}if(cur&&albumOf(cur)===a&&audio.paused){play();return;}
@@ -1822,7 +1867,8 @@ function updAsrUI(){
 }
 $('#asrOpen').onclick=()=>{openModal('mAuto');updAsrUI();};
 $('#aGo').onclick=runAuto;
-const aMsg=m=>{$('#aMsg').textContent=m;$('#asrMsg').textContent=m;},aBar=p=>{$('#aBar').style.width=Math.round(p*100)+'%';$('#asrBar').style.width=Math.round(p*100)+'%';};
+let batchTag='',batchErr='',batchOn=false;
+const aMsg=m=>{m=(batchTag?batchTag+' ':'')+m;$('#aMsg').textContent=m;$('#asrMsg').textContent=m;},aBar=p=>{$('#aBar').style.width=Math.round(p*100)+'%';$('#asrBar').style.width=Math.round(p*100)+'%';};
 async function decode16k(blob){
   const ab=await blob.arrayBuffer();
   const AC=window.AudioContext||window.webkitAudioContext;const ac=new AC();
@@ -1937,11 +1983,12 @@ function openAuto(){
   $('#aDesc').textContent=tr?'AI nghe file âm thanh và viết ra lời '+LN()[0].toLowerCase()+', chia thành từng câu kèm thời gian. Nên chọn Base để cân bằng tốc độ và độ chính xác; file dài có thể chọn Gemini online. Nếu công tắc Song ngữ đang bật, app tự dịch luôn.':'AI nghe file âm thanh, rồi so với văn bản để tìm thời điểm bắt đầu từng câu. Văn bản của bạn được giữ nguyên, chỉ thêm mốc thời gian.';
   updAsrUI();aBar(0);aMsg(cur&&cur.asrPart?'Lần trước đã xử lý dở đến '+fmt(cur.asrPart.off/16000)+' — bấm Bắt đầu để làm tiếp.':'Sẵn sàng.');updAutoUI();openModal('mAuto');
 }
-async function runAuto(){
-  if(aBusy||!cur)return;
-  const T=cur; // bài đang xử lý (người dùng có thể chuyển bài khác trong lúc chờ)
-  const transcribe=forceTr||!cues.length;
-  const given=transcribe?null:cues.map(c=>({...c}));
+async function runAuto(arg){
+  const B=arg&&arg.T;
+  if(aBusy||(!B&&!cur))return false;
+  const T=B?arg.T:cur; // bài đang xử lý (người dùng có thể chuyển bài khác trong lúc chờ)
+  const transcribe=B?arg.tr:(forceTr||!cues.length);
+  const given=transcribe?null:(B?buildCuesFrom(T):cues).map(c=>({...c}));let ok=false;
   aBusy=true;aCancel=false;$('#aGo').disabled=true;aBar(0);updAsrUI();
   try{
     aMsg('Đang giải mã âm thanh…');
@@ -1950,7 +1997,7 @@ async function runAuto(){
     if(!ab)throw new Error('Bài này chưa có âm thanh');
     const pcm=await decode16k(ab);
     const dur=pcm.length/16000;
-    S.asr=$('#asrModel').value;save();
+    if(!B){S.asr=$('#asrModel').value;save();}
     keepAwake(true);
     const useGem=S.asr==='gemini';
     let target=given; // các câu cần căn thời gian bằng từ nhận dạng trên máy
@@ -2017,11 +2064,43 @@ async function runAuto(){
     toast((T===cur?'':'"'+T.name+'": ')+(transcribe?'Đã tạo phụ đề':'Đã khớp chữ với âm thanh'));
     setTimeout(()=>{if(!aBusy)$('#mAuto').classList.remove('on');},1500);
     if(willTr)setTimeout(()=>translateCues(),300);
-  }catch(e){
+    ok=true;
+  }catch(e){if(B)batchErr=String(e&&e.message||e);
     const s=String(e&&e.message||e);
     aMsg('Lỗi: '+s+(/fetch|import|network|load|CSP|Content Security/i.test(s)?' — Không tải được mô hình AI. Cần có mạng ở lần đầu. Nếu bạn đang mở app qua link Claude, trang đó chặn tải mô hình: hãy mở file engamp.html bằng Chrome để dùng tính năng này, hoặc dùng Đồng bộ tay.':''));
-    if(!$('#mAuto').classList.contains('on'))toast('Tạo phụ đề: '+s,5000);
-  }finally{aBusy=false;if(transcribe)forceTr=false;keepAwake(false);$('#aGo').disabled=false;updAsrUI();}
+    if(!B&&!$('#mAuto').classList.contains('on'))toast('Tạo phụ đề: '+s,5000);
+  }finally{aBusy=false;if(transcribe&&!B)forceTr=false;keepAwake(false);$('#aGo').disabled=false;updAsrUI();}
+  return ok;
+}
+// ----- Tạo phụ đề / dịch hàng loạt cho các bài đã chọn -----
+async function batchSubs(list){
+  if(batchOn||aBusy){toast('AI đang bận xử lý bài khác — thử lại sau');return;}
+  if(S.asr==='gemini'&&!S.gemKey){toast('Chưa có Gemini API key — chọn mô hình khác trong Tạo phụ đề hoặc nhập key ở Cài đặt',5000);return;}
+  batchOn=true;let okN=0;toast('Bắt đầu tạo phụ đề cho '+list.length+' bài (chạy nền, xem tiến độ ở màn hình Đang phát)',4000);
+  try{for(let k=0;k<list.length;k++){const t=list[k];if(!tracks.includes(t))continue;
+    batchTag=`[${k+1}/${list.length}] ${t.name}:`;batchErr='';
+    const ok=await runAuto({T:t,tr:!t.doc});
+    if(ok){okN++;if(S.autoTr!==false&&t!==cur)await translateTrack(t);renderLib();}
+    else{toast('Dừng ở "'+t.name+'": '+batchErr,6000);break;}}
+  }finally{batchOn=false;batchTag='';}
+  if(okN)toast('Đã tạo phụ đề cho '+okN+'/'+list.length+' bài',4000);
+}
+async function translateTrack(t){
+  if(trBusy)return false;const tl=S.trLang||'vi';let eng=S.trEng||'google';if(eng==='local'&&(tl!=='vi'||(S.learn||'en')!=='en'))eng='google';
+  const lines=[...new Set(buildCuesFrom(t).filter(c=>c.en&&!c.vi).map(c=>c.en))];if(!lines.length)return true;
+  trBusy=true;trTok=++trJob;trProg=null;
+  try{let out;try{out=await (eng==='gemini'?trGemini(lines,tl):eng==='local'?trLocal(lines):trGoogle(lines,tl));}
+    catch(e){if(e.message!=='__stop'&&eng==='google'&&tl==='vi'&&(S.learn||'en')==='en')out=await trLocal(lines);else throw e;}
+    t.trans=t.trans||{};lines.forEach((en,k)=>{if(out[k])t.trans[en]=out[k];});await putMeta(t);
+    if(t===cur)refreshCues();return true;
+  }catch(e){if(e.message!=='__stop')toast('Lỗi dịch "'+t.name+'": '+e.message,5000);return false;}
+  finally{trBusy=false;}
+}
+async function batchTranslate(list){
+  if(trBusy){toast('Đang dịch bài khác — thử lại sau');return;}
+  let n=0;toast('Đang dịch '+list.length+' bài…');
+  for(const t of list){if(await translateTrack(t)){n++;renderLib();}else break;}
+  toast('Đã dịch '+n+'/'+list.length+' bài',4000);
 }
 // Giữ màn hình sáng khi AI đang xử lý (tắt màn hình sẽ làm chậm hoặc dừng xử lý)
 let wl2=null;

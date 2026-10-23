@@ -1,12 +1,12 @@
 {
-  "web": "1.0.1",
-  "notes": "Nạp thư mục Drive không cần tải hết; tự quản lý bộ nhớ theo trạng thái học",
-  "minNative": 1,
-  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
-  "apk": {
-    "versionCode": 1,
-    "versionName": "1.0.0",
-    "required": false,
-    "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
-  }
+ "web": "1.0.2",
+ "notes": "Nhấn giữ bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá. EQ tắt thì ẩn thanh chỉnh.",
+ "minNative": 1,
+ "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
+ "apk": {
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "required": false,
+  "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
+ }
 }
