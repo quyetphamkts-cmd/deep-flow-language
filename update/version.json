@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.17",
- "notes": "Thêm Claude + ChatGPT, vốn từ theo trình độ A1–C2/HSK/JLPT/TOPIK, chi tiết từ kèm ví dụ, mức nhớ khi đã học, đồng bộ tự động, tiết kiệm pin.",
+ "ver": "1.0.1-beta.18",
+ "notes": "Cài đặt chia 3 nhóm; tiết kiệm pin; câu ví dụ khi tra từ.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.18",
+   "d": "23/10/2026",
+   "items": [
+    "Cài đặt chia 3 nhóm: ⚙️ Thiết lập (Màn hình khoá, Giao diện, Chế độ phát, Âm thanh, Tiết kiệm pin, Ngôn ngữ phần mềm) · 👤 Tài khoản & lưu trữ (Ngôn ngữ học / mẹ đẻ, Dịch tự động, Tài khoản & đồng bộ, Lưu trữ, API) · ℹ️ Phiên bản",
+    "Thêm Chế độ tiết kiệm pin",
+    "Tra từ (cả khi chạm vào từ trong danh sách từ theo trình độ): hiện thêm câu ví dụ song ngữ theo tình huống, có nút nghe; lưu từ sẽ lưu luôn các ví dụ"
+   ]
+  },
   {
    "v": "1.0.1-beta.17",
    "d": "23/10/2026",

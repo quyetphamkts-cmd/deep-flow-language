@@ -150,6 +150,8 @@ select{background:var(--p2);border:1px solid var(--ln);border-radius:10px;paddin
 .box .sw>span{flex:none}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center;z-index:20}
 .modal.on{display:flex}
+.stabs{position:sticky;top:0;z-index:5;display:flex;gap:4px;background:var(--bg);padding:6px 0 8px;margin:0 0 4px}.stabs button{flex:1;background:var(--p1);border:1px solid var(--ln);border-radius:12px;padding:8px 4px;color:var(--mu);font-size:12.5px;font-weight:600}.stabs button.on{border-color:var(--ac);color:var(--ac);background:var(--p2)}
+.sgrp{display:none}.sgrp.on{display:block}
 .vdh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.vdh b{font-size:24px}.vdh .ipa{color:var(--vi)}.vdh .pos{font-size:12px;color:var(--mu);border:1px solid var(--ln);border-radius:8px;padding:1px 6px}
 .vds{margin-top:12px}.vds h5{margin:0 0 6px;font-size:12px;color:var(--mu);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .vdx{background:var(--p2);border-radius:12px;padding:9px 11px;margin-bottom:6px;display:flex;gap:8px;align-items:flex-start}.vdx div{flex:1}.vdx .t{color:var(--vi);font-size:13px;margin-top:3px}.vdx .n{color:var(--mu);font-size:11px;margin-top:3px}
@@ -435,7 +437,34 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
  <!-- SETTINGS -->
  <section class="view" id="vSet">
   <div class="scroll">
-   <h3>Bộ chỉnh âm (Equalizer)</h3>
+   <div class="stabs" id="sTabs"><button data-g="setup">⚙️ Thiết lập</button><button data-g="acc">👤 Tài khoản &amp; lưu trữ</button><button data-g="ver">ℹ️ Phiên bản</button></div>
+  <div class="sgrp" data-g="setup">
+   <h3>🔒 Màn hình khoá</h3>
+   <div class="card">
+    <div class="sw"><span>Hiện câu đang đọc trên màn hình khoá</span><button class="tg" id="msT"></button></div>
+    <div class="mu">Phụ đề hiện từng đoạn 1 dòng trên màn hình khoá và thanh thông báo, kèm nút chế độ phát (trái) và nút tắt (phải)<span class="nat-off"> — hai nút này chỉ có trong bản APK</span>. Nút ⏮ ⏭ chuyển câu khi bài có phụ đề.</div>
+   </div>
+   <h3>🎨 Giao diện</h3>
+   <div class="card">
+    <div class="mu lbl" style="margin:4px 0 6px">Cỡ chữ phụ đề (theo cỡ chữ hệ thống của điện thoại)</div>
+    <div class="seg" id="fsSeg"><button data-f="12">Rất nhỏ</button><button data-f="14">Nhỏ</button><button data-f="16">Vừa</button><button data-f="18.5">Lớn</button><button data-f="21">Rất lớn</button></div>
+    <div class="mu" id="fsDemo" style="margin:8px 0 4px;line-height:1.4"><span style="font-size:calc(var(--fs) / 16 * 1rem);color:var(--tx);font-weight:500">Good morning, everyone.</span><br><span style="font-size:calc(var(--fs) / 16 * .9rem);color:var(--vi)">Chào buổi sáng mọi người.</span></div>
+    <div class="sw"><span>Giữ màn hình sáng khi phát</span><button class="tg" id="wakeT"></button></div>
+    <div class="sw"><span>Tự cuộn theo câu đang đọc</span><button class="tg" id="scrT"></button></div>
+   </div>
+   <h3>▶️ Chế độ phát</h3>
+   <div class="card">
+    <div class="sw"><span>Phát dưới nền khi thoát ứng dụng<small class="mu" style="display:block;font-size:12px">Bật: về màn hình chính, mở app khác<span class="nat-on"> hoặc vuốt tắt app</span> vẫn nghe tiếp. Tắt: rời app là dừng phát<span class="nat-off"> (trên Chrome, tắt màn hình cũng dừng)</span>.</small></span><button class="tg" id="bgT"></button></div>
+    <div class="sw"><span>Tự phát tiếp khi mở lại app<small class="mu" style="display:block;font-size:12px">Phát tiếp bài đang nghe dở, đúng chỗ đã dừng.</small></span><button class="tg" id="resT"></button></div>
+    <div class="sw"><span>Tự phát khi kết nối tai nghe</span><button class="tg" id="hpT"></button></div>
+    <div class="mu">Hoạt động khi Deep Flow đang mở hoặc đang chạy nền trong Chrome. Khi rút tai nghe, Chrome tự dừng phát. Nút Play trên tai nghe Bluetooth luôn điều khiển được Deep Flow. Muốn app tự mở khi đã tắt hẳn thì cần bản APK.</div>
+    <div class="mu">App vẫn phát khi bạn thoát ra màn hình chính hoặc tắt màn hình (điều khiển ở thanh thông báo và màn hình khoá, nút ⏮ ⏭ chuyển câu). Để Android không tắt app:<br>
+    1. Mở bằng <b>Chrome</b>, không đóng tab Deep Flow (chỉ bấm nút Home để thoát ra).<br>
+    2. Cài đặt điện thoại → Ứng dụng → <b>Chrome → Pin</b> → chọn <b>Không hạn chế</b>.<br>
+    3. Máy Xiaomi/Oppo/Vivo/Samsung: bật thêm <b>Tự khởi chạy</b>, và <b>khoá Chrome</b> trong danh sách ứng dụng gần đây (vuốt xuống trên thẻ Chrome hoặc bấm biểu tượng ổ khoá).<br>
+    4. Nếu thấy mất tiếng khi tắt màn hình lúc đang bật EQ, hãy thử tắt EQ.</div>
+   </div>
+   <h3>🎚 Âm thanh (Equalizer)</h3>
    <div class="card">
     <div class="sw"><span>Bật EQ</span><button class="tg" id="eqOn"></button></div>
     <div id="eqBody"><div class="presets" id="presets"></div>
@@ -445,15 +474,38 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <div class="mu">Mẹo: preset <b>Rõ giọng nói</b> giúp nghe rõ phụ âm khi học.</div></div>
     <div class="mu" id="eqOffNote">EQ đang tắt — bật lên để chỉnh âm.</div>
    </div>
-   <h3>Hiển thị</h3>
+   <h3>🔋 Tiết kiệm pin</h3>
    <div class="card">
-    <div class="mu lbl" style="margin:4px 0 6px">Cỡ chữ phụ đề (theo cỡ chữ hệ thống của điện thoại)</div>
-    <div class="seg" id="fsSeg"><button data-f="12">Rất nhỏ</button><button data-f="14">Nhỏ</button><button data-f="16">Vừa</button><button data-f="18.5">Lớn</button><button data-f="21">Rất lớn</button></div>
-    <div class="mu" id="fsDemo" style="margin:8px 0 4px;line-height:1.4"><span style="font-size:calc(var(--fs) / 16 * 1rem);color:var(--tx);font-weight:500">Good morning, everyone.</span><br><span style="font-size:calc(var(--fs) / 16 * .9rem);color:var(--vi)">Chào buổi sáng mọi người.</span></div>
-    <div class="sw"><span>Giữ màn hình sáng khi phát</span><button class="tg" id="wakeT"></button></div>
-    <div class="sw"><span>Tự cuộn theo câu đang đọc</span><button class="tg" id="scrT"></button></div>
+    <div class="sw"><span>Chế độ tiết kiệm pin<small class="mu" style="display:block;font-size:12px">Vẽ sóng âm và chữ chạy chậm hơn (4 lần/giây thay vì 60), không cập nhật câu trên màn hình khoá khi app ở nền.</small></span><button class="tg" id="ecoT"></button></div>
+    <div class="mu">Luôn tự động: khi tắt màn hình / app ở nền, app ngừng vẽ giao diện và ghi dữ liệu thưa hơn. Tốn pin nhất là EQ (xử lý âm thanh liên tục) và “Giữ màn hình sáng” — tắt khi không cần. Không nên đặt pin của app ở chế độ “Hạn chế” vì Android có thể tắt nhạc khi chạy nền.</div>
    </div>
-   <h3>Tài khoản &amp; đồng bộ</h3>
+   <h3>🗣 Ngôn ngữ phần mềm</h3>
+   <div class="card">
+    <div class="sw"><span>Ngôn ngữ giao diện</span><select id="uiLang"><option value="vi">Tiếng Việt</option><option value="en" disabled>English (sắp có)</option></select></div>
+   </div>
+  </div>
+  <div class="sgrp" data-g="acc">
+   <h3>🌐 Ngôn ngữ</h3>
+   <div class="card">
+    <div class="sw"><span>Ngôn ngữ đang học</span><select id="learnSel"></select></div>
+    <div class="sw"><span>Ngôn ngữ mẹ đẻ (dịch sang)</span><select id="trLang"></select></div>
+   </div>
+   <h3>🔤 Dịch tự động</h3>
+   <div class="card">
+    <div class="sw"><span>Cách dịch</span><select id="trEng">
+      <option value="google">Google Dịch – nhanh, cần mạng</option>
+      <option value="gemini">AI (Claude · Gemini · ChatGPT) – tự nhiên nhất, cần API key</option>
+      <option value="local">AI trên máy – offline (chỉ Anh → Việt)</option>
+    </select></div>
+    <div id="gemBox">
+     <div class="mu" style="margin:4px 0">Cần ít nhất một API AI (mục 🤖 phía trên). Tên mô hình Gemini / mô hình vẽ hình (để trống = mặc định):</div>
+     <input id="gemModel" placeholder="Tên mô hình" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px">
+     <input id="imgModel" placeholder="Mô hình vẽ hình minh họa (mặc định gemini-2.5-flash-image)" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin-top:4px">
+    </div>
+    <div class="sw"><span>Tự dịch các câu chưa có bản dịch (sau khi AI nhận dạng, khi mở bài)</span><button class="tg" id="autoTrT"></button></div>
+    <div class="mu">AI trên máy tải mô hình khoảng 80 MB ở lần đầu, chất lượng dịch kém hơn Google/Gemini. Nếu Google Dịch lỗi, app tự chuyển sang AI trên máy.</div>
+   </div>
+   <h3>👤 Tài khoản &amp; đồng bộ</h3>
    <div class="card">
     <div class="nat-off mu lbl">Đăng nhập Google để đồng bộ dữ liệu chỉ có trong bản ứng dụng Android (APK).</div>
     <div class="nat-on">
@@ -464,27 +516,11 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
      <div class="mu" style="margin-top:6px">Đăng nhập là app tự đồng bộ: sau mỗi thay đổi (tạo phụ đề, đánh dấu đã học, lưu từ…), khi mở app và khi thoát ra. <b>Bài học</b> = phụ đề, bản dịch, album, tiến độ, mức nhớ, từ vựng, cài đặt. <b>Bài học + âm thanh</b> = thêm file âm thanh vào thư mục “Deep Flow – Âm thanh” (tốn dung lượng Drive, tiện khi học trên nhiều máy). Dữ liệu nằm trong thư mục ẩn của Deep Flow — các file khác trong Drive không bị đụng tới.</div>
     </div>
    </div>
-   <h3>Bộ nhớ</h3>
+   <h3>💾 Lưu trữ trên máy</h3>
    <div class="card">
     <div class="sw"><span>Tự quản lý bộ nhớ theo trạng thái học<small class="mu">📖 Đang học: tự tải về máy · ✅ Đã học xong: xoá bản tải, nghe lại trực tuyến · 📘 Chưa học: chỉ danh sách. Chỉ áp dụng cho bài có bản trên Google Drive.</small></span><button class="tg" id="autoStoT"></button></div>
     <div class="sw"><span>Chỉ tự tải khi dùng Wi-Fi</span><button class="tg" id="wifiT"></button></div>
     <div class="row2" style="justify-content:flex-start"><button class="btn" id="polNow">Áp dụng ngay</button></div>
-   </div>
-   <h3>Tai nghe</h3>
-   <div class="card">
-    <div class="sw"><span>Tự phát khi kết nối tai nghe</span><button class="tg" id="hpT"></button></div>
-    <div class="mu">Hoạt động khi Deep Flow đang mở hoặc đang chạy nền trong Chrome. Khi rút tai nghe, Chrome tự dừng phát. Nút Play trên tai nghe Bluetooth luôn điều khiển được Deep Flow. Muốn app tự mở khi đã tắt hẳn thì cần bản APK.</div>
-   </div>
-   <h3>Chạy nền</h3>
-   <div class="card">
-    <div class="sw"><span>Phát dưới nền khi thoát ứng dụng<small class="mu" style="display:block;font-size:12px">Bật: về màn hình chính, mở app khác<span class="nat-on"> hoặc vuốt tắt app</span> vẫn nghe tiếp. Tắt: rời app là dừng phát<span class="nat-off"> (trên Chrome, tắt màn hình cũng dừng)</span>.</small></span><button class="tg" id="bgT"></button></div>
-    <div class="sw"><span>Tự phát tiếp khi mở lại app<small class="mu" style="display:block;font-size:12px">Phát tiếp bài đang nghe dở, đúng chỗ đã dừng.</small></span><button class="tg" id="resT"></button></div>
-    <div class="sw"><span>Hiện câu đang đọc trên màn hình khoá</span><button class="tg" id="msT"></button></div>
-    <div class="mu">App vẫn phát khi bạn thoát ra màn hình chính hoặc tắt màn hình (điều khiển ở thanh thông báo và màn hình khoá, nút ⏮ ⏭ chuyển câu). Để Android không tắt app:<br>
-    1. Mở bằng <b>Chrome</b>, không đóng tab Deep Flow (chỉ bấm nút Home để thoát ra).<br>
-    2. Cài đặt điện thoại → Ứng dụng → <b>Chrome → Pin</b> → chọn <b>Không hạn chế</b>.<br>
-    3. Máy Xiaomi/Oppo/Vivo/Samsung: bật thêm <b>Tự khởi chạy</b>, và <b>khoá Chrome</b> trong danh sách ứng dụng gần đây (vuốt xuống trên thẻ Chrome hoặc bấm biểu tượng ổ khoá).<br>
-    4. Nếu thấy mất tiếng khi tắt màn hình lúc đang bật EQ, hãy thử tắt EQ.</div>
    </div>
    <h3>🤖 API AI — nghe, chép lời, dịch</h3>
    <div class="card" id="aiCard">
@@ -537,27 +573,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
      </ol><div class="mu">Ở Google Drive, file/thư mục muốn nghe phải chia sẻ ở chế độ <b>“Bất kỳ ai có đường liên kết”</b>.</div></details>
     </div>
    </div>
-   <h3>🌐 Ngôn ngữ</h3>
-   <div class="card">
-    <div class="sw"><span>Ngôn ngữ đang học</span><select id="learnSel"></select></div>
-    <div class="sw"><span>Ngôn ngữ mẹ đẻ (dịch sang)</span><select id="trLang"></select></div>
-   </div>
-   <h3>🔤 Dịch tự động</h3>
-   <div class="card">
-    <div class="sw"><span>Cách dịch</span><select id="trEng">
-      <option value="google">Google Dịch – nhanh, cần mạng</option>
-      <option value="gemini">AI (Claude · Gemini · ChatGPT) – tự nhiên nhất, cần API key</option>
-      <option value="local">AI trên máy – offline (chỉ Anh → Việt)</option>
-    </select></div>
-    <div id="gemBox">
-     <div class="mu" style="margin:4px 0">Cần ít nhất một API AI (mục 🤖 phía trên). Tên mô hình Gemini / mô hình vẽ hình (để trống = mặc định):</div>
-     <input id="gemModel" placeholder="Tên mô hình" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px">
-     <input id="imgModel" placeholder="Mô hình vẽ hình minh họa (mặc định gemini-2.5-flash-image)" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin-top:4px">
-    </div>
-    <div class="sw"><span>Tự dịch các câu chưa có bản dịch (sau khi AI nhận dạng, khi mở bài)</span><button class="tg" id="autoTrT"></button></div>
-    <div class="mu">AI trên máy tải mô hình khoảng 80 MB ở lần đầu, chất lượng dịch kém hơn Google/Gemini. Nếu Google Dịch lỗi, app tự chuyển sang AI trên máy.</div>
-   </div>
-   <h3>Phiên bản &amp; cập nhật</h3>
+  </div>
+  <div class="sgrp" data-g="ver">
+   <h3>ℹ️ Phiên bản &amp; cập nhật</h3>
    <div class="card">
     <div class="sw"><span>Phiên bản app: <b id="verWeb"></b><span class="nat-on"> · lõi Android <b id="verNat"></b></span></span><button class="btn nat-on" id="updCheck">Kiểm tra cập nhật</button></div>
     <div class="mu" id="updMsg"></div>
@@ -568,6 +586,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <div class="row2 nat-on" style="justify-content:flex-start"><button class="btn" id="updReset" hidden>↩ Quay về bản cài gốc</button></div>
    </div>
 
+  </div>
   </div>
  </section>
 </main>
@@ -742,6 +761,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
   <div class="mu" style="font-size:11px;margin-top:6px">Nguồn: Wiktionary (qua Free Dictionary API)</div>
  </div>
  <div class="ctx" id="wdCtx"></div>
+ <div class="vds" id="wdExBox"><h5>💬 Câu ví dụ</h5><div id="wdEx"><div class="mu">Đang tạo ví dụ…</div></div></div>
  <div class="wlinks" id="wdLinks"></div>
  <div class="wdbtns"><button class="btn" id="wdSay">🔊 Từ</button><button class="btn" id="wdSent">▶ Cả câu</button><button class="btn pri" id="wdSave">⭐ Lưu từ</button></div>
  <div class="mu" style="text-align:center;font-size:12px;margin-top:8px">Chạm ra ngoài để đóng và nghe tiếp</div>
@@ -766,9 +786,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.17';
+const APP_VER='1.0.1-beta.18';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.17", "d": "23/10/2026", "items": ["Tích hợp Claude và ChatGPT cùng Gemini: app tự chọn AI mạnh nhất cho từng việc (Claude dịch & giải nghĩa, ChatGPT Whisper tạo phụ đề có mốc thời gian chính xác, Gemini dự phòng/miễn phí); AI nào hết lượt thì chuyển AI khác, hết tất cả mới dùng Google Dịch / Whisper trên máy. Cài đặt → 🔑 API key có chế độ Hiệu quả nhất / Tiết kiệm", "Vốn từ theo trình độ: CEFR A1–C2 (tiếng Anh, Pháp, Đức, Tây Ban Nha, Ý, Nga), HSK 3.0 (Trung), JLPT (Nhật), TOPIK (Hàn); ước tính trình độ vốn từ hiện tại; xem từ mới của từng cấp", "Từ vựng: chạm vào từ để xem chi tiết — nghĩa, câu trong bài (nghe lại được) và ví dụ song ngữ theo nhiều tình huống", "“Đã thuộc” đổi thành “Đã học”; khi đánh dấu đã học chọn mức nhớ (%), mục Đã học xếp bài/album nhớ ít lên trước để ôn lại", "Đồng bộ Google Drive hoàn toàn tự động, chỉ cần chọn Bài học hoặc Bài học + âm thanh", "Chạy nền tiết kiệm pin hơn: không vẽ giao diện khi tắt màn hình / ở nền, giảm số lần ghi dữ liệu", "Nhận diện câu dịch tiếng Việt chính xác hơn khi học tiếng Pháp, Tây Ban Nha, Ý, Đức…; bỏ mục ghi chú “Tự động khớp chữ (AI)”", "Cài đặt: tách “🌐 Ngôn ngữ” (ngôn ngữ học, ngôn ngữ mẹ đẻ) và “🔤 Dịch tự động”; tách “🤖 API AI” (nghe, chép lời, dịch — thêm Claude/ChatGPT bằng nút ＋ Thêm AI khác) và “🔑 API lưu trữ — Google Drive”"]}, {"v": "1.0.1-beta.16", "d": "23/10/2026", "items": ["Từ vựng → 📚 Vốn từ theo gói 600 · 1000 · 1500 · 2000 · 3000 · 5000 từ tiếng Anh thông dụng nhất: tự đối chiếu với các bài đã học, chia Đã thuộc / Đang học / Chưa học, chạm vào gói để xem từng từ và tra nghĩa"]}, {"v": "1.0.1-beta.15", "d": "23/10/2026", "items": ["Gemini hết lượt: tự chuyển sang mô hình nhẹ hơn (gemini-2.5-flash-lite…); hết cả thì dịch bằng Google Dịch (rồi AI trên máy), tạo phụ đề bằng Whisper Base trên máy", "Hiện một dòng trạng thái “Gemini đang hết lượt — tạm dùng …” kèm giờ tự quay lại Gemini; hết hạn chờ app tự dùng lại Gemini", "Thông báo phát nhạc chỉ giữ 5 nút: chế độ phát · bài trước · phát/dừng · bài sau · tắt (cần APK mới); thêm dòng chẩn đoán trong Cài đặt → Phiên bản"]}, {"v": "1.0.1-beta.14", "d": "23/10/2026", "items": ["Tra từ: phiên âm tiếng Anh hiện đúng ký hiệu IPA dạng /…/ (lấy từ từ điển), không còn kiểu phiên âm của Google Dịch; dùng phông chữ hiển thị đủ ký tự IPA", "Bảng tốc độ: số tốc độ nằm phía trên thanh kéo và có nhãn chạy theo nút kéo, không bị ngón tay che", "Thông báo phát nhạc: bỏ dấu “-” thừa ở dòng dưới; bản APK mới có nút chế độ phát và nút tắt"]}, {"v": "1.0.1-beta.13", "d": "23/10/2026", "items": ["Tốc độ phát: các nút 0.5× · 0.75× · 1× · 1.5× · 2× (bấm nút Tốc độ để chuyển lần lượt), thanh kéo từ 0.5× đến 2×, mỗi nấc 0.05×"]}, {"v": "1.0.1-beta.12", "d": "23/10/2026", "items": ["Thông báo phát nhạc / màn hình khoá có thêm nút chế độ phát (bên trái, đổi biểu tượng theo chế độ) và nút tắt (bên phải) — cần cài APK mới", "Bỏ vạch màu cam giữa sóng âm dưới nút Play", "Sửa chữ các chế độ phát và chế độ phụ đề cho rõ nghĩa", "Góc trên bên phải hiện tổng số album và số bài", "Nhấn giữ vào nút không còn bị bôi đen chữ / hiện menu Dịch – Chép"]}, {"v": "1.0.1-beta.11", "d": "23/10/2026", "items": ["Sóng âm kiểu thanh bo tròn (giống Poweramp): phần sắp phát sáng, phần đã phát mờ, vạch mốc dọc bo tròn ở giữa; thời gian đang phát / tổng thời gian chữ to hơn"]}, {"v": "1.0.1-beta.10", "d": "23/10/2026", "items": ["Thanh phát nhỏ ở Thư viện / Từ vựng hiện sóng âm cả bài: phần đã nghe màu cam, chạm hoặc kéo trên sóng để tua"]}, {"v": "1.0.1-beta.9", "d": "23/10/2026", "items": ["Màn hình Nghe mới: tên bài nằm dưới phụ đề; 5 nút nhỏ gọn (Chế độ phát · Tốc độ · 🎙 Luyện nói · Phụ đề · Hẹn giờ) ngay trên nút Play", "Chế độ phát dạng biểu tượng, bấm để chuyển lần lượt, nhấn giữ để chọn: Phát 1 bài · Phát hết album · Phát hết mục Đang học · Lặp bài · Lặp album · Lặp mục Đang học", "Nút Tốc độ và Phụ đề: bấm để chuyển nhanh, nhấn giữ để chọn", "Nút 🎙 Luyện nói gom: nghe lại mỗi câu, dừng để nói lại, nói đuổi (shadowing), chấm phát âm, luyện câu đang nghe", "Thanh tiến trình thành biểu đồ sóng âm chìm dưới nút Play: kéo vùng trống sang trái/phải để tua (các nút tạm ẩn khi kéo); thời gian đang phát bên trái, tổng thời gian bên phải", "Tra từ: hiện nghĩa nhanh trong lúc chờ, không còn treo ở “Đang tra…”; nút đọc từ dùng giọng Google nên đọc được trong bản APK", "Tạo phụ đề nhiều bài: bài lỗi không làm dừng cả hàng chờ (tự thử lại 1 lần), tự chờ khi Gemini giới hạn lượt gọi, báo tổng kết khi xong", "Màn hình khoá: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn tên bài chữ nhỏ", "Nút thông tin trong Cài đặt đổi thành chữ i"]}, {"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]}, {"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]}, {"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]}, {"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]}, {"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]}, {"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]}, {"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.18", "d": "23/10/2026", "items": ["Cài đặt chia 3 nhóm: ⚙️ Thiết lập (Màn hình khoá, Giao diện, Chế độ phát, Âm thanh, Tiết kiệm pin, Ngôn ngữ phần mềm) · 👤 Tài khoản & lưu trữ (Ngôn ngữ học / mẹ đẻ, Dịch tự động, Tài khoản & đồng bộ, Lưu trữ, API) · ℹ️ Phiên bản", "Thêm Chế độ tiết kiệm pin", "Tra từ (cả khi chạm vào từ trong danh sách từ theo trình độ): hiện thêm câu ví dụ song ngữ theo tình huống, có nút nghe; lưu từ sẽ lưu luôn các ví dụ"]},{"v": "1.0.1-beta.17", "d": "23/10/2026", "items": ["Tích hợp Claude và ChatGPT cùng Gemini: app tự chọn AI mạnh nhất cho từng việc (Claude dịch & giải nghĩa, ChatGPT Whisper tạo phụ đề có mốc thời gian chính xác, Gemini dự phòng/miễn phí); AI nào hết lượt thì chuyển AI khác, hết tất cả mới dùng Google Dịch / Whisper trên máy. Cài đặt → 🔑 API key có chế độ Hiệu quả nhất / Tiết kiệm", "Vốn từ theo trình độ: CEFR A1–C2 (tiếng Anh, Pháp, Đức, Tây Ban Nha, Ý, Nga), HSK 3.0 (Trung), JLPT (Nhật), TOPIK (Hàn); ước tính trình độ vốn từ hiện tại; xem từ mới của từng cấp", "Từ vựng: chạm vào từ để xem chi tiết — nghĩa, câu trong bài (nghe lại được) và ví dụ song ngữ theo nhiều tình huống", "“Đã thuộc” đổi thành “Đã học”; khi đánh dấu đã học chọn mức nhớ (%), mục Đã học xếp bài/album nhớ ít lên trước để ôn lại", "Đồng bộ Google Drive hoàn toàn tự động, chỉ cần chọn Bài học hoặc Bài học + âm thanh", "Chạy nền tiết kiệm pin hơn: không vẽ giao diện khi tắt màn hình / ở nền, giảm số lần ghi dữ liệu", "Nhận diện câu dịch tiếng Việt chính xác hơn khi học tiếng Pháp, Tây Ban Nha, Ý, Đức…; bỏ mục ghi chú “Tự động khớp chữ (AI)”", "Cài đặt: tách “🌐 Ngôn ngữ” (ngôn ngữ học, ngôn ngữ mẹ đẻ) và “🔤 Dịch tự động”; tách “🤖 API AI” (nghe, chép lời, dịch — thêm Claude/ChatGPT bằng nút ＋ Thêm AI khác) và “🔑 API lưu trữ — Google Drive”"]}, {"v": "1.0.1-beta.16", "d": "23/10/2026", "items": ["Từ vựng → 📚 Vốn từ theo gói 600 · 1000 · 1500 · 2000 · 3000 · 5000 từ tiếng Anh thông dụng nhất: tự đối chiếu với các bài đã học, chia Đã thuộc / Đang học / Chưa học, chạm vào gói để xem từng từ và tra nghĩa"]}, {"v": "1.0.1-beta.15", "d": "23/10/2026", "items": ["Gemini hết lượt: tự chuyển sang mô hình nhẹ hơn (gemini-2.5-flash-lite…); hết cả thì dịch bằng Google Dịch (rồi AI trên máy), tạo phụ đề bằng Whisper Base trên máy", "Hiện một dòng trạng thái “Gemini đang hết lượt — tạm dùng …” kèm giờ tự quay lại Gemini; hết hạn chờ app tự dùng lại Gemini", "Thông báo phát nhạc chỉ giữ 5 nút: chế độ phát · bài trước · phát/dừng · bài sau · tắt (cần APK mới); thêm dòng chẩn đoán trong Cài đặt → Phiên bản"]}, {"v": "1.0.1-beta.14", "d": "23/10/2026", "items": ["Tra từ: phiên âm tiếng Anh hiện đúng ký hiệu IPA dạng /…/ (lấy từ từ điển), không còn kiểu phiên âm của Google Dịch; dùng phông chữ hiển thị đủ ký tự IPA", "Bảng tốc độ: số tốc độ nằm phía trên thanh kéo và có nhãn chạy theo nút kéo, không bị ngón tay che", "Thông báo phát nhạc: bỏ dấu “-” thừa ở dòng dưới; bản APK mới có nút chế độ phát và nút tắt"]}, {"v": "1.0.1-beta.13", "d": "23/10/2026", "items": ["Tốc độ phát: các nút 0.5× · 0.75× · 1× · 1.5× · 2× (bấm nút Tốc độ để chuyển lần lượt), thanh kéo từ 0.5× đến 2×, mỗi nấc 0.05×"]}, {"v": "1.0.1-beta.12", "d": "23/10/2026", "items": ["Thông báo phát nhạc / màn hình khoá có thêm nút chế độ phát (bên trái, đổi biểu tượng theo chế độ) và nút tắt (bên phải) — cần cài APK mới", "Bỏ vạch màu cam giữa sóng âm dưới nút Play", "Sửa chữ các chế độ phát và chế độ phụ đề cho rõ nghĩa", "Góc trên bên phải hiện tổng số album và số bài", "Nhấn giữ vào nút không còn bị bôi đen chữ / hiện menu Dịch – Chép"]}, {"v": "1.0.1-beta.11", "d": "23/10/2026", "items": ["Sóng âm kiểu thanh bo tròn (giống Poweramp): phần sắp phát sáng, phần đã phát mờ, vạch mốc dọc bo tròn ở giữa; thời gian đang phát / tổng thời gian chữ to hơn"]}, {"v": "1.0.1-beta.10", "d": "23/10/2026", "items": ["Thanh phát nhỏ ở Thư viện / Từ vựng hiện sóng âm cả bài: phần đã nghe màu cam, chạm hoặc kéo trên sóng để tua"]}, {"v": "1.0.1-beta.9", "d": "23/10/2026", "items": ["Màn hình Nghe mới: tên bài nằm dưới phụ đề; 5 nút nhỏ gọn (Chế độ phát · Tốc độ · 🎙 Luyện nói · Phụ đề · Hẹn giờ) ngay trên nút Play", "Chế độ phát dạng biểu tượng, bấm để chuyển lần lượt, nhấn giữ để chọn: Phát 1 bài · Phát hết album · Phát hết mục Đang học · Lặp bài · Lặp album · Lặp mục Đang học", "Nút Tốc độ và Phụ đề: bấm để chuyển nhanh, nhấn giữ để chọn", "Nút 🎙 Luyện nói gom: nghe lại mỗi câu, dừng để nói lại, nói đuổi (shadowing), chấm phát âm, luyện câu đang nghe", "Thanh tiến trình thành biểu đồ sóng âm chìm dưới nút Play: kéo vùng trống sang trái/phải để tua (các nút tạm ẩn khi kéo); thời gian đang phát bên trái, tổng thời gian bên phải", "Tra từ: hiện nghĩa nhanh trong lúc chờ, không còn treo ở “Đang tra…”; nút đọc từ dùng giọng Google nên đọc được trong bản APK", "Tạo phụ đề nhiều bài: bài lỗi không làm dừng cả hàng chờ (tự thử lại 1 lần), tự chờ khi Gemini giới hạn lượt gọi, báo tổng kết khi xong", "Màn hình khoá: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn tên bài chữ nhỏ", "Nút thông tin trong Cài đặt đổi thành chữ i"]}, {"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]}, {"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]}, {"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]}, {"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]}, {"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]}, {"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]}, {"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1328,7 +1348,7 @@ function step(){
   }
   if(!document.hidden&&!dragging&&audio.duration){$('#seek').value=Math.round(t/audio.duration*1000);$('#tCur').textContent=fmt(t);}
 }
-let rafId=0;function loop(){step();drawWave();if(!audio.paused)rafId=requestAnimationFrame(loop);}
+let rafId=0,ecoTm=0;function loop(){clearTimeout(ecoTm);step();drawWave();if(!audio.paused){if(S.eco){if(!document.hidden)ecoTm=setTimeout(loop,250);}else rafId=requestAnimationFrame(loop);}}
 audio.addEventListener('timeupdate',()=>{if(document.hidden)step();});
 function sentEnd(k,crossed){
   const c=cues[k];
@@ -1533,6 +1553,7 @@ function msMeta(line){
   msSet(line,'');
 }
 function msTick(i,t){
+  if(S.eco&&document.hidden)return;
   if(!('mediaSession'in navigator)||!cur||S.msLine===false)return;
   if(i<0||!cues[i]){if(msCue!==-1){msCue=-1;msSet(cur.name,'');}return;}
   const c=cues[i];
@@ -2681,11 +2702,22 @@ function sayWord(text,lang){
 // Phiên âm IPA cho tiếng Anh/Âu: dạng /…/ ; tiếng Trung, Nhật… giữ nguyên (pinyin, romaji)
 function fmtIPA(x,lg){x=String(x||'').trim();if(!x)return '';if(['zh','ja','ko','th'].includes(lg||'en'))return x;x=x.replace(/^[\/\[]+|[\/\]]+$/g,'').trim();return x?'/'+x+'/':'';}
 let wdResume=false;
+const exCache=new Map();
+async function wdLoadEx(word,lg,info,c){
+  const key=lg+'|'+(info.lemma||word).toLowerCase();let ex=exCache.get(key);
+  if(!ex){const sv=vocab.find(v=>v.id===vkey(word,lg));if(sv&&sv.ex&&sv.ex.length)ex=sv.ex;}
+  if(!ex){ex=await vocExamples({word:info.lemma||word,form:word,pos:info.pos,mean:info.mean,lang:lg,ctx:{text:c.en||''}},false).catch(()=>[]);if(ex.length)exCache.set(key,ex);}
+  if(!wcur||wcur.word!==word)return;wcur.ex=ex;
+  const v={word:info.lemma||word,form:word};
+  $('#wdEx').innerHTML=ex.length?ex.map((x,k)=>`<div class="vdx"><div>${hiWord(x.s,v)}<div class="t">${esc(x.t||'')}</div>${x.n?`<div class="n">${esc(x.n)}</div>`:''}</div><button data-wex="${k}" aria-label="Nghe câu ví dụ">🔊</button></div>`).join(''):'<div class="mu">Chưa tạo được ví dụ (cần mạng; nhập API AI để có ví dụ theo tình huống kèm bản dịch).</div>';
+}
+$('#wdEx').addEventListener('click',e=>{const b=e.target.closest('[data-wex]');if(!b||!wcur||!wcur.ex)return;const x=wcur.ex[+b.dataset.wex];if(x){clipStop();sayWord(x.s,wcur.lang);}});
 async function openWord(word,i){
   word=word.trim();if(!word)return;
   if(!$('#mWord').classList.contains('on')){wdResume=!audio.paused;if(wdResume)audio.pause();}
   const c=cues[i]||{};const lg=S.learn||'en';const tl=S.trLang||'vi';
   wcur={word,lang:lg,ctx:{text:c.en||'',tr:c.vi||'',trackId:cur&&cur.id,trackName:cur&&cur.name,s:c.s,e:c.e},info:null};
+  $('#wdEx').innerHTML='<div class="mu">Đang tạo ví dụ…</div>';$('#wdSent').hidden=!(c.s>=0);
   $('#wdW').textContent=word;$('#wdIpa').textContent='';$('#wdPos').hidden=true;$('#wdMean').textContent='Đang tra…';$('#wdMore').textContent='';
   $('#wdCtx').innerHTML=c.en?esc(c.en).replace(new RegExp('('+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','i'),'<b>$1</b>')+(c.vi?'<div class="mu" style="margin-top:4px">'+esc(c.vi)+'</div>':''):'';
   const ex=vocab.find(v=>v.id===vkey(word,lg));
@@ -2717,6 +2749,7 @@ async function openWord(word,i){
     if(info.lemma&&info.lemma.toLowerCase()!==word.toLowerCase())$('#wdW').textContent=word+' → '+info.lemma;
     $('#wdIpa').textContent=info.ipa||'';if(info.pos){$('#wdPos').textContent=info.pos;$('#wdPos').hidden=false;}
     $('#wdMean').textContent=info.mean||'(không tìm thấy nghĩa)';$('#wdMore').textContent=info.more||'';
+    wdLoadEx(word,lg,info,c);
   }catch(e){$('#wdMean').textContent='Không tra được: '+(e.message||e)+' (cần mạng)';}
 }
 // ----- Từ điển Anh – Anh (Wiktionary qua dictionaryapi.dev) -----
@@ -2781,7 +2814,7 @@ $('#wdSave').onclick=()=>{
   if(!wcur)return;const info=wcur.info||{};const w=info.lemma||wcur.word;const id=vkey(w,wcur.lang);
   if(vocab.some(v=>v.id===id)){toast('Từ này đã có trong Hộp từ vựng');return;}
   const ed=info.ed;const enDef=ed?ed.meanings.slice(0,2).map(m=>'('+m.pos+') '+(m.defs[0]||{}).d).join(' · '):'';const au=ed?((ed.phon.find(p=>p.acc==='US'&&p.audio)||ed.phon.find(p=>p.audio)||{}).audio||''):'';
-  vocab.unshift({mt:Date.now(),id,word:w,form:wcur.word,lang:wcur.lang,ipa:info.ipa||'',pos:info.pos||'',mean:info.mean||'',more:info.more||'',enDef,au,ctx:wcur.ctx,added:Date.now(),srs:{due:Date.now(),ivl:0,ease:2.5,reps:0}});
+  vocab.unshift({mt:Date.now(),id,ex:wcur.ex&&wcur.ex.length?wcur.ex:undefined,word:w,form:wcur.word,lang:wcur.lang,ipa:info.ipa||'',pos:info.pos||'',mean:info.mean||'',more:info.more||'',enDef,au,ctx:wcur.ctx,added:Date.now(),srs:{due:Date.now(),ivl:0,ease:2.5,reps:0}});
   saveVocab();if(S.vocImg!==false)setTimeout(()=>makeVocabImg(vocab[0]),300);$('#wdSave').textContent='✓ Đã lưu';$('#wdSave').disabled=true;toast('Đã lưu "'+w+'" vào Hộp từ vựng');markSaved();renderLib();
 };
 function markSaved(){const set=new Set(vocab.filter(v=>v.lang===(S.learn||'en')).flatMap(v=>[v.word.toLowerCase(),(v.form||'').toLowerCase()]));$('#lyrics').querySelectorAll('.w').forEach(s=>s.classList.toggle('saved',set.has(s.textContent.toLowerCase())));}
@@ -3442,6 +3475,11 @@ $('#keyPaste').onclick=async()=>{try{const t=await navigator.clipboard.readText(
 $('#keyIn').addEventListener('keydown',e=>{if(e.key==='Enter')$('#keyOk').click();});
 setTimeout(keyUI,0);
 // Thu gọn ghi chú / hướng dẫn trong Cài đặt: nút (!) ở tiêu đề mỗi mục để mở/thu
+function setSTab(g){S.sTab=g;save();document.querySelectorAll('#sTabs button').forEach(b=>b.classList.toggle('on',b.dataset.g===g));document.querySelectorAll('#vSet .sgrp').forEach(x=>x.classList.toggle('on',x.dataset.g===g));const sc=document.querySelector('#vSet .scroll');if(sc)sc.scrollTop=0;}
+$('#sTabs').addEventListener('click',e=>{const b=e.target.closest('[data-g]');if(b)setSTab(b.dataset.g);});
+setTimeout(()=>setSTab(S.sTab||'setup'),0);
+$('#ecoT').onclick=()=>{S.eco=!S.eco;save();$('#ecoT').classList.toggle('on',!!S.eco);toast(S.eco?'Đã bật tiết kiệm pin':'Đã tắt tiết kiệm pin');};
+setTimeout(()=>$('#ecoT').classList.toggle('on',!!S.eco),0);
 function initHelp(){
   document.querySelectorAll('#vSet .card').forEach(c=>{
     const h=[...c.querySelectorAll(':scope > .mu:not([id]):not(.lbl), :scope > .nat-on > .mu:not([id]):not(.lbl), :scope > .nat-on .sw small.mu, :scope > .sw small.mu, :scope .help')];
@@ -3693,7 +3731,7 @@ document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if
       const addBtn=(t,fn,pri)=>{const b=document.createElement('button');b.className='btn'+(pri?' pri':'');b.textContent=t;b.onclick=fn;act.appendChild(b);act.hidden=false;dot=true;};
       const apkNew=j.apk&&nativeBuild&&j.apk.versionCode>nativeBuild;
       if(apkNew)addBtn('📥 Tải APK '+verLabel(j.apk.versionName),()=>{location.href=j.apk.url;});
-      document.querySelector('nav button[data-v="vSet"]').classList.toggle('navdot',!!(apkNew||vcmp(V,APP_VER)>0));
+      document.querySelector('nav button[data-v="vSet"]').classList.toggle('navdot',!!(apkNew||vcmp(V,APP_VER)>0));document.querySelector('#sTabs [data-g="ver"]').classList.toggle('navdot',!!(apkNew||vcmp(V,APP_VER)>0));
       if(j.apk&&nativeBuild&&j.apk.versionCode>nativeBuild&&(j.apk.required||vcmp(V,APP_VER)>0&&j.minNative>nativeBuild)){
         msg.textContent='Có bản APK mới '+j.apk.versionName+' (cần cài đè để có tính năng mới).';
         bar(`Có bản cài đặt mới <b>${j.apk.versionName}</b>. Tải về rồi mở file để cài đè (giữ nguyên dữ liệu).`,'Tải APK',()=>{location.href=j.apk.url;});return;
