@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.43",
- "notes": "Thư viện gồm các 📚 Khoá học do bạn đặt tên; 3 danh sách cũ được gộp thành “Khoá học của tôi” (đổi tên ở ⋯); nút ＋ Tạo khoá học mới ở cuối các khoá học · Nạp bài mới (từ máy, thư mục, Drive, Cloud): app hỏi đưa vào khoá học nào hoặc tạo khoá học mới · Bỏ phân loại tay Đang học / Tiếp theo / Đã học. Trạng thái tự động: đủ mục tiêu học (số ngày) hoặc đánh dấu học xong → ✅ Đã học xong; đã bắt đầu nghe → 📖 Đang học; còn lại → 📘 Chưa học. Bài lẻ cũng đặt được mục tiêu · Học xong → app hỏi % hiểu & nhớ; mục 🔁 Ôn tập ở đầu Thư viện xếp bài nhớ ít và đến hạn lên trước (nhớ <50%: ôn sau 1 ngày, 50%: 3 ngày, 75%: 7 ngày, 90%+: 14 ngày); nghe ôn hết bài thì chấm lại % nhớ; có nút Ôn lần lượt các bài đến hạn · Từ vựng trong bài học: bảng thống kê theo từng khoá học (số bài học xong / đang học / chưa học và số từ) và tổng của tất cả khoá học; chạm vào khoá học để xem chi tiết, ôn tập và chơi game với từ của khoá đó",
+ "ver": "1.0.1-beta.44",
+ "notes": "📘 Đánh dấu Chưa học cho bài nghe thử / bấm nhầm: ở ⋯ của bài, ⋯ của album, hoặc chọn nhiều bài rồi bấm 📘 Chưa học. App hỏi xác nhận (bài đã học xong phải xác nhận 2 lần); xoá thời gian nghe, số lần nghe, trạng thái học xong & mức nhớ — giữ phụ đề, bản dịch, điểm phát âm, từ đã lưu · 📊 Thanh Tiến độ tổng ở đầu Thư viện: % bài học xong, kèm số bài đang học / chưa học. Mỗi khoá học cũng có thanh tiến độ và % xong ngay dưới tên · 🐞 Sửa lỗi đổi tên khoá học bị tự đổi lại tên cũ khi đồng bộ Google Drive giữa nhiều máy: mỗi cài đặt giờ ghi thời điểm sửa riêng, bản sửa mới hơn luôn được giữ, và đổi tên / sắp xếp khoá học được đồng bộ lên ngay",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,15 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.44",
+   "d": "23/10/2026",
+   "items": [
+    "📘 Đánh dấu Chưa học cho bài nghe thử / bấm nhầm: ở ⋯ của bài, ⋯ của album, hoặc chọn nhiều bài rồi bấm 📘 Chưa học. App hỏi xác nhận (bài đã học xong phải xác nhận 2 lần); xoá thời gian nghe, số lần nghe, trạng thái học xong & mức nhớ — giữ phụ đề, bản dịch, điểm phát âm, từ đã lưu",
+    "📊 Thanh Tiến độ tổng ở đầu Thư viện: % bài học xong, kèm số bài đang học / chưa học. Mỗi khoá học cũng có thanh tiến độ và % xong ngay dưới tên",
+    "🐞 Sửa lỗi đổi tên khoá học bị tự đổi lại tên cũ khi đồng bộ Google Drive giữa nhiều máy: mỗi cài đặt giờ ghi thời điểm sửa riêng, bản sửa mới hơn luôn được giữ, và đổi tên / sắp xếp khoá học được đồng bộ lên ngay"
+   ]
+  },
   {
    "v": "1.0.1-beta.43",
    "d": "23/10/2026",
