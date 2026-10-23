@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.27",
- "notes": "Nút Link đổi thành Cloud.",
+ "ver": "1.0.1-beta.28",
+ "notes": "Cách nạp bài vào nút (i); Sao lưu chuyển vào Cài đặt.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.28",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện: hướng dẫn “Cách nạp bài” thu vào nút (i) ở góc trên bên phải; nút Sao lưu chuyển vào Cài đặt → Tài khoản & lưu trữ → Lưu trữ trên máy"
+   ]
+  },
   {
    "v": "1.0.1-beta.27",
    "d": "23/10/2026",
