@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.45",
- "notes": "Phụ đề đã khớp thời gian mà câu bị đảo vị trí: app tự sắp xếp lại ngay khi mở bài (không đợi nghe hết) và lưu lại. App thử cả 2 cách — xếp câu theo mốc thời gian, hoặc giữ thứ tự chữ rồi xếp lại mốc thời gian — và chọn cách mà độ dài câu khớp với thời lượng nói hơn; sau đó căn lại từng câu theo giọng nói trong âm thanh",
+ "ver": "1.0.1-beta.46",
+ "notes": "Phát dưới nền ổn định hơn: các việc nặng phải giải mã cả file âm thanh (tự tạo phụ đề AI, tự kiểm tra & sắp xếp lại phụ đề) không chạy khi tắt màn hình / app ở nền nữa mà đợi lúc mở app — tránh Android đóng app làm mất nhạc và mất bảng điều khiển phát nhạc",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,13 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.46",
+   "d": "23/10/2026",
+   "items": [
+    "Phát dưới nền ổn định hơn: các việc nặng phải giải mã cả file âm thanh (tự tạo phụ đề AI, tự kiểm tra & sắp xếp lại phụ đề) không chạy khi tắt màn hình / app ở nền nữa mà đợi lúc mở app — tránh Android đóng app làm mất nhạc và mất bảng điều khiển phát nhạc"
+   ]
+  },
   {
    "v": "1.0.1-beta.45",
    "d": "23/10/2026",
