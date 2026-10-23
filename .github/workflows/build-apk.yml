@@ -47,14 +47,15 @@ jobs:
           DF_SIGN_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
         run: |
           if [ -z "$DF_SIGN_PASSWORD" ]; then
-            echo "::error::Chưa có secret DF_SIGN_PASSWORD (xem README, mục 1)"; exit 1
+            echo "::warning::Chưa có secret DF_SIGN_PASSWORD (xem README, mục 1) — chỉ kiểm tra biên dịch, không phát hành"
+            echo "DF_NOKEY=1" >> "$GITHUB_ENV"; exit 0
           fi
           openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/deepflow-release.jks.enc -out "$RUNNER_TEMP/deepflow.jks" -pass env:DF_SIGN_PASSWORD
 
       - name: Build APK
         working-directory: android
         env:
-          DF_KEYSTORE_FILE: ${{ runner.temp }}/deepflow.jks
+          DF_KEYSTORE_FILE: ${{ env.DF_NOKEY != '1' && format('{0}/deepflow.jks', runner.temp) || '' }}
           DF_KEYSTORE_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
           DF_KEY_ALIAS: deepflow
           DF_KEY_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
@@ -62,14 +63,17 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon --stacktrace -PdfVersionCode=${{ steps.ver.outputs.code }} -PdfVersionName=${{ steps.ver.outputs.name }}
           mkdir -p ../dist
+          if [ "$DF_NOKEY" = "1" ]; then exit 0; fi
           cp app/build/outputs/apk/release/app-release.apk ../dist/DeepFlowLanguage.apk
 
       - uses: actions/upload-artifact@v4
+        if: env.DF_NOKEY != '1'
         with:
           name: DeepFlowLanguage-${{ steps.ver.outputs.name }}
           path: dist/DeepFlowLanguage.apk
 
       - name: Phát hành
+        if: env.DF_NOKEY != '1'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.ver.outputs.name }}
