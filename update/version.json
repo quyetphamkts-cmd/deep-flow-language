@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.49",
- "notes": "Phụ đề khớp thứ tự tốt nhất có thể: app tự kiểm tra lại phụ đề của TẤT CẢ các bài (kể cả bài tạo từ trước), lần lượt từng bài khi app đang mở — sửa câu đảo vị trí / trùng / chồng nhau, dời & căn từng câu theo giọng nói trong âm thanh; xong báo tổng kết · Bài nào vẫn khớp kém (dưới 60%) sẽ được AI nghe lại âm thanh và căn lại từng câu (giữ nguyên chữ) — dùng ChatGPT Whisper hoặc Gemini, chạy khi app mở và có mạng; bài chỉ có trên Drive thì chỉ sửa thứ tự câu, không tải cả file về",
+ "ver": "1.0.1-beta.50",
+ "notes": "Giảm chạm trần hạn mức Gemini (lỗi 429): app tự giới hạn tốc độ gọi (khoảng 9 lượt/phút với Flash, 14 với Flash-Lite — dưới mức gói miễn phí), chờ đủ rồi mới gọi tiếp thay vì gọi dồn · Phân biệt hết lượt theo phút (chờ đúng thời gian Google báo rồi thử lại) và hết lượt theo ngày (khoá mô hình đó đến khi Google làm mới hạn mức ~15h giờ VN, nhớ cả khi tắt mở app — không gọi lại vô ích) · Gemini quá tải (5xx): chờ tăng dần 2 → 4 → 8 giây rồi thử lại · Dịch: gộp 60 câu vào 1 lượt gọi; câu đã dịch được lưu và dùng lại cho mọi bài (không gửi lại AI); dịch, tra từ, chọn hình dùng Gemini Flash-Lite trước (nhanh, hạn mức cao hơn) · Kết quả tra từ / ví dụ / chọn hình bằng AI được lưu 30 ngày: hỏi lại đúng câu đó thì lấy kết quả cũ, không tốn lượt",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,17 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.50",
+   "d": "23/10/2026",
+   "items": [
+    "Giảm chạm trần hạn mức Gemini (lỗi 429): app tự giới hạn tốc độ gọi (khoảng 9 lượt/phút với Flash, 14 với Flash-Lite — dưới mức gói miễn phí), chờ đủ rồi mới gọi tiếp thay vì gọi dồn",
+    "Phân biệt hết lượt theo phút (chờ đúng thời gian Google báo rồi thử lại) và hết lượt theo ngày (khoá mô hình đó đến khi Google làm mới hạn mức ~15h giờ VN, nhớ cả khi tắt mở app — không gọi lại vô ích)",
+    "Gemini quá tải (5xx): chờ tăng dần 2 → 4 → 8 giây rồi thử lại",
+    "Dịch: gộp 60 câu vào 1 lượt gọi; câu đã dịch được lưu và dùng lại cho mọi bài (không gửi lại AI); dịch, tra từ, chọn hình dùng Gemini Flash-Lite trước (nhanh, hạn mức cao hơn)",
+    "Kết quả tra từ / ví dụ / chọn hình bằng AI được lưu 30 ngày: hỏi lại đúng câu đó thì lấy kết quả cũ, không tốn lượt"
+   ]
+  },
   {
    "v": "1.0.1-beta.49",
    "d": "23/10/2026",
