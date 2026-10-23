@@ -435,23 +435,6 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     <div class="sw"><span>Tự phát khi kết nối tai nghe</span><button class="tg" id="hpT"></button></div>
     <div class="mu">Hoạt động khi Deep Flow đang mở hoặc đang chạy nền trong Chrome. Khi rút tai nghe, Chrome tự dừng phát. Nút Play trên tai nghe Bluetooth luôn điều khiển được Deep Flow. Muốn app tự mở khi đã tắt hẳn thì cần bản APK.</div>
    </div>
-   <h3>Ngôn ngữ &amp; dịch tự động</h3>
-   <div class="card">
-    <div class="sw"><span>Ngôn ngữ đang học</span><select id="learnSel"></select></div>
-    <div class="sw"><span>Dịch sang (tiếng mẹ đẻ)</span><select id="trLang"></select></div>
-    <div class="sw"><span>Cách dịch</span><select id="trEng">
-      <option value="google">Google Dịch – nhanh, cần mạng</option>
-      <option value="gemini">Gemini AI – tự nhiên nhất, cần API key</option>
-      <option value="local">AI trên máy – offline (chỉ Anh → Việt)</option>
-    </select></div>
-    <div id="gemBox">
-     <input id="gemKey" placeholder="Gemini API key (AIza…) – lấy tại aistudio.google.com" autocomplete="off" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin:4px 0">
-     <input id="gemModel" placeholder="Tên mô hình" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px">
-     <input id="imgModel" placeholder="Mô hình vẽ hình minh họa (mặc định gemini-2.5-flash-image)" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin-top:4px">
-    </div>
-    <div class="sw"><span>Tự dịch các câu chưa có bản dịch (sau khi AI nhận dạng, khi mở bài)</span><button class="tg" id="autoTrT"></button></div>
-    <div class="mu">AI trên máy tải mô hình khoảng 80 MB ở lần đầu, chất lượng dịch kém hơn Google/Gemini. Nếu Google Dịch lỗi, app tự chuyển sang AI trên máy.</div>
-   </div>
    <h3>Chạy nền</h3>
    <div class="card">
     <div class="sw"><span>Hiện câu đang đọc trên màn hình khoá</span><button class="tg" id="msT"></button></div>
@@ -472,6 +455,23 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
      4. Ở Drive, chia sẻ file/thư mục ở chế độ <b>"Bất kỳ ai có đường liên kết"</b>.<br>
      Lưu ý: nếu giới hạn key thì chỉ giới hạn theo <i>API (Google Drive API)</i>, đừng giới hạn theo website.
     </div>
+   </div>
+   <h3>Ngôn ngữ &amp; dịch tự động</h3>
+   <div class="card">
+    <div class="sw"><span>Ngôn ngữ đang học</span><select id="learnSel"></select></div>
+    <div class="sw"><span>Dịch sang (tiếng mẹ đẻ)</span><select id="trLang"></select></div>
+    <div class="sw"><span>Cách dịch</span><select id="trEng">
+      <option value="google">Google Dịch – nhanh, cần mạng</option>
+      <option value="gemini">Gemini AI – tự nhiên nhất, cần API key</option>
+      <option value="local">AI trên máy – offline (chỉ Anh → Việt)</option>
+    </select></div>
+    <div id="gemBox">
+     <input id="gemKey" placeholder="Gemini API key (AIza…) – lấy tại aistudio.google.com" autocomplete="off" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin:4px 0">
+     <input id="gemModel" placeholder="Tên mô hình" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px">
+     <input id="imgModel" placeholder="Mô hình vẽ hình minh họa (mặc định gemini-2.5-flash-image)" style="width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;margin-top:4px">
+    </div>
+    <div class="sw"><span>Tự dịch các câu chưa có bản dịch (sau khi AI nhận dạng, khi mở bài)</span><button class="tg" id="autoTrT"></button></div>
+    <div class="mu">AI trên máy tải mô hình khoảng 80 MB ở lần đầu, chất lượng dịch kém hơn Google/Gemini. Nếu Google Dịch lỗi, app tự chuyển sang AI trên máy.</div>
    </div>
    <h3>Tự động khớp chữ (AI)</h3>
    <div class="card mu">Dùng mô hình nhận dạng giọng nói Whisper chạy ngay trên máy (không cần tài khoản, không gửi âm thanh đi đâu). Lần đầu cần mạng để tải mô hình, sau đó được lưu lại. Trên điện thoại, 1 phút âm thanh mất khoảng 20–60 giây xử lý.</div>
@@ -641,7 +641,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.1';
+const APP_VER='1.0.1-beta.2';
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
