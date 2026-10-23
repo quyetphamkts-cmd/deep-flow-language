@@ -68,4 +68,17 @@ if (!cb.includes('onCustomAction')) {
     '    @Override\n    public void onCustomAction(String action, android.os.Bundle extras) {\n        plugin.actionCallback(action);\n    }\n\n    @Override\n    public void onStop() {', 'onCustomAction');
   fs.writeFileSync(cbF, cb);
 }
+// thông báo chỉ giữ 5 nút: chế độ · bài trước · phát/dừng · bài sau · tắt (bỏ tua ±30s và nút dừng)
+if (!svc.includes('DF_FIVE')) {
+  svc = rep(svc, '                    if (notificationActions.containsKey(actionName)) {',
+    '                    if (notificationActions.containsKey(actionName) && !actionName.startsWith("seek") && !actionName.equals("stop")) { // DF_FIVE', 'five actions');
+  fs.writeFileSync(svcF, svc);
+}
+// thông tin chẩn đoán để app hiển thị trong Cài đặt
+if (!svc.includes('dfDiag')) {
+  svc = rep(svc, '    private void dfAddCustom(PlaybackStateCompat.Builder b) {\n        try {\n',
+    '    public static volatile String dfDiag = "chưa khởi tạo";\n    private void dfAddCustom(PlaybackStateCompat.Builder b) {\n        try {\n' +
+    '            dfDiag = "sdk=" + Build.VERSION.SDK_INT + " icMode=" + dfIcon("dfmode") + " icClose=" + dfIcon("dfclose") + " hMode=" + (plugin != null && plugin.hasActionHandler("dfmode")) + " hClose=" + (plugin != null && plugin.hasActionHandler("dfclose")) + " t=" + System.currentTimeMillis() / 1000;\n', 'diag');
+  fs.writeFileSync(svcF, svc);
+}
 console.log('[patch-media-session] OK');

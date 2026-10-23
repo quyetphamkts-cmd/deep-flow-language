@@ -1,16 +1,25 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.14",
- "notes": "Phiên âm IPA chuẩn; số tốc độ phía trên thanh kéo; sửa thông báo phát nhạc.",
+ "ver": "1.0.1-beta.15",
+ "notes": "Tự chuyển mô hình / Google Dịch / Whisper khi Gemini hết lượt; sửa nút trên thông báo (cần APK mới).",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
-  "versionCode": 7,
-  "versionName": "1.0.1-beta.14",
+  "versionCode": 8,
+  "versionName": "1.0.1-beta.15",
   "required": false,
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.15",
+   "d": "23/10/2026",
+   "items": [
+    "Gemini hết lượt: tự chuyển sang mô hình nhẹ hơn (gemini-2.5-flash-lite…); hết cả thì dịch bằng Google Dịch (rồi AI trên máy), tạo phụ đề bằng Whisper Base trên máy",
+    "Hiện một dòng trạng thái “Gemini đang hết lượt — tạm dùng …” kèm giờ tự quay lại Gemini; hết hạn chờ app tự dùng lại Gemini",
+    "Thông báo phát nhạc chỉ giữ 5 nút: chế độ phát · bài trước · phát/dừng · bài sau · tắt (cần APK mới); thêm dòng chẩn đoán trong Cài đặt → Phiên bản"
+   ]
+  },
   {
    "v": "1.0.1-beta.14",
    "d": "23/10/2026",

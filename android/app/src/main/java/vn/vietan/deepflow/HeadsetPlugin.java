@@ -65,6 +65,17 @@ public class HeadsetPlugin extends Plugin {
         call.resolve();
     }
 
+    /** Chẩn đoán nút trên thông báo phát nhạc (đọc từ plugin media-session đã vá) */
+    @PluginMethod
+    public void getDiag(PluginCall call) {
+        JSObject r = new JSObject();
+        try {
+            Class<?> c = Class.forName("io.github.jofr.capacitor.mediasessionplugin.MediaSessionService");
+            r.put("diag", String.valueOf(c.getField("dfDiag").get(null)));
+        } catch (Exception e) { r.put("diag", "lỗi: " + e); }
+        call.resolve(r);
+    }
+
     /** App web báo đang phát hay dừng (để giữ app chạy tiếp khi người dùng vuốt tắt app) */
     @PluginMethod
     public void setPlaying(PluginCall call) {
