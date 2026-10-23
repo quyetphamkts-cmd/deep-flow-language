@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.25",
- "notes": "Thông tin album và bài thu vào nút (i).",
+ "ver": "1.0.1-beta.26",
+ "notes": "Chọn nhiều bài hoặc cả thư mục; tên bài hiện đầy đủ.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.26",
+   "d": "23/10/2026",
+   "items": [
+    "Nút ＋📁 Thư mục cho chọn: nhiều bài (file lẻ) hoặc cả thư mục",
+    "Tên bài và tên album hiện đầy đủ (xuống dòng), không còn bị cắt đuôi"
+   ]
+  },
   {
    "v": "1.0.1-beta.25",
    "d": "23/10/2026",
