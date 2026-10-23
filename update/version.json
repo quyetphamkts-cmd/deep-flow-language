@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.32",
- "notes": "Đổi tên mục bài học; tự chuyển album sắp tới lên đang học.",
+ "ver": "1.0.1-beta.33",
+ "notes": "Giữ nút ⋯ rồi kéo lên/xuống để sắp xếp bài trong album, album hoặc bài lẻ trong cùng mục · Menu album gọn lại: Mục tiêu học · Biểu đồ · Đổi tên · Trạng thái · Đánh dấu cả album đã học · Xoá album (có xác nhận) · “Bài học sắp tới” đổi thành “Bài học tiếp theo”; album mới thêm vào tự nằm ở Bài học tiếp theo · Bài lẻ (không có album) nằm ở mục mới 📥 Chưa có album; từ ⋯ của bài có thể đưa riêng bài đó vào Bài đang học / Bài học tiếp theo / Bài đã học và kéo sắp xếp thứ tự cùng các album · Chọn nhiều bài → nút 📁 Album để gom các bài thành một album (nhóm bài học) hoặc thêm vào album có sẵn",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,17 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.33",
+   "d": "23/10/2026",
+   "items": [
+    "Giữ nút ⋯ rồi kéo lên/xuống để sắp xếp bài trong album, album hoặc bài lẻ trong cùng mục",
+    "Menu album gọn lại: Mục tiêu học · Biểu đồ · Đổi tên · Trạng thái · Đánh dấu cả album đã học · Xoá album (có xác nhận)",
+    "“Bài học sắp tới” đổi thành “Bài học tiếp theo”; album mới thêm vào tự nằm ở Bài học tiếp theo",
+    "Bài lẻ (không có album) nằm ở mục mới 📥 Chưa có album; từ ⋯ của bài có thể đưa riêng bài đó vào Bài đang học / Bài học tiếp theo / Bài đã học và kéo sắp xếp thứ tự cùng các album",
+    "Chọn nhiều bài → nút 📁 Album để gom các bài thành một album (nhóm bài học) hoặc thêm vào album có sẵn"
+   ]
+  },
   {
    "v": "1.0.1-beta.32",
    "d": "23/10/2026",

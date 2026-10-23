@@ -192,6 +192,7 @@ textarea{width:100%;min-height:200px;background:var(--bg);border:1px solid var(-
 .stp b{font-size:22px;min-width:36px;text-align:center;font-variant-numeric:tabular-nums}
 .stp span{flex:1;font-size:13px;color:var(--mu)}
 .alb .hlp{margin:0 2px 0 0}
+.more[data-m],.more[data-ra]{touch-action:none}.dragrow{position:relative;z-index:6;box-shadow:0 10px 26px rgba(0,0,0,.45);opacity:.95;transition:none!important;background:var(--p2)}
 .goal{margin:-4px 0 8px 22px}.goal .mu{font-size:12px}.goal .abar{margin-top:3px}
 .alb{display:flex;align-items:center;gap:8px;margin:16px 0 8px}
 .alb h4{margin:0;font-size:14px;flex:1;min-width:0;line-height:1.35;overflow-wrap:anywhere}
@@ -199,7 +200,7 @@ textarea{width:100%;min-height:200px;background:var(--bg);border:1px solid var(-
 .sect{display:flex;align-items:baseline;gap:8px;margin:22px 0 4px;padding-bottom:6px;border-bottom:1px solid var(--ln);font-weight:800;font-size:15px}
 .sect small{color:var(--mu);font-weight:500;margin-left:auto}
 .sect{cursor:pointer;user-select:none}.sect .chev{width:14px}
-.sect-learn span{color:var(--vi)}.sect-done span{color:#7ee08a}
+.sect-learn span{color:var(--vi)}.sect-inbox span{color:var(--mu,#9aa)}.trk.solo{margin:10px 0 6px;border-left:3px solid var(--acc,#f90)}.trk.solo .nm>div:first-child::before{content:'🎵 ';opacity:.8}.sect-done span{color:#7ee08a}
 .alb h4{cursor:pointer}.chev{display:inline-block;width:14px;color:var(--mu)}
 .alb.col{margin-bottom:2px}
 .aprog{margin:-2px 0 10px 22px}.aprog .mu{font-size:11px;line-height:1.5}
@@ -403,10 +404,10 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
    <div class="stat" id="statCard"></div>
    <div class="mu" id="stoInfo" style="font-size:12px;margin:-4px 2px 8px"></div>
    <div class="libq"><input id="libQ" type="search" placeholder="🔍 Tìm bài hoặc album…" autocomplete="off"><select id="libF" aria-label="Lọc">
-     <option value="all">Tất cả</option><option value="learn">📖 Bài đang học</option><option value="new">📘 Bài học sắp tới</option><option value="done">✅ Bài đã học</option></select></div>
+     <option value="all">Tất cả</option><option value="learn">📖 Bài đang học</option><option value="new">📘 Bài học tiếp theo</option><option value="done">✅ Bài đã học</option><option value="inbox">📥 Chưa có album</option></select></div>
    <div class="help mu" id="tempNote" hidden style="margin:0 0 10px;border:1px solid var(--ac)">⚠️ Trình duyệt đang chặn bộ nhớ nên bài nạp vào chỉ dùng được đến khi đóng trang. Để lưu lâu dài, hãy mở app qua đường link (không mở file trực tiếp) hoặc tắt chế độ ẩn danh.</div>
    <div id="libList"></div>
-   <div class="selbar" id="selBar" hidden><button class="btn" id="selDone" aria-label="Thoát chọn">✕</button><span id="selN" style="flex:1">0</span><button class="btn" id="selAll">Chọn tất cả</button><button class="btn pri" id="selAct">⋯ Thao tác</button></div>
+   <div class="selbar" id="selBar" hidden><button class="btn" id="selDone" aria-label="Thoát chọn">✕</button><span id="selN" style="flex:1">0</span><button class="btn" id="selAll">Chọn tất cả</button><button class="btn" id="selAlb">📁 Album</button><button class="btn pri" id="selAct">⋯ Thao tác</button></div>
   </div>
  </section>
 
@@ -819,9 +820,9 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 
 <script>
 // Phiên bản: x.y.z (chính thức) hoặc x.y.z-beta.N (thử nghiệm, trước bản chính thức x.y.z)
-const APP_VER='1.0.1-beta.32';
+const APP_VER='1.0.1-beta.33';
 // Ghi chú phát hành (mới nhất ở trên)
-const CHANGELOG=[{"v": "1.0.1-beta.32", "d": "23/10/2026", "items": ["Đổi tên mục: Bài đang học · Bài học sắp tới · Bài đã học", "Khi một album chuyển từ Bài đang học sang Bài đã học, app tự đưa album đầu tiên của Bài học sắp tới lên Bài đang học"]},{"v": "1.0.1-beta.31", "d": "23/10/2026", "items": ["Chuỗi ngày học có 4 giai đoạn hình thành thói quen (Đấu tranh 1–7 · Tự ý thức 8–21 · Tự động hóa 22–66 · Khóa thói quen 67–90+) và 12 huy hiệu thưởng ở các mốc 1, 3, 7, 14, 21, 30, 45, 66, 90, 120, 180, 365 ngày; nhận huy hiệu mới sẽ có thông báo chúc mừng"]},{"v": "1.0.1-beta.30", "d": "23/10/2026", "items": ["Mục tiêu album tính theo số ngày: mỗi ngày nghe album từ 30 phút = hoàn thành 1 ngày, đủ 2 giờ = ngày đạt chuẩn ⭐; thanh tên album được tô màu đầy dần theo tiến độ (cả phần đang nghe dở trong ngày)"]},{"v": "1.0.1-beta.29", "d": "23/10/2026", "items": ["Mỗi album đặt được mục tiêu thời gian học (⋯ → 🎯 Đặt mục tiêu): tổng số giờ và hạn hoàn thành; dưới tên album hiện tiến độ, số ngày còn lại và số phút cần học mỗi ngày"]},{"v": "1.0.1-beta.28", "d": "23/10/2026", "items": ["Thư viện: hướng dẫn “Cách nạp bài” thu vào nút (i) ở góc trên bên phải; nút Sao lưu chuyển vào Cài đặt → Tài khoản & lưu trữ → Lưu trữ trên máy"]},{"v": "1.0.1-beta.27", "d": "23/10/2026", "items": ["Nút ＋🔗 Link đổi thành ＋☁️ Cloud"]},{"v": "1.0.1-beta.26", "d": "23/10/2026", "items": ["Nút ＋📁 Thư mục cho chọn: nhiều bài (file lẻ) hoặc cả thư mục", "Tên bài và tên album hiện đầy đủ (xuống dòng), không còn bị cắt đuôi"]},{"v": "1.0.1-beta.25", "d": "23/10/2026", "items": ["Thư viện gọn hơn: thông tin của album và từng bài (tiến độ, số từ, nhãn phụ đề, mức nhớ…) thu vào nút (i) ở mỗi album; bấm (i) để hiện / ẩn toàn bộ thông tin của album đó và các bài bên trong"]},{"v": "1.0.1-beta.24", "d": "23/10/2026", "items": ["Thư viện: bỏ nút ＋ Thêm, thêm dấu cộng vào nút ＋📁 Thư mục và ＋🔗 Link"]},{"v": "1.0.1-beta.23", "d": "23/10/2026", "items": ["Thư viện: hộp thời gian học đổi thành chuỗi ngày học (streak) — số ngày liên tục, các ngày đã học trong tuần, chuỗi dài nhất, tổng thời gian, số bài đã học, số từ vựng"]},{"v": "1.0.1-beta.22", "d": "23/10/2026", "items": ["Hình minh hoạ từ vựng: tìm ảnh giấy phép mở (Openverse, Wikimedia Commons) rồi để AI xem và chọn ảnh hợp nghĩa nhất trong câu; không có ảnh phù hợp thì AI (Gemini) vẽ. Có lựa chọn Nguồn hình ở tab Từ vựng; ảnh hiện cả trong chi tiết từ, kèm ghi nguồn", "Mỗi cấp vốn từ có nút i tròn bên phải để xem mô tả cấp đó", "Đổi “Ngôn ngữ ứng dụng” thành “Ngôn ngữ phần mềm”"]},{"v": "1.0.1-beta.21", "d": "23/10/2026", "items": ["Sửa lỗi không phát âm thanh khi bấm nghe từ và câu ví dụ: bản APK dùng giọng đọc có sẵn của điện thoại (chạy cả khi không có mạng); bản Chrome dùng giọng Google (cần APK mới)"]},{"v": "1.0.1-beta.20", "d": "23/10/2026", "items": ["Thiết lập → 🌐 Tuỳ chọn ngôn ngữ gồm: Ngôn ngữ ứng dụng, Ngôn ngữ cần học, Ngôn ngữ mẹ đẻ"]},{"v": "1.0.1-beta.19", "d": "23/10/2026", "items": ["Sửa nút chế độ phát trên màn hình khoá: bấm là đổi chế độ, biểu tượng đổi theo và hiện tên chế độ mới trong 2–3 giây (cần APK mới)", "“Ẩn câu đang đọc trên màn hình khoá” chuyển vào mục Tiết kiệm pin; bật Chế độ tiết kiệm pin là tự ẩn, tắt thì chữ chạy lại"]},{"v": "1.0.1-beta.18", "d": "23/10/2026", "items": ["Cài đặt chia 3 nhóm: ⚙️ Thiết lập (Màn hình khoá, Giao diện, Chế độ phát, Âm thanh, Tiết kiệm pin, Ngôn ngữ phần mềm) · 👤 Tài khoản & lưu trữ (Ngôn ngữ học / mẹ đẻ, Dịch tự động, Tài khoản & đồng bộ, Lưu trữ, API) · ℹ️ Phiên bản", "Thêm Chế độ tiết kiệm pin", "Tra từ (cả khi chạm vào từ trong danh sách từ theo trình độ): hiện thêm câu ví dụ song ngữ theo tình huống, có nút nghe; lưu từ sẽ lưu luôn các ví dụ"]},{"v": "1.0.1-beta.17", "d": "23/10/2026", "items": ["Tích hợp Claude và ChatGPT cùng Gemini: app tự chọn AI mạnh nhất cho từng việc (Claude dịch & giải nghĩa, ChatGPT Whisper tạo phụ đề có mốc thời gian chính xác, Gemini dự phòng/miễn phí); AI nào hết lượt thì chuyển AI khác, hết tất cả mới dùng Google Dịch / Whisper trên máy. Cài đặt → 🔑 API key có chế độ Hiệu quả nhất / Tiết kiệm", "Vốn từ theo trình độ: CEFR A1–C2 (tiếng Anh, Pháp, Đức, Tây Ban Nha, Ý, Nga), HSK 3.0 (Trung), JLPT (Nhật), TOPIK (Hàn); ước tính trình độ vốn từ hiện tại; xem từ mới của từng cấp", "Từ vựng: chạm vào từ để xem chi tiết — nghĩa, câu trong bài (nghe lại được) và ví dụ song ngữ theo nhiều tình huống", "“Đã thuộc” đổi thành “Đã học”; khi đánh dấu đã học chọn mức nhớ (%), mục Đã học xếp bài/album nhớ ít lên trước để ôn lại", "Đồng bộ Google Drive hoàn toàn tự động, chỉ cần chọn Bài học hoặc Bài học + âm thanh", "Chạy nền tiết kiệm pin hơn: không vẽ giao diện khi tắt màn hình / ở nền, giảm số lần ghi dữ liệu", "Nhận diện câu dịch tiếng Việt chính xác hơn khi học tiếng Pháp, Tây Ban Nha, Ý, Đức…; bỏ mục ghi chú “Tự động khớp chữ (AI)”", "Cài đặt: tách “🌐 Ngôn ngữ” (ngôn ngữ học, ngôn ngữ mẹ đẻ) và “🔤 Dịch tự động”; tách “🤖 API AI” (nghe, chép lời, dịch — thêm Claude/ChatGPT bằng nút ＋ Thêm AI khác) và “🔑 API lưu trữ — Google Drive”"]}, {"v": "1.0.1-beta.16", "d": "23/10/2026", "items": ["Từ vựng → 📚 Vốn từ theo gói 600 · 1000 · 1500 · 2000 · 3000 · 5000 từ tiếng Anh thông dụng nhất: tự đối chiếu với các bài đã học, chia Đã thuộc / Đang học / Chưa học, chạm vào gói để xem từng từ và tra nghĩa"]}, {"v": "1.0.1-beta.15", "d": "23/10/2026", "items": ["Gemini hết lượt: tự chuyển sang mô hình nhẹ hơn (gemini-2.5-flash-lite…); hết cả thì dịch bằng Google Dịch (rồi AI trên máy), tạo phụ đề bằng Whisper Base trên máy", "Hiện một dòng trạng thái “Gemini đang hết lượt — tạm dùng …” kèm giờ tự quay lại Gemini; hết hạn chờ app tự dùng lại Gemini", "Thông báo phát nhạc chỉ giữ 5 nút: chế độ phát · bài trước · phát/dừng · bài sau · tắt (cần APK mới); thêm dòng chẩn đoán trong Cài đặt → Phiên bản"]}, {"v": "1.0.1-beta.14", "d": "23/10/2026", "items": ["Tra từ: phiên âm tiếng Anh hiện đúng ký hiệu IPA dạng /…/ (lấy từ từ điển), không còn kiểu phiên âm của Google Dịch; dùng phông chữ hiển thị đủ ký tự IPA", "Bảng tốc độ: số tốc độ nằm phía trên thanh kéo và có nhãn chạy theo nút kéo, không bị ngón tay che", "Thông báo phát nhạc: bỏ dấu “-” thừa ở dòng dưới; bản APK mới có nút chế độ phát và nút tắt"]}, {"v": "1.0.1-beta.13", "d": "23/10/2026", "items": ["Tốc độ phát: các nút 0.5× · 0.75× · 1× · 1.5× · 2× (bấm nút Tốc độ để chuyển lần lượt), thanh kéo từ 0.5× đến 2×, mỗi nấc 0.05×"]}, {"v": "1.0.1-beta.12", "d": "23/10/2026", "items": ["Thông báo phát nhạc / màn hình khoá có thêm nút chế độ phát (bên trái, đổi biểu tượng theo chế độ) và nút tắt (bên phải) — cần cài APK mới", "Bỏ vạch màu cam giữa sóng âm dưới nút Play", "Sửa chữ các chế độ phát và chế độ phụ đề cho rõ nghĩa", "Góc trên bên phải hiện tổng số album và số bài", "Nhấn giữ vào nút không còn bị bôi đen chữ / hiện menu Dịch – Chép"]}, {"v": "1.0.1-beta.11", "d": "23/10/2026", "items": ["Sóng âm kiểu thanh bo tròn (giống Poweramp): phần sắp phát sáng, phần đã phát mờ, vạch mốc dọc bo tròn ở giữa; thời gian đang phát / tổng thời gian chữ to hơn"]}, {"v": "1.0.1-beta.10", "d": "23/10/2026", "items": ["Thanh phát nhỏ ở Thư viện / Từ vựng hiện sóng âm cả bài: phần đã nghe màu cam, chạm hoặc kéo trên sóng để tua"]}, {"v": "1.0.1-beta.9", "d": "23/10/2026", "items": ["Màn hình Nghe mới: tên bài nằm dưới phụ đề; 5 nút nhỏ gọn (Chế độ phát · Tốc độ · 🎙 Luyện nói · Phụ đề · Hẹn giờ) ngay trên nút Play", "Chế độ phát dạng biểu tượng, bấm để chuyển lần lượt, nhấn giữ để chọn: Phát 1 bài · Phát hết album · Phát hết mục Đang học · Lặp bài · Lặp album · Lặp mục Đang học", "Nút Tốc độ và Phụ đề: bấm để chuyển nhanh, nhấn giữ để chọn", "Nút 🎙 Luyện nói gom: nghe lại mỗi câu, dừng để nói lại, nói đuổi (shadowing), chấm phát âm, luyện câu đang nghe", "Thanh tiến trình thành biểu đồ sóng âm chìm dưới nút Play: kéo vùng trống sang trái/phải để tua (các nút tạm ẩn khi kéo); thời gian đang phát bên trái, tổng thời gian bên phải", "Tra từ: hiện nghĩa nhanh trong lúc chờ, không còn treo ở “Đang tra…”; nút đọc từ dùng giọng Google nên đọc được trong bản APK", "Tạo phụ đề nhiều bài: bài lỗi không làm dừng cả hàng chờ (tự thử lại 1 lần), tự chờ khi Gemini giới hạn lượt gọi, báo tổng kết khi xong", "Màn hình khoá: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn tên bài chữ nhỏ", "Nút thông tin trong Cài đặt đổi thành chữ i"]}, {"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]}, {"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]}, {"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]}, {"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]}, {"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]}, {"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]}, {"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
+const CHANGELOG=[{"v": "1.0.1-beta.33", "d": "23/10/2026", "items": ["Giữ nút ⋯ rồi kéo lên/xuống để sắp xếp bài trong album, album hoặc bài lẻ trong cùng mục", "Menu album gọn lại: Mục tiêu học · Biểu đồ · Đổi tên · Trạng thái · Đánh dấu cả album đã học · Xoá album (có xác nhận)", "“Bài học sắp tới” đổi thành “Bài học tiếp theo”; album mới thêm vào tự nằm ở Bài học tiếp theo", "Bài lẻ (không có album) nằm ở mục mới 📥 Chưa có album; từ ⋯ của bài có thể đưa riêng bài đó vào Bài đang học / Bài học tiếp theo / Bài đã học và kéo sắp xếp thứ tự cùng các album", "Chọn nhiều bài → nút 📁 Album để gom các bài thành một album (nhóm bài học) hoặc thêm vào album có sẵn"]},{"v": "1.0.1-beta.32", "d": "23/10/2026", "items": ["Đổi tên mục: Bài đang học · Bài học sắp tới · Bài đã học", "Khi một album chuyển từ Bài đang học sang Bài đã học, app tự đưa album đầu tiên của Bài học sắp tới lên Bài đang học"]},{"v": "1.0.1-beta.31", "d": "23/10/2026", "items": ["Chuỗi ngày học có 4 giai đoạn hình thành thói quen (Đấu tranh 1–7 · Tự ý thức 8–21 · Tự động hóa 22–66 · Khóa thói quen 67–90+) và 12 huy hiệu thưởng ở các mốc 1, 3, 7, 14, 21, 30, 45, 66, 90, 120, 180, 365 ngày; nhận huy hiệu mới sẽ có thông báo chúc mừng"]},{"v": "1.0.1-beta.30", "d": "23/10/2026", "items": ["Mục tiêu album tính theo số ngày: mỗi ngày nghe album từ 30 phút = hoàn thành 1 ngày, đủ 2 giờ = ngày đạt chuẩn ⭐; thanh tên album được tô màu đầy dần theo tiến độ (cả phần đang nghe dở trong ngày)"]},{"v": "1.0.1-beta.29", "d": "23/10/2026", "items": ["Mỗi album đặt được mục tiêu thời gian học (⋯ → 🎯 Đặt mục tiêu): tổng số giờ và hạn hoàn thành; dưới tên album hiện tiến độ, số ngày còn lại và số phút cần học mỗi ngày"]},{"v": "1.0.1-beta.28", "d": "23/10/2026", "items": ["Thư viện: hướng dẫn “Cách nạp bài” thu vào nút (i) ở góc trên bên phải; nút Sao lưu chuyển vào Cài đặt → Tài khoản & lưu trữ → Lưu trữ trên máy"]},{"v": "1.0.1-beta.27", "d": "23/10/2026", "items": ["Nút ＋🔗 Link đổi thành ＋☁️ Cloud"]},{"v": "1.0.1-beta.26", "d": "23/10/2026", "items": ["Nút ＋📁 Thư mục cho chọn: nhiều bài (file lẻ) hoặc cả thư mục", "Tên bài và tên album hiện đầy đủ (xuống dòng), không còn bị cắt đuôi"]},{"v": "1.0.1-beta.25", "d": "23/10/2026", "items": ["Thư viện gọn hơn: thông tin của album và từng bài (tiến độ, số từ, nhãn phụ đề, mức nhớ…) thu vào nút (i) ở mỗi album; bấm (i) để hiện / ẩn toàn bộ thông tin của album đó và các bài bên trong"]},{"v": "1.0.1-beta.24", "d": "23/10/2026", "items": ["Thư viện: bỏ nút ＋ Thêm, thêm dấu cộng vào nút ＋📁 Thư mục và ＋🔗 Link"]},{"v": "1.0.1-beta.23", "d": "23/10/2026", "items": ["Thư viện: hộp thời gian học đổi thành chuỗi ngày học (streak) — số ngày liên tục, các ngày đã học trong tuần, chuỗi dài nhất, tổng thời gian, số bài đã học, số từ vựng"]},{"v": "1.0.1-beta.22", "d": "23/10/2026", "items": ["Hình minh hoạ từ vựng: tìm ảnh giấy phép mở (Openverse, Wikimedia Commons) rồi để AI xem và chọn ảnh hợp nghĩa nhất trong câu; không có ảnh phù hợp thì AI (Gemini) vẽ. Có lựa chọn Nguồn hình ở tab Từ vựng; ảnh hiện cả trong chi tiết từ, kèm ghi nguồn", "Mỗi cấp vốn từ có nút i tròn bên phải để xem mô tả cấp đó", "Đổi “Ngôn ngữ ứng dụng” thành “Ngôn ngữ phần mềm”"]},{"v": "1.0.1-beta.21", "d": "23/10/2026", "items": ["Sửa lỗi không phát âm thanh khi bấm nghe từ và câu ví dụ: bản APK dùng giọng đọc có sẵn của điện thoại (chạy cả khi không có mạng); bản Chrome dùng giọng Google (cần APK mới)"]},{"v": "1.0.1-beta.20", "d": "23/10/2026", "items": ["Thiết lập → 🌐 Tuỳ chọn ngôn ngữ gồm: Ngôn ngữ ứng dụng, Ngôn ngữ cần học, Ngôn ngữ mẹ đẻ"]},{"v": "1.0.1-beta.19", "d": "23/10/2026", "items": ["Sửa nút chế độ phát trên màn hình khoá: bấm là đổi chế độ, biểu tượng đổi theo và hiện tên chế độ mới trong 2–3 giây (cần APK mới)", "“Ẩn câu đang đọc trên màn hình khoá” chuyển vào mục Tiết kiệm pin; bật Chế độ tiết kiệm pin là tự ẩn, tắt thì chữ chạy lại"]},{"v": "1.0.1-beta.18", "d": "23/10/2026", "items": ["Cài đặt chia 3 nhóm: ⚙️ Thiết lập (Màn hình khoá, Giao diện, Chế độ phát, Âm thanh, Tiết kiệm pin, Ngôn ngữ phần mềm) · 👤 Tài khoản & lưu trữ (Ngôn ngữ học / mẹ đẻ, Dịch tự động, Tài khoản & đồng bộ, Lưu trữ, API) · ℹ️ Phiên bản", "Thêm Chế độ tiết kiệm pin", "Tra từ (cả khi chạm vào từ trong danh sách từ theo trình độ): hiện thêm câu ví dụ song ngữ theo tình huống, có nút nghe; lưu từ sẽ lưu luôn các ví dụ"]},{"v": "1.0.1-beta.17", "d": "23/10/2026", "items": ["Tích hợp Claude và ChatGPT cùng Gemini: app tự chọn AI mạnh nhất cho từng việc (Claude dịch & giải nghĩa, ChatGPT Whisper tạo phụ đề có mốc thời gian chính xác, Gemini dự phòng/miễn phí); AI nào hết lượt thì chuyển AI khác, hết tất cả mới dùng Google Dịch / Whisper trên máy. Cài đặt → 🔑 API key có chế độ Hiệu quả nhất / Tiết kiệm", "Vốn từ theo trình độ: CEFR A1–C2 (tiếng Anh, Pháp, Đức, Tây Ban Nha, Ý, Nga), HSK 3.0 (Trung), JLPT (Nhật), TOPIK (Hàn); ước tính trình độ vốn từ hiện tại; xem từ mới của từng cấp", "Từ vựng: chạm vào từ để xem chi tiết — nghĩa, câu trong bài (nghe lại được) và ví dụ song ngữ theo nhiều tình huống", "“Đã thuộc” đổi thành “Đã học”; khi đánh dấu đã học chọn mức nhớ (%), mục Đã học xếp bài/album nhớ ít lên trước để ôn lại", "Đồng bộ Google Drive hoàn toàn tự động, chỉ cần chọn Bài học hoặc Bài học + âm thanh", "Chạy nền tiết kiệm pin hơn: không vẽ giao diện khi tắt màn hình / ở nền, giảm số lần ghi dữ liệu", "Nhận diện câu dịch tiếng Việt chính xác hơn khi học tiếng Pháp, Tây Ban Nha, Ý, Đức…; bỏ mục ghi chú “Tự động khớp chữ (AI)”", "Cài đặt: tách “🌐 Ngôn ngữ” (ngôn ngữ học, ngôn ngữ mẹ đẻ) và “🔤 Dịch tự động”; tách “🤖 API AI” (nghe, chép lời, dịch — thêm Claude/ChatGPT bằng nút ＋ Thêm AI khác) và “🔑 API lưu trữ — Google Drive”"]}, {"v": "1.0.1-beta.16", "d": "23/10/2026", "items": ["Từ vựng → 📚 Vốn từ theo gói 600 · 1000 · 1500 · 2000 · 3000 · 5000 từ tiếng Anh thông dụng nhất: tự đối chiếu với các bài đã học, chia Đã thuộc / Đang học / Chưa học, chạm vào gói để xem từng từ và tra nghĩa"]}, {"v": "1.0.1-beta.15", "d": "23/10/2026", "items": ["Gemini hết lượt: tự chuyển sang mô hình nhẹ hơn (gemini-2.5-flash-lite…); hết cả thì dịch bằng Google Dịch (rồi AI trên máy), tạo phụ đề bằng Whisper Base trên máy", "Hiện một dòng trạng thái “Gemini đang hết lượt — tạm dùng …” kèm giờ tự quay lại Gemini; hết hạn chờ app tự dùng lại Gemini", "Thông báo phát nhạc chỉ giữ 5 nút: chế độ phát · bài trước · phát/dừng · bài sau · tắt (cần APK mới); thêm dòng chẩn đoán trong Cài đặt → Phiên bản"]}, {"v": "1.0.1-beta.14", "d": "23/10/2026", "items": ["Tra từ: phiên âm tiếng Anh hiện đúng ký hiệu IPA dạng /…/ (lấy từ từ điển), không còn kiểu phiên âm của Google Dịch; dùng phông chữ hiển thị đủ ký tự IPA", "Bảng tốc độ: số tốc độ nằm phía trên thanh kéo và có nhãn chạy theo nút kéo, không bị ngón tay che", "Thông báo phát nhạc: bỏ dấu “-” thừa ở dòng dưới; bản APK mới có nút chế độ phát và nút tắt"]}, {"v": "1.0.1-beta.13", "d": "23/10/2026", "items": ["Tốc độ phát: các nút 0.5× · 0.75× · 1× · 1.5× · 2× (bấm nút Tốc độ để chuyển lần lượt), thanh kéo từ 0.5× đến 2×, mỗi nấc 0.05×"]}, {"v": "1.0.1-beta.12", "d": "23/10/2026", "items": ["Thông báo phát nhạc / màn hình khoá có thêm nút chế độ phát (bên trái, đổi biểu tượng theo chế độ) và nút tắt (bên phải) — cần cài APK mới", "Bỏ vạch màu cam giữa sóng âm dưới nút Play", "Sửa chữ các chế độ phát và chế độ phụ đề cho rõ nghĩa", "Góc trên bên phải hiện tổng số album và số bài", "Nhấn giữ vào nút không còn bị bôi đen chữ / hiện menu Dịch – Chép"]}, {"v": "1.0.1-beta.11", "d": "23/10/2026", "items": ["Sóng âm kiểu thanh bo tròn (giống Poweramp): phần sắp phát sáng, phần đã phát mờ, vạch mốc dọc bo tròn ở giữa; thời gian đang phát / tổng thời gian chữ to hơn"]}, {"v": "1.0.1-beta.10", "d": "23/10/2026", "items": ["Thanh phát nhỏ ở Thư viện / Từ vựng hiện sóng âm cả bài: phần đã nghe màu cam, chạm hoặc kéo trên sóng để tua"]}, {"v": "1.0.1-beta.9", "d": "23/10/2026", "items": ["Màn hình Nghe mới: tên bài nằm dưới phụ đề; 5 nút nhỏ gọn (Chế độ phát · Tốc độ · 🎙 Luyện nói · Phụ đề · Hẹn giờ) ngay trên nút Play", "Chế độ phát dạng biểu tượng, bấm để chuyển lần lượt, nhấn giữ để chọn: Phát 1 bài · Phát hết album · Phát hết mục Đang học · Lặp bài · Lặp album · Lặp mục Đang học", "Nút Tốc độ và Phụ đề: bấm để chuyển nhanh, nhấn giữ để chọn", "Nút 🎙 Luyện nói gom: nghe lại mỗi câu, dừng để nói lại, nói đuổi (shadowing), chấm phát âm, luyện câu đang nghe", "Thanh tiến trình thành biểu đồ sóng âm chìm dưới nút Play: kéo vùng trống sang trái/phải để tua (các nút tạm ẩn khi kéo); thời gian đang phát bên trái, tổng thời gian bên phải", "Tra từ: hiện nghĩa nhanh trong lúc chờ, không còn treo ở “Đang tra…”; nút đọc từ dùng giọng Google nên đọc được trong bản APK", "Tạo phụ đề nhiều bài: bài lỗi không làm dừng cả hàng chờ (tự thử lại 1 lần), tự chờ khi Gemini giới hạn lượt gọi, báo tổng kết khi xong", "Màn hình khoá: phụ đề hiện từng đoạn 1 dòng, cùng cỡ chữ to, không còn tên bài chữ nhỏ", "Nút thông tin trong Cài đặt đổi thành chữ i"]}, {"v": "1.0.1-beta.8", "d": "23/10/2026", "items": ["Xoá API key: hộp thoại xác nhận nói rõ hậu quả, nút Xoá key màu đỏ để tránh bấm nhầm"]}, {"v": "1.0.1-beta.7", "d": "23/10/2026", "items": ["Cài đặt gọn hơn: ghi chú và hướng dẫn được thu gọn, bấm nút (!) tròn ở tiêu đề mỗi mục để mở ra hoặc thu lại", "Mục Phiên bản & cập nhật chuyển xuống cuối Cài đặt", "App kiểm tra bản mới mỗi lần mở (và khi quay lại app sau 15 phút); có bản mới thì hiện chấm đỏ ở nút Cài đặt và nút Cập nhật / Tải APK ngay trong mục Phiên bản"]}, {"v": "1.0.1-beta.6", "d": "23/10/2026", "items": ["Cài đặt → Chạy nền: thêm công tắc “Phát dưới nền khi thoát ứng dụng” — tắt đi thì rời app là dừng phát (bản APK: tắt màn hình vẫn phát tiếp)", "Công tắc “Tự phát tiếp khi mở lại app” đặt ngay bên dưới, bật/tắt tuỳ ý"]}, {"v": "1.0.1-beta.5", "d": "23/10/2026", "items": ["Mục mới 🔑 API key trong Cài đặt: gom Gemini key và Google Drive key, kèm hướng dẫn từng bước cách tự lấy key miễn phí", "Nhập key qua nút Nhập key → 📋 Dán → OK; app kiểm tra key ngay và báo lỗi cụ thể nếu sai. Key đã lưu hiện dạng khoá 🔒, không sửa nhầm được (muốn thay thì bấm Đổi key)", "Bản APK: key được lưu theo tài khoản Google đăng nhập — máy khác đăng nhập cùng tài khoản tự có key; đăng xuất thì key được gỡ khỏi máy", "File sao lưu không còn chứa API key"]}, {"v": "1.0.1-beta.4", "d": "23/10/2026", "items": ["Mở app là tự phát tiếp bài đang nghe dở, đúng vị trí đã dừng (tắt được trong Cài đặt → Chạy nền)", "Tạo phụ đề bằng Gemini: chia đoạn ngắn hơn (1 phút) để nhanh hơn, hiện thời gian đã chờ, tự huỷ và báo lỗi rõ ràng nếu Gemini không phản hồi", "Bản APK: vuốt tắt app khi đang phát thì nhạc vẫn chạy tiếp; mở lại app sẽ nối tiếp bài đang nghe"]}, {"v": "1.0.1-beta.3", "d": "23/10/2026", "items": ["Nhấn giữ một bài rồi kéo lên/xuống (không nhấc tay) để chọn liền nhiều bài; kéo tới mép màn hình thì danh sách tự cuộn"]}, {"v": "1.0.1-beta.2", "d": "23/10/2026", "items": ["Sửa lỗi trong bản APK: đăng nhập Google, đồng bộ Drive, phát dưới nền và điều khiển ở màn hình khoá giờ đã hoạt động", "App xin quyền thông báo để hiện điều khiển phát nhạc (Android 13 trở lên)", "Mục Ngôn ngữ & dịch tự động chuyển xuống dưới mục Google Drive", "Thêm ghi chú phát hành trong Cài đặt → Phiên bản & cập nhật"]}, {"v": "1.0.1-beta.1", "d": "23/10/2026", "items": ["Nhấn giữ một bài trong Thư viện để chọn nhiều bài: chuyển album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá bản tải, đánh dấu đã thuộc, xoá", "Nạp cả thư mục Google Drive mà không phải tải hết âm thanh về máy", "Tự quản lý bộ nhớ: bài đang học tự tải về, bài đã học xong chỉ giữ phụ đề và nghe lại từ Drive", "EQ tắt thì tự ẩn các thanh chỉnh", "Đánh số phiên bản kiểu beta trước khi phát hành chính thức"]}, {"v": "1.0.0", "d": "23/10/2026", "items": ["Bản đầu tiên của Deep Flow Language dạng ứng dụng Android (APK)"]}];
 const verLabel=v=>String(v).replace(/-beta\.(\d+)$/,' beta $1');
 document.addEventListener('DOMContentLoaded',()=>{const v=document.getElementById('verWeb');if(v)v.textContent=verLabel(APP_VER);});
 /*PURE*/
@@ -1208,7 +1209,7 @@ function schedulePolicy(ms){clearTimeout(polTimer);polTimer=setTimeout(applyStor
 async function applyStoragePolicy(){
   if(polBusy||S.autoSto===false||!navigator.onLine&&false)return;polBusy=true;
   try{
-    const all=albums();let freed=0,got=0;
+    const all=units();let freed=0,got=0;
     for(const [a,list] of all){
       const st=albumInfo(a,list).status;
       if(st==='done'){
@@ -1468,7 +1469,7 @@ const msOn=()=>!S.eco&&!S.msHide;
 if(!S.asrMig){S.asrMig=1;if(S.asr==='gemini')S.asr='auto';}
 if(!S.pm){S.pm={off:'album',one:'r1',album:'ralb',all:'rlearn'}[S.rpScope]||'ralb';}
 const pmRep=()=>['r1','ralb','rlearn'].includes(S.pm);
-function learnQueue(){const out=[];for(const [a,l] of albums())if(albumInfo(a,l).status==='learn')out.push(...l);return out;}
+function learnQueue(){const out=[];for(const [a,l] of units())if(albumInfo(a,l).status==='learn')out.push(...l);return out;}
 function queue(){if(!cur)return tracks;const alb=libOrder().filter(t=>albumOf(t)===albumOf(cur));
   if(S.pm==='learn'||S.pm==='rlearn'){const q=learnQueue();if(q.includes(cur))return q;}
   return alb;}
@@ -1816,9 +1817,15 @@ function sortAlb(a,list){
   return l.sort(byName);
 }
 function libOrder(){return albums().flatMap(a=>a[1]);}
+// Đơn vị học: mỗi album là 1 danh sách; bài lẻ (chưa có album) là 1 đơn vị riêng, có trạng thái riêng
+const unitKey=t=>albumOf(t)||'#'+t.id;
+const unitName=k=>k.startsWith('#')?((tracks.find(t=>'#'+t.id===k)||{}).name||'Bài lẻ'):(k||'Chưa có album');
+function units(){const out=[];for(const [a,l] of albums()){if(a)out.push([a,l]);else for(const t of l)out.push(['#'+t.id,[t]]);}
+  const ord=S.albOrder||[];const ix=(k,i)=>{const j=ord.indexOf(k);return j<0?1e6+i:j;};const w=new Map(out.map((u,i)=>[u[0],ix(u[0],i)]));
+  return out.sort((x,y)=>w.get(x[0])-w.get(y[0]));}
 let reorderAlb=null;
 // ----- Trạng thái album: Chưa học / Đang học / Đã học xong -----
-const STATUS=[['learn','📖 Bài đang học'],['new','📘 Bài học sắp tới'],['done','✅ Bài đã học']];
+const STATUS=[['learn','📖 Bài đang học'],['new','📘 Bài học tiếp theo'],['done','✅ Bài đã học']];
 function durTxt(days){days=Math.max(1,Math.round(days));if(days<7)return days+' ngày';if(days<30){const w=Math.floor(days/7),d=days%7;return w+' tuần'+(d?' '+d+' ngày':'');}const m=Math.floor(days/30),w=Math.floor(days%30/7);return m+' tháng'+(w?' '+w+' tuần':'');}
 function albumInfo(a,list){
   const st=list.map(t=>t.st||{});
@@ -1829,6 +1836,7 @@ function albumInfo(a,list){
   const first=firsts.length?Math.min(...firsts):null,last=lasts.length?Math.max(...lasts):null;
   const passes=list.length?Math.min(...st.map(x=>x.plays||0)):0;
   let status=(S.albStatus||{})[a];
+  if(!status&&a.startsWith('#'))status=done?'done':'inbox';
   if(!status)status=list.length&&done===list.length?'done':(sec>=60||done>0)?'learn':'new';
   const doneAt=(S.albDoneAt||{})[a]||last;
   const span=first?((status==='done'?doneAt:Date.now())-first)/864e5+1:0;
@@ -1946,21 +1954,21 @@ function renderLib(){
   renderStats();
   L.classList.toggle('selmode',selMode);$('#selBar').hidden=!selMode;$('#selN').textContent='Đã chọn '+selSet.size;if(selMode&&!selSet.size){selMode=false;L.classList.remove('selmode');$('#selBar').hidden=true;}
   if(!tracks.length){L.innerHTML='<div class="empty">Thư viện trống.</div>';return;}
-  let all=albums();let info=new Map(all.map(([a,l])=>{const x=albumInfo(a,l);x.words=wordSet(l);return [a,x];}));
+  let all=units();let info=new Map(all.map(([a,l])=>{const x=albumInfo(a,l);x.words=wordSet(l);return [a,x];}));
   // album vừa chuyển từ "Bài đang học" sang "Bài đã học" → tự đưa album đầu tiên của "Bài học sắp tới" lên "Bài đang học"
   {const prev=S.albPrevSt||{},nowSt={};let promo=null;for(const [a] of all)nowSt[a]=info.get(a).status;
    const moved=all.some(([a])=>prev[a]==='learn'&&nowSt[a]==='done');
    if(moved&&Object.keys(prev).length){const nx=all.find(([a])=>nowSt[a]==='new');if(nx){S.albStatus={...(S.albStatus||{}),[nx[0]]:'learn'};nowSt[nx[0]]='learn';promo=nx[0];info.get(nx[0]).status='learn';}}
    const changed=JSON.stringify(prev)!==JSON.stringify(nowSt);S.albPrevSt=nowSt;if(changed)save();
-   if(promo){toast('🎉 Học xong album! Đã chuyển “'+(promo||'Chưa có album')+'” sang Bài đang học',4500);schedulePolicy(1500);}}
+   if(promo){toast('🎉 Học xong! Đã chuyển “'+unitName(promo)+'” sang Bài đang học',4500);schedulePolicy(1500);}}
   const searching=!!($('#libQ').value||'').trim()||$('#libF').value!=='all';
   const fs=$('#libF').value;
   const groups=all.map(([a,list])=>[a,list.filter(libMatch)]).filter(g=>g[1].length&&(fs==='all'||info.get(g[0]).status===fs));
   if(!groups.length){L.innerHTML='<div class="empty">Không có bài nào khớp.</div>';return;}
-  const multi=all.length>1||all[0][0]!=='';
+  const multi=true;
   const col=S.albCol||{};
   const isCol=a=>!searching&&(col[a]!=null?col[a]:info.get(a).status==='done');
-  const albumHtml=([a,list])=>{const inf=info.get(a);const c=isCol(a)&&reorderAlb!==a;const io=!multi||searching||!!(S.albInfo||{})[a];return (multi?`<div class="alb${c?' col':''}" style="${goalFill(a)}"><h4 data-tg="${esc(a)}"><span class="chev">${c?'▸':'▾'}</span>📁 ${esc(a||'Chưa có album')} <span class="mu">· ${inf.n} bài</span></h4><button class="hlp${io?' on':''}" data-ai="${esc(a)}" aria-label="Thông tin album và các bài">i</button><button class="pab" data-pa="${esc(a)}" aria-label="Phát album">${cur&&albumOf(cur)===a&&!audio.paused?'❚❚':'▶'}</button><button class="more" data-ra="${esc(a)}" aria-label="Tuỳ chọn album">⋯</button></div>${reorderAlb===a?`<div class="selbar" style="position:static;margin:0 0 8px"><span>Bấm ↑ ↓ để đổi thứ tự bài</span><span style="flex:1"></span><button class="btn pri" data-rdone="1">Xong</button></div>`:''}${goalLine(a)}${io?albumProg(inf):''}`:'')+(c?'':list.map(t=>{
+  const albumHtml=([a,list])=>{const inf=info.get(a);const solo=a.startsWith('#');const c=!solo&&isCol(a)&&reorderAlb!==a;const io=!multi||searching||!!(S.albInfo||{})[a];return ((multi&&!solo?`<div class="alb${c?' col':''}" style="${goalFill(a)}"><h4 data-tg="${esc(a)}"><span class="chev">${c?'▸':'▾'}</span>📁 ${esc(a||'Chưa có album')} <span class="mu">· ${inf.n} bài</span></h4><button class="hlp${io?' on':''}" data-ai="${esc(a)}" aria-label="Thông tin album và các bài">i</button><button class="pab" data-pa="${esc(a)}" aria-label="Phát album">${cur&&albumOf(cur)===a&&!audio.paused?'❚❚':'▶'}</button><button class="more" data-ra="${esc(a)}" aria-label="Tuỳ chọn album">⋯</button></div>${reorderAlb===a?`<div class="selbar" style="position:static;margin:0 0 8px"><span>Bấm ↑ ↓ để đổi thứ tự bài</span><span style="flex:1"></span><button class="btn pri" data-rdone="1">Xong</button></div>`:''}${goalLine(a)}${io?albumProg(inf):''}`:'')+(c?'':list.map(t=>{
     const timed=t.subs&&(t.subs.main||t.subs.en);
     const cloud=!isLocal(t)&&(t.gid||t.audDrive)?'<span class="bdg">☁ Trên Drive</span>':(t.gid&&isLocal(t)?'<span class="bdg ok">📥 Đã tải</span>':'');
     const b=cloud+(t.noAudio&&!t.gid&&!t.audDrive?'<span class="bdg wa">Thiếu âm thanh</span>':'')+(timed?'<span class="bdg ok">Đã khớp thời gian</span>':t.doc?'<span class="bdg wa">Văn bản chưa khớp</span>':'<span class="bdg">Chưa có phụ đề</span>');
@@ -1969,15 +1977,21 @@ function renderLib(){
     const wc=hasSub(t)?trackWords(t):null;const sv=savedIn(t);
     const prog=[st.plays?`▶ ${st.plays} lần`:'',st.sec?Math.round(st.sec/60)+' phút':'',sp!=null?`🎙 ${sp}`:'',wc&&wc.total?`📖 ${wc.total} từ · ${wc.uniq} khác nhau`:'',sv?`⭐ ${sv}`:''].filter(Boolean).join(' · ');
     return `<div class="trk${t===cur?' cur':''}${selSet.has(t.id)?' sel':''}" data-id="${t.id}"><i class="ck"></i><div class="nm"><div>${esc(t.name)}</div>${!io?'':st.done?`<span class="bdg ${st.mem!=null&&st.mem<50?'wa':'dn'}">✓ Đã học${st.mem!=null?' · nhớ '+st.mem+'%':''}</span>`:''}${io?b+tr:''}${io&&prog?`<div class="mu" style="font-size:11px;margin-top:3px">${prog}</div>`:''}</div>${reorderAlb!=null&&albumOf(t)===reorderAlb?`<button class="more" data-up="${t.id}" aria-label="Lên">↑</button><button class="more" data-dn="${t.id}" aria-label="Xuống">↓</button>`:`<button class="tpl" data-pl="${t.id}" aria-label="Phát">${t===cur&&!audio.paused?'❚❚':'▶'}</button><button class="more" data-m="${t.id}">⋯</button>`}</div>`;
-  }).join(''));};
+  }).join(''))).replace(solo?'<div class="trk':'\u0000',solo?'<div class="trk solo':'');};
   if(!multi){L.innerHTML=groups.map(albumHtml).join('');return;}
-  L.innerHTML=STATUS.map(([s,label])=>{let gs=groups.filter(g=>info.get(g[0]).status===s);if(!gs.length)return '';
+  L.innerHTML=[...STATUS,['inbox','📥 Chưa có album']].map(([s,label])=>{let gs=groups.filter(g=>info.get(g[0]).status===s);if(!gs.length)return '';
     if(s==='done'&&S.doneSort!=='off')gs=gs.slice().sort((x,y)=>(info.get(x[0]).mem??101)-(info.get(y[0]).mem??101)); // nhớ ít → lên trên để ôn trước
-    const sc=!searching&&(S.secCol||{})[s];const nb=gs.reduce((n,g)=>n+info.get(g[0]).n,0);const us=new Set();gs.forEach(g=>info.get(g[0]).words.set.forEach(w=>us.add(w)));
-    return `<div class="sect sect-${s}${sc?' col':''}" data-sec="${s}" role="button" aria-expanded="${!sc}"><span class="chev">${sc?'▸':'▾'}</span><span>${label}</span><small>${gs.length} album · ${nb} bài${us.size?' · '+us.size+' từ':''}</small></div>`+(sc?'':gs.map(albumHtml).join(''));}).join('');
+    const sc=!searching&&(S.secCol||{})[s];const nb=gs.reduce((n,g)=>n+info.get(g[0]).n,0);const na=gs.filter(g=>!g[0].startsWith('#')).length;const us=new Set();gs.forEach(g=>info.get(g[0]).words.set.forEach(w=>us.add(w)));
+    return `<div class="sect sect-${s}${sc?' col':''}" data-sec="${s}" role="button" aria-expanded="${!sc}"><span class="chev">${sc?'▸':'▾'}</span><span>${label}</span><small>${na?na+' album · ':''}${nb} bài${us.size?' · '+us.size+' từ':''}</small></div>`+(sc?'':gs.map(albumHtml).join(''));}).join('');
 }
 $('#libQ').addEventListener('input',renderLib);$('#libF').addEventListener('change',renderLib);
 $('#selDone').onclick=()=>{selMode=false;selSet.clear();renderLib();};
+async function selAlbum(){const L=selList();const n=await pickAlbum(L.length);if(n==null)return;
+  const isNew=n&&!tracks.some(t=>albumOf(t)===n);
+  for(const t of L){if(!albumOf(t)&&n&&S.albStatus)delete S.albStatus['#'+t.id];t.album=n;if(isNew)t.ord=L.indexOf(t);await putMeta(t);}
+  if(isNew){S.albSort={...(S.albSort||{}),[n]:'manual'};S.albStatus={...(S.albStatus||{}),[n]:'new'};}save();
+  exitSel();toast(n?(isNew?'Đã tạo album “'+n+'” với '+L.length+' bài — nằm ở Bài học tiếp theo':'Đã thêm '+L.length+' bài vào “'+n+'”'):'Đã bỏ '+L.length+' bài khỏi album');}
+$('#selAlb').onclick=()=>{if(!selSet.size){toast('Chưa chọn bài nào — chạm vào bài để chọn');return;}selAlbum();};
 $('#selAll').onclick=()=>{const vis=[...$('#libList').querySelectorAll('.trk')].map(e=>e.dataset.id);const all=vis.every(id=>selSet.has(id));vis.forEach(id=>all?selSet.delete(id):selSet.add(id));renderLib();};
 const selList=()=>tracks.filter(t=>selSet.has(t.id));
 // Mức nhớ khi đánh dấu đã học: dùng để xếp bài cần ôn lại (nhớ ít → ôn trước)
@@ -1994,7 +2008,7 @@ function sheetPick(title,items){return new Promise(res=>{
   openModal('mSheet');});}
 async function pickAlbum(n){
   const ex=[...new Set(tracks.map(albumOf).filter(Boolean))];
-  const a=await sheetPick('Chuyển '+n+' bài vào album',[...ex.map((x,k)=>['a'+k,'📁 '+esc(x)]),['__new','＋ Tạo album mới…'],['__none','📤 Bỏ khỏi album']]);
+  const a=await sheetPick('Thêm '+n+' bài vào album',[...ex.map((x,k)=>['a'+k,'📁 '+esc(x)]),['__new','＋ Tạo album mới…'],['__none','📤 Bỏ khỏi album']]);
   if(a==null)return null;if(a==='__none')return '';
   if(a==='__new'){const v=await askText('Tên album mới','');return v?v.trim():null;}
   return ex[+a.slice(1)];}
@@ -2006,7 +2020,7 @@ $('#selAct').onclick=async()=>{
   const dled=L.filter(t=>isLocal(t)&&(t.gid||t.audDrive)).length;
   const allDone=L.every(t=>t.st&&t.st.done);
   const a=await sheetPick('Đã chọn '+L.length+' bài',[
-    ['alb','📁 Thêm / chuyển vào album…'],
+    ['alb','📁 Thêm vào album (tạo nhóm bài học)…'],
     ['sub','✨ Tạo phụ đề bằng AI'+(noSub?' ('+noSub+' bài chưa có)':' (tất cả đã có)')],
     ...(noTr?[['tr','🌐 Dịch song ngữ ('+noTr+' bài chưa dịch)']]:[]),
     [allDone?'undone':'done',allDone?'↩️ Bỏ đánh dấu đã học':'✓ Đánh dấu đã học (chọn mức nhớ)…'],
@@ -2016,7 +2030,7 @@ $('#selAct').onclick=async()=>{
     ['chart','📊 Biểu đồ học các bài đã chọn'],
     ['del','🗑️ Xoá khỏi thư viện','dg']]);
   if(!a)return;
-  if(a==='alb'){const n=await pickAlbum(L.length);if(n==null)return;for(const t of L){t.album=n;await putMeta(t);}exitSel();toast(n?'Đã chuyển '+L.length+' bài vào "'+n+'"':'Đã bỏ '+L.length+' bài khỏi album');}
+  if(a==='alb'){selAlbum();return;}
   else if(a==='sub'){const q=L.filter(t=>!(t.subs&&(t.subs.main||t.subs.en)));if(!q.length){toast('Các bài đã chọn đều có phụ đề rồi');return;}exitSel();batchSubs(q);}
   else if(a==='tr'){exitSel();batchTranslate(L.filter(t=>hasSub(t)&&!hasTr(t)));}
   else if(a==='done'||a==='undone'||a==='mem'){let m=null;if(a!=='undone'){m=await pickMem('Mức nhớ cho '+L.length+' bài đã chọn',null);if(m==null)return;}
@@ -2059,8 +2073,34 @@ $('#selAct').onclick=async()=>{
   L.addEventListener('scroll',stop,true);
   L.addEventListener('contextmenu',e=>{if(e.target.closest('.trk'))e.preventDefault();});}
 let libLP=false;
+// ----- Kéo nút ⋯ để sắp xếp: bài trong album, hoặc album trong cùng mục -----
+let dragSort=null,dragJust=false;
+{const L=$('#libList');
+  L.addEventListener('pointerdown',e=>{const btn=e.target.closest('.more[data-m],.more[data-ra]');if(!btn||selMode)return;
+    const row=btn.dataset.m?btn.closest('.trk'):btn.closest('.alb');if(!row)return;
+    const solo=!!btn.dataset.m&&row.classList.contains('solo');dragSort={btn,row,isAlb:!!btn.dataset.ra||solo,id:btn.dataset.ra!=null?btn.dataset.ra:solo?'#'+btn.dataset.m:btn.dataset.m,y0:e.clientY,on:false,pid:e.pointerId};});
+  L.addEventListener('pointermove',e=>{const d=dragSort;if(!d)return;const dy=e.clientY-d.y0;
+    if(!d.on){if(Math.abs(dy)<8)return;d.on=true;try{d.btn.setPointerCapture(d.pid);}catch(_){}d.row.classList.add('dragrow');if(navigator.vibrate)navigator.vibrate(15);
+      // các phần tử cùng nhóm để so vị trí
+      if(d.isAlb){d.sibs=[...L.querySelectorAll('.alb,.trk.solo')].filter(x=>secOf(x)===secOf(d.row));}
+      else{d.sibs=[...L.querySelectorAll('.trk')].filter(x=>{const t=tracks.find(q=>q.id===x.dataset.id);const me=tracks.find(q=>q.id===d.id);return t&&me&&albumOf(t)===albumOf(me);});}}
+    d.row.style.transform=`translateY(${dy}px)`;d.lastY=e.clientY;
+    const sc=L.closest('.scroll');if(sc){const r=sc.getBoundingClientRect();if(e.clientY<r.top+60)sc.scrollTop-=8;else if(e.clientY>r.bottom-90)sc.scrollTop+=8;}});
+  const secOf=x=>{let p=x;while(p&&!(p.classList&&p.classList.contains('sect')))p=p.previousElementSibling;return p;};
+  const end=async()=>{const d=dragSort;dragSort=null;if(!d||!d.on)return;dragJust=true;setTimeout(()=>dragJust=false,350);
+    d.row.classList.remove('dragrow');d.row.style.transform='';
+    const others=d.sibs.filter(x=>x!==d.row);let idx=others.length;for(let k=0;k<others.length;k++){const r=others[k].getBoundingClientRect();if(d.lastY<r.top+r.height/2){idx=k;break;}}
+    if(d.isAlb){const order=units().map(x=>x[0]).filter(Boolean);const ids=others.map(x=>x.classList.contains('solo')?'#'+x.dataset.id:x.querySelector('[data-ra]').dataset.ra).filter(Boolean);
+      if(!d.id)return renderLib();ids.splice(idx,0,d.id);
+      // giữ vị trí các album thuộc mục khác, chỉ đổi thứ tự trong mục này
+      const set=new Set(ids);let q=0;S.albOrder=order.map(a=>set.has(a)?ids[q++]:a);save();renderLib();toast('Đã đổi thứ tự');}
+    else{const me=tracks.find(t=>t.id===d.id);const a=albumOf(me);const list=others.map(x=>tracks.find(t=>t.id===x.dataset.id)).filter(Boolean);list.splice(idx,0,me);
+      for(let k=0;k<list.length;k++){if(list[k].ord!==k){list[k].ord=k;await putMeta(list[k]);}}S.albSort={...(S.albSort||{}),[a]:'manual'};save();renderLib();toast('Đã đổi thứ tự bài');}};
+  L.addEventListener('pointerup',end,true);L.addEventListener('pointercancel',end,true);}
+
 $('#libList').addEventListener('click',async e=>{
   if(libLP){libLP=false;return;}
+  if(dragJust)return;
   const ai=e.target.closest('[data-ai]');if(ai){const a=ai.dataset.ai;S.albInfo={...(S.albInfo||{})};if(S.albInfo[a])delete S.albInfo[a];else S.albInfo[a]=1;save();renderLib();return;}
   const pa=e.target.closest('[data-pa]');
   if(pa){const a=pa.dataset.pa;const q=libOrder().filter(t=>albumOf(t)===a);if(q.length){if(S.pm==='one'||S.pm==='r1'){S.pm=S.pm==='one'?'album':'ralb';save();}
@@ -2096,25 +2136,16 @@ $('#aIn').onchange=e=>{const l=[...e.target.files];e.target.value='';importFiles
 function openAlbumSheet(a){
   const list=tracks.filter(t=>albumOf(t)===a);const mode=(S.albSort||{})[a]||'name';
   const names=albums().map(x=>x[0]).filter(Boolean);const pos=names.indexOf(a);
+  const allDone=list.length&&list.every(t=>t.st&&t.st.done);
   const items=[
-    ['play','▶ Phát album'],
     ['goal','🎯 '+((S.albGoal||{})[a]?'Sửa mục tiêu học (số ngày)':'Đặt mục tiêu học (số ngày)')+'…'],
     ['chart','📊 Biểu đồ thời gian & hiệu quả học'],
-    ...SORTS.map(s=>['sort:'+s[0],(s[0]===mode?'● ':'○ ')+'Sắp xếp: '+s[1]]),
-    ...(a&&pos>0?[['up','⬆ Đưa album lên trên']]:[]),
-    ...(a&&pos>=0&&pos<names.length-1?[['down','⬇ Đưa album xuống dưới']]:[]),
     ...(a?[['rename','✏️ Đổi tên album']]:[]),
-    ...STATUS.map(s=>['st:'+s[0],(albumInfo(a,list).status===s[0]?'● ':'○ ')+'Trạng thái: '+s[1].slice(2)]),
-    ...((S.albStatus||{})[a]?[['st:auto','↺ Trạng thái: tự động theo tiến độ']]:[]),
-    ...(list.some(t=>!isLocal(t)&&(t.gid||t.audDrive))?[['dlall','📥 Tải cả album về máy ('+(list.filter(t=>!isLocal(t)).reduce((s,t)=>s+(t.size||0),0)/1048576).toFixed(0)+' MB)']]:[]),
-    ...(list.some(t=>isLocal(t)&&(t.gid||t.audDrive))?[['undlall','🗑 Xoá bản tải của album (giữ bài, nghe từ Drive)']]:[]),
-    ['done','✓ Đánh dấu cả album đã học (chọn mức nhớ)…'],
-    ...(list.some(t=>t.st&&t.st.done)?[['mem','🧠 Cập nhật mức nhớ cả album…']]:[]),
-    ['undone','↩️ Bỏ đánh dấu đã học cả album'],
-    ...(a?[['ungroup','📤 Bỏ album (giữ lại các bài)']]:[]),
-    ['delall','🗑️ Xoá album và toàn bộ '+list.length+' bài','dg'],
+    ...STATUS.map(s=>['st:'+s[0],(albumInfo(a,list).status===s[0]?'● ':'○ ')+s[1]]),
+    [allDone?'undone':'done',allDone?'↩️ Bỏ đánh dấu đã học cả album':'✓ Đánh dấu cả album đã học (chọn mức nhớ)…'],
+    ['delall','🗑️ Xoá album và '+list.length+' bài học trong album','dg'],
   ];
-  $('#sheetBox').innerHTML=`<h3>📁 ${esc(a||'Chưa có album')} <span class="mu">· ${list.length} bài</span></h3>`+items.map(i=>`<button data-a="${i[0]}" class="${i[2]||''}">${i[1]}</button>`).join('')+'<button data-a="x">Đóng</button>';
+  $('#sheetBox').innerHTML=`<h3>📁 ${esc(a||'Chưa có album')} <span class="mu">· ${list.length} bài</span></h3><div class="mu" style="font-size:12px;margin:-4px 0 8px">Mẹo: giữ nút ⋯ rồi kéo lên/xuống để đổi thứ tự album hoặc bài.</div>`+items.map(i=>`<button data-a="${i[0]}" class="${i[2]||''}">${i[1]}</button>`).join('')+'<button data-a="x">Đóng</button>';
   $('#sheetBox').onclick=async e=>{
     const k=e.target.closest('[data-a]')?.dataset.a;if(!k)return;closeModals();
     const L=()=>tracks.filter(t=>albumOf(t)===a);
@@ -2156,8 +2187,9 @@ function openSheet(t){
     ...(t.st&&t.st.done?[['mem','🧠 Mức nhớ: '+(t.st.mem!=null?t.st.mem+'%':'chưa đặt')+' — cập nhật…']]:[]),
     ...(!isLocal(t)&&(t.gid||t.audDrive)?[['dl','📥 Tải về máy (nghe offline)']]:[]),
     ...(isLocal(t)&&(t.gid||t.audDrive)?[['undl','🗑 Xoá bản tải trong máy (giữ bài, nghe từ Drive)']]:[]),
+    ...(!albumOf(t)?(()=>{const k='#'+t.id,cs=albumInfo(k,[t]).status;return [...STATUS.map(x=>['ust:'+x[0],(cs===x[0]?'● ':'○ ')+'Đưa vào '+x[1]]),...(cs!=='inbox'?[['ust:inbox','📥 Trả về Chưa có album']]:[])];})():[]),
     ['rename','✏️ Đổi tên'],
-    ['album','📁 Chuyển vào album…'],
+    ['album','📁 '+(albumOf(t)?'Chuyển sang album khác…':'Thêm vào album…')],
     ['del','🗑️ Xoá bài khỏi thư viện','dg'],
   ];
   $('#sheetBox').innerHTML=`<h3>${esc(t.name)}</h3>`+items.map(i=>`<button data-a="${i[0]}" class="${i[2]||''}">${i[1]}</button>`).join('')+'<button data-a="x">Đóng</button>';
@@ -2168,7 +2200,13 @@ function openSheet(t){
     else if(a==='auto'||a==='tap'||a==='tr'||a==='retr'){forceTr=a==='retr';if(t!==cur)await loadTrack(t,false);showView('vPlay');a==='tap'?startTap():openAuto();}
     else if(a==='export')exportSRT(t);
     else if(a==='clr'){if(!await askConfirm('Xoá toàn bộ văn bản và phụ đề của bài này?'))return;t.subs={};t.doc='';await putMeta(t);renderLib();if(t===cur)refreshCues();}
-    else if(a==='album'){const ex=[...new Set(tracks.map(albumOf).filter(Boolean))];const n=await askText('Tên album'+(ex.length?' (đang có: '+ex.join(', ')+')':''),albumOf(t));if(n===null)return;t.album=n.trim();await putMeta(t);renderLib();}
+    else if(a==='album'){const n=await pickAlbum(1);if(n==null)return;const was=albumOf(t);t.album=n;await putMeta(t);if(!was&&n){S.albStatus={...(S.albStatus||{})};delete S.albStatus['#'+t.id];save();}renderLib();toast(n?'Đã đưa vào album “'+n+'”':'Đã bỏ khỏi album');}
+    else if(a.startsWith('ust:')){const v=a.slice(4),k='#'+t.id;S.albStatus={...(S.albStatus||{})};
+      if(v==='done'){const m=await pickMem('Bạn nhớ được khoảng bao nhiêu % nội dung bài này?',t.st&&t.st.mem);if(m==null)return;t.st=t.st||{};t.st.done=true;t.st.mem=m;t.st.memAt=Date.now();await putMeta(t);}
+      if(v==='inbox')delete S.albStatus[k];else S.albStatus[k]=v;
+      // đưa xuống cuối mục mới để giữ thứ tự hàng chờ
+      S.albOrder=[...(S.albOrder||[]).filter(x=>x!==k)];if(v!=='inbox'){const ord=units().map(u=>u[0]).filter(x=>x!==k);S.albOrder=[...ord,k];}
+      save();renderLib();schedulePolicy(1500);toast(v==='inbox'?'Đã trả về Chưa có album':'Đã đưa vào '+STATUS.find(x=>x[0]===v)[1].slice(2));}
     else if(a==='shift'){if(t!==cur)await loadTrack(t,false);showView('vPlay');openShift();}
     else if(a==='words'){openWordStats(t);}
     else if(a==='chart'){openChart([t],t.name);}
@@ -3071,12 +3109,12 @@ function wfLemmaL(w,lg,D){
 }
 function wfLemma(w){const D=wfLoad('en');return wfLemmaL(w,'en',D);}
 // trạng thái bài: known = đã học (mức nhớ ≥ 80%), learn = đang học / nhớ chưa chắc, null = chưa học
-function trackLearnState(t,albSt){if(t.st&&t.st.done)return (t.st.mem==null||t.st.mem>=80)?'known':'learn';const a=albSt.get(albumOf(t));if(a==='done')return (t.st&&t.st.mem!=null&&t.st.mem<80)?'learn':'known';if(a==='learn'||(t.st&&(t.st.sec>=60||t.st.plays>0)))return 'learn';return null;}
+function trackLearnState(t,albSt){if(t.st&&t.st.done)return (t.st.mem==null||t.st.mem>=80)?'known':'learn';const a=albSt.get(unitKey(t));if(a==='done')return (t.st&&t.st.mem!=null&&t.st.mem<80)?'learn':'known';if(a==='learn'||(t.st&&(t.st.sec>=60||t.st.plays>0)))return 'learn';return null;}
 let wfCache={k:null,m:null};
 function wfStatus(lg,D){
   const key=lg+'#'+tracks.map(t=>t.id+':'+(t.mt||0)).join('|')+'#'+vocab.length+'#'+JSON.stringify(S.albStatus||{});
   if(wfCache.k===key)return wfCache.m;
-  const albSt=new Map();for(const [a,l] of albums())albSt.set(a,albumInfo(a,l).status);
+  const albSt=new Map();for(const [a,l] of units())albSt.set(a,albumInfo(a,l).status);
   const m=new Map();const up=(lm,st,src)=>{const o=m.get(lm);if(!o){m.set(lm,{st,src:[src]});return;}if(o.st!=='known'&&st==='known')o.st='known';if(o.src.length<3&&!o.src.includes(src))o.src.push(src);};
   for(const t of tracks){if(!hasSub(t))continue;const st=trackLearnState(t,albSt);if(!st)continue;
     for(const x of trackWords(t).list){const lm=wfLemmaL(x.w,lg,D);if(lm)up(lm,st,t.name);
