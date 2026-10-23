@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.41",
- "notes": "Thư viện: nút (i) chuyển lên tiêu đề từng mục lớn (Bài đang học · Bài học tiếp theo · Bài đã học · Chưa có album) — bấm để hiện / ẩn thông tin của tất cả album và bài trong mục; bỏ nút (i) ở từng album · Bài và album đang nghe có biểu tượng loa; sóng loa chạy khi đang phát, mờ khi tạm dừng",
+ "ver": "1.0.1-beta.42",
+ "notes": "Thư viện chuyển thành 📚 Danh sách bài học: mỗi danh sách là một khoá học do bạn tạo (nút ＋ Tạo danh sách). 3 mục cũ Bài đang học / Bài học tiếp theo / Bài đã học trở thành 3 danh sách sẵn có, giữ nguyên các album bên trong · Chuyển album / bài giữa các danh sách: ⋯ của album hoặc bài → 📚 Chuyển sang danh sách…, hoặc nhấn giữ để chọn nhiều rồi bấm 📚 Danh sách · ⋯ của danh sách: phát cả danh sách, đổi tên, đưa lên đầu / xuống cuối, chọn danh sách nhận album mới (dấu ＋), biểu đồ học, xoá (có xác nhận) · Mỗi album có nhãn trạng thái Đang học / Tiếp theo / Đã học (đổi trong ⋯ của album); học xong một album thì album “Tiếp theo” đầu tiên trong cùng danh sách tự chuyển sang Đang học · 🗑 Thùng rác: xoá danh sách, album hay bài đều vào thùng rác, giữ 30 ngày rồi mới xoá hẳn; khôi phục hoặc xoá vĩnh viễn từng mục, hoặc dọn sạch (đều có xác nhận). Nút Thùng rác ở cuối Thư viện · Bài lẻ chưa thuộc danh sách nào nằm ở mục 📥 Chưa xếp vào danh sách",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,18 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.42",
+   "d": "23/10/2026",
+   "items": [
+    "Thư viện chuyển thành 📚 Danh sách bài học: mỗi danh sách là một khoá học do bạn tạo (nút ＋ Tạo danh sách). 3 mục cũ Bài đang học / Bài học tiếp theo / Bài đã học trở thành 3 danh sách sẵn có, giữ nguyên các album bên trong",
+    "Chuyển album / bài giữa các danh sách: ⋯ của album hoặc bài → 📚 Chuyển sang danh sách…, hoặc nhấn giữ để chọn nhiều rồi bấm 📚 Danh sách",
+    "⋯ của danh sách: phát cả danh sách, đổi tên, đưa lên đầu / xuống cuối, chọn danh sách nhận album mới (dấu ＋), biểu đồ học, xoá (có xác nhận)",
+    "Mỗi album có nhãn trạng thái Đang học / Tiếp theo / Đã học (đổi trong ⋯ của album); học xong một album thì album “Tiếp theo” đầu tiên trong cùng danh sách tự chuyển sang Đang học",
+    "🗑 Thùng rác: xoá danh sách, album hay bài đều vào thùng rác, giữ 30 ngày rồi mới xoá hẳn; khôi phục hoặc xoá vĩnh viễn từng mục, hoặc dọn sạch (đều có xác nhận). Nút Thùng rác ở cuối Thư viện",
+    "Bài lẻ chưa thuộc danh sách nào nằm ở mục 📥 Chưa xếp vào danh sách"
+   ]
+  },
   {
    "v": "1.0.1-beta.41",
    "d": "23/10/2026",
