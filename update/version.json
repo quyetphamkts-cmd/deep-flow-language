@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
  "ver": "1.0.1-beta.1",
- "notes": "nạp thư mục Drive không cần tải hết, tự quản lý bộ nhớ theo trạng thái học; nhấn giữ bài để chọn nhiều bài (album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá); EQ tắt thì ẩn thanh chỉnh.",
+ "notes": "Nạp thư mục Drive không cần tải hết, tự quản lý bộ nhớ theo trạng thái học; nhấn giữ bài để chọn nhiều bài (album, tạo phụ đề AI hàng loạt, dịch, tải về, xoá); EQ tắt thì ẩn thanh chỉnh.",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
