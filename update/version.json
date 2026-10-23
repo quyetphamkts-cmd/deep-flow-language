@@ -1,7 +1,7 @@
 {
  "web": "1.0.1",
- "ver": "1.0.1-beta.37",
- "notes": "Từ vựng → 🎮 Trò chơi từ vựng với 5 trò: 🎧 Nghe – chọn nghĩa (nghe từ và câu gốc trong bài), ✍️ Điền từ vào câu (câu trong bài bị che một từ, chọn xong phát lại câu), 🔤 Xếp chữ (có gợi ý), 🧩 Ghép cặp tính giờ (2 vòng × 6 cặp, sai phạt 3 giây), 🚀 Bắn chữ (3 mạng, càng bắn đúng càng nhanh) · Chọn nhóm từ để chơi: Đang học · Đã học · Sẽ học · Tất cả · Hộp từ vựng; ưu tiên từ lâu chưa chơi; lưu kỷ lục từng trò · Từ trả lời sai tự vào Hộp từ vựng; thời gian chơi được cộng vào chuỗi ngày học · Sửa nút Chọn hết khi đang chọn album: chọn tất cả album (kể cả album đang thu gọn) và bài lẻ; bấm lần nữa để bỏ chọn hết",
+ "ver": "1.0.1-beta.38",
+ "notes": "Tự động cập nhật: có bản mới là app tự tải và cài phần giao diện, không cần kiểm tra hay bấm cập nhật; đang phát bài thì đợi lúc dừng phát mới cập nhật rồi phát tiếp đúng chỗ; cập nhật xong hiện thông báo ngắn · App tự kiểm tra bản mới khi mở, khi quay lại app và mỗi 3 giờ; tắt / bật ở Cài đặt → Phiên bản → Tự động cập nhật (bản APK mới vẫn cần tự cài)",
  "minNative": 1,
  "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
  "apk": {
@@ -11,6 +11,14 @@
   "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
  },
  "changelog": [
+  {
+   "v": "1.0.1-beta.38",
+   "d": "23/10/2026",
+   "items": [
+    "Tự động cập nhật: có bản mới là app tự tải và cài phần giao diện, không cần kiểm tra hay bấm cập nhật; đang phát bài thì đợi lúc dừng phát mới cập nhật rồi phát tiếp đúng chỗ; cập nhật xong hiện thông báo ngắn",
+    "App tự kiểm tra bản mới khi mở, khi quay lại app và mỗi 3 giờ; tắt / bật ở Cài đặt → Phiên bản → Tự động cập nhật (bản APK mới vẫn cần tự cài)"
+   ]
+  },
   {
    "v": "1.0.1-beta.37",
    "d": "23/10/2026",
