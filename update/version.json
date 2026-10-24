@@ -1,16 +1,23 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.9",
-  "notes": "Mỗi thư mục hiện tổng số từ vựng của bài và thư mục con",
+  "ver": "1.0.2-beta.10",
+  "notes": "Thoát app vẫn điều khiển được trên thông báo (cần APK mới)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 20,
-    "versionName": "1.0.2-beta.8",
+    "versionCode": 21,
+    "versionName": "1.0.2-beta.10",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.10",
+      "d": "24/10/2026",
+      "items": [
+        "⏯ Thoát app (vuốt tắt / nút Quay lại) khi đang phát: vẫn hiện biểu tượng đang phát và vẫn điều khiển được trên thông báo / màn hình khoá như khi chỉ thu nhỏ app. Trước đây dịch vụ phát nền gắn vào màn hình app → thoát màn hình thì Android cắt kết nối, dịch vụ tự tắt, nút trên thông báo không còn tác dụng dù nhạc vẫn chạy (cần cài APK mới)"
+      ]
+    },
     {
       "v": "1.0.2-beta.9",
       "d": "24/10/2026",

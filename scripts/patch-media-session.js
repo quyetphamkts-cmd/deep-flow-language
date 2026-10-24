@@ -153,4 +153,18 @@ if (!svc.includes('DF_ONE_SESSION')) {
     '        this.plugin = plugin;\n\n        try { if (mediaSession != null) { mediaSession.setActive(false); mediaSession.release(); } } catch (Exception dfE) {} // DF_ONE_SESSION\n        mediaSession = new MediaSessionCompat(this, "WebViewMediaSession");', 'one session');
   fs.writeFileSync(svcF, svc);
 }
+// thoát app (vuốt tắt / nút Quay lại) khi đang phát: plugin gốc gắn dịch vụ phát nền vào MÀN HÌNH app → màn hình đóng thì Android
+// cắt kết nối → onUnbind() tắt dịch vụ + giải phóng phiên phát nhạc: mất biểu tượng đang phát, nút trên thông báo không còn tác dụng
+// (nhạc vẫn chạy vì app giữ trình phát sống). Gắn vào toàn bộ ỨNG DỤNG để đóng màn hình không cắt kết nối.
+plg = fs.readFileSync(plgF, 'utf8');
+if (!plg.includes('DF_APPCTX')) {
+  plg = rep(plg, '        getContext().bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);',
+    '        getContext().getApplicationContext().bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE); // DF_APPCTX', 'bind app ctx');
+  plg = rep(plg, '            getContext().unbindService(serviceConnection);',
+    '            try { getContext().getApplicationContext().unbindService(serviceConnection); } catch (Exception dfE) {} // DF_APPCTX', 'unbind app ctx');
+  // phiên cũ (đã vuốt tắt, vẫn phát) bị huỷ khi mở lại app: trả kết nối của phiên cũ, phiên mới đã tự nối lại dịch vụ
+  plg = rep(plg, '    @Override\n    public void load() {',
+    '    @Override\n    protected void handleOnDestroy() {\n        try { if (service != null) getContext().getApplicationContext().unbindService(serviceConnection); } catch (Exception dfE) {}\n        service = null;\n        super.handleOnDestroy();\n    }\n\n    @Override\n    public void load() {', 'destroy unbind');
+  fs.writeFileSync(plgF, plg);
+}
 console.log('[patch-media-session] OK');
