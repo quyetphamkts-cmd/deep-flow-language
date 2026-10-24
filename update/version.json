@@ -1,16 +1,23 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.95",
-  "notes": "Logo mới: người bơi đắm mình trong dòng nước ngôn ngữ",
+  "ver": "1.0.1-beta.96",
+  "notes": "Logo mới vẽ lại người bơi đẹp hơn",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 16,
-    "versionName": "1.0.1-beta.95",
+    "versionCode": 17,
+    "versionName": "1.0.1-beta.96",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.96",
+      "d": "24/10/2026",
+      "items": [
+        "🏊 Vẽ lại người bơi trên logo cho đẹp và rõ dáng: mũ bơi, kính bơi, tay sải khuỷu cao đang vào nước, tay kia duỗi dưới nước, thân thon và chân đập chìm trong dòng chữ nhiều thứ tiếng (cần cài APK mới để đổi biểu tượng ngoài màn hình chính)"
+      ]
+    },
     {
       "v": "1.0.1-beta.95",
       "d": "24/10/2026",
