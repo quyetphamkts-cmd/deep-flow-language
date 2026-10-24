@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.87",
-  "notes": "Hai thanh kinh nghiệm: 🎖 Tổng kinh nghiệm từ 0 tới Đại tướng (1.200 giờ) có vạch mốc các bậc A1 → C2, và ⭐ kinh nghiệm của cấp hiện tại tới lần thăng hàm kế tiếp (vd. 11 / 35 giờ → Trung sĩ)",
+  "ver": "1.0.1-beta.88",
+  "notes": "Học tập trung: 1 ngày học = 2 giờ học. Ngày nào học chưa đủ 2 giờ thì thời gian được cộng dồn với các ngày khác cho đủ 2 giờ mới tính thêm 1 ngày học (🔥 trên huy hiệu, các giai đoạn hình thành thói quen đều dùng số ngày học này). Vòng tuần T2 → CN: ngày đủ 2 giờ có dấu ✓, ngày học chưa đủ hiện vòng tô màu theo % của 2 giờ; dòng nhắc “Còn … nữa là đủ ngày học thứ N”",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.88",
+      "d": "24/10/2026",
+      "items": [
+        "Học tập trung: 1 ngày học = 2 giờ học. Ngày nào học chưa đủ 2 giờ thì thời gian được cộng dồn với các ngày khác cho đủ 2 giờ mới tính thêm 1 ngày học (🔥 trên huy hiệu, các giai đoạn hình thành thói quen đều dùng số ngày học này). Vòng tuần T2 → CN: ngày đủ 2 giờ có dấu ✓, ngày học chưa đủ hiện vòng tô màu theo % của 2 giờ; dòng nhắc “Còn … nữa là đủ ngày học thứ N”"
+      ]
+    },
     {
       "v": "1.0.1-beta.87",
       "d": "24/10/2026",
