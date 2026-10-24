@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.16",
-  "notes": "Dọn mã thừa, gọn hơn ~15 KB",
+  "ver": "1.0.2-beta.17",
+  "notes": "Menu ⋯ gọn chữ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.17",
+      "d": "24/10/2026",
+      "items": [
+        "✂️ Menu ⋯ gọn chữ: Đặt mục tiêu · Biểu đồ học tập · Thống kê từ vựng · Đổi tên · Di chuyển · Đánh dấu học xong · Đánh dấu chưa học xong · Xóa (khoá học và thư mục dùng cùng cách gọi)"
+      ]
+    },
     {
       "v": "1.0.2-beta.16",
       "d": "24/10/2026",
