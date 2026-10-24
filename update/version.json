@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.91",
-  "notes": "Quân hàm theo ngày học · tủ huân chương theo bài học · phát cả bài khi sửa phụ đề",
+  "ver": "1.0.1-beta.92",
+  "notes": "Dịch tiếng Việt chuẩn ngữ pháp, chính tả hơn · chọn kiểu đặt dấu · dịch lại bài cũ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.92",
+      "d": "24/10/2026",
+      "items": [
+        "🔤 Dịch chuẩn tiếng Việt hơn: AI dịch theo ngữ cảnh cả đoạn (một câu bị cắt thành nhiều dòng vẫn dịch liền mạch), đúng trật tự câu tiếng Việt, tránh dịch word-by-word, xưng hô nhất quán cả bài, giữ đúng tên riêng",
+        "✍️ Mọi bản dịch (Google, AI, AI trên máy) được chuẩn hoá: Unicode dựng sẵn, bỏ khoảng trắng thừa trước dấu câu, viết hoa đầu câu theo câu gốc, giữ dấu hỏi cho câu hỏi, không tự thêm dấu chấm khi câu chưa hết",
+        "🅰️ Cài đặt → Dịch tự động → Kiểu đặt dấu: kiểu mới (hoà, khoẻ, thuỷ) hoặc kiểu cũ (hòa, khỏe, thủy) — áp dụng cho cả bản dịch đã có",
+        "🔁 Menu ⋯ của bài: “Dịch lại” để dịch lại bài cũ theo cách dịch mới"
+      ]
+    },
     {
       "v": "1.0.1-beta.91",
       "d": "24/10/2026",
