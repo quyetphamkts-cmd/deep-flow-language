@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.99",
-  "notes": "🚩 Báo phụ đề sai — AI nghe lại và sửa ngay đoạn vừa phát",
+  "ver": "1.0.1",
+  "notes": "Bản chính thức 1.0.1 · AI ưu tiên phụ đề chính xác, dịch trước 15 bài mỗi ngày",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1",
+      "d": "24/10/2026",
+      "items": [
+        "🎉 Bản chính thức 1.0.1 — gộp toàn bộ các bản thử nghiệm beta 1 → 99",
+        "🗓 Phân bổ AI mỗi ngày: AI ưu tiên làm phụ đề chính xác (tạo phụ đề, khớp từng từ nhiều vòng) cho các bài sắp học trước; xong mới dịch trước các bài kế tiếp theo đúng thứ tự học — mặc định 15 bài / ngày (1–2 album), đổi ở Cài đặt → Dịch tự động. Tạo phụ đề hàng loạt không còn dịch ngay từng bài nên không tranh lượt AI với phụ đề",
+        "Bài đang nghe luôn được làm trước (phụ đề và bản dịch). Khi AI nghe đang hết lượt, việc dịch vẫn chạy bằng Google Dịch, không phải chờ. Cài đặt hiện số bài đã dịch hôm nay và thời gian AI đã chạy"
+      ]
+    },
     {
       "v": "1.0.1-beta.99",
       "d": "24/10/2026",
