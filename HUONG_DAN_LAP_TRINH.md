@@ -33,3 +33,7 @@ App Android học ngoại ngữ qua nghe (kiểu Poweramp): phát bài nghe, ph�
 Mỗi lần bắt đầu, hãy lấy bản mới nhất từ GitHub (`git pull`) — nhiều người / nhiều phiên AI cùng đẩy lên dễ ghi đè nhau. Số beta phải tăng dần, không trùng.
 
 **Quy tắc đánh số phiên bản:** beta tăng dần `1.0.1-beta.1` … `1.0.1-beta.99`. Sau beta 99 thì tự lên phiên bản: bản kế tiếp là bản chính thức `1.0.1` (gộp các thay đổi), rồi bắt đầu chu kỳ mới `1.0.2-beta.1` … `1.0.2-beta.99` → `1.0.2`, cứ thế tiếp. Hàm `vparse` trong HTML đã xếp đúng thứ tự: `1.0.1-beta.99` < `1.0.1` < `1.0.2-beta.1`. Khi lên số mới nhớ đổi cả `"web"` trong `version.json`.
+
+
+## Từ điển offline
+`data/dict/en-vi.json.gz` (FVDP, GPL) và `data/dict/en-en.json.gz` (WordNet) — app tải 1 lần từ `OFF_URL`, cài vào IndexedDB `dfl_off` (store `vi`, `en`, `meta`). Đổi dữ liệu thì tăng `OFF_VER` để máy tải lại. Tạo lại dữ liệu: `scripts/build_dict.py` (xem `data/dict/README.md`).

@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.82",
-  "notes": "Bài đang nghe luôn được AI làm trước: trong lúc tự tạo phụ đề cho các bài khác, trước mỗi bài app xem bài đang nghe — chưa có phụ đề thì tạo ngay; chưa kiểm tra thì kiểm tra với giọng nói; khớp kém thì nhờ AI nghe lại và căn từng câu — xong mới làm tiếp các bài chưa học. Chuyển sang bài khác giữa chừng thì bài mới cũng được ưu tiên ngay sau bài đang xử lý dở",
+  "ver": "1.0.1-beta.83",
+  "notes": "Từ điển offline Anh – Việt + Anh – Anh: app tự tải 1 lần (≈7,7 MB, khi có Wi-Fi; hoặc bấm “Tải ngay” ở mục Từ điển) rồi tra từ không cần mạng, không tốn lượt AI. Anh – Việt ~39.700 từ thông dụng + ~14.400 cụm từ (give up, look after, in spite of…) — phiên âm, từ loại, các nghĩa, ví dụ kèm bản dịch, thành ngữ (nguồn Free Vietnamese Dictionary Project của Hồ Ngọc Đức, GPL); Anh – Anh ~51.800 từ — định nghĩa, ví dụ, từ đồng nghĩa (Princeton WordNet). Chạm từ trong phụ đề: nghĩa hiện ngay, tự về dạng gốc (approaches → approach), tự nhận ra cụm từ trong câu (chạm “up” trong “gave up” → 🧩 give up); muốn nghĩa đúng theo câu thì bấm 🎯. Ô Tra từ gợi ý thêm từ trong từ điển offline (📖); Từ điển chung tự điền nghĩa từ từ điển offline trước, thiếu mới dùng Google Dịch",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.83",
+      "d": "24/10/2026",
+      "items": [
+        "Từ điển offline Anh – Việt + Anh – Anh: app tự tải 1 lần (≈7,7 MB, khi có Wi-Fi; hoặc bấm “Tải ngay” ở mục Từ điển) rồi tra từ không cần mạng, không tốn lượt AI. Anh – Việt ~39.700 từ thông dụng + ~14.400 cụm từ (give up, look after, in spite of…) — phiên âm, từ loại, các nghĩa, ví dụ kèm bản dịch, thành ngữ (nguồn Free Vietnamese Dictionary Project của Hồ Ngọc Đức, GPL); Anh – Anh ~51.800 từ — định nghĩa, ví dụ, từ đồng nghĩa (Princeton WordNet). Chạm từ trong phụ đề: nghĩa hiện ngay, tự về dạng gốc (approaches → approach), tự nhận ra cụm từ trong câu (chạm “up” trong “gave up” → 🧩 give up); muốn nghĩa đúng theo câu thì bấm 🎯. Ô Tra từ gợi ý thêm từ trong từ điển offline (📖); Từ điển chung tự điền nghĩa từ từ điển offline trước, thiếu mới dùng Google Dịch"
+      ]
+    },
     {
       "v": "1.0.1-beta.82",
       "d": "24/10/2026",
