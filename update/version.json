@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.86",
-  "notes": "Quân hàm tính theo tổng giờ học, gắn với 6 bậc CEFR (theo ước tính số giờ học của Cambridge English): A1 Chiến sĩ (Binh nhì 0 giờ, Binh nhất 50) · A2 Hạ sĩ quan (100/135/170) · B1 cấp úy (200–350) · B2 cấp tá (400–550) · C1 Thiếu tướng 600, Trung tướng 700 · C2 Thượng tướng 800, Đại tướng 1.200 giờ. Không mất hàm khi đứt chuỗi. Vòng tròn hiện huy hiệu + số giờ, 🔥 số ngày chuỗi; thanh ⭐ Kinh nghiệm tăng dần tới hàm kế tiếp kèm ước tính thời gian theo tốc độ học 14 ngày gần nhất; bảng quân hàm chia theo A1–C2 kèm mức IELTS / TOEIC tương đương và thời gian dự kiến đạt mỗi bậc",
+  "ver": "1.0.1-beta.87",
+  "notes": "Hai thanh kinh nghiệm: 🎖 Tổng kinh nghiệm từ 0 tới Đại tướng (1.200 giờ) có vạch mốc các bậc A1 → C2, và ⭐ kinh nghiệm của cấp hiện tại tới lần thăng hàm kế tiếp (vd. 11 / 35 giờ → Trung sĩ)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.87",
+      "d": "24/10/2026",
+      "items": [
+        "Hai thanh kinh nghiệm: 🎖 Tổng kinh nghiệm từ 0 tới Đại tướng (1.200 giờ) có vạch mốc các bậc A1 → C2, và ⭐ kinh nghiệm của cấp hiện tại tới lần thăng hàm kế tiếp (vd. 11 / 35 giờ → Trung sĩ)"
+      ]
+    },
     {
       "v": "1.0.1-beta.86",
       "d": "24/10/2026",
