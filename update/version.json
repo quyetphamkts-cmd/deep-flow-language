@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.34",
+  "ver": "1.0.2-beta.35",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,26 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.35",
+      "d": "24/10/2026",
+      "items": [
+        "🥚 Bắn chữ làm lại theo kiểu Bắn trứng: các từ xếp thành dãy bóng màu ở trên, súng ở dưới hiện nghĩa — bắn đúng thì bóng vỡ; bắn sai hoặc chậm thì thêm 1 dãy đè xuống, chạm vạch đỏ là thua",
+        "🔤 Mỗi quả trứng có từ + phiên âm; bắn trúng hay trượt đều đọc to từ đúng và hiện thẻ từ + phiên âm + nghĩa (bấm để nghe lại)",
+        "🚀 Chơi Bắn chữ ngay trong từng bài, thư mục, album, khoá học (menu ⋯) và trong bảng Thống kê từ vựng — dùng đúng từ của bài; từ hay gặp trong bài xuất hiện nhiều hơn, đúng theo thống kê",
+        "🩹 ElevenLabs báo “file hỏng”: app giờ gửi file đúng định dạng thật (m4a, ogg, wav…) thay vì luôn gọi là .mp3; nếu vẫn bị từ chối, nhật ký ghi rõ định dạng và vài byte đầu file để kiểm tra",
+        "🩹 Hết bị Android đóng app khi tạo phụ đề bằng Gemini / ChatGPT: bài dài được nghe từng đoạn ~5 phút thay vì giải mã cả bài trên điện thoại"
+      ]
+    },
+    {
+      "v": "1.0.2-beta.35",
+      "d": "24/10/2026",
+      "items": [
+        "🚀 Chơi Bắn chữ ngay trong từng bài, thư mục, album, khoá học (menu ⋯) và trong bảng Thống kê từ vựng — dùng đúng từ của bài/thư mục đó; từ xuất hiện nhiều trong bài thì rơi xuống nhiều hơn, đúng theo thống kê",
+        "🔤 Mỗi từ rơi xuống kèm phiên âm; bắn trúng (hoặc trượt) thì đọc to từ đúng và hiện thẻ từ + phiên âm + nghĩa, bấm thẻ để nghe lại",
+        "↻ Chơi lại giữ nguyên bài/thư mục đang chơi"
+      ]
+    },
     {
       "v": "1.0.2-beta.34",
       "d": "24/10/2026",
