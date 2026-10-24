@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.3",
-  "notes": "Báo sai chỉ nghe lại ~10 giây quanh chỗ bấm",
+  "ver": "1.0.2-beta.4",
+  "notes": "Sửa lỗi bài đang ôn lại không phát được từ Drive",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.4",
+      "d": "24/10/2026",
+      "items": [
+        "☁️ Sửa lỗi bài đang ôn lại không phát được từ Drive (“Format error”): album đánh dấu học xong thì app xoá file âm thanh trong máy, nhưng bài vẫn đang được nghe lại → mỗi lần mở app lại tải cả file từ Drive, tải nhiều lần trong thời gian ngắn thì Google tạm chặn tải file đó. Giờ bài nghe trong 7 ngày gần đây được giữ lại trong máy; AI cần tải bài đang nghe thì lưu luôn vào máy",
+        "Báo đúng lý do khi Drive chặn tải file (trước đây báo nhầm “kiểm tra mạng”) và tự thử phát lại sau 15 phút"
+      ]
+    },
     {
       "v": "1.0.2-beta.3",
       "d": "24/10/2026",
