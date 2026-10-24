@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.22",
-  "notes": "Tạm dừng rồi thoát → app tắt hẳn",
+  "ver": "1.0.2-beta.23",
+  "notes": "Bỏ mục chọn mô hình · tải sẵn dữ liệu AI offline khi có Wi-Fi",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.23",
+      "d": "24/10/2026",
+      "items": [
+        "🤖 Bỏ mục chọn “Mô hình” trong bảng tạo / khớp phụ đề: app tự chọn AI tốt nhất đang có lượt (ElevenLabs · Gemini · ChatGPT), không có mạng thì dùng Whisper Base trên máy",
+        "📦 Tải sẵn dữ liệu AI offline khi có Wi-Fi: mô hình nghe Whisper Base (chấm phát âm, tạo phụ đề khi không có mạng) và mô hình dịch Anh – Việt — chỉ tải file, không nạp vào RAM, nên không làm máy chậm. Giữ mô hình Base: mô hình lớn hơn (Small) cần RAM gấp 2–3 lần, dễ làm Android đóng app"
+      ]
+    },
     {
       "v": "1.0.2-beta.22",
       "d": "24/10/2026",
