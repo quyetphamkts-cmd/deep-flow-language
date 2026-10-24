@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.79",
-  "notes": "Cài đặt có thêm tab 🧾 Nhật ký: ghi lại lỗi (kể cả lỗi ngầm, kèm vị trí trong mã) và các sự kiện chính — mở app, vào/ra chạy nền, mở bài, lỗi phát âm thanh, AI hết lượt, app bị Android đóng, các thông báo lỗi. Lọc Tất cả / Chỉ lỗi; 📋 Sao chép để dán gửi khi cần sửa lỗi; 🗑 xoá. Chỉ lưu trong máy (500 dòng gần nhất), không đồng bộ, tự che API key / email. Có lỗi mới thì tab và nút Cài đặt hiện chấm đỏ. Các tab Cài đặt gọn trên 1 dòng (“Tài khoản & lưu trữ” → “Tài khoản”)",
+  "ver": "1.0.1-beta.80",
+  "notes": "Sửa app bị Android đóng khi đang tự tạo phụ đề mà thoát ra nền: AI trên máy (Whisper) rất tốn RAM — giờ app vào nền là Whisper tạm dừng sau đoạn đang nghe dở, lưu lại chỗ đang làm và giải phóng khỏi bộ nhớ; mở lại app thì nạp lại và làm tiếp đúng chỗ. Nhật ký ghi rõ mỗi bài dùng AI nào (Gemini / ChatGPT / Whisper trên máy), bỏ các dòng cảnh báo kỹ thuật vô hại của onnxruntime",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.80",
+      "d": "24/10/2026",
+      "items": [
+        "Sửa app bị Android đóng khi đang tự tạo phụ đề mà thoát ra nền: AI trên máy (Whisper) rất tốn RAM — giờ app vào nền là Whisper tạm dừng sau đoạn đang nghe dở, lưu lại chỗ đang làm và giải phóng khỏi bộ nhớ; mở lại app thì nạp lại và làm tiếp đúng chỗ. Nhật ký ghi rõ mỗi bài dùng AI nào (Gemini / ChatGPT / Whisper trên máy), bỏ các dòng cảnh báo kỹ thuật vô hại của onnxruntime"
+      ]
+    },
     {
       "v": "1.0.1-beta.79",
       "d": "24/10/2026",
