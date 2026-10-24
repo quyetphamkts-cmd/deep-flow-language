@@ -100,6 +100,10 @@ public class MainActivity extends BridgeActivity {
             orphan = bridge;
             bridge = null;
         }
+        // Vuốt tắt / thoát app khi KHÔNG phát (đã tạm dừng) → tắt hẳn dịch vụ phát nền + bảng phát nhạc, không để app sót lại dưới nền
+        else if (isFinishing() && !playing && !isChangingConfigurations()) {
+            try { Class.forName("io.github.jofr.capacitor.mediasessionplugin.MediaSessionService").getMethod("dfKill").invoke(null); } catch (Exception ignored) {}
+        }
         super.onDestroy();
     }
 

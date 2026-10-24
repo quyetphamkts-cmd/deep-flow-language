@@ -1,16 +1,23 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.21",
-  "notes": "Chữ AI chép hiện như đang gõ · nút Dừng / Ẩn có màu",
+  "ver": "1.0.2-beta.22",
+  "notes": "Tạm dừng rồi thoát → app tắt hẳn",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 22,
-    "versionName": "1.0.2-beta.15",
+    "versionCode": 23,
+    "versionName": "1.0.2-beta.22",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.22",
+      "d": "24/10/2026",
+      "items": [
+        "🚪 Tạm dừng rồi thoát app (nút Quay lại hoặc vuốt tắt) → app và bảng phát nhạc tắt hẳn, không còn sót dưới nền. Đang phát mà thoát thì vẫn phát nền như trước; AI đang xử lý phụ đề thì nút Quay lại chỉ thu nhỏ để AI chạy tiếp (vuốt tắt cần cài APK mới)"
+      ]
+    },
     {
       "v": "1.0.2-beta.21",
       "d": "24/10/2026",
