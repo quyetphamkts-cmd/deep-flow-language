@@ -79,6 +79,19 @@ public class HeadsetPlugin extends Plugin {
         call.resolve(r);
     }
 
+    /** Nhật ký lõi Android + lý do Android kết thúc app các lần trước (Android 11+) */
+    @PluginMethod
+    public void getNativeDiag(PluginCall call) {
+        JSObject r = new JSObject();
+        try {
+            r.put("log", NativeDiag.readLog(getContext()));
+            r.put("exits", NativeDiag.exits(getContext()));
+            r.put("sdk", Build.VERSION.SDK_INT);
+            r.put("model", Build.MANUFACTURER + " " + Build.MODEL);
+        } catch (Exception e) { r.put("err", e.toString()); }
+        call.resolve(r);
+    }
+
     /** App web báo đang phát hay dừng (để giữ app chạy tiếp khi người dùng vuốt tắt app) */
     @PluginMethod
     public void setPlaying(PluginCall call) {
