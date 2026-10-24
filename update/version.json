@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.5",
-  "notes": "Hết giật lag: không chạy AI trên điện thoại khi báo sai",
+  "ver": "1.0.2-beta.6",
+  "notes": "Khớp phụ đề chính xác từng từ bằng ElevenLabs (forced alignment)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.6",
+      "d": "24/10/2026",
+      "items": [
+        "🎯 Khớp phụ đề CHÍNH XÁC bằng ElevenLabs (forced alignment): gửi file âm thanh gốc kèm chữ phụ đề Gemini đã chép → nhận mốc bắt đầu / kết thúc đúng của từng từ, rồi cắt câu theo đó. Chạy trên máy chủ nên điện thoại không phải giải mã hay chạy AI. ElevenLabs hết lượt thì dùng ChatGPT Whisper như trước",
+        "Nhập key ở Cài đặt → 🤖 AI → ＋ Thêm AI khác → ElevenLabs API key (có hướng dẫn lấy key). Mọi bài đã khớp trước đây được khớp lại một lần bằng cách mới",
+        "🚩 Báo sai: ElevenLabs căn lại đúng đoạn ~10 giây; có ChatGPT thì nghe lại để sửa cả chữ chép sai rồi ElevenLabs căn mốc. Không có AI online nào thì ghi nhận, sửa sau"
+      ]
+    },
     {
       "v": "1.0.2-beta.5",
       "d": "24/10/2026",
