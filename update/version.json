@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.11",
-  "notes": "Thống kê từ vựng cho khoá học và thư mục",
+  "ver": "1.0.2-beta.12",
+  "notes": "Thống kê từ vựng nằm trong nút ⋯ của khoá học, album, thư mục",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.12",
+      "d": "24/10/2026",
+      "items": [
+        "📖 Thống kê từ vựng chuyển vào nút ⋯: menu ⋯ của khoá học → “Thống kê từ vựng của khoá học”; menu ⋯ của album → “Thống kê từ vựng (gồm thư mục con)”; thư mục chứa album con có thêm nút ⋯ (Thống kê từ vựng, Biểu đồ học). Dòng tên vẫn hiện tổng số từ"
+      ]
+    },
     {
       "v": "1.0.2-beta.11",
       "d": "24/10/2026",
