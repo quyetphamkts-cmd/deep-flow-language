@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.31",
+  "ver": "1.0.2-beta.32",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.32",
+      "d": "24/10/2026",
+      "items": [
+        "🎮 Trò chơi từ vựng có thêm phạm vi “Từ thông dụng nhất”: 500 · 1.000 · 2.000 · 4.000 · 10.000 từ — hiện tiến độ đã đúng bao nhiêu từ trong phạm vi, gần xong thì gợi ý lên phạm vi tiếp theo",
+        "📚 Danh sách 10.000 từ tiếng Anh: 6.000 từ sẵn có + 4.000 từ mở rộng theo tần suất trong phụ đề phim (đã lọc tên riêng, từ tục), tải 1 lần khi cần",
+        "🎯 Thi đua và Thiện xạ tính theo số từ khác nhau đã trả lời đúng / bắn trúng (mỗi từ tính 1 lần), mốc theo vốn từ: 500 · 1.000 · 2.000 · 4.000 · 10.000 từ"
+      ]
+    },
     {
       "v": "1.0.2-beta.31",
       "d": "24/10/2026",
