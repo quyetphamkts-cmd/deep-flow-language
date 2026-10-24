@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.15",
-  "notes": "Thoát app khi đang phát không còn bị tắt nhạc, treo bảng điều khiển (cần APK mới)",
+  "ver": "1.0.2-beta.16",
+  "notes": "Dọn mã thừa, gọn hơn ~15 KB",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.16",
+      "d": "24/10/2026",
+      "items": [
+        "🧹 Dọn mã: bỏ 10 hàm không còn dùng (sót lại từ các cách làm cũ: AI trên máy, xếp câu kiểu cũ, dịch hàng loạt cũ…) và toàn bộ mã của các tính năng chỉnh phụ đề thủ công đã bỏ (Sửa phụ đề, Đồng bộ tay, Chia ước lượng) — gọn hơn ~15 KB, không đổi chức năng nào đang dùng"
+      ]
+    },
     {
       "v": "1.0.2-beta.15",
       "d": "24/10/2026",
