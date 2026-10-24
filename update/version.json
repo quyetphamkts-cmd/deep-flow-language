@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.98",
-  "notes": "Nút ✕ tắt hẳn, không mất nút ▶/⏸ · AI tự khớp phụ đề nhiều vòng · bỏ chỉnh phụ đề thủ công",
+  "ver": "1.0.1-beta.99",
+  "notes": "🚩 Báo phụ đề sai — AI nghe lại và sửa ngay đoạn vừa phát",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.99",
+      "d": "24/10/2026",
+      "items": [
+        "🚩 Nút Báo sai (cạnh tên bài ở màn hình Nghe): nghe thấy phụ đề sai thì bấm 1 lần — AI nghe lại đúng đoạn vừa phát (khoảng 4 giây vừa qua, thêm 1 câu mỗi bên), đối chiếu từng từ rồi sửa ngay: chữ đúng thì chỉ căn lại mốc thời gian; chữ sai thì chép lại chữ của đoạn đó (Gemini, ChatGPT Whisper hoặc Whisper trên máy) và cắt câu lại. Xong tự phát lại câu vừa sửa để nghe đối chiếu",
+        "Báo sai vẫn chạy khi ChatGPT / Gemini hết lượt: dùng Whisper trên máy cho đoạn ngắn. Âm thanh đã giải mã được giữ 3 phút để báo nhiều chỗ liền không phải chờ"
+      ]
+    },
     {
       "v": "1.0.1-beta.98",
       "d": "24/10/2026",
