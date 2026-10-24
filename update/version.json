@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.2",
-  "notes": "Sửa lỗi câu phụ đề bị đổi chỗ, lệch so với âm thanh",
+  "ver": "1.0.2-beta.3",
+  "notes": "Báo sai chỉ nghe lại ~10 giây quanh chỗ bấm",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.3",
+      "d": "24/10/2026",
+      "items": [
+        "🚩 Báo sai chỉ nghe lại khoảng 10 giây quanh chỗ bấm (7 giây vừa qua + 3 giây tới), tối đa ~14 giây khi câu dài — nhanh hơn, nhẹ RAM hơn; câu xa chỗ nghe thấy sai được giữ nguyên"
+      ]
+    },
     {
       "v": "1.0.2-beta.2",
       "d": "24/10/2026",
