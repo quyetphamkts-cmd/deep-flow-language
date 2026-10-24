@@ -49,6 +49,11 @@ public class MainActivity extends BridgeActivity {
                         if (v.getParent() instanceof ViewGroup) ((ViewGroup) v.getParent()).removeView(v);
                         v.destroy();
                     } catch (Exception ignored) {}
+                    if (!isForeground || bridge == null || isFinishing() || isDestroyed()) {
+                        playing = false;
+                        try { Class.forName("io.github.jofr.capacitor.mediasessionplugin.MediaSessionService").getMethod("dfKill").invoke(null); } catch (Exception ignored) {}
+                        NativeDiag.log(MainActivity.this, "Đã tắt bảng phát nhạc trên thông báo (nhạc đã dừng vì Android đóng WebView) — mở lại app để nghe tiếp");
+                    }
                     if (bridge == null || isFinishing() || isDestroyed()) return true; // phiên cũ đã tách ra
                     if (isForeground) runOnUiThread(MainActivity.this::recreate); else needRecreate = true;
                     return true; // xử lý xong: không để cả app bị tắt theo
@@ -60,6 +65,9 @@ public class MainActivity extends BridgeActivity {
             WebSettings s = getBridge().getWebView().getSettings();
             s.setMediaPlaybackRequiresUserGesture(false);
         } catch (Exception ignored) {}
+        // Mặc định khi app không hiện trên màn hình, tiến trình hiển thị của WebView (chạy nhạc + JavaScript) bị hạ xuống "ít quan trọng"
+        // → máy thiếu RAM là Android đóng nó trước: nhạc tắt, bảng điều khiển trên thông báo bị treo. Giữ ở mức QUAN TRỌNG cả khi ẩn.
+        try { if (Build.VERSION.SDK_INT >= 26) getBridge().getWebView().setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, false); } catch (Exception ignored) {}
     }
 
     @Override

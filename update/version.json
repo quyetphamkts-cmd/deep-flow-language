@@ -1,16 +1,24 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.14",
-  "notes": "Tải về ngay lần nghe đầu · bài học xong giữ 30 ngày rồi mới xoá âm thanh",
+  "ver": "1.0.2-beta.15",
+  "notes": "Thoát app khi đang phát không còn bị tắt nhạc, treo bảng điều khiển (cần APK mới)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 21,
-    "versionName": "1.0.2-beta.10",
+    "versionCode": 22,
+    "versionName": "1.0.2-beta.15",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.15",
+      "d": "24/10/2026",
+      "items": [
+        "⏯ Thoát app khi đang phát: giữ phần chạy nhạc (WebView) ở mức QUAN TRỌNG cả khi app ẩn — trước đây Android coi nó là ít quan trọng, máy thiếu RAM là đóng trước → nhạc tắt, bảng điều khiển trên thông báo bị treo, bấm không ăn",
+        "Nếu máy quá thiếu RAM mà Android vẫn đóng nó: app tự tắt bảng phát nhạc trên thông báo (không để lại bảng “đứng”), mở lại app là nghe tiếp đúng chỗ (cần cài APK mới)"
+      ]
+    },
     {
       "v": "1.0.2-beta.14",
       "d": "24/10/2026",

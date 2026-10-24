@@ -167,4 +167,22 @@ if (!plg.includes('DF_APPCTX')) {
     '    @Override\n    protected void handleOnDestroy() {\n        try { if (service != null) getContext().getApplicationContext().unbindService(serviceConnection); } catch (Exception dfE) {}\n        service = null;\n        super.handleOnDestroy();\n    }\n\n    @Override\n    public void load() {', 'destroy unbind');
   fs.writeFileSync(plgF, plg);
 }
+// lõi app gọi khi WebView (nơi chạy nhạc) bị Android đóng lúc app ẩn: tắt hẳn dịch vụ + bảng điều khiển, không để bảng "xác" trên thông báo
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('DF_KILL')) {
+  svc = rep(svc, '    public void connectAndInitialize(MediaSessionPlugin plugin, Intent intent) {\n',
+    '    public static volatile MediaSessionService dfInst = null; // DF_KILL\n' +
+    '    public static void dfKill() {\n' +
+    '        final MediaSessionService s = dfInst;\n' +
+    '        if (s == null) return;\n' +
+    '        new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> {\n' +
+    '            try { s.setPlaybackState(PlaybackStateCompat.STATE_STOPPED); s.update(); } catch (Exception e) {}\n' +
+    '            try { s.destroy(); } catch (Exception e) {}\n' +
+    '        });\n' +
+    '    }\n\n' +
+    '    public void connectAndInitialize(MediaSessionPlugin plugin, Intent intent) {\n        dfInst = this;\n', 'kill');
+  svc = rep(svc, '    public void onDestroy() { dfFg = "off " + System.currentTimeMillis(); super.onDestroy(); }',
+    '    public void onDestroy() { dfFg = "off " + System.currentTimeMillis(); if (dfInst == this) dfInst = null; super.onDestroy(); }', 'kill clear');
+  fs.writeFileSync(svcF, svc);
+}
 console.log('[patch-media-session] OK');
