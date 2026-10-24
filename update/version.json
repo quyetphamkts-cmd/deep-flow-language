@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.26",
+  "ver": "1.0.2-beta.27",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.27",
+      "d": "24/10/2026",
+      "items": [
+        "🏅 Gọn còn 3 huy chương: Chuyên cần (tổng ngày học: 50 → 400 ngày) · Thi đua (bài học xong: 100 → 3.000 bài) · Kiên trì (ngày học liên tục: 7 → 200 ngày)",
+        "Bỏ huy chương “tuần đủ 10 giờ” và “phát âm” để không trùng lặp"
+      ]
+    },
     {
       "v": "1.0.2-beta.26",
       "d": "24/10/2026",
