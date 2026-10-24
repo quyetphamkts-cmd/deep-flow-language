@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.30",
+  "ver": "1.0.2-beta.31",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.31",
+      "d": "24/10/2026",
+      "items": [
+        "🎯 Thiện xạ là huy chương của trò Bắn chữ: tính số phát bắn trúng (100 · 500 · 1.500 · 3.000 · 6.000)",
+        "🎮 Thi đua tính câu đúng ở 4 trò còn lại; cả hai huy chương hiện ở thẻ Trò chơi từ vựng",
+        "🗣 Huy chương phát âm lấy lại tên Phát âm Chuẩn, vẫn ở màn Phát âm"
+      ]
+    },
     {
       "v": "1.0.2-beta.30",
       "d": "24/10/2026",
