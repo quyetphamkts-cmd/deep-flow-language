@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.84",
-  "notes": "Thanh dưới sắp xếp lại · 🎖 Quân hàm cho chuỗi ngày học · Thư viện · Thanh tiến độ khi tự cập nhật (lưu dữ liệu → tải → cài → mở lại); tạo phụ đề hiện thời gian còn lại của từng bài và của cả đợt · Tự tạo phụ đề chạy ngầm không dùng Whisper trên máy nữa (nguyên nhân chính khiến Android đóng app) — ch",
+  "ver": "1.0.1-beta.85",
+  "notes": "Huy hiệu quân hàm vẽ lại theo cầu vai Lục quân QĐND Việt Nam: chiến sĩ (nền hồng, vạch chữ V đỏ: Binh nhì 1, Binh nhất 2), hạ sĩ quan (vạch ngang đỏ: Hạ sĩ 1, Trung sĩ 2, Thượng sĩ 3), cấp úy (nền vàng, 1 vạch ngang, 1–4 sao), cấp tá (nền vàng, 2 vạch ngang, 1–4 sao), cấp tướng (nền vàng hoa văn, 1–4 sao); viền đỏ, cúc vàng. Cấp chưa đạt hiện mờ dễ nhìn hơn",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.85",
+      "d": "24/10/2026",
+      "items": [
+        "Huy hiệu quân hàm vẽ lại theo cầu vai Lục quân QĐND Việt Nam: chiến sĩ (nền hồng, vạch chữ V đỏ: Binh nhì 1, Binh nhất 2), hạ sĩ quan (vạch ngang đỏ: Hạ sĩ 1, Trung sĩ 2, Thượng sĩ 3), cấp úy (nền vàng, 1 vạch ngang, 1–4 sao), cấp tá (nền vàng, 2 vạch ngang, 1–4 sao), cấp tướng (nền vàng hoa văn, 1–4 sao); viền đỏ, cúc vàng. Cấp chưa đạt hiện mờ dễ nhìn hơn"
+      ]
+    },
     {
       "v": "1.0.1-beta.84",
       "d": "24/10/2026",
