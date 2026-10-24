@@ -93,4 +93,12 @@ if (!cb.includes('DF_UID')) {
     '    public void onCustomAction(String action, android.os.Bundle extras) {\n        plugin.actionCallback(action != null && action.startsWith("dfmode") ? "dfmode" : action); // DF_UID', 'callback map');
   fs.writeFileSync(cbF, cb);
 }
+// trạng thái "none" (bấm ✕ tắt): plugin gốc chỉ huỷ kết nối nên dịch vụ nền + thông báo vẫn còn, đồng hồ vẫn chạy → tắt hẳn dịch vụ
+const plgF = path.join(dir, 'MediaSessionPlugin.java');
+let plg = fs.readFileSync(plgF, 'utf8');
+if (!plg.includes('DF_STOP')) {
+  plg = rep(plg, '        } else if (startServiceOnlyDuringPlayback && service != null && !playback) {\n            getContext().unbindService(serviceConnection);',
+    '        } else if (startServiceOnlyDuringPlayback && service != null && !playback) {\n            try { service.setPlaybackState(PlaybackStateCompat.STATE_STOPPED); service.update(); service.destroy(); } catch (Exception dfE) {} // DF_STOP\n            getContext().unbindService(serviceConnection);', 'stop service');
+  fs.writeFileSync(plgF, plg);
+}
 console.log('[patch-media-session] OK');

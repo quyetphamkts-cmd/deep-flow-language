@@ -1,16 +1,28 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.83",
-  "notes": "Từ điển offline Anh – Việt + Anh – Anh: app tự tải 1 lần (≈7,7 MB, khi có Wi-Fi; hoặc bấm “Tải ngay” ở mục Từ điển) rồi tra từ không cần mạng, không tốn lượt AI. Anh – Việt ~39.700 từ thông dụng + ~14.400 cụm từ (give up, look after, in spite of…) — phiên âm, từ loại, các nghĩa, ví dụ kèm bản dịch, thành ngữ (nguồn Free Vietnamese Dictionary Project của Hồ Ngọc Đức, GPL); Anh – Anh ~51.800 từ — định nghĩa, ví dụ, từ đồng nghĩa (Princeton WordNet). Chạm từ trong phụ đề: nghĩa hiện ngay, tự về dạng gốc (approaches → approach), tự nhận ra cụm từ trong câu (chạm “up” trong “gave up” → 🧩 give up); muốn nghĩa đúng theo câu thì bấm 🎯. Ô Tra từ gợi ý thêm từ trong từ điển offline (📖); Từ điển chung tự điền nghĩa từ từ điển offline trước, thiếu mới dùng Google Dịch",
+  "ver": "1.0.1-beta.84",
+  "notes": "Thanh dưới sắp xếp lại · 🎖 Quân hàm cho chuỗi ngày học · Thư viện · Thanh tiến độ khi tự cập nhật (lưu dữ liệu → tải → cài → mở lại); tạo phụ đề hiện thời gian còn lại của từng bài và của cả đợt · Tự tạo phụ đề chạy ngầm không dùng Whisper trên máy nữa (nguyên nhân chính khiến Android đóng app) — ch",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 13,
-    "versionName": "1.0.1-beta.81",
+    "versionCode": 14,
+    "versionName": "1.0.1-beta.84",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.84",
+      "d": "24/10/2026",
+      "items": [
+        "Thanh dưới sắp xếp lại: Thư viện · Nghe · Phát âm · Từ điển · Cài đặt. Trang 🗣 Phát âm mới: 44 âm IPA (bấm ô để nghe + cách đặt miệng, lỗi hay gặp của người Việt), Âm đuôi (-s/-es, -ed, âm cuối hay bị nuốt, bài luyện), Trọng âm (5 quy tắc, tra trọng âm bằng từ điển offline, bài luyện)",
+        "🎖 Quân hàm cho chuỗi ngày học: vòng tròn số ngày hiện huy hiệu quân hàm hiện tại (Binh nhì → Đại tướng, 17 cấp), vòng sáng quanh huy hiệu đầy dần theo từng ngày của chặng; đủ ngày là thăng hàm kèm thông báo; trang chuỗi ngày có bảng đủ 17 cấp",
+        "Thư viện: bỏ ô tìm kiếm; nút lọc theo mục chuyển lên thanh trên cùng cạnh nút (i), đang lọc thì hiện tên mục",
+        "Thanh tiến độ khi tự cập nhật (lưu dữ liệu → tải → cài → mở lại); tạo phụ đề hiện thời gian còn lại của từng bài và của cả đợt",
+        "Tự tạo phụ đề chạy ngầm không dùng Whisper trên máy nữa (nguyên nhân chính khiến Android đóng app) — chỉ dùng Gemini / ChatGPT; hết lượt thì tạm dừng 30 phút rồi tự làm tiếp. Bấm tạo phụ đề thủ công vẫn chọn được Whisper trên máy",
+        "Nút ✕ trên bảng phát nhạc / widget: tắt hẳn — bảng phát nhạc biến mất, không còn đồng hồ chạy, rồi thoát app (cài APK mới để chắc chắn tắt cả dịch vụ nền)"
+      ]
+    },
     {
       "v": "1.0.1-beta.83",
       "d": "24/10/2026",
