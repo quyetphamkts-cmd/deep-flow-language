@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.36",
+  "ver": "1.0.2-beta.37",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -12,11 +12,12 @@
   },
   "changelog": [
     {
-      "v": "1.0.2-beta.36",
+      "v": "1.0.2-beta.37",
       "d": "24/10/2026",
       "items": [
         "🥚 Bắn chữ làm lại đúng kiểu Bắn trứng: trứng có chữ xếp tổ ong; quả trứng trên nỏ chứa từ đang được đọc to — kéo để ngắm (nảy được vào tường), thả để bắn; chạm trứng cùng chữ thì vỡ cả cụm, trứng treo lơ lửng rơi theo; bắn trượt thì đạn dính luôn tại chỗ và nỏ nạp quả mới; cứ 7 phát trần hạ 1 dãy",
-        "👂 Nút “Chỉ nghe”: giấu chữ trên quả đạn, chỉ nghe để tìm trứng đúng",
+        "👂 Quả đạn giấu chữ — nghe từ được đọc rồi tìm trứng đúng chữ; từ được đọc luôn là từ bắn tới được (thẳng hoặc nảy tường); bắn trúng thì đọc lại từ đó 1 lần nữa",
+        "🔍 Trứng nhỏ lại (1/4 diện tích) cho vừa màn hình điện thoại, một dãy chứa gấp đôi số trứng",
         "🔤 Mỗi quả trứng có từ + phiên âm; bắn trúng hay trượt đều đọc to từ đúng và hiện thẻ từ + phiên âm + nghĩa (bấm để nghe lại)",
         "🚀 Chơi Bắn chữ ngay trong từng bài, thư mục, album, khoá học (menu ⋯) và trong bảng Thống kê từ vựng — dùng đúng từ của bài; từ hay gặp trong bài xuất hiện nhiều hơn, đúng theo thống kê",
         "🩹 ElevenLabs báo “file hỏng”: app giờ gửi file đúng định dạng thật (m4a, ogg, wav…) thay vì luôn gọi là .mp3; nếu vẫn bị từ chối, nhật ký ghi rõ định dạng và vài byte đầu file để kiểm tra",
