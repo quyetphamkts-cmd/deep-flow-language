@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.17",
+  "ver": "1.0.2-beta.18",
   "notes": "Menu ⋯ gọn chữ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -12,10 +12,17 @@
   },
   "changelog": [
     {
+      "v": "1.0.2-beta.18",
+      "d": "24/10/2026",
+      "items": [
+        "✂️ Sửa chữ menu ⋯: “Đánh dấu chưa học”"
+      ]
+    },
+    {
       "v": "1.0.2-beta.17",
       "d": "24/10/2026",
       "items": [
-        "✂️ Menu ⋯ gọn chữ: Đặt mục tiêu · Biểu đồ học tập · Thống kê từ vựng · Đổi tên · Di chuyển · Đánh dấu học xong · Đánh dấu chưa học xong · Xóa (khoá học và thư mục dùng cùng cách gọi)"
+        "✂️ Menu ⋯ gọn chữ: Đặt mục tiêu · Biểu đồ học tập · Thống kê từ vựng · Đổi tên · Di chuyển · Đánh dấu học xong · Đánh dấu chưa học · Xóa (khoá học và thư mục dùng cùng cách gọi)"
       ]
     },
     {
