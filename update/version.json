@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.81",
-  "notes": "Nhật ký biết lý do thật khi app bị đóng (cần cài APK mới bản beta 81): lõi Android đọc lý do Android ghi lại mỗi lần kết thúc app — thiếu RAM, lỗi, bị treo, bị đóng băng ở nền, dùng quá nhiều pin, người dùng vuốt tắt… kèm lượng RAM lúc đó; ghi thêm khi Android báo thiếu bộ nhớ, khi màn hình app bị đóng/tạo lại. WebView bị Android thu hồi thì không còn kéo cả app tắt theo: app tự dựng lại khi bạn mở. Dòng “bị đóng khi phát nền” cũ đổi thành cảnh báo vì có lúc chỉ là Android đóng màn hình app trong khi nhạc vẫn phát",
+  "ver": "1.0.1-beta.82",
+  "notes": "Bài đang nghe luôn được AI làm trước: trong lúc tự tạo phụ đề cho các bài khác, trước mỗi bài app xem bài đang nghe — chưa có phụ đề thì tạo ngay; chưa kiểm tra thì kiểm tra với giọng nói; khớp kém thì nhờ AI nghe lại và căn từng câu — xong mới làm tiếp các bài chưa học. Chuyển sang bài khác giữa chừng thì bài mới cũng được ưu tiên ngay sau bài đang xử lý dở",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.82",
+      "d": "24/10/2026",
+      "items": [
+        "Bài đang nghe luôn được AI làm trước: trong lúc tự tạo phụ đề cho các bài khác, trước mỗi bài app xem bài đang nghe — chưa có phụ đề thì tạo ngay; chưa kiểm tra thì kiểm tra với giọng nói; khớp kém thì nhờ AI nghe lại và căn từng câu — xong mới làm tiếp các bài chưa học. Chuyển sang bài khác giữa chừng thì bài mới cũng được ưu tiên ngay sau bài đang xử lý dở"
+      ]
+    },
     {
       "v": "1.0.1-beta.81",
       "d": "24/10/2026",
