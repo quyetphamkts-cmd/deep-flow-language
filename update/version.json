@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.93",
-  "notes": "Quân hàm theo điểm thành tích (từ × % thuộc bài) · huân chương theo ngày học, bài hoàn thành, phát âm",
+  "ver": "1.0.1-beta.94",
+  "notes": "Tô màu nghĩa của từ đang tra trong câu dịch",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.94",
+      "d": "24/10/2026",
+      "items": [
+        "🎯 Tra từ: trong câu dịch, phần nghĩa tương ứng với từ đang tra được tô màu giống từ gốc (vd polite → “lịch sự”). App so các nghĩa trong từ điển / AI với câu dịch, không phân biệt kiểu dấu (hoà/hòa) và i/y (kỷ/kỉ)",
+        "Từ đang tra được tô ở mọi chỗ xuất hiện trong câu và đúng ranh giới từ (tra “die” không tô nhầm vào “soldier”)"
+      ]
+    },
     {
       "v": "1.0.1-beta.93",
       "d": "24/10/2026",
