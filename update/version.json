@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.39",
+  "ver": "1.0.2-beta.40",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.40",
+      "d": "24/10/2026",
+      "items": [
+        "🥚 Đạn là quả trứng trắng không chữ: bắn trúng thì trứng trắng vỡ cùng cụm trứng đúng chữ và app đọc ngay từ tiếp theo (không đọc lại từ vừa trúng); bắn trượt thì trứng trắng dính luôn vào tổ và biến thành quả trứng mang chữ của từ đó",
+        "🩹 Sửa “điểm mù”: viên đá cắm vào tổ trước đây bị vẽ lệch chỗ so với vị trí thật nên chắn đường bắn ở chỗ trống — nay hết (đã thử bắn ngẫu nhiên tới khi thua, mọi quả trứng đều đúng chỗ)"
+      ]
+    },
     {
       "v": "1.0.2-beta.39",
       "d": "24/10/2026",
