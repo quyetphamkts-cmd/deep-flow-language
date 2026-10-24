@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.13",
-  "notes": "Tự tải lại về máy bài đang ôn chỉ còn trên Drive",
+  "ver": "1.0.2-beta.14",
+  "notes": "Tải về ngay lần nghe đầu · bài học xong giữ 30 ngày rồi mới xoá âm thanh",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.14",
+      "d": "24/10/2026",
+      "items": [
+        "📥 Nghe bài chỉ có trên Drive → app tải ngay về máy ở lần nghe đầu (chạy nền, nhạc vẫn phát); lần sau phát từ máy",
+        "🗂 Bài đã học xong: giữ file âm thanh trong máy 30 ngày kể từ lần học / ôn gần nhất rồi mới tự xoá (trước đây xoá ngay khi đánh dấu học xong). Thư mục, tên bài, phụ đề, bản dịch, tiến độ luôn giữ để nhớ lộ trình và ôn lại; ôn lại thì tự tải về và tính lại 30 ngày"
+      ]
+    },
     {
       "v": "1.0.2-beta.13",
       "d": "24/10/2026",
