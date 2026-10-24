@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.77",
-  "notes": "Từ điển chung tự đầy: app tự gom mọi từ trong phụ đề các bài của Thư viện (đưa về dạng gốc: families → family, were → be), dịch nghĩa sẵn theo lô 40 từ / lần bằng Google Dịch (miễn phí, không tốn lượt AI dành cho tạo phụ đề) — bài đang nghe và bài đang học trước. Chạy nền khi app đang mở và có Wi-Fi; bài mới thêm cũng được tự bổ sung. Gõ ở ô Tra từ là thấy ngay; bấm vào từ thì app tra đầy đủ (phiên âm, Anh – Anh, nghĩa theo câu) như trước",
+  "ver": "1.0.1-beta.78",
+  "notes": "Giảm việc app bị Android đóng khi chạy nền: giải mã âm thanh thẳng ra 16 kHz (tốn RAM ít hơn nhiều lần); dựng sóng âm và tự tạo phụ đề chỉ làm khi app đang mở — bài tự chuyển sang khi nghe nền không còn giải mã cả file. Thêm nhật ký: nếu app bị đóng khi đang phát nền, mục Cài đặt (dưới công tắc Phát dưới nền) hiện số lần, thời điểm, bài và việc đang làm lúc đó, kèm cách khắc phục",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.78",
+      "d": "24/10/2026",
+      "items": [
+        "Giảm việc app bị Android đóng khi chạy nền: giải mã âm thanh thẳng ra 16 kHz (tốn RAM ít hơn nhiều lần); dựng sóng âm và tự tạo phụ đề chỉ làm khi app đang mở — bài tự chuyển sang khi nghe nền không còn giải mã cả file. Thêm nhật ký: nếu app bị đóng khi đang phát nền, mục Cài đặt (dưới công tắc Phát dưới nền) hiện số lần, thời điểm, bài và việc đang làm lúc đó, kèm cách khắc phục"
+      ]
+    },
     {
       "v": "1.0.1-beta.77",
       "d": "24/10/2026",
