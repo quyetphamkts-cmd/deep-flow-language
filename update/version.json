@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.32",
+  "ver": "1.0.2-beta.33",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.33",
+      "d": "24/10/2026",
+      "items": [
+        "✨ Huy chương và quân hàm dạng 3D: mặt vát nổi khối, ánh kim loại phản chiếu theo nguồn sáng, độ dày và bóng đổ; băng vải có nếp gấp; sao và cúc trên cầu vai nổi riêng"
+      ]
+    },
     {
       "v": "1.0.2-beta.32",
       "d": "24/10/2026",
