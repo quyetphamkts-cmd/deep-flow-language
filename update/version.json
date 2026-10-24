@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.18",
-  "notes": "Menu ⋯ gọn chữ",
+  "ver": "1.0.2-beta.19",
+  "notes": "Menu ⋯: Đánh dấu đã học / Bỏ đánh dấu đã học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.19",
+      "d": "24/10/2026",
+      "items": [
+        "✂️ Menu ⋯ của album: “Đánh dấu đã học” / “Bỏ đánh dấu đã học”"
+      ]
+    },
     {
       "v": "1.0.2-beta.18",
       "d": "24/10/2026",
