@@ -1,16 +1,28 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.88",
-  "notes": "Học tập trung: 1 ngày học = 2 giờ học. Ngày nào học chưa đủ 2 giờ thì thời gian được cộng dồn với các ngày khác cho đủ 2 giờ mới tính thêm 1 ngày học (🔥 trên huy hiệu, các giai đoạn hình thành thói quen đều dùng số ngày học này). Vòng tuần T2 → CN: ngày đủ 2 giờ có dấu ✓, ngày học chưa đủ hiện vòng tô màu theo % của 2 giờ; dòng nhắc “Còn … nữa là đủ ngày học thứ N”",
+  "ver": "1.0.1-beta.89",
+  "notes": "Luyện đọc trọng âm (ghi âm & chấm điểm) · thao tác tai nghe · ngày học 2 giờ · lọc nhiều mục · ước tính pin",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 14,
-    "versionName": "1.0.1-beta.84",
+    "versionCode": 15,
+    "versionName": "1.0.1-beta.89",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.89",
+      "d": "24/10/2026",
+      "items": [
+        "Phát âm → Trọng âm: khung 🎤 Luyện đọc trọng âm — bấm một từ (hoặc tra từ bất kỳ) để xem từ tách âm tiết + phiên âm IPA tô màu âm tiết được nhấn, 🔊 nghe mẫu, 🐢 nghe chậm, 🎙 ghi âm giọng bạn (tự dừng khi ngừng nói), ▶ nghe lại giọng mình; chấm điểm nhanh ngay trên máy (đoán âm tiết bạn nhấn theo âm lượng & độ dài) và, nếu có Gemini, AI nghe rồi chấm kỹ kèm góp ý tiếng Việt",
+        "🎧 Thao tác tai nghe (Cài đặt → Thiết lập): chọn việc cho gõ 1 lần, 2 lần, 3 lần (mặc định Phát/Tạm dừng · Bài trước · Bài tiếp). Lệnh từ tai nghe được tách riêng với nút ⏮ ⏭ trên bảng phát nhạc nên đổi thao tác tai nghe không ảnh hưởng nút trên màn hình (cần cài APK beta 89). Nhấn giữ tăng/giảm âm lượng cài trong app của tai nghe (vd. HeyMelody)",
+        "Lõi Android ghi lại chi tiết lỗi Java (tên lỗi + vị trí) vào tab Nhật ký nếu app bị tắt vì lỗi",
+        "Ngày học: ngày học đủ 2 giờ tính đúng 1 ngày (học hơn vẫn chỉ 1 ngày, giờ thừa không chuyển sang hôm sau); ngày học chưa đủ 2 giờ thì thời gian của các hôm sau bù vào cho đủ rồi mới tính. Quân hàm vẫn tính theo tổng giờ",
+        "Lọc Thư viện chọn được nhiều mục cùng lúc (vd. Đang học + Chưa học); nút lọc hiện số mục đang chọn",
+        "🔋 Cài đặt → Thiết lập: ước tính pin máy giảm bao nhiêu %/giờ khi nghe (đo lúc không cắm sạc). Giảm tính toán khi chạy nền (bớt nguy cơ Android đóng app vì dùng nhiều CPU). Nhật ký ghi thêm trạng thái dịch vụ phát nhạc nền để tìm nguyên nhân app bị đóng"
+      ]
+    },
     {
       "v": "1.0.1-beta.88",
       "d": "24/10/2026",

@@ -32,6 +32,9 @@ public class MainActivity extends BridgeActivity {
         registerPlugin(GDrivePlugin.class);
         registerPlugin(HeadsetPlugin.class);
         super.onCreate(savedInstanceState);
+        // lỗi Java làm app bị tắt: ghi lại tên lỗi + vài dòng vị trí vào nhật ký để lần sau xem được
+        final Thread.UncaughtExceptionHandler prevH = Thread.getDefaultUncaughtExceptionHandler();
+        if (!(prevH instanceof DfCrashHandler)) Thread.setDefaultUncaughtExceptionHandler(new DfCrashHandler(getApplicationContext(), prevH));
         NativeDiag.log(this, "Màn hình app được tạo" + (savedInstanceState != null ? " (khôi phục sau khi Android đóng màn hình)" : "")
             + (orphan != null ? " · phiên cũ vẫn đang phát nền → chuyển sang phiên mới" : ""));
         stopOrphan();
@@ -144,5 +147,22 @@ public class MainActivity extends BridgeActivity {
     /** Giữ JavaScript (hẹn giờ, lặp câu, chuyển bài) tiếp tục chạy khi app ở dưới nền */
     private void keepWebViewAlive() {
         try { getBridge().getWebView().onResume(); getBridge().getWebView().resumeTimers(); } catch (Exception ignored) {}
+    }
+
+    /** Ghi lỗi Java vào nhật ký lõi Android trước khi app bị tắt */
+    static class DfCrashHandler implements Thread.UncaughtExceptionHandler {
+        private final android.content.Context ctx; private final Thread.UncaughtExceptionHandler prev;
+        DfCrashHandler(android.content.Context c, Thread.UncaughtExceptionHandler p) { ctx = c; prev = p; }
+        @Override public void uncaughtException(Thread t, Throwable e) {
+            try {
+                StringBuilder b = new StringBuilder("Lỗi Java làm app tắt: ").append(e);
+                StackTraceElement[] st = e.getStackTrace();
+                for (int i = 0; i < Math.min(6, st.length); i++) b.append(" | at ").append(st[i]);
+                Throwable c = e.getCause();
+                if (c != null) { b.append(" | do: ").append(c); StackTraceElement[] cs = c.getStackTrace(); for (int i = 0; i < Math.min(3, cs.length); i++) b.append(" | at ").append(cs[i]); }
+                NativeDiag.logNow(ctx, b.toString());
+            } catch (Throwable ignored) {}
+            if (prev != null) prev.uncaughtException(t, e);
+        }
     }
 }

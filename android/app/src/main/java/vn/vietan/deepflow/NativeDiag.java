@@ -35,6 +35,18 @@ public class NativeDiag {
         } catch (Exception ignored) {}
     }
 
+    /** Ghi ngay xuống bộ nhớ (dùng khi app sắp bị tắt vì lỗi) */
+    static synchronized void logNow(Context ctx, String msg) {
+        try {
+            SharedPreferences p = ctx.getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+            JSONArray a = new JSONArray(p.getString("log", "[]"));
+            JSONObject e = new JSONObject(); e.put("t", System.currentTimeMillis()); e.put("m", msg); a.put(e);
+            JSONArray b = new JSONArray();
+            for (int i = Math.max(0, a.length() - MAX); i < a.length(); i++) b.put(a.get(i));
+            p.edit().putString("log", b.toString()).commit();
+        } catch (Exception ignored) {}
+    }
+
     static JSONArray readLog(Context ctx) {
         try {
             return new JSONArray(ctx.getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE).getString("log", "[]"));

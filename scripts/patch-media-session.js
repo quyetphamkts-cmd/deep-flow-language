@@ -101,4 +101,33 @@ if (!plg.includes('DF_STOP')) {
     '        } else if (startServiceOnlyDuringPlayback && service != null && !playback) {\n            try { service.setPlaybackState(PlaybackStateCompat.STATE_STOPPED); service.update(); service.destroy(); } catch (Exception dfE) {} // DF_STOP\n            getContext().unbindService(serviceConnection);', 'stop service');
   fs.writeFileSync(plgF, plg);
 }
+// lệnh từ nút tai nghe (Bluetooth / dây) đi qua onMediaButtonEvent → gửi tên riêng "hsnext" / "hsprev" để app làm theo thao tác người dùng chọn;
+// nút ⏮ ⏭ trên thông báo / màn hình khoá vẫn là "previoustrack" / "nexttrack"
+cb = fs.readFileSync(cbF, 'utf8');
+if (!cb.includes('DF_HW')) {
+  cb = rep(cb, '    @Override\n    public void onSkipToPrevious() {\n        plugin.actionCallback("previoustrack");\n    }',
+    '    static volatile boolean dfHw = false; // DF_HW\n' +
+    '    @Override\n    public boolean onMediaButtonEvent(android.content.Intent i) {\n' +
+    '        boolean fromNotif = android.os.SystemClock.uptimeMillis() - MediaSessionService.dfNotifAt < 400;\n' +
+    '        dfHw = !fromNotif;\n        try { return super.onMediaButtonEvent(i); } finally { dfHw = false; }\n    }\n\n' +
+    '    @Override\n    public void onSkipToPrevious() {\n        plugin.actionCallback(dfHw && plugin.hasActionHandler("hsprev") ? "hsprev" : "previoustrack");\n    }', 'hw prev');
+  cb = rep(cb, '    public void onSkipToNext() {\n        plugin.actionCallback("nexttrack");',
+    '    public void onSkipToNext() {\n        plugin.actionCallback(dfHw && plugin.hasActionHandler("hsnext") ? "hsnext" : "nexttrack");', 'hw next');
+  fs.writeFileSync(cbF, cb);
+}
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('dfNotifAt')) {
+  svc = rep(svc, '        MediaButtonReceiver.handleIntent(mediaSession, intent);',
+    '        dfNotifAt = android.os.SystemClock.uptimeMillis(); // DF_HW: nút trên thông báo kiểu cũ cũng đi qua đây\n        MediaButtonReceiver.handleIntent(mediaSession, intent);', 'notif time');
+  svc = rep(svc, '    public static volatile String dfDiag', '    public static volatile long dfNotifAt = 0;\n    public static volatile String dfDiag', 'notif field');
+  fs.writeFileSync(svcF, svc);
+}
+// chẩn đoán dịch vụ phát nhạc nền: khởi động được không, còn chạy không (không chạy thì Android coi app là app nền thường → dễ bị đóng)
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('DF_FG')) {
+  svc = rep(svc, '        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {\n          startForeground(NOTIFICATION_ID, notificationBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);\n        } else {\n          startForeground(NOTIFICATION_ID, notificationBuilder.build());\n        }',
+    '        try { // DF_FG\n        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {\n          startForeground(NOTIFICATION_ID, notificationBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);\n        } else {\n          startForeground(NOTIFICATION_ID, notificationBuilder.build());\n        }\n        dfFg = "on " + System.currentTimeMillis();\n        } catch (Exception dfE) { dfFg = "fail " + System.currentTimeMillis() + " " + dfE; }', 'fg start');
+  svc = rep(svc, '    public static volatile long dfNotifAt = 0;', '    public static volatile long dfNotifAt = 0;\n    public static volatile String dfFg = "none";\n    @Override\n    public void onDestroy() { dfFg = "off " + System.currentTimeMillis(); super.onDestroy(); }', 'fg field');
+  fs.writeFileSync(svcF, svc);
+}
 console.log('[patch-media-session] OK');

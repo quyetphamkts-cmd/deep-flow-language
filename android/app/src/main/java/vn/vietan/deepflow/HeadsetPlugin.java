@@ -88,6 +88,7 @@ public class HeadsetPlugin extends Plugin {
             r.put("exits", NativeDiag.exits(getContext()));
             r.put("sdk", Build.VERSION.SDK_INT);
             r.put("model", Build.MANUFACTURER + " " + Build.MODEL);
+            try { Class<?> c = Class.forName("io.github.jofr.capacitor.mediasessionplugin.MediaSessionService"); r.put("fg", String.valueOf(c.getField("dfFg").get(null))); } catch (Exception e) { r.put("fg", "?"); }
         } catch (Exception e) { r.put("err", e.toString()); }
         call.resolve(r);
     }
