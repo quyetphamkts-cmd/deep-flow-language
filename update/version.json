@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.4",
-  "notes": "Sửa lỗi bài đang ôn lại không phát được từ Drive",
+  "ver": "1.0.2-beta.5",
+  "notes": "Hết giật lag: không chạy AI trên điện thoại khi báo sai",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.5",
+      "d": "24/10/2026",
+      "items": [
+        "🐢 Hết giật lag: nút 🚩 không còn chạy AI (Whisper) ngay trên điện thoại khi ChatGPT / Gemini hết lượt — mô hình quá nặng, chiếm hết CPU lúc đang phát. Giờ app chỉ ghi nhận chỗ sai, bạn cứ nghe tiếp; khi AI online có lượt, app tự sửa lần lượt các chỗ đã ghi nhận của bài đang mở"
+      ]
+    },
     {
       "v": "1.0.2-beta.4",
       "d": "24/10/2026",
