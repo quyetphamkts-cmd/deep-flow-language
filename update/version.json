@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.27",
+  "ver": "1.0.2-beta.28",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.28",
+      "d": "24/10/2026",
+      "items": [
+        "🏅 Giữ lại 2 huy chương, đặt đúng chỗ: Bền bỉ (tuần học đủ 10 giờ) ở phần tuần học trong trang chuỗi ngày · Phát âm Chuẩn (từ đọc đạt ≥ 85 điểm) ở đầu màn Phát âm",
+        "Tủ huân chương chính vẫn là Chuyên cần · Thi đua · Kiên trì"
+      ]
+    },
     {
       "v": "1.0.2-beta.27",
       "d": "24/10/2026",
