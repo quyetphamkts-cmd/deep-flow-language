@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.8",
-  "notes": "Sửa bảng phát nhạc bị đứng, nút ⏸ không dùng được (cần APK mới)",
+  "ver": "1.0.2-beta.9",
+  "notes": "Mỗi thư mục hiện tổng số từ vựng của bài và thư mục con",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.9",
+      "d": "24/10/2026",
+      "items": [
+        "📖 Mỗi album / thư mục trong Thư viện hiện tổng số từ vựng (từ khác nhau) của mọi bài trong nó và trong các thư mục con — không đếm trùng từ xuất hiện ở nhiều bài. Khoá học vẫn hiện tổng số từ của cả khoá"
+      ]
+    },
     {
       "v": "1.0.2-beta.8",
       "d": "24/10/2026",
