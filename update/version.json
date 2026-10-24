@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.38",
+  "ver": "1.0.2-beta.39",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.39",
+      "d": "24/10/2026",
+      "items": [
+        "🪨 Bắn trứng thời cổ đại: khung hang đá có đuốc cháy, trần đá nhũ; nỏ bắn viên đạn đá (không còn hình loa) — trúng thì đá đập vỡ cả cụm trứng cùng chữ rồi rơi xuống, trượt thì đá cắm luôn vào tổ thành chướng ngại",
+        "🧔 Người thổ dân đứng kéo nỏ: cười nhảy cẫng khi bắn trúng, xị mặt khi trượt, la hét khi thua bị cả tổ trứng đổ ụp đè bẹp",
+        "🏹 Giữ đuôi nỏ kéo về sau để ngắm (kéo càng xa dây càng căng) hoặc chạm vào chỗ muốn bắn; tia ngắm kéo dài, vẽ cả đường nảy tường và chỗ viên đá sẽ chạm",
+        "🔊 Âm thanh: dây nỏ bật, gió vút, nảy tường, vỏ trứng nứt lách tách, đá cắm, giọng người thổ dân; 🎵 nhạc nền hoang dã (trống bộ lạc, kèn ống trầm, sáo vọng hang) — có nút bật/tắt nhạc và tiếng"
+      ]
+    },
     {
       "v": "1.0.2-beta.38",
       "d": "24/10/2026",
