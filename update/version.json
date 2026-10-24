@@ -1,16 +1,23 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.7",
-  "notes": "Sửa dứt điểm phụ đề lộn thứ tự câu bằng ElevenLabs nghe lại cả bài",
+  "ver": "1.0.2-beta.8",
+  "notes": "Sửa bảng phát nhạc bị đứng, nút ⏸ không dùng được (cần APK mới)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 19,
-    "versionName": "1.0.1-beta.98",
+    "versionCode": 20,
+    "versionName": "1.0.2-beta.8",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.8",
+      "d": "24/10/2026",
+      "items": [
+        "⏯ Sửa lỗi bảng phát nhạc trên thông báo / màn hình khoá bị “đứng”: chữ không đổi, nút ⏸ mờ, bấm không có tác dụng. Mỗi lần Android đóng rồi dựng lại màn hình app, lõi phát nhạc tạo phiên phát nhạc mới nhưng không đóng phiên cũ — Android lại hiện bảng của phiên cũ không còn ai điều khiển. Giờ phiên cũ được đóng trước khi tạo phiên mới (cần cài APK mới)"
+      ]
+    },
     {
       "v": "1.0.2-beta.7",
       "d": "24/10/2026",

@@ -145,4 +145,12 @@ if (!svc.includes('DF_PLAYBTN')) {
     '                    if (actionName.equals("play") && playbackState == PlaybackStateCompat.STATE_PLAYING) { // DF_PLAYBTN', 'play button');
   fs.writeFileSync(svcF, svc);
 }
+// mỗi lần app nối lại dịch vụ (Android đóng / dựng lại màn hình app), plugin gốc TẠO PHIÊN PHÁT NHẠC MỚI mà không đóng phiên cũ →
+// phiên cũ vẫn "đang hoạt động" nhưng không còn ai điều khiển: Android hiện bảng của phiên cũ (chữ đứng yên, nút ⏸ mờ, bấm không ăn). Đóng phiên cũ trước.
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('DF_ONE_SESSION')) {
+  svc = rep(svc, '        this.plugin = plugin;\n\n        mediaSession = new MediaSessionCompat(this, "WebViewMediaSession");',
+    '        this.plugin = plugin;\n\n        try { if (mediaSession != null) { mediaSession.setActive(false); mediaSession.release(); } } catch (Exception dfE) {} // DF_ONE_SESSION\n        mediaSession = new MediaSessionCompat(this, "WebViewMediaSession");', 'one session');
+  fs.writeFileSync(svcF, svc);
+}
 console.log('[patch-media-session] OK');
