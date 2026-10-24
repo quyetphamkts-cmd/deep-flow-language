@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.20",
-  "notes": "Phát cả thư mục (gồm thư mục con)",
+  "ver": "1.0.2-beta.21",
+  "notes": "Chữ AI chép hiện như đang gõ · nút Dừng / Ẩn có màu",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.21",
+      "d": "24/10/2026",
+      "items": [
+        "✨ Bảng tiến trình AI: chữ AI vừa chép (Gemini, ChatGPT Whisper, ElevenLabs) hiện ra như đang gõ, đoạn nào xong hiện đoạn đó — chỉ chạy hiệu ứng khi bảng đang mở, không tốn thêm lượt AI",
+        "Nút “Ẩn (vẫn chạy)” đổi thành “Ẩn”; hai nút có màu: ⏹ Dừng (đỏ), Ẩn (xanh)"
+      ]
+    },
     {
       "v": "1.0.2-beta.20",
       "d": "24/10/2026",
