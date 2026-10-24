@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.37",
+  "ver": "1.0.2-beta.38",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.38",
+      "d": "24/10/2026",
+      "items": [
+        "🏹 Bắn trứng sống động hơn: giữ tay để kéo căng dây nỏ (quả trứng lùi theo), thả tay dây bật lại, trứng vừa bay vừa xoay",
+        "🥚 Bắn trúng: trứng loé sáng, nứt đôi thành 2 mảnh vỏ răng cưa văng ra rồi rơi xuống đáy, lòng đỏ bắn tóe; trứng lơ lửng rơi xuống đáy cũng vỡ vỏ"
+      ]
+    },
     {
       "v": "1.0.2-beta.37",
       "d": "24/10/2026",
