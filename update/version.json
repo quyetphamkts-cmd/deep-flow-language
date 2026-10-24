@@ -1,16 +1,23 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.94",
-  "notes": "Tô màu nghĩa của từ đang tra trong câu dịch",
+  "ver": "1.0.1-beta.95",
+  "notes": "Logo mới: người bơi đắm mình trong dòng nước ngôn ngữ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 15,
-    "versionName": "1.0.1-beta.89",
+    "versionCode": 16,
+    "versionName": "1.0.1-beta.95",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.95",
+      "d": "24/10/2026",
+      "items": [
+        "🏊 Logo mới: người bơi sải đắm mình trong dòng nước ngôn ngữ — đầu và tay nhô trên mặt nước, thân chìm giữa dòng chữ của nhiều thứ tiếng (A, 文, あ, 한, ñ, Б…). Đổi cả biểu tượng app, biểu tượng tròn, biểu tượng thích ứng và màn hình chờ (cần cài APK mới để thấy biểu tượng ngoài màn hình chính)"
+      ]
+    },
     {
       "v": "1.0.1-beta.94",
       "d": "24/10/2026",

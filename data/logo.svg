@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16243d"/><stop offset=".5" stop-color="#0d1828"/><stop offset="1" stop-color="#061020"/></linearGradient>
+<linearGradient id="w1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3fd0c0"/><stop offset=".55" stop-color="#58b8ff"/><stop offset="1" stop-color="#3fd0c0"/></linearGradient>
+<linearGradient id="wb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f8fb8" stop-opacity=".5"/><stop offset=".35" stop-color="#14506f" stop-opacity=".55"/><stop offset="1" stop-color="#071a30" stop-opacity=".7"/></linearGradient>
+<linearGradient id="sw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe0a0"/><stop offset="1" stop-color="#ff9d1a"/></linearGradient>
+<clipPath id="cl"><rect width="512" height="512" rx="112"/></clipPath>
+</defs>
+<g clip-path="url(#cl)">
+<rect width="512" height="512" fill="url(#bg)"/>
+<g font-family="'Noto Sans CJK SC',Arial,sans-serif" font-weight="700">
+ <text x="62" y="160" font-size="92" fill="#e9edf4">A</text>
+ <text x="184" y="118" font-size="66" fill="#7fd6ca">文</text>
+ <text x="396" y="128" font-size="54" fill="#ffb020" opacity=".9">あ</text>
+</g>
+<!-- phần thân dưới nước -->
+<g fill="none" stroke="url(#sw)" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M304 266 C270 276 236 288 204 298" stroke-width="46"/>
+ <path d="M200 296 C168 296 140 288 104 292" stroke-width="24"/>
+ <path d="M202 304 C172 316 144 326 112 330" stroke-width="24"/>
+ <path d="M98 290 l-18 -4 M106 330 l-18 4" stroke-width="14"/>
+</g>
+<!-- dòng nước phủ lên: đắm chìm -->
+<path d="M0 258 C70 232 130 234 190 254 S310 282 370 258 S470 230 512 244 V512 H0 Z" fill="url(#wb)"/>
+<g font-family="'Noto Sans CJK SC',Arial,sans-serif" font-weight="700" fill="#bfefff" opacity=".5">
+ <text x="40" y="404" font-size="44">한</text><text x="150" y="380" font-size="40">文</text><text x="262" y="414" font-size="42">ñ</text><text x="356" y="392" font-size="40">あ</text><text x="440" y="420" font-size="42">Б</text>
+ <text x="96" y="478" font-size="32" opacity=".7">e</text><text x="214" y="490" font-size="32" opacity=".7">ç</text><text x="318" y="484" font-size="30" opacity=".7">字</text><text x="420" y="492" font-size="30" opacity=".7">ü</text>
+</g>
+<g fill="none" stroke-linecap="round">
+ <path d="M-10 258 C70 232 130 234 190 254 S310 282 370 258 S470 230 522 244" stroke="url(#w1)" stroke-width="16"/>
+ <path d="M-10 336 C70 310 150 312 230 332 S370 356 440 330 S500 314 522 318" stroke="url(#w1)" stroke-width="10" opacity=".55"/>
+ <path d="M-10 436 C80 414 160 414 240 430 S380 452 450 430 S505 418 522 420" stroke="url(#w1)" stroke-width="7" opacity=".35"/>
+</g>
+<!-- đầu và tay sải nhô trên mặt nước -->
+<path d="M288 258 C292 186 372 150 440 224" stroke="url(#sw)" stroke-width="30" stroke-linecap="round" fill="none"/>
+<circle cx="330" cy="246" r="34" fill="url(#sw)"/>
+<path d="M298 258 C320 276 352 276 370 260" stroke="#3fd0c0" stroke-width="10" stroke-linecap="round" fill="none"/>
+<g fill="#e9fbff"><circle cx="458" cy="236" r="10" opacity=".85"/><circle cx="476" cy="214" r="6" opacity=".65"/><circle cx="440" cy="252" r="6" opacity=".6"/><circle cx="64" cy="290" r="8" opacity=".55"/><circle cx="46" cy="270" r="5" opacity=".45"/></g>
+</g>
+</svg>
