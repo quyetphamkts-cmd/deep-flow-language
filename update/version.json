@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.90",
-  "notes": "✏️ Sửa phụ đề: nút ✏️ cạnh ⋯ ở màn hình Nghe (hoặc ⋯ của bài → Sửa phụ đề). Bài tạm dừng khi sửa; chạm vào chữ để sửa câu tiếng Anh và bản dịch, giữ ☰ kéo câu lên/xuống cho đúng thứ tự (mốc thời gian giữ nguyên theo thứ tự), ▶ nghe đúng câu đó để đối chiếu (tự dừng cuối câu), 🗑 xoá câu thừa. Lưu xong phát tiếp; phụ đề đã sửa tay không bị bước tự kiểm tra / AI căn lại ghi đè. Ở màn hình Nghe, chạm vào một câu là phát từ câu đó",
+  "ver": "1.0.1-beta.91",
+  "notes": "Quân hàm theo ngày học · tủ huân chương theo bài học · phát cả bài khi sửa phụ đề",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.91",
+      "d": "24/10/2026",
+      "items": [
+        "🎖 Quân hàm thăng theo lộ trình ngày học (1 ngày học = đủ 2 giờ, học thiếu thì hôm sau bù): A1 Chiến sĩ đến 50 ngày · A2 Hạ sĩ quan đến 100 · B1 cấp úy đến 200 · B2 cấp tá đến 300 · C1 Thiếu tướng 300, Trung tướng 350 · C2 Thượng tướng 400, Đại tướng 600 ngày học. Thanh kinh nghiệm tính theo ngày học; 🔥 trên huy hiệu là số ngày học đủ 2 giờ liên tiếp",
+        "🏅 Tủ huân chương (trang chuỗi ngày): 6 loại × 5 hạng (Huy chương → hạng Ba → hạng Nhì → hạng Nhất → Đại Huân chương) ứng với 5 chặng A1 → C1–C2. Chiến công theo số bài học xong (hiểu ≥ 80%): 20 · 50 · 100 · 180 · 400 bài; Trí tuệ theo từ đã thuộc; Phát âm Chuẩn theo từ đọc ≥ 85 điểm; Độc lập Ngôn ngữ theo bậc CEFR của vốn từ; Chiến sĩ Thi đua theo ngày học đủ 2 giờ liên tiếp; Kiên trì theo tuần học đủ 10 giờ. Đạt hạng mới có màn hình trao huân chương",
+        "✏️ Sửa phụ đề: thêm thanh phát cả bài (▶/⏸, lùi/tới 5 giây, thanh tua); câu đang đọc sáng viền xanh và tự cuộn tới để so chữ với tiếng (tắt được bằng “Theo câu đang đọc”)"
+      ]
+    },
     {
       "v": "1.0.1-beta.90",
       "d": "24/10/2026",
