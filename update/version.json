@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.89",
-  "notes": "Luyện đọc trọng âm (ghi âm & chấm điểm) · thao tác tai nghe · ngày học 2 giờ · lọc nhiều mục · ước tính pin",
+  "ver": "1.0.1-beta.90",
+  "notes": "✏️ Sửa phụ đề: nút ✏️ cạnh ⋯ ở màn hình Nghe (hoặc ⋯ của bài → Sửa phụ đề). Bài tạm dừng khi sửa; chạm vào chữ để sửa câu tiếng Anh và bản dịch, giữ ☰ kéo câu lên/xuống cho đúng thứ tự (mốc thời gian giữ nguyên theo thứ tự), ▶ nghe đúng câu đó để đối chiếu (tự dừng cuối câu), 🗑 xoá câu thừa. Lưu xong phát tiếp; phụ đề đã sửa tay không bị bước tự kiểm tra / AI căn lại ghi đè. Ở màn hình Nghe, chạm vào một câu là phát từ câu đó",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.90",
+      "d": "24/10/2026",
+      "items": [
+        "✏️ Sửa phụ đề: nút ✏️ cạnh ⋯ ở màn hình Nghe (hoặc ⋯ của bài → Sửa phụ đề). Bài tạm dừng khi sửa; chạm vào chữ để sửa câu tiếng Anh và bản dịch, giữ ☰ kéo câu lên/xuống cho đúng thứ tự (mốc thời gian giữ nguyên theo thứ tự), ▶ nghe đúng câu đó để đối chiếu (tự dừng cuối câu), 🗑 xoá câu thừa. Lưu xong phát tiếp; phụ đề đã sửa tay không bị bước tự kiểm tra / AI căn lại ghi đè. Ở màn hình Nghe, chạm vào một câu là phát từ câu đó"
+      ]
+    },
     {
       "v": "1.0.1-beta.89",
       "d": "24/10/2026",
