@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.12",
-  "notes": "Thống kê từ vựng nằm trong nút ⋯ của khoá học, album, thư mục",
+  "ver": "1.0.2-beta.13",
+  "notes": "Tự tải lại về máy bài đang ôn chỉ còn trên Drive",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.13",
+      "d": "24/10/2026",
+      "items": [
+        "📥 Bài đã học xong nhưng đang nghe lại (đang phát hoặc nghe trong 7 ngày qua) mà chỉ còn “☁ Trên Drive” → app tự tải lại về máy khi có Wi-Fi, lần sau phát từ máy. Tránh phát trực tiếp từ Drive nhiều lần làm Google tạm chặn tải file"
+      ]
+    },
     {
       "v": "1.0.2-beta.12",
       "d": "24/10/2026",
