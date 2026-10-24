@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.92",
-  "notes": "Dịch tiếng Việt chuẩn ngữ pháp, chính tả hơn · chọn kiểu đặt dấu · dịch lại bài cũ",
+  "ver": "1.0.1-beta.93",
+  "notes": "Quân hàm theo điểm thành tích (từ × % thuộc bài) · huân chương theo ngày học, bài hoàn thành, phát âm",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.93",
+      "d": "24/10/2026",
+      "items": [
+        "🎖 Quân hàm thăng theo ĐIỂM THÀNH TÍCH: mỗi bài học xong cộng số từ khác nhau trong bài × % thuộc bài (bài 100 từ, thuộc 80% → +80 điểm). Ôn lại để tăng % thuộc thì điểm tăng theo. Mốc mỗi bậc theo lộ trình CEFR: Binh nhất 5.000 · Hạ sĩ 10.000 · Thiếu úy 20.000 · Thiếu tá 40.000 · Thiếu tướng 60.000 · Đại tướng 120.000 điểm; app ước tính bao lâu nữa lên hàm theo tốc độ tăng điểm 30 ngày gần nhất",
+        "🏅 Tủ huân chương ghi nhận sự chăm chỉ: Chuyên cần (tổng ngày học: 50 · 100 · 200 · 300 · 400), Chiến công (bài đã học xong), Chiến sĩ Thi đua (ngày học liên tiếp), Kiên trì (tuần đủ 10 giờ), Phát âm Chuẩn",
+        "📊 Thẻ chuỗi ngày hiện thêm tổng điểm thành tích; huy hiệu quân hàm vẫn hiện số ngày học"
+      ]
+    },
     {
       "v": "1.0.1-beta.92",
       "d": "24/10/2026",
