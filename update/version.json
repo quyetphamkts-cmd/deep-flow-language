@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.40",
+  "ver": "1.0.2-beta.41",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.41",
+      "d": "25/10/2026",
+      "items": [
+        "⏸ Mở màn Phát âm thì bài đang nghe tự dừng để luyện phát âm",
+        "🔥 Chuỗi ngày học chuyển lên đầu trang Nghe (bấm vào để xem chi tiết, quân hàm, huy chương)",
+        "🏅 6 huy chương Chiến sĩ: Chuyên cần (tổng ngày học) · Bền bỉ (ngày học liên tục) · Kiên trì (tuần học đủ 10 giờ) · Thi đua (bài nghe học xong) · Thiện xạ (từ chọn / bắn đúng trong các trò chơi từ vựng) · Phát âm (từ đọc đúng) — đủ cả 6 trong Tủ huân chương"
+      ]
+    },
     {
       "v": "1.0.2-beta.40",
       "d": "24/10/2026",
