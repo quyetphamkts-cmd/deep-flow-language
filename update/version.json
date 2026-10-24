@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.1",
-  "notes": "Sửa tràn bộ nhớ khi AI sửa phụ đề · Gemini chép chữ, Whisper khớp từng từ, Google Dịch để dịch",
+  "ver": "1.0.2-beta.2",
+  "notes": "Sửa lỗi câu phụ đề bị đổi chỗ, lệch so với âm thanh",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.2",
+      "d": "24/10/2026",
+      "items": [
+        "🔀 Sửa lỗi câu phụ đề bị đổi chỗ (rõ nhất ở bài hỏi đáp lặp câu như Mini Story): bước tự kiểm tra dời từng câu tới 3 giây theo độ to nhỏ âm thanh, câu ngắn 1–2 giây bị dời vượt qua câu bên cạnh; rồi app xếp lại CHỮ theo mốc thời gian sai. Giờ không bao giờ đổi thứ tự chữ (thứ tự AI chép theo lời nói là đúng), chỉ xếp lại mốc thời gian; dời câu không được vượt câu bên cạnh",
+        "🎯 Khi khớp từng từ mà chữ phụ đề cũ chỉ khớp dưới 85% lời nói (chép thiếu, lặp, sai thứ tự), app dùng chữ do ChatGPT Whisper vừa chép trong cùng lần nghe. Mọi bài đã khớp trước đây được khớp lại một lần theo cách mới"
+      ]
+    },
     {
       "v": "1.0.2-beta.1",
       "d": "24/10/2026",
