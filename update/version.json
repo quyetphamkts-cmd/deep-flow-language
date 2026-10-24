@@ -1,16 +1,26 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.97",
-  "notes": "Căn từng từ giữa âm thanh và phụ đề, cắt câu đúng chỗ · dùng lại logo cũ",
+  "ver": "1.0.1-beta.98",
+  "notes": "Nút ✕ tắt hẳn, không mất nút ▶/⏸ · AI tự khớp phụ đề nhiều vòng · bỏ chỉnh phụ đề thủ công",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 18,
-    "versionName": "1.0.1-beta.97",
+    "versionCode": 19,
+    "versionName": "1.0.1-beta.98",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.98",
+      "d": "24/10/2026",
+      "items": [
+        "✕ trên thông báo / màn hình khoá / widget: tắt hẳn bảng phát nhạc và thoát app (trước đây chỉ tạm dừng, bảng phát nhạc còn lại và mất nút ▶/⏸). Nút ▶/⏸ luôn có khi đang dừng — cần cài APK mới",
+        "🎯 AI tự khớp phụ đề với âm thanh NHIỀU VÒNG, người học không cần làm gì: vòng 1 nghe cả bài lấy mốc từng từ và cắt lại câu; các vòng sau nghe lại riêng những câu khớp kém (kèm chữ phụ đề làm gợi ý) rồi đối chiếu lại, chỉ nhận khi khớp tốt hơn (tối đa 3 vòng). Chữ phụ đề khác nhiều lời nói thì AI tự tạo lại phụ đề",
+        "Chạy nền khi app đang mở: bài đang nghe trước, rồi các bài trong album đang học, và mọi bài vừa tạo phụ đề bằng Gemini. Dùng ChatGPT Whisper; không có ChatGPT thì dùng Whisper trên máy lúc đang tạm dừng",
+        "🎧 Người học chỉ tập trung nghe · hiểu · phát âm · nói: bỏ Sửa phụ đề, Đồng bộ tay, Chia ước lượng và các mục chỉnh phụ đề trong menu ⋯"
+      ]
+    },
     {
       "v": "1.0.1-beta.97",
       "d": "24/10/2026",

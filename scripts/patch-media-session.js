@@ -130,4 +130,19 @@ if (!svc.includes('DF_FG')) {
   svc = rep(svc, '    public static volatile long dfNotifAt = 0;', '    public static volatile long dfNotifAt = 0;\n    public static volatile String dfFg = "none";\n    @Override\n    public void onDestroy() { dfFg = "off " + System.currentTimeMillis(); super.onDestroy(); }', 'fg field');
   fs.writeFileSync(svcF, svc);
 }
+// ✕ tắt: giải phóng hẳn phiên phát nhạc (MediaSession) — nếu chỉ dừng dịch vụ, Android 13+ vẫn giữ bảng điều khiển
+// ở trạng thái "đã dừng" (không còn nút phát/tạm dừng) trên thanh thông báo / màn hình khoá
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('DF_RELEASE')) {
+  svc = rep(svc, '    public void destroy() {\n        stopForeground(true);\n        stopSelf();\n    }',
+    '    public void destroy() {\n        try { if (mediaSession != null) { mediaSession.setActive(false); mediaSession.release(); } } catch (Exception dfE) {} // DF_RELEASE\n        try { ((android.app.NotificationManager) getSystemService(NOTIFICATION_SERVICE)).cancel(NOTIFICATION_ID); } catch (Exception dfE) {}\n        stopForeground(true);\n        stopSelf();\n    }', 'release session');
+  fs.writeFileSync(svcF, svc);
+}
+// nút phát luôn có khi không phát (kể cả trạng thái đã dừng), để không bao giờ mất nút phát/tạm dừng
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('DF_PLAYBTN')) {
+  svc = rep(svc, '                    if (actionName.equals("play") && playbackState != PlaybackStateCompat.STATE_PAUSED) {',
+    '                    if (actionName.equals("play") && playbackState == PlaybackStateCompat.STATE_PLAYING) { // DF_PLAYBTN', 'play button');
+  fs.writeFileSync(svcF, svc);
+}
 console.log('[patch-media-session] OK');
