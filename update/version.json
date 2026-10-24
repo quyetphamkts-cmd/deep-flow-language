@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.10",
-  "notes": "Thoát app vẫn điều khiển được trên thông báo (cần APK mới)",
+  "ver": "1.0.2-beta.11",
+  "notes": "Thống kê từ vựng cho khoá học và thư mục",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.11",
+      "d": "24/10/2026",
+      "items": [
+        "📖 Thống kê danh sách từ vựng cho cả khoá học và từng thư mục: chạm nút 📖 ở dòng khoá học, hoặc nhãn “📖 … từ” ở album / thư mục (gồm cả thư mục con) → xem mọi từ khác nhau, số lần gặp, số bài có từ đó; lọc Chưa lưu / Đã lưu, sắp xếp Hay gặp / A→Z / Theo thứ tự học. Chạm vào từ để tra nghĩa trong câu của bài gặp từ đó đầu tiên"
+      ]
+    },
     {
       "v": "1.0.2-beta.10",
       "d": "24/10/2026",
