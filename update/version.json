@@ -1,7 +1,7 @@
 {
-  "web": "1.0.1",
-  "ver": "1.0.1",
-  "notes": "Bản chính thức 1.0.1 · AI ưu tiên phụ đề chính xác, dịch trước 15 bài mỗi ngày",
+  "web": "1.0.2",
+  "ver": "1.0.2-beta.1",
+  "notes": "Sửa tràn bộ nhớ khi AI sửa phụ đề · Gemini chép chữ, Whisper khớp từng từ, Google Dịch để dịch",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.1",
+      "d": "24/10/2026",
+      "items": [
+        "🧠 Sửa lỗi tràn bộ nhớ khi bấm 🚩 / khi AI tự khớp phụ đề: trước đây app giải mã CẢ BÀI (bài 36 phút ≈ 140 MB RAM) dù chỉ cần vài giây → Android đóng app. Giờ app chỉ cắt và giải mã đúng đoạn cần nghe (đọc file MP3 theo từng khung, chính xác đến từng mẫu âm thanh); AI trên máy tự giải phóng sau 2 phút không dùng; tự khớp cả bài chỉ dùng ChatGPT Whisper, nghe theo từng đoạn 5 phút",
+        "🤝 Phân công AI: Gemini nghe và chép chữ phụ đề (chữ, dấu câu, ngắt câu tốt) → ChatGPT Whisper nghe lại để khớp từng từ. Hai AI nghe độc lập nên tự kiểm chéo: chỗ khớp nhau gần như chắc đúng, chỗ lệch được nghe lại ở vòng 2–3. ChatGPT chỉ chép chữ khi Gemini hết lượt",
+        "🔤 Dịch mặc định bằng Google Dịch: nhanh, miễn phí, không tốn lượt AI — để dành lượt Gemini cho việc chép phụ đề. Tra từ vẫn dùng từ điển Anh – Việt trong máy và tô màu nghĩa trong câu dịch. Muốn câu dịch tự nhiên hơn thì chọn lại AI ở Cài đặt → Dịch tự động"
+      ]
+    },
     {
       "v": "1.0.1",
       "d": "24/10/2026",
