@@ -1,7 +1,7 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.78",
-  "notes": "Giảm việc app bị Android đóng khi chạy nền: giải mã âm thanh thẳng ra 16 kHz (tốn RAM ít hơn nhiều lần); dựng sóng âm và tự tạo phụ đề chỉ làm khi app đang mở — bài tự chuyển sang khi nghe nền không còn giải mã cả file. Thêm nhật ký: nếu app bị đóng khi đang phát nền, mục Cài đặt (dưới công tắc Phát dưới nền) hiện số lần, thời điểm, bài và việc đang làm lúc đó, kèm cách khắc phục",
+  "ver": "1.0.1-beta.79",
+  "notes": "Cài đặt có thêm tab 🧾 Nhật ký: ghi lại lỗi (kể cả lỗi ngầm, kèm vị trí trong mã) và các sự kiện chính — mở app, vào/ra chạy nền, mở bài, lỗi phát âm thanh, AI hết lượt, app bị Android đóng, các thông báo lỗi. Lọc Tất cả / Chỉ lỗi; 📋 Sao chép để dán gửi khi cần sửa lỗi; 🗑 xoá. Chỉ lưu trong máy (500 dòng gần nhất), không đồng bộ, tự che API key / email. Có lỗi mới thì tab và nút Cài đặt hiện chấm đỏ. Các tab Cài đặt gọn trên 1 dòng (“Tài khoản & lưu trữ” → “Tài khoản”)",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.79",
+      "d": "24/10/2026",
+      "items": [
+        "Cài đặt có thêm tab 🧾 Nhật ký: ghi lại lỗi (kể cả lỗi ngầm, kèm vị trí trong mã) và các sự kiện chính — mở app, vào/ra chạy nền, mở bài, lỗi phát âm thanh, AI hết lượt, app bị Android đóng, các thông báo lỗi. Lọc Tất cả / Chỉ lỗi; 📋 Sao chép để dán gửi khi cần sửa lỗi; 🗑 xoá. Chỉ lưu trong máy (500 dòng gần nhất), không đồng bộ, tự che API key / email. Có lỗi mới thì tab và nút Cài đặt hiện chấm đỏ. Các tab Cài đặt gọn trên 1 dòng (“Tài khoản & lưu trữ” → “Tài khoản”)"
+      ]
+    },
     {
       "v": "1.0.1-beta.78",
       "d": "24/10/2026",
