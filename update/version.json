@@ -1,16 +1,26 @@
 {
   "web": "1.0.1",
-  "ver": "1.0.1-beta.96",
-  "notes": "Logo mới vẽ lại người bơi đẹp hơn",
+  "ver": "1.0.1-beta.97",
+  "notes": "Căn từng từ giữa âm thanh và phụ đề, cắt câu đúng chỗ · dùng lại logo cũ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 17,
-    "versionName": "1.0.1-beta.96",
+    "versionCode": 18,
+    "versionName": "1.0.1-beta.97",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.1-beta.97",
+      "d": "24/10/2026",
+      "items": [
+        "🎯 Căn TỪNG TỪ giữa âm thanh và phụ đề: app lấy mốc thời gian thật của từng từ trong lời nói, ghép với từng từ của phụ đề, rồi cắt lại câu theo dấu câu và chỗ ngừng nói — câu bắt đầu đúng ở từ đầu tiên, kết thúc ở từ cuối cùng, không còn lẫn từ của câu bên cạnh; câu bị ngắt giữa chừng được nối lại, câu dài quá 28 từ tách ở dấu phẩy",
+        "Menu ⋯ của bài → “🎯 Căn từng từ với âm thanh”: dùng ChatGPT Whisper nếu có key (nhanh), không thì dùng Whisper trên máy (giữ app mở). Bài đang nghe được tự căn một lần nếu có ChatGPT; phụ đề tạo bằng ChatGPT Whisper / Whisper trên máy được căn từng từ ngay khi tạo",
+        "Phụ đề bạn đã tự sửa: giữ nguyên cách chia câu, chỉ đặt lại mốc thời gian theo từng từ. Chữ phụ đề khác nhiều so với lời nói (khớp < 45% số từ) thì không sửa và báo nên tạo lại phụ đề",
+        "↩️ Bỏ logo người bơi, dùng lại logo cũ (dòng sóng và chữ A · 文 · あ · 한)"
+      ]
+    },
     {
       "v": "1.0.1-beta.96",
       "d": "24/10/2026",
