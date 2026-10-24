@@ -1,7 +1,7 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.6",
-  "notes": "Khớp phụ đề chính xác từng từ bằng ElevenLabs (forced alignment)",
+  "ver": "1.0.2-beta.7",
+  "notes": "Sửa dứt điểm phụ đề lộn thứ tự câu bằng ElevenLabs nghe lại cả bài",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.7",
+      "d": "24/10/2026",
+      "items": [
+        "🔀 Sửa dứt điểm phụ đề lộn thứ tự câu: nhiều bài đã bị lưu chữ sai thứ tự từ trước (lỗi đã sửa ở beta 2), căn chỉnh cưỡng bức không gỡ được vì nó coi thứ tự chữ là đúng. Giờ ElevenLabs Scribe nghe lại cả bài (gửi thẳng file gốc, điện thoại không xử lý) → lấy thứ tự lời nói thật làm chuẩn: chữ cũ trùng khớp ≥ 98% và không câu nào khớp kém thì giữ chữ, chỉ căn lại mốc từng từ; còn lại thay bằng chữ ElevenLabs nghe đúng thứ tự",
+        "🚩 Báo sai cũng dùng ElevenLabs Scribe nghe đoạn ~10 giây (ChatGPT dự phòng). Mọi bài được khớp lại một lần bằng cách mới, bắt đầu từ bài đang nghe"
+      ]
+    },
     {
       "v": "1.0.2-beta.6",
       "d": "24/10/2026",
