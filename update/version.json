@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.53",
+  "ver": "1.0.2-beta.54",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.54",
+      "d": "25/10/2026",
+      "items": [
+        "🦁 Chiến sĩ Quả cảm tính theo vốn từ như quân hàm: số họ từ bạn đã đọc đúng, mốc 500 · 1.000 · 2.000 · 4.000 · 10.000 họ từ (A1 → C1–C2)"
+      ]
+    },
     {
       "v": "1.0.2-beta.53",
       "d": "25/10/2026",
