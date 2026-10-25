@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.100",
+  "ver": "1.0.2-beta.101",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.101",
+      "d": "25/10/2026",
+      "items": [
+        "🕰 Câu ví dụ tiếng Anh theo các thì: mỗi câu một thì khác nhau (hiện tại đơn, hiện tại tiếp diễn, quá khứ đơn, hiện tại hoàn thành, tương lai…), nhãn ghi tên thì · hoàn cảnh; bấm thêm ví dụ thì ra các thì còn lại",
+        "🔍 Ô tra từ: bỏ nút Tra — gõ xong bấm Enter hoặc chọn từ gợi ý; bấm vào ô là chọn sẵn từ cũ, gõ từ mới là thay luôn",
+        "📝 Tra cả câu: gõ / dán 1 câu (từ 3 từ) → bản dịch tự nhiên, thì chính và lý do dùng thì, các từ / cụm từ trong câu kèm phiên âm và nghĩa (chạm để tra sâu), cách nói khác; nghe đọc câu"
+      ]
+    },
     {
       "v": "1.0.2-beta.100",
       "d": "25/10/2026",
