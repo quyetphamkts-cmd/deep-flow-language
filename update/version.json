@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.86",
+  "ver": "1.0.2-beta.87",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.87",
+      "d": "25/10/2026",
+      "items": [
+        "🔍 Tìm kiếm ra cả tên khoá học và tên thư mục (kể cả thư mục trong Thùng rác — khôi phục được cả thư mục), không chỉ bài nghe"
+      ]
+    },
     {
       "v": "1.0.2-beta.86",
       "d": "25/10/2026",
