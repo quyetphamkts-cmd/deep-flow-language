@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.43",
+  "ver": "1.0.2-beta.44",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.44",
+      "d": "25/10/2026",
+      "items": [
+        "🎯 Ở trang Nghe, AI chỉ tập trung đối chiếu phụ đề của bài đang mở cho đến khi khớp 100%; thanh trạng thái của bài hiện ngay đầu trang Nghe (khớp …%, đoạn AI đang nghe)",
+        "🤖 Thẻ “AI xử lý phụ đề theo danh sách” chuyển sang trang Thư viện, ngay dưới ô Tiến độ tổng: số bài đã khớp 100%, bài đang / sắp được đối chiếu; thanh tạo phụ đề cho các bài khác cũng hiện ở đây"
+      ]
+    },
     {
       "v": "1.0.2-beta.43",
       "d": "25/10/2026",
