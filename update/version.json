@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.64",
+  "ver": "1.0.2-beta.65",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.65",
+      "d": "25/10/2026",
+      "items": [
+        "🧑‍🏫 Gia sư hỏi – đáp về câu đang nghe: nút 🎓 ở hàng công cụ trang Nghe (hoặc nhấn giữ câu → 🧑‍🏫 Hỏi gia sư). Gợi ý nhanh: Giải thích · Ngữ pháp · Từ & cụm từ · Thêm ví dụ · Nối âm · Nói cách khác · Đố tôi; hoặc tự gõ câu hỏi (nói bằng 🎤 của bàn phím). ◀ ▶ đổi câu, 🔊 nghe lại câu. Gia sư nhớ hội thoại của từng bài",
+        "🧠 Gia sư dùng AI online (Gemini / Claude / ChatGPT); hết lượt hoặc mất mạng thì tự chuyển sang Gemma trên máy. Chọn được “Chỉ Gemma” để hỏi hoàn toàn không cần mạng"
+      ]
+    },
     {
       "v": "1.0.2-beta.64",
       "d": "25/10/2026",
