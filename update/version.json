@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.106",
+  "ver": "1.0.2-beta.107",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.107",
+      "d": "25/10/2026",
+      "items": [
+        "☁️ Thêm bài từ thư mục Google Drive: nạp cả file văn bản (pdf, docx, txt, srt, Google Docs) — văn bản cùng tên bài âm thanh được gắn vào bài đó để AI chỉ việc khớp thời gian; văn bản không có bài cùng tên (vd. Text Article) thành 📄 Bài đọc",
+        "📄 Bài đọc: chạm để mở đọc, chạm vào từ để tra; Effortless English tính là đã đọc trong ngày"
+      ]
+    },
     {
       "v": "1.0.2-beta.106",
       "d": "25/10/2026",
