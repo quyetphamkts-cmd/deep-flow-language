@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.110",
+  "ver": "1.0.2-beta.111",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.111",
+      "d": "26/10/2026",
+      "items": [
+        "🗺 Lộ trình Effortless English đầy đủ (A. Original L1–4 → B. Learn Real English → C. Flow English → D. Business → E. Power English Now): thẻ Hôm nay ghi bộ đang học ở đâu (vd. “Level 1 · bài 2/8”) và bài tiếp theo",
+        "➡️ Nút “Sang bộ tiếp” chọn đúng bài kế tiếp theo lộ trình, kể cả khi thư mục trong máy xếp lộn xộn",
+        "🎧 Nhận bài “… Main.mp3” (Power English Now) là bài nghe chính"
+      ]
+    },
     {
       "v": "1.0.2-beta.110",
       "d": "26/10/2026",
