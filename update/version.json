@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.55",
+  "ver": "1.0.2-beta.56",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.56",
+      "d": "25/10/2026",
+      "items": [
+        "📁 Bảng Di chuyển bài dạng cây thư mục: khoá học → thư mục → thư mục con lồng nhau, bấm 1 lần để đóng / mở, ô tìm thư mục, nút “Chọn” ở từng thư mục (chọn được cả thư mục cha), hiện “Đích: …” rồi bấm “✓ Di chuyển” để xác nhận; tạo thư mục mới ngay trong thư mục đã chọn"
+      ]
+    },
     {
       "v": "1.0.2-beta.55",
       "d": "25/10/2026",
