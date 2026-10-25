@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.79",
+  "ver": "1.0.2-beta.80",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.80",
+      "d": "25/10/2026",
+      "items": [
+        "🗑 Thùng rác: bấm vào một mục (vd. “82 file rác của máy Mac”) để mở ra danh sách theo từng thư mục và từng bài — khôi phục riêng cả thư mục (↩️ Cả thư mục) hoặc từng bài (↩️), hay xoá vĩnh viễn riêng bài; phần còn lại vẫn ở trong thùng rác"
+      ]
+    },
     {
       "v": "1.0.2-beta.79",
       "d": "25/10/2026",
