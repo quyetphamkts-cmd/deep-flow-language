@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.58",
+  "ver": "1.0.2-beta.59",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.59",
+      "d": "25/10/2026",
+      "items": [
+        "🎨 Thiết kế lại các nút trang chính (phương án “Tai & lời”): Thư viện = giá sách, Nghe = cái tai, Phát âm = bóng thoại có sóng âm, Từ điển = thẻ từ có kính lúp"
+      ]
+    },
     {
       "v": "1.0.2-beta.58",
       "d": "25/10/2026",
