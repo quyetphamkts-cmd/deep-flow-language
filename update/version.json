@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.4",
+  "ver": "1.0.3-beta.5",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.5",
+      "d": "26/10/2026",
+      "items": [
+        "📥 Sửa lỗi nhiều bài bị rơi vào “Bài chưa sắp xếp”: thư mục con chưa gán khoá học giờ tự theo khoá học của thư mục cha / các thư mục cùng gốc (vd. 2.LearnRealEnglish / 02. Trip theo khoá Effortless English)",
+        "📂 Xếp theo Drive luôn gán đúng khoá học cho mọi bài được đưa về; app hỏi lại 1 lần để chạy với bản sửa này"
+      ]
+    },
     {
       "v": "1.0.3-beta.4",
       "d": "26/10/2026",
