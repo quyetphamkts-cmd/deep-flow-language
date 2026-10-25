@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.45",
+  "ver": "1.0.2-beta.46",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.46",
+      "d": "25/10/2026",
+      "items": [
+        "🗣 Nút micro ở trang Nghe có 2 chế độ mới: “Shadowing + chấm” — hết mỗi câu app kêu “tít”, tự ghi âm bạn nói lại (tự dừng khi bạn ngừng nói) rồi phát tiếp ngay; “Nói cùng lúc + chấm” — nói đuổi đồng thời với bài (nên đeo tai nghe), app ghi âm từng câu, không dừng bài",
+        "🎙 AI chấm ở nền, điểm hiện ngay dưới từng câu (xanh ≥ 85, vàng ≥ 60, đỏ); bấm vào điểm để xem từ đúng / sai, chữ AI nghe được và đọc lại câu đó; đầu trang Nghe hiện số câu đã nói và điểm trung bình",
+        "🩹 Huy chương Chiến sĩ Phát âm nay đếm đúng số từ bạn đọc đúng (trước đây luôn bằng 0); tính cả khi chấm từng câu và khi shadowing",
+        "🤖 Thanh trạng thái AI cho biết AI nào đang làm gì (ElevenLabs đang nghe…, Gemini nghe lại để kiểm tra chéo, ElevenLabs căn giờ từng từ…) và trạng thái từng AI: sẵn sàng / chưa có key / hết lượt trong ngày, quá nhiều lượt mỗi phút, hết hạn mức… kèm giờ thử lại / lỗi kết nối / mất mạng; vì sao AI đang tạm chờ (đang dịch, đang chơi trò chơi, app ở nền…)"
+      ]
+    },
     {
       "v": "1.0.2-beta.45",
       "d": "25/10/2026",
