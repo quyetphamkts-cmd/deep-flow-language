@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.49",
+  "ver": "1.0.2-beta.50",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.50",
+      "d": "25/10/2026",
+      "items": [
+        "🎙 Chọn chế độ luyện nói (shadowing / dừng chờ / chấm từng câu…) thì bảng Luyện nói tự đóng để nhìn được phụ đề"
+      ]
+    },
     {
       "v": "1.0.2-beta.49",
       "d": "25/10/2026",
