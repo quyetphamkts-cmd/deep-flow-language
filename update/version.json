@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.78",
+  "ver": "1.0.2-beta.79",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.79",
+      "d": "25/10/2026",
+      "items": [
+        "🔀 Chuyển nhầm? Thùng rác có thêm mục “Đã chuyển / sắp xếp gần đây”: liệt kê từng lần chuyển bài / thư mục sang thư mục hoặc khoá học khác, kéo thả, sắp xếp, đổi tên (kèm giờ) — chọn đúng lần muốn trả lại và bấm ↩️ Hoàn tác. Giữ 40 thao tác gần nhất trong 30 ngày",
+        "📁＋ Nút “Thư mục mới” trong thanh chọn (nhấn giữ bài / thư mục để chọn): tạo thư mục ngay tại chỗ và đưa các mục đã chọn vào. Bảng Di chuyển vẫn có nút tạo thư mục mới trong thư mục bất kỳ"
+      ]
+    },
     {
       "v": "1.0.2-beta.78",
       "d": "25/10/2026",
