@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.107",
+  "ver": "1.0.2-beta.108",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.108",
+      "d": "25/10/2026",
+      "items": [
+        "✂️ Phụ đề không còn bị ngắt giữa câu: câu chưa có dấu kết câu mà câu sau viết thường (vd. “Where” | “do we never have parties?”) được gộp thành 1 câu — áp dụng cho cả bài đã có phụ đề",
+        "📝 Văn bản dán / nạp vào (txt, docx, pdf, Drive): dòng bị xuống dòng giữa câu tự nối lại trước khi AI khớp thời gian, nên mỗi câu phụ đề là 1 câu trọn vẹn"
+      ]
+    },
     {
       "v": "1.0.2-beta.107",
       "d": "25/10/2026",
