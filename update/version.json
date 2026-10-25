@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.91",
+  "ver": "1.0.2-beta.92",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.92",
+      "d": "25/10/2026",
+      "items": [
+        "↕️ Kéo thả xen giữa: giữ ☰ kéo bài / thư mục, thả sát mép trên hoặc dưới của một thư mục / bài để đặt ngay trước hoặc sau nó (vạch cam báo vị trí), thả vào giữa thư mục để đưa vào trong (khung nét đứt)",
+        "↩️ Sau mỗi lần chuyển / kéo thả / sắp xếp hiện thanh “Hoàn tác” trong 8 giây; lỡ qua thì vào Thùng rác → 🔀 để hoàn tác",
+        "✏️ Nút Sửa ở đầu Thư viện: bấm để vào chế độ chọn / kéo thả mà không cần nhấn giữ, bấm lần nữa để thoát"
+      ]
+    },
     {
       "v": "1.0.2-beta.91",
       "d": "25/10/2026",
