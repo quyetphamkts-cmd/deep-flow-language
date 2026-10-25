@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.7",
+  "ver": "1.0.3-beta.8",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.8",
+      "d": "26/10/2026",
+      "items": [
+        "⏸ Khi đang xếp thư viện theo Drive, app hoãn mọi việc tải / đọc file: không tải âm thanh, không tạo phụ đề, không đọc văn bản, không chạy tiếp việc thêm từ Cloud dở dang — xếp xong đúng thứ tự, đúng vị trí rồi mới làm (văn bản PDF đọc sau cùng)"
+      ]
+    },
     {
       "v": "1.0.3-beta.7",
       "d": "26/10/2026",
