@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.42",
+  "ver": "1.0.2-beta.43",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,18 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.43",
+      "d": "25/10/2026",
+      "items": [
+        "🎯 AI tập trung vào bài đang học cho đến khi phụ đề khớp 100%: khi bạn nghe, AI nghe trước từng đoạn ~25 giây ngay phía trước chỗ đang phát, đối chiếu từng chữ với lời nói và sửa trước khi bạn nghe tới — giữ đúng thứ tự câu",
+        "🗳 Mỗi chỗ chưa khớp có 2 AI nghe độc lập (ElevenLabs + Gemini / ChatGPT) rồi lấy theo đa số: phụ đề đúng thì giữ, chỉ căn lại giờ; 2 AI cùng nghe ra chữ khác thì sửa chữ và căn giờ theo từng từ",
+        "📊 Dưới tên bài hiện “🎯 khớp …%”; đạt 100% thì hiện ✅ và AI mới chuyển sang bài tiếp theo trong khoá",
+        "📒 Từ điển khoá học: bài khớp 100% thì AI ghi các từ của bài vào từ điển khoá học — phiên âm, từ loại, nghĩa đúng theo câu trong bài, câu gốc (bấm ▶ để nghe), thêm 1 ví dụ mới; mở ở menu ⋯ của khoá học / album / thư mục",
+        "☁️ Phụ đề, trạng thái khớp và từ điển khoá học được đồng bộ vào tài khoản Google (cùng với từ vựng, tiến độ)",
+        "🎮 Trò chơi dùng nghĩa trong từ điển khoá học (đúng ngữ cảnh bài)"
+      ]
+    },
     {
       "v": "1.0.2-beta.42",
       "d": "25/10/2026",
