@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.105",
+  "ver": "1.0.2-beta.106",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.106",
+      "d": "25/10/2026",
+      "items": [
+        "🎓 Học Effortless English đúng phương pháp (khoá học có tên “Effortless”): mỗi thư mục là 1 bộ bài, tự xếp thứ tự Text → Vocab → Mini-Story → POV → Audio → Commentary",
+        "📅 Thẻ “Hôm nay” ở đầu Thư viện: bộ đang học · ngày thứ mấy (ít nhất 7 ngày / bộ) · số phút nghe hôm nay (mục tiêu 60, tốt nhất 120) · từng bài đã nghe mấy lượt (mỗi bài ≥ 2 lượt / ngày) · ▶ Học cả bộ theo thứ tự · gợi ý sang bộ tiếp sau 7 ngày",
+        "🗣 Mini-Story: lần đầu chỉ nghe; từ lượt sau app tự dừng sau mỗi câu hỏi, nghe bạn hét câu trả lời (1–2 từ) rồi tự phát tiếp, đo tốc độ trả lời ⚡ (trung bình, nhanh nhất) — tuỳ chọn dừng ngắn sau câu kể để nói “Ahhh / Ohhh”",
+        "👂 Level 1–2: nút 👂/📖 ở hàng công cụ chuyển 3 giai đoạn ① nghe trước (chữ ẩn, chạm dòng để xem riêng dòng đó) ② nghe + đọc ③ chỉ nghe; Level 3: mặc định chỉ nghe"
+      ]
+    },
     {
       "v": "1.0.2-beta.105",
       "d": "25/10/2026",
