@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.65",
+  "ver": "1.0.2-beta.66",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.66",
+      "d": "25/10/2026",
+      "items": [
+        "🔤 Bảng 44 âm IPA: ô chỉ còn ký hiệu phiên âm; bấm ô là đọc RIÊNG âm đó (không đọc cả từ), bên dưới hiện cách đặt miệng và các từ chứa âm, kèm phiên âm của từ (âm đang học tô màu); bấm vào từ là đọc từ — bỏ ký hiệu loa. Chọn giọng đọc âm Anh – Anh / Anh – Mỹ ở cuối bảng"
+      ]
+    },
     {
       "v": "1.0.2-beta.65",
       "d": "25/10/2026",
