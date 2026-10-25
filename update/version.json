@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.69",
+  "ver": "1.0.2-beta.70",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.70",
+      "d": "25/10/2026",
+      "items": [
+        "🎤 Gia sư nói chuyện bằng giọng: bấm 🎤 cạnh ô gõ để nói câu hỏi (tiếng Việt hoặc tiếng Anh, nói xong tự dừng) — AI chép lại rồi trả lời và đọc to câu trả lời",
+        "🔊 Nút loa ở đầu khung gia sư: bật để gia sư luôn đọc câu trả lời (phần tiếng Việt giọng Việt, từ tiếng Anh giọng Anh); mỗi câu trả lời có nút 🔊 Đọc để nghe lại",
+        "🔤 Phiên âm từ ví dụ trong bảng IPA viết chuẩn và tô màu âm đang học"
+      ]
+    },
     {
       "v": "1.0.2-beta.69",
       "d": "25/10/2026",
