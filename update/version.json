@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.87",
+  "ver": "1.0.2-beta.88",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.88",
+      "d": "25/10/2026",
+      "items": [
+        "📚 Chuyển sang khoá học dạng cây: chọn khoá học (đặt ngoài cùng) hoặc mở tới đúng thư mục bên trong khoá học (kể cả 📥 Bài chưa sắp xếp), xem “Đích: …” rồi bấm ✓ Di chuyển để xác nhận; tạo được thư mục mới ngay tại chỗ đã chọn"
+      ]
+    },
     {
       "v": "1.0.2-beta.87",
       "d": "25/10/2026",
