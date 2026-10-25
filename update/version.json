@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.77",
+  "ver": "1.0.2-beta.78",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.78",
+      "d": "25/10/2026",
+      "items": [
+        "📌 Thư viện: nhấn giữ để chọn bài hoặc thư mục thì màn hình đứng yên, bài / thư mục vừa chọn giữ đúng vị trí (trước đây danh sách bị trôi khi hiện thanh chọn)"
+      ]
+    },
     {
       "v": "1.0.2-beta.77",
       "d": "25/10/2026",
