@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.41",
+  "ver": "1.0.2-beta.42",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.42",
+      "d": "25/10/2026",
+      "items": [
+        "⏳ Chiến sĩ Bền bỉ tính theo tổng số giờ học: 100 · 200 · 400 · 600 · 1.000 giờ (mốc theo số giờ học cần cho từng bậc A1 → C1–C2)"
+      ]
+    },
     {
       "v": "1.0.2-beta.41",
       "d": "25/10/2026",
