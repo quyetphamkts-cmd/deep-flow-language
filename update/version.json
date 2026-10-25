@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.104",
+  "ver": "1.0.2-beta.105",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.105",
+      "d": "25/10/2026",
+      "items": [
+        "☁️ Dán nội dung bài học: chọn văn bản từ bộ nhớ máy (📄) hoặc lấy từ Cloud (☁️ link Google Drive / Google Docs / link tải trực tiếp) — tải xong tự gắn vào bài và AI khớp thời gian"
+      ]
+    },
     {
       "v": "1.0.2-beta.104",
       "d": "25/10/2026",
