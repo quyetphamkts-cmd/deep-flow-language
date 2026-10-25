@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.47",
+  "ver": "1.0.2-beta.48",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.48",
+      "d": "25/10/2026",
+      "items": [
+        "🔤 Bảng điểm phát âm (shadowing và chấm từng câu) hiện từng từ kèm phiên âm và nghĩa ngay bên dưới — từ sai viền đỏ, bấm vào từ để nghe cách đọc",
+        "▶ Thêm nút “Nghe mẫu” (phát lại đúng đoạn âm thanh của câu trong bài) và “🎧 Bản ghi của bạn” để so sánh và tự sửa"
+      ]
+    },
     {
       "v": "1.0.2-beta.47",
       "d": "25/10/2026",
