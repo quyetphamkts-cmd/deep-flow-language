@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.90",
+  "ver": "1.0.2-beta.91",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.91",
+      "d": "25/10/2026",
+      "items": [
+        "☑️ Thanh chọn gọn lại còn 2 dòng (các nút xếp 1 hàng, vuốt ngang để xem thêm), mục vừa chọn ở sát đáy không còn bị thanh chọn che — tự cuộn lên vừa đủ, và danh sách có thêm khoảng trống ở cuối để kéo / chọn mục cuối cùng"
+      ]
+    },
     {
       "v": "1.0.2-beta.90",
       "d": "25/10/2026",
