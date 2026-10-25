@@ -1,0 +1,26 @@
+name: IPA audio
+on:
+  workflow_dispatch:
+  push:
+    paths: ['tools/ipa_synth.py', '.github/workflows/ipa-audio.yml']
+permissions:
+  contents: write
+jobs:
+  synth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -q piper-tts numpy
+      - name: Voices
+        run: |
+          python -m piper.download_voices en_GB-alba-medium en_US-lessac-high --download-dir v
+          ls -la v
+      - run: python tools/ipa_synth.py v/en_GB-alba-medium out/gb
+      - run: python tools/ipa_synth.py v/en_US-lessac-high out/us
+      - name: Push to branch ipa-out
+        run: |
+          git config user.name ci; git config user.email ci@users.noreply.github.com
+          git checkout --orphan ipa-out; git rm -rfq .; mv out/* . ; git add gb us; git commit -qm "IPA audio"; git push -f origin ipa-out
