@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.98",
+  "ver": "1.0.2-beta.99",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.99",
+      "d": "25/10/2026",
+      "items": [
+        "💬 Câu ví dụ trong từ điển: mọi câu đều phải chứa đúng từ đang tra (hoặc dạng chia của nó) — câu không chứa từ bị loại và AI tự viết lại; ví dụ cũ không chứa từ cũng được lọc bỏ",
+        "🕰 Các câu ví dụ ở nhiều hoàn cảnh (hằng ngày, công việc, du lịch…) và nhiều mốc thời gian (quá khứ, hiện tại / thói quen, tương lai, câu hỏi / hiện tại hoàn thành), nhãn ghi rõ “hoàn cảnh · thời gian”"
+      ]
+    },
     {
       "v": "1.0.2-beta.98",
       "d": "25/10/2026",
