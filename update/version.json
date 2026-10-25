@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.92",
+  "ver": "1.0.2-beta.93",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.93",
+      "d": "25/10/2026",
+      "items": [
+        "☑️ Chọn được nhiều thư mục cùng lúc, kể cả thư mục lớn chỉ chứa thư mục con (📂): ở chế độ Sửa chạm vào tên thư mục để chọn / bỏ chọn, hoặc nhấn giữ; thao tác Di chuyển, Khoá học, Thư mục mới, Đổi tên, Đã học, Xoá áp dụng cho cả thư mục và mọi bài bên trong",
+        "🧭 Trang Thư viện ẩn dòng “… album · … bài” ở đầu trang (đã có trong Tiến độ tổng) để đủ chỗ cho các nút ✏️ 🔍 ⏷ ? i"
+      ]
+    },
     {
       "v": "1.0.2-beta.92",
       "d": "25/10/2026",
