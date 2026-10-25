@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.68",
+  "ver": "1.0.2-beta.69",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.69",
+      "d": "25/10/2026",
+      "items": [
+        "🔤 Bảng IPA: phiên âm từ ví dụ viết đúng chuẩn IPA Anh – Anh (trước đây lấy từ từ điển offline dùng ký hiệu cũ như /dei/) và tô màu đúng âm đang học, ví dụ day /deɪ/ tô màu eɪ"
+      ]
+    },
     {
       "v": "1.0.2-beta.68",
       "d": "25/10/2026",
