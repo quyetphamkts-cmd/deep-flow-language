@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.109",
+  "ver": "1.0.2-beta.110",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.110",
+      "d": "26/10/2026",
+      "items": [
+        "🎓 Effortless English: nhận cả bài “… Conversation.mp3” (bộ DVD gốc) là bài nghe chính 🎧",
+        "⏱ Thẻ Hôm nay theo đúng hướng dẫn: 90 phút/ngày chia 3 lần × 30 phút (☀️ sáng · 🌤 trưa · 🌙 tối), mỗi buổi đủ 30 phút được đánh ✓",
+        "🐢 Nhắc không học nhanh: ít nhất 1 tuần mỗi bộ, 1 tháng mỗi bộ cũng rất tốt; lời dặn từng loại bài ghi rõ hơn (MS trả lời 1–3 từ, POV nghe tới khi tự kể lại được ở các thì)"
+      ]
+    },
     {
       "v": "1.0.2-beta.109",
       "d": "25/10/2026",
