@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.111",
+  "ver": "1.0.2",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2",
+      "d": "26/10/2026",
+      "items": [
+        "🔢 Đánh số phiên bản mới: beta chạy từ 1 đến 99, quá 99 thì tự lên bản kế tiếp — bản này là 1.0.2 chính thức, bản sau bắt đầu 1.0.3 beta 1",
+        "🎓 Effortless English: phần học đã thêm từ trước (vd. 1.OriginalEffortlessEnglishLessons) được đưa vào đúng vị trí trong khoá đầy đủ — bài trùng giữ bản đã có tiến độ / phụ đề, bản thừa vào thùng rác (khôi phục được). Mở app sẽ hỏi xác nhận; hoặc ⋯ của khoá → 🎓 Đưa các phần EE vào đúng chỗ"
+      ]
+    },
     {
       "v": "1.0.2-beta.111",
       "d": "26/10/2026",
