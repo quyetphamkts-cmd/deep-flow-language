@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.85",
+  "ver": "1.0.2-beta.86",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.86",
+      "d": "25/10/2026",
+      "items": [
+        "🔍 Gộp tìm kiếm vào 1 nút 🔍 ở đầu Thư viện: kết quả chia 2 khu “📚 Trong Thư viện” và “🗑 Trong Thùng rác”. Bấm vào bài / thư mục để mở Thư viện tới đúng chỗ chứa nó (tự mở khoá học, thư mục cha và nháy sáng); có nút 📁 Chuyển, và ↩️ Khôi phục cho bài trong thùng rác"
+      ]
+    },
     {
       "v": "1.0.2-beta.85",
       "d": "25/10/2026",
