@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.1",
+  "ver": "1.0.3-beta.2",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.2",
+      "d": "26/10/2026",
+      "items": [
+        "📦 Effortless English: thư mục để lẫn nhiều bài (vd. 1.OriginalEffortlessEnglishLessons có 125 file) được chia lại thành Level → từng bài (01. Day of the Dead, 02. A Kiss…), file Vocab / MS / POV / Audio / Text của bài nào vào đúng thư mục bài đó, xếp đúng thứ tự tác giả — mở app sẽ hỏi xác nhận, hoặc bấm “Chia theo từng bài” trên thẻ Hôm nay; hoàn tác được",
+        "🔤 Nhận tên file viết tắt / viết liền: EIQ Husbands → Emotionally Intelligent Husbands, Bubba_s Food → Bubba's Food, Jack Kerouac → Jack Kerouac, King of the Beats"
+      ]
+    },
     {
       "v": "1.0.3-beta.1",
       "d": "26/10/2026",
