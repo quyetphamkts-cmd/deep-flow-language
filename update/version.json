@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.102",
+  "ver": "1.0.2-beta.103",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.103",
+      "d": "25/10/2026",
+      "items": [
+        "📝 Bài có sẵn văn bản: menu ⋯ của bài → “Dán / gắn văn bản có sẵn” → dán nguyên văn (hoặc chọn file txt, docx, pdf, srt) → Lưu là AI tự khớp thời gian từng câu ngay (chạy nền), không phải nghe chép lại nên không sót chữ"
+      ]
+    },
     {
       "v": "1.0.2-beta.102",
       "d": "25/10/2026",
