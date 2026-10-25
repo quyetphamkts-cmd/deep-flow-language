@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.74",
+  "ver": "1.0.2-beta.75",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.75",
+      "d": "25/10/2026",
+      "items": [
+        "🗣 Gia sư đọc nhanh hơn (tốc độ nói bình thường), thêm nút chỉnh tốc độ đọc 0,85× · 1× · 1,15× · 1,3× ở đầu khung",
+        "💬 Gia sư trò chuyện và trả lời mọi chủ đề (kiến thức, công việc, đời sống…), không chỉ trong bài học — câu đang nghe chỉ là ngữ cảnh; gia sư gợi thêm từ / cách nói tiếng Anh liên quan"
+      ]
+    },
     {
       "v": "1.0.2-beta.74",
       "d": "25/10/2026",
