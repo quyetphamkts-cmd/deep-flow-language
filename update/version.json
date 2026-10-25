@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.88",
+  "ver": "1.0.2-beta.89",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.89",
+      "d": "25/10/2026",
+      "items": [
+        "ℹ️ Nút (i) của khoá học ẩn / hiện cả thông tin thư mục (số mục, số bài, số từ, họ từ, trạng thái, tiến độ) — tắt thì chỉ còn tên thư mục và tên bài cho gọn, bấm (i) khi muốn xem"
+      ]
+    },
     {
       "v": "1.0.2-beta.88",
       "d": "25/10/2026",
