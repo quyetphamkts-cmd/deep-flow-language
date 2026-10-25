@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.80",
+  "ver": "1.0.2-beta.81",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.81",
+      "d": "25/10/2026",
+      "items": [
+        "🔎 Thùng rác có ô “Tìm bài / thư mục bị chuyển nhầm”: gõ tên (vd. 3.10) → thấy thư mục / bài đang nằm ở đâu → bấm 📁 Chuyển để đưa về đúng chỗ (dùng được cả với lần chuyển nhầm trước khi có lịch sử hoàn tác)"
+      ]
+    },
     {
       "v": "1.0.2-beta.80",
       "d": "25/10/2026",
