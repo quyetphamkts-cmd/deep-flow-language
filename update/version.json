@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.54",
+  "ver": "1.0.2-beta.55",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.55",
+      "d": "25/10/2026",
+      "items": [
+        "🧠 Gemma trên máy (Google Gemma 4, chạy ngay trên điện thoại, không cần mạng, không tốn lượt — cần cài APK mới): làm AI dự phòng cho dịch, từ điển khoá học, tra từ khi Gemini / Claude / ChatGPT hết lượt hoặc mất mạng; góp ý phát âm chi tiết khi không có Gemini",
+        "⚙️ Cài đặt → 🧠 Gemma trên máy: tải mô hình (E2B 2,6 GB hoặc E4B 3,7 GB, tải tiếp được nếu đứt mạng), chọn mức RAM Tiết kiệm / Cân bằng / Mạnh hoặc Tuỳ chỉnh (mô hình, CPU/GPU, độ dài, số luồng, thời gian tự giải phóng RAM); Android báo thiếu RAM thì tự giải phóng",
+        "🤖 Thanh trạng thái AI hiện thêm Gemma trên máy"
+      ]
+    },
     {
       "v": "1.0.2-beta.54",
       "d": "25/10/2026",
