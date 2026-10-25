@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.2",
+  "ver": "1.0.3-beta.3",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.3",
+      "d": "26/10/2026",
+      "items": [
+        "📂 Effortless English xếp đúng cấu trúc thư mục trên Google Drive: app đọc lại cây thư mục gốc của khoá trên Drive rồi đưa từng bài về đúng thư mục, đúng thứ tự như trên Drive (thay cho cách chia theo lộ trình ở bản trước) — mở app sẽ hỏi xác nhận, hoặc ⋯ khoá học → 📂 Xếp đúng thư mục Drive; hoàn tác được",
+        "➡️ “Sang bộ tiếp” đi theo đúng thứ tự thư mục trên Drive"
+      ]
+    },
     {
       "v": "1.0.3-beta.2",
       "d": "26/10/2026",
