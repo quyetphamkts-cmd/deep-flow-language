@@ -1,16 +1,25 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.56",
+  "ver": "1.0.2-beta.57",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 24,
-    "versionName": "1.0.2-beta.55",
+    "versionCode": 25,
+    "versionName": "1.0.2-beta.57",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.57",
+      "d": "25/10/2026",
+      "items": [
+        "📲 Cập nhật APK ngay trong app (cần cài APK beta.57 một lần): có bản cài mới là app tự tải về rồi nhắc “Cài đặt” — bấm là mở trình cài của Android, giữ nguyên dữ liệu; lần đầu Android hỏi cho phép cài từ Deep Flow",
+        "🧹 Cài xong, file APK đã tải tự xoá khỏi máy — không còn phải tự tải, cài rồi xoá",
+        "🗂 Thư mục không có hoặc không còn file âm thanh (bài đã chuyển sang thư mục khác, chỉ còn bản ghi trống) tự dọn vào thùng rác (khôi phục được 30 ngày); phụ đề / tiến độ của bản trống được chuyển sang đúng bài thật"
+      ]
+    },
     {
       "v": "1.0.2-beta.56",
       "d": "25/10/2026",
