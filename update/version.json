@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.101",
+  "ver": "1.0.2-beta.102",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.102",
+      "d": "25/10/2026",
+      "items": [
+        "📋 Menu ⋯ của bài có thêm “Copy văn bản bài học” (dưới Thống kê từ vựng): copy toàn bộ nội dung chữ của bài, mỗi câu 1 dòng, không kèm mốc thời gian"
+      ]
+    },
     {
       "v": "1.0.2-beta.101",
       "d": "25/10/2026",
