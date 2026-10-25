@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.66",
+  "ver": "1.0.2-beta.67",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.67",
+      "d": "25/10/2026",
+      "items": [
+        "🧑‍🏫 Nút Gia sư chuyển lên góc trên bên phải (cạnh nút i) — hỏi được ở mọi trang; đang mở bài có phụ đề thì hỏi về đúng câu đang nghe, không thì hỏi chung về tiếng Anh",
+        "🧠 Bỏ ô chọn AI: app tự dùng AI online, hết lượt / mất mạng thì tự chuyển sang Gemma trên máy (Gemma tự bật làm AI dự phòng khi đã tải mô hình)"
+      ]
+    },
     {
       "v": "1.0.2-beta.66",
       "d": "25/10/2026",
