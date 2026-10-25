@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.50",
+  "ver": "1.0.2-beta.51",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.51",
+      "d": "25/10/2026",
+      "items": [
+        "📖 Thống kê từ vựng ghi rõ 3 cách đếm: lượt từ (đếm cả từ lặp lại) · từ khác nhau (mỗi dạng tính 1: go, went, going là 3 từ) · họ từ (gộp các dạng: go, went, going là 1 họ “go”); thêm lựa chọn xem danh sách “Gộp theo họ từ” — mỗi họ hiện các dạng đã gặp",
+        "📁 Thư viện: album, thư mục, khoá học hiện cả số từ khác nhau và số họ từ",
+        "🎙 Bỏ mục chọn số lần nghe lại mỗi câu trong bảng Luyện nói — muốn nghe lại thì tự bấm câu trước"
+      ]
+    },
     {
       "v": "1.0.2-beta.50",
       "d": "25/10/2026",
