@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.61",
+  "ver": "1.0.2-beta.62",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.62",
+      "d": "25/10/2026",
+      "items": [
+        "🩺 Sửa báo lỗi ElevenLabs: hết credits (ElevenLabs trả mã 401) trước đây bị báo nhầm là “key không đúng hoặc thiếu quyền” và app gọi lại liên tục; nay báo đúng lý do và tạm ngưng gọi",
+        "🩺 Trạng thái Gemini ghi đúng: hết lượt trong ngày (Google làm mới lúc 15:05) hay chỉ quá nhiều lượt mỗi phút; bản chính hết lượt mà bản nhẹ còn thì ghi “đang dùng bản nhẹ”"
+      ]
+    },
     {
       "v": "1.0.2-beta.61",
       "d": "25/10/2026",
