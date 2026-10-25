@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.108",
+  "ver": "1.0.2-beta.109",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.109",
+      "d": "25/10/2026",
+      "items": [
+        "🧩 Văn bản không cùng tên với file nghe: AI đọc nội dung từng tài liệu (PDF, Word, txt, Google Docs), tách các phần theo tiêu đề rồi tự tìm đúng bài nghe cho từng phần — 1 tài liệu chứa nhiều bài cũng được",
+        "👀 Trước khi gắn, bảng “Ghép văn bản vào bài” hiện đề xuất cho từng bài kèm vài câu đầu để xem lại; sai thì chọn phần khác — xong AI chỉ việc khớp thời gian",
+        "📂 Bài đã nạp trước đó: ⋯ của thư mục / khoá học → 🧩 Ghép văn bản vào bài (AI), dùng các bài đọc 📄 đang có hoặc chọn tệp từ máy"
+      ]
+    },
     {
       "v": "1.0.2-beta.108",
       "d": "25/10/2026",
