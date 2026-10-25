@@ -1,0 +1,25 @@
+name: Probe LiteRT-LM
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Maven versions
+        run: curl -s https://dl.google.com/android/maven2/com/google/ai/edge/litertlm/litertlm-android/maven-metadata.xml
+      - name: AAR details
+        run: |
+          for V in 0.10.0 0.12.0 0.18.0; do
+            echo "===== $V"; B=https://dl.google.com/android/maven2/com/google/ai/edge/litertlm/litertlm-android/$V
+            curl -s $B/litertlm-android-$V.pom | sed -n '/<dependencies>/,/<\/dependencies>/p' | grep -E "artifactId|version" | paste - - | head -20
+            curl -s -o a.aar $B/litertlm-android-$V.aar && unzip -o -q a.aar -d aar$V && grep -o 'minSdkVersion="[0-9]*"' aar$V/AndroidManifest.xml; cat aar$V/META-INF/*.kotlin_module 2>/dev/null | head -c 0
+            ls -la aar$V/jni/arm64-v8a 2>/dev/null | head; du -sh a.aar
+            cd aar$V && unzip -o -q classes.jar -d cls && ls cls/com/google/ai/edge/litertlm | head -80 && cd ..
+            javap -cp aar$V/classes.jar -public com.google.ai.edge.litertlm.EngineConfig com.google.ai.edge.litertlm.Engine com.google.ai.edge.litertlm.Conversation com.google.ai.edge.litertlm.Backend\$CPU com.google.ai.edge.litertlm.Backend\$GPU com.google.ai.edge.litertlm.Content\$Text com.google.ai.edge.litertlm.Content\$AudioBytes com.google.ai.edge.litertlm.Contents com.google.ai.edge.litertlm.ConversationConfig com.google.ai.edge.litertlm.SamplerConfig com.google.ai.edge.litertlm.Message 2>&1 | head -150
+            unzip -p aar$V/classes.jar META-INF/*.kotlin_module | xxd | head -2
+          done
+      - name: HF model access
+        run: |
+          for U in litert-community/gemma-4-E2B-it-litert-lm/resolve/main/gemma-4-E2B-it.litertlm litert-community/gemma-4-E4B-it-litert-lm/resolve/main/gemma-4-E4B-it.litertlm google/gemma-3n-E2B-it-litert-lm/resolve/main/gemma-3n-E2B-it-int4.litertlm; do
+            echo "== $U"; curl -s -o /dev/null -w "%{http_code} %{size_download} %{redirect_url}\n" "https://huggingface.co/$U"; done
+          curl -s https://huggingface.co/api/models/litert-community/gemma-4-E2B-it-litert-lm | head -c 1500; echo
+          curl -s https://huggingface.co/api/models/litert-community/gemma-4-E4B-it-litert-lm | head -c 800
