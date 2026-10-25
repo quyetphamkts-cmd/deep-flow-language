@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.44",
+  "ver": "1.0.2-beta.45",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,24 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.45",
+      "d": "25/10/2026",
+      "items": [
+        "🩹 Sửa lỗi làm AI bị kẹt (bảng “Tự động khớp chữ” đứng ở “Sẵn sàng”, đối chiếu phụ đề không chạy) — do thẻ AI ở Thư viện bị xoá khi danh sách vẽ lại; thêm chốt an toàn: AI báo bận mà 10 phút không tiến triển thì tự mở khoá",
+        "🔀 Phụ đề sắp theo đúng lời nói: AI tìm chỗ từng câu thật sự được đọc trong âm thanh — câu không được đọc (danh sách từ, ghi chú trong tài liệu…) thì bỏ, câu xếp từ trên xuống đúng thứ tự đọc, lời nói còn thiếu thì chép thêm; giữ nguyên bản dịch của các câu cũ",
+        "🧹 File rác của máy Mac (._tên bài.mp3 — hiện thành “__tên bài”, chỉ vài KB, không phải âm thanh) không còn bị nạp; các bài như vậy đã nạp sẽ tự chuyển vào thùng rác"
+      ]
+    },
+    {
+      "v": "1.0.2-beta.45",
+      "d": "25/10/2026",
+      "items": [
+        "🔀 Phụ đề sắp theo đúng lời nói: AI tìm chỗ từng câu thật sự được đọc trong âm thanh — câu không được đọc (danh sách từ, ghi chú trong tài liệu…) thì bỏ, câu xếp từ trên xuống đúng thứ tự đọc, lời nói còn thiếu thì chép thêm; giữ nguyên bản dịch của các câu cũ. Chạy 1 lần cho cả bài trước khi AI đối chiếu từng đoạn",
+        "🩹 Sửa lỗi làm dừng việc tạo phụ đề (“Cannot read properties of null”) do thẻ AI ở Thư viện bị xoá khi danh sách vẽ lại",
+        "🧹 File rác của máy Mac (._tên bài.mp3 — hiện thành “__tên bài”, chỉ vài KB, không phải âm thanh) không còn bị nạp; các bài như vậy đã nạp sẽ tự chuyển vào thùng rác, AI không xử lý chúng nữa"
+      ]
+    },
     {
       "v": "1.0.2-beta.44",
       "d": "25/10/2026",
