@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.51",
+  "ver": "1.0.2-beta.52",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.52",
+      "d": "25/10/2026",
+      "items": [
+        "🎖 Quân hàm tính theo họ từ đã thuộc (go, goes, went, going chỉ tính là 1 họ “go”) — đánh giá sát vốn từ thật; các mốc A1 ≈ 500 → C2 ≈ 10.000 họ từ. Điểm có thể thấp hơn trước một chút vì các dạng của cùng một từ không còn được cộng nhiều lần"
+      ]
+    },
     {
       "v": "1.0.2-beta.51",
       "d": "25/10/2026",
