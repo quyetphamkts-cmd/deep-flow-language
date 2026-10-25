@@ -1,6 +1,6 @@
 {
   "web": "1.0.2",
-  "ver": "1.0.2-beta.84",
+  "ver": "1.0.2-beta.85",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.2-beta.85",
+      "d": "25/10/2026",
+      "items": [
+        "🔍 Nút tìm ở đầu trang Thư viện: tìm nhanh bài hoặc thư mục theo tên",
+        "📁 Menu ⋯ của mỗi thư mục có thêm “📁 Thêm bài từ thư mục…” và “☁️ Thêm bài từ Cloud…” — bài thêm vào nằm đúng trong thư mục đó (thư mục chọn trên máy / Drive thành thư mục con)",
+        "📥 Mục “Bài chưa sắp xếp” luôn hiện ở cuối Thư viện: chỗ để tạm bài mới / bài chờ sắp xếp trước khi đưa vào khoá học (chọn 📚 Khoá học → 📥 Bài chưa sắp xếp)"
+      ]
+    },
     {
       "v": "1.0.2-beta.84",
       "d": "25/10/2026",
