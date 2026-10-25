@@ -31,6 +31,7 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(GDrivePlugin.class);
         registerPlugin(HeadsetPlugin.class);
+        registerPlugin(GemmaPlugin.class);
         super.onCreate(savedInstanceState);
         // lỗi Java làm app bị tắt: ghi lại tên lỗi + vài dòng vị trí vào nhật ký để lần sau xem được
         final Thread.UncaughtExceptionHandler prevH = Thread.getDefaultUncaughtExceptionHandler();
