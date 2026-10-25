@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.3",
+  "ver": "1.0.3-beta.4",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.4",
+      "d": "26/10/2026",
+      "items": [
+        "📂 Xếp theo Drive giờ cập nhật đủ như trên Drive: bài còn thiếu (vd. cả Level 1, Level 4) được thêm lại, bài đang ở thùng rác được lấy lại, văn bản PDF trong thư mục (transcript, hướng dẫn) được đọc và AI ghép vào đúng bài — app sẽ hỏi lại 1 lần khi mở",
+        "🕘 Nút Lịch sử chỉnh sửa cạnh Thùng rác: xem mọi lần chuyển / sắp xếp / đổi tên / gộp trong 30 ngày (tới 100 lần), chạm để xem bài nào đi từ đâu tới đâu, bấm ↩️ để hoàn tác từng lần"
+      ]
+    },
     {
       "v": "1.0.3-beta.3",
       "d": "26/10/2026",
