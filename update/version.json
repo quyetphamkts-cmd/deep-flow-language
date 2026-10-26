@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.39",
+  "ver": "1.0.3-beta.40",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.40",
+      "d": "26/10/2026",
+      "items": [
+        "⏱ Đọc báo: thời gian đọc chỉ được tính khi bấm ✓ Đọc xong ở cuối bài",
+        "🎖 Chiến sĩ Kiên trì đổi thành Chiến sĩ Đọc hiểu: tính theo vốn từ (họ từ) trong các bài báo / truyện đã xác nhận đọc xong, mỗi họ từ 1 lần; mốc theo trình độ từ vựng CEFR 500 · 1.000 · 2.000 · 4.000 · 10.000 họ từ (A1 → C1–C2)",
+        "🧹 Bỏ ô huy chương ở trang Phiên âm"
+      ]
+    },
     {
       "v": "1.0.3-beta.39",
       "d": "26/10/2026",
