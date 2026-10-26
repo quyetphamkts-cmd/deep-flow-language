@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.12",
+  "ver": "1.0.3-beta.13",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.13",
+      "d": "26/10/2026",
+      "items": [
+        "🔄 Cập nhật khoá học theo nguồn (⋯ của khoá học → 🔄 Cập nhật theo nguồn): bài thêm / bớt / đổi chỗ trên thư mục Google Drive hoặc thư mục trong máy thì danh sách trong app đổi theo — bài mới chỉ thêm tên (học tới mới tải), bài đã xoá ở nguồn vào thùng rác (khôi phục được), giữ nguyên phụ đề và tiến độ; vẫn tự bỏ file rác máy Mac và cấp thư mục dư thừa",
+        "☁️ Khoá học lấy từ Drive tự kiểm tra thay đổi khi mở app (mỗi 3 giờ, chỉ đọc danh sách, không tải file); thư mục trong máy thì chọn lại thư mục để cập nhật",
+        "📁 Sửa: việc bỏ cấp thư mục con trùng tên trước đây bị chặn khi mở app — nay chạy ngay"
+      ]
+    },
     {
       "v": "1.0.3-beta.12",
       "d": "26/10/2026",
