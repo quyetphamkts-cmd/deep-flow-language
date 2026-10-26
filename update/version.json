@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.40",
+  "ver": "1.0.3-beta.41",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.41",
+      "d": "26/10/2026",
+      "items": [
+        "📷 Bộ đọc chữ trên máy chính xác hơn: tăng tương phản ảnh, bỏ chữ mờ in từ mặt sau và dòng vô nghĩa, ghép lại đoạn văn / mục 1. 2. 3. theo vị trí dòng, dùng bộ chữ nhẹ hơn (~3 MB)",
+        "ℹ️ Bài đọc từ ảnh ghi rõ đọc bằng AI nào; nếu phải dùng bộ đọc trên máy thì báo lý do AI chưa dùng được"
+      ]
+    },
     {
       "v": "1.0.3-beta.40",
       "d": "26/10/2026",
