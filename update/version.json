@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.24",
+  "ver": "1.0.3-beta.25",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.25",
+      "d": "26/10/2026",
+      "items": [
+        "ⓘ Trang Nghe gọn hơn: dòng hướng dẫn và lượt nghe của bài Effortless English đưa vào nút ⓘ cạnh lá cờ 🚩 — bấm mới xem (cách học loại bài này + lượt hôm nay + tiến độ cả bộ)",
+        "🧹 Bỏ hết văn bản trước đây gắn bằng cách đoán theo tên / tiêu đề (dễ sai như bài MS vừa rồi) — học tới bài nào, AI nghe tạo phụ đề rồi so nội dung để lấy đúng văn bản; văn bản trùng tên bài vẫn giữ"
+      ]
+    },
     {
       "v": "1.0.3-beta.24",
       "d": "26/10/2026",
