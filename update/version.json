@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.43",
+  "ver": "1.0.3-beta.44",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.44",
+      "d": "26/10/2026",
+      "items": [
+        "🔄 Nhập lại API key (kể cả đúng key cũ) là xoá ngay trạng thái “tạm nghỉ do hết lượt”",
+        "📷 Bài đọc từ ảnh bằng bộ đọc trên máy có nút “🔄 Thử lại AI và đọc lại ảnh này” — thay luôn bản đọc cũ"
+      ]
+    },
     {
       "v": "1.0.3-beta.43",
       "d": "26/10/2026",
