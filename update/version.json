@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.13",
+  "ver": "1.0.3-beta.14",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.14",
+      "d": "26/10/2026",
+      "items": [
+        "👁 Bỏ che mờ phụ đề trong bài Effortless English — phụ đề luôn hiện đầy đủ",
+        "📄 Học bài nào app kiểm tra văn bản (PDF / txt) của bài đó trước: có thì tải về, gắn vào bài làm phụ đề (AI chỉ khớp thời gian); không có văn bản mới để AI tự tạo phụ đề từ âm thanh"
+      ]
+    },
     {
       "v": "1.0.3-beta.13",
       "d": "26/10/2026",
