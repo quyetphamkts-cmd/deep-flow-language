@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.27",
+  "ver": "1.0.3-beta.28",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.28",
+      "d": "26/10/2026",
+      "items": [
+        "🎙 Nút nói đuổi: bấm để bật / tắt, nhấn giữ để mở cài đặt chi tiết",
+        "🎧 Nói đuổi cả bài: bài phát bình thường, app ghi âm và chấm từng câu · 🔁 Nói đuổi từng câu: tự dừng sau mỗi câu để ghi âm, nói xong tự phát câu tiếp",
+        "📊 Hết bài có bảng đánh giá: điểm nói trung bình, % nói đủ từ, % phát âm chuẩn, so với lần trước, các từ hay sai (bấm để nghe) và các câu nên luyện lại",
+        "🐞 AI chấm luôn dùng Whisper Base (không tự lùi về Tiny khi chỉ bị tắt giữa chừng); hiện “Đang khởi động AI…” sau khi tải xong"
+      ]
+    },
     {
       "v": "1.0.3-beta.27",
       "d": "26/10/2026",
