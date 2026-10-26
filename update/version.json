@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.19",
+  "ver": "1.0.3-beta.20",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.20",
+      "d": "26/10/2026",
+      "items": [
+        "🔎 Lấy văn bản đúng theo NỘI DUNG: AI nghe tạo phụ đề trước, rồi app so phụ đề với các văn bản (PDF…) trong thư mục bài và thư mục cha, chọn đúng đoạn trùng nhiều nhất và thay chữ phụ đề bằng câu trong văn bản, giữ mốc thời gian — chạy trên máy, không tốn lượt AI; không đoán theo tên / tiêu đề nữa (văn bản trùng tên bài vẫn gắn ngay)",
+        "🎧 ⋯ của bài → “Văn bản sai — AI nghe lại & tìm đúng văn bản”: bỏ đoạn sai, AI nghe tạo lại phụ đề rồi app tự so để tìm đúng đoạn (đoạn đã bỏ không gắn lại)"
+      ]
+    },
     {
       "v": "1.0.3-beta.19",
       "d": "26/10/2026",
