@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.29",
+  "ver": "1.0.3-beta.30",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.30",
+      "d": "26/10/2026",
+      "items": [
+        "📋 Bảng tổng kết nói đuổi chấm theo 7 tiêu chí: phát âm đúng từ, nói đủ từ, trôi chảy & tốc độ (chấm trên máy mọi câu) + âm khó & âm cuối, trọng âm từ, ngữ điệu, nối âm & nhịp điệu (AI nghe các câu tiêu biểu cuối bài: Gemini, không có thì Gemma trên máy)",
+        "💬 Có nhận xét chung và danh sách lỗi cần sửa (từ, loại lỗi, cách sửa — bấm để nghe từ)",
+        "🎧 Nút nghe lại toàn bộ bản ghi trong bảng tổng kết; bản ghi chỉ giữ tạm, tự xoá khi đóng bảng hoặc tắt nói đuổi"
+      ]
+    },
     {
       "v": "1.0.3-beta.29",
       "d": "26/10/2026",
