@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.42",
+  "ver": "1.0.3-beta.43",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.43",
+      "d": "26/10/2026",
+      "items": [
+        "🔑 Sửa lỗi: nhập / đổi Gemini hoặc Claude API key mới mà app vẫn coi là “hết lượt” của key cũ (bị khoá tới 15h) — giờ đổi key là dùng được ngay",
+        "📷 Đọc ảnh: AI nào có key nhưng đang tạm nghỉ thì báo rõ lý do và giờ dùng lại"
+      ]
+    },
     {
       "v": "1.0.3-beta.42",
       "d": "26/10/2026",
