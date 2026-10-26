@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.46",
+  "ver": "1.0.3-beta.47",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.47",
+      "d": "26/10/2026",
+      "items": [
+        "🩹 Sửa lỗi Dán nội dung bài học: bấm Lưu với bài đã có phụ đề thì bảng hỏi “giữ / thay phụ đề” bị che phía sau nên như không lưu được — giờ hiện lên trên",
+        "📷 Thêm văn bản bài học từ ảnh dùng chung bộ đọc của Đọc báo: Gemini → Claude → ChatGPT → bộ đọc trên máy, báo rõ đọc bằng gì; xem trước, sửa trong ô rồi bấm ✓ Xác nhận để AI khớp từng câu với âm thanh",
+        "📋 Copy bài đọc: dán vào Word / Google Docs giữ nguyên bảng, tiêu đề, đoạn văn"
+      ]
+    },
     {
       "v": "1.0.3-beta.46",
       "d": "26/10/2026",
