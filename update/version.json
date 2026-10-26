@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.22",
+  "ver": "1.0.3-beta.23",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.23",
+      "d": "26/10/2026",
+      "items": [
+        "🎯 Thêm phần tập trung AI: căn từng từ, dịch tự động hằng ngày và kiểm tra phụ đề cũng chỉ làm bài đang học → bài kế tiếp (trước đây làm trước tới 40 bài sắp học); nút ⏸ Dừng cũng dừng luôn các việc này"
+      ]
+    },
     {
       "v": "1.0.3-beta.22",
       "d": "26/10/2026",
