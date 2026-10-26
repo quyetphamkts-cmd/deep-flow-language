@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.15",
+  "ver": "1.0.3-beta.16",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.16",
+      "d": "26/10/2026",
+      "items": [
+        "📥 Sửa lỗi xoá khoá học rồi thêm lại: các thư mục (2.LearnRealEnglish, 3.Flow…, 5.PowerEnglishNow…) bị rơi vào “Bài chưa sắp xếp” vì còn nhớ khoá học cũ đã xoá — nay thêm bài vào khoá luôn gán đúng khoá mới; khi mở app tự sửa 1 lần, đưa các thư mục đó về đúng khoá theo thư mục Drive"
+      ]
+    },
     {
       "v": "1.0.3-beta.15",
       "d": "26/10/2026",
