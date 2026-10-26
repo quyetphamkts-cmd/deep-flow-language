@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.23",
+  "ver": "1.0.3-beta.24",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.24",
+      "d": "26/10/2026",
+      "items": [
+        "🩹 Sửa khung phụ đề trống ở đầu bài (trước câu đầu tiên, nhất là bài có đoạn nói đầu dài như Mini-Story): nay luôn hiện các câu sắp tới ở giữa khung",
+        "📏 Dòng trạng thái gọn hơn: “✅ Chữ theo văn bản gốc” / “✅ Phụ đề khớp 100%” / “🎯 Đối chiếu · khớp …%” trên 1 dòng, nút Dừng AI · Xem nằm cùng dòng"
+      ]
+    },
     {
       "v": "1.0.3-beta.23",
       "d": "26/10/2026",
