@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.28",
+  "ver": "1.0.3-beta.29",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.29",
+      "d": "26/10/2026",
+      "items": [
+        "📷 Thêm văn bản từ ảnh: menu ⋯ của bài → “Thêm văn bản từ ảnh”, hoặc nút 📷 trong bảng Dán nội dung — chụp sách / chọn nhiều ảnh, Gemini đọc chữ từng trang, xem lại rồi Lưu",
+        "🎯 Bài đã có phụ đề: chọn giữ phụ đề và dùng văn bản để đối chiếu, sửa từ nghe sai (không phải khớp lại từ đầu), hoặc thay hẳn"
+      ]
+    },
     {
       "v": "1.0.3-beta.28",
       "d": "26/10/2026",
