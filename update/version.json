@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.44",
+  "ver": "1.0.3-beta.45",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.45",
+      "d": "26/10/2026",
+      "items": [
+        "📊 Bảng trong ảnh chụp và trong bài báo hiển thị đúng dạng bảng (dòng tiêu đề, kẻ ô), không bị dồn thành một đoạn; vẫn chạm vào từ trong ô để tra"
+      ]
+    },
     {
       "v": "1.0.3-beta.44",
       "d": "26/10/2026",
