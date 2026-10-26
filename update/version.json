@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.34",
+  "ver": "1.0.3-beta.35",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.35",
+      "d": "26/10/2026",
+      "items": [
+        "🌐 Song ngữ theo từng cụm 1–2 câu: câu gốc và bản dịch luôn đi cùng nhau, không bị tách sang trang khác; nút 🌐 Song ngữ và A− / A+ luôn hiện ngay trên trang đọc; chụm 2 ngón tay để đổi cỡ chữ",
+        "📊 Thống kê bài: số từ, số từ vựng, số họ từ, độ khó so với trình độ; bấm để xem từ khó hơn trình độ, từ hiếm, từ lặp nhiều — bấm từ để tra theo câu",
+        "🎯 Gợi ý theo trình độ: bài báo xếp theo độ khó (nhãn Dễ / Vừa sức / Khó), trình độ A1–A2 ưu tiên trang báo dễ đọc; truyện thiếu nhi lên đầu cho người mới",
+        "🏠 Nút trang chủ đặt đầu ô nhập; thanh trên danh sách đổi thành A− A+ 🌐 Dịch 🎨 Nền cùng kiểu với trang đọc"
+      ]
+    },
     {
       "v": "1.0.3-beta.34",
       "d": "26/10/2026",
