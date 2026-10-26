@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.17",
+  "ver": "1.0.3-beta.18",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.18",
+      "d": "26/10/2026",
+      "items": [
+        "🔗 Sửa “Cập nhật theo nguồn” báo không đọc được Drive: khi app không tự tìm được thư mục gốc (Google không cho xem thư mục cha khi dùng API key), app hỏi link thư mục Drive của khoá 1 lần rồi ghi nhớ — lần sau tự cập nhật; đổi link ở ⋯ khoá học → 🔄 Cập nhật theo nguồn → 🔗 Đổi / nhập link"
+      ]
+    },
     {
       "v": "1.0.3-beta.17",
       "d": "26/10/2026",
