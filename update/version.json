@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.18",
+  "ver": "1.0.3-beta.19",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.19",
+      "d": "26/10/2026",
+      "items": [
+        "🎧 Sửa gắn nhầm văn bản: kiểm tra nội dung đúng loại bài trước khi gắn (Mini-Story nhiều câu hỏi; Vocab / POV / Audio thì không) — bài đã bị gắn nhầm (vd. Vocab nhận văn bản Mini-Story) tự bỏ văn bản và để AI nghe tạo lại phụ đề",
+        "🎧 ⋯ của bài → “Văn bản sai — bỏ văn bản, AI nghe tạo lại phụ đề”: thấy chữ không đúng với tiếng thì bấm, văn bản đó sẽ không tự gắn lại vào bài"
+      ]
+    },
     {
       "v": "1.0.3-beta.18",
       "d": "26/10/2026",
