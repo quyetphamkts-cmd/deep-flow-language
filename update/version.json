@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.26",
+  "ver": "1.0.3-beta.27",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,17 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.27",
+      "d": "26/10/2026",
+      "items": [
+        "🎙 Luyện nói đuổi - Shadowing: AI chấm phát âm chạy riêng (Web Worker) nên phụ đề, âm thanh và nút bấm không còn giật / đứng khi đang chấm",
+        "🧠 Đổi mô hình chấm từ Whisper Small sang Whisper Base (máy yếu tự lùi về Tiny) — Small tốn ~250 MB RAM làm Android đóng app giữa chừng",
+        "⏭ Chấm lần lượt từng câu; nói đuổi cả bài mà máy chấm không kịp thì bỏ qua câu cũ (hiện 🎙 ⏭) thay vì dồn hàng làm treo máy",
+        "🧹 Nạp sẵn AI khi bật Shadowing, tắt hẳn để trả RAM khi rời chế độ / sau 2 phút không dùng",
+        "🐞 Sửa lỗi 'Cannot set properties of undefined (setting cd)' khi tạo từ điển khoá học"
+      ]
+    },
     {
       "v": "1.0.3-beta.26",
       "d": "26/10/2026",
