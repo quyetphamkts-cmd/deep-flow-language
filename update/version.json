@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.30",
+  "ver": "1.0.3-beta.31",
   "notes": "AI trên máy chỉ dùng chấm phát âm (Whisper Small) · phụ đề, dịch dùng AI online",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.31",
+      "d": "26/10/2026",
+      "items": [
+        "🧹 Bỏ Gia sư hỏi – đáp (nút ? ở góc trên, nút Hỏi gia sư trong bảng Luyện nói) — xoá luôn hội thoại đã lưu",
+        "🧹 Bỏ Luyện nói đuổi - Shadowing (nói đuổi cả bài / từng câu, bảng tổng kết, bản ghi âm). Nút 🎙 giờ mở bảng Luyện nói: Phát liên tục · Dừng chờ bấm · Chấm từng câu; Chấm phát âm giữ nguyên"
+      ]
+    },
     {
       "v": "1.0.3-beta.30",
       "d": "26/10/2026",
