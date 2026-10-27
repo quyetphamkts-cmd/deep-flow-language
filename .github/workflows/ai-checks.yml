@@ -32,6 +32,12 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/df-browser/node_modules
           CHROME_BIN: /usr/bin/google-chrome
         run: node tests/lesson-text.browser.cjs
+      - name: Lưu ảnh kiểm tra giao diện điện thoại
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-ui-${{ github.run_number }}
+          path: ${{ runner.temp }}/study51-*.png
+          if-no-files-found: error
       - run: npx cap sync android
       - name: Kiểm tra khóa ký hiện có (chỉ PR cùng repository hoặc chạy thủ công)
         if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository

@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
+import android.media.AudioDeviceInfo;
 import android.os.Build;
 
 import com.getcapacitor.JSObject;
@@ -56,6 +57,24 @@ public class HeadsetPlugin extends Plugin {
         } else {
             getContext().registerReceiver(receiver, f);
         }
+    }
+
+    /** Trạng thái đầu ra hiện tại: mở lại app khi tai nghe đã kết nối. */
+    @PluginMethod
+    public void getConnection(PluginCall call) {
+        JSObject r = new JSObject();
+        boolean connected = false;
+        try {
+            AudioManager am = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
+            if (am != null) for (AudioDeviceInfo d : am.getDevices(AudioManager.GET_DEVICES_OUTPUTS)) {
+                int t = d.getType();
+                if (t == AudioDeviceInfo.TYPE_WIRED_HEADPHONES || t == AudioDeviceInfo.TYPE_WIRED_HEADSET
+                        || t == AudioDeviceInfo.TYPE_BLUETOOTH_A2DP || t == AudioDeviceInfo.TYPE_BLUETOOTH_SCO
+                        || t == AudioDeviceInfo.TYPE_USB_HEADSET || (Build.VERSION.SDK_INT >= 31 && t == AudioDeviceInfo.TYPE_BLE_HEADSET)) connected = true;
+            }
+        } catch (Exception ignored) { }
+        r.put("connected", connected);
+        call.resolve(r);
     }
 
     /** Lưu chế độ phát hiện tại để thông báo phát nhạc hiện đúng biểu tượng nút chế độ */
