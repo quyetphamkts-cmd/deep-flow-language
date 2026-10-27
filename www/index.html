@@ -682,7 +682,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     </div>
     <div class="stat"><div class="nums"><b id="vocDue">0</b> từ cần ôn hôm nay<br>Tổng <b id="vocTot">0</b> từ · Đã thuộc <b id="vocMast">0</b></div>
      <button class="btn pri" id="vocStart">▶ Ôn tập</button></div>
-    <div class="sw"><span>Thẻ mới mỗi ngày</span><select id="fcNewLimit"><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="50">50</option></select></div><div class="mu" id="fcHomeStats" style="margin:0 0 10px"></div>
+    <div class="sw"><span>Thẻ mới mỗi ngày</span><select id="fcNewLimit"><option value="5">5 · ít thời gian</option><option value="10">10 · cơ bản</option><option value="15">15 · trung cấp</option><option value="20">20 · nâng cao</option><option value="30">30 · luyện thi</option></select></div><div class="mu" id="fcHomeStats" style="margin:0 0 10px"></div><details class="help mu" style="margin-bottom:12px"><summary>Chọn lượng từ phù hợp và học theo ngữ cảnh</summary><p>Ít thời gian hoặc mới bắt đầu: 5–10 từ/ngày. Trung cấp: 15–20 từ/ngày. Luyện thi: 20–30 từ/ngày khi đủ thời gian ôn lại.</p><p>Ưu tiên hiểu và dùng được từ: nghe phát âm, đọc/nghe câu gốc, học cả cụm từ (ví dụ “come up with an idea”), rồi tự đặt câu. Ôn thẻ đến hạn trước khi thêm từ mới; lịch ôn tăng dần theo mức nhớ, từ vài phút đến 1 ngày, 3 ngày và lâu hơn.</p></details>
     <div class="card" id="lwCard" style="margin:0 0 12px"></div>
     <div class="card" id="gmCard" style="margin:0 0 12px"></div>
     <div class="card" id="packCard" style="margin:0 0 12px"></div>
@@ -6094,8 +6094,8 @@ function nextIvl(s={},g){
 function fcNew(v){return !(v.srs&&v.srs.reps)&&!(v.srs&&v.srs.ivl)&&!(v.srs&&v.srs.firstReviewed);}
 function fcTodayNew(){return vocab.filter(v=>(v.lang||'en')===(S.learn||'en')&&v.srs&&v.srs.firstReviewed&&new Date(v.srs.firstReviewed).toDateString()===new Date().toDateString()).length;}
 function fcDueQueue(){const now=Date.now(),lg=S.learn||'en';const all=vocab.filter(v=>(v.lang||'en')===lg);const due=all.filter(v=>!fcNew(v)&&(v.srs&&v.srs.due||0)<=now).sort((a,b)=>(a.srs.due||0)-(b.srs.due||0));
-  const left=Math.max(0,(Number(S.fcNewLimit)||20)-fcTodayNew());return [...due,...all.filter(fcNew).slice(0,left)];}
-$('#fcNewLimit').value=String(S.fcNewLimit||20);
+  const left=Math.max(0,(Number(S.fcNewLimit)||10)-fcTodayNew());return [...due,...all.filter(fcNew).slice(0,left)];}
+$('#fcNewLimit').value=String(S.fcNewLimit||10);
 $('#fcNewLimit').onchange=e=>{S.fcNewLimit=Number(e.target.value);save();renderVoc();};
 $('#vocImgT').onclick=()=>{S.vocImg=S.vocImg===false;save();renderVoc();};
 $('#imgSrc').value=S.imgSrc||'auto';$('#imgSrc').onchange=e=>{S.imgSrc=e.target.value;save();};
@@ -6978,7 +6978,7 @@ function renderVoc(){
   dictAllRender();offMeta().then(offUI);renderLessonVoc();renderGames();renderPacks();
   $('#vocImgT').classList.toggle('on',S.vocImg!==false);
   const q=norm($('#vocQ').value||'');const now=Date.now();
-  $('#vocDue').textContent=fcDueQueue().length;$('#fcHomeStats').textContent='Ưu tiên thẻ đến hạn · thẻ mới đã học hôm nay: '+fcTodayNew()+'/'+(S.fcNewLimit||20)+' · Học lại: 1 phút, Tốt: 10 phút rồi tăng dần theo mức nhớ.';$('#vocTot').textContent=vocab.length;$('#vocMast').textContent=vocab.filter(v=>v.srs.ivl>=21).length;
+  $('#vocDue').textContent=fcDueQueue().length;$('#fcHomeStats').textContent='Ưu tiên thẻ đến hạn · thẻ mới đã học hôm nay: '+fcTodayNew()+'/'+(S.fcNewLimit||10)+' · Học lại: 1 phút, Tốt: 10 phút rồi tăng dần theo mức nhớ.';$('#vocTot').textContent=vocab.length;$('#vocMast').textContent=vocab.filter(v=>v.srs.ivl>=21).length;
   const list=vocab.filter(v=>!q||norm(v.word+' '+v.mean).includes(q));
   $('#vocList').innerHTML=list.length?list.map(v=>`<div class="vrow" data-v="${esc(v.id)}"><div class="vw"><b>${esc(v.word)}</b> <span class="mu">${esc(v.ipa||'')}</span><div>${esc(v.mean||'')}</div></div><span class="due${v.srs.due<=now?' now':''}">${v.srs.ivl>=21?'✓ Đã thuộc · ':''}${v.srs.due<=now?(v.srs.reps?'Cần ôn':'Cần học'):'sau '+fmtIvl((v.srs.due-now)/DAY)}${v.ctx&&String(v.ctx.trackId||'').startsWith('news:')?' · 📰':''}</span><button class="more" data-vd="${esc(v.id)}">✕</button></div>`).join(''):'<div class="empty">Chưa có từ nào. Chạm vào một từ trong phụ đề để tra và lưu.</div>';
   updVocBadge();
