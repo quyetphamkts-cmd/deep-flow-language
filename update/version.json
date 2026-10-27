@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.49",
-  "notes": "AI: giảm gọi trùng, phân loại lỗi quota/tốc độ/số dư, tôn trọng thời gian chờ và che API key",
+  "ver": "1.0.3-beta.50",
+  "notes": "Văn bản toàn bài · sửa chuyển bài/tai nghe · Flashcard: học lại theo hạn, 4 mức đánh giá, hoàn tác và thẻ mới mỗi ngày",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.50",
+      "d": "27/10/2026",
+      "items": [
+        "Văn bản: xem toàn bài, sửa bằng nút bút, dán/copy và thêm từ ảnh/file/Cloud; lưu để AI tự khớp âm thanh, giữ phụ đề cũ dự phòng",
+        "Sửa chuyển bài mở nhầm văn bản: hàng phát bỏ bài chỉ có chữ; tai nghe/màn hình khóa/widget dùng đúng lệnh phát, dừng, bài trước và bài sau theo hệ thống",
+        "Flashcard theo cách học Anki: Xem đáp án rồi đánh giá Học lại/Khó/Tốt/Dễ, bước học 1–10 phút, ưu tiên thẻ đến hạn, giới hạn thẻ mới/ngày, tiến độ và hoàn tác; giữ lịch ôn cũ"
+      ]
+    },
     {
       "v": "1.0.3-beta.49",
       "d": "27/10/2026",
