@@ -33,12 +33,16 @@ jobs:
         env:
           NODE_PATH: ${{ runner.temp }}/df-browser/node_modules
           CHROME_BIN: /usr/bin/google-chrome
-        run: node tests/lesson-text.browser.cjs
+        run: |
+          node tests/lesson-text.browser.cjs
+          node tests/library-reading.browser.cjs
       - name: Lưu ảnh kiểm tra giao diện điện thoại
         uses: actions/upload-artifact@v4
         with:
           name: study-ui-${{ github.run_number }}
-          path: ${{ runner.temp }}/study51-*.png
+          path: |
+            ${{ runner.temp }}/study51-*.png
+            ${{ runner.temp }}/study53-*.png
           if-no-files-found: error
       - run: npx cap sync android
       - name: Kiểm thử Java chẩn đoán crash
