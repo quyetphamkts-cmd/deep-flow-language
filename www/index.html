@@ -2786,7 +2786,7 @@ $('#micBody').addEventListener('click',e=>{const b=e.target.closest('.seg button
 const EE_T={text:['📄','Text — đọc, không học thuộc'],voc:['🔤','Vocabulary — nghe; từ nào chưa hiểu thì chạm xem chữ rồi nghe tiếp'],ms:['🗣','Mini-Story — sau mỗi câu hỏi trả lời thật nhanh 1–3 từ (quan trọng nhất)'],pov:['🔁','Point of View — nghe tới khi tự kể lại được ở các thì, không nghĩ ngữ pháp'],aud:['🎧','Audio / Conversation — nghe thư giãn nhiều lần'],com:['💬','Commentary — nghe 1 lần, khó thì bỏ qua']};
 const EE_ORD=['text','voc','ms','pov','aud','com'];
 function eeCourse(t){if(!t)return false;try{const l=listById(listOf(unitKey(t)));if(l&&/effortless/i.test(l.name||''))return true;}catch(e){}return /effortless/i.test(albumOf(t));}
-function eeType(t){const n=String(t&&t.name||'').toLowerCase();
+function eeType(t){const n=String(t&&t.name||'').toLowerCase().replace(/[_-]+/g,' ');
   if(/\bpov\b|point[ _-]?of[ _-]?view/.test(n))return 'pov';if(/\bms\b|mini[ _-]?stor/.test(n))return 'ms';if(/vocab/.test(n))return 'voc';if(/commentar/.test(n))return 'com';
   if(/conversation|\bconv\b|dialog|\bmain\b/.test(n))return 'aud';if(/article|\btext\b/.test(n)&&!/audio/.test(n))return 'text';if(/audio/.test(n))return 'aud';if(t&&t.doc&&!t.gid&&t.noAudio)return 'text';return '';}
 function eeLevel(t){const a=albumOf(t);let m=a.match(/level\s*(\d)/i);if(m)return +m[1];m=a.split(' / ').map(x=>x.match(/^(\d)\.\d/)).find(Boolean);return m?+m[1]:0;}
