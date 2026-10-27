@@ -1,16 +1,26 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.50",
-  "notes": "Văn bản toàn bài · sửa chuyển bài/tai nghe · Flashcard: học lại theo hạn, 4 mức đánh giá, hoàn tác và thẻ mới mỗi ngày",
+  "ver": "1.0.3-beta.51",
+  "notes": "Thư viện và lịch Ôn bài · văn bản gọn · thẻ ảnh/IPA/song ngữ · ghi âm cả bài · tai nghe và đọc báo",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 25,
-    "versionName": "1.0.2-beta.57",
+    "versionCode": 26,
+    "versionName": "1.0.2-beta.58",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.51",
+      "d": "27/10/2026",
+      "items": [
+        "Thư viện gọn trên điện thoại: bài học chính, Streak, tiến độ và lịch Ôn bài 1–3–7 ngày; ẩn bảng AI ở thư viện và khi đã xử lý xong",
+        "Văn bản: biểu tượng tròn, thống kê từ vựng, thanh Dán/Copy/Sửa/Lưu/Đóng và hướng dẫn/nguồn khác màu",
+        "Thẻ từ: ảnh vuông, IPA, ví dụ/song ngữ, chuyển cạnh trái/phải và tốc độ tự động; luyện nói ghi và chấm cả phần đã luyện",
+        "Mini Story phát bình thường; gộp tự tiếp tục theo tai nghe, bỏ EQ, gọn AI/ngôn ngữ; Đọc báo có trình độ, cài đặt và thanh công cụ cuối trang, song ngữ từng câu, lọc truyện chữ"
+      ]
+    },
     {
       "v": "1.0.3-beta.50",
       "d": "27/10/2026",
