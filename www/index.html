@@ -7115,6 +7115,7 @@ $('#fcGrade').onclick=e=>{const b=e.target.closest('[data-g]');if(b)gradeCard(Nu
 $('#fcUndo').onclick=()=>{const h=rv.history.pop();if(!h)return;
   h.v.srs=h.srs;for(const k of ['tmp','added','mt']){if(h[k]===undefined)delete h.v[k];else h.v[k]=h[k];}
   if(!h.inVocab){const i=vocab.indexOf(h.v);if(i>=0)vocab.splice(i,1);}
+  h.v.mt=Date.now(); // Hoàn tác là thay đổi mới để đồng bộ không lấy lại lần chấm nhầm.
   rv.q=h.q;rv.answers=h.answers;rv.again=h.again;saveVocab();clipStop();showCard();toast('Đã hoàn tác đánh giá vừa rồi');};
 $('#fcSay').onclick=()=>{const v=rv.q[rv.i];if(!v)return;if(v.au){const a=new Audio(v.au);a.play().catch(()=>sayWord(v.word,v.lang));}else sayWord(v.word,v.lang);};
 // Phát đoạn câu gốc bằng trình phát riêng (không ảnh hưởng bài đang nghe)
