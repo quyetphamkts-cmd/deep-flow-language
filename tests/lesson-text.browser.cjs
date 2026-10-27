@@ -49,6 +49,7 @@ const path=require('node:path');
   await page.locator('#bCurMore').click();assert.equal(await page.locator('#mSheet').evaluate(el=>el.classList.contains('on')),true);await page.evaluate(()=>closeModals());
   await page.locator('#bRep').click();assert.equal(await page.locator('#mPaste').evaluate(el=>el.classList.contains('on')),true);
   await page.evaluate(()=>{closeModals();S.vocImg=false;vocab=[{id:'flash-test',word:'hello',mean:'xin chào',lang:'en',srs:{ivl:0,reps:0,ease:2.5,due:0}}];showView('vVoc');startReview(vocab);});
+  assert.equal(await page.locator('#fcNewLimit').inputValue(),'10');assert.equal(await page.locator('#fcNewLimit option').count(),5);
   assert.equal(await page.locator('#fcGrade').isVisible(),false);
   await page.locator('#fcard').focus();await page.keyboard.press('Space');assert.equal(await page.evaluate(()=>window.__played),1);assert.equal(await page.locator('#fcGrade').isVisible(),true);
   await page.locator('#fcGrade [data-g="0"]').click();
