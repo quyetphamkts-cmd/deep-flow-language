@@ -1,6 +1,8 @@
 package vn.vietan.deepflow;
 
 import android.os.SystemClock;
+import com.getcapacitor.Bridge;
+import com.getcapacitor.WebViewListener;
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Test;
@@ -37,6 +39,23 @@ public class RendererRecoveryTest {
                 scenario.onActivity(current::set);
             } while (current.get() == first.get() && SystemClock.elapsedRealtime() < until);
             assertNotSame("Mở lại app phải tạo màn hình mới", first.get(), current.get());
+        }
+    }
+
+    @Test public void lateCallbackFromClosedSessionCannotStopNewSession() throws Exception {
+        AtomicReference<Bridge> oldBridge = new AtomicReference<>();
+        try (ActivityScenario<MainActivity> first = ActivityScenario.launch(MainActivity.class)) {
+            first.onActivity(activity -> oldBridge.set(activity.getBridge()));
+        }
+        try (ActivityScenario<MainActivity> next = ActivityScenario.launch(MainActivity.class)) {
+            next.onActivity(activity -> {
+                MainActivity.playing = true;
+                try {
+                    for (WebViewListener listener : oldBridge.get().getWebViewListeners())
+                        listener.onRenderProcessGone(oldBridge.get().getWebView(), null);
+                    assertTrue("Callback đến trễ của phiên đã dọn không được tắt phiên mới", MainActivity.playing);
+                } finally { MainActivity.playing = false; }
+            });
         }
     }
 
