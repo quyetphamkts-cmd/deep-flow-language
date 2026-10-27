@@ -50,7 +50,7 @@ public class MainActivity extends BridgeActivity {
                 @Override
                 public boolean onRenderProcessGone(WebView v, RenderProcessGoneDetail d) {
                     // Một renderer có thể dùng chung cho nhiều WebView. Mỗi owner chỉ dọn một lần.
-                    if (rendererGone) return true;
+                    if (rendererGone || bridgeDisposed) return true;
                     rendererGone = true;
                     boolean crash = Build.VERSION.SDK_INT >= 26 && d != null && d.didCrash();
                     NativeDiag.log(MainActivity.this, "WebView bị đóng (" + (crash ? "renderer crash" : "hệ thống kết thúc renderer, chưa xác định có thiếu RAM hay không")
