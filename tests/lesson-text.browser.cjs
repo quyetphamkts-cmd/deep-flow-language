@@ -23,6 +23,7 @@ const path=require('node:path');
   await page.locator('#lessonEdit').click();
   await page.locator('#pasteTx').fill('Corrected sentence.\nSecond sentence.');
   await page.locator('#pasteOk').click();
+  await page.waitForFunction(()=>!document.querySelector('#mPaste').classList.contains('on')||document.querySelector('#pasteSt').textContent.startsWith('⚠️'));
   assert.equal(await page.locator('#mPaste').evaluate(el=>el.classList.contains('on')),false);
   assert.equal(await page.evaluate(()=>tracks.find(x=>x.id==='ui-test').doc),'Corrected sentence.\nSecond sentence.');
   await page.evaluate(()=>openLessonText(tracks.find(x=>x.id==='ui-test')));
