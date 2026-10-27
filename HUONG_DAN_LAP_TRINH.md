@@ -33,7 +33,7 @@ App Android học ngoại ngữ qua nghe (kiểu Poweramp): phát bài nghe, ph�
 ## Lưu ý khi 2 bên cùng sửa
 Mỗi lần bắt đầu, hãy lấy bản mới nhất từ GitHub (`git pull`) — nhiều người / nhiều phiên AI cùng đẩy lên dễ ghi đè nhau. Số beta phải tăng dần, không trùng.
 
-**Quy tắc đánh số phiên bản** (dùng `python3 tools/bump.py "ghi chú 1" "ghi chú 2"` — thêm `--apk` khi sửa Android — để tự nâng số đúng quy tắc, sửa cả HTML lẫn `version.json`): beta tăng dần `1.0.1-beta.1` … `1.0.1-beta.99`. Sau beta 99 thì tự lên phiên bản: bản kế tiếp là bản chính thức `1.0.1` (gộp các thay đổi), rồi bắt đầu chu kỳ mới `1.0.2-beta.1` … `1.0.2-beta.99` → `1.0.2`, cứ thế tiếp. Hàm `vparse` trong HTML đã xếp đúng thứ tự: `1.0.1-beta.99` < `1.0.1` < `1.0.2-beta.1`. Khi lên số mới nhớ đổi cả `"web"` trong `version.json`.
+**Quy tắc đánh số phiên bản** (dùng `python3 tools/bump.py "ghi chú 1" "ghi chú 2"` — thêm `--apk` khi sửa Android — để tự nâng số đúng quy tắc, sửa cả HTML lẫn `version.json`): beta tăng dần `1.0.1-beta.1` … `1.0.1-beta.99`. Sau beta 99 thì tăng số cuối phiên bản và bắt đầu lại beta 1: `1.0.3-beta.99` → `1.0.4-beta.1`. Không quay về beta 1 của cùng số phiên bản vì app sẽ coi đó là bản cũ hơn. Hàm `vparse` trong HTML đã xếp đúng thứ tự: `1.0.1-beta.99` < `1.0.1` < `1.0.2-beta.1`. Khi lên số mới nhớ đổi cả `"web"` trong `version.json`.
 
 
 ## Từ điển offline
