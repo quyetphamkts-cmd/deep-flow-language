@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const {pathToFileURL}=require('node:url');
 const path=require('node:path');
 (async()=>{
- const browser=await chromium.launch({executablePath:process.env.CHROME_BIN||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+ const browser=await chromium.launch({executablePath:process.env.CHROME_BIN||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']});
  try{
   const page=await browser.newPage({viewport:{width:390,height:844}});
   await page.route('https://**/*',route=>route.abort());
@@ -46,8 +46,8 @@ const path=require('node:path');
   const rate=await page.evaluate(()=>S.rate);await page.locator('#cRate').click();assert.notEqual(await page.evaluate(()=>S.rate),rate);
   const mode=await page.evaluate(()=>S.pm);await page.locator('#cLoop').click();assert.notEqual(await page.evaluate(()=>S.pm),mode);
   const sub=await page.evaluate(()=>subState());await page.locator('#cSub').click();assert.notEqual(await page.evaluate(()=>subState()),sub);
-  await page.locator('#cMic').click();assert.equal(await page.locator('#mMic').evaluate(el=>el.classList.contains('on')),true);await page.evaluate(()=>closeModals());
-  await page.locator('#bCurMore').click();assert.equal(await page.locator('#mSheet').evaluate(el=>el.classList.contains('on')),true);await page.evaluate(()=>closeModals());
+  await page.evaluate(()=>{synced=true;cues=[{s:0,e:5,en:'Hello world.',vi:'Xin chào.'}];});await page.locator('#cMic').click();await page.waitForFunction(()=>PRACTICE51.active);await page.waitForTimeout(800);await page.evaluate(()=>stopPractice51(false));assert.equal(await page.evaluate(()=>PRACTICE51.active),false);assert.equal(await page.locator('#mPractice51').isVisible(),true);await page.evaluate(()=>{closeModals();synced=false;});
+  assert.equal(await page.locator('#bCurMore').isVisible(),false);assert.equal(await page.locator('#libInfo').isVisible(),false);
   await page.locator('#bRep').click();assert.equal(await page.locator('#mPaste').evaluate(el=>el.classList.contains('on')),true);
   await page.evaluate(()=>{closeModals();S.vocImg=false;vocab=[{id:'flash-test',word:'hello',mean:'xin chào',lang:'en',srs:{ivl:0,reps:0,ease:2.5,due:0}}];showView('vVoc');startReview(vocab);});
   assert.equal(await page.locator('#fcNewLimit').inputValue(),'10');assert.equal(await page.locator('#fcNewLimit option').count(),5);
@@ -60,6 +60,15 @@ const path=require('node:path');
   assert.equal(await page.evaluate(()=>vocab[0].srs.due),0);
   await page.locator('#fcShow').click();await page.locator('#fcGrade [data-g="3"]').click();
   assert.equal(await page.evaluate(()=>vocab[0].srs.ivl),4);
+  await page.evaluate(()=>{closeModals();S.mainLessonId='a';S.days={};tracks[1].st={done:true,last:1};S.lists=[{id:'test-course',name:'VeryLongCourseName'.repeat(30)}];S.unitList={'Test':'test-course'};showView('vLib');renderLib();});
+  assert.ok(await page.evaluate(()=>document.querySelector('#vLib').scrollWidth<=window.innerWidth+1));
+  assert.equal(await page.locator('#libAI').isVisible(),false);
+  assert.ok((await page.locator('#libFocus51').textContent()).includes('A'));
+  await page.evaluate(()=>{showView('vSet');});await page.waitForTimeout(30);assert.equal(await page.locator('#mini').isVisible(),false);
+  await page.evaluate(()=>{NB.v={t:'home'};nbRender();document.querySelector('#mNews').classList.add('on');});
+  assert.equal(await page.locator('#nbSettings51').isVisible(),true);assert.equal(await page.locator('#nbLevel51').isVisible(),true);assert.equal(await page.locator('#nbGo').isVisible(),false);
+  const units=await page.evaluate(()=>nbUnits('First sentence. Second sentence.',true));assert.equal(units.length,2);
+  await page.evaluate(()=>{closeModals();});
   await page.screenshot({path:path.join(process.env.RUNNER_TEMP||'/tmp','lesson-text-mobile.png')});
   console.log('OK: UI xem/sửa/lưu/dán/copy/file; Bài trước/Bài sau bỏ tài liệu; Văn bản mở đúng khung.');
  }finally{await browser.close();}
