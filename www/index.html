@@ -8261,7 +8261,7 @@ function setupStudyUI51(){
  const lib=$('#vLib .scroll');for(const [id,cls] of [['libFocus51','card'],['libStreak51','card'],['libOverview51','card']]){const el=document.createElement('div');el.id=id;el.className=cls;lib.insertBefore(el,$('#libAI'));}
  $('#libOverview51').onclick=e=>{const b=e.target.closest('[data-review51]');if(b)startLessonReview(b.dataset.review51);};
  $('#libStreak51').onclick=()=>{renderStats();openHabit(window._skStreak||0,S._best||0);};
- const _render51=renderLib;renderLib=function(){const r=_render51.apply(this,arguments);$('#libList').querySelectorAll(':scope>.libProg,.sect-rev,.rvRow,.rvAll').forEach(el=>el.remove());renderLibraryOverview();$('#libAI').hidden=true;return r;};
+ const _render51=renderLib;renderLib=function(){const r=_render51.apply(this,arguments);$('#libList').querySelectorAll(':scope>.libProg:not(#libAI),.sect-rev,.rvRow,.rvAll').forEach(el=>el.remove());renderLibraryOverview();$('#libAI').hidden=true;return r;};
  const _stats51=renderStats;renderStats=function(){const r=_stats51.apply(this,arguments);renderLibraryOverview();return r;};
  $('#bCurMore').hidden=true;$('#libInfo').hidden=true;$('#hdrInfo').hidden=true;
  const info=$('#eeInfoBtn');info.hidden=false;info.textContent='i';info.className='hlp circle51';info.onclick=e=>{e.stopPropagation();renderStats();openHabit(window._skStreak||0,S._best||0);};
