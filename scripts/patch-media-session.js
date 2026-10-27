@@ -186,3 +186,24 @@ if (!svc.includes('DF_KILL')) {
   fs.writeFileSync(svcF, svc);
 }
 console.log('[patch-media-session] OK');
+
+// Không để ServiceConnection / nút nhạc gọi bridge đã dọn sau renderer crash.
+if (!plg.includes('DF_DISPOSED')) {
+  plg = rep(plg, '    private MediaSessionService service = null;',
+    '    private MediaSessionService service = null;\n    private volatile boolean dfDisposed = false; // DF_DISPOSED', 'disposed flag');
+  plg = rep(plg, '        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {',
+    '        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {\n            if (dfDisposed) { try { getContext().getApplicationContext().unbindService(serviceConnection); } catch (Exception ignored) {} return; }', 'late service connection');
+  plg = rep(plg, '    protected void handleOnDestroy() {',
+    '    protected void handleOnDestroy() {\n        dfDisposed = true;\n        actionHandlers.clear();', 'disposed cleanup');
+  plg = rep(plg, '    public void startMediaService() {',
+    '    public void startMediaService() {\n        if (dfDisposed) return;', 'disposed service');
+  plg = rep(plg, '    public void actionCallback(String action, JSObject data) {',
+    '    public void actionCallback(String action, JSObject data) {\n        if (dfDisposed) return;', 'disposed actions');
+  fs.writeFileSync(plgF, plg);
+}
+// dfKill phải hoàn tất trước khi phiên mới nối cùng dịch vụ, không để task cũ tắt phiên mới.
+if (!svc.includes('DF_KILL_SYNC')) {
+  svc = rep(svc, '        new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> {\n            try { s.setPlaybackState(PlaybackStateCompat.STATE_STOPPED); s.update(); } catch (Exception e) {}\n            try { s.destroy(); } catch (Exception e) {}\n        });',
+    '        Runnable kill = () -> {\n            if (dfInst != s) return;\n            try { s.setPlaybackState(PlaybackStateCompat.STATE_STOPPED); s.update(); } catch (Exception e) {}\n            try { s.destroy(); } catch (Exception e) {}\n        };\n        if (android.os.Looper.myLooper() == android.os.Looper.getMainLooper()) kill.run();\n        else new android.os.Handler(android.os.Looper.getMainLooper()).post(kill); // DF_KILL_SYNC', 'synchronous kill');
+  fs.writeFileSync(svcF, svc);
+}

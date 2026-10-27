@@ -100,10 +100,15 @@ public class NativeDiag {
                 o.put("code", x.getReason());
                 o.put("status", x.getStatus());
                 o.put("imp", importanceName(x.getImportance()));
-                o.put("pss", x.getPss() / 1024);
-                o.put("rss", x.getRss() / 1024);
+                o.put("pss", x.getPss() > 0 ? x.getPss() / 1024 : -1);
+                o.put("rss", x.getRss() > 0 ? x.getRss() / 1024 : -1);
                 o.put("desc", x.getDescription() == null ? "" : x.getDescription());
                 o.put("proc", x.getProcessName() == null ? "" : x.getProcessName());
+                o.put("main", ctx.getPackageName().equals(x.getProcessName()));
+                if (Build.VERSION.SDK_INT >= 26) {
+                    android.content.pm.PackageInfo web = android.webkit.WebView.getCurrentWebViewPackage();
+                    o.put("webview", web == null ? "?" : web.packageName + " " + web.versionName);
+                }
                 out.put(o);
             }
         } catch (Exception e) {
