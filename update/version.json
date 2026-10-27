@@ -1,16 +1,24 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.51",
-  "notes": "Thư viện và lịch Ôn bài · văn bản gọn · thẻ ảnh/IPA/song ngữ · ghi âm cả bài · tai nghe và đọc báo",
+  "ver": "1.0.3-beta.52",
+  "notes": "Sửa vòng đời WebView/phát nền, giảm giải mã gây tốn RAM, giữ nguyên nhân crash và phân biệt tiến trình phụ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 26,
-    "versionName": "1.0.2-beta.58",
+    "versionCode": 27,
+    "versionName": "1.0.2-beta.59",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.52",
+      "d": "28/10/2026",
+      "items": [
+        "Sửa dọn phiên WebView/phát nền: đóng phiên cũ trước khi mở phiên mới, không dùng lại WebView đã chết, giới hạn tự khôi phục",
+        "Giảm giải mã sóng âm gây tốn RAM; ghi rõ nguyên nhân Java gốc, phiên bản WebView và phân biệt tiến trình phụ được hệ thống dọn"
+      ]
+    },
     {
       "v": "1.0.3-beta.51",
       "d": "27/10/2026",
