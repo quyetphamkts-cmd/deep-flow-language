@@ -1,0 +1,55 @@
+// Kiểm thử UI trên Chrome thật; không dùng API key hoặc gọi AI online.
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const {pathToFileURL}=require('node:url');
+const path=require('node:path');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.CHROME_BIN||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+ try{
+  const page=await browser.newPage({viewport:{width:390,height:844}});
+  await page.route('https://**/*',route=>route.abort());
+  await page.addInitScript(()=>{localStorage.setItem('engamp',JSON.stringify({autoSub:false,autoTr:false,resume:false,aiPause:true}));});
+  await page.goto(pathToFileURL(path.join(__dirname,'../www/index.html')).href);
+  await page.waitForTimeout(1200);
+  await page.evaluate(()=>{
+   const t={id:'ui-test',name:'Bài kiểm thử',doc:'First sentence.\nSecond sentence.',subs:{},textOnly:true};tracks.push(t);openLessonText(t);
+   Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async tx=>{window.__copied=tx;},readText:async()=> 'Pasted sentence.'}});
+  });
+  assert.equal(await page.locator('#pasteTx').inputValue(),'First sentence.\nSecond sentence.');
+  assert.equal(await page.locator('#pasteTx').evaluate(el=>el.readOnly),true);
+  assert.equal(await page.locator('#pasteOk').isVisible(),false);
+  await page.locator('#lessonCopy').click();
+  assert.equal(await page.evaluate(()=>window.__copied),'First sentence.\nSecond sentence.');
+  await page.locator('#lessonEdit').click();
+  await page.locator('#pasteTx').fill('Corrected sentence.\nSecond sentence.');
+  await page.locator('#pasteOk').click();
+  assert.equal(await page.locator('#mPaste').evaluate(el=>el.classList.contains('on')),false);
+  assert.equal(await page.evaluate(()=>tracks.find(x=>x.id==='ui-test').doc),'Corrected sentence.\nSecond sentence.');
+  await page.evaluate(()=>openLessonText(tracks.find(x=>x.id==='ui-test')));
+  await page.locator('#pasteClip').click();
+  assert.ok((await page.locator('#pasteTx').inputValue()).endsWith('Pasted sentence.'));
+  await page.locator('#lessonDocIn').setInputFiles({name:'lesson.txt',mimeType:'text/plain',buffer:Buffer.from('Added from file.')});
+  await page.waitForFunction(()=>document.querySelector('#pasteTx').value.endsWith('Added from file.'));
+  assert.equal(await page.evaluate(()=>tracks.find(x=>x.id==='ui-test').doc),'Corrected sentence.\nSecond sentence.');
+  await page.locator('#lessonCopy').click();
+  assert.ok((await page.evaluate(()=>window.__copied)).endsWith('Added from file.'));
+  await page.evaluate(()=>{closeModals();tracks=[{id:'a',name:'A',album:'Test',subs:{}},{id:'doc',name:'Document',album:'Test',doc:'Text',textOnly:true,subs:{}},{id:'b',name:'B',album:'Test',subs:{}}];cur=tracks[0];S.pm='album';S.fscope=null;loadTrack=async t=>{window.__loaded=t.id;cur=t;};showView('vPlay');});
+  await page.locator('#bNextT').click();assert.equal(await page.evaluate(()=>window.__loaded),'b');
+  assert.equal(await page.locator('#mRead').evaluate(el=>el.classList.contains('on')),false);
+  assert.equal(await page.locator('#mPaste').evaluate(el=>el.classList.contains('on')),false);
+  await page.locator('#bPrevT').click();assert.equal(await page.evaluate(()=>window.__loaded),'a');
+  await page.locator('#bRep').click();assert.equal(await page.locator('#mPaste').evaluate(el=>el.classList.contains('on')),true);
+  await page.evaluate(()=>{closeModals();S.vocImg=false;vocab=[{id:'flash-test',word:'hello',mean:'xin chào',lang:'en',srs:{ivl:0,reps:0,ease:2.5,due:0}}];showView('vVoc');startReview(vocab);});
+  assert.equal(await page.locator('#fcGrade').isVisible(),false);
+  await page.locator('#fcShow').click();assert.equal(await page.locator('#fcGrade').isVisible(),true);
+  await page.locator('#fcGrade [data-g="0"]').click();
+  assert.equal(await page.locator('#fcSummary').isVisible(),true);
+  assert.ok(await page.evaluate(()=>vocab[0].srs.due>Date.now()+50000));
+  await page.locator('#fcUndo').click();assert.equal(await page.locator('#fcShow').isVisible(),true);
+  assert.equal(await page.evaluate(()=>vocab[0].srs.due),0);
+  await page.locator('#fcShow').click();await page.locator('#fcGrade [data-g="3"]').click();
+  assert.equal(await page.evaluate(()=>vocab[0].srs.ivl),4);
+  await page.screenshot({path:path.join(process.env.RUNNER_TEMP||'/tmp','lesson-text-mobile.png')});
+  console.log('OK: UI xem/sửa/lưu/dán/copy/file; Bài trước/Bài sau bỏ tài liệu; Văn bản mở đúng khung.');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
