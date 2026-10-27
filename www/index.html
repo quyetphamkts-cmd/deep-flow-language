@@ -8551,7 +8551,8 @@ const _nbGoal53=nbGoal;nbGoal=function(only){const d=S.readDays53?.[nbToday()]||
  const html=`<div class="nbG"><div class="nbGt"><b>📖 Đọc hôm nay</b><button data-act="history53">🕘 Lịch sử đọc</button></div><div class="readSummary53"><span>${Math.round(nbDay().sec/60)} phút · ${d.articles||0} bài xong</span><span>${(d.words||0).toLocaleString('vi-VN')} từ · ${d.unique||0} từ vựng · ${d.families||0} họ từ</span><small>${actual?rate+' từ/phút · '+(rate<200?'chậm hơn':rate>250?'nhanh hơn':'trong')+' mức tham khảo 200–250 từ/phút':'Tốc độ tham khảo 200–250 từ/phút; ước tính hiện tại theo trình độ.'}</small></div><small class="mu">Chỉ tính sau khi đọc hết và bấm ✓ Đọc xong.</small></div>`;
  if($('#nbGoal'))$('#nbGoal').innerHTML=html;return only?undefined:html;
 };
-function readingHistory53(){const h=nbHist();nbGo({t:'history53'});$('#nbBody').innerHTML='<h3>🕘 Lịch sử đọc</h3>'+(h.length?h.map(x=>nbHRow(x)+`<small class="historyNote53">${x.done?'✓ Đã đọc xong · '+Math.round((x.readStats?.seconds||0)/60)+' phút · '+(x.readStats?.unique||0)+' từ vựng · '+(x.readStats?.families||0)+' họ từ':'Đang đọc · chưa tính thống kê'}</small>`).join(''):'<p class="mu">Chưa có bài đọc.</p>');}
+function renderReadingHistory53(){const h=nbHist();$('#nbBody').innerHTML='<h3>🕘 Lịch sử đọc</h3>'+(h.length?h.map(x=>nbHRow(x)+`<small class="historyNote53">${x.done?'✓ Đã đọc xong · '+Math.round((x.readStats?.seconds||0)/60)+' phút · '+(x.readStats?.unique||0)+' từ vựng · '+(x.readStats?.families||0)+' họ từ':'Đang đọc · chưa tính thống kê'}</small>`).join(''):'<p class="mu">Chưa có bài đọc.</p>');}
+function readingHistory53(){nbGo({t:'history53'});}
 const _nbAct53=nbAct;nbAct=function(action,b){if(action==='history53'){readingHistory53();return;}
  if(action==='done'&&NB.v?.t==='art'&&NB.pg<NB.pages-1){toast('Hãy đọc đến trang cuối rồi đánh dấu Đọc xong');return;}
  return _nbAct53(action,b);
@@ -8562,7 +8563,7 @@ function readingFooter53(){const reading=NB.v?.t==='art',foot=$('#nbFoot');foot.
 }
 const _nbArt53=nbArt;nbArt=function(v){const out=_nbArt53(v);readingFooter53();return out;};
 const _nbPage53=nbPage;nbPage=function(){const out=_nbPage53.apply(this,arguments);const pn=$('#nbPn'),label=$('#readPosition53');if(pn&&label)label.textContent=pn.textContent;return out;};
-const _nbRender53=nbRender;nbRender=function(){const out=_nbRender53.apply(this,arguments);readingFooter53();$('#mNews').classList.toggle('home53',NB.v?.t!=='art');return out;};
+const _nbRender53=nbRender;nbRender=function(){const out=_nbRender53.apply(this,arguments);if(NB.v?.t==='history53')renderReadingHistory53();readingFooter53();$('#mNews').classList.toggle('home53',NB.v?.t!=='art');return out;};
 // Một thanh footer có chỗ riêng trong flex layout, không phủ lên chữ.
 $('#hNews').setAttribute('aria-label','Đọc');$('#hNews').title='Đọc';
 for(const e of document.querySelectorAll('button'))if(e.textContent.trim()==='📰 Đọc báo')e.textContent='📖 Đọc';
