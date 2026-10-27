@@ -42,16 +42,21 @@ public class RendererRecoveryTest {
         }
     }
 
+    @SuppressWarnings("unchecked")
     @Test public void lateCallbackFromClosedSessionCannotStopNewSession() throws Exception {
         AtomicReference<Bridge> oldBridge = new AtomicReference<>();
         try (ActivityScenario<MainActivity> first = ActivityScenario.launch(MainActivity.class)) {
             first.onActivity(activity -> oldBridge.set(activity.getBridge()));
         }
+        // Capacitor giữ getter này ở phạm vi package; chỉ test dùng reflection, không sửa thư viện/app API.
+        java.lang.reflect.Method getter = Bridge.class.getDeclaredMethod("getWebViewListeners");
+        getter.setAccessible(true);
+        java.util.List<WebViewListener> listeners = (java.util.List<WebViewListener>) getter.invoke(oldBridge.get());
         try (ActivityScenario<MainActivity> next = ActivityScenario.launch(MainActivity.class)) {
             next.onActivity(activity -> {
                 MainActivity.playing = true;
                 try {
-                    for (WebViewListener listener : oldBridge.get().getWebViewListeners())
+                    for (WebViewListener listener : listeners)
                         listener.onRenderProcessGone(oldBridge.get().getWebView(), null);
                     assertTrue("Callback đến trễ của phiên đã dọn không được tắt phiên mới", MainActivity.playing);
                 } finally { MainActivity.playing = false; }
