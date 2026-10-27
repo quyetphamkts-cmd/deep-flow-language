@@ -115,8 +115,10 @@ public class HeadsetPlugin extends Plugin {
     /** App web báo đang phát hay dừng (để giữ app chạy tiếp khi người dùng vuốt tắt app) */
     @PluginMethod
     public void setPlaying(PluginCall call) {
+        if (inst != this) { call.resolve(); return; }
         MainActivity.playing = call.getBoolean("playing", false);
         MainActivity.bgPlay = call.getBoolean("bg", true);
+        if (getActivity() instanceof MainActivity) ((MainActivity) getActivity()).updateRendererPriority();
         try { DfWidget.refresh(getContext()); } catch (Exception ignored) {}
         call.resolve();
     }
