@@ -2926,6 +2926,7 @@ ly.addEventListener('click',e=>{
   userScrollUntil=0;seekTo(cues[i].s);play();
 });
 document.addEventListener('keydown',e=>{
+  if(e.defaultPrevented||!$('#vPlay').classList.contains('on')||e.target.closest('button,select,[role=button],.modal.on,#vocRev'))return;
   if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT'&&e.target.type!=='range')return;
   if(e.key===' '){e.preventDefault();$('#bPlay').click();}
   else if(e.key==='ArrowLeft')prevS();else if(e.key==='ArrowRight')nextS();
