@@ -27,11 +27,11 @@ Không thêm key vào mã nguồn/CI. Che key đang dùng (kể cả định d�
 - `node --test tests/*.test.cjs`: đạt.
 - `node tools/check-web.cjs`: cú pháp cả hai script, phiên bản và changelog khớp.
 - `npx cap sync android`: đạt. Hai file Gradle sinh tự động được trả về nguyên trạng, không đưa thay đổi native vào PR.
-- Build APK debug đã thử nhưng chưa hoàn tất: không tải được Gradle 8.2.1 do môi trường không mở được kết nối mạng/proxy. Đã thêm workflow PR để kiểm thử và build debug trên GitHub Actions; phải xem kết quả thực tế sau khi workflow chạy.
+- Build APK debug đã thử nhưng chưa hoàn tất: không tải được Gradle 8.2.1 do môi trường không mở được kết nối mạng/proxy. Đã thêm workflow PR để kiểm thử, giải mã khóa hiện có, xác nhận alias deepflow và build release ký bằng khóa cũ trên GitHub Actions; chỉ lưu artifact, không phát hành. PR từ fork không dùng secret và chỉ build không ký. Phải xem kết quả thực tế sau khi workflow chạy.
 - Chưa gọi API có tính phí, chưa kiểm thử với key/tài khoản thật, chưa chạy trực tiếp trên điện thoại. Không có key thử nghiệm hay thiết bị kết nối trong phiên.
 
 ## Khi nào điện thoại được cập nhật
 
 Đẩy nhánh/PR chưa cập nhật điện thoại. Sau khi merge vào main, APP_VER và update/version.json mới được app tải từ raw.githubusercontent.com; app kiểm tra khi mở/quay lại và người dùng xác nhận cập nhật web. Bản sửa chỉ thay web, không cần APK mới.
 
-Workflow build-apk.yml hiện chạy khi đổi native/package/scripts hoặc chạy thủ công; không chạy chỉ vì đổi www/update. Khi cần APK ký để cài đè: chạy workflow Build APK thủ công, có secret DF_SIGN_PASSWORD và tệp khóa mã hóa hiện có. Workflow này phát hành GitHub Release nếu có khóa ký; workflow kiểm tra AI mới chỉ build debug, không phát hành. Không nên cài APK debug đè bản ký release hoặc gỡ app để thử vì có thể mất dữ liệu.
+Workflow build-apk.yml hiện chạy khi đổi native/package/scripts hoặc chạy thủ công; không chạy chỉ vì đổi www/update. Khi cần APK ký để cài đè: chạy workflow Build APK thủ công, có secret DF_SIGN_PASSWORD và tệp khóa mã hóa hiện có. Workflow này phát hành GitHub Release nếu có khóa ký; workflow kiểm tra AI mới build bằng khóa cũ và chỉ lưu artifact, không phát hành. Giữ nguyên khóa và alias; không gỡ app để thử vì có thể mất dữ liệu. Secret DF_SIGN_PASSWORD đã có theo xác nhận của chủ dự án; chưa phát hiện thiếu cấu hình ký, nhưng phải chạy Actions mới xác minh được mật khẩu, alias và ký APK thực tế.
