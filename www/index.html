@@ -603,6 +603,10 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
 .practiceState51{padding:8px 12px;color:#ff8f8f;background:#411e25;border-radius:10px;font-size:12px}.cardFlow51{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0}.cardFlow51 label{flex:1;font-size:11px;color:var(--mu)}.cardFlow51 select{max-width:100%;padding:6px;border:1px solid var(--ln);border-radius:8px;background:var(--p1);color:var(--tx)}
 #fcard{height:min(66dvh,560px);min-height:360px;max-width:100%;border-radius:22px}#fcard .fface{padding:14px;overflow-y:auto;box-sizing:border-box;border-radius:22px;box-shadow:0 9px 28px #0003;background:linear-gradient(145deg,var(--p1),var(--p2))}#fcImg{width:min(100%,240px);aspect-ratio:1;height:auto;flex:none;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:16px;background:var(--bg);position:relative}#fcImg img{width:100%;height:100%;object-fit:cover;max-height:none}#fcImg>.mu{position:absolute;bottom:0;background:#0009;color:white;font-size:8px!important}.cardPlaceholder51{width:100%;height:100%;display:grid;place-items:center;font-size:72px;font-weight:800;color:var(--ac);background:linear-gradient(135deg,#173448,#29334a)}.cardWordLine51{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.cardWordLine51 .fw{font-size:clamp(24px,6vw,36px);margin:0}.cardWordLine51 .fipa{font-size:16px;margin:0}.cardTip51{font-size:11px;line-height:1.5;margin:8px 0}.cardExample51{padding:8px 0;border-top:1px solid var(--ln);font-size:14px;line-height:1.5}.cardExample51 small{display:block;color:var(--vi);font-size:12px}#vocRev:not(.cardBi51) .cardVi51{display:none}#fcCtx,#fcCtx2{font-size:14px;line-height:1.5}.fbackf .fmean{font-size:23px}.fbackf{display:block!important}
 
+
+#vLib .sect-ls{display:grid!important;grid-template-columns:18px minmax(0,1fr) repeat(3,max-content);gap:6px;align-items:center}#vLib .sect-ls>.chev{grid-column:1;grid-row:1}#vLib .sect-ls>span:not(.chev){grid-column:2;grid-row:1;width:100%;line-height:1.45}#vLib .sect-ls>small{grid-column:2/-1;grid-row:2;margin:0;max-width:none;width:100%;font-size:11px}#vLib .sect-ls>.colB{grid-column:3;grid-row:1}#vLib .sect-ls>.hlp{grid-column:4;grid-row:1}#vLib .sect-ls>.lsMore{grid-column:5;grid-row:1}
+#fcard{height:clamp(320px,50dvh,450px);min-height:320px}#fcard .ffront{justify-content:flex-start}#fcImg{width:min(100%,210px)}#fcard .fhint{font-size:11px;margin-top:8px}
+
 </style>
 </head>
 <body>
@@ -768,7 +772,7 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
     1. Mở bằng <b>Chrome</b>, không đóng tab Deep Flow (chỉ bấm nút Home để thoát ra).<br>
     2. Cài đặt điện thoại → Ứng dụng → <b>Chrome → Pin</b> → chọn <b>Không hạn chế</b>.<br>
     3. Máy Xiaomi/Oppo/Vivo/Samsung: bật thêm <b>Tự khởi chạy</b>, và <b>khoá Chrome</b> trong danh sách ứng dụng gần đây (vuốt xuống trên thẻ Chrome hoặc bấm biểu tượng ổ khoá).<br>
-    4. Nếu thấy mất tiếng khi tắt màn hình lúc đang bật EQ, hãy thử tắt EQ.</div>
+    </div>
    </div>
    <h3>🎚 Âm thanh (Equalizer)</h3>
    <div class="card">
@@ -8247,7 +8251,7 @@ async function startLessonReview(id){if(window._lessonReviewLoading)return;const
 async function finishLessonReview(t){audio.pause();clearAP();window._lessonReviewActive=null;const r=t.st.lessonReview||{},step=Math.min(LESSON_REVIEW_DAYS.length-1,(r.step||0)+1);t.st.lessonReview={step,last:Date.now(),due:Date.now()+LESSON_REVIEW_DAYS[step]*864e5};await putMeta(t);renderLib();toast('Đã ôn xong · lần ôn sau '+LESSON_REVIEW_DAYS[step]+' ngày nữa');}
 function renderLibraryOverview(){
  const focus=tracks.find(t=>t.id===S.mainLessonId)||tracks.find(t=>t.id===S.lastId&&!t.textOnly);
- const day=S.days&&S.days[today()]||0,done=tracks.filter(t=>t.st&&t.st.done).length,total=tracks.filter(t=>!t.textOnly).length,review=lessonReviewItems();
+ const day=S.days&&S.days[today()]||0,done=tracks.filter(t=>t.st&&t.st.done).length,total=tracks.length,review=lessonReviewItems();
  $('#libFocus51').innerHTML=`<b>📖 Bài học chính</b><div class="focusTitle">${esc(focus?focus.name:'Chưa chọn bài học chính')}</div><small>Hôm nay ${fmtLong(day)}${window._lessonReviewActive?' · đang ôn bài cũ':''}</small>${focus?'<button class="btn" id="resumeMain51">▶ Tiếp tục</button>':''}`;
  if(focus)$('#resumeMain51').onclick=()=>{window._lessonReviewActive=null;loadTrack(focus,true,true);showView('vPlay');};
  $('#libStreak51').innerHTML=`🔥 <b>Chuỗi Streak</b> · ${window._skStreak||0} ngày học`;
@@ -8274,7 +8278,7 @@ function setupStudyUI51(){
  $('#pasteCloud').addEventListener('click',()=>{lessonSourceDraft='Văn bản từ link Cloud / Google Docs do người học cung cấp';});
  // Giữ các phần tử cũ trong DOM cho tương thích dữ liệu/handler, loại khỏi giao diện.
  for(const id of ['eeAnsT','eeAhhT','resT','msT'])$('#'+id).closest('.sw').hidden=true;
- for(const text of ['🎚 Âm thanh (Equalizer)','🔋 Tiết kiệm pin']){const h=[...document.querySelectorAll('#vSet h3')].find(h=>h.textContent===text);if(h){if(text.startsWith('🎚'))h.nextElementSibling.hidden=true;h.hidden=true;}}
+ for(const text of ['🎚 Âm thanh (Equalizer)','🔋 Tiết kiệm pin']){const h=[...document.querySelectorAll('#vSet h3')].find(h=>h.textContent===text);if(h){h.nextElementSibling.hidden=true;h.hidden=true;}}
  S.eqOn=false;S.eeAns=false;S.eeAhh=false;S.ap=0;applyEq();
  const playCard=$('#bgT').closest('.card');playCard.appendChild($('#ecoT').closest('.sw'));$('#ecoT').closest('.sw').querySelector('small').textContent='Bật: giảm tần suất vẽ và tắt phụ đề màn hình khóa. Tắt: phụ đề màn hình khóa hoạt động lại. Các tối ưu nền vẫn giữ nguyên.';
  const hp=$('#hpT').closest('.sw');hp.querySelector('span').textContent='Tự phát tiếp khi tai nghe được kết nối';const note=document.createElement('small');note.className='mu';note.textContent='Khi app còn chạy nền: tự tiếp tục bài học chính. Khi Android đã tắt hẳn app: có thể cần chạm thông báo để tiếp tục.';hp.querySelector('span').appendChild(note);
@@ -8317,12 +8321,12 @@ async function stopPractice51(score=true){const p=PRACTICE51;if(!p.active)return
  if(!p.chunks.length||!expected){toast('Đã dừng micro · chưa đủ tiếng nói/bài mẫu để chấm');return;}$('#practiceResult51').textContent='Đã lưu bản ghi '+fmtLong(p.seconds)+'. Chấm toàn bộ phần đã luyện theo từng đoạn; đây là điểm khớp lời nói, không thay thế đánh giá giọng của giáo viên.';openModal('mPractice51');if(score)await scorePractice51(session,p.track);
  }catch(e){toast('Đã dừng micro, nhưng chưa lưu/chấm được: '+dlogScrub(e.message||e),6000);}finally{p.stopping=false;practiceUI51();}}
 async function scorePractice51(session,track){const p=PRACTICE51;if(p.scoring)return;p.scoring=true;$('#practiceRetry51').disabled=true;try{const heard=[];let scoreTotal=0,scoreWeight=0;for(let i=0;i<session.chunks.length;i++){const b=await getAudio(session.chunks[i].id);if(!b)continue;$('#practiceResult51').textContent='AI đang chấm bản ghi · đoạn '+(i+1)+'/'+session.chunks.length;const pcm=await decode16k(b);const text=await pronHear(pcm);heard.push(text);const target=session.chunks[i].expected;if(target){const weight=tokenize(target).length;scoreTotal+=scoreSpeech(target,text).score*weight;scoreWeight+=weight;}}
- const result={score:scoreWeight?Math.round(scoreTotal/scoreWeight):0};session.score=result.score;session.heard=heard.join(' ');await putMeta(track);$('#practiceResult51').textContent='Điểm cả phần đã luyện: '+result.score+'/100 · '+fmtLong(session.seconds)+' · '+(p.mode==='repeat'?'Nghe lặp từng câu':'Shadowing cả bài')+'\nAI nghe được: '+session.heard;}
+ const result={score:scoreWeight?Math.round(scoreTotal/scoreWeight):0};session.score=result.score;session.heard=heard.join(' ');await putMeta(track);$('#practiceResult51').textContent='Điểm cả phần đã luyện: '+result.score+'/100 · '+fmtLong(session.seconds)+' · '+(session.mode==='repeat'?'Nghe lặp từng câu':'Shadowing cả bài')+'\nAI nghe được: '+session.heard;}
  catch(e){$('#practiceResult51').textContent='Bản ghi đã được lưu. Chưa chấm được: '+dlogScrub(e.message||e)+' · có thể bấm Chấm lại khi AI khả dụng.';}finally{p.scoring=false;$('#practiceRetry51').disabled=false;}}
 function setupPractice51(){
  const state=document.createElement('div');state.id='practiceState51';state.hidden=true;state.className='practiceState51';$('#lyrics').before(state);
  const modal=document.createElement('div');modal.id='mPractice51';modal.className='modal';modal.innerHTML='<div class="box"><h3>🎙 Kết quả luyện cả bài</h3><div id="practiceResult51" style="white-space:pre-wrap;overflow-wrap:anywhere"></div><div class="row2"><button class="btn" id="practiceRetry51">Chấm lại</button><button class="btn" id="practiceListen51">🔊 Nghe bản ghi</button><button class="btn" id="practiceClose51">Đóng</button></div></div>';document.body.appendChild(modal);
- $('#practiceClose51').onclick=()=>modal.classList.remove('on');$('#practiceRetry51').onclick=()=>{const t=PRACTICE51.track,s=t?.practiceSessions?.at(-1);if(s)scorePractice51(s,t);};
+ $('#practiceClose51').onclick=()=>{modal.classList.remove('on');PRACTICE51.listen?.pause();};audio.addEventListener('play',()=>PRACTICE51.listen?.pause());$('#practiceRetry51').onclick=()=>{const t=PRACTICE51.track,s=t?.practiceSessions?.at(-1);if(s)scorePractice51(s,t);};
  $('#practiceListen51').onclick=async()=>{const p=PRACTICE51,s=p.track?.practiceSessions?.at(-1);if(!s)return;const old=p.listen;p.listen=new Audio();old?.pause();let i=0,url='';const next=async()=>{if(url)URL.revokeObjectURL(url);if(i>=s.chunks.length)return;const b=await getAudio(s.chunks[i++].id);if(!b){next();return;}url=URL.createObjectURL(b);p.listen.src=url;p.listen.onended=next;p.listen.play().catch(()=>{});};await next();};
  // Thay phần tử để bỏ handler chạm/giữ cũ, không bị gọi hai chức năng cùng lúc.
  window.practiceRepeat51=k=>{if(!PRACTICE51.active||PRACTICE51.mode!=='repeat'||!cues[k])return false;PRACTICE51.recorded.add(k);PRACTICE51.segmentCueSet.add(k);seekTo(cues[k].s+0.001);lastIdx=k;return true;};
