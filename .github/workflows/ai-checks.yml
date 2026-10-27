@@ -26,6 +26,42 @@ jobs:
       - run: node --test tests/*.test.cjs
       - run: node tools/check-web.cjs
       - run: npx cap sync android
-      - name: Biên dịch APK debug (không ký phát hành, không triển khai)
+      - name: Kiểm tra khóa ký hiện có (chỉ PR cùng repository hoặc chạy thủ công)
+        if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          DF_SIGN_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
+        run: |
+          if [ -z "$DF_SIGN_PASSWORD" ]; then
+            echo "::error::Workflow không nhận được secret DF_SIGN_PASSWORD. Kiểm tra phạm vi secret và quyền truy cập repository."
+            exit 1
+          fi
+          test -s signing/deepflow-release.jks.enc
+          umask 077
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in signing/deepflow-release.jks.enc -out "$RUNNER_TEMP/deepflow-test.jks" -pass env:DF_SIGN_PASSWORD
+          keytool -list -keystore "$RUNNER_TEMP/deepflow-test.jks" -storepass:env DF_SIGN_PASSWORD -alias deepflow > /dev/null
+          echo "Đã giải mã keystore hiện có và xác nhận alias deepflow."
+      - name: Build APK ký bằng khóa cũ (không phát hành)
+        if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
         working-directory: android
-        run: bash gradlew assembleDebug --no-daemon
+        env:
+          DF_KEYSTORE_FILE: ${{ runner.temp }}/deepflow-test.jks
+          DF_KEYSTORE_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
+          DF_KEY_ALIAS: deepflow
+          DF_KEY_PASSWORD: ${{ secrets.DF_SIGN_PASSWORD }}
+        run: |
+          code=$(node -p "require('../update/version.json').apk.versionCode")
+          version=$(node -p "require('../update/version.json').apk.versionName")
+          bash gradlew assembleRelease --no-daemon -PdfVersionCode="$code" -PdfVersionName="$version"
+      - name: Build không ký cho PR từ fork (không dùng secret)
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository
+        working-directory: android
+        run: bash gradlew assembleRelease --no-daemon
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+        with:
+          name: DeepFlowLanguage-test-${{ github.run_number }}
+          path: android/app/build/outputs/apk/release/app-release.apk
+          if-no-files-found: error
+      - name: Xóa bản giải mã tạm
+        if: always()
+        run: rm -f "$RUNNER_TEMP/deepflow-test.jks"
