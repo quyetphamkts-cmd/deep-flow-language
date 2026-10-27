@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Nâng số phiên bản + thêm ghi chú cập nhật.
-Quy tắc (xem HUONG_DAN_LAP_TRINH.md): beta chạy 1 → 99; sau beta 99 tự lên bản chính thức (1.0.2-beta.99 → 1.0.2),
-rồi mở chu kỳ mới 1.0.3-beta.1 …; bản vá vượt 99 thì lên bản phụ (1.0.99 → 1.1.0-beta.1).
+Quy tắc (xem HUONG_DAN_LAP_TRINH.md): beta chạy 1 → 99; sau beta 99 tăng số cuối phiên bản và quay về beta 1
+(1.0.3-beta.99 → 1.0.4-beta.1); bản vá vượt 99 thì lên bản phụ (1.0.99 → 1.1.0-beta.1).
 Dùng:  python3 tools/bump.py "mục 1" "mục 2" ...        (bản web)
        python3 tools/bump.py --apk "mục 1" ...          (kèm nâng APK: versionCode +1, versionName theo cùng quy tắc)
 """
@@ -10,8 +10,7 @@ R = pathlib.Path(__file__).resolve().parent.parent
 def nxt(v):
     m = re.match(r'^(\d+)\.(\d+)\.(\d+)(?:-beta\.(\d+))?$', v)
     a, b, c, n = int(m[1]), int(m[2]), int(m[3]), int(m[4] or 0)
-    if m[4] is not None and n >= 99: return f'{a}.{b}.{c}', f'{a}.{b}.{c}'   # hết beta → bản chính thức
-    if m[4] is None: c, n = c + 1, 0                                          # sau bản chính thức → chu kỳ beta mới
+    if m[4] is None or n >= 99: c, n = c + 1, 0                                          # sau bản chính thức → chu kỳ beta mới
     n += 1
     if c > 99: b, c = b + 1, 0
     return f'{a}.{b}.{c}', f'{a}.{b}.{c}-beta.{n}'
