@@ -64,7 +64,7 @@ function reviewDraft(manifest, bundle, inventory) {
 function renderDraft(manifest,bundle,inventory) {
   const report=reviewDraft(manifest,bundle,inventory), byId=new Map(bundle.scripts.map(s=>[s.id,s]));
   const titles={main_story:'Main Story',word_discovery:'Word Discovery',quick_response:'Quick Response',time_shift:'Time Shift',daily_adventure:'Daily Adventure'};
-  const out=['# C01 và Z01 — bản nháp nội dung v1','','**Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**','','Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lời là mẫu, không yêu cầu người học nói đúng nguyên văn.','','Ước tính dùng giả định 100–120 từ/phút cộng khoảng chờ; chưa đo thời lượng audio.',''];
+  const out=[`# C01 và Z01 — bản nháp nội dung ${bundle.contentVersion.replace('c01-z01-','')}`,'','**Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**','','Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lời là mẫu, không yêu cầu người học nói đúng nguyên văn.','','Ước tính dùng giả định 100–120 từ/phút cộng khoảng chờ; chưa đo thời lượng audio.',''];
   for(const l of report.lessons){
     const title=manifest.lessons.find(x=>x.id===l.id).title;
     out.push(`## ${l.id} — ${title}`,'',`${l.questionCount} câu hỏi · ước tính ${(l.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút, khoảng ${(l.estimatedRangeSeconds[0]/60).toFixed(1)}–${(l.estimatedRangeSeconds[1]/60).toFixed(1)} phút theo giả định tốc độ.`, '');

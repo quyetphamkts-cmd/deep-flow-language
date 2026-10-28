@@ -1,4 +1,4 @@
-# C01 và Z01 — bản nháp nội dung v1
+# C01 và Z01 — bản nháp nội dung v1.1
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -8,13 +8,13 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ## C01 — A Question at Sunrise
 
-64 câu hỏi · ước tính 30.3 phút ở 110 từ/phút, khoảng 28.3–32.6 phút theo giả định tốc độ.
+69 câu hỏi · ước tính 31.7 phút ở 110 từ/phút, khoảng 29.7–34.2 phút theo giả định tốc độ.
 
 ### Main Story
 
-**[s01]** The sun is coming up over the street. David is already at the kitchen table. He is an architect. He draws buildings for people. This morning, he is drawing a house with a very tall roof. His daughter puts two bowls on the table. One is for her, and one is for him. "Breakfast first, Dad." David smiles, but his eyes stay on the drawing. "Look at this roof," he says. "You can see it from the end of the street."
+**[s01]** The sun is coming up over the street. David is already at the kitchen table. He is an architect. He draws buildings for people. There are five people in his family. His wife is an accountant. Their oldest child is a son in grade four. Their older daughter is in grade one. Their youngest daughter is two years old. This morning, he is drawing a house with a very tall roof. His daughter in grade one puts two bowls on the table. One is for her, and one is for him. "Breakfast first, Dad." David smiles, but his eyes stay on the drawing. "Look at this roof," he says. "You can see it from the end of the street."
 
-*Tiếng Việt:* Mặt trời đang lên phía trên con phố. David đã ngồi ở bàn bếp. Anh là kiến trúc sư, người thiết kế những công trình cho mọi người. Sáng nay, anh đang vẽ một ngôi nhà có mái rất cao. Con gái đặt hai chiếc bát lên bàn, một cho mình, một cho bố. "Ăn sáng trước đã, bố." David mỉm cười nhưng mắt vẫn nhìn bản vẽ. "Nhìn mái nhà này này," anh nói. "Đứng tận cuối phố cũng có thể nhìn thấy nó."
+*Tiếng Việt:* Mặt trời đang lên phía trên con phố. David đã ngồi ở bàn bếp. Anh là kiến trúc sư, người thiết kế những công trình cho mọi người. Gia đình anh có năm người. Vợ anh làm kế toán. Con lớn là con trai học lớp 4. Con gái lớn học lớp 1, còn con gái út hai tuổi. Sáng nay, anh đang vẽ một ngôi nhà có mái rất cao. Con gái học lớp 1 đặt hai chiếc bát lên bàn, một cho mình, một cho bố. "Ăn sáng trước đã, bố." David mỉm cười nhưng mắt vẫn nhìn bản vẽ. "Nhìn mái nhà này này," anh nói. "Đứng tận cuối phố cũng có thể nhìn thấy nó."
 
 **[s02]** His daughter looks at the picture. Then she puts her head close to the table. "What are you doing?" David asks. "I am looking from down here. The window is too high for me." David turns the page toward her. "It is a beautiful house." She thinks for a moment. "Dad, can you build a house that makes people happy?" He opens his mouth. Then he closes it. He knows how to draw a tall roof. He does not know how to draw a happy morning.
 
@@ -131,6 +131,36 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 *Chờ 6 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: No. His eyes stay on the drawing.
+
+**q065. How many people are in David's family?**
+
+*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: There are five people in his family.
+
+**q066. What does David's wife do?**
+
+*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She is an accountant.
+
+**q067. What grade is their oldest child in?**
+
+*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: Their son is in grade four.
+
+**q068. What grade is their older daughter in?**
+
+*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She is in grade one.
+
+**q069. How old is their youngest daughter?**
+
+*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She is two years old.
 
 **q009. Why does his daughter put her head close to the table?**
 
@@ -470,9 +500,9 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ### Time Shift
 
-**[s01]** Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. His daughter brought two bowls to the table. David smiled, but he kept looking at the drawing. Then his daughter looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.
+**[s01]** Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. His daughter in grade one brought two bowls to the table. David smiled, but he kept looking at the drawing. Then his daughter looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.
 
-*Tiếng Việt:* Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Con gái mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được.
+*Tiếng Việt:* Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Con gái học lớp 1 mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được.
 
 **[s02]** They went to the market after breakfast. David carried a blue folder and wanted to go home quickly. Mai's stool was on its side because a screw was loose. David did not stop at first. Then the wind lifted the green cover. He reached up to help, and his folder fell open. His drawing landed in a basket of tomatoes. His daughter laughed at the tomato on the roof. David took a breath and laughed with her.
 
@@ -490,9 +520,9 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Tiếng Việt:* Hãy hình dung David nói tối hôm đó: "Ngày mai tôi sẽ cho những người muốn xây nhà xem cả hai bản. Tôi sẽ hỏi buổi sáng họ thích ngồi đâu và ai cần lối vào dễ tiếp cận. Tôi sẽ không mở đầu bằng việc bảo họ nên muốn gì. Tôi sẽ nghe trước rồi mới vẽ. Mái cao vẫn có thể hữu ích, nhưng không trả lời được mọi câu hỏi."
 
-**[s06]** And now, listen from the daughter's point of view. "This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked."
+**[s06]** And now, listen from the point of view of his daughter in grade one. "This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked."
 
-*Tiếng Việt:* Bây giờ là góc nhìn của con gái: "Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi."
+*Tiếng Việt:* Bây giờ là góc nhìn của con gái học lớp 1: "Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi."
 
 ## Z01 — The Mouse Who Wanted to Fly
 

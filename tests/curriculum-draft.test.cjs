@@ -11,7 +11,7 @@ const clone=v=>structuredClone(v);
 test('authored C01/Z01 covers all sections with question sources and remains unapproved',()=>{
   const r=reviewDraft(manifest,bundle,inventory);
   assert.equal(r.sections.length,6);assert.equal(r.structuralQaPassed,true);
-  assert.equal(r.lessons[0].questionCount,64);assert.equal(r.lessons[1].questionCount,40);
+  assert.equal(r.lessons[0].questionCount,69);assert.equal(r.lessons[1].questionCount,40);
   assert.equal(r.publicationReady,false);assert.equal(r.canonicalVocabularyReady,false);
   assert.equal(r.proposedInventoryAudit.vocabularyReady,false);
   assert.equal(r.proposedInventoryAudit.emptyScripts.length,0);

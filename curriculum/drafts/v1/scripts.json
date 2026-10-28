@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "authored_draft_pending_user_review",
-  "contentVersion": "c01-z01-v1",
+  "contentVersion": "c01-z01-v1.1",
   "canonicalVocabularyStatus": "pending",
   "wordDiscoverySelection": [
     {
@@ -47,7 +47,7 @@
       "id": "C01-main_story",
       "lessonId": "C01",
       "component": "main_story",
-      "version": 1,
+      "version": 2,
       "status": "draft",
       "provenance": {
         "author": "Codex, theo yêu cầu người dùng",
@@ -63,8 +63,8 @@
           "id": "s01",
           "type": "narration",
           "speaker": "narrator",
-          "text": "The sun is coming up over the street. David is already at the kitchen table. He is an architect. He draws buildings for people. This morning, he is drawing a house with a very tall roof. His daughter puts two bowls on the table. One is for her, and one is for him. \"Breakfast first, Dad.\" David smiles, but his eyes stay on the drawing. \"Look at this roof,\" he says. \"You can see it from the end of the street.\"",
-          "translationVi": "Mặt trời đang lên phía trên con phố. David đã ngồi ở bàn bếp. Anh là kiến trúc sư, người thiết kế những công trình cho mọi người. Sáng nay, anh đang vẽ một ngôi nhà có mái rất cao. Con gái đặt hai chiếc bát lên bàn, một cho mình, một cho bố. \"Ăn sáng trước đã, bố.\" David mỉm cười nhưng mắt vẫn nhìn bản vẽ. \"Nhìn mái nhà này này,\" anh nói. \"Đứng tận cuối phố cũng có thể nhìn thấy nó.\""
+          "text": "The sun is coming up over the street. David is already at the kitchen table. He is an architect. He draws buildings for people. There are five people in his family. His wife is an accountant. Their oldest child is a son in grade four. Their older daughter is in grade one. Their youngest daughter is two years old. This morning, he is drawing a house with a very tall roof. His daughter in grade one puts two bowls on the table. One is for her, and one is for him. \"Breakfast first, Dad.\" David smiles, but his eyes stay on the drawing. \"Look at this roof,\" he says. \"You can see it from the end of the street.\"",
+          "translationVi": "Mặt trời đang lên phía trên con phố. David đã ngồi ở bàn bếp. Anh là kiến trúc sư, người thiết kế những công trình cho mọi người. Gia đình anh có năm người. Vợ anh làm kế toán. Con lớn là con trai học lớp 4. Con gái lớn học lớp 1, còn con gái út hai tuổi. Sáng nay, anh đang vẽ một ngôi nhà có mái rất cao. Con gái học lớp 1 đặt hai chiếc bát lên bàn, một cho mình, một cho bố. \"Ăn sáng trước đã, bố.\" David mỉm cười nhưng mắt vẫn nhìn bản vẽ. \"Nhìn mái nhà này này,\" anh nói. \"Đứng tận cuối phố cũng có thể nhìn thấy nó.\""
         },
         {
           "id": "s02",
@@ -197,7 +197,7 @@
       "id": "C01-quick_response",
       "lessonId": "C01",
       "component": "quick_response",
-      "version": 1,
+      "version": 2,
       "status": "draft",
       "provenance": {
         "author": "Codex, theo yêu cầu người dùng",
@@ -379,6 +379,116 @@
           "type": "answer",
           "speaker": "coach",
           "text": "No. His eyes stay on the drawing."
+        },
+        {
+          "id": "q065",
+          "type": "question",
+          "speaker": "coach",
+          "text": "How many people are in David's family?",
+          "answerId": "a065",
+          "answerPauseMs": 6000,
+          "sourceRefs": [
+            {
+              "scriptId": "C01-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "familyFact": "family.size",
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a065",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "There are five people in his family."
+        },
+        {
+          "id": "q066",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does David's wife do?",
+          "answerId": "a066",
+          "answerPauseMs": 6000,
+          "sourceRefs": [
+            {
+              "scriptId": "C01-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "familyFact": "david-wife.occupation",
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a066",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "She is an accountant."
+        },
+        {
+          "id": "q067",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What grade is their oldest child in?",
+          "answerId": "a067",
+          "answerPauseMs": 6000,
+          "sourceRefs": [
+            {
+              "scriptId": "C01-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "familyFact": "david-son.schoolGrade",
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a067",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Their son is in grade four."
+        },
+        {
+          "id": "q068",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What grade is their older daughter in?",
+          "answerId": "a068",
+          "answerPauseMs": 6000,
+          "sourceRefs": [
+            {
+              "scriptId": "C01-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "familyFact": "david-older-daughter.schoolGrade",
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a068",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "She is in grade one."
+        },
+        {
+          "id": "q069",
+          "type": "question",
+          "speaker": "coach",
+          "text": "How old is their youngest daughter?",
+          "answerId": "a069",
+          "answerPauseMs": 6000,
+          "sourceRefs": [
+            {
+              "scriptId": "C01-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "familyFact": "david-younger-daughter.ageYears",
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a069",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "She is two years old."
         },
         {
           "id": "q009",
@@ -1563,7 +1673,7 @@
       "id": "C01-time_shift",
       "lessonId": "C01",
       "component": "time_shift",
-      "version": 1,
+      "version": 2,
       "status": "draft",
       "provenance": {
         "author": "Codex, theo yêu cầu người dùng",
@@ -1579,8 +1689,8 @@
           "id": "s01",
           "type": "narration",
           "speaker": "narrator",
-          "text": "Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. His daughter brought two bowls to the table. David smiled, but he kept looking at the drawing. Then his daughter looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.",
-          "translationVi": "Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Con gái mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được."
+          "text": "Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. His daughter in grade one brought two bowls to the table. David smiled, but he kept looking at the drawing. Then his daughter looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.",
+          "translationVi": "Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Con gái học lớp 1 mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được."
         },
         {
           "id": "s02",
@@ -1614,8 +1724,8 @@
           "id": "s06",
           "type": "narration",
           "speaker": "narrator",
-          "text": "And now, listen from the daughter's point of view. \"This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked.\"",
-          "translationVi": "Bây giờ là góc nhìn của con gái: \"Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi.\""
+          "text": "And now, listen from the point of view of his daughter in grade one. \"This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked.\"",
+          "translationVi": "Bây giờ là góc nhìn của con gái học lớp 1: \"Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi.\""
         }
       ]
     },
@@ -2556,5 +2666,8 @@
         }
       ]
     }
+  ],
+  "revisionNotes": [
+    "Người dùng xác nhận gia đình David có năm thành viên: vợ kế toán, con trai lớp 4, con gái lớp 1, con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1."
   ]
 }

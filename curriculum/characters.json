@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "status": "user_confirmed_facts",
+  "family": {
+    "id": "david-family",
+    "size": 5,
+    "members": [
+      {
+        "id": "david",
+        "role": "father",
+        "name": "David",
+        "occupation": "architect"
+      },
+      {
+        "id": "david-wife",
+        "role": "mother",
+        "name": null,
+        "occupation": "accountant"
+      },
+      {
+        "id": "david-son",
+        "role": "oldest_child",
+        "name": null,
+        "gender": "male",
+        "schoolGrade": 4
+      },
+      {
+        "id": "david-older-daughter",
+        "role": "middle_child",
+        "name": null,
+        "gender": "female",
+        "schoolGrade": 1
+      },
+      {
+        "id": "david-younger-daughter",
+        "role": "youngest_child",
+        "name": null,
+        "gender": "female",
+        "ageYears": 2
+      }
+    ]
+  },
+  "c01AccompanyingChild": "david-older-daughter",
+  "confirmedBy": "user",
+  "confirmedOn": "2026-10-28",
+  "notes": [
+    "Chưa chốt tên vợ và các con, tuổi của bố mẹ, tuổi của hai con đi học hoặc địa điểm sống.",
+    "Grandma trong C01 là người thân được nhắc đến, không bổ sung thành viên thứ sáu vào mô hình gia đình chính."
+  ]
+}

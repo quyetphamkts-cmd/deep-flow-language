@@ -1,4 +1,4 @@
-# C01/Z01: hướng dẫn duyệt bản nháp v1
+# C01/Z01: hướng dẫn duyệt bản nháp v1.1
 
 Soạn ngày 28/10/2026 theo yêu cầu người dùng cho Codex đảm nhận cả nội dung và kỹ thuật. Tất cả là bản nháp mới, chưa được người dùng duyệt, chưa phát hành vào app. Không phải kết quả trao đổi tự động với một phiên ChatGPT khác.
 
@@ -20,13 +20,13 @@ Q&A luyện nghe hiện dùng tiếng Anh, có hướng dẫn Việt ở đầu.
 - **Lựa chọn:** dừng lại, sửa ghế với sự đồng ý của Mai, hỏi ý con rồi giữ cả hai bản thiết kế để hỏi người sẽ ở. Chưa tuyên bố một thay đổi thiết kế chắc chắn làm ai cũng hạnh phúc.
 - **Kết:** câu hỏi “Who is this house for?” trở thành động lực sang C02 — The House That Listened. Quả cà chua nhỏ lưu dấu một lần biết dừng lại và nghe.
 
-David vẫn là kiến trúc sư Việt Nam và người cha theo Bible; bản nháp không chốt tuổi, thành phố hoặc tên con gái. Mai là nhân vật hàng xóm đề xuất mới, chưa khóa cho toàn bộ series. Khách hàng và cuộc gặp ngày mai trong Time Shift là tình huống tưởng tượng được giới thiệu rõ, không phải dữ kiện đã xảy ra trong Main Story.
+David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin người dùng vừa chốt: vợ kế toán, con trai lớp 4, con gái lớp 1 và con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1. Bản nháp không tự đặt tên các thành viên hoặc suy ra tuổi của hai con đi học. Mai là nhân vật hàng xóm đề xuất mới, chưa khóa cho toàn bộ series. Khách hàng và cuộc gặp ngày mai trong Time Shift là tình huống tưởng tượng được giới thiệu rõ, không phải dữ kiện đã xảy ra trong Main Story.
 
 ### Bốn phần
 
 1. Main Story: tám cảnh có bản dịch Việt.
 2. Word Discovery: tám đoạn giải thích **chín từ/cụm được chọn**, loose/tighten chung một đoạn. Lý do chọn ghi trong JSON và cuối bản đọc; là giả thuyết biên soạn, chưa có dữ liệu quên từ của người học.
-3. Quick Response: 64 câu gắn đúng cảnh, chờ sáu giây trước đáp án mẫu; chấp nhận cách diễn đạt tương đương. Người học tự dừng nếu cần thêm thời gian, chưa có chấm tự động.
+3. Quick Response: 69 câu gắn đúng cảnh, chờ sáu giây trước đáp án mẫu; chấp nhận cách diễn đạt tương đương. Người học tự dừng nếu cần thêm thời gian, chưa có chấm tự động.
 4. Time Shift: hôm qua → ngày mai giả định → lời kể con gái. Giữ trình tự/nguyên nhân chính, không biến thành bài giảng quy tắc ngữ pháp.
 
 ## Z01 — The Mouse Who Wanted to Fly
@@ -42,7 +42,7 @@ David vẫn là kiến trúc sư Việt Nam và người cha theo Bible; bản n
 
 Công cụ lấy số từ thực sự được đọc, cộng khoảng chờ. 100–120 từ/phút là **giả định để lên kế hoạch**, không phải chuẩn tốc độ học hoặc kết quả giọng TTS. Chạy lại công cụ để xem số mới nhất theo bản sửa.
 
-- C01: khoảng **30 phút ở 110 từ/phút**, trong đó Quick Response dài nhất, khoảng 15 phút. Dải ước tính có thể thấp hơn 30 phút ở tốc độ nhanh; cần nghe mẫu và điều chỉnh sau khi đo thật.
+- C01: khoảng **31 phút ở 110 từ/phút**, trong đó Quick Response dài nhất, khoảng 16 phút. Dải ước tính có thể thấp hơn 30 phút ở tốc độ nhanh; cần nghe mẫu và điều chỉnh sau khi đo thật.
 - Z01: khoảng **14 phút ở 110 từ/phút**, dải giả định xấp xỉ 13–15 phút; mục tiêu vẫn khoảng 15 phút.
 - Chưa thêm khoảng nghỉ biểu cảm, phát âm tên riêng, nối âm hoặc nhạc. Chưa có audio thật, chưa thể chứng nhận đạt thời lượng.
 - Khoảng chờ là metadata cho sản xuất audio tương lai; không bật lại cơ chế dừng Mini Story ở app hiện tại.
@@ -72,4 +72,4 @@ Kiểm thử cục bộ: `node --test tests/*.test.cjs` đạt **65/65** (24 ki�
 
 ## Cần người dùng duyệt
 
-Ưu tiên nhận xét nội dung: tiếng Anh có dễ nghe không, câu chuyện có hấp dẫn khi nghe lại không, nhịp 64/40 câu có quá lặp không, khoảng chờ có đủ trả lời không, Mai và cách kể Mouse có phù hợp không. Sau đó mới chốt giọng đọc/ngân sách, tạo audio mẫu, đo thật và tích hợp riêng vào thư viện. Chưa merge/phát hành bản nháp theo công cụ này.
+Ưu tiên nhận xét nội dung: tiếng Anh có dễ nghe không, câu chuyện có hấp dẫn khi nghe lại không, nhịp 69/40 câu có quá lặp không, khoảng chờ có đủ trả lời không, Mai và cách kể Mouse có phù hợp không. Sau đó mới chốt giọng đọc/ngân sách, tạo audio mẫu, đo thật và tích hợp riêng vào thư viện. Chưa merge/phát hành bản nháp theo công cụ này.
