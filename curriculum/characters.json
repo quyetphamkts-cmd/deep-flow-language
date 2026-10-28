@@ -50,7 +50,7 @@
     "Nhân vật phụ được đưa vào từng bước; không bắt người học nhớ mọi tên ngay C01.",
     "Tuyến bài chính dùng tên gọi tiếng Anh cho mọi nhân vật; danh tính, quan hệ và bối cảnh Việt Nam vẫn giữ nguyên. ID kỹ thuật ổn định, không phải tên hiển thị."
   ],
-  "version": 3,
+  "version": 4,
   "namingAuthority": "Người dùng yêu cầu tự đặt tên và dùng toàn bộ tên tiếng Anh cho tuyến bài chính, ngày 28/10/2026.",
   "recurringCharacters": [
     {
@@ -64,7 +64,7 @@
         "david-older-daughter",
         "david-younger-daughter"
       ],
-      "introduction": "Được Lily nhắc trong C01 khi muốn có chỗ cho bà nghỉ; không chốt nơi ở."
+      "introduction": "Được Lily nhắc trong C01; đến thăm trong bản nháp C02, giúp kiểm tra chỗ nghỉ/lối đi. Không chốt nơi ở hoặc thêm vào gia đình năm người."
     },
     {
       "id": "grandpa-minh",

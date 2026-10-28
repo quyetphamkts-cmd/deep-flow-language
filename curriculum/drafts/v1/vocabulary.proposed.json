@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "version": 2,
+  "version": 3,
   "status": "proposed_not_canonical",
   "source": "Original draft authoring inventory; not a frequency-ranked external word list",
   "license": null,
-  "scope": "C01/Z01 draft only; không chứng nhận 3000 từ",
+  "scope": "Authored drafts only; không chứng nhận 3000 từ",
   "words": [
     {
       "id": "en.architect",
@@ -489,6 +489,133 @@
       "ipa": "/tʃaɪld/",
       "ipaVariety": "General American, bản biên soạn chờ rà soát",
       "glossVi": "đứa trẻ; con trong gia đình"
+    },
+    {
+      "id": "en.budget",
+      "lemma": "budget",
+      "forms": [
+        "budgets"
+      ],
+      "ipa": "/ˈbʌdʒɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "ngân sách"
+    },
+    {
+      "id": "en.afford",
+      "lemma": "afford",
+      "forms": [
+        "affords",
+        "afforded",
+        "affording"
+      ],
+      "ipa": "/əˈfɔːrd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "có khả năng chi trả"
+    },
+    {
+      "id": "en.quiet",
+      "lemma": "quiet",
+      "forms": [],
+      "ipa": "/ˈkwaɪət/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "yên tĩnh"
+    },
+    {
+      "id": "en.noise",
+      "lemma": "noise",
+      "forms": [
+        "noises"
+      ],
+      "ipa": "/nɔɪz/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tiếng ồn"
+    },
+    {
+      "id": "en.privacy",
+      "lemma": "privacy",
+      "forms": [],
+      "ipa": "/ˈpraɪvəsi/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự riêng tư"
+    },
+    {
+      "id": "en.measure",
+      "lemma": "measure",
+      "forms": [
+        "measures",
+        "measured",
+        "measuring"
+      ],
+      "ipa": "/ˈmeʒər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đo; chưa tự gộp danh từ phái sinh measurement"
+    },
+    {
+      "id": "en.choice",
+      "lemma": "choice",
+      "forms": [
+        "choices"
+      ],
+      "ipa": "/tʃɔɪs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lựa chọn"
+    },
+    {
+      "id": "en.agree",
+      "lemma": "agree",
+      "forms": [
+        "agrees",
+        "agreed",
+        "agreeing"
+      ],
+      "ipa": "/əˈɡriː/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đồng ý; chưa tự gộp danh từ phái sinh agreement"
+    },
+    {
+      "id": "en.plan",
+      "lemma": "plan",
+      "forms": [
+        "plans",
+        "planned",
+        "planning"
+      ],
+      "ipa": "/plæn/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bản vẽ; kế hoạch; lên kế hoạch"
+    },
+    {
+      "id": "en.cost",
+      "lemma": "cost",
+      "forms": [
+        "costs",
+        "costing"
+      ],
+      "ipa": "/kɔːst/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chi phí; tốn"
+    },
+    {
+      "id": "en.space",
+      "lemma": "space",
+      "forms": [
+        "spaces"
+      ],
+      "ipa": "/speɪs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "không gian, chỗ trống"
+    },
+    {
+      "id": "en.share",
+      "lemma": "share",
+      "forms": [
+        "shares",
+        "shared",
+        "sharing"
+      ],
+      "ipa": "/ʃer/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chia sẻ; cùng dùng"
     }
   ]
 }

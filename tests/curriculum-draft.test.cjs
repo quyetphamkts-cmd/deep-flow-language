@@ -8,10 +8,10 @@ const bundle=require('../curriculum/drafts/v1/scripts.json');
 const inventory=require('../curriculum/drafts/v1/vocabulary.proposed.json');
 const clone=v=>structuredClone(v);
 
-test('authored C01/Z01 covers all sections with question sources and remains unapproved',()=>{
+test('authored lessons cover all sections with question sources and remains unapproved',()=>{
   const r=reviewDraft(manifest,bundle,inventory);
-  assert.equal(r.sections.length,6);assert.equal(r.structuralQaPassed,true);
-  assert.equal(r.lessons[0].questionCount,69);assert.equal(r.lessons[1].questionCount,40);
+  assert.equal(r.sections.length,10);assert.equal(r.structuralQaPassed,true);
+  assert.equal(r.lessons[0].questionCount,69);assert.equal(r.lessons.find(l=>l.id==='C02').questionCount,64);assert.equal(r.lessons.find(l=>l.id==='Z01').questionCount,40);
   assert.equal(r.publicationReady,false);assert.equal(r.canonicalVocabularyReady,false);
   assert.equal(r.proposedInventoryAudit.vocabularyReady,false);
   assert.equal(r.proposedInventoryAudit.emptyScripts.length,0);
@@ -55,11 +55,27 @@ test('planning includes all explicit learner pauses but does not count translati
 test('proposed inventory is actually present and core vocabulary reappears in the independent expansion',()=>{
   const r=reviewDraft(manifest,bundle,inventory),a=r.proposedInventoryAudit;
   assert.equal(inventory.status,'proposed_not_canonical');assert.equal(inventory.license,null);
-  assert.deepEqual(a.missingWords,[]);assert.equal(r.proposedVocabularyCount,48);assert.equal(r.wordDiscoveryCount,9);
+  assert.deepEqual(a.missingWords,[]);assert.equal(r.proposedVocabularyCount,60);assert.equal(r.wordDiscoveryCount,18);
   const z=a.lessons.find(l=>l.id==='Z01');assert.ok(z.reviewed.includes('en.repair'));assert.ok(z.reviewed.includes('en.tool'));assert.ok(z.reviewed.includes('en.reach'));
 });
 test('human review document stays synchronized with structured English/Vietnamese scripts',()=>{
   const actual=fs.readFileSync(path.join(__dirname,'../docs/curriculum/C01_Z01_DRAFT_V1.md'),'utf8');
-  assert.equal(actual,renderDraft(manifest,bundle,inventory)+'\n');
+  assert.equal(actual,renderDraft(manifest,bundle,inventory,{lessonIds:['C01','Z01']})+'\n');
   for(const s of bundle.scripts.filter(s=>s.component!=='quick_response'))assert.ok(s.segments.every(p=>p.translationVi?.trim()));
+});
+test('C02 has its own Word Discovery and rejects missing parts, sources or selections',()=>{
+  const r=reviewDraft(manifest,bundle,inventory);assert.deepEqual(r.wordDiscoveryByLesson,{C01:9,C02:9});
+  for(const mutation of [b=>b.scripts=b.scripts.filter(s=>s.id!=='C02-time_shift'),b=>delete b.wordDiscoveryByLesson.C02,b=>b.wordDiscoveryByLesson.C02[0].wordId='en.ribbon']){
+    const b=clone(bundle);mutation(b);assert.throws(()=>reviewDraft(manifest,b,inventory));
+  }
+  const b=clone(bundle),q=b.scripts.find(s=>s.id==='C02-quick_response').segments.find(p=>p.type==='question');
+  q.sourceRefs=[{scriptId:'C01-main_story',segmentId:'s01'}];assert.throws(()=>reviewDraft(manifest,b,inventory),/liên kết truyện sai/);
+});
+test('C02 read export includes just that lesson while preview reports every authored lesson',()=>{
+  const actual=fs.readFileSync(path.join(__dirname,'../docs/curriculum/C02_DRAFT_V1.md'),'utf8');
+  assert.equal(actual,renderDraft(manifest,bundle,inventory,{lessonIds:['C02']})+'\n');
+  assert.ok(actual.includes('The House That Listened'));assert.ok(!actual.includes('## Z01'));
+  assert.throws(()=>renderDraft(manifest,bundle,inventory,{lessonIds:['C03']}));
+  const {preview}=require('../curriculum/pipeline.cjs');const p=preview(manifest,inventory,bundle.scripts);
+  assert.equal(p.sections.length,10);assert.equal(p.sections.filter(s=>s.lessonId==='C02').length,4);
 });

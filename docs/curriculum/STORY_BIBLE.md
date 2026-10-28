@@ -1,4 +1,4 @@
-# STORY BIBLE — v1.3 (family names assigned; story outlines provisional)
+# STORY BIBLE — v1.4 (C02 drafted; editorial approval pending)
 
 ## Main series
 **The Architect’s Journey**: David, Vietnamese architect and father, asks what makes a house genuinely good for people. A child's question — “Dad, can you build a house that makes people happy?” — begins a 12-episode journey. The answer develops from impressive buildings toward empathy, belonging, nature, safety, community and purpose. Avoid preachiness. Every episode: clear want → obstacle → escalating attempt → surprising but causal choice → emotional change. Characters and episodes beyond this brief remain to be developed; David's age, location and other biographical details are NOT locked.
@@ -36,7 +36,7 @@ Theo yêu cầu mới, **mọi nhân vật trong các bài chính đều dùng t
 
 Đây là dàn nhân vật bổ sung được đặt theo quyền sáng tác người dùng giao. Quan hệ giữ nguyên khi tái xuất. Các gợi ý xuất hiện sau đây là kế hoạch biên tập, chưa phải kịch bản đã khóa:
 
-- C02 có thể để Anna tham gia cuộc trao đổi về ngôi nhà và cách lắng nghe nhau; nghề kế toán thể hiện tự nhiên qua công việc, không giới hạn cô ở vai trò nội trợ.
+- C02 đã có bản nháp: Anna chủ động trao đổi nhu cầu/ngân sách, bà Helen đến thăm và thử lối đi. Nghề kế toán thể hiện qua công việc, không giới hạn Anna ở nội trợ. Câu chuyện diễn ra vài ngày sau C01; nhà mới chưa xây, các lựa chọn còn phải hỏi chủ nhà/người xây.
 - C03 có thể để Ben hoặc Michael góp một góc nhìn khác khi bản vẽ thất lạc.
 - C04–C05 có thể đưa ông bà, Sophie hoặc James vào những tình huống về không gian chung, chỗ nghỉ và nhu cầu an toàn khác nhau.
 - Các bài tiếp theo luân phiên họ hàng/bạn bè, để Tom xuất hiện khi có bối cảnh gặp gỡ, chia sẻ hay chơi cùng các anh chị em họ.

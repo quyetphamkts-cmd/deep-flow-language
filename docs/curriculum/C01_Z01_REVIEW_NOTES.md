@@ -1,5 +1,7 @@
 # C01/Z01: hướng dẫn duyệt bản nháp v1.3
 
+Đã bổ sung C02 trong cùng bộ dữ liệu: xem `C02_DRAFT_V1.md` và `C02_REVIEW_NOTES.md`. Bảng chung hiện có 60 mục đề xuất; các số liệu 48 mục dưới đây ghi lại phạm vi hai bài mẫu ban đầu. Bản đọc riêng C01/Z01 chỉ hiển thị các mục có xuất hiện trong hai bài đó. Các script C01/Z01 được giữ nguyên khi thêm C02.
+
 Soạn ngày 28/10/2026 theo yêu cầu người dùng cho Codex đảm nhận cả nội dung và kỹ thuật. Tất cả là bản nháp mới, chưa được người dùng duyệt, chưa phát hành vào app. Không phải kết quả trao đổi tự động với một phiên ChatGPT khác.
 
 ## Đọc ở đâu?

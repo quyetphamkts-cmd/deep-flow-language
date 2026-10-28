@@ -22,7 +22,8 @@ function mockAudio(script, config = {provider:'mock',model:'silence-v1',voice:'t
 function preview(manifest, catalog, scripts) {
   const errors = validateHandoff(manifest); if (errors.length) throw new Error(errors.join('\n'));
   const m = normalizeManifest(manifest), audit = auditCurriculum(manifest,catalog,scripts), sections = [];
-  for (const l of m.lessons.filter(l=>['C01','Z01'].includes(l.id))) {
+  const ids=new Set(scripts.map(s=>s.lessonId));
+  for (const l of m.lessons.filter(l=>ids.has(l.id))) {
     for (const c of l.components) {
       const s = scripts.find(s=>s.id===c.id);
       if (!s) { sections.push({lessonId:l.id,section:c.kind,status:'missing_script'}); continue; }

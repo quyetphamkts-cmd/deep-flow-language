@@ -39,6 +39,13 @@ const m=require('../docs/curriculum/curriculum_manifest.json'),b=require('../cur
     await page.locator('#reveal').click();assert.equal(await page.locator('#answerBox').isVisible(),true);assert.equal(await page.locator('#wait').isDisabled(),true);
     await page.evaluate(()=>{for(let i=0;i<50;i++)document.getElementById('next').click();});assert.equal(await page.locator('#counter').textContent(),'Câu 40 / 40');assert.equal(await page.locator('#next').isDisabled(),true);
     assert.equal(await page.evaluate(()=>localStorage.length),0);
+    await page.locator('[data-lesson="C02"]').click();assert.equal(await page.locator('#lessonTitle').textContent(),'The House That Listened');
+    assert.equal(await page.locator('#family').isVisible(),true);assert.equal(await page.locator('#sections option').count(),4);
+    await page.locator('#bilingual').check();assert.ok((await page.locator('#story').textContent()).includes('Anna'));assert.equal(await page.locator('.translation').first().isVisible(),true);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    await page.locator('#sections').selectOption('C02-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 64');
+    await page.locator('#sourceButton').click();assert.ok((await page.locator('#source').textContent()).includes('living-room floor'));
+    await page.locator('#wait').click();await page.locator('[data-lesson="C01"]').click();await page.clock.fastForward(10000);assert.equal(await page.locator('#practice').isVisible(),false);
     await page.goto(origin+'/escaped');assert.equal(await page.evaluate(()=>typeof window.UNSAFE_EXECUTED),'undefined');assert.ok((await page.locator('#story').textContent()).includes('</script><script>'));
     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
     console.log('OK: bản đọc mobile, song ngữ, gia đình, hỏi đáp/chờ/tạm dừng, đổi bài hủy timer, nguồn truyện, biên câu, không mạng/storage và escape nội dung.');

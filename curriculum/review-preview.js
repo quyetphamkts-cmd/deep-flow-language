@@ -12,7 +12,7 @@
   function syncTranslations(){document.querySelectorAll('.translation').forEach(n=>n.hidden=!$('bilingual').checked);}
   function paragraph(p){const box=node('section',undefined,'paragraph');box.append(node('p',p.text,'english'));if(p.translationVi)box.append(node('p',p.translationVi,'translation'));return box;}
   function renderFamily(){
-    $('family').hidden=lesson!=='C01';
+    $('family').hidden=data.manifest.lessons.find(l=>l.id===lesson).type!=='core';
     const labels={david:'bố', 'david-wife':'mẹ','david-son':'con trai lớn','david-older-daughter':'con gái lớn','david-younger-daughter':'con gái út'};
     const roles={architect:'Kiến trúc sư',accountant:'Kế toán'};
     $('members').replaceChildren(...data.characters.family.members.map(m=>{
@@ -65,7 +65,8 @@
     $('sections').replaceChildren(...list.map(s=>{const o=node('option',titles[s.component]);o.value=s.id;return o;}));
     renderFamily();renderSection();
   }
-  for(const b of document.querySelectorAll('[data-lesson]'))b.onclick=()=>selectLesson(b.dataset.lesson);
+  const lessonButtons=data.report.lessons.map(l=>{const b=node('button',l.id);b.dataset.lesson=l.id;b.title=data.manifest.lessons.find(m=>m.id===l.id).title;b.onclick=()=>selectLesson(l.id);return b;});
+  $('lessonNav').replaceChildren(...lessonButtons);
   $('sections').onchange=()=>{script=byId.get($('sections').value);renderSection();};
   $('bilingual').onchange=syncTranslations;
   $('wait').onclick=wait;$('reveal').onclick=reveal;
@@ -77,5 +78,5 @@
   $('vocabulary').replaceChildren(...data.inventory.words.map(w=>{
     const box=node('article',undefined,'word');box.append(node('strong',w.lemma),node('span',w.ipa,'ipa'),node('p',w.glossVi));return box;
   }));
-  selectLesson('C01');
+  selectLesson(data.report.lessons[0].id);
 })();

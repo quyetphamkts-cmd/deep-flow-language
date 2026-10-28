@@ -1,4 +1,4 @@
-# C01 và Z01 — bản nháp nội dung v1.3
+# C01 · Z01 — bản nháp nội dung drafts-v1.4
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -863,6 +863,8 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ## Vì sao chọn Word Discovery?
 
+### C01
+
 - **architect:** Nghề nghiệp trung tâm; cách viết và âm tiết dễ nhầm.
 - **sunrise:** Cụm ý thời điểm, dùng lại trong truyện và Time Shift.
 - **hurry:** Hành động đối lập trước/sau, thuận lợi để gợi nhớ.
@@ -872,6 +874,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 - **tighten:** Đối lập với loose; gắn với hành động cụ thể.
 - **repair:** Dùng như danh từ/động từ, tái xuất trong Z01.
 - **make a difference:** Cụm nghĩa không suy ra hoàn toàn từng từ; main story có biến thể thêm big.
+
 
 Các lý do trên là giả thuyết biên soạn; chưa có dữ liệu cho thấy người học thực tế hay quên các từ này.
 
