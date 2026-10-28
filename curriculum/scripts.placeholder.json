@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "status": "placeholder_not_authored",
+  "scripts": [
+    {
+      "schemaVersion": 1,
+      "id": "C01-main_story",
+      "lessonId": "C01",
+      "component": "main_story",
+      "version": 1,
+      "status": "draft",
+      "segments": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C01-word_discovery",
+      "lessonId": "C01",
+      "component": "word_discovery",
+      "version": 1,
+      "status": "draft",
+      "segments": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C01-quick_response",
+      "lessonId": "C01",
+      "component": "quick_response",
+      "version": 1,
+      "status": "draft",
+      "segments": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C01-time_shift",
+      "lessonId": "C01",
+      "component": "time_shift",
+      "version": 1,
+      "status": "draft",
+      "segments": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "Z01-daily_adventure",
+      "lessonId": "Z01",
+      "component": "daily_adventure",
+      "version": 1,
+      "status": "draft",
+      "segments": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "Z01-quick_response",
+      "lessonId": "Z01",
+      "component": "quick_response",
+      "version": 1,
+      "status": "draft",
+      "segments": []
+    }
+  ]
+}

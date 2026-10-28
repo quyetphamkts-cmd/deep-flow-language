@@ -1,0 +1,1824 @@
+{
+  "schema_version": "1.0.0",
+  "project": "The Architect’s Journey + The Twelve Zodiac Adventures",
+  "status": "planning_not_produced",
+  "language": "en",
+  "learner_support_language": "vi",
+  "core_count": 12,
+  "expansion_count": 60,
+  "vocabulary_target_unique_lemmas": 3000,
+  "lessons": [
+    {
+      "id": "C01",
+      "type": "core",
+      "title": "A Question at Sunrise",
+      "topic": "family, daily routines, identity",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C02",
+      "type": "core",
+      "title": "The House That Listened",
+      "topic": "home, objects, feelings",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C03",
+      "type": "core",
+      "title": "The Missing Drawing",
+      "topic": "work, time, communication",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C04",
+      "type": "core",
+      "title": "A Village Without Walls",
+      "topic": "community, relationships, places",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C05",
+      "type": "core",
+      "title": "The Garden in the Sky",
+      "topic": "nature, health, environment",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C06",
+      "type": "core",
+      "title": "The Man Who Built Nothing",
+      "topic": "skills, learning, choices",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C07",
+      "type": "core",
+      "title": "The Journey Beyond the Mountains",
+      "topic": "travel, directions, experiences",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C08",
+      "type": "core",
+      "title": "The City That Never Slept",
+      "topic": "technology, business, decisions",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C09",
+      "type": "core",
+      "title": "When Everything Went Wrong",
+      "topic": "problems, causes, solutions",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C10",
+      "type": "core",
+      "title": "The Smallest House in the World",
+      "topic": "comparisons, size, needs",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C11",
+      "type": "core",
+      "title": "A Gift for the Future",
+      "topic": "hope, teamwork, responsibility",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "C12",
+      "type": "core",
+      "title": "The House of Tomorrow",
+      "topic": "future, dreams, cumulative review",
+      "target_new_words": 250,
+      "word_ids": [],
+      "target_audio_minutes": {
+        "preferred": 30,
+        "maximum": 45
+      },
+      "sections": [
+        {
+          "id": "main_story",
+          "name": "Main Story"
+        },
+        {
+          "id": "word_discovery",
+          "name": "Word Discovery"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        },
+        {
+          "id": "time_shift",
+          "name": "Time Shift"
+        }
+      ],
+      "status": "outline_only"
+    },
+    {
+      "id": "Z01",
+      "type": "optional_expansion",
+      "title": "The Mouse Who Wanted to Fly",
+      "zodiac": {
+        "vietnamese_slug": "Ty",
+        "animal": "Mouse",
+        "series": "The Curious Mouse"
+      },
+      "aligned_core_lesson": "C01",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z02",
+      "type": "optional_expansion",
+      "title": "A Very Strange Breakfast",
+      "zodiac": {
+        "vietnamese_slug": "Ty",
+        "animal": "Mouse",
+        "series": "The Curious Mouse"
+      },
+      "aligned_core_lesson": "C01",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z03",
+      "type": "optional_expansion",
+      "title": "The Giant’s Little Shoes",
+      "zodiac": {
+        "vietnamese_slug": "Ty",
+        "animal": "Mouse",
+        "series": "The Curious Mouse"
+      },
+      "aligned_core_lesson": "C01",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z04",
+      "type": "optional_expansion",
+      "title": "The Door Under the Tree",
+      "zodiac": {
+        "vietnamese_slug": "Ty",
+        "animal": "Mouse",
+        "series": "The Curious Mouse"
+      },
+      "aligned_core_lesson": "C01",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z05",
+      "type": "optional_expansion",
+      "title": "The Birthday Nobody Remembered",
+      "zodiac": {
+        "vietnamese_slug": "Ty",
+        "animal": "Mouse",
+        "series": "The Curious Mouse"
+      },
+      "aligned_core_lesson": "C01",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z06",
+      "type": "optional_expansion",
+      "title": "The Buffalo and the Golden Seed",
+      "zodiac": {
+        "vietnamese_slug": "Suu",
+        "animal": "Buffalo",
+        "series": "The Kind Buffalo"
+      },
+      "aligned_core_lesson": "C02",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z07",
+      "type": "optional_expansion",
+      "title": "A House for the Rain",
+      "zodiac": {
+        "vietnamese_slug": "Suu",
+        "animal": "Buffalo",
+        "series": "The Kind Buffalo"
+      },
+      "aligned_core_lesson": "C02",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z08",
+      "type": "optional_expansion",
+      "title": "The Bridge That Was Too Short",
+      "zodiac": {
+        "vietnamese_slug": "Suu",
+        "animal": "Buffalo",
+        "series": "The Kind Buffalo"
+      },
+      "aligned_core_lesson": "C02",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z09",
+      "type": "optional_expansion",
+      "title": "The Market on the Moon",
+      "zodiac": {
+        "vietnamese_slug": "Suu",
+        "animal": "Buffalo",
+        "series": "The Kind Buffalo"
+      },
+      "aligned_core_lesson": "C02",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z10",
+      "type": "optional_expansion",
+      "title": "The Day the River Stopped",
+      "zodiac": {
+        "vietnamese_slug": "Suu",
+        "animal": "Buffalo",
+        "series": "The Kind Buffalo"
+      },
+      "aligned_core_lesson": "C02",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z11",
+      "type": "optional_expansion",
+      "title": "The Tiger Afraid of the Dark",
+      "zodiac": {
+        "vietnamese_slug": "Dan",
+        "animal": "Tiger",
+        "series": "The Brave Tiger"
+      },
+      "aligned_core_lesson": "C03",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z12",
+      "type": "optional_expansion",
+      "title": "The Mountain That Moved",
+      "zodiac": {
+        "vietnamese_slug": "Dan",
+        "animal": "Tiger",
+        "series": "The Brave Tiger"
+      },
+      "aligned_core_lesson": "C03",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z13",
+      "type": "optional_expansion",
+      "title": "The Whispering Waterfall",
+      "zodiac": {
+        "vietnamese_slug": "Dan",
+        "animal": "Tiger",
+        "series": "The Brave Tiger"
+      },
+      "aligned_core_lesson": "C03",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z14",
+      "type": "optional_expansion",
+      "title": "A Doctor for the Forest",
+      "zodiac": {
+        "vietnamese_slug": "Dan",
+        "animal": "Tiger",
+        "series": "The Brave Tiger"
+      },
+      "aligned_core_lesson": "C03",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z15",
+      "type": "optional_expansion",
+      "title": "The Smallest Hero",
+      "zodiac": {
+        "vietnamese_slug": "Dan",
+        "animal": "Tiger",
+        "series": "The Brave Tiger"
+      },
+      "aligned_core_lesson": "C03",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z16",
+      "type": "optional_expansion",
+      "title": "The Cat and the Magic Mirror",
+      "zodiac": {
+        "vietnamese_slug": "Mao",
+        "animal": "Cat",
+        "series": "The Clever Cat"
+      },
+      "aligned_core_lesson": "C04",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z17",
+      "type": "optional_expansion",
+      "title": "The Shop That Sold Dreams",
+      "zodiac": {
+        "vietnamese_slug": "Mao",
+        "animal": "Cat",
+        "series": "The Clever Cat"
+      },
+      "aligned_core_lesson": "C04",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z18",
+      "type": "optional_expansion",
+      "title": "The Missing Red Lantern",
+      "zodiac": {
+        "vietnamese_slug": "Mao",
+        "animal": "Cat",
+        "series": "The Clever Cat"
+      },
+      "aligned_core_lesson": "C04",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z19",
+      "type": "optional_expansion",
+      "title": "A Room Without a Floor",
+      "zodiac": {
+        "vietnamese_slug": "Mao",
+        "animal": "Cat",
+        "series": "The Clever Cat"
+      },
+      "aligned_core_lesson": "C04",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z20",
+      "type": "optional_expansion",
+      "title": "The Cat Who Could Hear Colors",
+      "zodiac": {
+        "vietnamese_slug": "Mao",
+        "animal": "Cat",
+        "series": "The Clever Cat"
+      },
+      "aligned_core_lesson": "C04",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z21",
+      "type": "optional_expansion",
+      "title": "The Dragon Without Fire",
+      "zodiac": {
+        "vietnamese_slug": "Thin",
+        "animal": "Dragon",
+        "series": "The Young Dragon"
+      },
+      "aligned_core_lesson": "C05",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z22",
+      "type": "optional_expansion",
+      "title": "The Cloud Collector",
+      "zodiac": {
+        "vietnamese_slug": "Thin",
+        "animal": "Dragon",
+        "series": "The Young Dragon"
+      },
+      "aligned_core_lesson": "C05",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z23",
+      "type": "optional_expansion",
+      "title": "The Lake of a Thousand Stars",
+      "zodiac": {
+        "vietnamese_slug": "Thin",
+        "animal": "Dragon",
+        "series": "The Young Dragon"
+      },
+      "aligned_core_lesson": "C05",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z24",
+      "type": "optional_expansion",
+      "title": "The Floating Village",
+      "zodiac": {
+        "vietnamese_slug": "Thin",
+        "animal": "Dragon",
+        "series": "The Young Dragon"
+      },
+      "aligned_core_lesson": "C05",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z25",
+      "type": "optional_expansion",
+      "title": "The Dragon’s Greatest Gift",
+      "zodiac": {
+        "vietnamese_slug": "Thin",
+        "animal": "Dragon",
+        "series": "The Young Dragon"
+      },
+      "aligned_core_lesson": "C05",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z26",
+      "type": "optional_expansion",
+      "title": "The Snake and the Empty Book",
+      "zodiac": {
+        "vietnamese_slug": "Ty_Snake",
+        "animal": "Snake",
+        "series": "The Wise Snake"
+      },
+      "aligned_core_lesson": "C06",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z27",
+      "type": "optional_expansion",
+      "title": "The Puzzle of Seven Stones",
+      "zodiac": {
+        "vietnamese_slug": "Ty_Snake",
+        "animal": "Snake",
+        "series": "The Wise Snake"
+      },
+      "aligned_core_lesson": "C06",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z28",
+      "type": "optional_expansion",
+      "title": "The Tree That Forgot Its Name",
+      "zodiac": {
+        "vietnamese_slug": "Ty_Snake",
+        "animal": "Snake",
+        "series": "The Wise Snake"
+      },
+      "aligned_core_lesson": "C06",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z29",
+      "type": "optional_expansion",
+      "title": "The Invisible Teacher",
+      "zodiac": {
+        "vietnamese_slug": "Ty_Snake",
+        "animal": "Snake",
+        "series": "The Wise Snake"
+      },
+      "aligned_core_lesson": "C06",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z30",
+      "type": "optional_expansion",
+      "title": "The Question Without an Answer",
+      "zodiac": {
+        "vietnamese_slug": "Ty_Snake",
+        "animal": "Snake",
+        "series": "The Wise Snake"
+      },
+      "aligned_core_lesson": "C06",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z31",
+      "type": "optional_expansion",
+      "title": "The Horse Who Missed the Train",
+      "zodiac": {
+        "vietnamese_slug": "Ngo",
+        "animal": "Horse",
+        "series": "The Free Horse"
+      },
+      "aligned_core_lesson": "C07",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z32",
+      "type": "optional_expansion",
+      "title": "The Road to Nowhere",
+      "zodiac": {
+        "vietnamese_slug": "Ngo",
+        "animal": "Horse",
+        "series": "The Free Horse"
+      },
+      "aligned_core_lesson": "C07",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z33",
+      "type": "optional_expansion",
+      "title": "The Hotel in the Clouds",
+      "zodiac": {
+        "vietnamese_slug": "Ngo",
+        "animal": "Horse",
+        "series": "The Free Horse"
+      },
+      "aligned_core_lesson": "C07",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z34",
+      "type": "optional_expansion",
+      "title": "A Ticket to Yesterday",
+      "zodiac": {
+        "vietnamese_slug": "Ngo",
+        "animal": "Horse",
+        "series": "The Free Horse"
+      },
+      "aligned_core_lesson": "C07",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z35",
+      "type": "optional_expansion",
+      "title": "The Journey Home",
+      "zodiac": {
+        "vietnamese_slug": "Ngo",
+        "animal": "Horse",
+        "series": "The Free Horse"
+      },
+      "aligned_core_lesson": "C07",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z36",
+      "type": "optional_expansion",
+      "title": "The Goat Who Painted the Wind",
+      "zodiac": {
+        "vietnamese_slug": "Mui",
+        "animal": "Goat",
+        "series": "The Creative Goat"
+      },
+      "aligned_core_lesson": "C08",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z37",
+      "type": "optional_expansion",
+      "title": "The Silent Music Festival",
+      "zodiac": {
+        "vietnamese_slug": "Mui",
+        "animal": "Goat",
+        "series": "The Creative Goat"
+      },
+      "aligned_core_lesson": "C08",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z38",
+      "type": "optional_expansion",
+      "title": "The Broken Rainbow",
+      "zodiac": {
+        "vietnamese_slug": "Mui",
+        "animal": "Goat",
+        "series": "The Creative Goat"
+      },
+      "aligned_core_lesson": "C08",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z39",
+      "type": "optional_expansion",
+      "title": "A Song for the Moon",
+      "zodiac": {
+        "vietnamese_slug": "Mui",
+        "animal": "Goat",
+        "series": "The Creative Goat"
+      },
+      "aligned_core_lesson": "C08",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z40",
+      "type": "optional_expansion",
+      "title": "The Beautiful Mistake",
+      "zodiac": {
+        "vietnamese_slug": "Mui",
+        "animal": "Goat",
+        "series": "The Creative Goat"
+      },
+      "aligned_core_lesson": "C08",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z41",
+      "type": "optional_expansion",
+      "title": "The Monkey’s Talking Machine",
+      "zodiac": {
+        "vietnamese_slug": "Than",
+        "animal": "Monkey",
+        "series": "The Inventive Monkey"
+      },
+      "aligned_core_lesson": "C09",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z42",
+      "type": "optional_expansion",
+      "title": "The Robot Who Wanted a Holiday",
+      "zodiac": {
+        "vietnamese_slug": "Than",
+        "animal": "Monkey",
+        "series": "The Inventive Monkey"
+      },
+      "aligned_core_lesson": "C09",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z43",
+      "type": "optional_expansion",
+      "title": "The Upside-Down City",
+      "zodiac": {
+        "vietnamese_slug": "Than",
+        "animal": "Monkey",
+        "series": "The Inventive Monkey"
+      },
+      "aligned_core_lesson": "C09",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z44",
+      "type": "optional_expansion",
+      "title": "The Button Nobody Should Press",
+      "zodiac": {
+        "vietnamese_slug": "Than",
+        "animal": "Monkey",
+        "series": "The Inventive Monkey"
+      },
+      "aligned_core_lesson": "C09",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z45",
+      "type": "optional_expansion",
+      "title": "The Invention That Saved Nothing",
+      "zodiac": {
+        "vietnamese_slug": "Than",
+        "animal": "Monkey",
+        "series": "The Inventive Monkey"
+      },
+      "aligned_core_lesson": "C09",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z46",
+      "type": "optional_expansion",
+      "title": "The Rooster Who Overslept",
+      "zodiac": {
+        "vietnamese_slug": "Dau",
+        "animal": "Rooster",
+        "series": "The Early Rooster"
+      },
+      "aligned_core_lesson": "C10",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z47",
+      "type": "optional_expansion",
+      "title": "The Clock That Ran Backward",
+      "zodiac": {
+        "vietnamese_slug": "Dau",
+        "animal": "Rooster",
+        "series": "The Early Rooster"
+      },
+      "aligned_core_lesson": "C10",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z48",
+      "type": "optional_expansion",
+      "title": "A Day Without Morning",
+      "zodiac": {
+        "vietnamese_slug": "Dau",
+        "animal": "Rooster",
+        "series": "The Early Rooster"
+      },
+      "aligned_core_lesson": "C10",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z49",
+      "type": "optional_expansion",
+      "title": "The Great Sleep Contest",
+      "zodiac": {
+        "vietnamese_slug": "Dau",
+        "animal": "Rooster",
+        "series": "The Early Rooster"
+      },
+      "aligned_core_lesson": "C10",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z50",
+      "type": "optional_expansion",
+      "title": "The Perfect Schedule",
+      "zodiac": {
+        "vietnamese_slug": "Dau",
+        "animal": "Rooster",
+        "series": "The Early Rooster"
+      },
+      "aligned_core_lesson": "C10",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z51",
+      "type": "optional_expansion",
+      "title": "The Dog and the Lost Star",
+      "zodiac": {
+        "vietnamese_slug": "Tuat",
+        "animal": "Dog",
+        "series": "The Loyal Dog"
+      },
+      "aligned_core_lesson": "C11",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z52",
+      "type": "optional_expansion",
+      "title": "The Village Without Smiles",
+      "zodiac": {
+        "vietnamese_slug": "Tuat",
+        "animal": "Dog",
+        "series": "The Loyal Dog"
+      },
+      "aligned_core_lesson": "C11",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z53",
+      "type": "optional_expansion",
+      "title": "The Promise Under the Banyan Tree",
+      "zodiac": {
+        "vietnamese_slug": "Tuat",
+        "animal": "Dog",
+        "series": "The Loyal Dog"
+      },
+      "aligned_core_lesson": "C11",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z54",
+      "type": "optional_expansion",
+      "title": "The Stranger at the Gate",
+      "zodiac": {
+        "vietnamese_slug": "Tuat",
+        "animal": "Dog",
+        "series": "The Loyal Dog"
+      },
+      "aligned_core_lesson": "C11",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z55",
+      "type": "optional_expansion",
+      "title": "The Longest Night",
+      "zodiac": {
+        "vietnamese_slug": "Tuat",
+        "animal": "Dog",
+        "series": "The Loyal Dog"
+      },
+      "aligned_core_lesson": "C11",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z56",
+      "type": "optional_expansion",
+      "title": "The Pig and the Endless Bowl",
+      "zodiac": {
+        "vietnamese_slug": "Hoi",
+        "animal": "Pig",
+        "series": "The Generous Pig"
+      },
+      "aligned_core_lesson": "C12",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z57",
+      "type": "optional_expansion",
+      "title": "The Secret Recipe",
+      "zodiac": {
+        "vietnamese_slug": "Hoi",
+        "animal": "Pig",
+        "series": "The Generous Pig"
+      },
+      "aligned_core_lesson": "C12",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z58",
+      "type": "optional_expansion",
+      "title": "The Festival of a Thousand Lights",
+      "zodiac": {
+        "vietnamese_slug": "Hoi",
+        "animal": "Pig",
+        "series": "The Generous Pig"
+      },
+      "aligned_core_lesson": "C12",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z59",
+      "type": "optional_expansion",
+      "title": "The Feast for Everyone",
+      "zodiac": {
+        "vietnamese_slug": "Hoi",
+        "animal": "Pig",
+        "series": "The Generous Pig"
+      },
+      "aligned_core_lesson": "C12",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    },
+    {
+      "id": "Z60",
+      "type": "optional_expansion",
+      "title": "The Greatest Treasure",
+      "zodiac": {
+        "vietnamese_slug": "Hoi",
+        "animal": "Pig",
+        "series": "The Generous Pig"
+      },
+      "aligned_core_lesson": "C12",
+      "target_audio_minutes": 15,
+      "sections": [
+        {
+          "id": "daily_adventure",
+          "name": "Daily Adventure"
+        },
+        {
+          "id": "quick_response",
+          "name": "Quick Response"
+        }
+      ],
+      "status": "outline_only",
+      "independently_comprehensible": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+name: Kiểm tra giáo trình (offline)
+on:
+  pull_request:
+    paths:
+      - 'docs/curriculum/**'
+      - 'curriculum/**'
+      - 'tools/curriculum/**'
+      - 'tests/curriculum.test.cjs'
+      - '.github/workflows/curriculum-checks.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  content-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node --test tests/curriculum.test.cjs
+      - name: Kiểm tra cấu trúc và báo cáo phần còn thiếu
+        run: node tools/curriculum/check.cjs > curriculum-report.json
+      - name: Xem trước C01 và Z01 (không tạo giọng đọc)
+        run: node tools/curriculum/check.cjs --preview > curriculum-preview.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: curriculum-review
+          path: |
+            curriculum-report.json
+            curriculum-preview.json

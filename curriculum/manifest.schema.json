@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Deep Flow curriculum handoff v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "status",
+    "language",
+    "learner_support_language",
+    "core_count",
+    "expansion_count",
+    "vocabulary_target_unique_lemmas",
+    "lessons"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "planning_not_produced"
+    },
+    "language": {
+      "const": "en"
+    },
+    "learner_support_language": {
+      "const": "vi"
+    },
+    "core_count": {
+      "const": 12
+    },
+    "expansion_count": {
+      "const": 60
+    },
+    "vocabulary_target_unique_lemmas": {
+      "const": 3000
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "title",
+              "status",
+              "sections",
+              "type",
+              "topic",
+              "target_new_words",
+              "word_ids",
+              "target_audio_minutes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(C(0[1-9]|1[0-2])|Z(0[1-9]|[1-5][0-9]|60))$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "outline_only",
+                  "draft",
+                  "review",
+                  "approved",
+                  "published"
+                ]
+              },
+              "sections": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "enum": [
+                        "main_story",
+                        "word_discovery",
+                        "quick_response",
+                        "time_shift",
+                        "daily_adventure"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "minItems": 2,
+                "maxItems": 4
+              },
+              "type": {
+                "const": "core"
+              },
+              "topic": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target_new_words": {
+                "const": 250
+              },
+              "word_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "maxItems": 250
+              },
+              "target_audio_minutes": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "preferred",
+                  "maximum"
+                ],
+                "properties": {
+                  "preferred": {
+                    "const": 30
+                  },
+                  "maximum": {
+                    "const": 45
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "title",
+              "status",
+              "sections",
+              "type",
+              "aligned_core_lesson",
+              "independently_comprehensible",
+              "zodiac",
+              "target_audio_minutes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(C(0[1-9]|1[0-2])|Z(0[1-9]|[1-5][0-9]|60))$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "outline_only",
+                  "draft",
+                  "review",
+                  "approved",
+                  "published"
+                ]
+              },
+              "sections": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "enum": [
+                        "main_story",
+                        "word_discovery",
+                        "quick_response",
+                        "time_shift",
+                        "daily_adventure"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "minItems": 2,
+                "maxItems": 4
+              },
+              "type": {
+                "const": "optional_expansion"
+              },
+              "aligned_core_lesson": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^C(0[1-9]|1[0-2])$"
+              },
+              "independently_comprehensible": {
+                "const": true
+              },
+              "zodiac": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "vietnamese_slug",
+                  "animal",
+                  "series"
+                ],
+                "properties": {
+                  "vietnamese_slug": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "animal": {
+                    "enum": [
+                      "Mouse",
+                      "Buffalo",
+                      "Tiger",
+                      "Cat",
+                      "Dragon",
+                      "Snake",
+                      "Horse",
+                      "Goat",
+                      "Monkey",
+                      "Rooster",
+                      "Dog",
+                      "Pig"
+                    ]
+                  },
+                  "series": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "target_audio_minutes": {
+                "const": 15
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 72,
+      "maxItems": 72
+    }
+  }
+}
