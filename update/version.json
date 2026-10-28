@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.53",
-  "notes": "Lịch ôn một mục/ngày · kéo thư mục Undo/Redo · tra từ Không lưu · Đọc gọn · Flashcard chạm để lật",
+  "ver": "1.0.3-beta.54",
+  "notes": "Giáo trình 🎓 cạnh Đọc · 12 chuyện đọc thử · 3.000 đầu mục / 250 mục mỗi bài · báo rõ phần còn thiếu",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.54",
+      "d": "28/10/2026",
+      "items": [
+        "Giáo trình: thêm nút 🎓 cạnh Đọc để xem 12 chuyện, song ngữ và phản xạ 3 giây ngay trong app",
+        "Chốt danh sách chuẩn beta 3.000 đầu mục và phân bổ 250 mục/bài; hiển thị rõ từ đã có và từ cần bổ sung, nguồn và giấy phép"
+      ]
+    },
     {
       "v": "1.0.3-beta.53",
       "d": "28/10/2026",

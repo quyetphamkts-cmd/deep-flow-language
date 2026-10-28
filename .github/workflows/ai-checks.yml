@@ -36,6 +36,7 @@ jobs:
         run: |
           node tests/lesson-text.browser.cjs
           node tests/library-reading.browser.cjs
+          node tests/curriculum-app.browser.cjs
       - name: Lưu ảnh kiểm tra giao diện điện thoại
         uses: actions/upload-artifact@v4
         with:
@@ -43,6 +44,7 @@ jobs:
           path: |
             ${{ runner.temp }}/study51-*.png
             ${{ runner.temp }}/study53-*.png
+            ${{ runner.temp }}/curriculum54-*.png
           if-no-files-found: error
       - run: npx cap sync android
       - name: Kiểm thử Java chẩn đoán crash

@@ -1,6 +1,6 @@
 # The Architect’s Journey — đủ 12 bản nháp chuyện chính
 
-Phiên bản biên soạn 2.0 · 28/10/2026 · **Chờ người dùng duyệt, chưa phát hành vào app.**
+Phiên bản biên soạn 2.0 · 28/10/2026 · **Bản nháp chờ duyệt nội dung; bản xem được đưa vào app beta.54.**
 
 ## Đọc từng bài
 
@@ -42,7 +42,7 @@ Nội dung được viết mới theo tài liệu dự án; không sử dụng s
 
 Công cụ kiểm tra đủ phần, ID, nguồn câu hỏi trong chính bài, đáp án/pause, Word Discovery, và lượt lặp đúng câu gốc. Bản đọc được sinh từ dữ liệu, có kiểm thử chống lệch. Bản HTML có đủ 12 bài chính và Z01, hiển thị rõ lượt 1/lượt 2.
 
-Chưa có audio thật, alignment phụ đề, đánh giá hiệu quả học hoặc dữ liệu nhớ từ. Danh sách chuẩn 3.000 từ/giấy phép và việc phân bổ chưa chốt. Chưa tích hợp vào thư viện app, chưa merge/phát hành, chưa gọi API trả phí. Không tuyên bố kiểm thử cấu trúc đã chứng minh chất lượng sư phạm.
+Chưa có audio thật, alignment phụ đề, đánh giá hiệu quả học hoặc dữ liệu nhớ từ. Đã chốt danh sách chuẩn beta và phân bổ riêng; xem STANDARD_VOCABULARY_PLAN.md. Bản xem có trong nút 🎓 beta.54, chưa tích hợp thành bài nghe/audio trong thư viện. Không gọi API trả phí. Không tuyên bố kiểm thử cấu trúc đã chứng minh chất lượng sư phạm.
 
 ## Lệnh và hướng dẫn
 
@@ -58,8 +58,12 @@ Mở HTML đã tải để tương tác; GitHub blob chỉ hiển thị mã. Xem
 
 ## Kết quả kiểm tra bản giao này
 
-`node --test tests/*.test.cjs`: **73/73 đạt** (32 giáo trình, 41 hồi quy app); `check-web` đạt. Chrome 360px đã kiểm tra đủ 13 nút bài (12 chính và Z01), bốn phần mỗi bài chính, song ngữ, nguồn câu hỏi, dấu lượt 1/lượt 2, pause ba giây, hủy timer và không tràn ngang. Chưa chạy audio thật hoặc tích hợp vào APK. CI GitHub được chạy lại sau khi đẩy nhánh; kết quả cập nhật trong PR.
+`node --test tests/*.test.cjs`: **83/83 đạt** (42 giáo trình, 41 hồi quy app); `check-web` đạt. Chrome 360px đã kiểm tra đủ 13 nút bài (12 chính và Z01), bốn phần mỗi bài chính, song ngữ, nguồn câu hỏi, dấu lượt 1/lượt 2, pause ba giây, hủy timer và không tràn ngang. Đã kiểm thử bản xem nhúng trong app trên Chrome và hồi quy các nút cũ; chưa chạy audio thật hoặc kiểm thử trên điện thoại Samsung thực tế. CI GitHub được chạy lại sau khi đẩy nhánh; kết quả cập nhật trong PR.
 
 ## Hiệu chỉnh kiểm đếm từ vựng
 
 Đọc [báo cáo từ vựng và họ từ](VOCABULARY_AUDIT.md). Bổ sung 29 mục từ phái sinh đã có trong văn bản; không thêm hoặc nhồi từ vào truyện. Có 24 nhóm họ từ đề xuất, chưa phải tổng số họ từ của giáo trình. Cụm từ được đếm riêng; các biến thể không làm tăng tổng lemma.
+
+## Bản xem trong ứng dụng — beta.54
+
+Bấm 🎓 cạnh nút Đọc ở thanh trên để xem 12 bài chính, 4 phần mỗi bài, song ngữ và bài phản xạ 3 giây. Phần “Danh sách chuẩn beta” cho xem/lọc 250 mục được phân bổ cho từng bài và phân biệt từ đã khớp với từ cần bổ sung. Xem [danh sách chuẩn và phân bổ](STANDARD_VOCABULARY_PLAN.md). Danh sách chuẩn có đủ 3.000 đầu mục; bao phủ văn bản vẫn chưa đủ. Chưa có audio thật, không gọi AI hoặc sửa dữ liệu bài học/từ vựng của bạn.

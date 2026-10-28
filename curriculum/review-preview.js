@@ -64,7 +64,7 @@
     const l=data.manifest.lessons.find(l=>l.id===id),timing=data.report.lessons.find(l=>l.id===id);
     $('lessonTitle').textContent=l.title;$('summary').textContent=`${id} · ${timing.uniqueQuestionCount} câu gốc${timing.repeatedQuestionCount?` + ${timing.repeatedQuestionCount} lượt ôn`:''} · ước tính ${(timing.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút; chưa đo audio`;
     $('sections').replaceChildren(...list.map(s=>{const o=node('option',titles[s.component]);o.value=s.id;return o;}));
-    renderFamily();renderSection();
+    renderFamily();renderSection();if(data.standard&&data.standard.lessons.some(l=>l.id===id)){$('standardLesson').value=id;renderStandard();}
   }
   const lessonButtons=data.report.lessons.map(l=>{const b=node('button',l.id);b.dataset.lesson=l.id;b.title=data.manifest.lessons.find(m=>m.id===l.id).title;b.onclick=()=>selectLesson(l.id);return b;});
   $('lessonNav').replaceChildren(...lessonButtons);
@@ -79,5 +79,19 @@
   $('vocabulary').replaceChildren(...data.inventory.words.map(w=>{
     const box=node('article',undefined,'word');box.append(node('strong',w.lemma),node('span',w.ipa,'ipa'),node('p',w.glossVi));return box;
   }));
+  function renderStandard(){
+    if(!data.standard)return;
+    const l=data.standard.lessons.find(l=>l.id===$('standardLesson').value),q=$('standardSearch').value.trim().toLowerCase(),filter=$('standardFilter').value;
+    const words=l.words.filter(w=>w.lemma.includes(q)&&(filter==='present'?w.present:filter==='missing'?!w.present:true));
+    $('standardCount').textContent=`${l.id}: ${l.observed}/250 mục đã khớp dạng trong bài · hiển thị ${words.length} mục`;
+    $('standardWords').replaceChildren(...words.map(w=>{const box=node('article',undefined,'word');box.append(node('strong',w.lemma),node('p',w.present?'Đã có trong bài':'Cần bổ sung vào bài',w.present?'':'missingTarget'));if(w.glossVi)box.append(node('p',w.glossVi));if(w.firstObservedLesson&&w.firstObservedLesson!==l.id)box.append(node('p','Đã gặp ở '+w.firstObservedLesson));return box;}));
+  }
+  if(data.standard){
+    $('standardPanel').hidden=false;
+    $('standardSummary').textContent=`Đã phân bổ ${data.standard.totalHeadwords} đầu mục, 250 mục/bài. ${data.standard.observedInTargetLesson}/3000 mục khớp trong bài mục tiêu. Danh sách và phân bổ đã có; nội dung chưa bao phủ đủ, chưa có audio. Khớp dạng không chứng minh đúng nghĩa hoặc đã nhớ. Cụm và biến thể không tăng số từ.`;
+    $('standardLesson').replaceChildren(...data.standard.lessons.map(l=>{const o=node('option',l.id);o.value=l.id;return o;}));
+    $('standardAttribution').textContent=data.standard.attribution;
+    $('standardLesson').onchange=renderStandard;$('standardFilter').onchange=renderStandard;$('standardSearch').oninput=renderStandard;
+  }
   selectLesson(data.report.lessons[0].id);
 })();

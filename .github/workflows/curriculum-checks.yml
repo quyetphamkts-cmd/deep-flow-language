@@ -31,6 +31,12 @@ jobs:
         run: |
           node tools/curriculum/audit-lexicon.cjs > curriculum-lexicon.json
           node tools/curriculum/audit-lexicon.cjs --markdown > curriculum-lexicon.md
+      - name: Kiểm tra nguồn và phân bổ danh sách chuẩn beta
+        run: |
+          node tools/curriculum/import-standard.cjs --check
+          node tools/curriculum/standard-plan.cjs > curriculum-standard.json
+          node tools/curriculum/standard-plan.cjs --markdown > curriculum-standard.md
+          node tools/curriculum/embed-app.cjs --check
       - name: Xuất bản đọc thử độc lập
         run: node tools/curriculum/build-preview.cjs > curriculum-preview.html
       - name: Cài công cụ kiểm tra trình duyệt trong thư mục tạm
@@ -39,7 +45,9 @@ jobs:
         env:
           NODE_PATH: ${{ runner.temp }}/df-curriculum-browser/node_modules
           CHROME_BIN: /usr/bin/google-chrome
-        run: node tests/curriculum-preview.browser.cjs
+        run: |
+          node tests/curriculum-preview.browser.cjs
+          node tests/curriculum-app.browser.cjs
       - uses: actions/upload-artifact@v4
         with:
           name: curriculum-review
@@ -50,5 +58,7 @@ jobs:
             curriculum-draft.md
             curriculum-lexicon.json
             curriculum-lexicon.md
+            curriculum-standard.json
+            curriculum-standard.md
             curriculum-preview.html
             ${{ runner.temp }}/curriculum-preview.png

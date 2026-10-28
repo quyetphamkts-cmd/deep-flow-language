@@ -28,3 +28,9 @@
 ## Điều kiện trước khi nhập danh sách chuẩn
 
 Có file cụ thể và giấy phép đi kèm; parser kiểm tra trùng/thiếu ID/dạng từ; quy tắc xử lý đầu mục/cụm được duyệt; có báo cáo trước và sau chuẩn hóa; không báo đạt 3.000 khi chỉ có mục tiêu trong manifest. Chưa gọi dịch vụ trả phí để làm bước này.
+
+## Quyết định cho bản beta theo yêu cầu người dùng
+
+Người dùng yêu cầu hoàn thiện danh sách, phân bổ và cập nhật bản xem trong app. Do tải nguồn NGSL 1.2 trực tiếp bị từ chối HTTP 403 và bản mirror tìm được không còn truy cập được, chọn **NGSL 1.01** 2.801 đầu mục từ mirror ghim commit, bổ sung 199 đầu mục theo ba nhóm chủ đề sinh hoạt/gia đình, thực phẩm/môi trường và công việc/di chuyển. Không giả danh bản 1.2, không gán thứ hạng tần suất cho phần bổ sung. Tên riêng, số đếm, dạng biến đổi và biến thể chính tả không dùng để lấp đủ số.
+
+Chi tiết nguồn và phép biến đổi: `curriculum/sources/ngsl-1.01/NOTICE.md`. Danh sách chuẩn dùng cho biên soạn beta: `curriculum/vocabulary.standard.json`; phân bổ: `curriculum/vocabulary.allocations.json`. Các tệp này có vòng đời riêng với bản manifest bàn giao v1 (vẫn lưu làm mốc ban đầu). Xem `STANDARD_VOCABULARY_PLAN.md`. Trạng thái chốt danh sách beta không đồng nghĩa mọi từ đã có trong truyện hoặc nội dung đã được duyệt xuất bản.

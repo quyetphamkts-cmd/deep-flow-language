@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs'),path=require('node:path');const root=path.resolve(__dirname,'../..');const {makePlan,auditStandard,renderStandardReport}=require('../../curriculum/standard-plan.cjs');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+try{const args=process.argv.slice(2);if(args.length>1||args.some(x=>!['--write','--markdown','--require-coverage'].includes(x)))throw Error('Dùng standard-plan.cjs [--write | --markdown | --require-coverage]');const c=read('curriculum/vocabulary.standard.json'),b=read('curriculum/drafts/v1/scripts.json');if(args.includes('--write'))fs.writeFileSync(path.join(root,'curriculum/vocabulary.allocations.json'),JSON.stringify(makePlan(c,b),null,2)+'\n');const p=read('curriculum/vocabulary.allocations.json'),r=auditStandard(c,p,b);console.log(args.includes('--markdown')?renderStandardReport(c,p,b):JSON.stringify(r,null,2));if(args.includes('--require-coverage')&&!r.textCoverageReady)process.exitCode=2;}catch(e){console.error(e.message);process.exitCode=1;}

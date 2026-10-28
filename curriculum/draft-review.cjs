@@ -75,7 +75,7 @@ function reviewDraft(manifest, bundle, inventory) {
   return {schemaVersion:1,contentVersion:bundle.contentVersion,publicationReady:false,canonicalVocabularyReady:false,structuralQaPassed:true,semanticQa:'pending_user_review',
     timingMethod:'spoken words / assumed WPM + explicit pauses; 100–120 WPM are planning assumptions, not measurements',sections,lessons,
     proposedVocabularyCount:index.words.size,wordDiscoveryCount:Object.values(selectionCounts).reduce((n,v)=>n+v,0),wordDiscoveryByLesson:selectionCounts,proposedInventoryAudit:audit,
-    constraints:['Chưa duyệt nội dung, nguồn danh sách 3000 từ, IPA hoặc giọng đọc.','Liên kết câu hỏi chứng minh nguồn tồn tại, không tự chứng minh đáp án đúng về nghĩa.','Không tạo audio thật, chấm người học hoặc thay dữ liệu ứng dụng.']};
+    constraints:['Chưa duyệt nội dung, IPA hoặc giọng đọc; bảng từ biên soạn tách khỏi danh sách chuẩn beta.','Liên kết câu hỏi chứng minh nguồn tồn tại, không tự chứng minh đáp án đúng về nghĩa.','Không tạo audio thật, chấm người học hoặc thay dữ liệu ứng dụng.']};
 }
 
 function renderDraft(manifest,bundle,inventory,options={}) {

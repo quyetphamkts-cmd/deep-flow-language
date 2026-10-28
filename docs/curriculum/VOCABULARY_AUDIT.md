@@ -67,10 +67,10 @@ ribbon, branch, wing, sparrow, ladder, string, hook, gently, rough, tear, thread
 
 ## Phần còn thiếu
 
-- Chưa nhập danh sách chuẩn 3000 từ có nguồn và giấy phép.
+- Báo cáo này chỉ xét danh mục biên soạn; danh sách chuẩn beta và phân bổ riêng xem STANDARD_VOCABULARY_PLAN.md.
 - Bảng họ từ và loại từ là đề xuất, chưa duyệt ngoài.
 - Lần đầu xuất hiện chỉ là gợi ý phân bổ, không thay word_ids trong manifest.
-- Chưa chứng minh 250 từ mới/bài; không cộng cụm từ hoặc biến thể để bù số.
+- Chưa chứng minh nội dung dạy đủ 250 từ mới/bài; bảng chuẩn đã phân bổ riêng, không cộng cụm hoặc biến thể để bù bao phủ.
 - Số lần nhắc trong văn bản không chứng minh học thuộc hoặc đạt lịch ôn ngắt quãng.
 
 Các đoạn nguồn cho từng mục được lưu trong JSON xuất bằng cùng CLI. Phép ghép dạng có thể nhận nhầm đồng hình/loại từ (ví dụ permit danh từ/động từ, drawing danh từ/động từ); cần rà soát nghĩa trước khi duyệt từng mục. Tất cả IPA, nghĩa và nhóm hình thái mới là bản biên soạn chờ rà soát.

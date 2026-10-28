@@ -38,3 +38,9 @@ Quick Response của bài chính có hai lượt: lượt 1 theo mạch truyện
 ## Kiểm toán từ vựng và họ từ
 
 Chạy `node tools/curriculum/audit-lexicon.cjs` để lấy JSON có tham chiếu đoạn nguồn, hoặc thêm `--markdown` để đọc báo cáo. `--require-ready` trả mã 2 vì danh sách hiện vẫn là đề xuất. Xem `VOCABULARY_AUDIT.md`; không cộng biến thể hoặc cụm vào số từ đơn.
+
+## Xem ngay trong app beta.54
+
+Bấm 🎓 cạnh Đọc, chọn C01–C12 và phần bài học; bật Song ngữ khi cần. Trong bảng Danh sách chuẩn beta chọn bài và bộ lọc Đã có/Cần bổ sung hoặc tìm theo đầu mục tiếng Anh. Bảng hiển thị 250 mục của bài; không nói rằng bản nháp đã có đủ mọi từ. Nút ✕ hoặc thao tác quay lại đóng bản đọc. Bản đọc nhúng sẵn trong file cập nhật, không cần tải riêng hay nhập API key; không có giọng đọc/ghi âm/chấm điểm. Danh sách/phân bổ phát hành theo CC BY-SA 4.0, ghi công và thay đổi ở cuối bảng.
+
+Để tạo lại: `node tools/curriculum/import-standard.cjs --check`, `node tools/curriculum/standard-plan.cjs`, `node tools/curriculum/embed-app.cjs --check`. Khi sửa nội dung/nguồn: tạo lại phân bổ với `standard-plan.cjs --write`, dựng báo cáo và chạy `embed-app.cjs` trước khi tăng phiên bản.
