@@ -7932,7 +7932,7 @@ async function nbPhoto(files,replace){if(PHOTO59.job?.state==='running'){photoOp
     if(job.ac.signal.aborted)return;dlog('ev',`📷 Đọc chữ từ ${files.length} ảnh: ${paras.length} đoạn`);
     const tess=used.has('tess'),engs=[...used].map(x=>x==='tess'?'bộ đọc trên máy':x).join(' + ');
     if(tess)paras.unshift('## ⚠️ Đọc bằng bộ đọc chữ trên máy (AI chưa dùng được'+(errs.length?': '+[...new Set(errs)].join(' · '):'')+'). Chữ có thể sai hoặc thiếu ở chỗ trang cong, mờ. Thêm / kiểm tra Gemini API key (Cài đặt → 🔑) để AI đọc chính xác hơn nhiều.');
-    const pid='photo:'+Date.now()+':'+job.id;NB.photo={url:pid,files};if(replace){const hh=nbHist().filter(x=>x.url!==replace);nbHistSave(hh);}
+    const pid='photo:'+Date.now()+':'+job.id;NB.photo={url:pid,files};
     photoFinish59(job,{url:pid,title:title||'Trang chụp ngày '+new Date().toLocaleDateString('vi-VN'),site:`📷 Ảnh chụp · ${files.length} trang · đọc bằng ${engs}`,paras,img:'',date:''},0);}
   catch(e){if(job.ac.signal.aborted)return;job.state='error';job.error='Chưa đọc được ảnh — '+dlogScrub(e.message||e);if(photoFront59(job))photoRender59();else photoNoticeUpdate59();}finally{job.files=[];}}
 // ----- dịch (Google Dịch miễn phí, lỗi thì dùng AI đã cài key) -----
@@ -8170,7 +8170,7 @@ async function nbSrc(s){nbGo({t:'load',msg:'Đang tải tin '+s[0]+'…'});const
   try{const r=await nbFetch(s[1]);if(tok!==NB.tok)return;NB.v={t:'list',title:'📰 '+s[0],items:nbSortLv(nbFeed(r.text)),lvSort:1};nbRender();}
   catch(e){if(tok!==NB.tok)return;NB.v={t:'err',msg:'Không tải được '+s[0]+': '+(e.message||e)};nbRender();}}
 function nbShow(a,pi){const h=nbHist(),i=h.findIndex(x=>x.url===a.url),old=i>=0?h.splice(i,1)[0]:null;
-  const e={...a,at:Date.now(),first:old&&old.first||Date.now(),rv:old&&old.rv||a.rv||[],done:old?.done||0,doneAt:old?.doneAt||0,readStats:old?.readStats||null,trm:a.trm||old&&old.trm||{},pi:old&&old.pi||0,folder59:old?.folder59||a.folder59||''};delete e.links;if(i>=0)h.splice(i,0,e);else h.unshift(e);nbHistSave(h);
+  const e={...a,at:Date.now(),first:old&&old.first||Date.now(),rv:old&&old.rv||a.rv||[],done:old?.done||0,doneAt:old?.doneAt||0,readStats:old?.readStats||null,trm:a.trm||old&&old.trm||{},pi:old&&old.pi||0,folder59:old?.folder59??a.folder59??''};delete e.links;if(i>=0)h.splice(i,0,e);else h.unshift(e);nbHistSave(h);
   NB.v={t:'art',a:e,pi:pi!=null?pi:e.pi};nbRender();}
 async function nbOpenUrl(url,o){url=nbTxt(url);
   if(/^gut:/.test(url)&&!nbHist().some(x=>x.url===url)){const [id,ch]=url.slice(4).split('#');if(ch==null)return nbBook(id);return nbChapter(id,+ch);}
@@ -8662,14 +8662,15 @@ $('#guideCopy56').textContent='Sao chép';$('#guidePaste56').textContent='Dán';
 const READ_EDIT59={active:false,selected:new Set(),folder:'*',undo:null,suppress:0};
 function readFolders59(){let names=[];try{names=JSON.parse(localStorage.getItem('dfl_read_folders59')||'[]');}catch(e){}return [...new Set(['Lưu trữ',...(Array.isArray(names)?names:[]),...nbHist().map(x=>x.folder59).filter(Boolean)])];}
 function readVisible59(){return nbHist().filter(x=>READ_EDIT59.folder==='*'||(x.folder59||'')===READ_EDIT59.folder);}
-function readStore59(next){const old=nbHist();if(!nbHistSave(next))return false;READ_EDIT59.undo=old;return true;}
+function readStore59(next){const old=nbHist();if(!nbHistSave(next))return false;READ_EDIT59.undo=old;READ_EDIT59.undoAfter=new Set(next.map(x=>x.url));return true;}
+function readUndo59(){const E=READ_EDIT59,before=E.undo;if(!before)return;const current=nbHist(),byUrl=new Map(current.map(x=>[x.url,x])),oldIds=new Set(before.map(x=>x.url));const added=current.filter(x=>!E.undoAfter?.has(x.url)&&!oldIds.has(x.url));const restored=before.map(x=>byUrl.has(x.url)?{...byUrl.get(x.url),folder59:x.folder59??''}:x);if(nbHistSave([...added,...restored])){E.undo=null;E.selected.clear();if(NB.v?.t==='history53')renderReadingHistory59();}}
 function renderReadingHistory59(){const E=READ_EDIT59,h=readVisible59(),all=nbHist(),folders=readFolders59();const options=(current,filter)=>`${filter?'<option value="*">Tất cả tài liệu</option>':''}<option value="" ${current===''?'selected':''}>Chưa lưu trữ</option>`+folders.map(f=>`<option value="${esc(f)}" ${f===current?'selected':''}>${esc(f)}</option>`).join('');
  $('#nbBody').innerHTML=`<h3>🕘 Lịch sử đọc</h3><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><select id="readFolder59" aria-label="Thư mục đọc" style="max-width:100%">${options(E.folder,true)}</select><button class="btn" id="readSelect59">${E.active?'Xong':'Chọn'}</button><select id="readSort59" aria-label="Sắp xếp tài liệu"><option value="">Sắp xếp…</option><option value="title">Tên A–Z</option><option value="date">Mới đọc trước</option></select></div><div style="display:flex;gap:6px;flex-wrap:wrap"><input id="readFolderName59" maxlength="80" placeholder="Tên thư mục trong Lưu trữ" style="min-width:0;flex:1"><button class="btn" id="readCreate59">Tạo thư mục</button></div>${E.active?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin:12px 0"><button class="btn" id="readAll59">Chọn tất cả (${h.length})</button><span id="readSelected59">${E.selected.size} đã chọn</span><select id="readMove59" aria-label="Chuyển vào thư mục">${options('Lưu trữ',false)}</select><button class="btn" id="readMoveGo59">Di chuyển</button><button class="btn" id="readDelete59">Xóa</button></div>`:''}${E.undo?'<button class="btn" id="readUndo59">Hoàn tác lần vừa sửa</button>':''}<p class="mu">Nhấn giữ để chọn · kéo nút ☰ để sắp xếp. Tài liệu lưu trên máy; xóa không giảm thống kê đã học.</p>`+(h.length?h.map(x=>`<div data-read59="${esc(x.url)}" role="button" tabindex="0" style="display:flex;align-items:center;gap:8px;padding:12px 4px;border-bottom:1px solid var(--ln);${E.selected.has(x.url)?'background:rgba(255,176,32,.12)':''}"><div style="min-width:0;flex:1;overflow-wrap:anywhere">${E.active?(E.selected.has(x.url)?'☑ ':'☐ '):''}<b>${esc(x.title||'Bài đọc')}</b><small style="display:block">${esc(x.folder59||'Chưa lưu trữ')} · ${x.done?'✓ Đã đọc xong · '+Math.round((x.readStats?.seconds||0)/60)+' phút · '+(x.readStats?.unique||0)+' từ vựng · '+(x.readStats?.families||0)+' họ từ':'Đang đọc'}</small></div>${E.active?`<button class="btn" data-read-drag59="${esc(x.url)}" aria-label="Kéo sắp xếp" style="touch-action:none;flex:none">☰</button>`:''}</div>`).join(''):'<p class="mu">Chưa có bài trong mục này.</p>');
  $('#readFolder59').value=E.folder;$('#readFolder59').onchange=e=>{E.folder=e.target.value;E.selected.clear();renderReadingHistory59();};
  $('#readSelect59').onclick=()=>{E.active=!E.active;E.selected.clear();renderReadingHistory59();};
  $('#readCreate59').onclick=()=>{const name=$('#readFolderName59').value.trim();if(!name){toast('Hãy nhập tên thư mục');return;}const folder='Lưu trữ / '+name;try{localStorage.setItem('dfl_read_folders59',JSON.stringify([...new Set([...folders,folder])]));E.folder=folder;E.selected.clear();renderReadingHistory59();}catch(e){toast('Bộ nhớ đầy, chưa tạo được thư mục');}};
  $('#readSort59').onchange=e=>{const sort=e.target.value;if(!sort)return;const ids=new Set(h.map(x=>x.url));const ordered=h.slice().sort(sort==='title'?(a,b)=>String(a.title).localeCompare(String(b.title),'vi'):(a,b)=>(b.at||0)-(a.at||0));let i=0;if(readStore59(all.map(x=>ids.has(x.url)?ordered[i++]:x)))renderReadingHistory59();};
- if(E.undo)$('#readUndo59').onclick=()=>{const before=E.undo;if(nbHistSave(before)){E.undo=null;E.selected.clear();renderReadingHistory59();}};
+ if(E.undo)$('#readUndo59').onclick=readUndo59;
  if(!E.active)return;
  $('#readAll59').onclick=()=>{E.selected=new Set(h.map(x=>x.url));renderReadingHistory59();};
  $('#readMoveGo59').onclick=()=>{if(!E.selected.size)return;const folder=$('#readMove59').value;if(readStore59(nbHist().map(x=>E.selected.has(x.url)?{...x,folder59:folder}:x))){E.selected.clear();renderReadingHistory59();}};
@@ -8678,7 +8679,7 @@ function renderReadingHistory59(){const E=READ_EDIT59,h=readVisible59(),all=nbHi
 function readReorder59(from,to,after){const E=READ_EDIT59;if(from===to)return;const h=nbHist(),set=E.selected.has(from)?new Set(E.selected):new Set([from]);if(set.has(to))return;const moving=h.filter(x=>set.has(x.url));const rest=h.filter(x=>!set.has(x.url));const i=rest.findIndex(x=>x.url===to);if(i<0)return;rest.splice(i+(after?1:0),0,...moving);if(readStore59(rest))renderReadingHistory59();}
 {
  const box=$('#nbBody');let hold=0,sx=0,sy=0,drag=null;
- box.addEventListener('pointerdown',e=>{if(NB.v?.t!=='history53')return;const row=e.target.closest('[data-read59]');if(!row)return;sx=e.clientX;sy=e.clientY;const handle=e.target.closest('[data-read-drag59]');
+ box.addEventListener('pointerdown',e=>{if(NB.v?.t!=='history53')return;READ_EDIT59.suppress=0;const row=e.target.closest('[data-read59]');if(!row)return;sx=e.clientX;sy=e.clientY;const handle=e.target.closest('[data-read-drag59]');
   if(handle){drag={url:handle.dataset.readDrag59,handle};handle.setPointerCapture(e.pointerId);e.preventDefault();return;}
   hold=setTimeout(()=>{READ_EDIT59.active=true;READ_EDIT59.selected.add(row.dataset.read59);READ_EDIT59.suppress=Date.now()+600;renderReadingHistory59();},550);
  });
@@ -8686,7 +8687,7 @@ function readReorder59(from,to,after){const E=READ_EDIT59;if(from===to)return;co
  box.addEventListener('pointerup',e=>{clearTimeout(hold);if(!drag)return;const from=drag.url;drag=null;const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-read59]');if(target){const r=target.getBoundingClientRect();readReorder59(from,target.dataset.read59,e.clientY>r.top+r.height/2);}READ_EDIT59.suppress=Date.now()+400;});
  box.addEventListener('pointercancel',()=>{clearTimeout(hold);drag=null;});
  box.addEventListener('click',e=>{if(NB.v?.t!=='history53'||Date.now()<READ_EDIT59.suppress||e.target.closest('[data-read-drag59]'))return;const row=e.target.closest('[data-read59]');if(!row)return;const url=row.dataset.read59;if(READ_EDIT59.active){if(READ_EDIT59.selected.has(url))READ_EDIT59.selected.delete(url);else READ_EDIT59.selected.add(url);renderReadingHistory59();}else{const a=nbHist().find(x=>x.url===url);if(a){nbKeep();NB.stack.push(NB.v);nbShow(a);}}});
- box.addEventListener('keydown',e=>{const row=e.target.closest('[data-read59]');if(row&&(e.key==='Enter'||e.key===' ')){e.preventDefault();row.click();}});
+ box.addEventListener('keydown',e=>{const row=e.target.closest('[data-read59]');if(row&&(e.key==='Enter'||e.key===' ')){e.preventDefault();READ_EDIT59.suppress=0;row.click();}});
 }
 renderReadingHistory53=renderReadingHistory59;
 
