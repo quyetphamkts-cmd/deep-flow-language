@@ -1,4 +1,4 @@
-# C01 và Z01 — bản nháp nội dung v1.1
+# C01 và Z01 — bản nháp nội dung v1.2
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -8,41 +8,41 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ## C01 — A Question at Sunrise
 
-69 câu hỏi · ước tính 31.7 phút ở 110 từ/phút, khoảng 29.7–34.2 phút theo giả định tốc độ.
+69 câu hỏi · ước tính 31.5 phút ở 110 từ/phút, khoảng 29.4–33.9 phút theo giả định tốc độ.
 
 ### Main Story
 
-**[s01]** The sun is coming up over the street. David is already at the kitchen table. He is an architect. He draws buildings for people. There are five people in his family. His wife is an accountant. Their oldest child is a son in grade four. Their older daughter is in grade one. Their youngest daughter is two years old. This morning, he is drawing a house with a very tall roof. His daughter in grade one puts two bowls on the table. One is for her, and one is for him. "Breakfast first, Dad." David smiles, but his eyes stay on the drawing. "Look at this roof," he says. "You can see it from the end of the street."
+**[s01]** The sun is coming up over the street. David is already at the kitchen table. He is an architect. He draws buildings for people. There are five people in his family. His wife, Anna, is an accountant. Their son, Ben, is in grade four. Their older daughter, Lily, is in grade one. Their youngest daughter, Sophie, is two years old. This morning, he is drawing a house with a very tall roof. Lily puts two bowls on the table. One is for her, and one is for him. "Breakfast first, Dad." David smiles, but his eyes stay on the drawing. "Look at this roof," he says. "You can see it from the end of the street."
 
-*Tiếng Việt:* Mặt trời đang lên phía trên con phố. David đã ngồi ở bàn bếp. Anh là kiến trúc sư, người thiết kế những công trình cho mọi người. Gia đình anh có năm người. Vợ anh làm kế toán. Con lớn là con trai học lớp 4. Con gái lớn học lớp 1, còn con gái út hai tuổi. Sáng nay, anh đang vẽ một ngôi nhà có mái rất cao. Con gái học lớp 1 đặt hai chiếc bát lên bàn, một cho mình, một cho bố. "Ăn sáng trước đã, bố." David mỉm cười nhưng mắt vẫn nhìn bản vẽ. "Nhìn mái nhà này này," anh nói. "Đứng tận cuối phố cũng có thể nhìn thấy nó."
+*Tiếng Việt:* Mặt trời đang lên phía trên con phố. David đã ngồi ở bàn bếp. Anh là kiến trúc sư, người thiết kế những công trình cho mọi người. Gia đình anh có năm người. Vợ anh, Anna, làm kế toán. Con trai Ben học lớp 4. Con gái lớn Lily học lớp 1, còn con gái út Sophie hai tuổi. Sáng nay, anh đang vẽ một ngôi nhà có mái rất cao. Lily đặt hai chiếc bát lên bàn, một cho mình, một cho bố. "Ăn sáng trước đã, bố." David mỉm cười nhưng mắt vẫn nhìn bản vẽ. "Nhìn mái nhà này này," anh nói. "Đứng tận cuối phố cũng có thể nhìn thấy nó."
 
-**[s02]** His daughter looks at the picture. Then she puts her head close to the table. "What are you doing?" David asks. "I am looking from down here. The window is too high for me." David turns the page toward her. "It is a beautiful house." She thinks for a moment. "Dad, can you build a house that makes people happy?" He opens his mouth. Then he closes it. He knows how to draw a tall roof. He does not know how to draw a happy morning.
+**[s02]** Lily looks at the picture. Then she puts her head close to the table. "What are you doing?" David asks. "I am looking from down here. The window is too high for me." David turns the page toward her. "It is a beautiful house." She thinks for a moment. "Dad, can you build a house that makes people happy?" He opens his mouth. Then he closes it. He knows how to draw a tall roof. He does not know how to draw a happy morning.
 
-*Tiếng Việt:* Con gái nhìn bức hình rồi cúi đầu sát mặt bàn. "Con đang làm gì thế?" David hỏi. "Con nhìn từ dưới này. Cửa sổ cao quá, con không nhìn được." David xoay trang giấy về phía con. "Đó là một ngôi nhà đẹp mà." Cô bé suy nghĩ một lúc. "Bố có thể xây một ngôi nhà khiến mọi người hạnh phúc không?" Anh định trả lời rồi lại thôi. Anh biết cách vẽ một mái nhà cao, nhưng chưa biết cách vẽ một buổi sáng hạnh phúc.
+*Tiếng Việt:* Lily nhìn bức hình rồi cúi đầu sát mặt bàn. "Con đang làm gì thế?" David hỏi. "Con nhìn từ dưới này. Cửa sổ cao quá, con không nhìn được." David xoay trang giấy về phía con. "Đó là một ngôi nhà đẹp mà." Cô bé suy nghĩ một lúc. "Bố có thể xây một ngôi nhà khiến mọi người hạnh phúc không?" Anh định trả lời rồi lại thôi. Anh biết cách vẽ một mái nhà cao, nhưng chưa biết cách vẽ một buổi sáng hạnh phúc.
 
-**[s03]** After breakfast, they walk to the market. David carries his drawing in a blue folder. He wants to buy bread and go home quickly. He wants to finish his work before lunch. Near the gate, their neighbor Mai is selling vegetables. Her little stall has a green cover and a wooden stool. "Good morning!" she calls. David waves without stopping. His daughter stops beside the tomatoes. "Why is your stool on its side?" she asks. Mai points to one of its legs. "A screw is loose. I cannot sit on it."
+**[s03]** After breakfast, they walk to the market. David carries his drawing in a blue folder. He wants to buy bread and go home quickly. He wants to finish his work before lunch. Near the gate, their neighbor Mai is selling vegetables. Her little stall has a green cover and a wooden stool. "Good morning!" she calls. David waves without stopping. Lily stops beside the tomatoes. "Why is your stool on its side?" she asks. Mai points to one of its legs. "A screw is loose. I cannot sit on it."
 
-*Tiếng Việt:* Sau bữa sáng, hai bố con đi bộ ra chợ. David mang bản vẽ trong một bìa hồ sơ màu xanh dương. Anh muốn mua bánh mì rồi về nhanh, để làm xong việc trước bữa trưa. Gần cổng chợ, người hàng xóm tên Mai đang bán rau. Sạp nhỏ có mái che màu xanh lá và một chiếc ghế đẩu gỗ. "Chào buổi sáng!" cô gọi. David vừa vẫy tay vừa bước tiếp. Con gái dừng bên những quả cà chua. "Sao ghế của cô lại nằm nghiêng ạ?" Mai chỉ vào một chân ghế. "Một con vít bị lỏng nên cô không ngồi được."
+*Tiếng Việt:* Sau bữa sáng, hai bố con đi bộ ra chợ. David mang bản vẽ trong một bìa hồ sơ màu xanh dương. Anh muốn mua bánh mì rồi về nhanh, để làm xong việc trước bữa trưa. Gần cổng chợ, người hàng xóm tên Mai đang bán rau. Sạp nhỏ có mái che màu xanh lá và một chiếc ghế đẩu gỗ. "Chào buổi sáng!" cô gọi. David vừa vẫy tay vừa bước tiếp. Lily dừng bên những quả cà chua. "Sao ghế của cô lại nằm nghiêng ạ?" Mai chỉ vào một chân ghế. "Một con vít bị lỏng nên cô không ngồi được."
 
-**[s04]** A sudden wind lifts the green cover. David reaches up to help Mai hold it. His blue folder falls open. The drawing flies out and lands in a basket of tomatoes. A red tomato sits right on the tall roof. For a second, nobody moves. Then his daughter laughs. "Your house has a tomato hat!" David wants to be angry. He has worked on that drawing all morning. But the tomato has not hurt the paper. He picks it up, takes a breath, and laughs too.
+**[s04]** A sudden wind lifts the green cover. David reaches up to help Mai hold it. His blue folder falls open. The drawing flies out and lands in a basket of tomatoes. A red tomato sits right on the tall roof. For a second, nobody moves. Then Lily laughs. "Your house has a tomato hat!" David wants to be angry. He has worked on that drawing all morning. But the tomato has not hurt the paper. He picks it up, takes a breath, and laughs too.
 
 *Tiếng Việt:* Một cơn gió bất chợt hất mái che xanh lên. David đưa tay giúp Mai giữ lại. Bìa hồ sơ tuột mở, bản vẽ bay ra rồi rơi vào giỏ cà chua. Một quả cà chua đỏ nằm ngay trên mái nhà cao. Cả ba khựng lại, rồi cô bé bật cười. "Nhà của bố đội mũ cà chua!" David định nổi giận vì anh đã vẽ nó suốt buổi sáng. Nhưng quả cà chua không làm hỏng giấy. Anh nhặt nó lên, hít một hơi rồi cũng bật cười.
 
-**[s05]** Now David notices Mai's face. She looks tired. "I have been standing since sunrise," she says. There is a bench across the path, but it is in the hot sun. The green cover gives shade, but only beside the stall. David looks from the bench to the stool. A beautiful place to sit is not much help if you cannot use it. His daughter moves an empty box out of the path. "People need room to walk too," she says. David puts his folder down.
+**[s05]** Now David notices Mai's face. She looks tired. "I have been standing since sunrise," she says. There is a bench across the path, but it is in the hot sun. The green cover gives shade, but only beside the stall. David looks from the bench to the stool. A beautiful place to sit is not much help if you cannot use it. Lily moves an empty box out of the path. "People need room to walk too," she says. David puts his folder down.
 
-*Tiếng Việt:* Lúc này David mới để ý khuôn mặt mệt mỏi của Mai. "Tôi đã đứng từ lúc mặt trời mọc," cô nói. Bên kia lối đi có ghế băng nhưng nằm giữa nắng nóng. Mái che xanh có bóng mát, nhưng chỉ ở cạnh sạp. David nhìn từ ghế băng sang ghế đẩu. Một chỗ ngồi đẹp chẳng giúp được mấy nếu người ta không sử dụng được. Con gái dời chiếc thùng rỗng khỏi lối đi. "Mọi người cũng cần chỗ để đi nữa," cô nói. David đặt bìa hồ sơ xuống.
+*Tiếng Việt:* Lúc này David mới để ý khuôn mặt mệt mỏi của Mai. "Tôi đã đứng từ lúc mặt trời mọc," cô nói. Bên kia lối đi có ghế băng nhưng nằm giữa nắng nóng. Mái che xanh có bóng mát, nhưng chỉ ở cạnh sạp. David nhìn từ ghế băng sang ghế đẩu. Một chỗ ngồi đẹp chẳng giúp được mấy nếu người ta không sử dụng được. Lily dời chiếc thùng rỗng khỏi lối đi. "Mọi người cũng cần chỗ để đi nữa," cô nói. David đặt bìa hồ sơ xuống.
 
-**[s06]** Mai has a small tool in a drawer. With her permission, David uses it to tighten the loose screw. He checks the stool before Mai sits down. "Thank you," she says. "It is a small repair, but it makes a big difference to my morning." His daughter stands under the cover beside her. David sees them talking in the shade. Nothing here is tall or expensive. Still, people can sit, talk, and see each other. He looks at the little window in his drawing again.
+**[s06]** Mai has a small tool in a drawer. With her permission, David uses it to tighten the loose screw. He checks the stool before Mai sits down. "Thank you," she says. "It is a small repair, but it makes a big difference to my morning." Lily stands under the cover beside her. David sees them talking in the shade. Nothing here is tall or expensive. Still, people can sit, talk, and see each other. He looks at the little window in his drawing again.
 
-*Tiếng Việt:* Mai có một dụng cụ nhỏ trong ngăn kéo. Được cô đồng ý, David dùng nó siết lại con vít lỏng. Anh kiểm tra chiếc ghế trước khi Mai ngồi xuống. "Cảm ơn anh," cô nói. "Chỉ là một sửa chữa nhỏ nhưng buổi sáng của tôi dễ chịu hơn nhiều." Con gái đứng bên cô dưới mái che. David thấy hai người trò chuyện trong bóng mát. Ở đây chẳng có gì cao lớn hay đắt tiền, nhưng mọi người có thể ngồi, nói chuyện và nhìn thấy nhau. Anh nhìn lại ô cửa sổ nhỏ trong bản vẽ.
+*Tiếng Việt:* Mai có một dụng cụ nhỏ trong ngăn kéo. Được cô đồng ý, David dùng nó siết lại con vít lỏng. Anh kiểm tra chiếc ghế trước khi Mai ngồi xuống. "Cảm ơn anh," cô nói. "Chỉ là một sửa chữa nhỏ nhưng buổi sáng của tôi dễ chịu hơn nhiều." Lily đứng bên cô dưới mái che. David thấy hai người trò chuyện trong bóng mát. Ở đây chẳng có gì cao lớn hay đắt tiền, nhưng mọi người có thể ngồi, nói chuyện và nhìn thấy nhau. Anh nhìn lại ô cửa sổ nhỏ trong bản vẽ.
 
-**[s07]** On the way home, David does not hurry. "What would you change?" he asks his daughter. "A low window, so I can see the tree. And a seat where Grandma can rest." At home, he draws a second picture. The door is easy to reach. The window is lower. There is a seat in the shade beside the entrance. He keeps the first picture too. He wants to show both pictures to the people who will live in the house, and ask what they need.
+**[s07]** On the way home, David does not hurry. "What would you change?" he asks Lily. "A low window, so I can see the tree. And a seat where Grandma Lan can rest." At home, he draws a second picture. The door is easy to reach. The window is lower. There is a seat in the shade beside the entrance. He keeps the first picture too. He wants to show both pictures to the people who will live in the house, and ask what they need.
 
-*Tiếng Việt:* Trên đường về, David không còn vội. "Con muốn thay đổi điều gì?" anh hỏi. "Một cửa sổ thấp để con nhìn thấy cây. Và một chỗ ngồi để bà nghỉ chân." Về nhà, anh vẽ bức thứ hai. Cửa ra vào dễ tiếp cận hơn, cửa sổ thấp hơn và có một chỗ ngồi trong bóng mát cạnh lối vào. Anh vẫn giữ bức đầu tiên. Anh muốn đưa cả hai bản cho những người sẽ sống trong nhà xem và hỏi họ cần gì.
+*Tiếng Việt:* Trên đường về, David không còn vội. "Con muốn thay đổi điều gì?" anh hỏi. "Một cửa sổ thấp để con nhìn thấy cây. Và một chỗ ngồi để bà nội Lan nghỉ chân." Về nhà, anh vẽ bức thứ hai. Cửa ra vào dễ tiếp cận hơn, cửa sổ thấp hơn và có một chỗ ngồi trong bóng mát cạnh lối vào. Anh vẫn giữ bức đầu tiên. Anh muốn đưa cả hai bản cho những người sẽ sống trong nhà xem và hỏi họ cần gì.
 
-**[s08]** His daughter brings him a bowl of soup for lunch. This time, David closes his folder before he picks up his spoon. "Is this the happy house?" she asks. "I do not know yet," he says. "We have to ask the people who will live there. But I think I was drawing the roof before I was listening to them." She draws a tiny tomato on the corner of the new picture. David leaves it there. Under the drawing, he writes one question: "Who is this house for?"
+**[s08]** Lily brings him a bowl of soup for lunch. This time, David closes his folder before he picks up his spoon. "Is this the happy house?" she asks. "I do not know yet," he says. "We have to ask the people who will live there. But I think I was drawing the roof before I was listening to them." She draws a tiny tomato on the corner of the new picture. David leaves it there. Under the drawing, he writes one question: "Who is this house for?"
 
-*Tiếng Việt:* Đến bữa trưa, con gái mang cho anh một bát súp. Lần này David đóng bìa hồ sơ rồi mới cầm thìa. "Đây là ngôi nhà hạnh phúc hả bố?" cô hỏi. "Bố chưa biết. Mình phải hỏi những người sẽ sống ở đó. Nhưng bố nghĩ mình đã mải vẽ mái nhà trước khi chịu lắng nghe họ." Cô bé vẽ một quả cà chua tí hon ở góc bản vẽ mới. David giữ nguyên hình đó. Dưới bản vẽ, anh viết một câu hỏi: "Ngôi nhà này dành cho ai?"
+*Tiếng Việt:* Đến bữa trưa, Lily mang cho anh một bát súp. Lần này David đóng bìa hồ sơ rồi mới cầm thìa. "Đây là ngôi nhà hạnh phúc hả bố?" cô hỏi. "Bố chưa biết. Mình phải hỏi những người sẽ sống ở đó. Nhưng bố nghĩ mình đã mải vẽ mái nhà trước khi chịu lắng nghe họ." Cô bé vẽ một quả cà chua tí hon ở góc bản vẽ mới. David giữ nguyên hình đó. Dưới bản vẽ, anh viết một câu hỏi: "Ngôi nhà này dành cho ai?"
 
 ### Word Discovery
 
@@ -54,7 +54,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Tiếng Việt:* Sunrise là lúc mặt trời mọc, bắt đầu ngày mới. Mai đã đứng từ lúc đó. Hãy hình dung trời sáng dần khi cô bày rau lên sạp. Sunrise không phải giữa trưa nắng nóng mà là buổi đầu ngày. Trong buổi sáng ấy, David nhìn thấy vấn đề và cả cơ hội làm buổi sáng dễ chịu hơn.
 
-**[s03]** To hurry is to move or work quickly because you feel you have little time. David wants to hurry home. He is thinking about his work. Later, he does not hurry. He walks with his daughter and asks a question. Think of two pictures: David walking past the stall, and David stopping to listen. The street is the same. His attention is different.
+**[s03]** To hurry is to move or work quickly because you feel you have little time. David wants to hurry home. He is thinking about his work. Later, he does not hurry. He walks with Lily and asks a question. Think of two pictures: David walking past the stall, and David stopping to listen. The street is the same. His attention is different.
 
 *Tiếng Việt:* Hurry là vội đi hoặc vội làm vì cảm thấy không có nhiều thời gian. David muốn vội về vì nghĩ đến công việc. Sau đó anh không còn vội; anh đi cùng con và đặt câu hỏi. Hình dung hai cảnh: David bước ngang qua sạp và David dừng lại lắng nghe. Con phố vẫn vậy, nhưng điều anh chú ý đã khác.
 
@@ -112,15 +112,15 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s01.*
 
-Đáp án mẫu: His daughter puts two bowls on the table.
+Đáp án mẫu: Lily puts two bowls on the table.
 
 **q006. Are both bowls for David?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s01.*
 
-Đáp án mẫu: No. One is for David, and one is for his daughter.
+Đáp án mẫu: No. One is for David, and one is for Lily.
 
-**q007. What does his daughter want him to do first?**
+**q007. What does Lily want him to do first?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s01.*
 
@@ -162,7 +162,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: She is two years old.
 
-**q009. Why does his daughter put her head close to the table?**
+**q009. Why does Lily put her head close to the table?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s02.*
 
@@ -180,7 +180,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He calls it a beautiful house.
 
-**q012. Does his daughter only ask about the roof?**
+**q012. Does Lily only ask about the roof?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s02.*
 
@@ -210,7 +210,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He does not know how to draw a happy morning.
 
-**q017. Where do David and his daughter go after breakfast?**
+**q017. Where do David and Lily go after breakfast?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s03.*
 
@@ -250,7 +250,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s03.*
 
-Đáp án mẫu: David's daughter stops beside the tomatoes.
+Đáp án mẫu: Lily stops beside the tomatoes.
 
 **q024. Why can Mai not sit on her stool?**
 
@@ -300,7 +300,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He has worked on the drawing all morning.
 
-**q032. Does he stay angry after his daughter laughs?**
+**q032. Does he stay angry after Lily laughs?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s04.*
 
@@ -342,7 +342,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: People may not be able to use it.
 
-**q039. What does his daughter move out of the path?**
+**q039. What does Lily move out of the path?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s05.*
 
@@ -384,7 +384,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: Yes. It makes a big difference to her morning.
 
-**q046. Where do Mai and David's daughter talk?**
+**q046. Where do Mai and Lily talk?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s06.*
 
@@ -408,7 +408,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: No. He does not hurry.
 
-**q050. What does he ask his daughter?**
+**q050. What does he ask Lily?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s07.*
 
@@ -424,7 +424,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s07.*
 
-Đáp án mẫu: Grandma needs a place to rest.
+Đáp án mẫu: Grandma Lan needs a place to rest.
 
 **q053. Does David throw away his first picture?**
 
@@ -450,7 +450,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He wants to ask what they need.
 
-**q057. What does his daughter bring him at lunchtime?**
+**q057. What does Lily bring him at lunchtime?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s08.*
 
@@ -480,7 +480,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He drew the roof before listening to the people.
 
-**q062. What does his daughter draw in the corner?**
+**q062. What does Lily draw in the corner?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s08.*
 
@@ -500,11 +500,11 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ### Time Shift
 
-**[s01]** Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. His daughter in grade one brought two bowls to the table. David smiled, but he kept looking at the drawing. Then his daughter looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.
+**[s01]** Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. Lily brought two bowls to the table. David smiled, but he kept looking at the drawing. Then Lily looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.
 
-*Tiếng Việt:* Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Con gái học lớp 1 mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được.
+*Tiếng Việt:* Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Lily mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được.
 
-**[s02]** They went to the market after breakfast. David carried a blue folder and wanted to go home quickly. Mai's stool was on its side because a screw was loose. David did not stop at first. Then the wind lifted the green cover. He reached up to help, and his folder fell open. His drawing landed in a basket of tomatoes. His daughter laughed at the tomato on the roof. David took a breath and laughed with her.
+**[s02]** They went to the market after breakfast. David carried a blue folder and wanted to go home quickly. Mai's stool was on its side because a screw was loose. David did not stop at first. Then the wind lifted the green cover. He reached up to help, and his folder fell open. His drawing landed in a basket of tomatoes. Lily laughed at the tomato on the roof. David took a breath and laughed with her.
 
 *Tiếng Việt:* Hai bố con ra chợ sau bữa sáng. David mang bìa hồ sơ xanh và muốn nhanh về. Ghế của Mai nằm nghiêng vì vít lỏng. Ban đầu anh chưa dừng lại. Gió hất mái che lên, anh đưa tay giúp và bìa hồ sơ tuột mở. Bản vẽ rơi vào giỏ cà chua. Con gái cười vì quả cà chua trên mái nhà. David hít một hơi rồi cười cùng con.
 
@@ -512,17 +512,17 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Tiếng Việt:* Khi dừng lại, David nhận ra khuôn mặt mệt mỏi của Mai. Cô đã đứng từ sáng sớm. Ghế băng bên kia lối đi nằm ngoài nắng nên không phải chỗ nghỉ tốt. Mai đồng ý cho anh dùng dụng cụ. Anh siết vít, kiểm tra ghế rồi cô ngồi xuống trong bóng mát. Anh chưa hoàn thành ngôi nhà mới nhưng đã giúp một người dùng được chỗ vốn có ở đó.
 
-**[s04]** On the way home, he asked his daughter what she would change. She wanted a lower window and a seat for Grandma. David drew another picture, but he kept the first one. At lunch, he put his work away before he ate. He did not say that his new design would make everyone happy. He said he needed to ask the people who would live there. Yesterday morning had started with a roof. It ended with a better question.
+**[s04]** On the way home, he asked Lily what she would change. She wanted a lower window and a seat for Grandma Lan. David drew another picture, but he kept the first one. At lunch, he put his work away before he ate. He did not say that his new design would make everyone happy. He said he needed to ask the people who would live there. Yesterday morning had started with a roof. It ended with a better question.
 
-*Tiếng Việt:* Trên đường về, anh hỏi con muốn thay đổi gì. Cô bé muốn cửa sổ thấp hơn và chỗ ngồi cho bà. Anh vẽ bản khác nhưng vẫn giữ bản đầu. Đến trưa, anh cất việc rồi mới ăn. Anh không nói bản thiết kế mới chắc chắn khiến ai cũng hạnh phúc; anh nói mình cần hỏi người sẽ ở đó. Buổi sáng bắt đầu bằng mái nhà và kết thúc bằng một câu hỏi tốt hơn.
+*Tiếng Việt:* Trên đường về, anh hỏi con muốn thay đổi gì. Cô bé muốn cửa sổ thấp hơn và chỗ ngồi cho bà nội Lan. Anh vẽ bản khác nhưng vẫn giữ bản đầu. Đến trưa, anh cất việc rồi mới ăn. Anh không nói bản thiết kế mới chắc chắn khiến ai cũng hạnh phúc; anh nói mình cần hỏi người sẽ ở đó. Buổi sáng bắt đầu bằng mái nhà và kết thúc bằng một câu hỏi tốt hơn.
 
 **[s05]** Now imagine David speaking that evening. "Tomorrow, I will show both pictures to the people who want the house. I will ask where they like to sit in the morning. I will ask who needs an easy entrance. I will not begin by telling them what they should want. First, I will listen. Then I will draw. A tall roof may still be useful, but it will not answer every question."
 
 *Tiếng Việt:* Hãy hình dung David nói tối hôm đó: "Ngày mai tôi sẽ cho những người muốn xây nhà xem cả hai bản. Tôi sẽ hỏi buổi sáng họ thích ngồi đâu và ai cần lối vào dễ tiếp cận. Tôi sẽ không mở đầu bằng việc bảo họ nên muốn gì. Tôi sẽ nghe trước rồi mới vẽ. Mái cao vẫn có thể hữu ích, nhưng không trả lời được mọi câu hỏi."
 
-**[s06]** And now, listen from the point of view of his daughter in grade one. "This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked."
+**[s06]** And now, listen from Lily's point of view. Lily is David's daughter and is in grade one. "This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked."
 
-*Tiếng Việt:* Bây giờ là góc nhìn của con gái học lớp 1: "Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi."
+*Tiếng Việt:* Bây giờ là góc nhìn của Lily, con gái David đang học lớp 1: "Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi."
 
 ## Z01 — The Mouse Who Wanted to Fly
 

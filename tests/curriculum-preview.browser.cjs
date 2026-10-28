@@ -19,7 +19,8 @@ const m=require('../docs/curriculum/curriculum_manifest.json'),b=require('../cur
     const origin=`http://127.0.0.1:${server.address().port}`;await page.goto(origin);
     assert.ok((await page.locator('#family').textContent()).includes('Kế toán'));
     assert.ok((await page.locator('#members').textContent()).includes('Học lớp 4'));
-    assert.ok((await page.locator('#story').textContent()).includes('Their youngest daughter is two years old.'));
+    for(const name of ['David','Anna','Ben','Lily','Sophie'])assert.ok((await page.locator('#members').textContent()).includes(name));
+    assert.ok((await page.locator('#story').textContent()).includes('Their youngest daughter, Sophie, is two years old.'));
     assert.equal(await page.locator('.translation').first().isVisible(),false);await page.locator('#bilingual').check();assert.equal(await page.locator('.translation').first().isVisible(),true);
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     await page.screenshot({path:path.join(process.env.RUNNER_TEMP||'/tmp','curriculum-preview.png'),fullPage:false});

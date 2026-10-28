@@ -13,10 +13,10 @@
   function paragraph(p){const box=node('section',undefined,'paragraph');box.append(node('p',p.text,'english'));if(p.translationVi)box.append(node('p',p.translationVi,'translation'));return box;}
   function renderFamily(){
     $('family').hidden=lesson!=='C01';
-    const names={david:'David · bố', 'david-wife':'Vợ David · mẹ','david-son':'Con trai lớn','david-older-daughter':'Con gái lớn','david-younger-daughter':'Con gái út'};
+    const labels={david:'bố', 'david-wife':'mẹ','david-son':'con trai lớn','david-older-daughter':'con gái lớn','david-younger-daughter':'con gái út'};
     const roles={architect:'Kiến trúc sư',accountant:'Kế toán'};
     $('members').replaceChildren(...data.characters.family.members.map(m=>{
-      const box=node('div',undefined,'member');box.append(node('strong',names[m.id]),node('span',m.occupation?roles[m.occupation]:m.schoolGrade?`Học lớp ${m.schoolGrade}`:`${m.ageYears} tuổi`));return box;
+      const box=node('div',undefined,'member');box.append(node('strong',`${m.name} · ${labels[m.id]}`),node('span',m.occupation?roles[m.occupation]:m.schoolGrade?`Học lớp ${m.schoolGrade}`:`${m.ageYears} tuổi`));return box;
     }));
   }
   function renderSource(){

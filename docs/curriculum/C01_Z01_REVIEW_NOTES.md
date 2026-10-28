@@ -1,4 +1,4 @@
-# C01/Z01: hướng dẫn duyệt bản nháp v1.1
+# C01/Z01: hướng dẫn duyệt bản nháp v1.2
 
 Soạn ngày 28/10/2026 theo yêu cầu người dùng cho Codex đảm nhận cả nội dung và kỹ thuật. Tất cả là bản nháp mới, chưa được người dùng duyệt, chưa phát hành vào app. Không phải kết quả trao đổi tự động với một phiên ChatGPT khác.
 
@@ -20,7 +20,7 @@ Q&A luyện nghe hiện dùng tiếng Anh, có hướng dẫn Việt ở đầu.
 - **Lựa chọn:** dừng lại, sửa ghế với sự đồng ý của Mai, hỏi ý con rồi giữ cả hai bản thiết kế để hỏi người sẽ ở. Chưa tuyên bố một thay đổi thiết kế chắc chắn làm ai cũng hạnh phúc.
 - **Kết:** câu hỏi “Who is this house for?” trở thành động lực sang C02 — The House That Listened. Quả cà chua nhỏ lưu dấu một lần biết dừng lại và nghe.
 
-David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin người dùng vừa chốt: vợ kế toán, con trai lớp 4, con gái lớp 1 và con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1. Bản nháp không tự đặt tên các thành viên hoặc suy ra tuổi của hai con đi học. Mai là nhân vật hàng xóm đề xuất mới, chưa khóa cho toàn bộ series. Khách hàng và cuộc gặp ngày mai trong Time Shift là tình huống tưởng tượng được giới thiệu rõ, không phải dữ kiện đã xảy ra trong Main Story.
+David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin người dùng vừa chốt: vợ kế toán, con trai lớp 4, con gái lớp 1 và con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1. Theo yêu cầu tiếp theo của người dùng, tên dùng trong truyện là Anna, Ben, Lily và Sophie; không suy ra tuổi hai con đi học. Bà nội được gọi là Grandma Lan. Mai là nhân vật hàng xóm đề xuất mới, chưa khóa cho toàn bộ series. Khách hàng và cuộc gặp ngày mai trong Time Shift là tình huống tưởng tượng được giới thiệu rõ, không phải dữ kiện đã xảy ra trong Main Story.
 
 ### Bốn phần
 

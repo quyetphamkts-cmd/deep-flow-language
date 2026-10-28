@@ -1,4 +1,4 @@
-# STORY BIBLE — v1.1 (family facts confirmed; story outlines provisional)
+# STORY BIBLE — v1.2 (family names assigned; story outlines provisional)
 
 ## Main series
 **The Architect’s Journey**: David, Vietnamese architect and father, asks what makes a house genuinely good for people. A child's question — “Dad, can you build a house that makes people happy?” — begins a 12-episode journey. The answer develops from impressive buildings toward empathy, belonging, nature, safety, community and purpose. Avoid preachiness. Every episode: clear want → obstacle → escalating attempt → surprising but causal choice → emotional change. Characters and episodes beyond this brief remain to be developed; David's age, location and other biographical details are NOT locked.
@@ -11,14 +11,35 @@ Gia đình chính có **đúng năm thành viên**:
 | Thành viên | Thông tin đã chốt |
 |---|---|
 | David | Bố, kiến trúc sư người Việt Nam |
-| Vợ David | Mẹ, làm nghề kế toán |
-| Con trai lớn | Học lớp 4 |
-| Con gái lớn | Học lớp 1 |
-| Con gái út | Hai tuổi |
+| Anna | Vợ David, làm nghề kế toán |
+| Ben | Con trai lớn, học lớp 4 |
+| Lily | Con gái lớn, học lớp 1 |
+| Sophie | Con gái út, hai tuổi |
 
-Cô con gái hỏi về ngôi nhà hạnh phúc và đi chợ cùng David trong C01 là **bé học lớp 1**. Con gái hai tuổi không phải nhân vật nói những câu này. Các nhân vật còn lại có thể xuất hiện tự nhiên ở bài sau, không cần đưa cả nhà vào mọi cảnh.
+Cô con gái hỏi về ngôi nhà hạnh phúc và đi chợ cùng David trong C01 là **Lily, bé học lớp 1**. Con gái hai tuổi không phải nhân vật nói những câu này. Các nhân vật còn lại có thể xuất hiện tự nhiên ở bài sau, không cần đưa cả nhà vào mọi cảnh.
 
-Chưa đặt tên vợ/các con, chưa suy ra tuổi của hai con đi học từ khối lớp. Grandma được nhắc trong C01 không làm thay đổi gia đình chính thành sáu thành viên. Dữ liệu dùng chung nằm ở `curriculum/characters.json`; mọi thay đổi mốc thời gian ở bài sau cần nêu rõ, không tự tăng lớp/tuổi trong cảnh đang diễn ra cùng giai đoạn.
+Theo yêu cầu tự đặt tên ngày 28/10/2026, dùng Anna, Ben, Lily và Sophie nhất quán trong giáo trình tiếng Anh; đây không phải thông tin về tên trên giấy tờ. Chưa suy ra tuổi của hai con đi học từ khối lớp. Grandma được nhắc trong C01 không làm thay đổi gia đình chính thành sáu thành viên. Dữ liệu dùng chung nằm ở `curriculum/characters.json`; mọi thay đổi mốc thời gian ở bài sau cần nêu rõ, không tự tăng lớp/tuổi trong cảnh đang diễn ra cùng giai đoạn.
+
+
+## Người thân, họ hàng và bạn bè xuất hiện định kỳ
+
+| Tên gọi trong truyện | Quan hệ và vai trò |
+|---|---|
+| Grandma Lan | Bà nội, mẹ David; Lily nhắc đến trong C01 |
+| Grandpa Minh | Ông nội, bố David; chuyện thăm ông bà, khu vườn và ký ức |
+| Uncle Nam | Em trai Anna, cậu của ba bé, thợ mộc; chuyện làm đồ và hợp tác |
+| Tom | Con trai Nam, anh/em họ của ba bé; chưa chốt tuổi hoặc thứ bậc theo tuổi |
+| Huy | Bạn lâu năm của David, có quan điểm và nhu cầu riêng |
+| Mai | Hàng xóm bán rau, đã có vai trò trong C01 |
+
+Đây là dàn nhân vật bổ sung được đặt theo quyền sáng tác người dùng giao. Quan hệ giữ nguyên khi tái xuất. Các gợi ý xuất hiện sau đây là kế hoạch biên tập, chưa phải kịch bản đã khóa:
+
+- C02 có thể để Anna tham gia cuộc trao đổi về ngôi nhà và cách lắng nghe nhau; nghề kế toán thể hiện tự nhiên qua công việc, không giới hạn cô ở vai trò nội trợ.
+- C03 có thể để Ben hoặc Huy góp một góc nhìn khác khi bản vẽ thất lạc.
+- C04–C05 có thể đưa ông bà, Sophie hoặc Nam vào những tình huống về không gian chung, chỗ nghỉ và nhu cầu an toàn khác nhau.
+- Các bài tiếp theo luân phiên họ hàng/bạn bè, để Tom xuất hiện khi có bối cảnh gặp gỡ, chia sẻ hay chơi cùng các anh chị em họ.
+
+Mỗi bài nên chỉ thêm khoảng một hoặc hai tên phụ mới; C01 giới thiệu tên các thành viên để biết họ là ai, không buộc nhớ hết hoặc kiểm tra thuộc tên. Nhắc lại quan hệ khi nhân vật lâu không xuất hiện. Không đưa tất cả vào cùng cảnh, không dùng mọi nhân vật để thuyết giảng, không tự cộng người thân vào năm thành viên gia đình chính. Thế giới Zodiac vẫn độc lập, không ép các nhân vật người vào truyện con giáp.
 
 ## Zodiac world
 **The Twelve Zodiac Adventures**: 12 recurring animal protagonists, five standalone adventures each; world may contain magical houses, speaking trees, unusual villages and imaginative inventions. Maintain clear internal logic, friendly accessible English and practical transferable dialogue.

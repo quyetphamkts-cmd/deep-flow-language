@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "user_confirmed_facts",
+  "status": "family_facts_confirmed_names_assigned",
   "family": {
     "id": "david-family",
     "size": 5,
@@ -14,27 +14,27 @@
       {
         "id": "david-wife",
         "role": "mother",
-        "name": null,
+        "name": "Anna",
         "occupation": "accountant"
       },
       {
         "id": "david-son",
         "role": "oldest_child",
-        "name": null,
+        "name": "Ben",
         "gender": "male",
         "schoolGrade": 4
       },
       {
         "id": "david-older-daughter",
         "role": "middle_child",
-        "name": null,
+        "name": "Lily",
         "gender": "female",
         "schoolGrade": 1
       },
       {
         "id": "david-younger-daughter",
         "role": "youngest_child",
-        "name": null,
+        "name": "Sophie",
         "gender": "female",
         "ageYears": 2
       }
@@ -44,7 +44,79 @@
   "confirmedBy": "user",
   "confirmedOn": "2026-10-28",
   "notes": [
-    "Chưa chốt tên vợ và các con, tuổi của bố mẹ, tuổi của hai con đi học hoặc địa điểm sống.",
-    "Grandma trong C01 là người thân được nhắc đến, không bổ sung thành viên thứ sáu vào mô hình gia đình chính."
+    "Gia đình chính vẫn đúng năm người; nhân vật người thân/bạn bè không thêm vào family.members.",
+    "Chưa chốt tuổi bố mẹ, tuổi hai con đi học, tên đầy đủ theo giấy tờ, hoặc nơi ở của đại gia đình.",
+    "Các tên Anna, Ben, Lily, Sophie là tên gọi dùng trong giáo trình tiếng Anh theo quyền tự đặt tên người dùng giao.",
+    "Nhân vật phụ được đưa vào từng bước; không bắt người học nhớ mọi tên ngay C01."
+  ],
+  "version": 2,
+  "namingAuthority": "Người dùng yêu cầu Codex tự đặt tên, ngày 28/10/2026.",
+  "recurringCharacters": [
+    {
+      "id": "grandma-lan",
+      "name": "Lan",
+      "addressAs": "Grandma Lan",
+      "relationship": "Mẹ David, bà nội của Ben, Lily và Sophie",
+      "relatedTo": [
+        "david",
+        "david-son",
+        "david-older-daughter",
+        "david-younger-daughter"
+      ],
+      "introduction": "Được Lily nhắc trong C01 khi muốn có chỗ cho bà nghỉ; không chốt nơi ở."
+    },
+    {
+      "id": "grandpa-minh",
+      "name": "Minh",
+      "addressAs": "Grandpa Minh",
+      "relationship": "Bố David, ông nội của ba bé",
+      "relatedTo": [
+        "david"
+      ],
+      "introduction": "Dùng dần ở các chuyện thăm ông bà, khu vườn và ký ức gia đình."
+    },
+    {
+      "id": "uncle-nam",
+      "name": "Nam",
+      "addressAs": "Uncle Nam",
+      "relationship": "Em trai Anna, cậu của ba bé; nghề thợ mộc",
+      "relatedTo": [
+        "david-wife"
+      ],
+      "introduction": "Dùng trong chuyện sửa đồ, làm việc cùng nhau, hỏi nhờ giúp."
+    },
+    {
+      "id": "cousin-tom",
+      "name": "Tom",
+      "addressAs": "Tom",
+      "relationship": "Con trai Nam, anh/em họ của Ben, Lily và Sophie; chưa chốt tuổi",
+      "relatedTo": [
+        "uncle-nam",
+        "david-son",
+        "david-older-daughter",
+        "david-younger-daughter"
+      ],
+      "introduction": "Dùng trong chuyện họ hàng gặp nhau, trò chơi và chia sẻ; chưa tự chốt thứ bậc theo tuổi."
+    },
+    {
+      "id": "friend-huy",
+      "name": "Huy",
+      "addressAs": "Huy",
+      "relationship": "Bạn lâu năm của David",
+      "relatedTo": [
+        "david"
+      ],
+      "introduction": "Bạn có quan điểm riêng, đôi khi góp ý hoặc bất đồng; không chỉ xuất hiện để giảng bài."
+    },
+    {
+      "id": "neighbor-mai",
+      "name": "Mai",
+      "addressAs": "Mai",
+      "relationship": "Hàng xóm gia đình David, bán rau ở chợ",
+      "relatedTo": [
+        "david"
+      ],
+      "introduction": "Đã xuất hiện trong C01; có thể tái xuất khi tình huống cần."
+    }
   ]
 }
