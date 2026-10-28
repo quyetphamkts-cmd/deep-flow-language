@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 1,
+  "version": 2,
   "status": "proposed_not_canonical",
   "source": "Original draft authoring inventory; not a frequency-ranked external word list",
   "license": null,
@@ -409,6 +409,86 @@
       "ipa": "/æsk fər help/",
       "ipaVariety": "General American, bản biên soạn chờ rà soát",
       "glossVi": "nhờ giúp đỡ"
+    },
+    {
+      "id": "en.accountant",
+      "lemma": "accountant",
+      "forms": [
+        "accountants"
+      ],
+      "ipa": "/əˈkaʊntənt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "kế toán viên"
+    },
+    {
+      "id": "en.wife",
+      "lemma": "wife",
+      "forms": [
+        "wives"
+      ],
+      "ipa": "/waɪf/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "vợ"
+    },
+    {
+      "id": "en.son",
+      "lemma": "son",
+      "forms": [
+        "sons"
+      ],
+      "ipa": "/sʌn/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "con trai"
+    },
+    {
+      "id": "en.daughter",
+      "lemma": "daughter",
+      "forms": [
+        "daughters"
+      ],
+      "ipa": "/ˈdɔːtər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "con gái"
+    },
+    {
+      "id": "en.grade",
+      "lemma": "grade",
+      "forms": [
+        "grades"
+      ],
+      "ipa": "/ɡreɪd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lớp học trong ngữ cảnh này"
+    },
+    {
+      "id": "en.family",
+      "lemma": "family",
+      "forms": [
+        "families"
+      ],
+      "ipa": "/ˈfæməli/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "gia đình"
+    },
+    {
+      "id": "en.year",
+      "lemma": "year",
+      "forms": [
+        "years"
+      ],
+      "ipa": "/jɪr/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "năm; two years old: hai tuổi"
+    },
+    {
+      "id": "en.child",
+      "lemma": "child",
+      "forms": [
+        "children"
+      ],
+      "ipa": "/tʃaɪld/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đứa trẻ; con trong gia đình"
     }
   ]
 }

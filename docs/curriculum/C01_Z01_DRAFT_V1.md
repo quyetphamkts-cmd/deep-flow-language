@@ -852,6 +852,14 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 | thread | /θred/ | sợi chỉ |
 | disappointed | /ˌdɪsəˈpɔɪntɪd/ | thất vọng |
 | ask for help | /æsk fər help/ | nhờ giúp đỡ |
+| accountant | /əˈkaʊntənt/ | kế toán viên |
+| wife | /waɪf/ | vợ |
+| son | /sʌn/ | con trai |
+| daughter | /ˈdɔːtər/ | con gái |
+| grade | /ɡreɪd/ | lớp học trong ngữ cảnh này |
+| family | /ˈfæməli/ | gia đình |
+| year | /jɪr/ | năm; two years old: hai tuổi |
+| child | /tʃaɪld/ | đứa trẻ; con trong gia đình |
 
 ## Vì sao chọn Word Discovery?
 

@@ -55,7 +55,7 @@ test('planning includes all explicit learner pauses but does not count translati
 test('proposed inventory is actually present and core vocabulary reappears in the independent expansion',()=>{
   const r=reviewDraft(manifest,bundle,inventory),a=r.proposedInventoryAudit;
   assert.equal(inventory.status,'proposed_not_canonical');assert.equal(inventory.license,null);
-  assert.deepEqual(a.missingWords,[]);assert.equal(r.proposedVocabularyCount,40);assert.equal(r.wordDiscoveryCount,9);
+  assert.deepEqual(a.missingWords,[]);assert.equal(r.proposedVocabularyCount,48);assert.equal(r.wordDiscoveryCount,9);
   const z=a.lessons.find(l=>l.id==='Z01');assert.ok(z.reviewed.includes('en.repair'));assert.ok(z.reviewed.includes('en.tool'));assert.ok(z.reviewed.includes('en.reach'));
 });
 test('human review document stays synchronized with structured English/Vietnamese scripts',()=>{

@@ -5,8 +5,7 @@ on:
       - 'docs/curriculum/**'
       - 'curriculum/**'
       - 'tools/curriculum/**'
-      - 'tests/curriculum.test.cjs'
-      - 'tests/curriculum-draft.test.cjs'
+      - 'tests/curriculum*'
       - '.github/workflows/curriculum-checks.yml'
   workflow_dispatch:
 permissions:
@@ -28,6 +27,15 @@ jobs:
         run: |
           node tools/curriculum/review-draft.cjs > curriculum-draft-review.json
           node tools/curriculum/review-draft.cjs --markdown > curriculum-draft.md
+      - name: Xuất bản đọc thử độc lập
+        run: node tools/curriculum/build-preview.cjs > curriculum-preview.html
+      - name: Cài công cụ kiểm tra trình duyệt trong thư mục tạm
+        run: npm install --prefix "$RUNNER_TEMP/df-curriculum-browser" --no-save --package-lock=false playwright@1.56.1
+      - name: Kiểm tra bản đọc thử trên màn hình điện thoại
+        env:
+          NODE_PATH: ${{ runner.temp }}/df-curriculum-browser/node_modules
+          CHROME_BIN: /usr/bin/google-chrome
+        run: node tests/curriculum-preview.browser.cjs
       - uses: actions/upload-artifact@v4
         with:
           name: curriculum-review
@@ -36,3 +44,5 @@ jobs:
             curriculum-preview.json
             curriculum-draft-review.json
             curriculum-draft.md
+            curriculum-preview.html
+            ${{ runner.temp }}/curriculum-preview.png

@@ -6,7 +6,7 @@ Soạn ngày 28/10/2026 theo yêu cầu người dùng cho Codex đảm nhận c
 
 - `C01_Z01_DRAFT_V1.md`: bản đọc cho người duyệt, gồm tiếng Anh, bản dịch Việt các đoạn kể/giải thích/Time Shift, câu hỏi và đáp án mẫu.
 - `curriculum/drafts/v1/scripts.json`: dữ liệu gốc sáu phần, ID đoạn ổn định, liên kết câu hỏi đến cảnh trong truyện và khoảng chờ.
-- `curriculum/drafts/v1/vocabulary.proposed.json`: 40 từ/cụm để thử công cụ phân tích, IPA Mỹ và nghĩa Việt chờ rà soát. Không phải danh sách chuẩn 3.000 từ, không phải 40 từ đều mới với mọi người học.
+- `curriculum/drafts/v1/vocabulary.proposed.json`: 48 từ/cụm để thử công cụ phân tích, IPA Mỹ và nghĩa Việt chờ rà soát. Không phải danh sách chuẩn 3.000 từ, không phải 48 từ đều mới với mọi người học.
 
 Q&A luyện nghe hiện dùng tiếng Anh, có hướng dẫn Việt ở đầu. Chưa biên dịch riêng từng câu hỏi/đáp án, chưa đồng bộ thời gian phụ đề. Tiếng Việt không được tính vào số từ giọng đọc tiếng Anh.
 
@@ -42,7 +42,7 @@ David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin 
 
 Công cụ lấy số từ thực sự được đọc, cộng khoảng chờ. 100–120 từ/phút là **giả định để lên kế hoạch**, không phải chuẩn tốc độ học hoặc kết quả giọng TTS. Chạy lại công cụ để xem số mới nhất theo bản sửa.
 
-- C01: khoảng **31 phút ở 110 từ/phút**, trong đó Quick Response dài nhất, khoảng 16 phút. Dải ước tính có thể thấp hơn 30 phút ở tốc độ nhanh; cần nghe mẫu và điều chỉnh sau khi đo thật.
+- C01: khoảng **32 phút ở 110 từ/phút**, trong đó Quick Response dài nhất, khoảng 16 phút. Dải ước tính có thể thấp hơn 30 phút ở tốc độ nhanh; cần nghe mẫu và điều chỉnh sau khi đo thật.
 - Z01: khoảng **14 phút ở 110 từ/phút**, dải giả định xấp xỉ 13–15 phút; mục tiêu vẫn khoảng 15 phút.
 - Chưa thêm khoảng nghỉ biểu cảm, phát âm tên riêng, nối âm hoặc nhạc. Chưa có audio thật, chưa thể chứng nhận đạt thời lượng.
 - Khoảng chờ là metadata cho sản xuất audio tương lai; không bật lại cơ chế dừng Mini Story ở app hiện tại.
@@ -50,7 +50,7 @@ Công cụ lấy số từ thực sự được đọc, cộng khoảng chờ. 1
 ## Từ vựng chưa khóa
 
 - Chưa nhập danh sách chuẩn 3.000 từ hoặc gán 250 từ mới cho C01. Giữ nguyên manifest bàn giao và `vocabulary.pending.json`; báo `vocabularyReady=false` là đúng.
-- 40 mục đề xuất tự biên soạn để duyệt, chưa có thứ hạng tần suất hay nguồn chuẩn được phê duyệt. Không lấy danh sách thương mại rồi mặc định được phép phân phối.
+- 48 mục đề xuất tự biên soạn để duyệt, chưa có thứ hạng tần suất hay nguồn chuẩn được phê duyệt. Không lấy danh sách thương mại rồi mặc định được phép phân phối.
 - Engine ghép cụm liên tiếp dài nhất. `make a difference` và `make a big difference` cùng ý nhưng biến thể chèn big chưa tự gộp. Số lần một phrase xuất hiện vì vậy có thể bị đếm thiếu.
 - `leaves` có thể là số nhiều của leaf hoặc dạng của leave; draft này dùng cho lá. `drawing` có thể là danh từ hoặc tiếp diễn; chưa tự tính chung vào draw. `tear` ở đây là rách /ter/, không phải nước mắt /tɪr/. Cần chính sách lemma/POS/ngữ cảnh trước khi khóa danh sách chuẩn.
 - IPA là bản biên soạn dự kiến, chưa được chuyên gia/nguồn từ điển đối chiếu; không dùng làm căn cứ chấm phát âm tự động.
@@ -68,7 +68,9 @@ CLI đầu xuất báo cáo: số câu hỏi/từ/khoảng chờ, ước tính t
 
 QA kiểm tra đủ phần, ID, nguồn câu hỏi cùng bài, đáp án ngay sau câu hỏi, thời gian chờ, lý do Word Discovery và đồng bộ bản đọc. QA không chứng minh đáp án đúng về nghĩa, không tự chứng nhận tính nguyên bản tuyệt đối, độ hấp dẫn hoặc hiệu quả ghi nhớ. Đây là sáng tác mới theo brief, không sử dụng hay phỏng theo lời văn/audio của một khóa học thương mại.
 
-Kiểm thử cục bộ: `node --test tests/*.test.cjs` đạt **65/65** (24 kiểm thử giáo trình và 41 kiểm thử app hiện có); `node tools/check-web.cjs` đạt. Không sửa UI/native nên chưa chạy lại Chrome/Android tại workspace ở lượt này; CI hiện có có thể chạy các kiểm tra đó khi mở PR. Chưa kiểm thử giọng đọc hay đồng bộ audio thật vì chưa sản xuất audio.
+Kiểm thử cục bộ hiện tại: `node --test tests/*.test.cjs` đạt **67/67** (26 kiểm thử giáo trình và 41 kiểm thử app); `node tools/check-web.cjs` đạt. Bản đọc thử độc lập đã qua Chrome 360px: song ngữ, gia đình, nguồn câu hỏi, đáp án, chờ/tạm dừng, hủy timer khi đổi bài/ẩn trang, không ghi storage hay yêu cầu mạng ngoài, nội dung đóng thẻ script được giữ an toàn. Không chạy lại Chrome của app/Android tại workspace vì chưa sửa UI/native; CI hiện có chạy riêng khi PR cập nhật. Chưa kiểm thử giọng đọc hoặc đồng bộ audio thật.
+
+Bản HTML thử nghiệm: xem `PREVIEW_GUIDE.md`. Đề xuất nguồn danh sách chuẩn: xem `VOCABULARY_SOURCE_REVIEW.md`; chưa chuyển danh sách 3.000 từ sang trạng thái approved.
 
 ## Cần người dùng duyệt
 
