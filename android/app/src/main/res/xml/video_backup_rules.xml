@@ -1,0 +1,3 @@
+<full-backup-content>
+    <exclude domain="sharedpref" path="video_lessons.xml" />
+</full-backup-content>
