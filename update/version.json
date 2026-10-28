@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.56",
-  "notes": "Không lưu tự đóng · ! hướng dẫn theo khóa học cạnh Đọc · ẩn Bắn chữ mọi menu học · sao 3D gọn · bỏ tra trọng âm",
+  "ver": "1.0.3-beta.57",
+  "notes": "Thanh Sao chép/Dán/Sửa/Đóng cân đối · Từ vựng ở chân trang · sao vàng/ngày, cam/tuần · công cụ Đọc ở đầu bài · flashcard vuốt/chạm lật",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.57",
+      "d": "28/10/2026",
+      "items": [
+        "Thanh thao tác: Sao chép / Dán / Sửa / Đóng chia đều; văn bản bài học có thêm Từ vựng ở chân trang, Sửa đổi thành Lưu khi chỉnh",
+        "Sao mục tiêu: 1 ngày = 1 sao vàng, 7 ngày = 1 sao cam, giữ lịch sử đã học và hiệu ứng 3D",
+        "Đọc: thanh Cài đặt / A− / A+ / Dịch / Sao chép / Trang chủ ở đầu bài; trang chủ giữ thanh dưới, bỏ Cài đặt",
+        "Flashcard: vuốt trái/phải chuyển thẻ, chạm ở bất kỳ chỗ nào để lật; nút Tự động bật/tắt, tự chuyển không tự lật"
+      ]
+    },
     {
       "v": "1.0.3-beta.56",
       "d": "28/10/2026",
