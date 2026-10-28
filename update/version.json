@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.55",
-  "notes": "Sao mục tiêu: 7 xanh đổi 1 vàng · số trong sao cạnh ⋯ · Đánh dấu học xong · ẩn Bắn chữ ở menu bài",
+  "ver": "1.0.3-beta.56",
+  "notes": "Không lưu tự đóng · ! hướng dẫn theo khóa học cạnh Đọc · ẩn Bắn chữ mọi menu học · sao 3D gọn · bỏ tra trọng âm",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.56",
+      "d": "28/10/2026",
+      "items": [
+        "Không lưu từ: tự đóng hộp tra từ và trở về màn hình trước",
+        "Hướng dẫn học khóa học: nút ! bên phải Đọc, có Dán/Copy/Sửa/Lưu và lối vào trong menu bài; bỏ Bắn chữ ở menu mọi cấp",
+        "Sao mục tiêu gọn hơn, chữ giữ cỡ dễ đọc và hiệu ứng nổi 3D; bỏ ô tra trọng âm"
+      ]
+    },
     {
       "v": "1.0.3-beta.55",
       "d": "28/10/2026",
