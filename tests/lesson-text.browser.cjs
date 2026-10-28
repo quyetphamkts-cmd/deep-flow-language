@@ -65,7 +65,7 @@ const path=require('node:path');
   await page.locator('#fcard').click();await page.locator('#fcGrade [data-g="3"]').click();
   assert.equal(await page.evaluate(()=>vocab[0].srs.ivl),4);
   await page.evaluate(()=>{S.fcFlow='auto';S.fcSeconds=3;startReview([{id:'auto-a',word:'first',srs:{due:0,ivl:0,reps:0}},{id:'auto-b',word:'second',srs:{due:0,ivl:0,reps:0}}]);});
-  await page.waitForTimeout(3150);assert.equal(await page.evaluate(()=>rv.flipped),true);await page.waitForTimeout(3150);assert.equal(await page.evaluate(()=>rv.i),1);assert.equal(await page.evaluate(()=>rv.answers),0);await page.evaluate(()=>{S.fcFlow='manual';endReview();});
+  await page.waitForTimeout(3150);assert.equal(await page.evaluate(()=>rv.flipped),false);assert.equal(await page.evaluate(()=>rv.i),1);await page.waitForTimeout(3150);assert.equal(await page.evaluate(()=>rv.flipped),false);assert.equal(await page.evaluate(()=>rv.i),0);assert.equal(await page.evaluate(()=>rv.answers),0);await page.evaluate(()=>{S.fcFlow='manual';endReview();});
   await page.evaluate(()=>{closeModals();S.mainLessonId='a';S.days={};tracks[1].st={done:true,last:1};S.lists=[{id:'test-course',name:'VeryLongCourseName'.repeat(30)}];S.unitList={'Test':'test-course'};showView('vLib');renderLib();});
   assert.ok(await page.evaluate(()=>document.querySelector('#vLib').scrollWidth<=window.innerWidth+1));
   await page.screenshot({path:path.join(process.env.RUNNER_TEMP||'/tmp','study51-library.png')});
