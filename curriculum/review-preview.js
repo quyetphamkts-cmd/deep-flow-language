@@ -28,7 +28,7 @@
   function renderTimer(){
     $('wait').disabled=revealed;
     $('wait').textContent=mode==='running'?'Tạm dừng chờ':mode==='paused'?'Tiếp tục chờ':`Chờ ${current().answerPauseMs/1000} giây`;
-    $('status').textContent=mode==='running'?`Còn ${Math.ceil(remaining/1000)} giây để trả lời`:mode==='paused'?`Đã tạm dừng · còn ${Math.ceil(remaining/1000)} giây`:revealed?'Đã mở câu trả lời mẫu. Cách diễn đạt tương đương cũng được.':'Hãy thử trả lời thành tiếng trước khi xem mẫu.';
+    $('status').textContent=mode==='running'?`Còn ${Math.ceil(remaining/1000)} giây · một/vài từ là đủ`:mode==='paused'?`Đã tạm dừng · còn ${Math.ceil(remaining/1000)} giây`:revealed?'Một/vài từ là đủ. Câu mẫu dài hơn chỉ để nghe tham khảo.':'Trả lời ngay bằng một/vài từ; chưa cần nói đủ câu.';
   }
   function reveal(){stop();revealed=true;remaining=0;mode='answered';$('answerBox').hidden=false;$('reveal').disabled=true;renderTimer();}
   function pause(){if(mode!=='running')return;remaining=Math.max(0,deadline-performance.now());stop();mode='paused';renderTimer();}
@@ -39,7 +39,7 @@
     function tick(){
       if(token!==generation)return;
       remaining=Math.max(0,deadline-performance.now());if(!remaining){reveal();return;}
-      renderTimer();timer=setTimeout(tick,100);
+      renderTimer();timer=setTimeout(tick,Math.min(100,remaining));
     }
     tick();
   }

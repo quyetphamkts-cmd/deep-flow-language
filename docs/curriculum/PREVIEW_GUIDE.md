@@ -1,4 +1,4 @@
-# Đọc thử C01, C02 và Z01 trên trình duyệt
+# Đọc thử C01, C02, C03 và Z01 trên trình duyệt
 
 Bản đọc thử độc lập giúp duyệt nội dung trước khi tích hợp Deep Flow. Không đổi app đang dùng, không có audio hoặc yêu cầu API; không ghi âm, chấm điểm hay lưu tiến độ.
 
@@ -14,12 +14,12 @@ Mở file HTML vừa tạo bằng trình duyệt. File chứa sẵn nội dung, 
 
 ## Thử những gì?
 
-- Chọn C01, C02 hoặc Z01, sau đó chọn phần bài. Các bài chính hiển thị gia đình năm thành viên đã chốt.
+- Chọn C01, C02, C03 hoặc Z01, sau đó chọn phần bài. Các bài chính hiển thị gia đình năm thành viên đã chốt.
 - Bật Song ngữ để đọc bản dịch ở các đoạn đã có bản dịch Việt.
-- Trong Phản xạ hỏi đáp, đọc câu hỏi và trả lời thành tiếng. Bấm Chờ để thử khoảng suy nghĩ đã biên soạn; có thể tạm dừng/tiếp tục, hoặc tự mở đáp án mẫu.
+- Trong Phản xạ hỏi đáp, đọc câu hỏi và trả lời thành tiếng. Bấm Chờ để thử khoảng phản xạ ba giây; một/vài từ là đủ, chưa cần nói đủ câu. Có thể tạm dừng/tiếp tục, hoặc tự mở đáp án mẫu.
 - Đổi câu/bài sẽ hủy khoảng chờ cũ. Khi trang bị ẩn, khoảng chờ tạm dừng; trở lại trang không tự tiếp tục.
 - Xem đoạn truyện để đối chiếu câu hỏi với nguồn. Đáp án mẫu không yêu cầu nói đúng nguyên văn và chưa có chấm tự động.
-- Mở bảng từ/cụm đề xuất để xem IPA/nghĩa. Hiện có 60 mục, chưa phải danh sách chuẩn 3.000 từ.
+- Mở bảng từ/cụm đề xuất để xem IPA/nghĩa. Hiện có 72 mục, chưa phải danh sách chuẩn 3.000 từ.
 
 ## Kiểm thử
 

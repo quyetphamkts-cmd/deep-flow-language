@@ -28,7 +28,7 @@ David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin 
 
 1. Main Story: tám cảnh có bản dịch Việt.
 2. Word Discovery: tám đoạn giải thích **chín từ/cụm được chọn**, loose/tighten chung một đoạn. Lý do chọn ghi trong JSON và cuối bản đọc; là giả thuyết biên soạn, chưa có dữ liệu quên từ của người học.
-3. Quick Response: 69 câu gắn đúng cảnh, chờ sáu giây trước đáp án mẫu; chấp nhận cách diễn đạt tương đương. Người học tự dừng nếu cần thêm thời gian, chưa có chấm tự động.
+3. Quick Response: 69 câu gắn đúng cảnh, chờ ba giây trước đáp án mẫu; chấp nhận cách diễn đạt tương đương. Người học tự dừng nếu cần thêm thời gian, chưa có chấm tự động.
 4. Time Shift: hôm qua → ngày mai giả định → lời kể con gái. Giữ trình tự/nguyên nhân chính, không biến thành bài giảng quy tắc ngữ pháp.
 
 ## Z01 — The Mouse Who Wanted to Fly
@@ -38,14 +38,14 @@ David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin 
 - **Lựa chọn:** nhìn lại, dùng móc và gậy lấy đầu dây, nhờ Sparrow nhìn từ trên và nâng góc ruy băng thay vì kéo mạnh. Đôi cánh lá thất bại trở thành vật liệu vá một góc ruy băng.
 - **Kết:** Mouse chưa biết bay, vẫn thích nhìn chim; điều thay đổi là biết thử cách khác và nhờ giúp. Câu chuyện tôn trọng mong muốn ban đầu, không coi thất bại là hết cơ hội.
 - **Ôn liên hệ C01:** room, bowl, window, reach, tool, loose, repair và hành động để ý nhu cầu người khác xuất hiện ở bối cảnh khác. Các từ riêng của Z01 như ribbon/branch/hook không bị tính là đã hoàn tất phân bổ từ mới trong giáo trình chính.
-- Daily Adventure: tám cảnh có bản dịch Việt. Quick Response: 40 câu, mỗi câu chờ 4,5 giây. Mouse dùng she, Sparrow dùng he là lựa chọn nháp, chưa khóa thế giới 12 con giáp.
+- Daily Adventure: tám cảnh có bản dịch Việt. Quick Response: 40 câu, mỗi câu chờ ba giây. Mouse dùng she, Sparrow dùng he là lựa chọn nháp, chưa khóa thế giới 12 con giáp.
 
 ## Ước tính thời lượng và giới hạn
 
 Công cụ lấy số từ thực sự được đọc, cộng khoảng chờ. 100–120 từ/phút là **giả định để lên kế hoạch**, không phải chuẩn tốc độ học hoặc kết quả giọng TTS. Chạy lại công cụ để xem số mới nhất theo bản sửa.
 
-- C01: khoảng **32 phút ở 110 từ/phút**, trong đó Quick Response dài nhất, khoảng 16 phút. Dải ước tính có thể thấp hơn 30 phút ở tốc độ nhanh; cần nghe mẫu và điều chỉnh sau khi đo thật.
-- Z01: khoảng **14 phút ở 110 từ/phút**, dải giả định xấp xỉ 13–15 phút; mục tiêu vẫn khoảng 15 phút.
+- C01: khoảng **28 phút ở 110 từ/phút**, trong đó Quick Response dài nhất, khoảng 13 phút. Dải ước tính có thể thấp hơn 30 phút ở tốc độ nhanh; cần nghe mẫu và điều chỉnh sau khi đo thật.
+- Z01: khoảng **13 phút ở 110 từ/phút**, dải giả định xấp xỉ 13–15 phút; mục tiêu vẫn khoảng 15 phút.
 - Chưa thêm khoảng nghỉ biểu cảm, phát âm tên riêng, nối âm hoặc nhạc. Chưa có audio thật, chưa thể chứng nhận đạt thời lượng.
 - Khoảng chờ là metadata cho sản xuất audio tương lai; không bật lại cơ chế dừng Mini Story ở app hiện tại.
 
@@ -77,3 +77,6 @@ Bản HTML thử nghiệm: xem `PREVIEW_GUIDE.md`. Đề xuất nguồn danh sá
 ## Cần người dùng duyệt
 
 Ưu tiên nhận xét nội dung: tiếng Anh có dễ nghe không, câu chuyện có hấp dẫn khi nghe lại không, nhịp 69/40 câu có quá lặp không, khoảng chờ có đủ trả lời không, Mary và cách kể Mouse có phù hợp không. Sau đó mới chốt giọng đọc/ngân sách, tạo audio mẫu, đo thật và tích hợp riêng vào thư viện. Chưa merge/phát hành bản nháp theo công cụ này.
+
+
+**Cập nhật theo yêu cầu mới:** Quick Response ở mọi bài dùng khoảng chờ ba giây, người học chỉ cần phản hồi ngay bằng một/vài từ, không cần đúng nguyên văn hay đủ câu. Thời lượng bản nháp đã tính lại; chưa tăng pause để đạt mục tiêu số phút. Số liệu kiểm thử ở phần trước là lịch sử của phiên bản trước C03.

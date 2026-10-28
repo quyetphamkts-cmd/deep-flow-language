@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "authored_draft_pending_user_review",
-  "contentVersion": "drafts-v1.4",
+  "contentVersion": "drafts-v1.6",
   "canonicalVocabularyStatus": "pending",
   "wordDiscoverySelection": [
     {
@@ -197,7 +197,7 @@
       "id": "C01-quick_response",
       "lessonId": "C01",
       "component": "quick_response",
-      "version": 4,
+      "version": 5,
       "status": "draft",
       "provenance": {
         "author": "Codex, theo yêu cầu người dùng",
@@ -209,8 +209,8 @@
           "id": "intro",
           "type": "narration",
           "speaker": "coach",
-          "text": "Listen to each question. Answer aloud during the pause. A short answer is fine. Then listen to one possible answer. You can pause the audio if you need more time.",
-          "translationVi": "Nghe từng câu hỏi, trả lời thành tiếng trong khoảng chờ rồi nghe một câu trả lời mẫu. Trả lời ngắn cũng được; có thể dừng audio nếu cần thêm thời gian."
+          "text": "Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.",
+          "translationVi": "Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo."
         },
         {
           "id": "q001",
@@ -218,7 +218,7 @@
           "speaker": "coach",
           "text": "Where is David working as the sun comes up?",
           "answerId": "a001",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -239,7 +239,7 @@
           "speaker": "coach",
           "text": "What is David's job?",
           "answerId": "a002",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -260,7 +260,7 @@
           "speaker": "coach",
           "text": "Is he drawing a house or a boat?",
           "answerId": "a003",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -281,7 +281,7 @@
           "speaker": "coach",
           "text": "What is unusual about the roof in his drawing?",
           "answerId": "a004",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -302,7 +302,7 @@
           "speaker": "coach",
           "text": "Who puts two bowls on the table?",
           "answerId": "a005",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -323,7 +323,7 @@
           "speaker": "coach",
           "text": "Are both bowls for David?",
           "answerId": "a006",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -344,7 +344,7 @@
           "speaker": "coach",
           "text": "What does Lily want him to do first?",
           "answerId": "a007",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -365,7 +365,7 @@
           "speaker": "coach",
           "text": "Does David look away from his work when he smiles?",
           "answerId": "a008",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -386,7 +386,7 @@
           "speaker": "coach",
           "text": "How many people are in David's family?",
           "answerId": "a065",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -408,7 +408,7 @@
           "speaker": "coach",
           "text": "What does David's wife do?",
           "answerId": "a066",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -430,7 +430,7 @@
           "speaker": "coach",
           "text": "What grade is their oldest child in?",
           "answerId": "a067",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -452,7 +452,7 @@
           "speaker": "coach",
           "text": "What grade is their older daughter in?",
           "answerId": "a068",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -474,7 +474,7 @@
           "speaker": "coach",
           "text": "How old is their youngest daughter?",
           "answerId": "a069",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -496,7 +496,7 @@
           "speaker": "coach",
           "text": "Why does Lily put her head close to the table?",
           "answerId": "a009",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -517,7 +517,7 @@
           "speaker": "coach",
           "text": "Is the window low enough for her?",
           "answerId": "a010",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -538,7 +538,7 @@
           "speaker": "coach",
           "text": "What does David call the house?",
           "answerId": "a011",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -559,7 +559,7 @@
           "speaker": "coach",
           "text": "Does Lily only ask about the roof?",
           "answerId": "a012",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -580,7 +580,7 @@
           "speaker": "coach",
           "text": "What important question does she ask her father?",
           "answerId": "a013",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -601,7 +601,7 @@
           "speaker": "coach",
           "text": "Does David give a quick answer?",
           "answerId": "a014",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -622,7 +622,7 @@
           "speaker": "coach",
           "text": "Does David know how to draw a tall roof?",
           "answerId": "a015",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -643,7 +643,7 @@
           "speaker": "coach",
           "text": "What does he not know how to draw?",
           "answerId": "a016",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -664,7 +664,7 @@
           "speaker": "coach",
           "text": "Where do David and Lily go after breakfast?",
           "answerId": "a017",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -685,7 +685,7 @@
           "speaker": "coach",
           "text": "What color is the folder that holds his drawing?",
           "answerId": "a018",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -706,7 +706,7 @@
           "speaker": "coach",
           "text": "Why does David want to go home quickly?",
           "answerId": "a019",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -727,7 +727,7 @@
           "speaker": "coach",
           "text": "What does Mary sell at the market?",
           "answerId": "a020",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -748,7 +748,7 @@
           "speaker": "coach",
           "text": "Is Mary a stranger or their neighbor?",
           "answerId": "a021",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -769,7 +769,7 @@
           "speaker": "coach",
           "text": "What color is the cover over her stall?",
           "answerId": "a022",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -790,7 +790,7 @@
           "speaker": "coach",
           "text": "Who stops beside the tomatoes?",
           "answerId": "a023",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -811,7 +811,7 @@
           "speaker": "coach",
           "text": "Why can Mary not sit on her stool?",
           "answerId": "a024",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -832,7 +832,7 @@
           "speaker": "coach",
           "text": "What lifts the green cover?",
           "answerId": "a025",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -853,7 +853,7 @@
           "speaker": "coach",
           "text": "Why does David reach up?",
           "answerId": "a026",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -874,7 +874,7 @@
           "speaker": "coach",
           "text": "What happens to his folder?",
           "answerId": "a027",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -895,7 +895,7 @@
           "speaker": "coach",
           "text": "Where does the drawing land?",
           "answerId": "a028",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -916,7 +916,7 @@
           "speaker": "coach",
           "text": "What sits on the tall roof in the picture?",
           "answerId": "a029",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -937,7 +937,7 @@
           "speaker": "coach",
           "text": "Does the tomato damage the paper?",
           "answerId": "a030",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -958,7 +958,7 @@
           "speaker": "coach",
           "text": "Why does David want to be angry at first?",
           "answerId": "a031",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -979,7 +979,7 @@
           "speaker": "coach",
           "text": "Does he stay angry after Lily laughs?",
           "answerId": "a032",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1000,7 +1000,7 @@
           "speaker": "coach",
           "text": "What does David notice when he stops?",
           "answerId": "a033",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1021,7 +1021,7 @@
           "speaker": "coach",
           "text": "Has Mary been standing since lunchtime?",
           "answerId": "a034",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1042,7 +1042,7 @@
           "speaker": "coach",
           "text": "Where is the bench?",
           "answerId": "a035",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1063,7 +1063,7 @@
           "speaker": "coach",
           "text": "Is the bench in the shade?",
           "answerId": "a036",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1084,7 +1084,7 @@
           "speaker": "coach",
           "text": "What gives shade beside Mary's stall?",
           "answerId": "a037",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1105,7 +1105,7 @@
           "speaker": "coach",
           "text": "Why is a beautiful seat not always useful?",
           "answerId": "a038",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1126,7 +1126,7 @@
           "speaker": "coach",
           "text": "What does Lily move out of the path?",
           "answerId": "a039",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1147,7 +1147,7 @@
           "speaker": "coach",
           "text": "Why does she move the box?",
           "answerId": "a040",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1168,7 +1168,7 @@
           "speaker": "coach",
           "text": "Where does Mary keep the small tool?",
           "answerId": "a041",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1189,7 +1189,7 @@
           "speaker": "coach",
           "text": "Does David take the tool without asking?",
           "answerId": "a042",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1210,7 +1210,7 @@
           "speaker": "coach",
           "text": "What does he do to the loose screw?",
           "answerId": "a043",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1231,7 +1231,7 @@
           "speaker": "coach",
           "text": "What does David do before Mary sits down?",
           "answerId": "a044",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1252,7 +1252,7 @@
           "speaker": "coach",
           "text": "Does Mary think the small repair matters?",
           "answerId": "a045",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1273,7 +1273,7 @@
           "speaker": "coach",
           "text": "Where do Mary and Lily talk?",
           "answerId": "a046",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1294,7 +1294,7 @@
           "speaker": "coach",
           "text": "Is this place tall or expensive?",
           "answerId": "a047",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1315,7 +1315,7 @@
           "speaker": "coach",
           "text": "What can people do there?",
           "answerId": "a048",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1336,7 +1336,7 @@
           "speaker": "coach",
           "text": "Does David hurry on the way home?",
           "answerId": "a049",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1357,7 +1357,7 @@
           "speaker": "coach",
           "text": "What does he ask Lily?",
           "answerId": "a050",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1378,7 +1378,7 @@
           "speaker": "coach",
           "text": "Why does she want a low window?",
           "answerId": "a051",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1399,7 +1399,7 @@
           "speaker": "coach",
           "text": "Who needs a place to rest in her idea?",
           "answerId": "a052",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1420,7 +1420,7 @@
           "speaker": "coach",
           "text": "Does David throw away his first picture?",
           "answerId": "a053",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1441,7 +1441,7 @@
           "speaker": "coach",
           "text": "Where is the seat in his second drawing?",
           "answerId": "a054",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1462,7 +1462,7 @@
           "speaker": "coach",
           "text": "Who does David want to show both pictures to?",
           "answerId": "a055",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1483,7 +1483,7 @@
           "speaker": "coach",
           "text": "What does he want to ask those people?",
           "answerId": "a056",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1504,7 +1504,7 @@
           "speaker": "coach",
           "text": "What does Lily bring him at lunchtime?",
           "answerId": "a057",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1525,7 +1525,7 @@
           "speaker": "coach",
           "text": "Does David keep drawing while he picks up his spoon?",
           "answerId": "a058",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1546,7 +1546,7 @@
           "speaker": "coach",
           "text": "Is David certain that his new house will make people happy?",
           "answerId": "a059",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1567,7 +1567,7 @@
           "speaker": "coach",
           "text": "Who must they ask about the new house?",
           "answerId": "a060",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1588,7 +1588,7 @@
           "speaker": "coach",
           "text": "What does David think he did too early?",
           "answerId": "a061",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1609,7 +1609,7 @@
           "speaker": "coach",
           "text": "What does Lily draw in the corner?",
           "answerId": "a062",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1630,7 +1630,7 @@
           "speaker": "coach",
           "text": "Does David remove the little tomato?",
           "answerId": "a063",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1651,7 +1651,7 @@
           "speaker": "coach",
           "text": "What question does David write under the drawing?",
           "answerId": "a064",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C01-main_story",
@@ -1809,7 +1809,7 @@
       "id": "Z01-quick_response",
       "lessonId": "Z01",
       "component": "quick_response",
-      "version": 1,
+      "version": 2,
       "status": "draft",
       "provenance": {
         "author": "Codex, theo yêu cầu người dùng",
@@ -1821,8 +1821,8 @@
           "id": "intro",
           "type": "narration",
           "speaker": "coach",
-          "text": "Listen to each question. Answer aloud during the pause. A short answer is fine. Then listen to one possible answer. You can pause the audio if you need more time.",
-          "translationVi": "Nghe từng câu hỏi, trả lời thành tiếng trong khoảng chờ rồi nghe một câu trả lời mẫu. Trả lời ngắn cũng được; có thể dừng audio nếu cần thêm thời gian."
+          "text": "Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.",
+          "translationVi": "Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo."
         },
         {
           "id": "q001",
@@ -1830,7 +1830,7 @@
           "speaker": "coach",
           "text": "Where does Mouse live?",
           "answerId": "a001",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1851,7 +1851,7 @@
           "speaker": "coach",
           "text": "What does she watch every morning?",
           "answerId": "a002",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1872,7 +1872,7 @@
           "speaker": "coach",
           "text": "What is hanging from the highest branch?",
           "answerId": "a003",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1893,7 +1893,7 @@
           "speaker": "coach",
           "text": "Why does the village need the ribbon?",
           "answerId": "a004",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1914,7 +1914,7 @@
           "speaker": "coach",
           "text": "How did the ribbon get into the tree?",
           "answerId": "a005",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1935,7 +1935,7 @@
           "speaker": "coach",
           "text": "What does Mouse use to make wings?",
           "answerId": "a006",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1956,7 +1956,7 @@
           "speaker": "coach",
           "text": "Does she fly when she moves her arms?",
           "answerId": "a007",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1977,7 +1977,7 @@
           "speaker": "coach",
           "text": "What falls over her face?",
           "answerId": "a008",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -1998,7 +1998,7 @@
           "speaker": "coach",
           "text": "Who comes to speak to Mouse?",
           "answerId": "a009",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2019,7 +2019,7 @@
           "speaker": "coach",
           "text": "Does Sparrow tell her to jump from the tree?",
           "answerId": "a010",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2040,7 +2040,7 @@
           "speaker": "coach",
           "text": "Is the ladder tall enough to reach the ribbon?",
           "answerId": "a011",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2061,7 +2061,7 @@
           "speaker": "coach",
           "text": "Why does Mouse stop thinking about the high branches?",
           "answerId": "a012",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2082,7 +2082,7 @@
           "speaker": "coach",
           "text": "What does she notice on the same branch?",
           "answerId": "a013",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2103,7 +2103,7 @@
           "speaker": "coach",
           "text": "Where does one end of the string hang?",
           "answerId": "a014",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2124,7 +2124,7 @@
           "speaker": "coach",
           "text": "What does Mouse hope to bring closer?",
           "answerId": "a015",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2145,7 +2145,7 @@
           "speaker": "coach",
           "text": "Who looks at the ribbon from above?",
           "answerId": "a016",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2166,7 +2166,7 @@
           "speaker": "coach",
           "text": "What does the string go through?",
           "answerId": "a017",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2187,7 +2187,7 @@
           "speaker": "coach",
           "text": "Why must Mouse not pull hard?",
           "answerId": "a018",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2208,7 +2208,7 @@
           "speaker": "coach",
           "text": "What does Mouse fix to the long stick?",
           "answerId": "a019",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2229,7 +2229,7 @@
           "speaker": "coach",
           "text": "Does she need to leave the ground to catch the string?",
           "answerId": "a020",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2250,7 +2250,7 @@
           "speaker": "coach",
           "text": "What happens when Mouse first pulls slowly?",
           "answerId": "a021",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2271,7 +2271,7 @@
           "speaker": "coach",
           "text": "What stops the ribbon?",
           "answerId": "a022",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2292,7 +2292,7 @@
           "speaker": "coach",
           "text": "Does Mouse pull harder right away?",
           "answerId": "a023",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2313,7 +2313,7 @@
           "speaker": "coach",
           "text": "How does Sparrow help?",
           "answerId": "a024",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2334,7 +2334,7 @@
           "speaker": "coach",
           "text": "What does Mouse catch in her arms?",
           "answerId": "a025",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2355,7 +2355,7 @@
           "speaker": "coach",
           "text": "Where does Mouse put the ribbon at the village gate?",
           "answerId": "a026",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2376,7 +2376,7 @@
           "speaker": "coach",
           "text": "Is the ribbon completely undamaged?",
           "answerId": "a027",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2397,7 +2397,7 @@
           "speaker": "coach",
           "text": "What does Sparrow suggest using for that corner?",
           "answerId": "a028",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2418,7 +2418,7 @@
           "speaker": "coach",
           "text": "What does Mouse use to repair the corner?",
           "answerId": "a029",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2439,7 +2439,7 @@
           "speaker": "coach",
           "text": "What does the green repair look like?",
           "answerId": "a030",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2460,7 +2460,7 @@
           "speaker": "coach",
           "text": "Do the friends arrive for breakfast or dinner?",
           "answerId": "a031",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2481,7 +2481,7 @@
           "speaker": "coach",
           "text": "Does Mouse tell everyone that she learned to fly?",
           "answerId": "a032",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2502,7 +2502,7 @@
           "speaker": "coach",
           "text": "What three things does she say she did?",
           "answerId": "a033",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2523,7 +2523,7 @@
           "speaker": "coach",
           "text": "Who gets a place beside Mouse at the table?",
           "answerId": "a034",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2544,7 +2544,7 @@
           "speaker": "coach",
           "text": "What does Mouse check before they eat?",
           "answerId": "a035",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2565,7 +2565,7 @@
           "speaker": "coach",
           "text": "Does Mouse still enjoy watching birds the next morning?",
           "answerId": "a036",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2586,7 +2586,7 @@
           "speaker": "coach",
           "text": "Where are her leaf wings?",
           "answerId": "a037",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2607,7 +2607,7 @@
           "speaker": "coach",
           "text": "Has Mouse actually learned to fly?",
           "answerId": "a038",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2628,7 +2628,7 @@
           "speaker": "coach",
           "text": "What does she draw in her small book?",
           "answerId": "a039",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2649,7 +2649,7 @@
           "speaker": "coach",
           "text": "What three reminders does she write?",
           "answerId": "a040",
-          "answerPauseMs": 4500,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "Z01-daily_adventure",
@@ -2816,7 +2816,7 @@
       "id": "C02-quick_response",
       "lessonId": "C02",
       "component": "quick_response",
-      "version": 1,
+      "version": 2,
       "status": "draft",
       "provenance": {
         "author": "Codex, theo yêu cầu người dùng",
@@ -2828,8 +2828,8 @@
           "id": "intro",
           "type": "narration",
           "speaker": "coach",
-          "text": "Answer each question aloud during the pause. A short answer is enough. Then listen to one possible answer. The questions follow the story, and you can return to a scene whenever you need to.",
-          "translationVi": "Trả lời thành tiếng trong khoảng chờ; trả lời ngắn cũng được. Sau đó nghe câu mẫu. Các câu hỏi theo trình tự truyện; có thể trở lại cảnh khi cần."
+          "text": "Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.",
+          "translationVi": "Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo."
         },
         {
           "id": "q001",
@@ -2837,7 +2837,7 @@
           "speaker": "coach",
           "text": "Where does David put the two plans?",
           "answerId": "a001",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2858,7 +2858,7 @@
           "speaker": "coach",
           "text": "What is still in the corner of the second picture?",
           "answerId": "a002",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2879,7 +2879,7 @@
           "speaker": "coach",
           "text": "Who will David meet soon?",
           "answerId": "a003",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2900,7 +2900,7 @@
           "speaker": "coach",
           "text": "Why does he first test his ideas with his family?",
           "answerId": "a004",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2921,7 +2921,7 @@
           "speaker": "coach",
           "text": "What is Anna doing when David brings out the plans?",
           "answerId": "a005",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2942,7 +2942,7 @@
           "speaker": "coach",
           "text": "Is Anna an accountant or an architect?",
           "answerId": "a006",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2963,7 +2963,7 @@
           "speaker": "coach",
           "text": "What does Anna ask about the drawing?",
           "answerId": "a007",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -2984,7 +2984,7 @@
           "speaker": "coach",
           "text": "What does David get to start the experiment?",
           "answerId": "a008",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3005,7 +3005,7 @@
           "speaker": "coach",
           "text": "How does David mark the rooms on the floor?",
           "answerId": "a009",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3026,7 +3026,7 @@
           "speaker": "coach",
           "text": "What represents a bed in their experiment?",
           "answerId": "a010",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3047,7 +3047,7 @@
           "speaker": "coach",
           "text": "What does Ben want to do in his space?",
           "answerId": "a011",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3068,7 +3068,7 @@
           "speaker": "coach",
           "text": "What does Lily want a place for?",
           "answerId": "a012",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3089,7 +3089,7 @@
           "speaker": "coach",
           "text": "Where does Sophie put her large blocks?",
           "answerId": "a013",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3110,7 +3110,7 @@
           "speaker": "coach",
           "text": "What does Ben ask for?",
           "answerId": "a014",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3131,7 +3131,7 @@
           "speaker": "coach",
           "text": "Why does Anna lose her place in the numbers?",
           "answerId": "a015",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3152,7 +3152,7 @@
           "speaker": "coach",
           "text": "Does a big open room always sound quiet?",
           "answerId": "a016",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3173,7 +3173,7 @@
           "speaker": "coach",
           "text": "Who comes to visit the family?",
           "answerId": "a017",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3194,7 +3194,7 @@
           "speaker": "coach",
           "text": "Is Helen David's mother or Anna's sister?",
           "answerId": "a018",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3215,7 +3215,7 @@
           "speaker": "coach",
           "text": "Where does David put Helen's chair?",
           "answerId": "a019",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3236,7 +3236,7 @@
           "speaker": "coach",
           "text": "Can Lily easily walk past Helen's chair?",
           "answerId": "a020",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3257,7 +3257,7 @@
           "speaker": "coach",
           "text": "Is the paper wall a real built wall?",
           "answerId": "a021",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3278,7 +3278,7 @@
           "speaker": "coach",
           "text": "Does Helen ask for a grand room at the top of the house?",
           "answerId": "a022",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3299,7 +3299,7 @@
           "speaker": "coach",
           "text": "Where would a resting place help Helen?",
           "answerId": "a023",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3320,7 +3320,7 @@
           "speaker": "coach",
           "text": "What else does Helen need beside a place to rest?",
           "answerId": "a024",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3341,7 +3341,7 @@
           "speaker": "coach",
           "text": "What does David draw beside the entrance?",
           "answerId": "a025",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3362,7 +3362,7 @@
           "speaker": "coach",
           "text": "What does he draw another room for?",
           "answerId": "a026",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3383,7 +3383,7 @@
           "speaker": "coach",
           "text": "Who asks what the owners can afford?",
           "answerId": "a027",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3404,7 +3404,7 @@
           "speaker": "coach",
           "text": "Do David and Anna know the owners' budget yet?",
           "answerId": "a028",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3425,7 +3425,7 @@
           "speaker": "coach",
           "text": "What is a budget in this story?",
           "answerId": "a029",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3446,7 +3446,7 @@
           "speaker": "coach",
           "text": "What has David been doing each time someone speaks?",
           "answerId": "a030",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3467,7 +3467,7 @@
           "speaker": "coach",
           "text": "Does he keep drawing without stopping?",
           "answerId": "a031",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3488,7 +3488,7 @@
           "speaker": "coach",
           "text": "What important question has he not asked yet?",
           "answerId": "a032",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3509,7 +3509,7 @@
           "speaker": "coach",
           "text": "Does David listen to each person before drawing this time?",
           "answerId": "a033",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3530,7 +3530,7 @@
           "speaker": "coach",
           "text": "Does Anna need privacy because she dislikes her children?",
           "answerId": "a034",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3551,7 +3551,7 @@
           "speaker": "coach",
           "text": "Does Ben need a quiet place all day?",
           "answerId": "a035",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3572,7 +3572,7 @@
           "speaker": "coach",
           "text": "What would Lily like to do without constant interruptions?",
           "answerId": "a036",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3593,7 +3593,7 @@
           "speaker": "coach",
           "text": "What kind of seat does Helen want?",
           "answerId": "a037",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3614,7 +3614,7 @@
           "speaker": "coach",
           "text": "What does Sophie need while she plays?",
           "answerId": "a038",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3635,7 +3635,7 @@
           "speaker": "coach",
           "text": "Are all their needs the same?",
           "answerId": "a039",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3656,7 +3656,7 @@
           "speaker": "coach",
           "text": "Does David still assume one large room solves everything?",
           "answerId": "a040",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3677,7 +3677,7 @@
           "speaker": "coach",
           "text": "Where do they try the twenty-minute experiment?",
           "answerId": "a041",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3698,7 +3698,7 @@
           "speaker": "coach",
           "text": "Where does Anna take her work?",
           "answerId": "a042",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3719,7 +3719,7 @@
           "speaker": "coach",
           "text": "Does Anna leave the door open?",
           "answerId": "a043",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3740,7 +3740,7 @@
           "speaker": "coach",
           "text": "Who stays with Sophie while Anna works?",
           "answerId": "a044",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3761,7 +3761,7 @@
           "speaker": "coach",
           "text": "What does Ben work on at the table?",
           "answerId": "a045",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3782,7 +3782,7 @@
           "speaker": "coach",
           "text": "Does Lily sing loudly during those twenty minutes?",
           "answerId": "a046",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3803,7 +3803,7 @@
           "speaker": "coach",
           "text": "What has Anna finished when she returns?",
           "answerId": "a047",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3824,7 +3824,7 @@
           "speaker": "coach",
           "text": "Does the blue tape stop noise by itself?",
           "answerId": "a048",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3845,7 +3845,7 @@
           "speaker": "coach",
           "text": "What does David mark for quiet work in the new plan?",
           "answerId": "a049",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3866,7 +3866,7 @@
           "speaker": "coach",
           "text": "What is the shared space for?",
           "answerId": "a050",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3887,7 +3887,7 @@
           "speaker": "coach",
           "text": "Where does the clear path lead?",
           "answerId": "a051",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3908,7 +3908,7 @@
           "speaker": "coach",
           "text": "Does David guess the space around Helen's chair?",
           "answerId": "a052",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3929,7 +3929,7 @@
           "speaker": "coach",
           "text": "Does he promise the high roof first?",
           "answerId": "a053",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3950,7 +3950,7 @@
           "speaker": "coach",
           "text": "How many questions does Anna write on her sheet?",
           "answerId": "a054",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3971,7 +3971,7 @@
           "speaker": "coach",
           "text": "What does Anna ask about each choice?",
           "answerId": "a055",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -3992,7 +3992,7 @@
           "speaker": "coach",
           "text": "Who will they ask before deciding what can be built?",
           "answerId": "a056",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4013,7 +4013,7 @@
           "speaker": "coach",
           "text": "What does Lily draw beside the tomato?",
           "answerId": "a057",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4034,7 +4034,7 @@
           "speaker": "coach",
           "text": "Can the walls actually listen to people?",
           "answerId": "a058",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4055,7 +4055,7 @@
           "speaker": "coach",
           "text": "What does David ask before putting the plans away?",
           "answerId": "a059",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4076,7 +4076,7 @@
           "speaker": "coach",
           "text": "Who points to the blank space under the notes?",
           "answerId": "a060",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4097,7 +4097,7 @@
           "speaker": "coach",
           "text": "Who is that blank space for?",
           "answerId": "a061",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4118,7 +4118,7 @@
           "speaker": "coach",
           "text": "Is the house already built at the end of the story?",
           "answerId": "a062",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4139,7 +4139,7 @@
           "speaker": "coach",
           "text": "Does David think the picture is completely finished?",
           "answerId": "a063",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4160,7 +4160,7 @@
           "speaker": "coach",
           "text": "Where does he put both plans?",
           "answerId": "a064",
-          "answerPauseMs": 6000,
+          "answerPauseMs": 3000,
           "sourceRefs": [
             {
               "scriptId": "C02-main_story",
@@ -4238,13 +4238,1595 @@
           "translationVi": "Cuối cùng là góc nhìn của bà Helen: \"Tôi đến thăm gia đình David, không ngờ được ngồi trong ngôi nhà làm bằng vạch xanh. Lily bảo ghế tôi nằm trong tường, cả nhà cười. Tôi nói mình muốn lối đi thoáng và chỗ nghỉ dễ đến. David không bảo tôi nên thích phòng to trên lầu. Con đã nghe. Tường chỉ là vạch, nhưng sự đón tiếp là thật.\""
         }
       ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C03-main_story",
+      "lessonId": "C03",
+      "component": "main_story",
+      "version": 1,
+      "status": "draft",
+      "provenance": {
+        "author": "Codex, theo yêu cầu người dùng",
+        "basis": [
+          "PROJECT_BRIEF.md",
+          "STORY_BIBLE.md",
+          "C02-main_story"
+        ],
+        "expressiveContent": "original_draft",
+        "editorialApproval": "pending"
+      },
+      "segments": [
+        {
+          "id": "s01",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "It is twenty past two, and David is looking for something. At three, he has an appointment with his old friend Michael at the library. Michael has agreed to look at the two house plans before David meets the owners. David opens his blue folder. The first plan, with its tall roof, is there. The second one is not. That is the plan with the little tomato, the ear, and the family's notes. David turns the folder upside down. A pencil falls out. The drawing does not.",
+          "translationVi": "Hai giờ hai mươi, David đang tìm một thứ. Ba giờ anh hẹn người bạn lâu năm Michael ở thư viện. Michael đồng ý xem hai bản vẽ trước khi anh gặp chủ nhà. David mở bìa hồ sơ xanh. Bản đầu có mái cao vẫn còn, nhưng bản thứ hai với quả cà chua, cái tai và ghi chú của gia đình thì không. Anh dốc ngược bìa hồ sơ. Một cây bút chì rơi ra, còn bản vẽ thì không."
+        },
+        {
+          "id": "s02",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "On the kitchen table, Ben is putting the last piece on his paper bridge. There are scraps of green paper beside him. He has borrowed scissors from Anna for the afternoon. David remembers seeing Ben near his work the evening before. \"Did you take my drawing?\" he asks. His voice is louder than he means it to be. Ben puts the bridge down. \"I used the green paper. You said I could.\" David looks at the bridge instead of at Ben's face. \"Are you sure you did not take anything else?\" Ben steps back from the table.",
+          "translationVi": "Trên bàn bếp, Ben đang gắn mảnh cuối lên cây cầu giấy. Bên cạnh có giấy xanh thừa. Cậu đã mượn kéo của mẹ Anna dùng trong buổi chiều. David nhớ thấy Ben gần chỗ làm việc tối trước. \"Con lấy bản vẽ của bố à?\" anh hỏi, giọng lớn hơn dự định. Ben đặt cầu xuống. \"Con xin dùng giấy xanh, bố đã đồng ý mà.\" David nhìn cây cầu thay vì nhìn mặt con. \"Con chắc không lấy gì khác chứ?\" Ben lùi khỏi bàn."
+        },
+        {
+          "id": "s03",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Anna hears them from the next room. She has been checking a work report. She comes to the table and asks David to describe the missing sheet. \"White paper, with a tomato in the corner,\" he says. Anna looks at the green scraps. \"What do we know, and what are we guessing?\" she asks. David knows the plan is missing from his folder. He does not know who moved it. Ben's green bridge is not evidence that Ben took a white drawing. David lowers his voice.",
+          "translationVi": "Anna nghe từ phòng bên, nơi cô đang kiểm tra báo cáo công việc. Cô đến bàn và đề nghị David tả tờ giấy thất lạc. \"Giấy trắng, có quả cà chua ở góc,\" anh đáp. Anna nhìn giấy xanh thừa. \"Mình biết điều gì, còn điều gì chỉ đang đoán?\" cô hỏi. David biết bản vẽ không còn trong bìa hồ sơ, nhưng chưa biết ai đã di chuyển. Cầu giấy xanh không phải bằng chứng Ben lấy bản vẽ trắng. Anh hạ giọng."
+        },
+        {
+          "id": "s04",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "David's phone rings. It is Michael. \"Are we still meeting at three?\" he asks. David says that one plan is missing and he is worried about being late. \"I can wait a few minutes if you need me to,\" Michael says. \"But first, where did you last use it?\" David has been thinking about who could have taken the paper. He has not been thinking about what he did with it. He checks the clock, takes a breath, and returns to the table.",
+          "translationVi": "Điện thoại reo, Michael hỏi họ vẫn gặp lúc ba giờ chứ. David nói thiếu một bản vẽ và lo muộn. \"Nếu cần tôi có thể đợi ít phút,\" Michael đáp. \"Nhưng trước hết, lần cuối cậu dùng nó ở đâu?\" Nãy giờ David chỉ nghĩ ai có thể đã lấy giấy, chưa nghĩ chính mình đã làm gì với nó. Anh nhìn đồng hồ, hít một hơi rồi trở lại bàn."
+        },
+        {
+          "id": "s05",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "This time, David asks Ben to tell him what happened, from the beginning. Ben used green paper with permission. Later, he watched David take a white drawing out of the blue folder and carry it to the desk by the window. David begins to remember. He wanted to check a measurement from their floor experiment. The window was open, and the paper kept moving in the air. \"You put a big blue book on it,\" Ben says. \"Then you came to look at my bridge.\"",
+          "translationVi": "Lần này David nhờ Ben kể từ đầu. Ben xin dùng giấy xanh và được đồng ý. Sau đó cậu thấy bố lấy bản vẽ trắng khỏi bìa xanh, mang đến bàn cạnh cửa sổ. David bắt đầu nhớ: anh muốn kiểm tra lại một số đo từ cuộc thử trên sàn. Cửa sổ mở, giấy cứ bị gió đẩy. \"Bố đặt quyển sách xanh to lên nó,\" Ben nói. \"Rồi bố sang xem cầu của con.\""
+        },
+        {
+          "id": "s06",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "David goes to the window desk. The big blue book is still there. He lifts it, and the little tomato appears. The ear and all the notes are there too. One corner is bent, but the drawing is not torn. David feels relief. He wants to put the plan away and hurry to his appointment. Then he sees Ben standing quietly in the doorway. Finding the paper has solved one problem. It has not solved the problem David made when he blamed his son without knowing what happened.",
+          "translationVi": "David đến bàn cửa sổ. Quyển sách xanh to vẫn ở đó. Anh nhấc lên, quả cà chua nhỏ hiện ra. Cái tai và các ghi chú cũng còn. Một góc giấy gập nhưng không rách. Anh nhẹ nhõm, muốn cất ngay để kịp hẹn. Rồi anh thấy Ben im lặng ở cửa. Tìm thấy giấy giải quyết được một chuyện, nhưng chưa giải quyết chuyện anh gây ra khi trách con mà chưa biết điều gì đã xảy ra."
+        },
+        {
+          "id": "s07",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "David sits beside Ben. \"I put the drawing there,\" he says. \"You did not take it. I am sorry I blamed you.\" Ben looks up. \"I was afraid you would not believe me.\" David listens to the whole answer. They put the green scraps in one tray and the drawings in the blue folder. David takes a photo of each plan as a copy for himself. He will still need to keep the originals safe. Ben returns the scissors to Anna's drawer. Before David leaves, he asks if Ben wants to show him the finished bridge. Ben brings it over.",
+          "translationVi": "David ngồi bên Ben. \"Bố đã để bản vẽ ở đó. Con không lấy. Bố xin lỗi vì đã trách con.\" Ben ngẩng lên: \"Con sợ bố không tin con.\" David nghe con nói hết. Hai bố con cho giấy xanh thừa vào khay, bản vẽ vào bìa xanh. Anh chụp mỗi bản để có bản sao riêng, nhưng vẫn cần giữ bản gốc cẩn thận. Ben trả kéo về ngăn của mẹ Anna. Trước khi David đi, anh hỏi Ben có muốn cho xem cây cầu hoàn thành không. Cậu mang cầu đến."
+        },
+        {
+          "id": "s08",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "At the library, David is a few minutes early. He shows Michael both plans and tells him what happened. Michael does not laugh at Ben or call David a bad father. He asks what David will do differently next time. Then he points to the path beside the resting place in the drawing. \"Some people in a nearby village want to talk about a shared space between their houses,\" he says. \"Would you come with me and listen?\" David closes his folder carefully. This time, he is ready to begin with a question.",
+          "translationVi": "Đến thư viện, David vẫn sớm vài phút. Anh đưa Michael cả hai bản và kể chuyện. Michael không cười Ben hay gọi David là người bố tồi; anh hỏi lần sau bạn sẽ làm khác điều gì. Rồi anh chỉ lối đi cạnh chỗ nghỉ trên hình. \"Người ở làng gần đây muốn bàn về khoảng sinh hoạt chung giữa các nhà. Cậu đi cùng tôi nghe họ nói nhé?\" David đóng bìa hồ sơ cẩn thận. Lần này anh sẵn sàng bắt đầu bằng câu hỏi."
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C03-word_discovery",
+      "lessonId": "C03",
+      "component": "word_discovery",
+      "version": 1,
+      "status": "draft",
+      "provenance": {
+        "author": "Codex, theo yêu cầu người dùng",
+        "basis": [
+          "PROJECT_BRIEF.md",
+          "STORY_BIBLE.md",
+          "C02-main_story"
+        ],
+        "expressiveContent": "original_draft",
+        "editorialApproval": "pending"
+      },
+      "segments": [
+        {
+          "id": "s01",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "First, missing. Something is missing when it is not where we expect it to be, or we cannot find it. David's second drawing is missing from the folder. That does not tell us why it is missing. It may be in another place. Someone may have moved it, or David may have moved it himself. Keep a picture of the folder with one plan instead of two. Missing is the beginning of a question, not the answer to it.",
+          "translationVi": "Trước tiên là missing: không có ở chỗ mình chờ đợi hoặc chưa tìm thấy. Bản vẽ thứ hai không có trong bìa hồ sơ, nhưng điều đó chưa cho biết vì sao. Nó có thể ở chỗ khác, do ai di chuyển hoặc chính David đã chuyển. Hãy hình dung bìa hồ sơ chỉ còn một bản thay vì hai. Missing là khởi đầu của câu hỏi, chưa phải câu trả lời."
+        },
+        {
+          "id": "s02",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "To borrow something is to use it for a time with the owner's permission, then give it back. Ben borrows Anna's scissors for the afternoon. Later, he returns them to her drawer. The green paper is different. Ben has permission to use and cut it for his bridge; he cannot return the same uncut sheet. Think of two actions: borrow the scissors and return them; use the paper to make something. Clear words help people understand what has been agreed.",
+          "translationVi": "Borrow là mượn dùng tạm với sự cho phép rồi trả lại. Ben mượn kéo của Anna dùng buổi chiều rồi trả về ngăn. Giấy xanh thì khác: cậu được dùng và cắt làm cầu, không trả lại nguyên tờ chưa cắt. Hình dung hai hành động: mượn kéo rồi trả; dùng giấy để làm đồ. Từ rõ ràng giúp hiểu điều đã thống nhất."
+        },
+        {
+          "id": "s03",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Permission means that someone has said you may do something. Ben has permission to use the green paper. He does not automatically have permission to use every paper on David's desk. Think of one green sheet with a clear yes beside it. The yes belongs to that action, not to everything in the room. When a request is not clear, we can ask, \"Which paper do you mean?\"",
+          "translationVi": "Permission là sự cho phép làm việc gì. Ben được dùng giấy xanh, không mặc nhiên được dùng mọi tờ trên bàn bố. Hình dung tờ xanh với chữ đồng ý bên cạnh: sự cho phép dành cho hành động ấy, không phải mọi thứ trong phòng. Nếu yêu cầu chưa rõ, có thể hỏi: \"Bố nói tờ nào?\""
+        },
+        {
+          "id": "s04",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "To guess is to give an answer when we do not know enough. Evidence is information that helps us decide what may be true. David guesses that Ben took the drawing because Ben was near his work. But being near a desk is not proof of taking a paper. The green scraps help them notice that Ben is talking about a different sheet. They still have to find out where the white drawing went.",
+          "translationVi": "Guess là đoán khi chưa biết đủ. Evidence là thông tin giúp đánh giá điều có thể đúng. David đoán Ben lấy bản vẽ vì thấy con gần bàn làm việc, nhưng ở gần bàn không chứng minh đã lấy giấy. Giấy xanh thừa giúp nhận ra Ben đang nói về tờ khác; họ vẫn phải tìm xem bản trắng ở đâu."
+        },
+        {
+          "id": "s05",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "To blame someone is to say that a problem is their fault. David blames Ben before he knows what happened. His question sounds like a decision that Ben is guilty. Later, David learns that he moved the drawing himself. Finding it does not take away Ben's worry. Picture two things on the table: the paper that David needs, and the trust between father and son. Both need care.",
+          "translationVi": "Blame là quy lỗi cho ai. David trách Ben khi chưa biết chuyện; câu hỏi nghe như đã kết luận con có lỗi. Sau đó anh biết chính mình chuyển bản vẽ. Tìm được giấy không tự xóa nỗi lo của Ben. Hình dung trên bàn có hai điều cần giữ: tờ giấy David cần và lòng tin giữa bố con. Cả hai đều cần quan tâm."
+        },
+        {
+          "id": "s06",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Relief is the feeling when a worry becomes smaller or goes away. David feels relief when he lifts the book and sees the tomato. He is glad the drawing is safe. Ben does not feel the same relief yet. He still worries that his father will not believe him. The same event can change one person's feeling before it changes another person's feeling. This is a reason to ask, not simply assume that everyone is fine.",
+          "translationVi": "Relief là cảm giác nhẹ nhõm khi nỗi lo giảm hoặc hết. David thấy nhẹ người lúc nhấc sách và nhìn ra quả cà chua. Ben chưa nhẹ nhõm như vậy vì vẫn lo bố không tin. Cùng một việc có thể làm người này bớt lo trước người kia. Vì thế nên hỏi, thay vì mặc định ai cũng ổn."
+        },
+        {
+          "id": "s07",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "To apologize is to say you are sorry for something you did. David does not say, \"I am sorry you are upset,\" and stop there. He says what he did: \"I blamed you.\" He also listens to Ben. The words do not make the mistake disappear, but they help him take responsibility. A useful apology is connected to an action we can change, not only to a wish that the other person will stop feeling hurt.",
+          "translationVi": "Apologize là xin lỗi về việc mình làm. David không chỉ nói \"Bố tiếc vì con buồn\" rồi thôi; anh gọi đúng việc mình đã làm: trách con. Anh cũng nghe Ben. Lời nói không xóa sai sót nhưng giúp nhận trách nhiệm. Lời xin lỗi hữu ích gắn với hành động có thể thay đổi, không chỉ mong người kia hết tổn thương."
+        },
+        {
+          "id": "s08",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Finally, a copy is another version of something. David takes a photo as a copy of his plan. He can look at the photo if he needs it, but he still keeps the original drawing in the folder. A copy can help when something is missing. It cannot tell him everything about what happened. Imagine the drawing under the book, the photo on the phone, and the family talking. Better habits help, and clear questions help too.",
+          "translationVi": "Cuối cùng, copy là bản sao. David chụp ảnh bản vẽ để có thể xem lại khi cần, nhưng vẫn giữ bản gốc trong bìa hồ sơ. Bản sao giúp khi một thứ thất lạc, không tự giải thích mọi chuyện đã xảy ra. Hình dung bản vẽ dưới sách, ảnh trong điện thoại và cuộc nói chuyện của gia đình. Thói quen tốt hơn và câu hỏi rõ ràng đều giúp ích."
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C03-quick_response",
+      "lessonId": "C03",
+      "component": "quick_response",
+      "version": 2,
+      "status": "draft",
+      "provenance": {
+        "author": "Codex, theo yêu cầu người dùng",
+        "expressiveContent": "original_draft",
+        "editorialApproval": "pending"
+      },
+      "segments": [
+        {
+          "id": "intro",
+          "type": "narration",
+          "speaker": "coach",
+          "text": "Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.",
+          "translationVi": "Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo."
+        },
+        {
+          "id": "q001",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What time is it when David starts looking for the drawing?",
+          "answerId": "a001",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a001",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "It is twenty past two."
+        },
+        {
+          "id": "q002",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Who will David meet at three?",
+          "answerId": "a002",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a002",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He will meet his old friend Michael."
+        },
+        {
+          "id": "q003",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Where is their appointment?",
+          "answerId": "a003",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a003",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Their appointment is at the library."
+        },
+        {
+          "id": "q004",
+          "type": "question",
+          "speaker": "coach",
+          "text": "When will Michael look at the plans?",
+          "answerId": "a004",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a004",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He will look at them before David meets the owners."
+        },
+        {
+          "id": "q005",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Which drawing is still in the blue folder?",
+          "answerId": "a005",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a005",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "The first drawing with the tall roof is still there."
+        },
+        {
+          "id": "q006",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What is missing from the folder?",
+          "answerId": "a006",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a006",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "The second drawing is missing."
+        },
+        {
+          "id": "q007",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What three things identify the second drawing?",
+          "answerId": "a007",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a007",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "It has the little tomato, the ear, and the family's notes."
+        },
+        {
+          "id": "q008",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does the missing drawing fall out when David turns the folder over?",
+          "answerId": "a008",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s01"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a008",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. A pencil falls out, but the drawing does not."
+        },
+        {
+          "id": "q009",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What is Ben finishing on the kitchen table?",
+          "answerId": "a009",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a009",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He is finishing his paper bridge."
+        },
+        {
+          "id": "q010",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What color are the scraps beside Ben?",
+          "answerId": "a010",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a010",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "The scraps are green."
+        },
+        {
+          "id": "q011",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What has Ben borrowed from Anna?",
+          "answerId": "a011",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a011",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He has borrowed her scissors for the afternoon."
+        },
+        {
+          "id": "q012",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does David ask Ben about?",
+          "answerId": "a012",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a012",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He asks if Ben took his drawing."
+        },
+        {
+          "id": "q013",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Is David's voice as quiet as he intends?",
+          "answerId": "a013",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a013",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. It is louder than he means it to be."
+        },
+        {
+          "id": "q014",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does Ben say he was allowed to use?",
+          "answerId": "a014",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a014",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He says David allowed him to use the green paper."
+        },
+        {
+          "id": "q015",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does David look at Ben's face while asking again?",
+          "answerId": "a015",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a015",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He looks at the bridge."
+        },
+        {
+          "id": "q016",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does Ben do after David asks again?",
+          "answerId": "a016",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s02"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a016",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He steps back from the table."
+        },
+        {
+          "id": "q017",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Who hears the conversation from the next room?",
+          "answerId": "a017",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a017",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Anna hears the conversation."
+        },
+        {
+          "id": "q018",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What has Anna been checking?",
+          "answerId": "a018",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a018",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "She has been checking a work report."
+        },
+        {
+          "id": "q019",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does she ask David to describe?",
+          "answerId": "a019",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a019",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "She asks him to describe the missing sheet."
+        },
+        {
+          "id": "q020",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What color is the drawing David describes?",
+          "answerId": "a020",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a020",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "It is on white paper."
+        },
+        {
+          "id": "q021",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does Anna ask them to separate?",
+          "answerId": "a021",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a021",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "She asks what they know and what they are guessing."
+        },
+        {
+          "id": "q022",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does David know who moved the drawing yet?",
+          "answerId": "a022",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a022",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He only knows it is missing from the folder."
+        },
+        {
+          "id": "q023",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does a green bridge prove Ben took a white drawing?",
+          "answerId": "a023",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a023",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. It is not evidence that he took the drawing."
+        },
+        {
+          "id": "q024",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does David keep speaking loudly after Anna's question?",
+          "answerId": "a024",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s03"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a024",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He lowers his voice."
+        },
+        {
+          "id": "q025",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Who calls David on the phone?",
+          "answerId": "a025",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a025",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Michael calls him."
+        },
+        {
+          "id": "q026",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What time does Michael confirm for their meeting?",
+          "answerId": "a026",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a026",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He confirms three o'clock."
+        },
+        {
+          "id": "q027",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Why is David worried about the time?",
+          "answerId": "a027",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a027",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He is worried about being late because a plan is missing."
+        },
+        {
+          "id": "q028",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does Michael refuse to wait at all?",
+          "answerId": "a028",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a028",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He can wait a few minutes if needed."
+        },
+        {
+          "id": "q029",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does Michael ask about the drawing?",
+          "answerId": "a029",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a029",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He asks where David last used it."
+        },
+        {
+          "id": "q030",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What has David been thinking about before that question?",
+          "answerId": "a030",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a030",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He has been thinking about who could have taken the paper."
+        },
+        {
+          "id": "q031",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Has David thought carefully about what he did with it himself?",
+          "answerId": "a031",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a031",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He has not been thinking about that."
+        },
+        {
+          "id": "q032",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does David do before returning to the table?",
+          "answerId": "a032",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s04"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a032",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He checks the clock and takes a breath."
+        },
+        {
+          "id": "q033",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does David ask Ben for the whole story this time?",
+          "answerId": "a033",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a033",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Yes. He asks what happened from the beginning."
+        },
+        {
+          "id": "q034",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does Ben say he took green paper without permission?",
+          "answerId": "a034",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a034",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He had permission."
+        },
+        {
+          "id": "q035",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What did Ben see David take out of the folder?",
+          "answerId": "a035",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a035",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He saw David take out a white drawing."
+        },
+        {
+          "id": "q036",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Where did David carry that drawing?",
+          "answerId": "a036",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a036",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He carried it to the desk by the window."
+        },
+        {
+          "id": "q037",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What did David want to check?",
+          "answerId": "a037",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a037",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He wanted to check a measurement from the floor experiment."
+        },
+        {
+          "id": "q038",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Why did the paper keep moving?",
+          "answerId": "a038",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a038",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "The window was open, and the air moved it."
+        },
+        {
+          "id": "q039",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What did David put on the drawing?",
+          "answerId": "a039",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a039",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He put a big blue book on it."
+        },
+        {
+          "id": "q040",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What did David do after putting the book down?",
+          "answerId": "a040",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s05"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a040",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He came to look at Ben's bridge."
+        },
+        {
+          "id": "q041",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Where does David go to look now?",
+          "answerId": "a041",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a041",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He goes to the window desk."
+        },
+        {
+          "id": "q042",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Is the big blue book still there?",
+          "answerId": "a042",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a042",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Yes. It is still there."
+        },
+        {
+          "id": "q043",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What appears when he lifts the book?",
+          "answerId": "a043",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a043",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "The little tomato appears on the drawing."
+        },
+        {
+          "id": "q044",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Are the ear and the notes still on the plan?",
+          "answerId": "a044",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a044",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "Yes. They are all there."
+        },
+        {
+          "id": "q045",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Is the drawing torn?",
+          "answerId": "a045",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a045",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. One corner is bent, but it is not torn."
+        },
+        {
+          "id": "q046",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What feeling does David have when he finds it?",
+          "answerId": "a046",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a046",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He feels relief."
+        },
+        {
+          "id": "q047",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Where is Ben standing quietly?",
+          "answerId": "a047",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a047",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He is standing in the doorway."
+        },
+        {
+          "id": "q048",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Has finding the drawing solved the problem of blaming Ben?",
+          "answerId": "a048",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s06"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a048",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. David still needs to deal with that problem."
+        },
+        {
+          "id": "q049",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Who does David say put the drawing under the book?",
+          "answerId": "a049",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a049",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "David says he put it there himself."
+        },
+        {
+          "id": "q050",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does David still say Ben took the drawing?",
+          "answerId": "a050",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a050",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He says Ben did not take it."
+        },
+        {
+          "id": "q051",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does David say he is sorry for?",
+          "answerId": "a051",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a051",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He is sorry that he blamed Ben."
+        },
+        {
+          "id": "q052",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What was Ben afraid of?",
+          "answerId": "a052",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a052",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He was afraid his father would not believe him."
+        },
+        {
+          "id": "q053",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does David interrupt Ben's answer?",
+          "answerId": "a053",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a053",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He listens to the whole answer."
+        },
+        {
+          "id": "q054",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Where do they put the green scraps?",
+          "answerId": "a054",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a054",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "They put the green scraps in one tray."
+        },
+        {
+          "id": "q055",
+          "type": "question",
+          "speaker": "coach",
+          "text": "How does David make a copy of each plan?",
+          "answerId": "a055",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a055",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He takes a photo of each plan."
+        },
+        {
+          "id": "q056",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does David ask Ben before he leaves?",
+          "answerId": "a056",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s07"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a056",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He asks if Ben wants to show him the finished bridge."
+        },
+        {
+          "id": "q057",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Is David late when he reaches the library?",
+          "answerId": "a057",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a057",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He is a few minutes early."
+        },
+        {
+          "id": "q058",
+          "type": "question",
+          "speaker": "coach",
+          "text": "How many plans does David show Michael?",
+          "answerId": "a058",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a058",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He shows him both plans."
+        },
+        {
+          "id": "q059",
+          "type": "question",
+          "speaker": "coach",
+          "text": "Does Michael laugh at Ben or call David a bad father?",
+          "answerId": "a059",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a059",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "No. He does neither."
+        },
+        {
+          "id": "q060",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does Michael ask David about next time?",
+          "answerId": "a060",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a060",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He asks what David will do differently."
+        },
+        {
+          "id": "q061",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What part of the drawing does Michael point to?",
+          "answerId": "a061",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a061",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He points to the path beside the resting place."
+        },
+        {
+          "id": "q062",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What do people in a nearby village want to talk about?",
+          "answerId": "a062",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a062",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "They want to talk about a shared space between their houses."
+        },
+        {
+          "id": "q063",
+          "type": "question",
+          "speaker": "coach",
+          "text": "What does Michael invite David to do?",
+          "answerId": "a063",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a063",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He invites David to come with him and listen."
+        },
+        {
+          "id": "q064",
+          "type": "question",
+          "speaker": "coach",
+          "text": "How does David close his folder this time?",
+          "answerId": "a064",
+          "answerPauseMs": 3000,
+          "sourceRefs": [
+            {
+              "scriptId": "C03-main_story",
+              "segmentId": "s08"
+            }
+          ],
+          "answerPolicy": "model_not_exact_match"
+        },
+        {
+          "id": "a064",
+          "type": "answer",
+          "speaker": "coach",
+          "text": "He closes it carefully."
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "C03-time_shift",
+      "lessonId": "C03",
+      "component": "time_shift",
+      "version": 1,
+      "status": "draft",
+      "provenance": {
+        "author": "Codex, theo yêu cầu người dùng",
+        "basis": [
+          "PROJECT_BRIEF.md",
+          "STORY_BIBLE.md",
+          "C02-main_story"
+        ],
+        "expressiveContent": "original_draft",
+        "editorialApproval": "pending"
+      },
+      "segments": [
+        {
+          "id": "s01",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "First, listen to the events as something that happened yesterday. Yesterday afternoon, David opened his blue folder before an appointment. The first drawing was there, but the second one was missing. He remembered seeing Ben near his work and noticed green paper beside Ben's bridge. David asked if Ben had taken the drawing. He did not know that Ben had taken it. He was worried, and he let a guess sound like a fact.",
+          "translationVi": "Trước tiên hãy nghe như chuyện xảy ra hôm qua. Chiều hôm qua David mở bìa hồ sơ trước cuộc hẹn. Bản đầu còn, bản thứ hai thất lạc. Anh nhớ thấy Ben gần chỗ làm việc, lại thấy giấy xanh cạnh cầu nên hỏi con đã lấy bản vẽ chứ. Anh chưa biết con có lấy hay không; vì lo, anh để lời đoán nghe như sự thật."
+        },
+        {
+          "id": "s02",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Anna asked him to describe the missing paper. It was white, not green. Michael called and asked where David had last used it. Then David listened to Ben's account from the beginning. The evening before, David had carried the white drawing to the window desk. Because the open window made the paper move, he had put a large blue book on it. After that, he had gone to look at Ben's bridge. He had forgotten to return the drawing to the folder.",
+          "translationVi": "Anna nhờ tả giấy: trắng, không phải xanh. Michael gọi hỏi lần cuối David dùng ở đâu. Rồi anh nghe Ben kể từ đầu. Tối trước, chính David mang bản trắng ra bàn cửa sổ; cửa mở khiến giấy bị đẩy nên anh đặt sách xanh to lên, rồi đi xem cầu Ben. Anh đã quên cất bản vẽ vào bìa."
+        },
+        {
+          "id": "s03",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "When David lifted the book, he found the missing plan. The paper was safe, except for a bent corner. He felt relief, but Ben was still quiet. David sat beside him, said that he had moved the plan himself, and apologized for blaming him. Ben said he had been afraid his father would not believe him. David listened. Before leaving, he made copies and asked to see the finished bridge. He reached the library a few minutes early.",
+          "translationVi": "Khi nhấc sách, anh tìm ra bản vẽ, chỉ một góc gập. David nhẹ nhõm nhưng Ben vẫn im lặng. Anh ngồi bên con, nhận mình đã di chuyển bản vẽ và xin lỗi vì trách con. Ben nói đã sợ bố không tin. David lắng nghe, làm bản sao rồi xin xem cầu hoàn thành trước khi đi. Anh đến thư viện sớm ít phút."
+        },
+        {
+          "id": "s04",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Now listen from Ben's point of view. \"I asked Dad if I could use the green paper. He said yes, so I used it for my bridge. When he asked about his drawing, I wanted to explain. His voice was loud, and he kept looking at the bridge. I was afraid he had already decided. Later, he asked me to tell the whole story. I could help him remember. I was glad he found the plan, but I also needed him to believe me.\"",
+          "translationVi": "Bây giờ là góc nhìn Ben: \"Con hỏi dùng giấy xanh, bố đồng ý nên con làm cầu. Khi bố hỏi bản vẽ, con muốn giải thích nhưng bố nói lớn và cứ nhìn cầu. Con sợ bố đã kết luận. Sau đó bố nhờ kể hết, con giúp bố nhớ. Con vui vì tìm được bản vẽ, nhưng cũng cần bố tin mình.\""
+        },
+        {
+          "id": "s05",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Next, imagine David preparing for another busy day. \"I will check my folder before I leave. I will keep a copy of the plans, but I will still look after the originals. If something is missing, I will ask when and where I last used it. If another person may know, I will ask them to explain. I cannot promise I will never lose a paper again. I can choose to ask more carefully, and to take responsibility when I make a mistake.\"",
+          "translationVi": "Tiếp theo hãy hình dung David chuẩn bị cho một ngày bận khác: \"Tôi sẽ kiểm tra hồ sơ trước khi đi, giữ bản sao nhưng vẫn chăm bản gốc. Nếu thiếu thứ gì, tôi sẽ hỏi lần cuối dùng lúc nào, ở đâu. Nếu người khác biết, tôi sẽ nhờ giải thích. Không thể hứa không bao giờ thất lạc giấy nữa, nhưng có thể hỏi cẩn thận hơn và nhận trách nhiệm khi sai.\""
+        },
+        {
+          "id": "s06",
+          "type": "narration",
+          "speaker": "narrator",
+          "text": "Finally, imagine the village visit that Michael has suggested. David will not arrive with a finished answer for everyone. He will ask how people use the space between their houses and what problems they have. If two people remember an event differently, he will listen before deciding what happened. A missing drawing has reminded him that a useful plan depends on more than lines. It also depends on clear information and people being able to speak.",
+          "translationVi": "Cuối cùng hãy hình dung chuyến thăm làng Michael đề nghị. David sẽ không mang sẵn câu trả lời hoàn chỉnh cho mọi người. Anh sẽ hỏi họ dùng khoảng giữa các nhà thế nào, đang gặp vấn đề gì. Nếu hai người nhớ khác nhau, anh sẽ nghe trước khi kết luận. Bản vẽ thất lạc nhắc anh kế hoạch hữu ích không chỉ nhờ nét vẽ mà còn nhờ thông tin rõ và cơ hội để mọi người lên tiếng."
+        }
+      ]
     }
   ],
   "revisionNotes": [
     "Người dùng xác nhận gia đình David có năm thành viên: vợ kế toán, con trai lớp 4, con gái lớp 1, con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1.",
     "Đặt tên: vợ Anna, con trai Ben, con gái lớp1 Lily, con gái út Sophie; bà nội Helen. Các nhân vật phụ có quan hệ rõ trong registry, giới thiệu dần.",
     "Đồng bộ toàn bộ tên hiển thị tuyến chính sang tiếng Anh theo yêu cầu: Helen, Robert, James, Michael, Mary; Tom và gia đình David giữ nguyên.",
-    "Thêm C02, bốn phần/64 câu hỏi, Anna và Grandma Helen có vai trò rõ; chưa chốt audio, thời lượng hoặc danh sách chuẩn."
+    "Thêm C02, bốn phần/64 câu hỏi, Anna và Grandma Helen có vai trò rõ; chưa chốt audio, thời lượng hoặc danh sách chuẩn.",
+    "Thêm C03: bản vẽ David tự đặt dưới sách, Ben không lấy; có đủ bốn phần/64 câu hỏi. Michael gợi chuyến thăm làng cho C04, chưa xảy ra ở Main Story.",
+    "Người dùng yêu cầu mọi Quick Response chờ khoảng3giây, người học trả lời ngay bằng một/vài từ; không đòi đủ câu hoặc khớp đáp án. Không kéo dài pause để đạt thời lượng."
   ],
   "wordDiscoveryByLesson": {
     "C02": [
@@ -4284,6 +5866,51 @@
         "wordId": "en.plan",
         "reason": "Đa nghĩa: bản vẽ và kế hoạch thời gian."
       }
+    ],
+    "C03": [
+      {
+        "wordId": "en.missing",
+        "reason": "Không tìm thấy ở vị trí dự kiến chưa cho biết nguyên nhân."
+      },
+      {
+        "wordId": "en.borrow",
+        "reason": "Phân biệt mượn dùng tạm với xin dùng giấy tiêu hao."
+      },
+      {
+        "wordId": "en.permission",
+        "reason": "Sự cho phép gắn với hành động cụ thể, không phải mọi đồ vật."
+      },
+      {
+        "wordId": "en.guess",
+        "reason": "Nhận ra khi lời đoán đang được nói như điều chắc chắn."
+      },
+      {
+        "wordId": "en.evidence",
+        "reason": "Phân biệt thông tin hỗ trợ với giả định do lo lắng."
+      },
+      {
+        "wordId": "en.blame",
+        "reason": "Nối hành động trách người khác với hậu quả về lòng tin."
+      },
+      {
+        "wordId": "en.relief",
+        "reason": "Người tìm ra giấy và người bị trách chưa chắc cùng nhẹ nhõm."
+      },
+      {
+        "wordId": "en.apologize",
+        "reason": "Gọi rõ hành động sai và nghe người bị ảnh hưởng."
+      },
+      {
+        "wordId": "en.copy",
+        "reason": "Bản sao hỗ trợ bảo quản, không thay mọi nhu cầu bản gốc."
+      }
     ]
+  },
+  "quickResponsePolicy": {
+    "answerPauseMs": 3000,
+    "learnerResponse": "one_or_a_few_words",
+    "fullSentenceRequired": false,
+    "exactWordingRequired": false,
+    "purpose": "Hình thành phản xạ trả lời ngay; đáp án mẫu dài hơn chỉ để nghe tham khảo, không phải điều kiện đạt."
   }
 }

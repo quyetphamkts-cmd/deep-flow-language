@@ -50,7 +50,7 @@
     "Nhân vật phụ được đưa vào từng bước; không bắt người học nhớ mọi tên ngay C01.",
     "Tuyến bài chính dùng tên gọi tiếng Anh cho mọi nhân vật; danh tính, quan hệ và bối cảnh Việt Nam vẫn giữ nguyên. ID kỹ thuật ổn định, không phải tên hiển thị."
   ],
-  "version": 4,
+  "version": 5,
   "namingAuthority": "Người dùng yêu cầu tự đặt tên và dùng toàn bộ tên tiếng Anh cho tuyến bài chính, ngày 28/10/2026.",
   "recurringCharacters": [
     {
@@ -107,7 +107,7 @@
       "relatedTo": [
         "david"
       ],
-      "introduction": "Bạn có quan điểm riêng, đôi khi góp ý hoặc bất đồng; không chỉ xuất hiện để giảng bài."
+      "introduction": "Xuất hiện trong C03 với vai trò bạn lâu năm: hỏi David lần cuối dùng bản vẽ ở đâu, nghe chuyện và gợi chuyến thăm làng cho C04. Chưa chốt nghề nghiệp."
     },
     {
       "id": "neighbor-mai",

@@ -8,6 +8,8 @@ const spoken = script => script.segments.filter(s=>s.type!=='pause').map(s=>s.te
 function reviewDraft(manifest, bundle, inventory) {
   const m = normalizeManifest(manifest), errors = [], scripts = bundle?.scripts;
   if (bundle?.schemaVersion!==1 || bundle.status!=='authored_draft_pending_user_review' || !Array.isArray(scripts)) throw new Error('Gói bản nháp không hợp lệ');
+  const responsePolicy=bundle.quickResponsePolicy;
+  if(responsePolicy?.answerPauseMs!==3000 || responsePolicy.learnerResponse!=='one_or_a_few_words' || responsePolicy.fullSentenceRequired!==false || responsePolicy.exactWordingRequired!==false)errors.push('Quick Response cần chờ 3 giây và chấp nhận một/vài từ, không bắt đủ câu');
   const authoredIds=new Set(scripts.map(s=>s?.lessonId));
   const authoredLessons=m.lessons.filter(l=>authoredIds.has(l.id));
   const expected=authoredLessons.flatMap(l=>l.components.map(c=>c.id));
@@ -24,6 +26,7 @@ function reviewDraft(manifest, bundle, inventory) {
     for (let i=0;i<s.segments.length;i++) {
       const q=s.segments[i];
       if (q.type!=='question') continue;
+      if(q.answerPauseMs!==responsePolicy?.answerPauseMs)errors.push(`${s.id}/${q.id}: khoảng chờ phải theo chính sách 3 giây`);
       const answer=s.segments[i+1];
       if (answer?.id!==q.answerId || answer?.type!=='answer') errors.push(`${s.id}/${q.id}: đáp án phải nằm ngay sau câu hỏi`);
       if (q.answerPolicy!=='model_not_exact_match') errors.push(`${s.id}/${q.id}: không dùng đáp án mẫu để chấm khớp nguyên văn`);
@@ -76,7 +79,7 @@ function renderDraft(manifest,bundle,inventory,options={}) {
   const lessons=report.lessons.filter(l=>selected.includes(l.id));
   const usedWords=new Set(report.proposedInventoryAudit.lessons.filter(l=>selected.includes(l.id)).flatMap(l=>Object.keys(l.counts)));
   const titles={main_story:'Main Story',word_discovery:'Word Discovery',quick_response:'Quick Response',time_shift:'Time Shift',daily_adventure:'Daily Adventure'};
-  const out=[`# ${lessons.map(l=>l.id).join(' · ')} — bản nháp nội dung ${bundle.contentVersion}`,'','**Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**','','Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lời là mẫu, không yêu cầu người học nói đúng nguyên văn.','','Ước tính dùng giả định 100–120 từ/phút cộng khoảng chờ; chưa đo thời lượng audio.',''];
+  const out=[`# ${lessons.map(l=>l.id).join(' · ')} — bản nháp nội dung ${bundle.contentVersion}`,'','**Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**','','Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response chờ khoảng 3 giây: trả lời ngay bằng một/vài từ, không cần đủ câu hoặc khớp nguyên văn. Câu mẫu dài hơn chỉ để nghe tham khảo.','','Ước tính dùng giả định 100–120 từ/phút cộng khoảng chờ; chưa đo thời lượng audio.',''];
   for(const l of lessons){
     const title=manifest.lessons.find(x=>x.id===l.id).title;
     out.push(`## ${l.id} — ${title}`,'',`${l.questionCount} câu hỏi · ước tính ${(l.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút, khoảng ${(l.estimatedRangeSeconds[0]/60).toFixed(1)}–${(l.estimatedRangeSeconds[1]/60).toFixed(1)} phút theo giả định tốc độ.`, '');

@@ -1,4 +1,4 @@
-# STORY BIBLE — v1.4 (C02 drafted; editorial approval pending)
+# STORY BIBLE — v1.6 (C03 drafted; three-second responses; approval pending)
 
 ## Main series
 **The Architect’s Journey**: David, Vietnamese architect and father, asks what makes a house genuinely good for people. A child's question — “Dad, can you build a house that makes people happy?” — begins a 12-episode journey. The answer develops from impressive buildings toward empathy, belonging, nature, safety, community and purpose. Avoid preachiness. Every episode: clear want → obstacle → escalating attempt → surprising but causal choice → emotional change. Characters and episodes beyond this brief remain to be developed; David's age, location and other biographical details are NOT locked.
@@ -37,7 +37,7 @@ Theo yêu cầu mới, **mọi nhân vật trong các bài chính đều dùng t
 Đây là dàn nhân vật bổ sung được đặt theo quyền sáng tác người dùng giao. Quan hệ giữ nguyên khi tái xuất. Các gợi ý xuất hiện sau đây là kế hoạch biên tập, chưa phải kịch bản đã khóa:
 
 - C02 đã có bản nháp: Anna chủ động trao đổi nhu cầu/ngân sách, bà Helen đến thăm và thử lối đi. Nghề kế toán thể hiện qua công việc, không giới hạn Anna ở nội trợ. Câu chuyện diễn ra vài ngày sau C01; nhà mới chưa xây, các lựa chọn còn phải hỏi chủ nhà/người xây.
-- C03 có thể để Ben hoặc Michael góp một góc nhìn khác khi bản vẽ thất lạc.
+- C03 đã có bản nháp: bản thứ hai nằm dưới sách xanh do David tự đặt ở bàn cửa sổ tối hôm trước; Ben không lấy. Anna giúp tách điều biết/điều đoán, Michael hỏi lần cuối dùng ở đâu. David nhận lỗi, nghe Ben rồi đến hẹn thư viện vẫn sớm ít phút. Michael gợi chuyến nghe nhu cầu không gian chung ở làng cho C04; chuyến đi chưa xảy ra trong Main Story.
 - C04–C05 có thể đưa ông bà, Sophie hoặc James vào những tình huống về không gian chung, chỗ nghỉ và nhu cầu an toàn khác nhau.
 - Các bài tiếp theo luân phiên họ hàng/bạn bè, để Tom xuất hiện khi có bối cảnh gặp gỡ, chia sẻ hay chơi cùng các anh chị em họ.
 
@@ -75,3 +75,8 @@ Mỗi bài nên chỉ thêm khoảng một hoặc hai tên phụ mới; C01 gi�
 
 ## Scope boundaries
 Do not write imitation Pixar films or retell Effortless English lesson scripts. Do not present fictional cultural stereotypes as factual history. All lesson titles and premises in curriculum_manifest.json are draft outlines, subject to editorial refinement.
+
+
+## Nhịp Quick Response — người dùng chốt
+
+Khoảng chờ sau mỗi câu hỏi là **ba giây**. Ưu tiên phản hồi ngay bằng một hoặc vài từ; chưa yêu cầu câu đầy đủ, ngữ pháp hoàn hảo hoặc khớp nguyên văn đáp án mẫu. Không dùng độ dài câu để chấm đạt. Đáp án mẫu có thể dài hơn để nghe tham khảo. Nếu cần hoàn thiện thời lượng, bổ sung tình huống/truy hồi có ích thay vì kéo dài pause. Quy tắc áp dụng cả các bài đã viết và bài viết tiếp theo.

@@ -1,14 +1,14 @@
-# C01 · Z01 — bản nháp nội dung drafts-v1.4
+# C01 · Z01 — bản nháp nội dung drafts-v1.6
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
-Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lời là mẫu, không yêu cầu người học nói đúng nguyên văn.
+Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response chờ khoảng 3 giây: trả lời ngay bằng một/vài từ, không cần đủ câu hoặc khớp nguyên văn. Câu mẫu dài hơn chỉ để nghe tham khảo.
 
 Ước tính dùng giả định 100–120 từ/phút cộng khoảng chờ; chưa đo thời lượng audio.
 
 ## C01 — A Question at Sunrise
 
-69 câu hỏi · ước tính 31.5 phút ở 110 từ/phút, khoảng 29.4–33.9 phút theo giả định tốc độ.
+69 câu hỏi · ước tính 28.2 phút ở 110 từ/phút, khoảng 26.1–30.6 phút theo giả định tốc độ.
 
 ### Main Story
 
@@ -80,421 +80,421 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ### Quick Response
 
-**[intro]** Listen to each question. Answer aloud during the pause. A short answer is fine. Then listen to one possible answer. You can pause the audio if you need more time.
+**[intro]** Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.
 
-*Tiếng Việt:* Nghe từng câu hỏi, trả lời thành tiếng trong khoảng chờ rồi nghe một câu trả lời mẫu. Trả lời ngắn cũng được; có thể dừng audio nếu cần thêm thời gian.
+*Tiếng Việt:* Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo.
 
 **q001. Where is David working as the sun comes up?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: He is working at the kitchen table.
 
 **q002. What is David's job?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: He is an architect. He designs buildings.
 
 **q003. Is he drawing a house or a boat?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: He is drawing a house.
 
 **q004. What is unusual about the roof in his drawing?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: The roof is very tall.
 
 **q005. Who puts two bowls on the table?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: Lily puts two bowls on the table.
 
 **q006. Are both bowls for David?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: No. One is for David, and one is for Lily.
 
 **q007. What does Lily want him to do first?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: She wants him to eat breakfast first.
 
 **q008. Does David look away from his work when he smiles?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: No. His eyes stay on the drawing.
 
 **q065. How many people are in David's family?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: There are five people in his family.
 
 **q066. What does David's wife do?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: She is an accountant.
 
 **q067. What grade is their oldest child in?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: Their son is in grade four.
 
 **q068. What grade is their older daughter in?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: She is in grade one.
 
 **q069. How old is their youngest daughter?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s01.*
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
 
 Đáp án mẫu: She is two years old.
 
 **q009. Why does Lily put her head close to the table?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: She wants to look at the picture from down low.
 
 **q010. Is the window low enough for her?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: No. The window is too high for her.
 
 **q011. What does David call the house?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: He calls it a beautiful house.
 
 **q012. Does Lily only ask about the roof?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: No. She asks about a house that makes people happy.
 
 **q013. What important question does she ask her father?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: She asks if he can build a house that makes people happy.
 
 **q014. Does David give a quick answer?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: No. He opens his mouth, but then he closes it.
 
 **q015. Does David know how to draw a tall roof?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: Yes. He knows how to draw a tall roof.
 
 **q016. What does he not know how to draw?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s02.*
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
 
 Đáp án mẫu: He does not know how to draw a happy morning.
 
 **q017. Where do David and Lily go after breakfast?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: They walk to the market.
 
 **q018. What color is the folder that holds his drawing?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: The folder is blue.
 
 **q019. Why does David want to go home quickly?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: He wants to finish his work before lunch.
 
 **q020. What does Mary sell at the market?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: She sells vegetables.
 
 **q021. Is Mary a stranger or their neighbor?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: She is their neighbor.
 
 **q022. What color is the cover over her stall?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: The cover is green.
 
 **q023. Who stops beside the tomatoes?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: Lily stops beside the tomatoes.
 
 **q024. Why can Mary not sit on her stool?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s03.*
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: A screw in one of its legs is loose.
 
 **q025. What lifts the green cover?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: A sudden wind lifts the cover.
 
 **q026. Why does David reach up?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: He reaches up to help Mary hold the cover.
 
 **q027. What happens to his folder?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: It falls open.
 
 **q028. Where does the drawing land?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: It lands in a basket of tomatoes.
 
 **q029. What sits on the tall roof in the picture?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: A red tomato sits on the tall roof.
 
 **q030. Does the tomato damage the paper?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: No. It does not hurt the paper.
 
 **q031. Why does David want to be angry at first?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: He has worked on the drawing all morning.
 
 **q032. Does he stay angry after Lily laughs?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s04.*
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
 
 Đáp án mẫu: No. He takes a breath and laughs too.
 
 **q033. What does David notice when he stops?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: He notices Mary's tired face.
 
 **q034. Has Mary been standing since lunchtime?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: No. She has been standing since sunrise.
 
 **q035. Where is the bench?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: It is across the path.
 
 **q036. Is the bench in the shade?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: No. It is in the hot sun.
 
 **q037. What gives shade beside Mary's stall?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: The green cover gives shade.
 
 **q038. Why is a beautiful seat not always useful?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: People may not be able to use it.
 
 **q039. What does Lily move out of the path?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: She moves an empty box.
 
 **q040. Why does she move the box?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s05.*
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
 
 Đáp án mẫu: People need room to walk.
 
 **q041. Where does Mary keep the small tool?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: She keeps it in a drawer.
 
 **q042. Does David take the tool without asking?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: No. He uses it with Mary's permission.
 
 **q043. What does he do to the loose screw?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: He tightens it.
 
 **q044. What does David do before Mary sits down?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: He checks the stool.
 
 **q045. Does Mary think the small repair matters?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: Yes. It makes a big difference to her morning.
 
 **q046. Where do Mary and Lily talk?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: They talk in the shade under the cover.
 
 **q047. Is this place tall or expensive?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: No. Nothing there is tall or expensive.
 
 **q048. What can people do there?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s06.*
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: They can sit, talk, and see each other.
 
 **q049. Does David hurry on the way home?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: No. He does not hurry.
 
 **q050. What does he ask Lily?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: He asks what she would change.
 
 **q051. Why does she want a low window?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: She wants to see the tree.
 
 **q052. Who needs a place to rest in her idea?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: Grandma Helen needs a place to rest.
 
 **q053. Does David throw away his first picture?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: No. He keeps the first picture too.
 
 **q054. Where is the seat in his second drawing?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: It is in the shade beside the entrance.
 
 **q055. Who does David want to show both pictures to?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: The people who will live in the house.
 
 **q056. What does he want to ask those people?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s07.*
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
 
 Đáp án mẫu: He wants to ask what they need.
 
 **q057. What does Lily bring him at lunchtime?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: She brings him a bowl of soup.
 
 **q058. Does David keep drawing while he picks up his spoon?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: No. He closes his folder first.
 
 **q059. Is David certain that his new house will make people happy?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: No. He says he does not know yet.
 
 **q060. Who must they ask about the new house?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: They must ask the people who will live there.
 
 **q061. What does David think he did too early?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: He drew the roof before listening to the people.
 
 **q062. What does Lily draw in the corner?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: She draws a tiny tomato.
 
 **q063. Does David remove the little tomato?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: No. He leaves it there.
 
 **q064. What question does David write under the drawing?**
 
-*Chờ 6 giây. Nguồn: C01-main_story/s08.*
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
 
 Đáp án mẫu: He writes the question, "Who is this house for?"
 
@@ -526,7 +526,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ## Z01 — The Mouse Who Wanted to Fly
 
-40 câu hỏi · ước tính 14.2 phút ở 110 từ/phút, khoảng 13.3–15.3 phút theo giả định tốc độ.
+40 câu hỏi · ước tính 13.3 phút ở 110 từ/phút, khoảng 12.4–14.5 phút theo giả định tốc độ.
 
 ### Daily Adventure
 
@@ -564,247 +564,247 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 ### Quick Response
 
-**[intro]** Listen to each question. Answer aloud during the pause. A short answer is fine. Then listen to one possible answer. You can pause the audio if you need more time.
+**[intro]** Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.
 
-*Tiếng Việt:* Nghe từng câu hỏi, trả lời thành tiếng trong khoảng chờ rồi nghe một câu trả lời mẫu. Trả lời ngắn cũng được; có thể dừng audio nếu cần thêm thời gian.
+*Tiếng Việt:* Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo.
 
 **q001. Where does Mouse live?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s01.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s01.*
 
 Đáp án mẫu: She lives in a little house under a tree.
 
 **q002. What does she watch every morning?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s01.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s01.*
 
 Đáp án mẫu: She watches the birds.
 
 **q003. What is hanging from the highest branch?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s01.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s01.*
 
 Đáp án mẫu: A blue ribbon is hanging there.
 
 **q004. Why does the village need the ribbon?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s01.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s01.*
 
 Đáp án mẫu: It must go on the gate for tonight's welcome dinner.
 
 **q005. How did the ribbon get into the tree?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s01.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s01.*
 
 Đáp án mẫu: The wind blew it out of a basket.
 
 **q006. What does Mouse use to make wings?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s02.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s02.*
 
 Đáp án mẫu: She uses wide leaves.
 
 **q007. Does she fly when she moves her arms?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s02.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s02.*
 
 Đáp án mẫu: No. She stays on the ground.
 
 **q008. What falls over her face?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s02.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s02.*
 
 Đáp án mẫu: A leaf falls over her face.
 
 **q009. Who comes to speak to Mouse?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s02.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s02.*
 
 Đáp án mẫu: A sparrow comes to speak to her.
 
 **q010. Does Sparrow tell her to jump from the tree?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s02.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s02.*
 
 Đáp án mẫu: No. He tells her not to jump.
 
 **q011. Is the ladder tall enough to reach the ribbon?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s03.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s03.*
 
 Đáp án mẫu: No. Its top is far below the ribbon.
 
 **q012. Why does Mouse stop thinking about the high branches?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s03.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s03.*
 
 Đáp án mẫu: They are too thin, and she does not want a broken leg.
 
 **q013. What does she notice on the same branch?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s03.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s03.*
 
 Đáp án mẫu: She notices a long string.
 
 **q014. Where does one end of the string hang?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s03.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s03.*
 
 Đáp án mẫu: It hangs almost to the ground.
 
 **q015. What does Mouse hope to bring closer?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s03.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s03.*
 
 Đáp án mẫu: She hopes to bring the ribbon closer.
 
 **q016. Who looks at the ribbon from above?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s04.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s04.*
 
 Đáp án mẫu: Sparrow looks from above.
 
 **q017. What does the string go through?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s04.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s04.*
 
 Đáp án mẫu: It goes through a loop in the ribbon.
 
 **q018. Why must Mouse not pull hard?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s04.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s04.*
 
 Đáp án mẫu: The ribbon may tear.
 
 **q019. What does Mouse fix to the long stick?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s04.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s04.*
 
 Đáp án mẫu: She fixes a small hook to it.
 
 **q020. Does she need to leave the ground to catch the string?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s04.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s04.*
 
 Đáp án mẫu: No. Both feet stay on the ground.
 
 **q021. What happens when Mouse first pulls slowly?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s05.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s05.*
 
 Đáp án mẫu: The ribbon moves a little and then stops.
 
 **q022. What stops the ribbon?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s05.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s05.*
 
 Đáp án mẫu: A rough part of the branch stops it.
 
 **q023. Does Mouse pull harder right away?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s05.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s05.*
 
 Đáp án mẫu: No. She lets the string become loose.
 
 **q024. How does Sparrow help?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s05.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s05.*
 
 Đáp án mẫu: He lifts a corner of the ribbon with his beak.
 
 **q025. What does Mouse catch in her arms?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s05.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s05.*
 
 Đáp án mẫu: She catches the ribbon as it comes down.
 
 **q026. Where does Mouse put the ribbon at the village gate?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s06.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s06.*
 
 Đáp án mẫu: She lays it on a clean bench.
 
 **q027. Is the ribbon completely undamaged?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s06.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s06.*
 
 Đáp án mẫu: No. One corner has a small tear.
 
 **q028. What does Sparrow suggest using for that corner?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s06.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s06.*
 
 Đáp án mẫu: He suggests using a little leaf.
 
 **q029. What does Mouse use to repair the corner?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s06.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s06.*
 
 Đáp án mẫu: She uses a small piece of leaf and some thread.
 
 **q030. What does the green repair look like?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s06.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s06.*
 
 Đáp án mẫu: It looks like a tiny wing.
 
 **q031. Do the friends arrive for breakfast or dinner?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s07.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s07.*
 
 Đáp án mẫu: They arrive for dinner.
 
 **q032. Does Mouse tell everyone that she learned to fly?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s07.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s07.*
 
 Đáp án mẫu: No. She says she stayed on the ground.
 
 **q033. What three things does she say she did?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s07.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s07.*
 
 Đáp án mẫu: She looked carefully, used a tool, and asked for help.
 
 **q034. Who gets a place beside Mouse at the table?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s07.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s07.*
 
 Đáp án mẫu: Sparrow gets a place beside her.
 
 **q035. What does Mouse check before they eat?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s07.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s07.*
 
 Đáp án mẫu: She checks that the youngest guests can reach their bowls.
 
 **q036. Does Mouse still enjoy watching birds the next morning?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s08.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s08.*
 
 Đáp án mẫu: Yes. She still loves to watch them.
 
 **q037. Where are her leaf wings?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s08.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s08.*
 
 Đáp án mẫu: They are beside the door.
 
 **q038. Has Mouse actually learned to fly?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s08.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s08.*
 
 Đáp án mẫu: No. She has not learned to fly.
 
 **q039. What does she draw in her small book?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s08.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s08.*
 
 Đáp án mẫu: She draws the stick, the hook, and the string.
 
 **q040. What three reminders does she write?**
 
-*Chờ 4.5 giây. Nguồn: Z01-daily_adventure/s08.*
+*Chờ 3 giây. Nguồn: Z01-daily_adventure/s08.*
 
 Đáp án mẫu: She writes three reminders: "Look first. Ask for help. Try another way."
 
@@ -860,6 +860,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 | family | /ˈfæməli/ | gia đình |
 | year | /jɪr/ | năm; two years old: hai tuổi |
 | child | /tʃaɪld/ | đứa trẻ; con trong gia đình |
+| permission | /pərˈmɪʃən/ | sự cho phép |
 
 ## Vì sao chọn Word Discovery?
 

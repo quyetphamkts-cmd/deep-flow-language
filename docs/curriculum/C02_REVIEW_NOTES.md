@@ -21,12 +21,12 @@ Không có nhà mới được xây trong C02. Vạch xanh không ngăn tiếng 
 |---|---|
 | Main Story | Tám cảnh, tiếng Anh và bản dịch Việt |
 | Word Discovery | Chín mục được chọn: budget, afford, quiet, noise, privacy, measure, choice, agree, plan |
-| Quick Response | 64 câu theo tám cảnh, chờ sáu giây trước đáp án mẫu; không chấm khớp nguyên văn |
+| Quick Response | 64 câu theo tám cảnh, chờ ba giây trước đáp án mẫu; không chấm khớp nguyên văn |
 | Time Shift | Hôm qua, góc nhìn Anna, cuộc gặp tương lai giả định, góc nhìn bà Helen; có bản dịch Việt |
 
 Câu hỏi đều trỏ đến cảnh trong chính C02. Các chi tiết cần để trả lời được nhắc trong bài, không buộc học thuộc C01 hoặc học truyện mở rộng.
 
-Ước tính 2.673 từ được đọc và 384 giây chờ: khoảng **30,7 phút ở 110 từ/phút**; dải giả định 100–120 từ/phút khoảng 28,7–33,1 phút. Đây là tính từ kịch bản, không phải thời lượng audio thật. Cần nghe thử/đo trước khi chốt 30–45 phút.
+Sau thay đổi khoảng chờ ba giây: 2.684 từ được đọc và 192 giây chờ, khoảng **27,6 phút ở 110 từ/phút**; dải giả định 100–120 từ/phút khoảng 25,6–30,0 phút. Người học chỉ cần một/vài từ, không phải trả lời đủ câu. Đây là tính từ kịch bản, không phải thời lượng audio thật. Cần nghe thử/đo trước khi chốt 30–45 phút.
 
 ## Từ vựng
 

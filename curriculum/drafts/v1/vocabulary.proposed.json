@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 3,
+  "version": 4,
   "status": "proposed_not_canonical",
   "source": "Original draft authoring inventory; not a frequency-ranked external word list",
   "license": null,
@@ -616,6 +616,132 @@
       "ipa": "/ʃer/",
       "ipaVariety": "General American, bản biên soạn chờ rà soát",
       "glossVi": "chia sẻ; cùng dùng"
+    },
+    {
+      "id": "en.missing",
+      "lemma": "missing",
+      "forms": [],
+      "ipa": "/ˈmɪsɪŋ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "thất lạc, không có ở chỗ dự kiến"
+    },
+    {
+      "id": "en.borrow",
+      "lemma": "borrow",
+      "forms": [
+        "borrows",
+        "borrowed",
+        "borrowing"
+      ],
+      "ipa": "/ˈbɑːroʊ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "mượn để dùng tạm rồi trả"
+    },
+    {
+      "id": "en.permission",
+      "lemma": "permission",
+      "forms": [],
+      "ipa": "/pərˈmɪʃən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự cho phép"
+    },
+    {
+      "id": "en.guess",
+      "lemma": "guess",
+      "forms": [
+        "guesses",
+        "guessed",
+        "guessing"
+      ],
+      "ipa": "/ɡes/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đoán; lời đoán"
+    },
+    {
+      "id": "en.evidence",
+      "lemma": "evidence",
+      "forms": [],
+      "ipa": "/ˈevɪdəns/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bằng chứng, thông tin hỗ trợ nhận định"
+    },
+    {
+      "id": "en.blame",
+      "lemma": "blame",
+      "forms": [
+        "blames",
+        "blamed",
+        "blaming"
+      ],
+      "ipa": "/bleɪm/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "trách, quy lỗi"
+    },
+    {
+      "id": "en.relief",
+      "lemma": "relief",
+      "forms": [],
+      "ipa": "/rɪˈliːf/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự nhẹ nhõm"
+    },
+    {
+      "id": "en.apologize",
+      "lemma": "apologize",
+      "forms": [
+        "apologizes",
+        "apologized",
+        "apologizing"
+      ],
+      "ipa": "/əˈpɑːlədʒaɪz/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "xin lỗi về việc đã làm"
+    },
+    {
+      "id": "en.copy",
+      "lemma": "copy",
+      "forms": [
+        "copies",
+        "copied",
+        "copying"
+      ],
+      "ipa": "/ˈkɑːpi/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bản sao; sao chép"
+    },
+    {
+      "id": "en.appointment",
+      "lemma": "appointment",
+      "forms": [
+        "appointments"
+      ],
+      "ipa": "/əˈpɔɪntmənt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "cuộc hẹn"
+    },
+    {
+      "id": "en.remember",
+      "lemma": "remember",
+      "forms": [
+        "remembers",
+        "remembered",
+        "remembering"
+      ],
+      "ipa": "/rɪˈmembər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "nhớ lại"
+    },
+    {
+      "id": "en.return",
+      "lemma": "return",
+      "forms": [
+        "returns",
+        "returned",
+        "returning"
+      ],
+      "ipa": "/rɪˈtɜːrn/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "trở lại; trả về"
     }
   ]
 }
