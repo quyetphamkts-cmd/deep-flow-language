@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.52",
-  "notes": "Sửa vòng đời WebView/phát nền, giảm giải mã gây tốn RAM, giữ nguyên nhân crash và phân biệt tiến trình phụ",
+  "ver": "1.0.3-beta.53",
+  "notes": "Lịch ôn một mục/ngày · kéo thư mục Undo/Redo · tra từ Không lưu · Đọc gọn · Flashcard chạm để lật",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,16 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.53",
+      "d": "28/10/2026",
+      "items": [
+        "Trọng âm có gợi ý; bỏ vuốt giữa trang chức năng; tra từ tự lưu với nút Không lưu; Flashcard bỏ nút Xem đáp án, chạm để lật; bỏ số đếm ở nút Từ vựng dưới cùng; tự động chỉ chuyển thẻ (mặc định 3 giây), chỉ bấm mới lật",
+        "Thư viện có Lịch ôn tập một mục/ngày, chỉ lấy bài đã học xong; dừng ôn trở về bài chính; Streak toàn màn hình, hướng dẫn trong nút !",
+        "Kéo thả thư mục mọi cấp có Undo/Redo/Xong; giữ thứ tự thủ công khi đồng bộ; thứ tự Effortless English và cấp độ tăng dần",
+        "Đọc: lịch sử và thống kê khi Đọc xong, tốc độ đọc tự tính; thanh công cụ nhỏ ở chân trang, copy đúng cặp câu song ngữ; link video mới đánh giá, chưa triển khai"
+      ]
+    },
     {
       "v": "1.0.3-beta.52",
       "d": "28/10/2026",
