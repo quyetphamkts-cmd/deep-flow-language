@@ -6,6 +6,7 @@ on:
       - 'curriculum/**'
       - 'tools/curriculum/**'
       - 'tests/curriculum.test.cjs'
+      - 'tests/curriculum-draft.test.cjs'
       - '.github/workflows/curriculum-checks.yml'
   workflow_dispatch:
 permissions:
@@ -18,14 +19,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node --test tests/curriculum.test.cjs
+      - run: node --test tests/curriculum*.test.cjs
       - name: Kiểm tra cấu trúc và báo cáo phần còn thiếu
         run: node tools/curriculum/check.cjs > curriculum-report.json
       - name: Xem trước C01 và Z01 (không tạo giọng đọc)
         run: node tools/curriculum/check.cjs --preview > curriculum-preview.json
+      - name: Kiểm tra bản nháp C01 và Z01 có nội dung
+        run: |
+          node tools/curriculum/review-draft.cjs > curriculum-draft-review.json
+          node tools/curriculum/review-draft.cjs --markdown > curriculum-draft.md
       - uses: actions/upload-artifact@v4
         with:
           name: curriculum-review
           path: |
             curriculum-report.json
             curriculum-preview.json
+            curriculum-draft-review.json
+            curriculum-draft.md

@@ -3,6 +3,8 @@
 Ngày lập: 28/10/2026. Repository chung: `quyetphamkts-cmd/deep-flow-language`.
 Tài liệu này bổ sung quy trình làm việc; sáu tệp bàn giao gốc trong ZIP được giữ nguyên.
 
+**Điều chỉnh đã được người dùng đồng ý ngày 28/10/2026:** trong khi phiên ChatGPT Work chưa có công cụ ghi GitHub khả dụng, Codex được đảm nhận cả biên soạn nháp C01/Z01 lẫn kỹ thuật, dùng tài liệu hiện có làm chuẩn. Nội dung do Codex viết vẫn là bản nháp chờ người dùng duyệt; không đại diện cho một lần ChatGPT khác đã duyệt. Có thể quay về phân công hai bên dưới đây khi công cụ kết nối được xác minh. Không bật tự động hóa API hoặc phát hành theo điều chỉnh này.
+
 ## Mỗi đầu việc có một bên phụ trách
 
 | Đầu việc | Phụ trách chính | Bên kiểm tra | Sản phẩm bàn giao |
