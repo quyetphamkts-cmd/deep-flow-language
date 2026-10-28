@@ -50,9 +50,18 @@ public class VideoPlugin extends Plugin {
                 try (android.os.ParcelFileDescriptor fd=getContext().getContentResolver().openFileDescriptor(uri,"r")) { if(fd==null) throw new Exception(); }
                 catch(Exception e) { throw new IllegalArgumentException("Không còn quyền đọc file. Hãy chọn lại video trên máy."); }
             } else raw=VideoPolicy.remote(raw);
-            Intent intent=new Intent(getContext(), VideoActivity.class).putExtra("uri",raw).putExtra("title",title.substring(0,Math.min(200,title.length())));
+            String caption=call.getString("subtitleText","");
+            if(caption.getBytes(java.nio.charset.StandardCharsets.UTF_8).length>2*1024*1024)throw new IllegalArgumentException("Phụ đề quá lớn (tối đa 2 MB).");
+            if(!caption.isEmpty()){
+                if(!caption.contains("-->"))throw new IllegalArgumentException("Phụ đề cần có mốc thời gian.");
+                java.io.File f=new java.io.File(getContext().getFilesDir(),"video-sub-"+VideoPlaybackService.key(raw)+".srt");
+                try(java.io.FileOutputStream out=new java.io.FileOutputStream(f)){out.write(caption.getBytes(java.nio.charset.StandardCharsets.UTF_8));}
+                getContext().getSharedPreferences("video_lessons",Context.MODE_PRIVATE).edit().putString("sub:"+VideoPlaybackService.key(raw),Uri.fromFile(f).toString()).putString("submime:"+VideoPlaybackService.key(raw),"application/x-subrip").apply();
+            }
+            Intent intent=new Intent(getContext(), VideoActivity.class).putExtra("reloadSubtitle",!caption.isEmpty()).putExtra("uri",raw).putExtra("title",title.substring(0,Math.min(200,title.length())));
             org.json.JSONArray history=new org.json.JSONArray();
-            org.json.JSONObject row=new org.json.JSONObject().put("uri",raw).put("title",title.substring(0,Math.min(200,title.length())));history.put(row);
+            org.json.JSONObject row=new org.json.JSONObject().put("uri",raw).put("title",title.substring(0,Math.min(200,title.length())));for(String k:new String[]{"topic","creator","license","sourcePage"}){String v=call.getString(k,"");row.put(k,v.substring(0,Math.min(k.equals("sourcePage")?4096:300,v.length())));}history.put(row);
+            getContext().getSharedPreferences("video_lessons",Context.MODE_PRIVATE).edit().putString("meta:"+VideoPlaybackService.key(raw),row.toString()).apply();
             org.json.JSONArray previous=new org.json.JSONArray(getContext().getSharedPreferences("video_lessons",Context.MODE_PRIVATE).getString("history","[]"));
             for(int i=0;i<previous.length()&&history.length()<20;i++){org.json.JSONObject old=previous.optJSONObject(i);if(old!=null&&!raw.equals(old.optString("uri")))history.put(old);}
             getContext().getSharedPreferences("video_lessons",Context.MODE_PRIVATE).edit().putString("history",history.toString()).apply();

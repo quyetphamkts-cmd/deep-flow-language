@@ -37,7 +37,7 @@ public class VideoActivity extends AppCompatActivity {
     private PlayerView video;
     private TextView message;
     private String uri, title;
-    private boolean firstOpen=true, audioOnly=false, started=false;
+    private boolean firstOpen=true, audioOnly=false, started=false, reloadSubtitle=false;
     private final Player.Listener listener=new Player.Listener() {
         @Override public void onIsPlayingChanged(boolean playing) { screen(); }
         @Override public void onPlaybackStateChanged(int state) { if(state==Player.STATE_READY) message.setText("Phụ đề: CC hoặc nhập SRT/VTT · Home/tắt màn hình để nghe nền"); screen(); }
@@ -47,13 +47,16 @@ public class VideoActivity extends AppCompatActivity {
         }
     };
     @Override public void onCreate(Bundle state) {
-        super.onCreate(state);
+        super.onCreate(state);reloadSubtitle=getIntent().getBooleanExtra("reloadSubtitle",false);
         uri=getIntent().getStringExtra("uri"); title=getIntent().getStringExtra("title");
         if(uri==null) { uri=getSharedPreferences("video_lessons",MODE_PRIVATE).getString("lastUri",null); title=getSharedPreferences("video_lessons",MODE_PRIVATE).getString("lastTitle","Video luyện nghe"); }
         if(uri==null){finish();return;}
         if(state!=null){firstOpen=false;audioOnly=state.getBoolean("audioOnly",false);}
         LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setBackgroundColor(0xff101820);
         TextView heading=new TextView(this);heading.setText(title==null?"Video luyện nghe":title);heading.setTextColor(0xffeeeeee);heading.setTextSize(18);heading.setPadding(16,16,16,12);root.addView(heading);
+        try{org.json.JSONObject meta=new org.json.JSONObject(getSharedPreferences("video_lessons",MODE_PRIVATE).getString("meta:"+VideoPlaybackService.key(uri),"{}"));
+            String credit=meta.optString("creator")+" · "+meta.optString("license");if(!meta.optString("license").isEmpty()){TextView attribution=new TextView(this);attribution.setText(credit);attribution.setTextColor(0xffcccccc);attribution.setPadding(16,0,16,8);root.addView(attribution);String source=meta.optString("sourcePage");if(source.startsWith("https://commons.wikimedia.org/"))attribution.setOnClickListener(v->startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(source))));}
+        }catch(Exception ignored){}
         video=new PlayerView(this);video.setShowSubtitleButton(true);root.addView(video,new LinearLayout.LayoutParams(-1,0,1));
         message=new TextView(this);message.setText("Đang mở video…");message.setTextColor(0xffdedede);message.setPadding(16,8,16,8);root.addView(message);
         HorizontalScrollView scroll=new HorizontalScrollView(this);LinearLayout buttons=new LinearLayout(this);scroll.addView(buttons);root.addView(scroll);
@@ -61,7 +64,19 @@ public class VideoActivity extends AppCompatActivity {
         Button background=button(buttons,"Nghe nền");background.setOnClickListener(v->{if(controller!=null){VideoPlaybackService s=VideoPlaybackService.instance;if(s!=null)s.videoVisible(false);finish();}});
         Button audio=button(buttons,"Chỉ nghe");audio.setOnClickListener(v->{audioOnly=!audioOnly;audio.setText(audioOnly?"Xem hình":"Chỉ nghe");updateVideo();});
         Button subtitles=button(buttons,"Phụ đề SRT/VTT");subtitles.setOnClickListener(v->{Intent i=new Intent(Intent.ACTION_OPEN_DOCUMENT).setType("*/*").addCategory(Intent.CATEGORY_OPENABLE);i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);startActivityForResult(i,PICK_SUBTITLE);});
+        button(buttons,"Từ vựng").setOnClickListener(v->showVocabulary());
         setContentView(root);
+    }
+    private void showVocabulary(){
+        String source=getSharedPreferences("video_lessons",MODE_PRIVATE).getString("sub:"+VideoPlaybackService.key(uri),null);
+        if(source==null){new android.app.AlertDialog.Builder(this).setMessage("Cần nhập SRT/VTT để thống kê toàn bài. Phụ đề hiển thị trong luồng video chưa được dùng để đoán số từ.").setPositiveButton("Đóng",null).show();return;}
+        try(InputStream in=getContentResolver().openInputStream(Uri.parse(source));ByteArrayOutputStream out=new ByteArrayOutputStream()){
+            byte[] b=new byte[8192];int n;while(in!=null&&(n=in.read(b))!=-1){if(out.size()+n>2*1024*1024)throw new Exception();out.write(b,0,n);}
+            VideoVocabulary stats=VideoVocabulary.parse(new String(out.toByteArray(),java.nio.charset.StandardCharsets.UTF_8));
+            StringBuilder text=new StringBuilder("Tổng "+stats.total+" từ · "+stats.counts.size()+" từ khác nhau\n\nTần suất trong phụ đề đã nhập (bao gồm mọi ngôn ngữ nếu file song ngữ). Đây là dạng chữ, chưa gộp họ từ hoặc tính là đã thuộc.\n\n");int count=0;
+            for(java.util.Map.Entry<String,Integer> e:stats.counts.entrySet()){if(++count>200)break;text.append(e.getKey()).append("  ×").append(e.getValue()).append("\n");}
+            new android.app.AlertDialog.Builder(this).setTitle("Thống kê từ vựng").setMessage(text.toString()).setPositiveButton("Đóng",null).show();
+        }catch(Exception e){message.setText("Chưa thống kê được. Hãy nhập lại phụ đề SRT/VTT.");}
     }
     private Button button(LinearLayout parent,String text){Button b=new Button(this);b.setText(text);parent.addView(b);return b;}
     private MediaItem item() {
@@ -78,8 +93,8 @@ public class VideoActivity extends AppCompatActivity {
         pending.addListener(()->{if(!started||future!=pending)return;
             try {controller=pending.get();controller.addListener(listener);video.setPlayer(controller);
                 MediaItem current=controller.getCurrentMediaItem();
-                if(current==null||!current.mediaId.equals(VideoPlaybackService.key(uri))){long pos=getSharedPreferences("video_lessons",MODE_PRIVATE).getLong("pos:"+VideoPlaybackService.key(uri),0);controller.setMediaItem(item(),Math.max(0,pos));controller.prepare();}
-                updateVideo();if(firstOpen){firstOpen=false;controller.play();}screen();
+                if(reloadSubtitle||current==null||!current.mediaId.equals(VideoPlaybackService.key(uri))){boolean same=current!=null&&current.mediaId.equals(VideoPlaybackService.key(uri));long pos=same?controller.getCurrentPosition():getSharedPreferences("video_lessons",MODE_PRIVATE).getLong("pos:"+VideoPlaybackService.key(uri),0);controller.setMediaItem(item(),Math.max(0,pos));controller.prepare();reloadSubtitle=false;}
+                updateVideo();if(firstOpen){firstOpen=false;if(controller.getPlaybackState()==Player.STATE_IDLE)controller.prepare();controller.play();}screen();
             } catch(Exception e){message.setText("Chưa kết nối được trình phát. Đóng rồi mở lại video.");}
         },ContextCompat.getMainExecutor(this));
     }
@@ -87,6 +102,8 @@ public class VideoActivity extends AppCompatActivity {
     private void screen(){if(controller!=null&&controller.isPlaying()&&!audioOnly&&started)getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);else getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);}
     private void closeVideo(){if(controller!=null){controller.pause();controller.stop();controller.clearMediaItems();}finish();}
     @Override public void onBackPressed(){closeVideo();}
+    @Override public void onResume(){super.onResume();if(started)updateVideo();}
+    @Override public void onPause(){VideoPlaybackService s=VideoPlaybackService.instance;if(s!=null)s.videoVisible(false);super.onPause();}
     @Override public void onStop(){started=false;VideoPlaybackService s=VideoPlaybackService.instance;if(s!=null)s.videoVisible(false);if(video!=null)video.setPlayer(null);if(controller!=null)controller.removeListener(listener);controller=null;if(future!=null){MediaController.releaseFuture(future);future=null;}screen();super.onStop();}
     @Override protected void onSaveInstanceState(Bundle out){out.putBoolean("audioOnly",audioOnly);super.onSaveInstanceState(out);}
     @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request!=PICK_SUBTITLE||result!=RESULT_OK||data==null||data.getData()==null)return;
@@ -102,7 +119,7 @@ public class VideoActivity extends AppCompatActivity {
             java.io.File file=new java.io.File(getFilesDir(),"video-sub-"+VideoPlaybackService.key(uri)+(mime.equals(MimeTypes.TEXT_VTT)?".vtt":".srt"));
             try(java.io.FileOutputStream f=new java.io.FileOutputStream(file)){f.write(text.getBytes(java.nio.charset.StandardCharsets.UTF_8));}
             getSharedPreferences("video_lessons",MODE_PRIVATE).edit().putString("sub:"+VideoPlaybackService.key(uri),Uri.fromFile(file).toString()).putString("submime:"+VideoPlaybackService.key(uri),mime).apply();
-            if(controller!=null){long pos=controller.getCurrentPosition();boolean play=controller.getPlayWhenReady();controller.setMediaItem(item(),pos);controller.prepare();controller.setPlayWhenReady(play);}
+            reloadSubtitle=true;if(controller!=null){long pos=controller.getCurrentPosition();boolean play=controller.getPlayWhenReady();controller.setMediaItem(item(),pos);controller.prepare();controller.setPlayWhenReady(play);reloadSubtitle=false;}
             message.setText("Đã nhập phụ đề. File song ngữ sẽ hiển thị theo nội dung đã cung cấp.");
         }catch(Exception e){message.setText(e instanceof IllegalArgumentException?e.getMessage():"Không đọc được phụ đề. Hãy chọn lại file SRT/VTT.");}
     }

@@ -26,7 +26,7 @@ public class VideoPlaybackService extends MediaSessionService {
     private ExoPlayer player;
     private MediaSession session;
     private final Handler handler = new Handler(Looper.getMainLooper());
-    private final Runnable saveTick = new Runnable() { public void run() { savePosition(); handler.postDelayed(this, 5000); } };
+    private final Runnable saveTick = new Runnable() { public void run() { savePosition(); if(player!=null&&player.isPlaying())handler.postDelayed(this, 5000); } };
     public static String key(String uri) {
         try { byte[] a = MessageDigest.getInstance("SHA-256").digest(uri.getBytes(java.nio.charset.StandardCharsets.UTF_8));
             StringBuilder b = new StringBuilder(); for (byte n : a) b.append(String.format("%02x", n & 255)); return b.toString();
@@ -38,7 +38,7 @@ public class VideoPlaybackService extends MediaSessionService {
         player.setAudioAttributes(new AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).setContentType(C.AUDIO_CONTENT_TYPE_MOVIE).build(), true);
         player.setHandleAudioBecomingNoisy(true);
         player.setWakeMode(C.WAKE_MODE_LOCAL);
-        PendingIntent open = PendingIntent.getActivity(this, 59, new Intent(this, VideoActivity.class), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent open = PendingIntent.getActivity(this, 59, new Intent(this, VideoActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP), PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         session = new MediaSession.Builder(this, player).setSessionActivity(open).setCallback(new MediaSession.Callback() {
             @Override public MediaSession.ConnectionResult onConnect(MediaSession s, MediaSession.ControllerInfo c) {
                 if (!c.getPackageName().equals(getPackageName()) && !c.isTrusted()) return MediaSession.ConnectionResult.reject();
@@ -46,7 +46,7 @@ public class VideoPlaybackService extends MediaSessionService {
             }
         }).build();
         player.addListener(new Player.Listener() {
-            @Override public void onIsPlayingChanged(boolean playing) { savePosition(); }
+            @Override public void onIsPlayingChanged(boolean playing) { savePosition(); handler.removeCallbacks(saveTick); if(playing)handler.postDelayed(saveTick,5000); }
             @Override public void onPlayerError(PlaybackException e) { savePosition(); player.pause(); }
             @Override public void onMediaItemTransition(@Nullable MediaItem item, int reason) {
                 // Nội dung được ghi riêng trên thiết bị, không đưa URL có token vào log.
@@ -57,11 +57,11 @@ public class VideoPlaybackService extends MediaSessionService {
                 }
             }
         });
-        handler.post(saveTick);
+
     }
     @Override @Nullable public MediaSession onGetSession(MediaSession.ControllerInfo controllerInfo) { return session; }
     public boolean active() { return player != null && player.getMediaItemCount() > 0; }
-    public void pauseVideo() { if (player != null) { player.pause(); savePosition(); } }
+    public void pauseVideo() { if (player != null) { player.pause(); savePosition(); player.stop(); player.clearMediaItems(); stopSelf(); } }
     public void videoVisible(boolean visible) {
         if (player != null) player.setTrackSelectionParameters(player.getTrackSelectionParameters().buildUpon().setTrackTypeDisabled(C.TRACK_TYPE_VIDEO, !visible).build());
     }
@@ -70,7 +70,7 @@ public class VideoPlaybackService extends MediaSessionService {
         String uri = player.getCurrentMediaItem().localConfiguration.uri.toString();
         getSharedPreferences("video_lessons", MODE_PRIVATE).edit().putLong("pos:" + key(uri), Math.max(0, player.getCurrentPosition())).apply();
     }
-    @Override public void onTaskRemoved(Intent rootIntent) { if (player == null || !player.getPlayWhenReady()) stopSelf(); }
+    @Override public void onTaskRemoved(Intent rootIntent) { if (player == null || !player.getPlayWhenReady() || player.getPlaybackState()==Player.STATE_ENDED || player.getPlaybackState()==Player.STATE_IDLE) stopSelf(); }
     @Override public void onDestroy() {
         handler.removeCallbacksAndMessages(null); savePosition();
         if (instance == this) instance = null;

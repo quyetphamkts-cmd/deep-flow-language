@@ -1,16 +1,26 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.58",
-  "notes": "Flashcard tự phát âm và Nghe lại · Từ điển gợi ý câu, sửa chính tả/ngữ pháp khi bấm · Mở Đọc dừng bài nghe",
+  "ver": "1.0.3-beta.59",
+  "notes": "Video xem/nghe nền (cần APK mới) · OCR Hủy/Ẩn · quản lý Lịch sử đọc và Lưu trữ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 27,
-    "versionName": "1.0.2-beta.59",
+    "versionCode": 28,
+    "versionName": "1.0.2-beta.60",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.59",
+      "d": "29/10/2026",
+      "items": [
+        "Video MP4/HLS/file: trình phát Android độc lập, xem hình hoặc nghe nền, nhập SRT/VTT và lịch sử riêng; cần APK mới",
+        "Ảnh ở Đọc: Hủy/Ẩn, tiếp tục xử lý khi thao tác mục khác; kết quả lưu Lịch sử đọc",
+        "Lịch sử đọc: nhấn giữ chọn, chọn tất cả, kéo sắp xếp, xóa/hoàn tác và chuyển vào thư mục Lưu trữ",
+        "Video có gợi ý theo chủ đề từ video đã thêm/nguồn mở và thống kê từ vựng theo SRT/VTT; lịch sử Video riêng với Lịch sử đọc"
+      ]
+    },
     {
       "v": "1.0.3-beta.58",
       "d": "28/10/2026",

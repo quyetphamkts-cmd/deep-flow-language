@@ -20,7 +20,7 @@ public final class VideoPolicy {
         } catch (Exception e) { throw new IllegalArgumentException("Cần link HTTPS trực tiếp .mp4, .webm hoặc .m3u8; link trang YouTube/Vimeo chưa được hỗ trợ."); }
     }
     public static String error(int code) {
-        if (code == 401 || code == 403) return "Không được phép truy cập video hoặc link đã hết hạn (403). Hãy lấy link mới từ nguồn.";
+        if (code == 401 || code == 403) return "Không được phép truy cập video hoặc link đã hết hạn ("+code+"). Hãy lấy link mới từ nguồn.";
         if (code == 404) return "Không tìm thấy video (404). Kiểm tra lại nguồn.";
         if (code == 429) return "Nguồn video đang giới hạn tốc độ (429). Hãy chờ rồi bấm phát để thử lại; app không lặp vô hạn.";
         if (code >= 3000 && code < 5000) return "Thiết bị chưa giải mã được định dạng video/âm thanh này.";
