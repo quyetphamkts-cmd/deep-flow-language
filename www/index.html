@@ -8372,7 +8372,7 @@ function setupCards51(){
  if(!v.ipa&&v.lang==='en'||!v.ipa&&!v.lang)ipaFor(v.word).then(ipa=>{if(ipa){v.ipa=ipa;v.mt=Date.now();saveVocab();if(rv.q[rv.i]===v){$('#fcIpaF').textContent=ipa;$('#fcIpa').textContent=ipa;}}}).catch(()=>{});
  $('#cardExamples51').innerHTML='';}bi();cardTimerSchedule51();return r;};
  const _flip51=flipCard;flipCard=function(){const r=_flip51();if(rv.flipped&&rv.q[rv.i])cardExamples51(rv.q[rv.i]);cardTimerSchedule51();return r;};
- moveCard=function(d){if(!rv.q.length)return;clipStop();rv.browseIndex=(rv.i+d+rv.q.length)%rv.q.length;showCard(d);};
+ moveCard=function(d){if(rv.q.length<2)return;clipStop();rv.browseIndex=(rv.i+d+rv.q.length)%rv.q.length;showCard(d);};
  const _end51=endReview;endReview=function(){clearTimeout(cardTimer51);return _end51.apply(this,arguments);};
  $('#fcClip').onclick=()=>{const ctx=rv.cardCtx51||rv.q[rv.i]?.ctx;if(ctx)playClip(ctx.trackId,ctx.s,ctx.e);};
  document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(cardTimer51);else cardTimerSchedule51();});
