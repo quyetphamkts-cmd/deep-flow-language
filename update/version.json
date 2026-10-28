@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.54",
-  "notes": "Giáo trình 🎓 cạnh Đọc · 12 chuyện đọc thử · 3.000 đầu mục / 250 mục mỗi bài · báo rõ phần còn thiếu",
+  "ver": "1.0.3-beta.55",
+  "notes": "Sao mục tiêu: 7 xanh đổi 1 vàng · số trong sao cạnh ⋯ · Đánh dấu học xong · ẩn Bắn chữ ở menu bài",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.55",
+      "d": "28/10/2026",
+      "items": [
+        "Mục tiêu: mỗi ngày đủ 30 phút nhận sao xanh, 7 ngày đổi sao vàng; hiển thị số trong sao cạnh nút ba chấm, vàng trước xanh sau",
+        "Đổi thao tác thành Đánh dấu học xong; tạm ẩn Chơi Bắn chữ trong menu từng bài"
+      ]
+    },
     {
       "v": "1.0.3-beta.54",
       "d": "28/10/2026",
