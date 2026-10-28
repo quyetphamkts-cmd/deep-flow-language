@@ -1298,6 +1298,9 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | hope | /hoʊp/ | hy vọng |
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | together | /təˈɡeðər/ | cùng nhau |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| choose | /tʃuːz/ | chọn |
+| carefully | /ˈkerfəli/ | một cách cẩn thận |
 
 ## Vì sao chọn Word Discovery?
 

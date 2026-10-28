@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 5,
+  "version": 6,
   "status": "proposed_not_canonical",
   "source": "Original draft authoring inventory; not a frequency-ranked external word list",
   "license": null,
@@ -1501,6 +1501,298 @@
       "ipa": "/təˈɡeðər/",
       "ipaVariety": "General American, bản biên soạn chờ rà soát",
       "glossVi": "cùng nhau"
+    },
+    {
+      "id": "en.repairable",
+      "lemma": "repairable",
+      "forms": [],
+      "partOfSpeech": "adjective",
+      "ipa": "/rɪˈperəbəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "có thể sửa chữa"
+    },
+    {
+      "id": "en.drawing",
+      "lemma": "drawing",
+      "forms": [
+        "drawings"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈdrɔːɪŋ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bản vẽ"
+    },
+    {
+      "id": "en.account",
+      "lemma": "account",
+      "forms": [
+        "accounts"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/əˈkaʊnt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lời kể; bản tường thuật (trong bài)"
+    },
+    {
+      "id": "en.quietly",
+      "lemma": "quietly",
+      "forms": [],
+      "partOfSpeech": "adverb",
+      "ipa": "/ˈkwaɪətli/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "một cách yên lặng"
+    },
+    {
+      "id": "en.private",
+      "lemma": "private",
+      "forms": [],
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈpraɪvət/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "riêng tư"
+    },
+    {
+      "id": "en.measurement",
+      "lemma": "measurement",
+      "forms": [
+        "measurements"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈmeʒərmənt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "số đo; việc đo"
+    },
+    {
+      "id": "en.choose",
+      "lemma": "choose",
+      "forms": [
+        "chooses",
+        "chose",
+        "chosen",
+        "choosing"
+      ],
+      "partOfSpeech": "verb",
+      "ipa": "/tʃuːz/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chọn"
+    },
+    {
+      "id": "en.agreement",
+      "lemma": "agreement",
+      "forms": [
+        "agreements"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/əˈɡriːmənt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự đồng thuận; thỏa thuận"
+    },
+    {
+      "id": "en.permit",
+      "lemma": "permit",
+      "forms": [
+        "permits",
+        "permitted",
+        "permitting"
+      ],
+      "partOfSpeech": "verb",
+      "ipa": "/pərˈmɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "cho phép"
+    },
+    {
+      "id": "en.apology",
+      "lemma": "apology",
+      "forms": [
+        "apologies"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/əˈpɑːlədʒi/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lời xin lỗi"
+    },
+    {
+      "id": "en.invitation",
+      "lemma": "invitation",
+      "forms": [
+        "invitations"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/ˌɪnvɪˈteɪʃən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lời mời"
+    },
+    {
+      "id": "en.safety",
+      "lemma": "safety",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈseɪfti/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự an toàn"
+    },
+    {
+      "id": "en.safely",
+      "lemma": "safely",
+      "forms": [],
+      "partOfSpeech": "adverb",
+      "ipa": "/ˈseɪfli/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "một cách an toàn"
+    },
+    {
+      "id": "en.growth",
+      "lemma": "growth",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/ɡroʊθ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự phát triển"
+    },
+    {
+      "id": "en.responsibility",
+      "lemma": "responsibility",
+      "forms": [
+        "responsibilities"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/rɪˌspɑːnsəˈbɪləti/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "trách nhiệm"
+    },
+    {
+      "id": "en.patience",
+      "lemma": "patience",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈpeɪʃəns/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự kiên nhẫn"
+    },
+    {
+      "id": "en.patiently",
+      "lemma": "patiently",
+      "forms": [],
+      "partOfSpeech": "adverb",
+      "ipa": "/ˈpeɪʃəntli/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "một cách kiên nhẫn"
+    },
+    {
+      "id": "en.reusable",
+      "lemma": "reusable",
+      "forms": [],
+      "partOfSpeech": "adjective",
+      "ipa": "/ˌriːˈjuːzəbəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "có thể tái sử dụng"
+    },
+    {
+      "id": "en.pride",
+      "lemma": "pride",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/praɪd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "niềm tự hào"
+    },
+    {
+      "id": "en.teacher",
+      "lemma": "teacher",
+      "forms": [
+        "teachers"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈtiːtʃər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "giáo viên"
+    },
+    {
+      "id": "en.decide",
+      "lemma": "decide",
+      "forms": [
+        "decides",
+        "decided",
+        "deciding"
+      ],
+      "partOfSpeech": "verb",
+      "ipa": "/dɪˈsaɪd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "quyết định"
+    },
+    {
+      "id": "en.comparison",
+      "lemma": "comparison",
+      "forms": [
+        "comparisons"
+      ],
+      "partOfSpeech": "noun",
+      "ipa": "/kəmˈpærɪsən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự so sánh"
+    },
+    {
+      "id": "en.comfort",
+      "lemma": "comfort",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈkʌmfərt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự thoải mái"
+    },
+    {
+      "id": "en.comfortably",
+      "lemma": "comfortably",
+      "forms": [],
+      "partOfSpeech": "adverb",
+      "ipa": "/ˈkʌmfərtəbli/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "một cách thoải mái"
+    },
+    {
+      "id": "en.maintenance",
+      "lemma": "maintenance",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/ˈmeɪntənəns/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "việc bảo trì"
+    },
+    {
+      "id": "en.careful",
+      "lemma": "careful",
+      "forms": [],
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈkerfəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "cẩn thận"
+    },
+    {
+      "id": "en.carefully",
+      "lemma": "carefully",
+      "forms": [],
+      "partOfSpeech": "adverb",
+      "ipa": "/ˈkerfəli/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "một cách cẩn thận"
+    },
+    {
+      "id": "en.careless",
+      "lemma": "careless",
+      "forms": [],
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈkerləs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bất cẩn"
+    },
+    {
+      "id": "en.inclusion",
+      "lemma": "inclusion",
+      "forms": [],
+      "partOfSpeech": "noun",
+      "ipa": "/ɪnˈkluːʒən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự bao gồm; việc tạo điều kiện tham gia"
     }
   ]
 }

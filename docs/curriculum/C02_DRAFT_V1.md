@@ -927,6 +927,10 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | change | /tʃeɪndʒ/ | thay đổi |
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | together | /təˈɡeðər/ | cùng nhau |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| measurement | /ˈmeʒərmənt/ | số đo; việc đo |
+| agreement | /əˈɡriːmənt/ | sự đồng thuận; thỏa thuận |
+| decide | /dɪˈsaɪd/ | quyết định |
 
 ## Vì sao chọn Word Discovery?
 

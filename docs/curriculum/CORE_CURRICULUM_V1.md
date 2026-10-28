@@ -27,7 +27,7 @@ Phiên bản biên soạn 2.0 · 28/10/2026 · **Chờ người dùng duyệt, c
 - **773 câu hỏi gốc** phần chính. Mỗi câu có một lượt ôn có chủ ý theo thứ tự trộn: tổng **1.546 lượt**. Lượt lặp có `repeatOf`, không được báo thành câu hỏi gốc mới.
 - Mọi Quick Response chờ **ba giây**; một/vài từ là đủ, không bắt đúng nguyên văn hay đủ câu. Đáp án mẫu không là cơ chế chấm người học.
 - C04–C12 có thêm ví dụ từ trong ngữ cảnh khác và góc nhìn phụ; QR vẫn là phần dài nhất. C01–C03 cũng thêm lượt ôn trộn để hình thức luyện nhất quán.
-- Bảng biên soạn có **144 mục đề xuất** và 99 lượt chọn Word Discovery qua các bài; không phải danh sách chuẩn 3.000 từ, chưa chứng minh đủ 250 từ mới/bài hoặc độ bao phủ.
+- Bảng biên soạn có **173 mục đề xuất** và 99 lượt chọn Word Discovery qua các bài; không phải danh sách chuẩn 3.000 từ, chưa chứng minh đủ 250 từ mới/bài hoặc độ bao phủ.
 - Z01 vẫn là truyện mở rộng riêng, không bắt học để tiến qua bài chính. Tổng cả Z01: 50 phần, 813 câu gốc, 773 lượt ôn, 1.586 lượt hỏi. Chưa biên soạn Z02–Z60.
 
 ## Liên tục và quyền tác giả
@@ -59,3 +59,7 @@ Mở HTML đã tải để tương tác; GitHub blob chỉ hiển thị mã. Xem
 ## Kết quả kiểm tra bản giao này
 
 `node --test tests/*.test.cjs`: **73/73 đạt** (32 giáo trình, 41 hồi quy app); `check-web` đạt. Chrome 360px đã kiểm tra đủ 13 nút bài (12 chính và Z01), bốn phần mỗi bài chính, song ngữ, nguồn câu hỏi, dấu lượt 1/lượt 2, pause ba giây, hủy timer và không tràn ngang. Chưa chạy audio thật hoặc tích hợp vào APK. CI GitHub được chạy lại sau khi đẩy nhánh; kết quả cập nhật trong PR.
+
+## Hiệu chỉnh kiểm đếm từ vựng
+
+Đọc [báo cáo từ vựng và họ từ](VOCABULARY_AUDIT.md). Bổ sung 29 mục từ phái sinh đã có trong văn bản; không thêm hoặc nhồi từ vào truyện. Có 24 nhóm họ từ đề xuất, chưa phải tổng số họ từ của giáo trình. Cụm từ được đếm riêng; các biến thể không làm tăng tổng lemma.

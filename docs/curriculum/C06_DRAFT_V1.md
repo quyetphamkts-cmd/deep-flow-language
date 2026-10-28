@@ -960,6 +960,18 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | ordinary | /ˈɔːrdəneri/ | bình thường; thường ngày |
 | together | /təˈɡeðər/ | cùng nhau |
+| repairable | /rɪˈperəbəl/ | có thể sửa chữa |
+| choose | /tʃuːz/ | chọn |
+| safety | /ˈseɪfti/ | sự an toàn |
+| safely | /ˈseɪfli/ | một cách an toàn |
+| patience | /ˈpeɪʃəns/ | sự kiên nhẫn |
+| reusable | /ˌriːˈjuːzəbəl/ | có thể tái sử dụng |
+| pride | /praɪd/ | niềm tự hào |
+| teacher | /ˈtiːtʃər/ | giáo viên |
+| decide | /dɪˈsaɪd/ | quyết định |
+| maintenance | /ˈmeɪntənəns/ | việc bảo trì |
+| careful | /ˈkerfəl/ | cẩn thận |
+| carefully | /ˈkerfəli/ | một cách cẩn thận |
 
 ## Vì sao chọn Word Discovery?
 

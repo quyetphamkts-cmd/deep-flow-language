@@ -957,6 +957,12 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | ordinary | /ˈɔːrdəneri/ | bình thường; thường ngày |
 | together | /təˈɡeðər/ | cùng nhau |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| private | /ˈpraɪvət/ | riêng tư |
+| choose | /tʃuːz/ | chọn |
+| invitation | /ˌɪnvɪˈteɪʃən/ | lời mời |
+| responsibility | /rɪˌspɑːnsəˈbɪləti/ | trách nhiệm |
+| decide | /dɪˈsaɪd/ | quyết định |
 
 ## Vì sao chọn Word Discovery?
 

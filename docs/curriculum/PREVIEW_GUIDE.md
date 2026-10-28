@@ -19,7 +19,7 @@ Mở file HTML vừa tạo bằng trình duyệt. File chứa sẵn nội dung, 
 - Trong Phản xạ hỏi đáp, đọc câu hỏi và trả lời thành tiếng. Bấm Chờ để thử khoảng phản xạ ba giây; một/vài từ là đủ, chưa cần nói đủ câu. Có thể tạm dừng/tiếp tục, hoặc tự mở đáp án mẫu.
 - Đổi câu/bài sẽ hủy khoảng chờ cũ. Khi trang bị ẩn, khoảng chờ tạm dừng; trở lại trang không tự tiếp tục.
 - Xem đoạn truyện để đối chiếu câu hỏi với nguồn. Đáp án mẫu không yêu cầu nói đúng nguyên văn và chưa có chấm tự động.
-- Mở bảng từ/cụm đề xuất để xem IPA/nghĩa. Hiện có 144 mục, chưa phải danh sách chuẩn 3.000 từ.
+- Mở bảng từ/cụm đề xuất để xem IPA/nghĩa. Hiện có 173 mục, chưa phải danh sách chuẩn 3.000 từ.
 
 ## Kiểm thử
 
@@ -34,3 +34,7 @@ Bản HTML dùng chính sách không kết nối mạng, chỉ cho script đi k�
 
 
 Quick Response của bài chính có hai lượt: lượt 1 theo mạch truyện, lượt 2 ôn cùng các câu theo thứ tự trộn. Trang ghi rõ lượt, không coi câu lặp là câu gốc mới. Cả hai chờ ba giây, không yêu cầu câu dài.
+
+## Kiểm toán từ vựng và họ từ
+
+Chạy `node tools/curriculum/audit-lexicon.cjs` để lấy JSON có tham chiếu đoạn nguồn, hoặc thêm `--markdown` để đọc báo cáo. `--require-ready` trả mã 2 vì danh sách hiện vẫn là đề xuất. Xem `VOCABULARY_AUDIT.md`; không cộng biến thể hoặc cụm vào số từ đơn.

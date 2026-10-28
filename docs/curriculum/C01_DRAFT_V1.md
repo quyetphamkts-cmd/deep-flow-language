@@ -996,6 +996,8 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | inside | /ˌɪnˈsaɪd/ | bên trong |
 | change | /tʃeɪndʒ/ | thay đổi |
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| choose | /tʃuːz/ | chọn |
 
 ## Vì sao chọn Word Discovery?
 

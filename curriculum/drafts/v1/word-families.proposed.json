@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "status": "proposed_not_canonical",
+  "policy": {
+    "countUnit": "distinct_single_word_lemma",
+    "inflectionsAddEntries": false,
+    "derivationsRemainSeparateEntries": true,
+    "chunksCountTowardSingleWordTarget": false,
+    "familyGroupingChangesTarget": false,
+    "ambiguousForms": "report_not_guess",
+    "approval": "editorial_proposal_pending_external_review"
+  },
+  "source": "Original editorial morphology annotations for authored drafts; no imported dictionary data",
+  "families": [
+    {
+      "id": "family.repair",
+      "members": [
+        "en.repair",
+        "en.repairable"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.draw",
+      "members": [
+        "en.draw",
+        "en.drawing"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.accountant",
+      "members": [
+        "en.accountant",
+        "en.account"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.quiet",
+      "members": [
+        "en.quiet",
+        "en.quietly"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.privacy",
+      "members": [
+        "en.privacy",
+        "en.private"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.measure",
+      "members": [
+        "en.measure",
+        "en.measurement"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.choice",
+      "members": [
+        "en.choice",
+        "en.choose"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.agree",
+      "members": [
+        "en.agree",
+        "en.agreement"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.permission",
+      "members": [
+        "en.permission",
+        "en.permit"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.apologize",
+      "members": [
+        "en.apologize",
+        "en.apology"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.invite",
+      "members": [
+        "en.invite",
+        "en.invitation"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.safe",
+      "members": [
+        "en.safe",
+        "en.safety",
+        "en.safely"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.grow",
+      "members": [
+        "en.grow",
+        "en.growth"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.responsible",
+      "members": [
+        "en.responsible",
+        "en.responsibility"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.patient",
+      "members": [
+        "en.patient",
+        "en.patience",
+        "en.patiently"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.reuse",
+      "members": [
+        "en.reuse",
+        "en.reusable"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.proud",
+      "members": [
+        "en.proud",
+        "en.pride"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.teach",
+      "members": [
+        "en.teach",
+        "en.teacher"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.decision",
+      "members": [
+        "en.decision",
+        "en.decide"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.compare",
+      "members": [
+        "en.compare",
+        "en.comparison"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.comfortable",
+      "members": [
+        "en.comfortable",
+        "en.comfort",
+        "en.comfortably"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.maintain",
+      "members": [
+        "en.maintain",
+        "en.maintenance"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.care",
+      "members": [
+        "en.care",
+        "en.careful",
+        "en.carefully",
+        "en.careless"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    },
+    {
+      "id": "family.include",
+      "members": [
+        "en.include",
+        "en.inclusion"
+      ],
+      "status": "proposed",
+      "note": "Nhóm hình thái đề xuất; không suy ra người học hiểu mọi thành viên chỉ từ một từ."
+    }
+  ]
+}

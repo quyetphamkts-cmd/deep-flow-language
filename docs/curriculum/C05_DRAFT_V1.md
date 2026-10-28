@@ -961,6 +961,15 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | review | /rɪˈvjuː/ | xem lại; ôn lại |
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | ordinary | /ˈɔːrdəneri/ | bình thường; thường ngày |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| measurement | /ˈmeʒərmənt/ | số đo; việc đo |
+| choose | /tʃuːz/ | chọn |
+| responsibility | /rɪˌspɑːnsəˈbɪləti/ | trách nhiệm |
+| patiently | /ˈpeɪʃəntli/ | một cách kiên nhẫn |
+| decide | /dɪˈsaɪd/ | quyết định |
+| comparison | /kəmˈpærɪsən/ | sự so sánh |
+| careful | /ˈkerfəl/ | cẩn thận |
+| carefully | /ˈkerfəli/ | một cách cẩn thận |
 
 ## Vì sao chọn Word Discovery?
 

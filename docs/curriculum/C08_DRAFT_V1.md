@@ -953,6 +953,15 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | ordinary | /ˈɔːrdəneri/ | bình thường; thường ngày |
 | together | /təˈɡeðər/ | cùng nhau |
+| quietly | /ˈkwaɪətli/ | một cách yên lặng |
+| choose | /tʃuːz/ | chọn |
+| agreement | /əˈɡriːmənt/ | sự đồng thuận; thỏa thuận |
+| responsibility | /rɪˌspɑːnsəˈbɪləti/ | trách nhiệm |
+| decide | /dɪˈsaɪd/ | quyết định |
+| comfortably | /ˈkʌmfərtəbli/ | một cách thoải mái |
+| maintenance | /ˈmeɪntənəns/ | việc bảo trì |
+| careless | /ˈkerləs/ | bất cẩn |
+| inclusion | /ɪnˈkluːʒən/ | sự bao gồm; việc tạo điều kiện tham gia |
 
 ## Vì sao chọn Word Discovery?
 

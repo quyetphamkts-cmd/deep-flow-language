@@ -27,6 +27,10 @@ jobs:
         run: |
           node tools/curriculum/review-draft.cjs > curriculum-draft-review.json
           node tools/curriculum/review-draft.cjs --markdown > curriculum-draft.md
+      - name: Kiểm toán lemma, cụm từ và họ từ (không chứng nhận đủ 3000)
+        run: |
+          node tools/curriculum/audit-lexicon.cjs > curriculum-lexicon.json
+          node tools/curriculum/audit-lexicon.cjs --markdown > curriculum-lexicon.md
       - name: Xuất bản đọc thử độc lập
         run: node tools/curriculum/build-preview.cjs > curriculum-preview.html
       - name: Cài công cụ kiểm tra trình duyệt trong thư mục tạm
@@ -44,5 +48,7 @@ jobs:
             curriculum-preview.json
             curriculum-draft-review.json
             curriculum-draft.md
+            curriculum-lexicon.json
+            curriculum-lexicon.md
             curriculum-preview.html
             ${{ runner.temp }}/curriculum-preview.png

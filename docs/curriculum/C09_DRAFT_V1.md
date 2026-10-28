@@ -956,6 +956,10 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | include | /ɪnˈkluːd/ | bao gồm |
 | review | /rɪˈvjuː/ | xem lại; ôn lại |
 | ordinary | /ˈɔːrdəneri/ | bình thường; thường ngày |
+| choose | /tʃuːz/ | chọn |
+| responsibility | /rɪˌspɑːnsəˈbɪləti/ | trách nhiệm |
+| decide | /dɪˈsaɪd/ | quyết định |
+| careless | /ˈkerləs/ | bất cẩn |
 
 ## Vì sao chọn Word Discovery?
 

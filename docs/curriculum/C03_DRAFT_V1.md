@@ -934,6 +934,15 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | care | /ker/ | chăm sóc; quan tâm |
 | change | /tʃeɪndʒ/ | thay đổi |
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| account | /əˈkaʊnt/ | lời kể; bản tường thuật (trong bài) |
+| quietly | /ˈkwaɪətli/ | một cách yên lặng |
+| measurement | /ˈmeʒərmənt/ | số đo; việc đo |
+| choose | /tʃuːz/ | chọn |
+| apology | /əˈpɑːlədʒi/ | lời xin lỗi |
+| responsibility | /rɪˌspɑːnsəˈbɪləti/ | trách nhiệm |
+| decide | /dɪˈsaɪd/ | quyết định |
+| carefully | /ˈkerfəli/ | một cách cẩn thận |
 
 ## Vì sao chọn Word Discovery?
 

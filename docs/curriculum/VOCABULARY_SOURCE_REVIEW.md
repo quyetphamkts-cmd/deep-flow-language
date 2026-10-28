@@ -1,6 +1,6 @@
 # Chọn nguồn từ chuẩn — đề xuất để duyệt
 
-Đối chiếu ngày 28/10/2026. Chưa nhập hoặc đánh dấu duyệt một danh sách 3.000 từ. 48 mục trong bản nháp C01/Z01 chỉ là bảng biên soạn thử, đã bổ sung các từ gia đình như accountant, wife, son, daughter và child/children.
+Đối chiếu ngày 28/10/2026. Chưa nhập hoặc đánh dấu duyệt một danh sách 3.000 từ. Danh mục hiện có 173 mục đề xuất qua các bản nháp, gồm 171 từ đơn và 2 cụm; đây vẫn là bảng biên soạn, không phải nguồn chuẩn đã được duyệt. Xem `VOCABULARY_AUDIT.md` để kiểm tra số lượng và phạm vi.
 
 ## Nguồn đã đọc trực tiếp
 

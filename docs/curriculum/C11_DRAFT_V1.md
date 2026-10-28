@@ -957,6 +957,15 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | review | /rɪˈvjuː/ | xem lại; ôn lại |
 | finish | /ˈfɪnɪʃ/ | hoàn thành |
 | together | /təˈɡeðər/ | cùng nhau |
+| drawing | /ˈdrɔːɪŋ/ | bản vẽ |
+| private | /ˈpraɪvət/ | riêng tư |
+| choose | /tʃuːz/ | chọn |
+| permit | /pərˈmɪt/ | cho phép |
+| invitation | /ˌɪnvɪˈteɪʃən/ | lời mời |
+| growth | /ɡroʊθ/ | sự phát triển |
+| responsibility | /rɪˌspɑːnsəˈbɪləti/ | trách nhiệm |
+| decide | /dɪˈsaɪd/ | quyết định |
+| maintenance | /ˈmeɪntənəns/ | việc bảo trì |
 
 ## Vì sao chọn Word Discovery?
 
