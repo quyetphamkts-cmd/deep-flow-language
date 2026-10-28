@@ -1,0 +1,997 @@
+[
+  {
+    "lemma": "architect",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "snack",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "airport",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "sunrise",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "picnic",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "airplane",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "folder",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "barbecue",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "departure",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "stall",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "sandwich",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "terminal",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "stool",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "hamburger",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "passport",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "screw",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pizza",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "visa",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "tighten",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pasta",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "luggage",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "ribbon",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "noodle",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "baggage",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "leaf",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cereal",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "itinerary",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "sparrow",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "oatmeal",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "destination",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "ladder",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "yogurt",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "hostel",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "thread",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "butter",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "motel",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "accountant",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "milkshake",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "guesthouse",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "privacy",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "smoothie",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "homestay",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "drain",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "lemonade",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "campsite",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "reuse",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "apple",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "campground",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "inherit",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "banana",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "compass",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "repairable",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pear",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "navigation",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "apology",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "peach",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "navigator",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "patience",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "plum",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "intersection",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "reusable",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cherry",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "crossroads",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "careless",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "strawberry",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "roundabout",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "inclusion",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "raspberry",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "sidewalk",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "grandfather",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "blueberry",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "pavement",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "niece",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "watermelon",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "crosswalk",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "nephew",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "melon",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "overpass",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "toddler",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pineapple",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "underpass",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "parenthood",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "mango",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "tunnel",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "babysitter",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "papaya",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "railway",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "sibling",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "coconut",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "railroad",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "grandson",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "avocado",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "subway",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "granddaughter",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cucumber",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "underground",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "grandparent",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "tomato",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "tram",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "bathroom",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "carrot",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "metro",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "hallway",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "onion",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "timetable",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "doorway",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "garlic",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "ferry",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "cupboard",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "ginger",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "pier",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "wardrobe",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cabbage",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "dock",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "bookshelf",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "lettuce",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "canoe",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "pillow",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "spinach",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "kayak",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "blanket",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "broccoli",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "paddle",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "mattress",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cauliflower",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "sailboat",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "towel",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pumpkin",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "speedboat",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "laundry",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pepper",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "brake",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "dishwasher",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "chili",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "pedal",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "refrigerator",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "mushroom",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "gearbox",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "freezer",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "bean",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "accelerator",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "microwave",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pea",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "seatbelt",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "kettle",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "lentil",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "windshield",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "toaster",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "flour",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "wiper",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "saucepan",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "toast",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "dashboard",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "spoon",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "biscuit",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "speedometer",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "fork",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cookie",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "odometer",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "chopstick",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "muffin",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "petrol",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "napkin",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "pancake",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "diesel",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "toothpaste",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "honey",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "mechanic",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "toothbrush",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "jam",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "workshop",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "shampoo",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "peanut",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "repairability",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "soap",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "almond",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "toolkit",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "sponge",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "walnut",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "screwdriver",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "mop",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "raisin",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "wrench",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "broom",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "cinnamon",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "spanner",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "bucket",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "vinegar",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "pliers",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "rug",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "mustard",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "hammer",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "sofa",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "ketchup",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "nail",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "cushion",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  },
+  {
+    "lemma": "mayonnaise",
+    "theme": "food_health_nature",
+    "reason": "Sinh hoạt, chăm sóc sức khỏe thông thường và môi trường sống."
+  },
+  {
+    "lemma": "bolt",
+    "theme": "work_travel_city",
+    "reason": "Công việc, di chuyển và sử dụng dịch vụ/công nghệ."
+  },
+  {
+    "lemma": "balcony",
+    "theme": "family_home",
+    "reason": "Giao tiếp gia đình, học tập và đồ dùng thường ngày."
+  }
+]

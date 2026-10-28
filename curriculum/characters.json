@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "status": "family_facts_confirmed_names_assigned",
+  "family": {
+    "id": "david-family",
+    "size": 5,
+    "members": [
+      {
+        "id": "david",
+        "role": "father",
+        "name": "David",
+        "occupation": "architect"
+      },
+      {
+        "id": "david-wife",
+        "role": "mother",
+        "name": "Anna",
+        "occupation": "accountant"
+      },
+      {
+        "id": "david-son",
+        "role": "oldest_child",
+        "name": "Ben",
+        "gender": "male",
+        "schoolGrade": 4
+      },
+      {
+        "id": "david-older-daughter",
+        "role": "middle_child",
+        "name": "Lily",
+        "gender": "female",
+        "schoolGrade": 1
+      },
+      {
+        "id": "david-younger-daughter",
+        "role": "youngest_child",
+        "name": "Sophie",
+        "gender": "female",
+        "ageYears": 2
+      }
+    ]
+  },
+  "c01AccompanyingChild": "david-older-daughter",
+  "confirmedBy": "user",
+  "confirmedOn": "2026-10-28",
+  "notes": [
+    "Gia đình chính vẫn đúng năm người; nhân vật người thân/bạn bè không thêm vào family.members.",
+    "Chưa chốt tuổi bố mẹ, tuổi hai con đi học, tên đầy đủ theo giấy tờ, hoặc nơi ở của đại gia đình.",
+    "Các tên Anna, Ben, Lily, Sophie là tên gọi dùng trong giáo trình tiếng Anh theo quyền tự đặt tên người dùng giao.",
+    "Nhân vật phụ được đưa vào từng bước; không bắt người học nhớ mọi tên ngay C01.",
+    "Tuyến bài chính dùng tên gọi tiếng Anh cho mọi nhân vật; danh tính, quan hệ và bối cảnh Việt Nam vẫn giữ nguyên. ID kỹ thuật ổn định, không phải tên hiển thị.",
+    "Mạch 12 bài diễn ra trong vài tháng; không tự tăng tuổi/lớp của trẻ. Nhân vật phụ không thêm vào family.members."
+  ],
+  "version": 6,
+  "namingAuthority": "Người dùng yêu cầu tự đặt tên và dùng toàn bộ tên tiếng Anh cho tuyến bài chính, ngày 28/10/2026.",
+  "recurringCharacters": [
+    {
+      "id": "grandma-lan",
+      "name": "Helen",
+      "addressAs": "Grandma Helen",
+      "relationship": "Mẹ David, bà nội của Ben, Lily và Sophie",
+      "relatedTo": [
+        "david",
+        "david-son",
+        "david-older-daughter",
+        "david-younger-daughter"
+      ],
+      "introduction": "Được nhắc C01, thăm C02, cùng Robert chăm các cháu khi bố mẹ đi vài ngày ở C07; không tự chốt cư trú chung."
+    },
+    {
+      "id": "grandpa-minh",
+      "name": "Robert",
+      "addressAs": "Grandpa Robert",
+      "relationship": "Bố David, ông nội của ba bé",
+      "relatedTo": [
+        "david"
+      ],
+      "introduction": "Tham gia vườn C05, ngồi ghế đã sửa C06, chăm cháu cùng Helen C07, tặng cây nhỏ C11."
+    },
+    {
+      "id": "uncle-nam",
+      "name": "James",
+      "addressAs": "Uncle James",
+      "relationship": "Em trai Anna, cậu của ba bé; nghề thợ mộc",
+      "relatedTo": [
+        "david-wife"
+      ],
+      "introduction": "Có vai chính tại xưởng C06 và ghé chơi cùng Tom ở C10; là bố Tom, em trai Anna."
+    },
+    {
+      "id": "cousin-tom",
+      "name": "Tom",
+      "addressAs": "Tom",
+      "relationship": "Con trai James, anh/em họ của Ben, Lily và Sophie; chưa chốt tuổi",
+      "relatedTo": [
+        "uncle-nam",
+        "david-son",
+        "david-older-daughter",
+        "david-younger-daughter"
+      ],
+      "introduction": "Cùng Ben thử cầu giấy C06, cùng bố James ghé C10, góp hình cho hướng dẫn C11; chưa chốt tuổi."
+    },
+    {
+      "id": "friend-huy",
+      "name": "Michael",
+      "addressAs": "Michael",
+      "relationship": "Bạn lâu năm của David",
+      "relatedTo": [
+        "david"
+      ],
+      "introduction": "Xuất hiện trong C03 với vai trò bạn lâu năm: hỏi David lần cuối dùng bản vẽ ở đâu, nghe chuyện và gợi chuyến thăm làng cho C04. Chưa chốt nghề nghiệp."
+    },
+    {
+      "id": "neighbor-mai",
+      "name": "Mary",
+      "addressAs": "Mary",
+      "relationship": "Hàng xóm gia đình David, bán rau ở chợ",
+      "relatedTo": [
+        "david"
+      ],
+      "introduction": "Đã xuất hiện trong C01; có thể tái xuất khi tình huống cần."
+    }
+  ],
+  "coreNameLanguage": "en",
+  "supportingCharacters": [
+    {
+      "id": "village-grace",
+      "name": "Grace",
+      "relationship": "Cư dân làng gần nhà David, điều phối trao đổi sân chung và hoạt động trung tâm.",
+      "introduction": "C04–C05 và C09–C11; không đại diện mọi cư dân.",
+      "relatedTo": [
+        "david"
+      ]
+    },
+    {
+      "id": "center-engineer",
+      "name": "Oliver",
+      "relationship": "Kỹ sư đủ chuyên môn được trung tâm mời kiểm tra và xem phương án mái.",
+      "introduction": "C05; không nhầm với vai tình nguyện chăm cây.",
+      "relatedTo": [
+        "david"
+      ]
+    },
+    {
+      "id": "mountain-teacher",
+      "name": "Rachel",
+      "relationship": "Giáo viên ở làng bên kia núi, chủ trì cuộc nghe nhu cầu địa phương.",
+      "introduction": "C07; không tự coi ý một người là ý cả cộng đồng.",
+      "relatedTo": [
+        "david"
+      ]
+    },
+    {
+      "id": "city-manager",
+      "name": "Daniel",
+      "relationship": "Người quản lý đề xuất dự án thành phố hoạt động ngày đêm.",
+      "introduction": "C08–C09; có mục tiêu kinh doanh và có thể thảo luận giới hạn.",
+      "relatedTo": [
+        "david"
+      ]
+    },
+    {
+      "id": "night-worker",
+      "name": "Emma",
+      "relationship": "Người làm ca muộn ở dịch vụ chăm sóc gần tòa nhà được khảo sát.",
+      "introduction": "C08; chưa gán chức danh y tế chuyên môn hay vai đại diện toàn bộ người ca đêm.",
+      "relatedTo": [
+        "david"
+      ]
+    },
+    {
+      "id": "house-owner-sarah",
+      "name": "Sarah",
+      "relationship": "Một trong hai chủ nhà David thiết kế từ C01.",
+      "introduction": "Được giới thiệu tên trong C12; các lần gặp trước được nhắc ở C04, không phải khách hàng mới.",
+      "relatedTo": [
+        "david"
+      ]
+    },
+    {
+      "id": "house-owner-jack",
+      "name": "Jack",
+      "relationship": "Người đồng sở hữu căn nhà ban đầu với Sarah.",
+      "introduction": "C12; không thuộc gia đình năm người của David, chưa tự chốt quan hệ hôn nhân hoặc con cái.",
+      "relatedTo": [
+        "david"
+      ]
+    }
+  ]
+}

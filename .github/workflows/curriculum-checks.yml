@@ -5,7 +5,7 @@ on:
       - 'docs/curriculum/**'
       - 'curriculum/**'
       - 'tools/curriculum/**'
-      - 'tests/curriculum.test.cjs'
+      - 'tests/curriculum*'
       - '.github/workflows/curriculum-checks.yml'
   workflow_dispatch:
 permissions:
@@ -18,14 +18,47 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node --test tests/curriculum.test.cjs
+      - run: node --test tests/curriculum*.test.cjs
       - name: Kiểm tra cấu trúc và báo cáo phần còn thiếu
         run: node tools/curriculum/check.cjs > curriculum-report.json
       - name: Xem trước C01 và Z01 (không tạo giọng đọc)
         run: node tools/curriculum/check.cjs --preview > curriculum-preview.json
+      - name: Kiểm tra bản nháp C01 và Z01 có nội dung
+        run: |
+          node tools/curriculum/review-draft.cjs > curriculum-draft-review.json
+          node tools/curriculum/review-draft.cjs --markdown > curriculum-draft.md
+      - name: Kiểm toán lemma, cụm từ và họ từ (không chứng nhận đủ 3000)
+        run: |
+          node tools/curriculum/audit-lexicon.cjs > curriculum-lexicon.json
+          node tools/curriculum/audit-lexicon.cjs --markdown > curriculum-lexicon.md
+      - name: Kiểm tra nguồn và phân bổ danh sách chuẩn beta
+        run: |
+          node tools/curriculum/import-standard.cjs --check
+          node tools/curriculum/standard-plan.cjs > curriculum-standard.json
+          node tools/curriculum/standard-plan.cjs --markdown > curriculum-standard.md
+          node tools/curriculum/embed-app.cjs --check
+      - name: Xuất bản đọc thử độc lập
+        run: node tools/curriculum/build-preview.cjs > curriculum-preview.html
+      - name: Cài công cụ kiểm tra trình duyệt trong thư mục tạm
+        run: npm install --prefix "$RUNNER_TEMP/df-curriculum-browser" --no-save --package-lock=false playwright@1.56.1
+      - name: Kiểm tra bản đọc thử trên màn hình điện thoại
+        env:
+          NODE_PATH: ${{ runner.temp }}/df-curriculum-browser/node_modules
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          node tests/curriculum-preview.browser.cjs
+          node tests/curriculum-app.browser.cjs
       - uses: actions/upload-artifact@v4
         with:
           name: curriculum-review
           path: |
             curriculum-report.json
             curriculum-preview.json
+            curriculum-draft-review.json
+            curriculum-draft.md
+            curriculum-lexicon.json
+            curriculum-lexicon.md
+            curriculum-standard.json
+            curriculum-standard.md
+            curriculum-preview.html
+            ${{ runner.temp }}/curriculum-preview.png

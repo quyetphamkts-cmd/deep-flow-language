@@ -1,0 +1,40 @@
+{
+  "reason": "Form exclusions only, no headword removals; do not infer unambiguous lemmas from rejected forms.",
+  "excluded": [
+    {
+      "id": "en.be",
+      "form": "m",
+      "reason": "unsupported_or_fragment"
+    },
+    {
+      "id": "en.be",
+      "form": "s",
+      "reason": "unsupported_or_fragment"
+    },
+    {
+      "id": "en.have",
+      "form": "d",
+      "reason": "unsupported_or_fragment"
+    },
+    {
+      "id": "en.you",
+      "form": "y",
+      "reason": "unsupported_or_fragment"
+    },
+    {
+      "id": "en.not",
+      "form": "t",
+      "reason": "unsupported_or_fragment"
+    },
+    {
+      "id": "en.leave",
+      "form": "leaves",
+      "reason": "ambiguous_between_heads"
+    },
+    {
+      "id": "en.leaf",
+      "form": "leaves",
+      "reason": "ambiguous_between_heads"
+    }
+  ]
+}
