@@ -46,6 +46,7 @@
   function renderQuestion(){
     stop();const qs=questions(),q=qs[qi];mode='idle';remaining=q.answerPauseMs;revealed=false;sourceOpen=false;
     $('counter').textContent=`Câu ${qi+1} / ${qs.length}`;$('question').textContent=q.text;
+    $('roundLabel').hidden=!q.practiceRound;$('roundLabel').textContent=q.practiceRound===2?'Lượt 2 · Ôn lại câu gốc, thứ tự trộn':'Lượt 1 · Theo mạch truyện';
     $('answerText').textContent=script.segments.find(p=>p.id===q.answerId).text;
     $('answerBox').hidden=true;$('reveal').disabled=false;$('previous').disabled=qi===0;$('next').disabled=qi===qs.length-1;
     renderSource();renderTimer();
@@ -61,7 +62,7 @@
     lesson=id;const list=data.bundle.scripts.filter(s=>s.lessonId===id);script=list[0];
     document.querySelectorAll('[data-lesson]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lesson===id)));
     const l=data.manifest.lessons.find(l=>l.id===id),timing=data.report.lessons.find(l=>l.id===id);
-    $('lessonTitle').textContent=l.title;$('summary').textContent=`${id} · ${timing.questionCount} câu hỏi · ước tính ${(timing.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút; chưa đo audio`;
+    $('lessonTitle').textContent=l.title;$('summary').textContent=`${id} · ${timing.uniqueQuestionCount} câu gốc${timing.repeatedQuestionCount?` + ${timing.repeatedQuestionCount} lượt ôn`:''} · ước tính ${(timing.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút; chưa đo audio`;
     $('sections').replaceChildren(...list.map(s=>{const o=node('option',titles[s.component]);o.value=s.id;return o;}));
     renderFamily();renderSection();
   }

@@ -25,7 +25,7 @@ const m=require('../docs/curriculum/curriculum_manifest.json'),b=require('../cur
     assert.equal(await page.locator('.translation').first().isVisible(),false);await page.locator('#bilingual').check();assert.equal(await page.locator('.translation').first().isVisible(),true);
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     await page.screenshot({path:path.join(process.env.RUNNER_TEMP||'/tmp','curriculum-preview.png'),fullPage:false});
-    await page.locator('#sections').selectOption('C01-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 69');assert.equal(await page.locator('#previous').isDisabled(),true);
+    await page.locator('#sections').selectOption('C01-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 138');assert.equal(await page.locator('#previous').isDisabled(),true);
     await page.locator('#wait').click();await page.clock.fastForward(1000);await page.locator('#wait').click();assert.ok((await page.locator('#status').textContent()).includes('tạm dừng'));
     await page.clock.fastForward(20000);assert.equal(await page.locator('#answerBox').isVisible(),false);
     assert.equal(await page.locator('#wait').textContent(),'Tiếp tục chờ');
@@ -46,16 +46,27 @@ const m=require('../docs/curriculum/curriculum_manifest.json'),b=require('../cur
     assert.equal(await page.locator('#family').isVisible(),true);assert.equal(await page.locator('#sections option').count(),4);
     await page.locator('#bilingual').check();assert.ok((await page.locator('#story').textContent()).includes('Anna'));assert.equal(await page.locator('.translation').first().isVisible(),true);
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-    await page.locator('#sections').selectOption('C02-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 64');
+    await page.locator('#sections').selectOption('C02-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 128');
     await page.locator('#sourceButton').click();assert.ok((await page.locator('#source').textContent()).includes('living-room floor'));
     await page.locator('#wait').click();await page.locator('[data-lesson="C01"]').click();await page.clock.fastForward(10000);assert.equal(await page.locator('#practice').isVisible(),false);
     await page.locator('[data-lesson="C03"]').click();assert.equal(await page.locator('#lessonTitle').textContent(),'The Missing Drawing');
     assert.equal(await page.locator('#sections option').count(),4);assert.ok((await page.locator('#story').textContent()).includes('Michael'));
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-    await page.locator('#sections').selectOption('C03-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 64');
+    await page.locator('#sections').selectOption('C03-quick_response');assert.equal(await page.locator('#counter').textContent(),'Câu 1 / 128');
     assert.equal(await page.locator('#wait').textContent(),'Chờ 3 giây');assert.ok((await page.locator('#status').textContent()).includes('một/vài từ'));
     await page.locator('#sourceButton').click();assert.ok((await page.locator('#source').textContent()).includes('twenty past two'));
     await page.locator('#sections').selectOption('C03-time_shift');assert.ok((await page.locator('#story').textContent()).includes("Ben's point of view"));
+    assert.equal(await page.locator('[data-lesson]').count(),13);
+    for(let n=4;n<=12;n++){
+      const id='C'+String(n).padStart(2,'0');await page.locator(`[data-lesson="${id}"]`).click();
+      assert.equal(await page.locator('#sections option').count(),4);assert.ok(await page.locator('#family').isVisible());
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+      await page.locator('#sections').selectOption(id+'-quick_response');assert.equal(await page.locator('#wait').textContent(),'Chờ 3 giây');
+      assert.ok((await page.locator('#roundLabel').textContent()).includes('Lượt 1'));
+      await page.evaluate(()=>{for(let i=0;i<64;i++)document.getElementById('next').click();});
+      assert.equal(await page.locator('#counter').textContent(),'Câu 65 / 128');assert.ok((await page.locator('#roundLabel').textContent()).includes('Lượt 2'));
+      await page.locator('#sourceButton').click();assert.ok((await page.locator('#source').textContent()).includes('Câu trong bài'));
+    }
     await page.goto(origin+'/escaped');assert.equal(await page.evaluate(()=>typeof window.UNSAFE_EXECUTED),'undefined');assert.ok((await page.locator('#story').textContent()).includes('</script><script>'));
     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
     console.log('OK: bản đọc mobile, song ngữ, gia đình, hỏi đáp/chờ/tạm dừng, đổi bài hủy timer, nguồn truyện, biên câu, không mạng/storage và escape nội dung.');

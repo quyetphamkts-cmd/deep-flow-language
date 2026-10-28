@@ -1,4 +1,4 @@
-# C01 · Z01 — bản nháp nội dung drafts-v1.6
+# C01 · Z01 — bản nháp nội dung core-drafts-v2.0
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -8,7 +8,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 ## C01 — A Question at Sunrise
 
-69 câu hỏi · ước tính 28.2 phút ở 110 từ/phút, khoảng 26.1–30.6 phút theo giả định tốc độ.
+69 câu hỏi gốc · 69 lượt ôn có chủ ý · ước tính 40.7 phút ở 110 từ/phút, khoảng 37.9–44.1 phút theo giả định tốc độ.
 
 ### Main Story
 
@@ -83,6 +83,8 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 **[intro]** Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.
 
 *Tiếng Việt:* Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo.
+
+#### Lượt 1
 
 **q001. Where is David working as the sun comes up?**
 
@@ -498,6 +500,426 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 Đáp án mẫu: He writes the question, "Who is this house for?"
 
+**[round-two]** Now try the questions again in a mixed order, without looking at the story. Answer with one word or a few words. The questions are repeated for recall; you do not need to copy a long model sentence.
+
+*Tiếng Việt:* Thử lại các câu theo thứ tự trộn, không nhìn truyện. Một/vài từ là đủ. Đây là lượt lặp để gợi nhớ, không cần chép câu mẫu dài.
+
+#### Lượt 2 — ôn lại theo thứ tự trộn
+
+**q070. Where is David working as the sun comes up?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: He is working at the kitchen table.
+
+**q071. How many people are in David's family?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: There are five people in his family.
+
+**q072. Does Lily only ask about the roof?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: No. She asks about a house that makes people happy.
+
+**q073. What does Mary sell at the market?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: She sells vegetables.
+
+**q074. Where does the drawing land?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: It lands in a basket of tomatoes.
+
+**q075. Is the bench in the shade?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: No. It is in the hot sun.
+
+**q076. What does David do before Mary sits down?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: He checks the stool.
+
+**q077. Who needs a place to rest in her idea?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: Grandma Helen needs a place to rest.
+
+**q078. Who must they ask about the new house?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: They must ask the people who will live there.
+
+**q079. What is David's job?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: He is an architect. He designs buildings.
+
+**q080. What does David's wife do?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She is an accountant.
+
+**q081. What important question does she ask her father?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: She asks if he can build a house that makes people happy.
+
+**q082. Is Mary a stranger or their neighbor?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: She is their neighbor.
+
+**q083. What sits on the tall roof in the picture?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: A red tomato sits on the tall roof.
+
+**q084. What gives shade beside Mary's stall?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: The green cover gives shade.
+
+**q085. Does Mary think the small repair matters?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: Yes. It makes a big difference to her morning.
+
+**q086. Does David throw away his first picture?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: No. He keeps the first picture too.
+
+**q087. What does David think he did too early?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: He drew the roof before listening to the people.
+
+**q088. Is he drawing a house or a boat?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: He is drawing a house.
+
+**q089. What grade is their oldest child in?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: Their son is in grade four.
+
+**q090. Does David give a quick answer?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: No. He opens his mouth, but then he closes it.
+
+**q091. What color is the cover over her stall?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: The cover is green.
+
+**q092. Does the tomato damage the paper?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: No. It does not hurt the paper.
+
+**q093. Why is a beautiful seat not always useful?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: People may not be able to use it.
+
+**q094. Where do Mary and Lily talk?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: They talk in the shade under the cover.
+
+**q095. Where is the seat in his second drawing?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: It is in the shade beside the entrance.
+
+**q096. What does Lily draw in the corner?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: She draws a tiny tomato.
+
+**q097. What is unusual about the roof in his drawing?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: The roof is very tall.
+
+**q098. What grade is their older daughter in?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She is in grade one.
+
+**q099. Does David know how to draw a tall roof?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: Yes. He knows how to draw a tall roof.
+
+**q100. Who stops beside the tomatoes?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: Lily stops beside the tomatoes.
+
+**q101. Why does David want to be angry at first?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: He has worked on the drawing all morning.
+
+**q102. What does Lily move out of the path?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: She moves an empty box.
+
+**q103. Is this place tall or expensive?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: No. Nothing there is tall or expensive.
+
+**q104. Who does David want to show both pictures to?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: The people who will live in the house.
+
+**q105. Does David remove the little tomato?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: No. He leaves it there.
+
+**q106. Who puts two bowls on the table?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: Lily puts two bowls on the table.
+
+**q107. How old is their youngest daughter?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She is two years old.
+
+**q108. What does he not know how to draw?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: He does not know how to draw a happy morning.
+
+**q109. Why can Mary not sit on her stool?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: A screw in one of its legs is loose.
+
+**q110. Does he stay angry after Lily laughs?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: No. He takes a breath and laughs too.
+
+**q111. Why does she move the box?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: People need room to walk.
+
+**q112. What can people do there?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: They can sit, talk, and see each other.
+
+**q113. What does he want to ask those people?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: He wants to ask what they need.
+
+**q114. What question does David write under the drawing?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: He writes the question, "Who is this house for?"
+
+**q115. Are both bowls for David?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: No. One is for David, and one is for Lily.
+
+**q116. Why does Lily put her head close to the table?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: She wants to look at the picture from down low.
+
+**q117. Where do David and Lily go after breakfast?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: They walk to the market.
+
+**q118. What lifts the green cover?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: A sudden wind lifts the cover.
+
+**q119. What does David notice when he stops?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: He notices Mary's tired face.
+
+**q120. Where does Mary keep the small tool?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: She keeps it in a drawer.
+
+**q121. Does David hurry on the way home?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: No. He does not hurry.
+
+**q122. What does Lily bring him at lunchtime?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: She brings him a bowl of soup.
+
+**q123. What does Lily want him to do first?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: She wants him to eat breakfast first.
+
+**q124. Is the window low enough for her?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: No. The window is too high for her.
+
+**q125. What color is the folder that holds his drawing?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: The folder is blue.
+
+**q126. Why does David reach up?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: He reaches up to help Mary hold the cover.
+
+**q127. Has Mary been standing since lunchtime?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: No. She has been standing since sunrise.
+
+**q128. Does David take the tool without asking?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: No. He uses it with Mary's permission.
+
+**q129. What does he ask Lily?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: He asks what she would change.
+
+**q130. Does David keep drawing while he picks up his spoon?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: No. He closes his folder first.
+
+**q131. Does David look away from his work when he smiles?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s01.*
+
+Đáp án mẫu: No. His eyes stay on the drawing.
+
+**q132. What does David call the house?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s02.*
+
+Đáp án mẫu: He calls it a beautiful house.
+
+**q133. Why does David want to go home quickly?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s03.*
+
+Đáp án mẫu: He wants to finish his work before lunch.
+
+**q134. What happens to his folder?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s04.*
+
+Đáp án mẫu: It falls open.
+
+**q135. Where is the bench?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s05.*
+
+Đáp án mẫu: It is across the path.
+
+**q136. What does he do to the loose screw?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s06.*
+
+Đáp án mẫu: He tightens it.
+
+**q137. Why does she want a low window?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s07.*
+
+Đáp án mẫu: She wants to see the tree.
+
+**q138. Is David certain that his new house will make people happy?**
+
+*Chờ 3 giây. Nguồn: C01-main_story/s08.*
+
+Đáp án mẫu: No. He says he does not know yet.
+
 ### Time Shift
 
 **[s01]** Now listen to the morning as something that happened yesterday. Yesterday, David got up early and drew a house at the kitchen table. He wanted people to notice its tall roof. Lily brought two bowls to the table. David smiled, but he kept looking at the drawing. Then Lily looked at the picture from close to the table. The window was too high for her. She asked him a question that he could not answer quickly.
@@ -526,7 +948,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 ## Z01 — The Mouse Who Wanted to Fly
 
-40 câu hỏi · ước tính 13.3 phút ở 110 từ/phút, khoảng 12.4–14.5 phút theo giả định tốc độ.
+40 câu hỏi gốc · 0 lượt ôn có chủ ý · ước tính 13.3 phút ở 110 từ/phút, khoảng 12.4–14.5 phút theo giả định tốc độ.
 
 ### Daily Adventure
 
@@ -861,6 +1283,21 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | year | /jɪr/ | năm; two years old: hai tuổi |
 | child | /tʃaɪld/ | đứa trẻ; con trong gia đình |
 | permission | /pərˈmɪʃən/ | sự cho phép |
+| copy | /ˈkɑːpi/ | bản sao; sao chép |
+| path | /pæθ/ | lối đi |
+| belong | /bɪˈlɔːŋ/ | thuộc về; cảm thấy là một phần |
+| safe | /seɪf/ | an toàn |
+| check | /tʃek/ | kiểm tra |
+| arrive | /əˈraɪv/ | đến nơi |
+| damage | /ˈdæmɪdʒ/ | hư hại |
+| tiny | /ˈtaɪni/ | rất nhỏ |
+| enough | /ɪˈnʌf/ | đủ |
+| inside | /ˌɪnˈsaɪd/ | bên trong |
+| welcome | /ˈwelkəm/ | chào đón |
+| change | /tʃeɪndʒ/ | thay đổi |
+| hope | /hoʊp/ | hy vọng |
+| finish | /ˈfɪnɪʃ/ | hoàn thành |
+| together | /təˈɡeðər/ | cùng nhau |
 
 ## Vì sao chọn Word Discovery?
 

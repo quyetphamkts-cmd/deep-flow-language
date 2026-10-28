@@ -27,6 +27,12 @@ function reviewDraft(manifest, bundle, inventory) {
       const q=s.segments[i];
       if (q.type!=='question') continue;
       if(q.answerPauseMs!==responsePolicy?.answerPauseMs)errors.push(`${s.id}/${q.id}: khoảng chờ phải theo chính sách 3 giây`);
+      if(q.repeatOf){
+        const original=s.segments.find(p=>p.id===q.repeatOf&&p.type==='question');
+        if(!original || original.repeatOf || q.practiceRound!==2 || original.practiceRound!==1 || q.text!==original.text || JSON.stringify(q.sourceRefs)!==JSON.stringify(original.sourceRefs))errors.push(`${s.id}/${q.id}: lượt ôn phải trỏ đúng câu gốc trong cùng phần`);
+        const originalAnswer=original&&s.segments.find(p=>p.id===original.answerId);
+        if(originalAnswer?.text!==s.segments[i+1]?.text)errors.push(`${s.id}/${q.id}: đáp án lượt ôn lệch câu gốc`);
+      }else if(q.practiceRound!==undefined&&q.practiceRound!==1)errors.push(`${s.id}/${q.id}: lượt đầu phải là câu gốc`);
       const answer=s.segments[i+1];
       if (answer?.id!==q.answerId || answer?.type!=='answer') errors.push(`${s.id}/${q.id}: đáp án phải nằm ngay sau câu hỏi`);
       if (q.answerPolicy!=='model_not_exact_match') errors.push(`${s.id}/${q.id}: không dùng đáp án mẫu để chấm khớp nguyên văn`);
@@ -56,14 +62,14 @@ function reviewDraft(manifest, bundle, inventory) {
   const audit=auditCurriculum(manifest,inventory,scripts);
   const sections=expected.map(id=>{
     const s=byId.get(id), text=spoken(s), count=words(text), plan=planAudio(s,{provider:'mock',model:'planning-only',voice:'unselected',language:'en',speed:1});
-    return {id,spokenWords:count,questionCount:s.segments.filter(p=>p.type==='question').length,pauseSeconds:plan.pauseSeconds,
+    return {id,spokenWords:count,questionCount:s.segments.filter(p=>p.type==='question').length,uniqueQuestionCount:s.segments.filter(p=>p.type==='question'&&!p.repeatOf).length,repeatedQuestionCount:s.segments.filter(p=>p.type==='question'&&p.repeatOf).length,pauseSeconds:plan.pauseSeconds,
       estimatedSecondsAt110Wpm:Math.round(count/110*60+plan.pauseSeconds),
       estimatedRangeSeconds:[Math.round(count/120*60+plan.pauseSeconds),Math.round(count/100*60+plan.pauseSeconds)],
       measuredAudioSeconds:null,cacheKey:plan.cacheKey};
   });
   const lessons=authoredLessons.map(({id})=>{
     const ss=sections.filter(s=>s.id.startsWith(id+'-'));
-    return {id,questionCount:ss.reduce((n,s)=>n+s.questionCount,0),spokenWords:ss.reduce((n,s)=>n+s.spokenWords,0),pauseSeconds:ss.reduce((n,s)=>n+s.pauseSeconds,0),
+    return {id,questionCount:ss.reduce((n,s)=>n+s.questionCount,0),uniqueQuestionCount:ss.reduce((n,s)=>n+s.uniqueQuestionCount,0),repeatedQuestionCount:ss.reduce((n,s)=>n+s.repeatedQuestionCount,0),spokenWords:ss.reduce((n,s)=>n+s.spokenWords,0),pauseSeconds:ss.reduce((n,s)=>n+s.pauseSeconds,0),
       estimatedSecondsAt110Wpm:ss.reduce((n,s)=>n+s.estimatedSecondsAt110Wpm,0),estimatedRangeSeconds:[0,1].map(i=>ss.reduce((n,s)=>n+s.estimatedRangeSeconds[i],0)),measuredAudioSeconds:null};
   });
   return {schemaVersion:1,contentVersion:bundle.contentVersion,publicationReady:false,canonicalVocabularyReady:false,structuralQaPassed:true,semanticQa:'pending_user_review',
@@ -82,10 +88,12 @@ function renderDraft(manifest,bundle,inventory,options={}) {
   const out=[`# ${lessons.map(l=>l.id).join(' · ')} — bản nháp nội dung ${bundle.contentVersion}`,'','**Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**','','Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response chờ khoảng 3 giây: trả lời ngay bằng một/vài từ, không cần đủ câu hoặc khớp nguyên văn. Câu mẫu dài hơn chỉ để nghe tham khảo.','','Ước tính dùng giả định 100–120 từ/phút cộng khoảng chờ; chưa đo thời lượng audio.',''];
   for(const l of lessons){
     const title=manifest.lessons.find(x=>x.id===l.id).title;
-    out.push(`## ${l.id} — ${title}`,'',`${l.questionCount} câu hỏi · ước tính ${(l.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút, khoảng ${(l.estimatedRangeSeconds[0]/60).toFixed(1)}–${(l.estimatedRangeSeconds[1]/60).toFixed(1)} phút theo giả định tốc độ.`, '');
+    out.push(`## ${l.id} — ${title}`,'',`${l.uniqueQuestionCount} câu hỏi gốc · ${l.repeatedQuestionCount} lượt ôn có chủ ý · ước tính ${(l.estimatedSecondsAt110Wpm/60).toFixed(1)} phút ở 110 từ/phút, khoảng ${(l.estimatedRangeSeconds[0]/60).toFixed(1)}–${(l.estimatedRangeSeconds[1]/60).toFixed(1)} phút theo giả định tốc độ.`, '');
     for(const meta of report.sections.filter(s=>s.id.startsWith(l.id+'-'))){
       const s=byId.get(meta.id);out.push(`### ${titles[s.component]}`,'');
+      let round=0;
       for(const p of s.segments){
+        if(p.type==='question'&&p.practiceRound&&p.practiceRound!==round){round=p.practiceRound;out.push(`#### Lượt ${round}${round===2?' — ôn lại theo thứ tự trộn':''}`,'');}
         if(p.type==='question'){out.push(`**${p.id}. ${p.text}**`,``,`*Chờ ${p.answerPauseMs/1000} giây. Nguồn: ${p.sourceRefs.map(r=>r.scriptId+'/'+r.segmentId).join(', ')}.*`,'');}
         else if(p.type==='answer')out.push(`Đáp án mẫu: ${p.text}`,'');
         else if(p.type==='pause')out.push(`*[Nghỉ ${p.seconds} giây]*`,'');

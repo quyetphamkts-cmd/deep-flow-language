@@ -22,7 +22,7 @@ function renderPreview(manifest,bundle,inventory,characters){
 <aside id="family" class="card"><h3>Gia đình David · 5 thành viên</h3><div id="members" class="members"></div></aside>
 <section class="card"><div class="toolbar"><select id="sections" aria-label="Chọn phần bài học"></select><label><input id="bilingual" type="checkbox">Song ngữ</label></div></section>
 <article class="card"><h3 id="sectionTitle"></h3><div id="story"></div>
-<div id="practice" hidden><p id="counter"></p><h4 id="question"></h4>
+<div id="practice" hidden><p id="roundLabel" class="summary" hidden></p><p id="counter"></p><h4 id="question"></h4>
 <div class="buttons"><button id="wait" class="primary"></button><button id="reveal">Xem câu trả lời mẫu</button></div>
 <p id="status" role="status" aria-live="polite"></p>
 <div id="answerBox" hidden><strong>Câu trả lời mẫu</strong><p id="answerText"></p></div>

@@ -1,4 +1,4 @@
-# C03 — bản nháp nội dung drafts-v1.6
+# C03 — bản nháp nội dung core-drafts-v2.0
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -8,7 +8,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 ## C03 — The Missing Drawing
 
-64 câu hỏi · ước tính 28.8 phút ở 110 từ/phút, khoảng 26.6–31.3 phút theo giả định tốc độ.
+64 câu hỏi gốc · 64 lượt ôn có chủ ý · ước tính 41.1 phút ở 110 từ/phút, khoảng 38.3–44.6 phút theo giả định tốc độ.
 
 ### Main Story
 
@@ -83,6 +83,8 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 **[intro]** Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.
 
 *Tiếng Việt:* Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo.
+
+#### Lượt 1
 
 **q001. What time is it when David starts looking for the drawing?**
 
@@ -468,6 +470,396 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 Đáp án mẫu: He closes it carefully.
 
+**[round-two]** Now try the questions again in a mixed order, without looking at the story. Answer with one word or a few words. The questions are repeated for recall; you do not need to copy a long model sentence.
+
+*Tiếng Việt:* Thử lại các câu theo thứ tự trộn, không nhìn truyện. Một/vài từ là đủ. Đây là lượt lặp để gợi nhớ, không cần chép câu mẫu dài.
+
+#### Lượt 2 — ôn lại theo thứ tự trộn
+
+**q065. What time is it when David starts looking for the drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: It is twenty past two.
+
+**q066. What is Ben finishing on the kitchen table?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: He is finishing his paper bridge.
+
+**q067. Who hears the conversation from the next room?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: Anna hears the conversation.
+
+**q068. Who calls David on the phone?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: Michael calls him.
+
+**q069. Does David ask Ben for the whole story this time?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: Yes. He asks what happened from the beginning.
+
+**q070. Where does David go to look now?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: He goes to the window desk.
+
+**q071. Who does David say put the drawing under the book?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: David says he put it there himself.
+
+**q072. Is David late when he reaches the library?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: No. He is a few minutes early.
+
+**q073. Who will David meet at three?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: He will meet his old friend Michael.
+
+**q074. What color are the scraps beside Ben?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: The scraps are green.
+
+**q075. What has Anna been checking?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: She has been checking a work report.
+
+**q076. What time does Michael confirm for their meeting?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: He confirms three o'clock.
+
+**q077. Does Ben say he took green paper without permission?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: No. He had permission.
+
+**q078. Is the big blue book still there?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: Yes. It is still there.
+
+**q079. Does David still say Ben took the drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: No. He says Ben did not take it.
+
+**q080. How many plans does David show Michael?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: He shows him both plans.
+
+**q081. Where is their appointment?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: Their appointment is at the library.
+
+**q082. What has Ben borrowed from Anna?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: He has borrowed her scissors for the afternoon.
+
+**q083. What does she ask David to describe?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: She asks him to describe the missing sheet.
+
+**q084. Why is David worried about the time?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: He is worried about being late because a plan is missing.
+
+**q085. What did Ben see David take out of the folder?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: He saw David take out a white drawing.
+
+**q086. What appears when he lifts the book?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: The little tomato appears on the drawing.
+
+**q087. What does David say he is sorry for?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: He is sorry that he blamed Ben.
+
+**q088. Does Michael laugh at Ben or call David a bad father?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: No. He does neither.
+
+**q089. When will Michael look at the plans?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: He will look at them before David meets the owners.
+
+**q090. What does David ask Ben about?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: He asks if Ben took his drawing.
+
+**q091. What color is the drawing David describes?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: It is on white paper.
+
+**q092. Does Michael refuse to wait at all?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: No. He can wait a few minutes if needed.
+
+**q093. Where did David carry that drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: He carried it to the desk by the window.
+
+**q094. Are the ear and the notes still on the plan?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: Yes. They are all there.
+
+**q095. What was Ben afraid of?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: He was afraid his father would not believe him.
+
+**q096. What does Michael ask David about next time?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: He asks what David will do differently.
+
+**q097. Which drawing is still in the blue folder?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: The first drawing with the tall roof is still there.
+
+**q098. Is David's voice as quiet as he intends?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: No. It is louder than he means it to be.
+
+**q099. What does Anna ask them to separate?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: She asks what they know and what they are guessing.
+
+**q100. What does Michael ask about the drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: He asks where David last used it.
+
+**q101. What did David want to check?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: He wanted to check a measurement from the floor experiment.
+
+**q102. Is the drawing torn?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: No. One corner is bent, but it is not torn.
+
+**q103. Does David interrupt Ben's answer?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: No. He listens to the whole answer.
+
+**q104. What part of the drawing does Michael point to?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: He points to the path beside the resting place.
+
+**q105. What is missing from the folder?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: The second drawing is missing.
+
+**q106. What does Ben say he was allowed to use?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: He says David allowed him to use the green paper.
+
+**q107. Does David know who moved the drawing yet?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: No. He only knows it is missing from the folder.
+
+**q108. What has David been thinking about before that question?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: He has been thinking about who could have taken the paper.
+
+**q109. Why did the paper keep moving?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: The window was open, and the air moved it.
+
+**q110. What feeling does David have when he finds it?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: He feels relief.
+
+**q111. Where do they put the green scraps?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: They put the green scraps in one tray.
+
+**q112. What do people in a nearby village want to talk about?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: They want to talk about a shared space between their houses.
+
+**q113. What three things identify the second drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: It has the little tomato, the ear, and the family's notes.
+
+**q114. Does David look at Ben's face while asking again?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: No. He looks at the bridge.
+
+**q115. Does a green bridge prove Ben took a white drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: No. It is not evidence that he took the drawing.
+
+**q116. Has David thought carefully about what he did with it himself?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: No. He has not been thinking about that.
+
+**q117. What did David put on the drawing?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: He put a big blue book on it.
+
+**q118. Where is Ben standing quietly?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: He is standing in the doorway.
+
+**q119. How does David make a copy of each plan?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: He takes a photo of each plan.
+
+**q120. What does Michael invite David to do?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: He invites David to come with him and listen.
+
+**q121. Does the missing drawing fall out when David turns the folder over?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s01.*
+
+Đáp án mẫu: No. A pencil falls out, but the drawing does not.
+
+**q122. What does Ben do after David asks again?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s02.*
+
+Đáp án mẫu: He steps back from the table.
+
+**q123. Does David keep speaking loudly after Anna's question?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s03.*
+
+Đáp án mẫu: No. He lowers his voice.
+
+**q124. What does David do before returning to the table?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s04.*
+
+Đáp án mẫu: He checks the clock and takes a breath.
+
+**q125. What did David do after putting the book down?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s05.*
+
+Đáp án mẫu: He came to look at Ben's bridge.
+
+**q126. Has finding the drawing solved the problem of blaming Ben?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s06.*
+
+Đáp án mẫu: No. David still needs to deal with that problem.
+
+**q127. What does David ask Ben before he leaves?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s07.*
+
+Đáp án mẫu: He asks if Ben wants to show him the finished bridge.
+
+**q128. How does David close his folder this time?**
+
+*Chờ 3 giây. Nguồn: C03-main_story/s08.*
+
+Đáp án mẫu: He closes it carefully.
+
 ### Time Shift
 
 **[s01]** First, listen to the events as something that happened yesterday. Yesterday afternoon, David opened his blue folder before an appointment. The first drawing was there, but the second one was missing. He remembered seeing Ben near his work and noticed green paper beside Ben's bridge. David asked if Ben had taken the drawing. He did not know that Ben had taken it. He was worried, and he let a guess sound like a fact.
@@ -528,6 +920,20 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | appointment | /əˈpɔɪntmənt/ | cuộc hẹn |
 | remember | /rɪˈmembər/ | nhớ lại |
 | return | /rɪˈtɜːrn/ | trở lại; trả về |
+| path | /pæθ/ | lối đi |
+| belong | /bɪˈlɔːŋ/ | thuộc về; cảm thấy là một phần |
+| invite | /ɪnˈvaɪt/ | mời |
+| safe | /seɪf/ | an toàn |
+| check | /tʃek/ | kiểm tra |
+| arrive | /əˈraɪv/ | đến nơi |
+| promise | /ˈprɑːmɪs/ | lời hứa; hứa |
+| decision | /dɪˈsɪʒən/ | quyết định |
+| report | /rɪˈpɔːrt/ | báo cáo |
+| trust | /trʌst/ | lòng tin; tin tưởng |
+| enough | /ɪˈnʌf/ | đủ |
+| care | /ker/ | chăm sóc; quan tâm |
+| change | /tʃeɪndʒ/ | thay đổi |
+| finish | /ˈfɪnɪʃ/ | hoàn thành |
 
 ## Vì sao chọn Word Discovery?
 

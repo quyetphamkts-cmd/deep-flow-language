@@ -1,5 +1,7 @@
 # C02 — The House That Listened: bản nháp để duyệt
 
+> Ghi chú lịch sử của giai đoạn viết từng bài. Bộ hiện tại đã có đủ 12 chuyện chính và hai lượt QR ba giây; số liệu hiện hành xem [CORE_CURRICULUM_V1.md](CORE_CURRICULUM_V1.md).
+
 ## Câu chuyện
 
 Một vài ngày sau C01, David thử hai bản thiết kế bằng vạch băng dính trên sàn nhà mình trước khi gặp chủ nhà tương lai. Anna đang kiểm tra số liệu kế toán; các con cùng dùng không gian khiến công việc bị ngắt quãng. Bà Helen đến thăm và thử ngồi, giúp cả nhà phát hiện lối đi trên hình không đủ chỗ khi có người thật.

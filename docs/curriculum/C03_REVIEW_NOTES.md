@@ -1,5 +1,7 @@
 # C03 — The Missing Drawing: ghi chú duyệt
 
+> Ghi chú lịch sử của giai đoạn viết từng bài. Bộ hiện tại đã có đủ 12 chuyện chính và hai lượt QR ba giây; số liệu hiện hành xem [CORE_CURRICULUM_V1.md](CORE_CURRICULUM_V1.md).
+
 ## Cốt truyện và tính liên tục
 
 David chuẩn bị gặp Michael ở thư viện lúc ba giờ để xem hai bản vẽ trước cuộc trao đổi với chủ nhà. Bản thứ hai có cà chua/cái tai/ghi chú từ C01–C02 không còn trong bìa hồ sơ xanh. Thấy giấy thừa cạnh cầu của Ben, anh vội nghi con đã lấy. Anna hỏi rõ tờ nào và phân biệt điều biết với điều đoán; Michael qua điện thoại hỏi lần cuối David dùng ở đâu. Ben kể lại tối hôm trước: chính David mang bản vẽ đến bàn cửa sổ, chặn nó bằng sách xanh rồi đi xem cầu của con.

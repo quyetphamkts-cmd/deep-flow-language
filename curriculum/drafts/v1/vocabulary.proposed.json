@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": 4,
+  "version": 5,
   "status": "proposed_not_canonical",
   "source": "Original draft authoring inventory; not a frequency-ranked external word list",
   "license": null,
@@ -742,6 +742,765 @@
       "ipa": "/rɪˈtɜːrn/",
       "ipaVariety": "General American, bản biên soạn chờ rà soát",
       "glossVi": "trở lại; trả về"
+    },
+    {
+      "id": "en.boundary",
+      "lemma": "boundary",
+      "forms": [
+        "boundaries"
+      ],
+      "ipa": "/ˈbaʊndəri/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "ranh giới"
+    },
+    {
+      "id": "en.path",
+      "lemma": "path",
+      "forms": [
+        "paths"
+      ],
+      "ipa": "/pæθ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lối đi"
+    },
+    {
+      "id": "en.fair",
+      "lemma": "fair",
+      "forms": [],
+      "ipa": "/fer/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "công bằng"
+    },
+    {
+      "id": "en.belong",
+      "lemma": "belong",
+      "forms": [
+        "belongs",
+        "belonged",
+        "belonging"
+      ],
+      "ipa": "/bɪˈlɔːŋ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "thuộc về; cảm thấy là một phần"
+    },
+    {
+      "id": "en.common",
+      "lemma": "common",
+      "forms": [],
+      "ipa": "/ˈkɑːmən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chung; phổ biến"
+    },
+    {
+      "id": "en.invite",
+      "lemma": "invite",
+      "forms": [
+        "invites",
+        "invited",
+        "inviting"
+      ],
+      "ipa": "/ɪnˈvaɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "mời"
+    },
+    {
+      "id": "en.respect",
+      "lemma": "respect",
+      "forms": [
+        "respects",
+        "respected",
+        "respecting"
+      ],
+      "ipa": "/rɪˈspekt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tôn trọng"
+    },
+    {
+      "id": "en.conflict",
+      "lemma": "conflict",
+      "forms": [
+        "conflicts"
+      ],
+      "ipa": "/ˈkɑːnflɪkt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "xung đột"
+    },
+    {
+      "id": "en.soil",
+      "lemma": "soil",
+      "forms": [],
+      "ipa": "/sɔɪl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đất trồng"
+    },
+    {
+      "id": "en.seed",
+      "lemma": "seed",
+      "forms": [
+        "seeds"
+      ],
+      "ipa": "/siːd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hạt giống"
+    },
+    {
+      "id": "en.drain",
+      "lemma": "drain",
+      "forms": [
+        "drains",
+        "drained",
+        "draining"
+      ],
+      "ipa": "/dreɪn/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đường thoát nước; thoát nước"
+    },
+    {
+      "id": "en.weight",
+      "lemma": "weight",
+      "forms": [
+        "weights"
+      ],
+      "ipa": "/weɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "trọng lượng"
+    },
+    {
+      "id": "en.safe",
+      "lemma": "safe",
+      "forms": [],
+      "ipa": "/seɪf/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "an toàn"
+    },
+    {
+      "id": "en.check",
+      "lemma": "check",
+      "forms": [
+        "checks",
+        "checked",
+        "checking"
+      ],
+      "ipa": "/tʃek/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "kiểm tra"
+    },
+    {
+      "id": "en.grow",
+      "lemma": "grow",
+      "forms": [
+        "grows",
+        "grew",
+        "grown",
+        "growing"
+      ],
+      "ipa": "/ɡroʊ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "phát triển; mọc"
+    },
+    {
+      "id": "en.responsible",
+      "lemma": "responsible",
+      "forms": [],
+      "ipa": "/rɪˈspɑːnsəbəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "có trách nhiệm; phụ trách"
+    },
+    {
+      "id": "en.skill",
+      "lemma": "skill",
+      "forms": [
+        "skills"
+      ],
+      "ipa": "/skɪl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "kỹ năng"
+    },
+    {
+      "id": "en.patient",
+      "lemma": "patient",
+      "forms": [],
+      "ipa": "/ˈpeɪʃənt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "kiên nhẫn"
+    },
+    {
+      "id": "en.reuse",
+      "lemma": "reuse",
+      "forms": [
+        "reuses",
+        "reused",
+        "reusing"
+      ],
+      "ipa": "/ˌriːˈjuːz/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tái sử dụng"
+    },
+    {
+      "id": "en.practice",
+      "lemma": "practice",
+      "forms": [
+        "practices",
+        "practiced",
+        "practicing"
+      ],
+      "ipa": "/ˈpræktɪs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "luyện tập"
+    },
+    {
+      "id": "en.replace",
+      "lemma": "replace",
+      "forms": [
+        "replaces",
+        "replaced",
+        "replacing"
+      ],
+      "ipa": "/rɪˈpleɪs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "thay thế"
+    },
+    {
+      "id": "en.proud",
+      "lemma": "proud",
+      "forms": [],
+      "ipa": "/praʊd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tự hào"
+    },
+    {
+      "id": "en.teach",
+      "lemma": "teach",
+      "forms": [
+        "teaches",
+        "taught",
+        "teaching"
+      ],
+      "ipa": "/tiːtʃ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "dạy"
+    },
+    {
+      "id": "en.worth",
+      "lemma": "worth",
+      "forms": [],
+      "ipa": "/wɜːrθ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đáng; giá trị"
+    },
+    {
+      "id": "en.route",
+      "lemma": "route",
+      "forms": [
+        "routes"
+      ],
+      "ipa": "/ruːt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tuyến đường"
+    },
+    {
+      "id": "en.delay",
+      "lemma": "delay",
+      "forms": [
+        "delays",
+        "delayed",
+        "delaying"
+      ],
+      "ipa": "/dɪˈleɪ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "sự chậm trễ; làm chậm"
+    },
+    {
+      "id": "en.direction",
+      "lemma": "direction",
+      "forms": [
+        "directions"
+      ],
+      "ipa": "/dəˈrekʃən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hướng; chỉ dẫn"
+    },
+    {
+      "id": "en.arrive",
+      "lemma": "arrive",
+      "forms": [
+        "arrives",
+        "arrived",
+        "arriving"
+      ],
+      "ipa": "/əˈraɪv/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đến nơi"
+    },
+    {
+      "id": "en.journey",
+      "lemma": "journey",
+      "forms": [
+        "journeys"
+      ],
+      "ipa": "/ˈdʒɜːrni/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hành trình"
+    },
+    {
+      "id": "en.local",
+      "lemma": "local",
+      "forms": [
+        "locals"
+      ],
+      "ipa": "/ˈloʊkəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "địa phương"
+    },
+    {
+      "id": "en.shelter",
+      "lemma": "shelter",
+      "forms": [
+        "shelters",
+        "sheltered",
+        "sheltering"
+      ],
+      "ipa": "/ˈʃeltər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chỗ che; che chở"
+    },
+    {
+      "id": "en.adapt",
+      "lemma": "adapt",
+      "forms": [
+        "adapts",
+        "adapted",
+        "adapting"
+      ],
+      "ipa": "/əˈdæpt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "điều chỉnh cho phù hợp"
+    },
+    {
+      "id": "en.shift",
+      "lemma": "shift",
+      "forms": [
+        "shifts"
+      ],
+      "ipa": "/ʃɪft/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "ca làm; sự thay đổi"
+    },
+    {
+      "id": "en.screen",
+      "lemma": "screen",
+      "forms": [
+        "screens"
+      ],
+      "ipa": "/skriːn/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "màn hình"
+    },
+    {
+      "id": "en.promise",
+      "lemma": "promise",
+      "forms": [
+        "promises",
+        "promised",
+        "promising"
+      ],
+      "ipa": "/ˈprɑːmɪs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lời hứa; hứa"
+    },
+    {
+      "id": "en.profit",
+      "lemma": "profit",
+      "forms": [
+        "profits"
+      ],
+      "ipa": "/ˈprɑːfɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lợi nhuận"
+    },
+    {
+      "id": "en.signal",
+      "lemma": "signal",
+      "forms": [
+        "signals"
+      ],
+      "ipa": "/ˈsɪɡnəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tín hiệu"
+    },
+    {
+      "id": "en.control",
+      "lemma": "control",
+      "forms": [
+        "controls",
+        "controlled",
+        "controlling"
+      ],
+      "ipa": "/kənˈtroʊl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "điều khiển; quyền kiểm soát"
+    },
+    {
+      "id": "en.balance",
+      "lemma": "balance",
+      "forms": [
+        "balances",
+        "balanced",
+        "balancing"
+      ],
+      "ipa": "/ˈbæləns/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "cân bằng"
+    },
+    {
+      "id": "en.decision",
+      "lemma": "decision",
+      "forms": [
+        "decisions"
+      ],
+      "ipa": "/dɪˈsɪʒən/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "quyết định"
+    },
+    {
+      "id": "en.cancel",
+      "lemma": "cancel",
+      "forms": [
+        "cancels",
+        "canceled",
+        "canceling"
+      ],
+      "ipa": "/ˈkænsəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hủy"
+    },
+    {
+      "id": "en.cause",
+      "lemma": "cause",
+      "forms": [
+        "causes",
+        "caused",
+        "causing"
+      ],
+      "ipa": "/kɔːz/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "nguyên nhân; gây ra"
+    },
+    {
+      "id": "en.damage",
+      "lemma": "damage",
+      "forms": [
+        "damages",
+        "damaged",
+        "damaging"
+      ],
+      "ipa": "/ˈdæmɪdʒ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hư hại"
+    },
+    {
+      "id": "en.report",
+      "lemma": "report",
+      "forms": [
+        "reports",
+        "reported",
+        "reporting"
+      ],
+      "ipa": "/rɪˈpɔːrt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "báo cáo"
+    },
+    {
+      "id": "en.priority",
+      "lemma": "priority",
+      "forms": [
+        "priorities"
+      ],
+      "ipa": "/praɪˈɔːrəti/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "ưu tiên"
+    },
+    {
+      "id": "en.update",
+      "lemma": "update",
+      "forms": [
+        "updates",
+        "updated",
+        "updating"
+      ],
+      "ipa": "/ʌpˈdeɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "cập nhật"
+    },
+    {
+      "id": "en.temporary",
+      "lemma": "temporary",
+      "forms": [],
+      "ipa": "/ˈtempəreri/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tạm thời"
+    },
+    {
+      "id": "en.trust",
+      "lemma": "trust",
+      "forms": [
+        "trusts",
+        "trusted",
+        "trusting"
+      ],
+      "ipa": "/trʌst/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "lòng tin; tin tưởng"
+    },
+    {
+      "id": "en.tiny",
+      "lemma": "tiny",
+      "forms": [],
+      "ipa": "/ˈtaɪni/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "rất nhỏ"
+    },
+    {
+      "id": "en.enough",
+      "lemma": "enough",
+      "forms": [],
+      "ipa": "/ɪˈnʌf/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "đủ"
+    },
+    {
+      "id": "en.purpose",
+      "lemma": "purpose",
+      "forms": [
+        "purposes"
+      ],
+      "ipa": "/ˈpɜːrpəs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "mục đích"
+    },
+    {
+      "id": "en.compare",
+      "lemma": "compare",
+      "forms": [
+        "compares",
+        "compared",
+        "comparing"
+      ],
+      "ipa": "/kəmˈper/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "so sánh"
+    },
+    {
+      "id": "en.fit",
+      "lemma": "fit",
+      "forms": [
+        "fits",
+        "fitted",
+        "fitting"
+      ],
+      "ipa": "/fɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "vừa; phù hợp"
+    },
+    {
+      "id": "en.inside",
+      "lemma": "inside",
+      "forms": [],
+      "ipa": "/ˌɪnˈsaɪd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bên trong"
+    },
+    {
+      "id": "en.outside",
+      "lemma": "outside",
+      "forms": [],
+      "ipa": "/ˌaʊtˈsaɪd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bên ngoài"
+    },
+    {
+      "id": "en.comfortable",
+      "lemma": "comfortable",
+      "forms": [],
+      "ipa": "/ˈkʌmftərbəl/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "thoải mái"
+    },
+    {
+      "id": "en.gift",
+      "lemma": "gift",
+      "forms": [
+        "gifts"
+      ],
+      "ipa": "/ɡɪft/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "món quà"
+    },
+    {
+      "id": "en.future",
+      "lemma": "future",
+      "forms": [],
+      "ipa": "/ˈfjuːtʃər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "tương lai"
+    },
+    {
+      "id": "en.record",
+      "lemma": "record",
+      "forms": [
+        "records",
+        "recorded",
+        "recording"
+      ],
+      "ipa": "/ˈrekərd/; /rɪˈkɔːrd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bản ghi; ghi lại"
+    },
+    {
+      "id": "en.maintain",
+      "lemma": "maintain",
+      "forms": [
+        "maintains",
+        "maintained",
+        "maintaining"
+      ],
+      "ipa": "/meɪnˈteɪn/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "duy trì; bảo trì"
+    },
+    {
+      "id": "en.volunteer",
+      "lemma": "volunteer",
+      "forms": [
+        "volunteers",
+        "volunteered",
+        "volunteering"
+      ],
+      "ipa": "/ˌvɑːlənˈtɪr/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "người tình nguyện; tình nguyện"
+    },
+    {
+      "id": "en.resource",
+      "lemma": "resource",
+      "forms": [
+        "resources"
+      ],
+      "ipa": "/ˈriːsɔːrs/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "nguồn lực"
+    },
+    {
+      "id": "en.inherit",
+      "lemma": "inherit",
+      "forms": [
+        "inherits",
+        "inherited",
+        "inheriting"
+      ],
+      "ipa": "/ɪnˈherɪt/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "thừa hưởng"
+    },
+    {
+      "id": "en.care",
+      "lemma": "care",
+      "forms": [
+        "cares",
+        "cared",
+        "caring"
+      ],
+      "ipa": "/ker/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chăm sóc; quan tâm"
+    },
+    {
+      "id": "en.welcome",
+      "lemma": "welcome",
+      "forms": [
+        "welcomes",
+        "welcomed",
+        "welcoming"
+      ],
+      "ipa": "/ˈwelkəm/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "chào đón"
+    },
+    {
+      "id": "en.change",
+      "lemma": "change",
+      "forms": [
+        "changes",
+        "changed",
+        "changing"
+      ],
+      "ipa": "/tʃeɪndʒ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "thay đổi"
+    },
+    {
+      "id": "en.include",
+      "lemma": "include",
+      "forms": [
+        "includes",
+        "included",
+        "including"
+      ],
+      "ipa": "/ɪnˈkluːd/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bao gồm"
+    },
+    {
+      "id": "en.review",
+      "lemma": "review",
+      "forms": [
+        "reviews",
+        "reviewed",
+        "reviewing"
+      ],
+      "ipa": "/rɪˈvjuː/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "xem lại; ôn lại"
+    },
+    {
+      "id": "en.hope",
+      "lemma": "hope",
+      "forms": [
+        "hopes",
+        "hoped",
+        "hoping"
+      ],
+      "ipa": "/hoʊp/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hy vọng"
+    },
+    {
+      "id": "en.finish",
+      "lemma": "finish",
+      "forms": [
+        "finishes",
+        "finished",
+        "finishing"
+      ],
+      "ipa": "/ˈfɪnɪʃ/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "hoàn thành"
+    },
+    {
+      "id": "en.ordinary",
+      "lemma": "ordinary",
+      "forms": [],
+      "ipa": "/ˈɔːrdəneri/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "bình thường; thường ngày"
+    },
+    {
+      "id": "en.together",
+      "lemma": "together",
+      "forms": [],
+      "ipa": "/təˈɡeðər/",
+      "ipaVariety": "General American, bản biên soạn chờ rà soát",
+      "glossVi": "cùng nhau"
     }
   ]
 }

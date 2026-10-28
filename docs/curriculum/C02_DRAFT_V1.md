@@ -1,4 +1,4 @@
-# C02 — bản nháp nội dung drafts-v1.6
+# C02 — bản nháp nội dung core-drafts-v2.0
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -8,7 +8,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 ## C02 — The House That Listened
 
-64 câu hỏi · ước tính 27.6 phút ở 110 từ/phút, khoảng 25.6–30.0 phút theo giả định tốc độ.
+64 câu hỏi gốc · 64 lượt ôn có chủ ý · ước tính 39.8 phút ở 110 từ/phút, khoảng 37.0–43.1 phút theo giả định tốc độ.
 
 ### Main Story
 
@@ -79,6 +79,8 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 **[intro]** Answer right away with one word or a few words. You do not need a full sentence or the exact words of the model answer. You have about three seconds. Then listen to one possible answer. Focus on responding, not on making a perfect sentence.
 
 *Tiếng Việt:* Trả lời ngay bằng một hoặc vài từ. Không cần đủ câu hoặc giống nguyên văn câu mẫu. Bạn có khoảng ba giây, sau đó nghe một cách trả lời. Ưu tiên phản xạ, chưa cần câu hoàn hảo.
+
+#### Lượt 1
 
 **q001. Where does David put the two plans?**
 
@@ -464,6 +466,396 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 
 Đáp án mẫu: He puts them in his blue folder.
 
+**[round-two]** Now try the questions again in a mixed order, without looking at the story. Answer with one word or a few words. The questions are repeated for recall; you do not need to copy a long model sentence.
+
+*Tiếng Việt:* Thử lại các câu theo thứ tự trộn, không nhìn truyện. Một/vài từ là đủ. Đây là lượt lặp để gợi nhớ, không cần chép câu mẫu dài.
+
+#### Lượt 2 — ôn lại theo thứ tự trộn
+
+**q065. Where does David put the two plans?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: He puts them on the living-room floor.
+
+**q066. How does David mark the rooms on the floor?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: He uses blue paper tape.
+
+**q067. Who comes to visit the family?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: Grandma Helen comes to visit.
+
+**q068. What does David draw beside the entrance?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: He draws an extra room.
+
+**q069. Does David listen to each person before drawing this time?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: Yes. He lets each person finish speaking.
+
+**q070. Where do they try the twenty-minute experiment?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: They try it in their real home.
+
+**q071. What does David mark for quiet work in the new plan?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: He marks a quiet space with a door.
+
+**q072. What does Lily draw beside the tomato?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: She draws a small ear.
+
+**q073. What is still in the corner of the second picture?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: The little tomato is still there.
+
+**q074. What represents a bed in their experiment?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: A cushion represents a bed.
+
+**q075. Is Helen David's mother or Anna's sister?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: She is David's mother.
+
+**q076. What does he draw another room for?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: He draws another room for quiet work.
+
+**q077. Does Anna need privacy because she dislikes her children?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: No. She likes being with them and also needs time to work.
+
+**q078. Where does Anna take her work?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: She takes it into a spare room.
+
+**q079. What is the shared space for?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: It is for family activities.
+
+**q080. Can the walls actually listen to people?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: No. The walls cannot listen, but people can.
+
+**q081. Who will David meet soon?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: He will meet the people who want to build the house.
+
+**q082. What does Ben want to do in his space?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: He wants to build his paper bridge and do homework.
+
+**q083. Where does David put Helen's chair?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: He puts it in the space marked for resting.
+
+**q084. Who asks what the owners can afford?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: Anna asks that question.
+
+**q085. Does Ben need a quiet place all day?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: No. He needs it for homework, not all day.
+
+**q086. Does Anna leave the door open?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: No. She closes the door.
+
+**q087. Where does the clear path lead?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: It leads to a seat near the entrance.
+
+**q088. What does David ask before putting the plans away?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: He asks if he has missed anything.
+
+**q089. Why does he first test his ideas with his family?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: He wants to understand how his ideas work for people.
+
+**q090. What does Lily want a place for?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: She wants a place to sing.
+
+**q091. Can Lily easily walk past Helen's chair?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: No. There is not enough room.
+
+**q092. Do David and Anna know the owners' budget yet?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: No. They do not know it yet.
+
+**q093. What would Lily like to do without constant interruptions?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: She would like to sing.
+
+**q094. Who stays with Sophie while Anna works?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: David stays with Sophie.
+
+**q095. Does David guess the space around Helen's chair?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: No. He measures it.
+
+**q096. Who points to the blank space under the notes?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: Anna points to it.
+
+**q097. What is Anna doing when David brings out the plans?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: She is checking numbers for her work.
+
+**q098. Where does Sophie put her large blocks?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: She puts them beside Anna's chair.
+
+**q099. Is the paper wall a real built wall?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: No. It is a line in their experiment.
+
+**q100. What is a budget in this story?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: It is the amount of money the owners plan to spend.
+
+**q101. What kind of seat does Helen want?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: She wants a seat she can reach easily.
+
+**q102. What does Ben work on at the table?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: He works on his paper bridge.
+
+**q103. Does he promise the high roof first?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: No. He leaves it as a choice to discuss.
+
+**q104. Who is that blank space for?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: It is for the people who will live in the house.
+
+**q105. Is Anna an accountant or an architect?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: Anna is an accountant.
+
+**q106. What does Ben ask for?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: He asks for scissors.
+
+**q107. Does Helen ask for a grand room at the top of the house?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: No. She wants an easy place to rest.
+
+**q108. What has David been doing each time someone speaks?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: He has been making the picture bigger.
+
+**q109. What does Sophie need while she plays?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: She needs to stay close to an adult.
+
+**q110. Does Lily sing loudly during those twenty minutes?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: No. She saves her loud song for later.
+
+**q111. How many questions does Anna write on her sheet?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: She writes three questions.
+
+**q112. Is the house already built at the end of the story?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: No. The house is not built.
+
+**q113. What does Anna ask about the drawing?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: She asks if a drawing can tell them how a room feels.
+
+**q114. Why does Anna lose her place in the numbers?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: There are several sounds and interruptions at once.
+
+**q115. Where would a resting place help Helen?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: Near the entrance.
+
+**q116. Does he keep drawing without stopping?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: No. He puts his pencil down.
+
+**q117. Are all their needs the same?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: No. Their needs are different.
+
+**q118. What has Anna finished when she returns?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: She has finished checking the numbers.
+
+**q119. What does Anna ask about each choice?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: She asks what each choice will cost.
+
+**q120. Does David think the picture is completely finished?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: No. He still has more questions to ask.
+
+**q121. What does David get to start the experiment?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s01.*
+
+Đáp án mẫu: He gets a roll of blue paper tape.
+
+**q122. Does a big open room always sound quiet?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s02.*
+
+Đáp án mẫu: No. The room looks open, but it does not sound quiet.
+
+**q123. What else does Helen need beside a place to rest?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s03.*
+
+Đáp án mẫu: She needs a clear path to get there.
+
+**q124. What important question has he not asked yet?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s04.*
+
+Đáp án mẫu: He has not asked which things matter most.
+
+**q125. Does David still assume one large room solves everything?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s05.*
+
+Đáp án mẫu: No. He writes down their different needs instead.
+
+**q126. Does the blue tape stop noise by itself?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s06.*
+
+Đáp án mẫu: No. A house needs useful spaces, and people need agreements too.
+
+**q127. Who will they ask before deciding what can be built?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s07.*
+
+Đáp án mẫu: They will ask the owners and a builder.
+
+**q128. Where does he put both plans?**
+
+*Chờ 3 giây. Nguồn: C02-main_story/s08.*
+
+Đáp án mẫu: He puts them in his blue folder.
+
 ### Time Shift
 
 **[s01]** First, listen as if the family experiment happened yesterday. Yesterday, David put two plans on the living-room floor. He wanted to test his ideas before he met the people who wanted to build the house. Anna was checking numbers for her work. David marked rooms with blue tape. At first, everyone liked the big open room. Then they tried to use it. The picture had looked quiet, but several people needed different things at the same time.
@@ -522,7 +914,19 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Quick Response 
 | space | /speɪs/ | không gian, chỗ trống |
 | share | /ʃer/ | chia sẻ; cùng dùng |
 | guess | /ɡes/ | đoán; lời đoán |
+| copy | /ˈkɑːpi/ | bản sao; sao chép |
 | return | /rɪˈtɜːrn/ | trở lại; trả về |
+| path | /pæθ/ | lối đi |
+| check | /tʃek/ | kiểm tra |
+| journey | /ˈdʒɜːrni/ | hành trình |
+| promise | /ˈprɑːmɪs/ | lời hứa; hứa |
+| decision | /dɪˈsɪʒən/ | quyết định |
+| enough | /ɪˈnʌf/ | đủ |
+| fit | /fɪt/ | vừa; phù hợp |
+| welcome | /ˈwelkəm/ | chào đón |
+| change | /tʃeɪndʒ/ | thay đổi |
+| finish | /ˈfɪnɪʃ/ | hoàn thành |
+| together | /təˈɡeðər/ | cùng nhau |
 
 ## Vì sao chọn Word Discovery?
 

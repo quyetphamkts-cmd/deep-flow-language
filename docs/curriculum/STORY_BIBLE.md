@@ -1,4 +1,4 @@
-# STORY BIBLE — v1.6 (C03 drafted; three-second responses; approval pending)
+# STORY BIBLE — v2.0 (12 core stories drafted; approval pending)
 
 ## Main series
 **The Architect’s Journey**: David, Vietnamese architect and father, asks what makes a house genuinely good for people. A child's question — “Dad, can you build a house that makes people happy?” — begins a 12-episode journey. The answer develops from impressive buildings toward empathy, belonging, nature, safety, community and purpose. Avoid preachiness. Every episode: clear want → obstacle → escalating attempt → surprising but causal choice → emotional change. Characters and episodes beyond this brief remain to be developed; David's age, location and other biographical details are NOT locked.
@@ -80,3 +80,8 @@ Do not write imitation Pixar films or retell Effortless English lesson scripts. 
 ## Nhịp Quick Response — người dùng chốt
 
 Khoảng chờ sau mỗi câu hỏi là **ba giây**. Ưu tiên phản hồi ngay bằng một hoặc vài từ; chưa yêu cầu câu đầy đủ, ngữ pháp hoàn hảo hoặc khớp nguyên văn đáp án mẫu. Không dùng độ dài câu để chấm đạt. Đáp án mẫu có thể dài hơn để nghe tham khảo. Nếu cần hoàn thiện thời lượng, bổ sung tình huống/truy hồi có ích thay vì kéo dài pause. Quy tắc áp dụng cả các bài đã viết và bài viết tiếp theo.
+
+
+## Mạch 12 chuyện đã biên soạn
+
+Xem [CORE_CURRICULUM_V1.md](CORE_CURRICULUM_V1.md) để đọc đủ 12 bài và các ghi chú liên tục. Những gợi ý xuất hiện nhân vật phía trên là kế hoạch ban đầu; bản nháp đầy đủ hiện đã phân vai thực tế. Chỉ bản nội dung được người dùng duyệt mới trở thành bản xuất bản. Hai lượt QR được ghi riêng câu gốc/lượt ôn, cùng pause ba giây.
