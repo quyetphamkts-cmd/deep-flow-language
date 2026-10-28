@@ -1,4 +1,4 @@
-# C01 và Z01 — bản nháp nội dung v1.2
+# C01 và Z01 — bản nháp nội dung v1.3
 
 **Chờ người dùng duyệt; chưa phát hành, chưa có giọng đọc thật.**
 
@@ -20,25 +20,25 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Tiếng Việt:* Lily nhìn bức hình rồi cúi đầu sát mặt bàn. "Con đang làm gì thế?" David hỏi. "Con nhìn từ dưới này. Cửa sổ cao quá, con không nhìn được." David xoay trang giấy về phía con. "Đó là một ngôi nhà đẹp mà." Cô bé suy nghĩ một lúc. "Bố có thể xây một ngôi nhà khiến mọi người hạnh phúc không?" Anh định trả lời rồi lại thôi. Anh biết cách vẽ một mái nhà cao, nhưng chưa biết cách vẽ một buổi sáng hạnh phúc.
 
-**[s03]** After breakfast, they walk to the market. David carries his drawing in a blue folder. He wants to buy bread and go home quickly. He wants to finish his work before lunch. Near the gate, their neighbor Mai is selling vegetables. Her little stall has a green cover and a wooden stool. "Good morning!" she calls. David waves without stopping. Lily stops beside the tomatoes. "Why is your stool on its side?" she asks. Mai points to one of its legs. "A screw is loose. I cannot sit on it."
+**[s03]** After breakfast, they walk to the market. David carries his drawing in a blue folder. He wants to buy bread and go home quickly. He wants to finish his work before lunch. Near the gate, their neighbor Mary is selling vegetables. Her little stall has a green cover and a wooden stool. "Good morning!" she calls. David waves without stopping. Lily stops beside the tomatoes. "Why is your stool on its side?" she asks. Mary points to one of its legs. "A screw is loose. I cannot sit on it."
 
-*Tiếng Việt:* Sau bữa sáng, hai bố con đi bộ ra chợ. David mang bản vẽ trong một bìa hồ sơ màu xanh dương. Anh muốn mua bánh mì rồi về nhanh, để làm xong việc trước bữa trưa. Gần cổng chợ, người hàng xóm tên Mai đang bán rau. Sạp nhỏ có mái che màu xanh lá và một chiếc ghế đẩu gỗ. "Chào buổi sáng!" cô gọi. David vừa vẫy tay vừa bước tiếp. Lily dừng bên những quả cà chua. "Sao ghế của cô lại nằm nghiêng ạ?" Mai chỉ vào một chân ghế. "Một con vít bị lỏng nên cô không ngồi được."
+*Tiếng Việt:* Sau bữa sáng, hai bố con đi bộ ra chợ. David mang bản vẽ trong một bìa hồ sơ màu xanh dương. Anh muốn mua bánh mì rồi về nhanh, để làm xong việc trước bữa trưa. Gần cổng chợ, người hàng xóm tên Mary đang bán rau. Sạp nhỏ có mái che màu xanh lá và một chiếc ghế đẩu gỗ. "Chào buổi sáng!" cô gọi. David vừa vẫy tay vừa bước tiếp. Lily dừng bên những quả cà chua. "Sao ghế của cô lại nằm nghiêng ạ?" Mary chỉ vào một chân ghế. "Một con vít bị lỏng nên cô không ngồi được."
 
-**[s04]** A sudden wind lifts the green cover. David reaches up to help Mai hold it. His blue folder falls open. The drawing flies out and lands in a basket of tomatoes. A red tomato sits right on the tall roof. For a second, nobody moves. Then Lily laughs. "Your house has a tomato hat!" David wants to be angry. He has worked on that drawing all morning. But the tomato has not hurt the paper. He picks it up, takes a breath, and laughs too.
+**[s04]** A sudden wind lifts the green cover. David reaches up to help Mary hold it. His blue folder falls open. The drawing flies out and lands in a basket of tomatoes. A red tomato sits right on the tall roof. For a second, nobody moves. Then Lily laughs. "Your house has a tomato hat!" David wants to be angry. He has worked on that drawing all morning. But the tomato has not hurt the paper. He picks it up, takes a breath, and laughs too.
 
-*Tiếng Việt:* Một cơn gió bất chợt hất mái che xanh lên. David đưa tay giúp Mai giữ lại. Bìa hồ sơ tuột mở, bản vẽ bay ra rồi rơi vào giỏ cà chua. Một quả cà chua đỏ nằm ngay trên mái nhà cao. Cả ba khựng lại, rồi cô bé bật cười. "Nhà của bố đội mũ cà chua!" David định nổi giận vì anh đã vẽ nó suốt buổi sáng. Nhưng quả cà chua không làm hỏng giấy. Anh nhặt nó lên, hít một hơi rồi cũng bật cười.
+*Tiếng Việt:* Một cơn gió bất chợt hất mái che xanh lên. David đưa tay giúp Mary giữ lại. Bìa hồ sơ tuột mở, bản vẽ bay ra rồi rơi vào giỏ cà chua. Một quả cà chua đỏ nằm ngay trên mái nhà cao. Cả ba khựng lại, rồi cô bé bật cười. "Nhà của bố đội mũ cà chua!" David định nổi giận vì anh đã vẽ nó suốt buổi sáng. Nhưng quả cà chua không làm hỏng giấy. Anh nhặt nó lên, hít một hơi rồi cũng bật cười.
 
-**[s05]** Now David notices Mai's face. She looks tired. "I have been standing since sunrise," she says. There is a bench across the path, but it is in the hot sun. The green cover gives shade, but only beside the stall. David looks from the bench to the stool. A beautiful place to sit is not much help if you cannot use it. Lily moves an empty box out of the path. "People need room to walk too," she says. David puts his folder down.
+**[s05]** Now David notices Mary's face. She looks tired. "I have been standing since sunrise," she says. There is a bench across the path, but it is in the hot sun. The green cover gives shade, but only beside the stall. David looks from the bench to the stool. A beautiful place to sit is not much help if you cannot use it. Lily moves an empty box out of the path. "People need room to walk too," she says. David puts his folder down.
 
-*Tiếng Việt:* Lúc này David mới để ý khuôn mặt mệt mỏi của Mai. "Tôi đã đứng từ lúc mặt trời mọc," cô nói. Bên kia lối đi có ghế băng nhưng nằm giữa nắng nóng. Mái che xanh có bóng mát, nhưng chỉ ở cạnh sạp. David nhìn từ ghế băng sang ghế đẩu. Một chỗ ngồi đẹp chẳng giúp được mấy nếu người ta không sử dụng được. Lily dời chiếc thùng rỗng khỏi lối đi. "Mọi người cũng cần chỗ để đi nữa," cô nói. David đặt bìa hồ sơ xuống.
+*Tiếng Việt:* Lúc này David mới để ý khuôn mặt mệt mỏi của Mary. "Tôi đã đứng từ lúc mặt trời mọc," cô nói. Bên kia lối đi có ghế băng nhưng nằm giữa nắng nóng. Mái che xanh có bóng mát, nhưng chỉ ở cạnh sạp. David nhìn từ ghế băng sang ghế đẩu. Một chỗ ngồi đẹp chẳng giúp được mấy nếu người ta không sử dụng được. Lily dời chiếc thùng rỗng khỏi lối đi. "Mọi người cũng cần chỗ để đi nữa," cô nói. David đặt bìa hồ sơ xuống.
 
-**[s06]** Mai has a small tool in a drawer. With her permission, David uses it to tighten the loose screw. He checks the stool before Mai sits down. "Thank you," she says. "It is a small repair, but it makes a big difference to my morning." Lily stands under the cover beside her. David sees them talking in the shade. Nothing here is tall or expensive. Still, people can sit, talk, and see each other. He looks at the little window in his drawing again.
+**[s06]** Mary has a small tool in a drawer. With her permission, David uses it to tighten the loose screw. He checks the stool before Mary sits down. "Thank you," she says. "It is a small repair, but it makes a big difference to my morning." Lily stands under the cover beside her. David sees them talking in the shade. Nothing here is tall or expensive. Still, people can sit, talk, and see each other. He looks at the little window in his drawing again.
 
-*Tiếng Việt:* Mai có một dụng cụ nhỏ trong ngăn kéo. Được cô đồng ý, David dùng nó siết lại con vít lỏng. Anh kiểm tra chiếc ghế trước khi Mai ngồi xuống. "Cảm ơn anh," cô nói. "Chỉ là một sửa chữa nhỏ nhưng buổi sáng của tôi dễ chịu hơn nhiều." Lily đứng bên cô dưới mái che. David thấy hai người trò chuyện trong bóng mát. Ở đây chẳng có gì cao lớn hay đắt tiền, nhưng mọi người có thể ngồi, nói chuyện và nhìn thấy nhau. Anh nhìn lại ô cửa sổ nhỏ trong bản vẽ.
+*Tiếng Việt:* Mary có một dụng cụ nhỏ trong ngăn kéo. Được cô đồng ý, David dùng nó siết lại con vít lỏng. Anh kiểm tra chiếc ghế trước khi Mary ngồi xuống. "Cảm ơn anh," cô nói. "Chỉ là một sửa chữa nhỏ nhưng buổi sáng của tôi dễ chịu hơn nhiều." Lily đứng bên cô dưới mái che. David thấy hai người trò chuyện trong bóng mát. Ở đây chẳng có gì cao lớn hay đắt tiền, nhưng mọi người có thể ngồi, nói chuyện và nhìn thấy nhau. Anh nhìn lại ô cửa sổ nhỏ trong bản vẽ.
 
-**[s07]** On the way home, David does not hurry. "What would you change?" he asks Lily. "A low window, so I can see the tree. And a seat where Grandma Lan can rest." At home, he draws a second picture. The door is easy to reach. The window is lower. There is a seat in the shade beside the entrance. He keeps the first picture too. He wants to show both pictures to the people who will live in the house, and ask what they need.
+**[s07]** On the way home, David does not hurry. "What would you change?" he asks Lily. "A low window, so I can see the tree. And a seat where Grandma Helen can rest." At home, he draws a second picture. The door is easy to reach. The window is lower. There is a seat in the shade beside the entrance. He keeps the first picture too. He wants to show both pictures to the people who will live in the house, and ask what they need.
 
-*Tiếng Việt:* Trên đường về, David không còn vội. "Con muốn thay đổi điều gì?" anh hỏi. "Một cửa sổ thấp để con nhìn thấy cây. Và một chỗ ngồi để bà nội Lan nghỉ chân." Về nhà, anh vẽ bức thứ hai. Cửa ra vào dễ tiếp cận hơn, cửa sổ thấp hơn và có một chỗ ngồi trong bóng mát cạnh lối vào. Anh vẫn giữ bức đầu tiên. Anh muốn đưa cả hai bản cho những người sẽ sống trong nhà xem và hỏi họ cần gì.
+*Tiếng Việt:* Trên đường về, David không còn vội. "Con muốn thay đổi điều gì?" anh hỏi. "Một cửa sổ thấp để con nhìn thấy cây. Và một chỗ ngồi để bà nội Helen nghỉ chân." Về nhà, anh vẽ bức thứ hai. Cửa ra vào dễ tiếp cận hơn, cửa sổ thấp hơn và có một chỗ ngồi trong bóng mát cạnh lối vào. Anh vẫn giữ bức đầu tiên. Anh muốn đưa cả hai bản cho những người sẽ sống trong nhà xem và hỏi họ cần gì.
 
 **[s08]** Lily brings him a bowl of soup for lunch. This time, David closes his folder before he picks up his spoon. "Is this the happy house?" she asks. "I do not know yet," he says. "We have to ask the people who will live there. But I think I was drawing the roof before I was listening to them." She draws a tiny tomato on the corner of the new picture. David leaves it there. Under the drawing, he writes one question: "Who is this house for?"
 
@@ -50,33 +50,33 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Tiếng Việt:* Hãy nghe một vài từ hữu ích trong truyện. Bạn chưa cần nhớ hết lời giải thích ngay. Trước tiên là architect: kiến trúc sư, người thiết kế công trình. David là kiến trúc sư. Anh vẽ ngôi nhà trước khi người ta xây nó. Công việc không chỉ là chọn mái mà còn nghĩ đến những người ở bên trong. Bạn có thể nói theo nếu muốn: architect. Hãy hình dung David bên bàn bếp với bìa hồ sơ xanh và bản vẽ.
 
-**[s02]** Sunrise is the time when the sun comes up. It is the beginning of the day. Mai has been standing since sunrise. Imagine the sky getting light while she puts vegetables on her stall. Sunrise is not the hot middle of the day. It is the start. David sees a problem in the morning, but he also sees a chance to make that morning better.
+**[s02]** Sunrise is the time when the sun comes up. It is the beginning of the day. Mary has been standing since sunrise. Imagine the sky getting light while she puts vegetables on her stall. Sunrise is not the hot middle of the day. It is the start. David sees a problem in the morning, but he also sees a chance to make that morning better.
 
-*Tiếng Việt:* Sunrise là lúc mặt trời mọc, bắt đầu ngày mới. Mai đã đứng từ lúc đó. Hãy hình dung trời sáng dần khi cô bày rau lên sạp. Sunrise không phải giữa trưa nắng nóng mà là buổi đầu ngày. Trong buổi sáng ấy, David nhìn thấy vấn đề và cả cơ hội làm buổi sáng dễ chịu hơn.
+*Tiếng Việt:* Sunrise là lúc mặt trời mọc, bắt đầu ngày mới. Mary đã đứng từ lúc đó. Hãy hình dung trời sáng dần khi cô bày rau lên sạp. Sunrise không phải giữa trưa nắng nóng mà là buổi đầu ngày. Trong buổi sáng ấy, David nhìn thấy vấn đề và cả cơ hội làm buổi sáng dễ chịu hơn.
 
 **[s03]** To hurry is to move or work quickly because you feel you have little time. David wants to hurry home. He is thinking about his work. Later, he does not hurry. He walks with Lily and asks a question. Think of two pictures: David walking past the stall, and David stopping to listen. The street is the same. His attention is different.
 
 *Tiếng Việt:* Hurry là vội đi hoặc vội làm vì cảm thấy không có nhiều thời gian. David muốn vội về vì nghĩ đến công việc. Sau đó anh không còn vội; anh đi cùng con và đặt câu hỏi. Hình dung hai cảnh: David bước ngang qua sạp và David dừng lại lắng nghe. Con phố vẫn vậy, nhưng điều anh chú ý đã khác.
 
-**[s04]** To notice is to become aware of something. The stool is there before David notices it. Mai is tired before he notices her face. When he stops, he sees more. You can notice a sound, a small change, or another person's face. Look around your room for a moment. What do you notice that you did not notice before?
+**[s04]** To notice is to become aware of something. The stool is there before David notices it. Mary is tired before he notices her face. When he stops, he sees more. You can notice a sound, a small change, or another person's face. Look around your room for a moment. What do you notice that you did not notice before?
 
-*Tiếng Việt:* Notice là nhận ra hoặc để ý đến điều gì. Chiếc ghế đã ở đó trước khi David để ý. Mai đã mệt trước khi anh nhìn ra vẻ mặt của cô. Khi dừng lại, anh thấy nhiều hơn. Bạn có thể nhận ra âm thanh, một thay đổi nhỏ hoặc nét mặt người khác. Hãy nhìn quanh phòng: có gì lúc nãy bạn chưa để ý không?
+*Tiếng Việt:* Notice là nhận ra hoặc để ý đến điều gì. Chiếc ghế đã ở đó trước khi David để ý. Mary đã mệt trước khi anh nhìn ra vẻ mặt của cô. Khi dừng lại, anh thấy nhiều hơn. Bạn có thể nhận ra âm thanh, một thay đổi nhỏ hoặc nét mặt người khác. Hãy nhìn quanh phòng: có gì lúc nãy bạn chưa để ý không?
 
-**[s05]** Shade is a place where something blocks the direct light of the sun. The green cover gives shade. The bench is in the sun. Mai's stool is in the shade. Picture one hot seat and one cool place under the cover. Shade is about sunlight here. A shadow is the dark shape that something makes when it blocks light. These words are connected, but we do not always use them in the same way.
+**[s05]** Shade is a place where something blocks the direct light of the sun. The green cover gives shade. The bench is in the sun. Mary's stool is in the shade. Picture one hot seat and one cool place under the cover. Shade is about sunlight here. A shadow is the dark shape that something makes when it blocks light. These words are connected, but we do not always use them in the same way.
 
-*Tiếng Việt:* Trong truyện, shade là bóng mát, nơi ánh nắng trực tiếp bị che lại. Mái che xanh tạo bóng mát. Ghế băng ở ngoài nắng, còn ghế đẩu của Mai ở trong bóng mát. Hãy hình dung một chỗ ngồi nóng và một chỗ mát dưới mái che. Shadow thường chỉ hình bóng tối do vật cản ánh sáng tạo ra. Hai từ liên quan nhưng không phải lúc nào cũng dùng thay nhau được.
+*Tiếng Việt:* Trong truyện, shade là bóng mát, nơi ánh nắng trực tiếp bị che lại. Mái che xanh tạo bóng mát. Ghế băng ở ngoài nắng, còn ghế đẩu của Mary ở trong bóng mát. Hãy hình dung một chỗ ngồi nóng và một chỗ mát dưới mái che. Shadow thường chỉ hình bóng tối do vật cản ánh sáng tạo ra. Hai từ liên quan nhưng không phải lúc nào cũng dùng thay nhau được.
 
-**[s06]** Loose means not held firmly in place. A screw in the stool is loose. The stool is not safe to sit on yet. To tighten something is to make it firm. David tightens the screw. Listen to the contrast: loose, tighten. Think of the stool on its side, and then think of Mai sitting on it after David checks it.
+**[s06]** Loose means not held firmly in place. A screw in the stool is loose. The stool is not safe to sit on yet. To tighten something is to make it firm. David tightens the screw. Listen to the contrast: loose, tighten. Think of the stool on its side, and then think of Mary sitting on it after David checks it.
 
-*Tiếng Việt:* Loose nghĩa là lỏng, chưa được giữ chắc. Một con vít của chiếc ghế bị lỏng nên chưa ngồi an toàn được. Tighten là làm cho chặt lại. David siết vít. Hãy nghe cặp ý đối lập: loose, tighten. Hình dung chiếc ghế nằm nghiêng rồi đến cảnh Mai ngồi lên sau khi David kiểm tra.
+*Tiếng Việt:* Loose nghĩa là lỏng, chưa được giữ chắc. Một con vít của chiếc ghế bị lỏng nên chưa ngồi an toàn được. Tighten là làm cho chặt lại. David siết vít. Hãy nghe cặp ý đối lập: loose, tighten. Hình dung chiếc ghế nằm nghiêng rồi đến cảnh Mary ngồi lên sau khi David kiểm tra.
 
-**[s07]** A repair is work that makes a broken or damaged thing work again. Repair can also be a verb. David repairs the stool. It is a small repair. He does not buy a new stool, and he does not build a new market. He fixes the thing that Mai needs that morning. A small repair can matter a lot to the person who needs it.
+**[s07]** A repair is work that makes a broken or damaged thing work again. Repair can also be a verb. David repairs the stool. It is a small repair. He does not buy a new stool, and he does not build a new market. He fixes the thing that Mary needs that morning. A small repair can matter a lot to the person who needs it.
 
-*Tiếng Việt:* Repair có thể là việc sửa chữa hoặc động từ sửa chữa, làm cho thứ hỏng dùng được trở lại. David sửa chiếc ghế. Anh không mua ghế mới hay xây cả khu chợ mà sửa đúng thứ Mai cần sáng hôm ấy. Một sửa chữa nhỏ có thể rất có ý nghĩa với người cần nó.
+*Tiếng Việt:* Repair có thể là việc sửa chữa hoặc động từ sửa chữa, làm cho thứ hỏng dùng được trở lại. David sửa chiếc ghế. Anh không mua ghế mới hay xây cả khu chợ mà sửa đúng thứ Mary cần sáng hôm ấy. Một sửa chữa nhỏ có thể rất có ý nghĩa với người cần nó.
 
-**[s08]** Finally, make a difference. This phrase means to have an effect that matters. Mai says the repair makes a big difference to her morning. The repair is small, but now she can sit down. The size of the action and the size of its effect are not always the same. Think of a small thing someone did for you. Did it make a difference? Keep that picture, and listen to the story again when you are ready.
+**[s08]** Finally, make a difference. This phrase means to have an effect that matters. Mary says the repair makes a big difference to her morning. The repair is small, but now she can sit down. The size of the action and the size of its effect are not always the same. Think of a small thing someone did for you. Did it make a difference? Keep that picture, and listen to the story again when you are ready.
 
-*Tiếng Việt:* Cuối cùng là make a difference: tạo ra thay đổi có ý nghĩa. Mai nói việc sửa ghế làm buổi sáng của cô khác đi nhiều. Sửa chữa nhỏ nhưng nhờ vậy cô có thể ngồi. Quy mô hành động không phải lúc nào cũng bằng quy mô tác động. Hãy nghĩ đến một việc nhỏ ai đó từng làm cho bạn. Việc ấy có ý nghĩa không? Giữ hình ảnh đó rồi nghe lại truyện khi sẵn sàng.
+*Tiếng Việt:* Cuối cùng là make a difference: tạo ra thay đổi có ý nghĩa. Mary nói việc sửa ghế làm buổi sáng của cô khác đi nhiều. Sửa chữa nhỏ nhưng nhờ vậy cô có thể ngồi. Quy mô hành động không phải lúc nào cũng bằng quy mô tác động. Hãy nghĩ đến một việc nhỏ ai đó từng làm cho bạn. Việc ấy có ý nghĩa không? Giữ hình ảnh đó rồi nghe lại truyện khi sẵn sàng.
 
 ### Quick Response
 
@@ -228,13 +228,13 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He wants to finish his work before lunch.
 
-**q020. What does Mai sell at the market?**
+**q020. What does Mary sell at the market?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s03.*
 
 Đáp án mẫu: She sells vegetables.
 
-**q021. Is Mai a stranger or their neighbor?**
+**q021. Is Mary a stranger or their neighbor?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s03.*
 
@@ -252,7 +252,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: Lily stops beside the tomatoes.
 
-**q024. Why can Mai not sit on her stool?**
+**q024. Why can Mary not sit on her stool?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s03.*
 
@@ -268,7 +268,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s04.*
 
-Đáp án mẫu: He reaches up to help Mai hold the cover.
+Đáp án mẫu: He reaches up to help Mary hold the cover.
 
 **q027. What happens to his folder?**
 
@@ -310,9 +310,9 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s05.*
 
-Đáp án mẫu: He notices Mai's tired face.
+Đáp án mẫu: He notices Mary's tired face.
 
-**q034. Has Mai been standing since lunchtime?**
+**q034. Has Mary been standing since lunchtime?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s05.*
 
@@ -330,7 +330,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: No. It is in the hot sun.
 
-**q037. What gives shade beside Mai's stall?**
+**q037. What gives shade beside Mary's stall?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s05.*
 
@@ -354,7 +354,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: People need room to walk.
 
-**q041. Where does Mai keep the small tool?**
+**q041. Where does Mary keep the small tool?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s06.*
 
@@ -364,7 +364,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s06.*
 
-Đáp án mẫu: No. He uses it with Mai's permission.
+Đáp án mẫu: No. He uses it with Mary's permission.
 
 **q043. What does he do to the loose screw?**
 
@@ -372,19 +372,19 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 Đáp án mẫu: He tightens it.
 
-**q044. What does David do before Mai sits down?**
+**q044. What does David do before Mary sits down?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: He checks the stool.
 
-**q045. Does Mai think the small repair matters?**
+**q045. Does Mary think the small repair matters?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s06.*
 
 Đáp án mẫu: Yes. It makes a big difference to her morning.
 
-**q046. Where do Mai and Lily talk?**
+**q046. Where do Mary and Lily talk?**
 
 *Chờ 6 giây. Nguồn: C01-main_story/s06.*
 
@@ -424,7 +424,7 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Chờ 6 giây. Nguồn: C01-main_story/s07.*
 
-Đáp án mẫu: Grandma Lan needs a place to rest.
+Đáp án mẫu: Grandma Helen needs a place to rest.
 
 **q053. Does David throw away his first picture?**
 
@@ -504,25 +504,25 @@ Bản đọc này sinh từ `curriculum/drafts/v1/scripts.json`. Câu trả lờ
 
 *Tiếng Việt:* Bây giờ hãy nghe buổi sáng ấy như chuyện xảy ra hôm qua. David dậy sớm và vẽ nhà bên bàn bếp. Anh muốn mọi người chú ý mái nhà cao. Lily mang hai chiếc bát đến. Anh mỉm cười nhưng vẫn nhìn bản vẽ. Cô bé nhìn bức hình từ sát mặt bàn và thấy cửa sổ quá cao với mình. Cô đặt một câu hỏi khiến anh không trả lời ngay được.
 
-**[s02]** They went to the market after breakfast. David carried a blue folder and wanted to go home quickly. Mai's stool was on its side because a screw was loose. David did not stop at first. Then the wind lifted the green cover. He reached up to help, and his folder fell open. His drawing landed in a basket of tomatoes. Lily laughed at the tomato on the roof. David took a breath and laughed with her.
+**[s02]** They went to the market after breakfast. David carried a blue folder and wanted to go home quickly. Mary's stool was on its side because a screw was loose. David did not stop at first. Then the wind lifted the green cover. He reached up to help, and his folder fell open. His drawing landed in a basket of tomatoes. Lily laughed at the tomato on the roof. David took a breath and laughed with her.
 
-*Tiếng Việt:* Hai bố con ra chợ sau bữa sáng. David mang bìa hồ sơ xanh và muốn nhanh về. Ghế của Mai nằm nghiêng vì vít lỏng. Ban đầu anh chưa dừng lại. Gió hất mái che lên, anh đưa tay giúp và bìa hồ sơ tuột mở. Bản vẽ rơi vào giỏ cà chua. Con gái cười vì quả cà chua trên mái nhà. David hít một hơi rồi cười cùng con.
+*Tiếng Việt:* Hai bố con ra chợ sau bữa sáng. David mang bìa hồ sơ xanh và muốn nhanh về. Ghế của Mary nằm nghiêng vì vít lỏng. Ban đầu anh chưa dừng lại. Gió hất mái che lên, anh đưa tay giúp và bìa hồ sơ tuột mở. Bản vẽ rơi vào giỏ cà chua. Con gái cười vì quả cà chua trên mái nhà. David hít một hơi rồi cười cùng con.
 
-**[s03]** When David stopped, he noticed Mai's tired face. She had been standing since sunrise. The bench across the path was in the sun, so it was not a good place to rest. Mai gave him permission to use her tool. He tightened the screw and checked the stool. Then Mai sat down in the shade. David had not finished a new house. He had helped one person use a place that was already there.
+**[s03]** When David stopped, he noticed Mary's tired face. She had been standing since sunrise. The bench across the path was in the sun, so it was not a good place to rest. Mary gave him permission to use her tool. He tightened the screw and checked the stool. Then Mary sat down in the shade. David had not finished a new house. He had helped one person use a place that was already there.
 
-*Tiếng Việt:* Khi dừng lại, David nhận ra khuôn mặt mệt mỏi của Mai. Cô đã đứng từ sáng sớm. Ghế băng bên kia lối đi nằm ngoài nắng nên không phải chỗ nghỉ tốt. Mai đồng ý cho anh dùng dụng cụ. Anh siết vít, kiểm tra ghế rồi cô ngồi xuống trong bóng mát. Anh chưa hoàn thành ngôi nhà mới nhưng đã giúp một người dùng được chỗ vốn có ở đó.
+*Tiếng Việt:* Khi dừng lại, David nhận ra khuôn mặt mệt mỏi của Mary. Cô đã đứng từ sáng sớm. Ghế băng bên kia lối đi nằm ngoài nắng nên không phải chỗ nghỉ tốt. Mary đồng ý cho anh dùng dụng cụ. Anh siết vít, kiểm tra ghế rồi cô ngồi xuống trong bóng mát. Anh chưa hoàn thành ngôi nhà mới nhưng đã giúp một người dùng được chỗ vốn có ở đó.
 
-**[s04]** On the way home, he asked Lily what she would change. She wanted a lower window and a seat for Grandma Lan. David drew another picture, but he kept the first one. At lunch, he put his work away before he ate. He did not say that his new design would make everyone happy. He said he needed to ask the people who would live there. Yesterday morning had started with a roof. It ended with a better question.
+**[s04]** On the way home, he asked Lily what she would change. She wanted a lower window and a seat for Grandma Helen. David drew another picture, but he kept the first one. At lunch, he put his work away before he ate. He did not say that his new design would make everyone happy. He said he needed to ask the people who would live there. Yesterday morning had started with a roof. It ended with a better question.
 
-*Tiếng Việt:* Trên đường về, anh hỏi con muốn thay đổi gì. Cô bé muốn cửa sổ thấp hơn và chỗ ngồi cho bà nội Lan. Anh vẽ bản khác nhưng vẫn giữ bản đầu. Đến trưa, anh cất việc rồi mới ăn. Anh không nói bản thiết kế mới chắc chắn khiến ai cũng hạnh phúc; anh nói mình cần hỏi người sẽ ở đó. Buổi sáng bắt đầu bằng mái nhà và kết thúc bằng một câu hỏi tốt hơn.
+*Tiếng Việt:* Trên đường về, anh hỏi con muốn thay đổi gì. Cô bé muốn cửa sổ thấp hơn và chỗ ngồi cho bà nội Helen. Anh vẽ bản khác nhưng vẫn giữ bản đầu. Đến trưa, anh cất việc rồi mới ăn. Anh không nói bản thiết kế mới chắc chắn khiến ai cũng hạnh phúc; anh nói mình cần hỏi người sẽ ở đó. Buổi sáng bắt đầu bằng mái nhà và kết thúc bằng một câu hỏi tốt hơn.
 
 **[s05]** Now imagine David speaking that evening. "Tomorrow, I will show both pictures to the people who want the house. I will ask where they like to sit in the morning. I will ask who needs an easy entrance. I will not begin by telling them what they should want. First, I will listen. Then I will draw. A tall roof may still be useful, but it will not answer every question."
 
 *Tiếng Việt:* Hãy hình dung David nói tối hôm đó: "Ngày mai tôi sẽ cho những người muốn xây nhà xem cả hai bản. Tôi sẽ hỏi buổi sáng họ thích ngồi đâu và ai cần lối vào dễ tiếp cận. Tôi sẽ không mở đầu bằng việc bảo họ nên muốn gì. Tôi sẽ nghe trước rồi mới vẽ. Mái cao vẫn có thể hữu ích, nhưng không trả lời được mọi câu hỏi."
 
-**[s06]** And now, listen from Lily's point of view. Lily is David's daughter and is in grade one. "This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mai. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked."
+**[s06]** And now, listen from Lily's point of view. Lily is David's daughter and is in grade one. "This morning, I wanted Dad to look at my idea. At first, he only looked at his drawing. At the market, a tomato landed on his roof. That made us laugh. Then Dad stopped and helped Mary. On the way home, he asked what I would change. I do not know how to design a whole house. But I know how high I can see, and I am glad he asked."
 
-*Tiếng Việt:* Bây giờ là góc nhìn của Lily, con gái David đang học lớp 1: "Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mai. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi."
+*Tiếng Việt:* Bây giờ là góc nhìn của Lily, con gái David đang học lớp 1: "Sáng nay con muốn bố xem ý của mình. Lúc đầu bố chỉ nhìn bản vẽ. Ở chợ, quả cà chua rơi lên mái nhà làm hai bố con cười. Rồi bố dừng lại giúp cô Mary. Trên đường về bố hỏi con muốn đổi gì. Con không biết thiết kế cả ngôi nhà, nhưng con biết mình nhìn được cao đến đâu, và con vui vì bố đã hỏi."
 
 ## Z01 — The Mouse Who Wanted to Fly
 

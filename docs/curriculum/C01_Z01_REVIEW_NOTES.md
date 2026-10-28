@@ -1,4 +1,4 @@
-# C01/Z01: hướng dẫn duyệt bản nháp v1.2
+# C01/Z01: hướng dẫn duyệt bản nháp v1.3
 
 Soạn ngày 28/10/2026 theo yêu cầu người dùng cho Codex đảm nhận cả nội dung và kỹ thuật. Tất cả là bản nháp mới, chưa được người dùng duyệt, chưa phát hành vào app. Không phải kết quả trao đổi tự động với một phiên ChatGPT khác.
 
@@ -15,12 +15,12 @@ Q&A luyện nghe hiện dùng tiếng Anh, có hướng dẫn Việt ở đầu.
 - **Mục tiêu nghe:** gia đình, việc thường ngày, nghề nghiệp, nhà ở và nhu cầu con người; đối chiếu hiện tại, hôm qua, ngày mai và góc nhìn con gái. Trình độ hướng đến A2, có một số đoạn vượt mức A1; đây là đánh giá biên tập sơ bộ, chưa kiểm định CEFR.
 - **Mong muốn:** David muốn hoàn thành bản vẽ có mái cao gây ấn tượng. **Điều cần học:** phải hỏi người sử dụng thay vì chỉ nhìn công trình từ quan điểm của mình.
 - **Tình huống mở:** con gái không nhìn được qua ô cửa quá cao trong hình, rồi hỏi nhà có thể làm mọi người hạnh phúc không.
-- **Khó khăn:** David đang vội, ban đầu đi qua hàng xóm Mai. Chiếc ghế Mai cần ngồi lại lỏng vít, còn ghế băng nằm ngoài nắng.
+- **Khó khăn:** David đang vội, ban đầu đi qua hàng xóm Mary. Chiếc ghế Mary cần ngồi lại lỏng vít, còn ghế băng nằm ngoài nắng.
 - **Bất ngờ có nguyên nhân:** gió hất mái che, David đưa tay giúp khiến bìa hồ sơ mở; bản vẽ rơi vào giỏ, quả cà chua nằm trên mái cao như chiếc mũ. Không dùng phép màu để giải quyết chuyện chính.
-- **Lựa chọn:** dừng lại, sửa ghế với sự đồng ý của Mai, hỏi ý con rồi giữ cả hai bản thiết kế để hỏi người sẽ ở. Chưa tuyên bố một thay đổi thiết kế chắc chắn làm ai cũng hạnh phúc.
+- **Lựa chọn:** dừng lại, sửa ghế với sự đồng ý của Mary, hỏi ý con rồi giữ cả hai bản thiết kế để hỏi người sẽ ở. Chưa tuyên bố một thay đổi thiết kế chắc chắn làm ai cũng hạnh phúc.
 - **Kết:** câu hỏi “Who is this house for?” trở thành động lực sang C02 — The House That Listened. Quả cà chua nhỏ lưu dấu một lần biết dừng lại và nghe.
 
-David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin người dùng vừa chốt: vợ kế toán, con trai lớp 4, con gái lớp 1 và con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1. Theo yêu cầu tiếp theo của người dùng, tên dùng trong truyện là Anna, Ben, Lily và Sophie; không suy ra tuổi hai con đi học. Bà nội được gọi là Grandma Lan. Mai là nhân vật hàng xóm đề xuất mới, chưa khóa cho toàn bộ series. Khách hàng và cuộc gặp ngày mai trong Time Shift là tình huống tưởng tượng được giới thiệu rõ, không phải dữ kiện đã xảy ra trong Main Story.
+David là kiến trúc sư Việt Nam, gia đình năm người theo thông tin người dùng vừa chốt: vợ kế toán, con trai lớp 4, con gái lớp 1 và con gái út hai tuổi. Cô bé đi cùng David trong C01 là con gái lớp 1. Theo yêu cầu tiếp theo của người dùng, tên dùng trong truyện là Anna, Ben, Lily và Sophie; không suy ra tuổi hai con đi học. Bà nội được gọi là Grandma Helen. Mary là nhân vật hàng xóm đề xuất mới, chưa khóa cho toàn bộ series. Khách hàng và cuộc gặp ngày mai trong Time Shift là tình huống tưởng tượng được giới thiệu rõ, không phải dữ kiện đã xảy ra trong Main Story.
 
 ### Bốn phần
 
@@ -74,4 +74,4 @@ Bản HTML thử nghiệm: xem `PREVIEW_GUIDE.md`. Đề xuất nguồn danh sá
 
 ## Cần người dùng duyệt
 
-Ưu tiên nhận xét nội dung: tiếng Anh có dễ nghe không, câu chuyện có hấp dẫn khi nghe lại không, nhịp 69/40 câu có quá lặp không, khoảng chờ có đủ trả lời không, Mai và cách kể Mouse có phù hợp không. Sau đó mới chốt giọng đọc/ngân sách, tạo audio mẫu, đo thật và tích hợp riêng vào thư viện. Chưa merge/phát hành bản nháp theo công cụ này.
+Ưu tiên nhận xét nội dung: tiếng Anh có dễ nghe không, câu chuyện có hấp dẫn khi nghe lại không, nhịp 69/40 câu có quá lặp không, khoảng chờ có đủ trả lời không, Mary và cách kể Mouse có phù hợp không. Sau đó mới chốt giọng đọc/ngân sách, tạo audio mẫu, đo thật và tích hợp riêng vào thư viện. Chưa merge/phát hành bản nháp theo công cụ này.

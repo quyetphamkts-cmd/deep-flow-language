@@ -47,15 +47,16 @@
     "Gia đình chính vẫn đúng năm người; nhân vật người thân/bạn bè không thêm vào family.members.",
     "Chưa chốt tuổi bố mẹ, tuổi hai con đi học, tên đầy đủ theo giấy tờ, hoặc nơi ở của đại gia đình.",
     "Các tên Anna, Ben, Lily, Sophie là tên gọi dùng trong giáo trình tiếng Anh theo quyền tự đặt tên người dùng giao.",
-    "Nhân vật phụ được đưa vào từng bước; không bắt người học nhớ mọi tên ngay C01."
+    "Nhân vật phụ được đưa vào từng bước; không bắt người học nhớ mọi tên ngay C01.",
+    "Tuyến bài chính dùng tên gọi tiếng Anh cho mọi nhân vật; danh tính, quan hệ và bối cảnh Việt Nam vẫn giữ nguyên. ID kỹ thuật ổn định, không phải tên hiển thị."
   ],
-  "version": 2,
-  "namingAuthority": "Người dùng yêu cầu Codex tự đặt tên, ngày 28/10/2026.",
+  "version": 3,
+  "namingAuthority": "Người dùng yêu cầu tự đặt tên và dùng toàn bộ tên tiếng Anh cho tuyến bài chính, ngày 28/10/2026.",
   "recurringCharacters": [
     {
       "id": "grandma-lan",
-      "name": "Lan",
-      "addressAs": "Grandma Lan",
+      "name": "Helen",
+      "addressAs": "Grandma Helen",
       "relationship": "Mẹ David, bà nội của Ben, Lily và Sophie",
       "relatedTo": [
         "david",
@@ -67,8 +68,8 @@
     },
     {
       "id": "grandpa-minh",
-      "name": "Minh",
-      "addressAs": "Grandpa Minh",
+      "name": "Robert",
+      "addressAs": "Grandpa Robert",
       "relationship": "Bố David, ông nội của ba bé",
       "relatedTo": [
         "david"
@@ -77,8 +78,8 @@
     },
     {
       "id": "uncle-nam",
-      "name": "Nam",
-      "addressAs": "Uncle Nam",
+      "name": "James",
+      "addressAs": "Uncle James",
       "relationship": "Em trai Anna, cậu của ba bé; nghề thợ mộc",
       "relatedTo": [
         "david-wife"
@@ -89,7 +90,7 @@
       "id": "cousin-tom",
       "name": "Tom",
       "addressAs": "Tom",
-      "relationship": "Con trai Nam, anh/em họ của Ben, Lily và Sophie; chưa chốt tuổi",
+      "relationship": "Con trai James, anh/em họ của Ben, Lily và Sophie; chưa chốt tuổi",
       "relatedTo": [
         "uncle-nam",
         "david-son",
@@ -100,8 +101,8 @@
     },
     {
       "id": "friend-huy",
-      "name": "Huy",
-      "addressAs": "Huy",
+      "name": "Michael",
+      "addressAs": "Michael",
       "relationship": "Bạn lâu năm của David",
       "relatedTo": [
         "david"
@@ -110,13 +111,14 @@
     },
     {
       "id": "neighbor-mai",
-      "name": "Mai",
-      "addressAs": "Mai",
+      "name": "Mary",
+      "addressAs": "Mary",
       "relationship": "Hàng xóm gia đình David, bán rau ở chợ",
       "relatedTo": [
         "david"
       ],
       "introduction": "Đã xuất hiện trong C01; có thể tái xuất khi tình huống cần."
     }
-  ]
+  ],
+  "coreNameLanguage": "en"
 }
