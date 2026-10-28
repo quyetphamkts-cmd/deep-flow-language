@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.57",
-  "notes": "Thanh Sao chép/Dán/Sửa/Đóng cân đối · Từ vựng ở chân trang · sao vàng/ngày, cam/tuần · công cụ Đọc ở đầu bài · flashcard vuốt/chạm lật",
+  "ver": "1.0.3-beta.58",
+  "notes": "Flashcard tự phát âm và Nghe lại · Từ điển gợi ý câu, sửa chính tả/ngữ pháp khi bấm · Mở Đọc dừng bài nghe",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.58",
+      "d": "28/10/2026",
+      "items": [
+        "Flashcard tự phát âm khi thẻ xuất hiện; nút Nghe lại, dừng giọng cũ khi chuyển thẻ hoặc rời trang",
+        "Từ điển có nút gợi ý câu và kiểm tra chính tả/ngữ pháp bằng AI; giữ nguyên câu nhập, chỉ gọi khi bấm, dùng lại kết quả",
+        "Mở Đọc tự tạm dừng bài nghe và hủy chờ tự phát, giữ bài và vị trí"
+      ]
+    },
     {
       "v": "1.0.3-beta.57",
       "d": "28/10/2026",
