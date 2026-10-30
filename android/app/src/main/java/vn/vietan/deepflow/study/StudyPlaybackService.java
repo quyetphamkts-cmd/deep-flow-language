@@ -59,7 +59,7 @@ public class StudyPlaybackService extends MediaSessionService {
         session=new MediaSession.Builder(this,player).setSessionActivity(open).setCallback(new MediaSession.Callback(){
             @Override public MediaSession.ConnectionResult onConnect(MediaSession s,MediaSession.ControllerInfo c){
                 if(!c.getPackageName().equals(getPackageName())&&!c.isTrusted())return MediaSession.ConnectionResult.reject();
-                return super.onConnect(s,c);
+                return MediaSession.ConnectionResult.accept(MediaSession.ConnectionResult.DEFAULT_SESSION_COMMANDS,MediaSession.ConnectionResult.DEFAULT_PLAYER_COMMANDS);
             }
         }).build();
         player.addListener(new Player.Listener(){
@@ -86,10 +86,13 @@ public class StudyPlaybackService extends MediaSessionService {
             String mode=row.optString("mode","one");
             JSONArray queue=context.getJSONArray(review?"review":mode.endsWith("learn")?"learn":"main");
             String reviewKey="";
+            String today=new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.ROOT).format(new java.util.Date());
+            String choice=context.optString("webReviewChoice","");
+            if(choice.isEmpty()&&today.equals(StudyAlarms.prefs(this).getString("reviewChoiceDay","")))choice=StudyAlarms.prefs(this).getString("reviewChoiceKey","");
             if(review){
                 long first=Long.MAX_VALUE;
                 for(int i=0;i<queue.length();i++){
-                    JSONObject t=queue.getJSONObject(i);long due=t.optLong("due",Long.MAX_VALUE);
+                    JSONObject t=queue.getJSONObject(i);if(!choice.isEmpty()&&!choice.equals(t.optString("group")))continue;long due=t.optLong("due",Long.MAX_VALUE);
                     if(StudyAlarms.prefs(this).getLong("reviewAt:"+t.getString("id"),0)>=t.optLong("completedAt"))due=Math.max(due,StudyAlarms.prefs(this).getLong("reviewDue:"+t.getString("id"),0));
                     if(due<first){first=due;reviewKey=t.getString("group");}
                 }
@@ -139,13 +142,14 @@ public class StudyPlaybackService extends MediaSessionService {
             // Mỗi mục chỉ cần một lần kết thúc để lên lịch ôn, dù người dùng chọn lặp nhiều lượt.
             if(completed.length()>200)completed.remove(0);
             if(report.optBoolean("review")&&completed.length()>=report.getJSONArray("source").length()){
-                String day=new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.ROOT).format(new java.util.Date());StudyAlarms.prefs(this).edit().putString("reviewDay",day).apply();report.put("reviewDone",true);
+                String day=new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.ROOT).format(new java.util.Date());StudyAlarms.prefs(this).edit().putString("reviewDay",day).apply();report.put("reviewDone",true).put("reviewDay",day);
             }
         }catch(Exception ignored){}persist();
     }
     private void persist(){
         if(report==null||player==null)return;
-        try{report.put("updatedAt",System.currentTimeMillis()).put("position",Math.max(0,player.getCurrentPosition())).put("currentId",lastId).put("active",player.isPlaying());
+        try{report.put("updatedAt",System.currentTimeMillis()).put("active",player.isPlaying());
+            if(player.getCurrentMediaItem()!=null&&!lastId.isEmpty())report.put("position",Math.max(0,player.getCurrentPosition())).put("currentId",lastId);
             JSONArray old=new JSONArray(StudyAlarms.prefs(this).getString("reports","[]")),out=new JSONArray();
             for(int i=0;i<old.length();i++)if(!old.getJSONObject(i).optString("id").equals(report.optString("id")))out.put(old.getJSONObject(i));
             out.put(report);while(out.length()>100)out.remove(0);

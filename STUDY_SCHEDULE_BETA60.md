@@ -7,6 +7,10 @@
 - Nhật ký nằm trong Phiên bản (mở rộng), hỗ trợ cấu hình tab nhật ký cũ.
 - Lịch ôn lấy bài đã đánh dấu học xong, nhóm theo thư mục như trước. Hàng đợi mở rộng hoặc thu gọn còn một mục; ưu tiên hạn ôn, sau đó thời điểm học xong. Giữ mốc 1–3–7–14–30–60–120 ngày và giới hạn một mục/ngày. Ngày hiển thị dồn lịch tối đa một mục/ngày; đây là lịch gợi ý theo spaced repetition, không đo đường cong quên cá nhân.
 
+## Huân chương giờ học
+
+Đổi Chiến sĩ Bền bỉ thành **Chiến sĩ thao luyện**. Năm mốc: **1.000 – 2.000 – 4.000 – 6.000 – 10.000 giờ**. Giữ toàn bộ giờ học thực tế và bản ghi trao thưởng cũ; dùng con trỏ thông báo riêng cho mốc mới, không phát lại thông báo thưởng khi nâng cấp. Đây là hành trình thành tích, không phải quy đổi CEFR hoặc cam kết cứ đủ giờ sẽ thành thạo. Quân hàm theo họ từ giữ nguyên.
+
 ## Lịch học Android
 
 Nút đồng hồ ở Nghe giữ hẹn giờ tắt cũ, thêm lịch học/ôn nhiều lần mỗi ngày. Tối đa 24 giờ khác nhau. Mỗi giờ chọn học tiếp hoặc ôn, chế độ bài/thư mục/đang học và các chế độ lặp tương ứng, số lượt 1–99 hoặc thời gian 1–720 phút. Chế độ không lặp vẫn dừng khi hết phạm vi.
