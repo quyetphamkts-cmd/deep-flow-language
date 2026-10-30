@@ -39,6 +39,7 @@ jobs:
           node tests/flashcard-audio.browser.cjs
           node tests/dictionary-assist.browser.cjs
           node tests/video-reading59.browser.cjs
+          node tests/study60.browser.cjs
           node tests/curriculum-app.browser.cjs
           node tests/goal-stars.browser.cjs
           node tests/course-guide.browser.cjs

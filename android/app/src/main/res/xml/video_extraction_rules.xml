@@ -1,4 +1,4 @@
 <data-extraction-rules>
-    <cloud-backup><exclude domain="sharedpref" path="video_lessons.xml" /></cloud-backup>
-    <device-transfer><exclude domain="sharedpref" path="video_lessons.xml" /></device-transfer>
+    <cloud-backup><exclude domain="sharedpref" path="video_lessons.xml" /><exclude domain="sharedpref" path="study_schedule60.xml" /><exclude domain="file" path="study60/" /></cloud-backup>
+    <device-transfer><exclude domain="sharedpref" path="video_lessons.xml" /><exclude domain="sharedpref" path="study_schedule60.xml" /><exclude domain="file" path="study60/" /></device-transfer>
 </data-extraction-rules>
