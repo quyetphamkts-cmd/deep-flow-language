@@ -28,7 +28,7 @@ public class StudySchedulePlugin extends Plugin {
     private static final long MAX=250L*1024*1024;
     @PluginMethod public void status(PluginCall call){
         getActivity().runOnUiThread(()->{
-            try{JSObject r=new JSObject();r.put("supported",true);r.put("exact",StudyAlarms.exact(getContext()));
+            try{JSObject r=new JSObject();r.put("supported",true);r.put("memoryVersion",1);r.put("exact",StudyAlarms.exact(getContext()));
                 NotificationManager nm=(NotificationManager)getContext().getSystemService(android.content.Context.NOTIFICATION_SERVICE);
                 r.put("notifications",Build.VERSION.SDK_INT<24||nm.areNotificationsEnabled());
                 r.put("active",StudyPlaybackService.instance!=null);r.put("data",StudyAlarms.data(getContext()));

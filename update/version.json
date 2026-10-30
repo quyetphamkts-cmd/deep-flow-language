@@ -17,7 +17,8 @@
       "items": [
         "Lịch ôn thích ứng riêng từng bài theo đường cong quên lãng ước tính, ưu tiên hạn sớm nhất; không dồn cứng một mục/ngày",
         "Biểu đồ khả năng nhớ và mốc ôn 92% dự đoán; tự đánh giá sau ôn để điều chỉnh khoảng cách, chỉ nghe không được coi là đã nhớ",
-        "Giữ lịch cũ nếu sớm hơn và đồng bộ mô hình với lịch phát Android; giữ dữ liệu và bài học chính"
+        "Giữ lịch cũ nếu sớm hơn và đồng bộ mô hình với lịch phát Android; giữ dữ liệu và bài học chính",
+        "Thống kê từ đã học: tỷ lệ ước tính đã thuộc/tổng số từ đã học, có phần trăm theo từng khóa và tổng chung"
       ]
     },
     {

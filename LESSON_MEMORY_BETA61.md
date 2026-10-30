@@ -28,3 +28,7 @@ Java `StudyMemory` dùng cùng R(t), due và công thức cập nhật với web
 ## Kiểm thử
 
 Node: đường suy giảm, mốc ôn trước 90%, phản hồi tốt/yếu/exposure, giữ hạn cũ, idempotence và giới hạn chuỗi dài. Chrome: hai bài cùng thư mục vẫn độc lập, bài đến hạn sớm đứng trước dù học sau, marker cũ không chặn ôn, biểu đồ, phản hồi và xếp lại hàng đợi. Java kiểm tra cùng các mốc toán học và giới hạn. CI tiếp tục chạy toàn bộ bộ kiểm thử cũ, build ký khóa cũ và Android 16. Không thể xác nhận dự đoán trí nhớ đúng với từng người chỉ bằng kiểm thử phần mềm.
+
+## Tỷ lệ từ thuộc / từ đã học
+
+Bảng Từ vựng trong bài học hiển thị `Ước tính đã thuộc X / Y từ đã học · Z%` cho từng khóa và tổng chung. Y là số từ gốc không trùng trong các bài đã học xong trong phạm vi đó. X là tổng trọng số % nhớ tự báo cao nhất của các bài chứa từ, làm tròn xuống để tránh báo 100% khi chưa đủ; từ đã lưu nhưng chưa đạt khoảng ôn 21 ngày có trọng số 0, thẻ đạt từ 21 ngày có trọng số 1. Từ không có đánh giá vẫn tính vào Y và được nêu riêng, không tự coi là thuộc. Z tính từ X/Y; Y=0 không hiển thị phần trăm giả. Đây là ước tính dựa trên tự báo/SRS, không xác minh riêng từng từ. Không cộng trùng từ giữa các khóa trong tổng chung; không tính từ chỉ có ở bài chưa học/đang học.
