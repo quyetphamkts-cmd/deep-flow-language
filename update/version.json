@@ -1,16 +1,25 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.60",
+  "ver": "1.0.3-beta.61",
   "notes": "Video xem/nghe nền (cần APK mới) · OCR Hủy/Ẩn · quản lý Lịch sử đọc và Lưu trữ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 29,
-    "versionName": "1.0.2-beta.61",
+    "versionCode": 30,
+    "versionName": "1.0.2-beta.62",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.61",
+      "d": "30/10/2026",
+      "items": [
+        "Lịch ôn thích ứng riêng từng bài theo đường cong quên lãng ước tính, ưu tiên hạn sớm nhất; không dồn cứng một mục/ngày",
+        "Biểu đồ khả năng nhớ và mốc ôn 92% dự đoán; tự đánh giá sau ôn để điều chỉnh khoảng cách, chỉ nghe không được coi là đã nhớ",
+        "Giữ lịch cũ nếu sớm hơn và đồng bộ mô hình với lịch phát Android; giữ dữ liệu và bài học chính"
+      ]
+    },
     {
       "v": "1.0.3-beta.60",
       "d": "30/10/2026",
