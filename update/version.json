@@ -1,16 +1,55 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.61",
-  "notes": "Video xem/nghe nền (cần APK mới) · OCR Hủy/Ẩn · quản lý Lịch sử đọc và Lưu trữ",
+  "ver": "1.0.3-beta.66",
+  "notes": "Sửa vuốt flashcard và ngôn ngữ mặt sau · Đã thuộc và ôn theo lịch nhớ · Sửa dịch vụ Android cần APK mới",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 30,
-    "versionName": "1.0.2-beta.62",
+    "versionCode": 31,
+    "versionName": "1.0.2-beta.63",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.66",
+      "d": "31/10/2026",
+      "items": [
+        "Sửa vuốt trái/phải trên hai mặt flashcard bằng cảm ứng điện thoại; chạm để lật, cuộn dọc không đổi thẻ",
+        "Mặt sau dùng đúng ngôn ngữ dịch đã chọn; sửa bản dịch Trung/Nhật cũ khi đang chọn tiếng Việt, lưu cache riêng theo ngôn ngữ và bỏ kết quả trả về trễ"
+      ]
+    },
+    {
+      "v": "1.0.3-beta.65",
+      "d": "31/10/2026",
+      "items": [
+        "Flashcard thêm nút Đã thuộc: bỏ thẻ khỏi lượt hiện tại, giữ từ và lịch ôn; hỗ trợ hoàn tác",
+        "Trộn ngẫu nhiên thẻ đến hạn, không đưa từ đã thuộc chưa đến hạn trở lại; lịch ôn theo đường cong nhớ ước tính với mốc nhắc 92%"
+      ]
+    },
+    {
+      "v": "1.0.3-beta.64",
+      "d": "31/10/2026",
+      "items": [
+        "Sửa lỗi Android ForegroundServiceDidNotStartInTime: dịch vụ MediaSession lên foreground ngay khi khởi động, không chờ WebView; dừng phiên không còn kết nối (cần APK mới)"
+      ]
+    },
+    {
+      "v": "1.0.3-beta.63",
+      "d": "31/10/2026",
+      "items": [
+        "Lịch ôn mặc định chỉ hiện mục đến hạn đầu tiên, tự thu gọn khi chuyển trang quay lại; nút Mở rộng / Thu gọn ở góc trên bên phải"
+      ]
+    },
+    {
+      "v": "1.0.3-beta.62",
+      "d": "31/10/2026",
+      "items": [
+        "Giữ ba trạng thái Chưa học / Đang học / Học xong; bắt đầu nghe không tự hoàn tất hay hỏi mức nhớ",
+        "Lịch ôn nhóm đúng cấp bài, thư mục hoặc khóa học được đánh dấu học xong",
+        "Sửa tên thư mục và bài khi bật thông tin; thêm ẩn bài học xong trong Lọc danh sách"
+      ]
+    },
     {
       "v": "1.0.3-beta.61",
       "d": "30/10/2026",

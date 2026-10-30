@@ -207,3 +207,56 @@ if (!svc.includes('DF_KILL_SYNC')) {
     '        Runnable kill = () -> {\n            if (dfInst != s) return;\n            try { s.setPlaybackState(PlaybackStateCompat.STATE_STOPPED); s.update(); } catch (Exception e) {}\n            try { s.destroy(); } catch (Exception e) {}\n        };\n        if (android.os.Looper.myLooper() == android.os.Looper.getMainLooper()) kill.run();\n        else new android.os.Handler(android.os.Looper.getMainLooper()).post(kill); // DF_KILL_SYNC', 'synchronous kill');
   fs.writeFileSync(svcF, svc);
 }
+
+// Android yêu cầu startForeground ngay sau startForegroundService, không được
+// chờ callback bindService/Activity/WebView (có thể đã chết hoặc bị trì hoãn).
+svc = fs.readFileSync(svcF, 'utf8');
+if (!svc.includes('DF_FG_BOOTSTRAP64')) {
+  const bootstrap = `    // DF_FG_BOOTSTRAP64: đáp ứng hạn foreground trước mọi callback/return.
+    private final android.os.Handler dfStartHandler = new android.os.Handler(android.os.Looper.getMainLooper());
+    private final Runnable dfOrphanStop = () -> { if (plugin == null) destroy(); };
+    private boolean dfEnsureForeground() {
+        try {
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                manager.createNotificationChannel(new NotificationChannel("playback", "Playback", NotificationManager.IMPORTANCE_LOW));
+            }
+            android.app.Notification notification = notificationBuilder != null ? notificationBuilder.build() :
+                new NotificationCompat.Builder(this, "playback")
+                    .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
+                    .setContentTitle("Deep Flow")
+                    .setContentText("Đang chuẩn bị bài nghe…")
+                    .setOngoing(true).setOnlyAlertOnce(true).build();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+            } else {
+                startForeground(NOTIFICATION_ID, notification);
+            }
+            dfFg = "on bootstrap " + System.currentTimeMillis();
+            return true;
+        } catch (Exception error) {
+            dfFg = "fail bootstrap " + System.currentTimeMillis() + " " + error;
+            Log.e(TAG, "Cannot promote media service", error);
+            stopSelf();
+            return false;
+        }
+    }
+
+`;
+  svc = rep(svc, '    @Override\n    public int onStartCommand(Intent intent, int flags, int startId) {',
+    bootstrap + '    @Override\n    public int onStartCommand(Intent intent, int flags, int startId) {\n' +
+    '        if (!dfEnsureForeground()) return START_NOT_STICKY;\n' +
+    '        dfStartHandler.removeCallbacks(dfOrphanStop);\n' +
+    '        if (plugin == null) dfStartHandler.postDelayed(dfOrphanStop, 15000);', 'foreground bootstrap');
+  svc = rep(svc, '        MediaButtonReceiver.handleIntent(mediaSession, intent);',
+    '        if (mediaSession != null) MediaButtonReceiver.handleIntent(mediaSession, intent);', 'unbound media intent');
+  svc = rep(svc, '        return super.onStartCommand(intent, flags, startId);',
+    '        return START_NOT_STICKY; // Không tự dựng lại dịch vụ không còn WebView.', 'no orphan restart');
+  svc = rep(svc, '        dfInst = this;\n        this.plugin = plugin;',
+    '        dfInst = this;\n        dfStartHandler.removeCallbacks(dfOrphanStop);\n        this.plugin = plugin;', 'cancel orphan timer');
+  svc = rep(svc, 'public void onDestroy() { dfFg =',
+    'public void onDestroy() { dfStartHandler.removeCallbacks(dfOrphanStop); dfFg =', 'cleanup bootstrap timer');
+  svc = rep(svc, '} catch (Exception dfE) { dfFg = "fail " + System.currentTimeMillis() + " " + dfE; }',
+    '} catch (Exception dfE) { dfFg = "fail " + System.currentTimeMillis() + " " + dfE; destroy(); return; }', 'stop failed promotion');
+  fs.writeFileSync(svcF, svc);
+}
