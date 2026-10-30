@@ -86,28 +86,16 @@ public class StudyPlaybackService extends MediaSessionService {
             String mode=row.optString("mode","one");
             JSONArray queue=context.getJSONArray(review?"review":mode.endsWith("learn")?"learn":"main");
             String reviewKey="";
-            String today=new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.ROOT).format(new java.util.Date());
-            String choice=today.equals(context.optString("webReviewChoiceDay"))?context.optString("webReviewChoice",""):"";
-            if(choice.isEmpty()&&today.equals(StudyAlarms.prefs(this).getString("reviewChoiceDay","")))choice=StudyAlarms.prefs(this).getString("reviewChoiceKey","");
             if(review){
-                long first=Long.MAX_VALUE;
+                long first=Long.MAX_VALUE;JSONObject selected=null;
                 for(int i=0;i<queue.length();i++){
-                    JSONObject t=queue.getJSONObject(i);if(!choice.isEmpty()&&!choice.equals(t.optString("group")))continue;long due=t.optLong("due",Long.MAX_VALUE);
-                    if(StudyAlarms.prefs(this).getLong("reviewAt:"+t.getString("id"),0)>=t.optLong("completedAt"))due=Math.max(due,StudyAlarms.prefs(this).getLong("reviewDue:"+t.getString("id"),0));
-                    if(due<first){first=due;reviewKey=t.getString("group");}
+                    JSONObject t=queue.getJSONObject(i);long due=memoryFor(t).getLong("due");
+                    if(due<first){first=due;selected=t;}
                 }
-                if(first>System.currentTimeMillis())throw new IllegalArgumentException("Chưa có bài ôn đến hạn.");
-                JSONArray selected=new JSONArray();for(int i=0;i<queue.length();i++){
-                    JSONObject t=queue.getJSONObject(i);long due=t.optLong("due",Long.MAX_VALUE);
-                    if(StudyAlarms.prefs(this).getLong("reviewAt:"+t.getString("id"),0)>=t.optLong("completedAt"))due=Math.max(due,StudyAlarms.prefs(this).getLong("reviewDue:"+t.getString("id"),0));
-                    if(t.getString("group").equals(reviewKey)&&due<=System.currentTimeMillis())selected.put(t);
-                }queue=selected;
+                if(selected==null||first>System.currentTimeMillis())throw new IllegalArgumentException("Chưa có bài ôn đến hạn.");
+                reviewKey="#"+selected.getString("id");queue=new JSONArray().put(selected);
             }
             String day=new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.ROOT).format(new java.util.Date());
-            if(review&&day.equals(StudyAlarms.prefs(this).getString("reviewDay","")))throw new IllegalArgumentException("Đã hoàn thành lịch ôn hôm nay.");
-            if(review&&day.equals(context.optString("webReviewDay")))throw new IllegalArgumentException("Đã hoàn thành lịch ôn hôm nay trong app.");
-            String chosen=StudyAlarms.prefs(this).getString("reviewChoiceDay","");
-            if(review&&day.equals(chosen)&&!reviewKey.equals(StudyAlarms.prefs(this).getString("reviewChoiceKey","")))throw new IllegalArgumentException("Tiếp tục mục ôn đã chọn hôm nay trong app trước khi chuyển mục khác.");
             int length=!review&&("one".equals(mode)||"r1".equals(mode))?Math.min(1,queue.length()):queue.length();
             if(length==0)throw new IllegalArgumentException("Chưa chuẩn bị âm thanh; mở app để cập nhật lịch.");
             boolean repeat=mode.startsWith("r");int rounds=repeat?StudyPolicy.count(row.optInt("count",1)):1;
@@ -119,7 +107,6 @@ public class StudyPlaybackService extends MediaSessionService {
                 items.add(new MediaItem.Builder().setUri(android.net.Uri.fromFile(file)).setMediaId(t.getString("id")).setMediaMetadata(new MediaMetadata.Builder().setTitle(t.optString("title","Bài học")).setArtist("Deep Flow · Lịch học").build()).build());
             }
             report=new JSONObject().put("id",java.util.UUID.randomUUID().toString()).put("at",System.currentTimeMillis()).put("day",day).put("review",review).put("reviewKey",reviewKey).put("seconds",new JSONObject()).put("completed",completed).put("source",queue);
-            if(review)StudyAlarms.prefs(this).edit().putString("reviewChoiceDay",day).putString("reviewChoiceKey",reviewKey).apply();
             player.setPlaybackSpeed((float)Math.max(.5,Math.min(2,row.optDouble("rate",1))));
             player.setMediaItems(items);if(limitSeconds>0&&repeat)player.setRepeatMode(Player.REPEAT_MODE_ALL);
             long pos=review?0:Math.max(0,context.optLong("position",0));
@@ -130,18 +117,34 @@ public class StudyPlaybackService extends MediaSessionService {
             StudyAlarms.log(this,"Đã bắt đầu "+(review?"ôn bài":"học tiếp")+" theo giờ hẹn.");
         }catch(Exception e){stopStudy(e instanceof IllegalArgumentException?e.getMessage():"Không đọc được lịch học; mở app để lưu lại.");}
     }
+    private JSONObject memoryFor(JSONObject track)throws Exception{
+        JSONObject m=track.optJSONObject("memory"),stored;
+        try{stored=new JSONObject(StudyAlarms.prefs(this).getString("memory61:"+track.getString("id"),"{}"));}catch(Exception e){stored=new JSONObject();}
+        long base=track.optLong("completedAt",System.currentTimeMillis());
+        if(stored.optInt("version")==1&&stored.optLong("last")>=Math.max(base,m==null?0:m.optLong("last")))m=stored;
+        if(m==null||m.optInt("version")!=1){
+            double interval=StudyMemory.clamp((track.optLong("due",base+StudyMemory.DAY)-base)/(double)StudyMemory.DAY*Math.log(.9)/Math.log(.92),.125,365);
+            m=new JSONObject().put("version",1).put("last",base).put("interval90",interval).put("difficulty",.25).put("reviews",track.optInt("step",0)).put("ratings",0).put("due",track.optLong("due",base+StudyMemory.DAY));
+        }
+        return m;
+    }
     private void completeLast(){
         if(lastId.isEmpty()||report==null)return;
         try{
             boolean first=true;for(int i=0;i<completed.length();i++)if(lastId.equals(completed.getJSONObject(i).optString("id")))first=false;
             long now=System.currentTimeMillis();
             if(!report.optBoolean("review"))StudyAlarms.prefs(this).edit().putLong("position:"+lastId,0).putLong("positionAt:"+lastId,now).apply();
-            if(first){completed.put(new JSONObject().put("id",lastId).put("at",now));
+            if(first){
+                JSONObject done=new JSONObject().put("id",lastId).put("at",now);
                 if(report.optBoolean("review")){
-                    int step=0;JSONArray source=report.getJSONArray("source");for(int i=0;i<source.length();i++)if(source.getJSONObject(i).getString("id").equals(lastId))step=source.getJSONObject(i).optInt("step",0);
-                    step=Math.min(6,Math.max(step,StudyAlarms.prefs(this).getInt("reviewStep:"+lastId,0))+1);
-                    int[] days={1,3,7,14,30,60,120};StudyAlarms.prefs(this).edit().putLong("reviewAt:"+lastId,now).putLong("reviewDue:"+lastId,now+days[step]*86400000L).putInt("reviewStep:"+lastId,step).apply();
+                    JSONArray source=report.getJSONArray("source");JSONObject track=null;for(int i=0;i<source.length();i++)if(source.getJSONObject(i).getString("id").equals(lastId))track=source.getJSONObject(i);
+                    if(track!=null){
+                        JSONObject old=memoryFor(track);double interval=StudyMemory.nextInterval(old.getLong("last"),old.getDouble("interval90"),old.optDouble("difficulty",.25),null,now);
+                        JSONObject m=new JSONObject().put("version",1).put("last",now).put("interval90",interval).put("difficulty",old.optDouble("difficulty",.25)).put("reviews",old.optInt("reviews",0)+1).put("ratings",old.optInt("ratings",0)).put("evidence","exposure").put("due",StudyMemory.due(now,interval));
+                        StudyAlarms.prefs(this).edit().putString("memory61:"+lastId,m.toString()).apply();done.put("memory",m);
+                    }
                 }
+                completed.put(done);
             }
             // Mỗi mục chỉ cần một lần kết thúc để lên lịch ôn, dù người dùng chọn lặp nhiều lượt.
             if(completed.length()>200)completed.remove(0);
