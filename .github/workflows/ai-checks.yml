@@ -10,6 +10,9 @@ on:
       - 'update/version.json'
       - '.github/workflows/ai-checks.yml'
   workflow_dispatch:
+concurrency:
+  group: ai-checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -34,16 +37,16 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/df-browser/node_modules
           CHROME_BIN: /usr/bin/google-chrome
         run: |
-          node tests/lesson-text.browser.cjs
-          node tests/library-reading.browser.cjs
-          node tests/flashcard-audio.browser.cjs
-          node tests/dictionary-assist.browser.cjs
-          node tests/video-reading59.browser.cjs
-          node tests/study60.browser.cjs
-          node tests/lesson-memory.browser.cjs
-          node tests/curriculum-app.browser.cjs
-          node tests/goal-stars.browser.cjs
-          node tests/course-guide.browser.cjs
+          timeout 120s node tests/lesson-text.browser.cjs
+          timeout 120s node tests/library-reading.browser.cjs
+          timeout 120s node tests/flashcard-audio.browser.cjs
+          timeout 120s node tests/dictionary-assist.browser.cjs
+          timeout 120s node tests/video-reading59.browser.cjs
+          timeout 120s node tests/study60.browser.cjs
+          timeout 120s node tests/lesson-memory.browser.cjs
+          timeout 120s node tests/curriculum-app.browser.cjs
+          timeout 120s node tests/goal-stars.browser.cjs
+          timeout 120s node tests/course-guide.browser.cjs
       - name: Lưu ảnh kiểm tra giao diện điện thoại
         uses: actions/upload-artifact@v4
         with:

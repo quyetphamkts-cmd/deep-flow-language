@@ -32,3 +32,7 @@ Node: đường suy giảm, mốc ôn trước 90%, phản hồi tốt/yếu/exp
 ## Tỷ lệ từ thuộc / từ đã học
 
 Bảng Từ vựng trong bài học hiển thị `Ước tính đã thuộc X / Y từ đã học · Z%` cho từng khóa và tổng chung. Y là số từ gốc không trùng trong các bài đã học xong trong phạm vi đó. X là tổng trọng số % nhớ tự báo cao nhất của các bài chứa từ, làm tròn xuống để tránh báo 100% khi chưa đủ; từ đã lưu nhưng chưa đạt khoảng ôn 21 ngày có trọng số 0, thẻ đạt từ 21 ngày có trọng số 1. Từ không có đánh giá vẫn tính vào Y và được nêu riêng, không tự coi là thuộc. Z tính từ X/Y; Y=0 không hiển thị phần trăm giả. Đây là ước tính dựa trên tự báo/SRS, không xác minh riêng từng từ. Không cộng trùng từ giữa các khóa trong tổng chung; không tính từ chỉ có ở bài chưa học/đang học.
+
+## Dấu học xong
+
+Thư mục thật và thư mục cha ảo có tick trên icon khi tất cả bài trong toàn bộ cây con đã được đánh dấu học xong. Không suy ra từ phần danh sách đang lọc/tìm kiếm, không tick thư mục rỗng. Bỏ đánh dấu bất kỳ bài con nào sẽ bỏ tick cha khi render lại. Bài riêng có tick trước tên, không phụ thuộc bật/ẩn thông tin. Không tự đánh dấu thêm bài hoặc thay đổi dữ liệu học.

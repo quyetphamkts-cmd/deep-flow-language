@@ -74,7 +74,7 @@ const path=require('node:path');
   assert.ok(await page.locator('#vLib .sect-ls>span:not(.chev)').first().evaluate(el=>el.getBoundingClientRect().width>100));
   assert.equal(await page.locator('#libAI').isVisible(),false);
   await page.evaluate(async()=>{loadTrack=window.__realLoadTrack51;await putAudio('a',new Blob([wav16(new Float32Array(16000))],{type:'audio/wav'}));await putAudio('b',new Blob([wav16(new Float32Array(16000))],{type:'audio/wav'}));tracks[2].st={done:true,memAt:1};renderLib();await startLessonReview('b');});
-  assert.equal(await page.evaluate(()=>S.mainLessonId),'a');assert.equal(await page.evaluate(()=>window._lessonReviewActive),'b');await page.evaluate(()=>finishLessonReview(tracks.find(t=>t.id==='b')));assert.equal(await page.evaluate(()=>S.mainLessonId),'a');
+  assert.equal(await page.evaluate(()=>S.mainLessonId),'a');assert.equal(await page.evaluate(()=>window._lessonReviewActive),'b');await page.evaluate(()=>{window.__reviewEnd61=finishLessonReview(tracks.find(t=>t.id==='b'));});await page.locator('#sheetBox [data-a="90"]').click();await page.evaluate(()=>window.__reviewEnd61);assert.equal(await page.evaluate(()=>tracks.find(t=>t.id==='b').st.lessonReview.memory.ratings),1);assert.equal(await page.evaluate(()=>S.mainLessonId),'a');
 
   assert.equal(await page.locator('#libFocus51').isVisible(),false);assert.equal(await page.locator('#libStreak51').isVisible(),false);assert.ok((await page.locator('#libOverview51').textContent()).includes('Lịch ôn tập'));
   await page.evaluate(()=>{showView('vSet');});await page.waitForTimeout(30);assert.equal(await page.locator('#mini').isVisible(),false);
