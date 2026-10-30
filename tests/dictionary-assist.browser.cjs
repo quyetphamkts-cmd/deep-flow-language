@@ -10,5 +10,12 @@ try{const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[
  // Mọi dữ liệu AI đều được escape, không chạy HTML.
  await page.evaluate(async()=>{document.querySelector('#dictQ').value='unsafe';aiJSON=async()=>({corrected:'<img src=x onerror="window.bad58=1">',explanation:'<script>bad</script>',examples:[{s:'<b>literal</b>',t:'<img src=x>'}]});await dictAssist58('unsafe',true);});assert.equal(await page.locator('#dictSeen img,#dictSeen script').count(),0);assert.equal(await page.evaluate(()=>window.bad58),undefined);
  await page.evaluate(async()=>{document.querySelector('#dictQ').value='no-ai';S.gemKey='';S.oaKey='';S.clKey='';await dictAssist58('no-ai',false);});assert.ok((await page.locator('#dictSeen').textContent()).includes('Cần AI được cấu hình'));
+ const result67=await page.evaluate(async()=>{
+  S.vocImg=false;vocab=[];autoSaveLookup53({word:'Sau',lang:'en',ctx:{text:'Sau đó tôi về nhà.'},info:{lemma:'Sau',mean:'after'}});const blocked=vocab.length===0;
+  autoSaveLookup53({word:'after',lang:'en',ctx:{text:'After school.'},info:{lemma:'after',mean:'sau'}});const v=vocab[0];v.stamp67=123;const schedule=JSON.stringify(v.srs),old=v.id;
+  const text=askText,confirm=askConfirm;let answers=['afterward','sau đó'];askText=async()=>answers.shift();askConfirm=async()=>true;vdCur=v;await editVocabulary67(v);
+  const edited=v.word==='afterward'&&v.mean==='sau đó'&&JSON.stringify(v.srs)===schedule&&!!S.delVoc[old];await deleteVocabulary67(v);askText=text;askConfirm=confirm;
+  return {blocked,edited,deleted:!vocab.length&&!!S.delVoc[v.id],englishAllowed:!vietnameseLookup67('may','en',{en:'It may rain.'}),translationBlocked:vietnameseLookup67('Sau','en',{sourceLang:'vi'})};
+ });assert.deepEqual(result67,{blocked:true,edited:true,deleted:true,englishAllowed:true,translationBlocked:true});
  assert.deepEqual(errors,[]);console.log('OK: dictionary suggestions on demand, correction separate from original, cache/coalescing, stale result guard, safe HTML, missing AI.');
 }finally{await browser.close();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});
