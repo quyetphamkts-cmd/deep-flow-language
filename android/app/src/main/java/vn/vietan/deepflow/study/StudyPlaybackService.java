@@ -87,7 +87,7 @@ public class StudyPlaybackService extends MediaSessionService {
             JSONArray queue=context.getJSONArray(review?"review":mode.endsWith("learn")?"learn":"main");
             String reviewKey="";
             String today=new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.ROOT).format(new java.util.Date());
-            String choice=context.optString("webReviewChoice","");
+            String choice=today.equals(context.optString("webReviewChoiceDay"))?context.optString("webReviewChoice",""):"";
             if(choice.isEmpty()&&today.equals(StudyAlarms.prefs(this).getString("reviewChoiceDay","")))choice=StudyAlarms.prefs(this).getString("reviewChoiceKey","");
             if(review){
                 long first=Long.MAX_VALUE;
@@ -122,7 +122,10 @@ public class StudyPlaybackService extends MediaSessionService {
             if(review)StudyAlarms.prefs(this).edit().putString("reviewChoiceDay",day).putString("reviewChoiceKey",reviewKey).apply();
             player.setPlaybackSpeed((float)Math.max(.5,Math.min(2,row.optDouble("rate",1))));
             player.setMediaItems(items);if(limitSeconds>0&&repeat)player.setRepeatMode(Player.REPEAT_MODE_ALL);
-            long pos=review?0:Math.max(0,context.optLong("position",0));player.seekTo(0,pos);
+            long pos=review?0:Math.max(0,context.optLong("position",0));
+            String firstId=items.get(0).mediaId;
+            if(!review&&StudyAlarms.prefs(this).getLong("positionAt:"+firstId,0)>context.optLong("updatedAt",0))pos=StudyAlarms.prefs(this).getLong("position:"+firstId,0);
+            player.seekTo(0,pos);
             player.prepare();player.play();handler.postDelayed(tick,1000);
             StudyAlarms.log(this,"Đã bắt đầu "+(review?"ôn bài":"học tiếp")+" theo giờ hẹn.");
         }catch(Exception e){stopStudy(e instanceof IllegalArgumentException?e.getMessage():"Không đọc được lịch học; mở app để lưu lại.");}
@@ -132,6 +135,7 @@ public class StudyPlaybackService extends MediaSessionService {
         try{
             boolean first=true;for(int i=0;i<completed.length();i++)if(lastId.equals(completed.getJSONObject(i).optString("id")))first=false;
             long now=System.currentTimeMillis();
+            if(!report.optBoolean("review"))StudyAlarms.prefs(this).edit().putLong("position:"+lastId,0).putLong("positionAt:"+lastId,now).apply();
             if(first){completed.put(new JSONObject().put("id",lastId).put("at",now));
                 if(report.optBoolean("review")){
                     int step=0;JSONArray source=report.getJSONArray("source");for(int i=0;i<source.length();i++)if(source.getJSONObject(i).getString("id").equals(lastId))step=source.getJSONObject(i).optInt("step",0);
@@ -149,7 +153,11 @@ public class StudyPlaybackService extends MediaSessionService {
     private void persist(){
         if(report==null||player==null)return;
         try{report.put("updatedAt",System.currentTimeMillis()).put("active",player.isPlaying());
-            if(player.getCurrentMediaItem()!=null&&!lastId.isEmpty())report.put("position",Math.max(0,player.getCurrentPosition())).put("currentId",lastId);
+            if(player.getCurrentMediaItem()!=null&&!lastId.isEmpty()){
+                long pos=player.getPlaybackState()==Player.STATE_ENDED?0:Math.max(0,player.getCurrentPosition());
+                report.put("position",pos).put("currentId",lastId);
+                if(!report.optBoolean("review"))StudyAlarms.prefs(this).edit().putLong("position:"+lastId,pos).putLong("positionAt:"+lastId,System.currentTimeMillis()).apply();
+            }
             JSONArray old=new JSONArray(StudyAlarms.prefs(this).getString("reports","[]")),out=new JSONArray();
             for(int i=0;i<old.length();i++)if(!old.getJSONObject(i).optString("id").equals(report.optString("id")))out.put(old.getJSONObject(i));
             out.put(report);while(out.length()>100)out.remove(0);

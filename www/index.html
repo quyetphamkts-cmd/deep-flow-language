@@ -8728,7 +8728,7 @@ function studyContext60(){
  const qs=studyTracks60(),conv=a=>a.map(t=>{const x=lessonReviewItems([t])[0];return {id:t.id,file:STUDY60.files.get(t.id),title:t.name,group:reviewGroupKey53(t),due:x?.due||0,step:x?.step||0,completedAt:x?.completedAt||0};}).filter(t=>t.file);
  // Không phát nhầm bài cũ nếu bài chính đã đổi sang âm thanh chưa chuẩn bị.
  const main=studyMain60(),mainReady=main&&STUDY60.files.has(main.id);
- return {main:mainReady?conv(qs.main):[],learn:conv(qs.learn),review:conv(qs.review),webReviewDay:S.lessonReviewDay53?.completed?S.lessonReviewDay53.day:'',webReviewChoice:S.lessonReviewDay53?.day===today()?S.lessonReviewDay53.key:'',reviewKey:qs.g?.key||'',reviewDue:qs.g?.due||0,position:Math.round((main?.id===cur?.id?audio.currentTime:S.pos?.[main?.id]||0)*1000)};
+ return {main:mainReady?conv(qs.main):[],learn:conv(qs.learn),review:conv(qs.review),webReviewDay:S.lessonReviewDay53?.completed?S.lessonReviewDay53.day:'',webReviewChoiceDay:S.lessonReviewDay53?.day||'',webReviewChoice:S.lessonReviewDay53?.day===today()?S.lessonReviewDay53.key:'',updatedAt:Date.now(),reviewKey:qs.g?.key||'',reviewDue:qs.g?.due||0,position:Math.round((main?.id===cur?.id?audio.currentTime:S.pos?.[main?.id]||0)*1000)};
 }
 function renderStudy60(){
  const box=$('#studyRows60');if(!box)return;
@@ -8776,7 +8776,7 @@ async function studyPrepare60(){
  finally{STUDY60.busy=false;renderStudy60();}
 }
 async function studyRefresh60(){
- if(!window.dfStudy60||STUDY60.busy||!studyRows60().length||!STUDY60.status?.supported)return;
+ if(!window.dfStudy60||STUDY60.busy||!studyRows60().length||!STUDY60.status?.supported||window._studyActive60)return;
  try{await dfStudy60.context({context:studyContext60()});}catch(e){dlog('warn','Lịch học: cần chuẩn bị lại âm thanh khi đổi bài.');}
 }
 function studyRefreshSoon60(){clearTimeout(STUDY60.refresh);STUDY60.refresh=setTimeout(studyRefresh60,1000);}
@@ -8802,7 +8802,7 @@ async function studyReconcile60(status){
    }
    if(r.reviewDone&&(r.reviewDay||r.day)===today())S.lessonReviewDay53={day:today(),key:r.reviewKey,completed:true};
    if(!r.review&&r.currentId&&(!status.active||r.active)&&tracks.some(t=>t.id===r.currentId)){
-    S.pos=S.pos||{};const key=r.id+':'+r.currentId+':'+r.position;if(S.studyPositionKey60!==key&&(!S.studyPositionAt60||S.studyPositionAt60<(r.updatedAt||r.at))){S.pos[r.currentId]=(r.position||0)/1000;S.studyPositionAt60=r.updatedAt||r.at;S.studyPositionKey60=key;}
+    S.pos=S.pos||{};const key=r.id+':'+r.currentId+':'+r.position;if(S.studyPositionKey60!==key&&(!S.studyPositionAt60||S.studyPositionAt60<(r.updatedAt||r.at))){S.pos[r.currentId]=(r.position||0)/1000;S.studyPositionAt60=r.updatedAt||r.at;S.studyPositionKey60=key;if(!status.active&&cur?.id===r.currentId&&audio.paused&&audio.readyState){try{audio.currentTime=Math.min(S.pos[r.currentId],isFinite(audio.duration)?audio.duration:S.pos[r.currentId]);}catch(e){}}}
    }
   }
   const live=new Set((status.reports||[]).map(r=>r.id));for(const id of Object.keys(S.studyApplied60))if(!live.has(id))delete S.studyApplied60[id];for(const id of Object.keys(S.studyCompleted60))if(![...live].some(x=>id.startsWith(x+':')))delete S.studyCompleted60[id];
