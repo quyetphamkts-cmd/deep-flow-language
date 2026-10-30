@@ -29,3 +29,5 @@ Gắn evidence=quiz-sample vào mô hình khi dùng điểm bộ có ít nhất 
 - Kiểm thử offline, app đóng, API thiếu key/429/quota và cache; không gọi API trả phí trong CI.
 
 Sau Nộp bài, hiển thị số đúng/tổng và %. Người dùng phải bấm Sử dụng điểm mới ghi vào mức nhớ/lịch. Đề AI có thể sai; câu mơ hồ có thể bỏ qua, còn dưới 5 câu hợp lệ không chấm. Nếu câu trong bộ đã làm trong 24 giờ thì chỉ ghi luyện tập (evidence=quiz-practice), không tăng mức nhớ theo điểm làm lại. Đổi văn bản vô hiệu đề cũ và chặn áp điểm cũ. Hủy không đổi trạng thái bài hay điểm; hủy sau khi gửi AI có thể vẫn tốn lượt. Bộ đề cache tối đa 20 bài, có kiểm soát schema/dẫn chứng nhưng chưa kiểm định độ chính xác sư phạm. Điểm đúng/tổng là điểm trên mẫu câu hỏi, không đồng nhất với % nhớ toàn bộ bài.
+
+Kết quả tạo đề đi qua aiJSON với cache:false: ngân hàng đã qua kiểm tra được cache riêng; phản hồi sai schema không bị AI Engine cache 30 ngày, nên lần bấm tạo lại có thể thử mới sau khi người dùng xác nhận. Không tự lặp tạo đề khi thất bại.
