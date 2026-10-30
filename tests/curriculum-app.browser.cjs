@@ -9,6 +9,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
  await page.addInitScript(version=>{if(window!==window.top)return;localStorage.setItem('engamp',JSON.stringify({autoSub:false,autoTr:false,aiPause:true,vocImg:false,seenVer:version}));localStorage.setItem('dfl_vocab','[]');},require('../update/version.json').ver);
  await page.goto(`http://127.0.0.1:${server.address().port}`);await page.waitForFunction(()=>typeof window.closeModals==='function');await page.evaluate(()=>closeModals());
  const saved=await page.evaluate(()=>localStorage.getItem('dfl_vocab'));
+ assert.equal(await page.locator('#hCurriculum').isVisible(),false);await page.evaluate(()=>document.querySelector('#hCurriculum').hidden=false);
  await page.locator('#hCurriculum').click();await page.locator('#mCurriculum.on').waitFor();
  const frame=page.frameLocator('#curriculumFrame');await frame.locator('#lessonTitle').waitFor();assert.equal(await frame.locator('[data-lesson]').count(),13);
  await page.screenshot({path:path.join(process.env.RUNNER_TEMP||'/tmp','curriculum54-course.png')});

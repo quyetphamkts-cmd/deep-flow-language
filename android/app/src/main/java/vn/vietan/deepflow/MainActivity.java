@@ -41,6 +41,7 @@ public class MainActivity extends BridgeActivity {
         registerPlugin(GemmaPlugin.class);
         registerPlugin(ApkUpdatePlugin.class);
         registerPlugin(VideoPlugin.class);
+        registerPlugin(StudySchedulePlugin.class);
         // Dọn phiên cũ TRƯỚC khi tạo WebView / nối MediaSession mới.
         stopOrphan();
         super.onCreate(savedInstanceState);
