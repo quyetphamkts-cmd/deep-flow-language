@@ -1,6 +1,6 @@
 # Lịch ôn từng bài — beta.61
 
-Mô hình quên lãng thực nghiệm đơn giản, không phải FSRS/SM-2 và không đảm bảo biết chính xác lúc người dùng quên. Không gọi AI/API. Tính trên máy.
+Mô hình quên lãng thực nghiệm đơn giản, không phải FSRS/SM-2 và không đảm bảo biết chính xác lúc người dùng quên. Bản thân mô hình nhớ tính trên máy, không gọi AI/API; tính năng tạo đề trắc nghiệm riêng chỉ gọi AI khi người dùng đồng ý.
 
 ## Dữ liệu và công thức
 
@@ -36,3 +36,5 @@ Bảng Từ vựng trong bài học hiển thị `Ước tính đã thuộc X / 
 ## Dấu học xong
 
 Thư mục thật và thư mục cha ảo có tick trên icon khi tất cả bài trong toàn bộ cây con đã được đánh dấu học xong. Không suy ra từ phần danh sách đang lọc/tìm kiếm, không tick thư mục rỗng. Bỏ đánh dấu bất kỳ bài con nào sẽ bỏ tick cha khi render lại. Bài riêng có tick trước tên, không phụ thuộc bật/ẩn thông tin. Không tự đánh dấu thêm bài hoặc thay đổi dữ liệu học.
+
+Trạng thái ở tên bài/thư mục chỉ có Đã học hoặc Chưa học. Menu chỉ có thao tác đối ứng: đã học → Đánh dấu chưa học; chưa học → Đánh dấu học xong. Áp dụng bài, thư mục thật/ảo (gồm cây con), khóa học và nhãn thao tác chọn nhiều. Bỏ đánh dấu chỉ đổi done/xóa lịch ôn của bài; giữ giây nghe, vị trí và thống kê cũ, không gọi resetLearn. Cơ chế Đang học nội bộ phục vụ hàng phát vẫn giữ nguyên.

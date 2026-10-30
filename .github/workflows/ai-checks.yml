@@ -44,6 +44,7 @@ jobs:
           timeout 120s node tests/video-reading59.browser.cjs
           timeout 120s node tests/study60.browser.cjs
           timeout 120s node tests/lesson-memory.browser.cjs
+          timeout 120s node tests/lesson-quiz.browser.cjs
           timeout 120s node tests/curriculum-app.browser.cjs
           timeout 120s node tests/goal-stars.browser.cjs
           timeout 120s node tests/course-guide.browser.cjs

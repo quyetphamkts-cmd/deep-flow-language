@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "status": "research_prototype_not_enabled_in_app",
+  "sourceScriptId": "C01-main_story",
+  "sourceSha256": "a83bf9e60c14ba7ee29e7cfeb54dc2f23814b757bc0276bc1c096a2364a7846d",
+  "questions": [
+    {
+      "id": "C01-Q01",
+      "type": "detail",
+      "prompt": "What is David’s job?",
+      "options": [
+        "Architect",
+        "Accountant",
+        "Doctor",
+        "Shopkeeper"
+      ],
+      "answerIndex": 0,
+      "sourceSegmentIds": [
+        "s01"
+      ],
+      "explanation": "David designs buildings."
+    },
+    {
+      "id": "C01-Q02",
+      "type": "detail",
+      "prompt": "Which child is in grade four?",
+      "options": [
+        "Lily",
+        "Ben",
+        "Sophie",
+        "Anna"
+      ],
+      "answerIndex": 1,
+      "sourceSegmentIds": [
+        "s01"
+      ],
+      "explanation": "Ben is the son in grade four."
+    },
+    {
+      "id": "C01-Q03",
+      "type": "understanding",
+      "prompt": "Why does Lily look at the drawing from close to the table?",
+      "options": [
+        "To hide the drawing",
+        "To count the bowls",
+        "To see it from her own height",
+        "To help the wind lift the cover"
+      ],
+      "answerIndex": 2,
+      "sourceSegmentIds": [
+        "s02"
+      ],
+      "explanation": "She says the window is too high for her."
+    },
+    {
+      "id": "C01-Q04",
+      "type": "cause",
+      "prompt": "What causes the drawing to fall into the tomatoes?",
+      "options": [
+        "A loose screw",
+        "A bowl falls",
+        "Mary tears the paper",
+        "Wind lifts the cover and David reaches up to help"
+      ],
+      "answerIndex": 3,
+      "sourceSegmentIds": [
+        "s04"
+      ],
+      "explanation": "While David helps hold the cover, his folder falls open and the drawing flies out."
+    },
+    {
+      "id": "C01-Q05",
+      "type": "understanding",
+      "prompt": "Why does David laugh instead of staying angry?",
+      "options": [
+        "The paper is not damaged and he joins Lily’s laughter",
+        "He no longer needs the drawing",
+        "The roof has disappeared",
+        "He has finished building the house"
+      ],
+      "answerIndex": 0,
+      "sourceSegmentIds": [
+        "s04"
+      ],
+      "explanation": "He notices the tomato has not hurt the paper, takes a breath, and laughs too."
+    }
+  ]
+}

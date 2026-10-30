@@ -19,7 +19,9 @@
         "Biểu đồ khả năng nhớ và mốc ôn 92% dự đoán; tự đánh giá sau ôn để điều chỉnh khoảng cách, chỉ nghe không được coi là đã nhớ",
         "Giữ lịch cũ nếu sớm hơn và đồng bộ mô hình với lịch phát Android; giữ dữ liệu và bài học chính",
         "Thống kê từ đã học: tỷ lệ ước tính đã thuộc/tổng số từ đã học, có phần trăm theo từng khóa và tổng chung",
-        "Dấu tick trên biểu tượng thư mục khi toàn bộ bài bên trong học xong; bài riêng có tick luôn thấy, kể cả khi ẩn thông tin"
+        "Dấu tick trên biểu tượng thư mục khi toàn bộ bài bên trong học xong; bài riêng có tick luôn thấy, kể cả khi ẩn thông tin",
+        "Trạng thái tên bài/thư mục chỉ Đã học hoặc Chưa học; menu chỉ hiện thao tác ngược lại, bỏ đánh dấu giữ thời gian nghe",
+        "Hai mục đánh giá: tự đánh giá hoặc trắc nghiệm; ngân hàng AI 24 câu, mỗi lượt chọn 8 câu chưa gặp, tráo câu/đáp án, chấm đúng/tổng và dùng điểm khi xác nhận"
       ]
     },
     {
