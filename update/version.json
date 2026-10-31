@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.72",
+  "ver": "1.0.3-beta.73",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.73",
+      "d": "31/10/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng: bỏ hộp từ phía dưới cho rộng màn hình; từ, phiên âm, nghĩa hiện thành dòng bình luận chạy lên như mẫu video (chạm vào dòng để nghe lại); nút 🔊 Nghe lại và ✓ Thuộc rồi chuyển thành nút tròn bên phải; phật tử kiểu chibi đầu to, áo tràng lam/nâu/xám, sư cô, cụ tóc bạc, em nhỏ, ngồi bồ đoàn đỏ viền vàng"
+      ]
+    },
     {
       "v": "1.0.3-beta.72",
       "d": "31/10/2026",
