@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.69",
-  "notes": "IPA cạnh Đọc trong Từ điển · Thanh trang: Nghe, Thư viện, Từ điển, Cài đặt",
+  "ver": "1.0.3-beta.70",
+  "notes": "Lịch ôn giữ thư mục bài học và các bài nghe bên trong, xử lý dữ liệu cũ bị xếp rời",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.70",
+      "d": "31/10/2026",
+      "items": [
+        "Lịch ôn giữ nhóm thư mục bài học cho dữ liệu cũ đã học xong, không xếp rời từng file âm thanh",
+        "Mở nhóm thư mục để xem các bài nghe bên trong; giữ cấp đánh dấu file/thư mục mới và lịch ôn đã có"
+      ]
+    },
     {
       "v": "1.0.3-beta.69",
       "d": "31/10/2026",
