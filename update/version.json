@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.78",
+  "ver": "1.0.3-beta.79",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.79",
+      "d": "31/10/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng: sấu đá quay đầu hướng ra ngoài; từ được gọi chỉ hiện 1 dòng và giữ nguyên đến khi gọi từ khác; ⚙ thêm tuỳ chọn Tên từ trên đầu: Hiện tất cả / Chỉ người được gọi"
+      ]
+    },
     {
       "v": "1.0.3-beta.78",
       "d": "31/10/2026",
