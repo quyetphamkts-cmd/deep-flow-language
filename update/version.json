@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.67",
-  "notes": "Sửa vuốt flashcard và ngôn ngữ mặt sau · Đã thuộc và ôn theo lịch nhớ · Sửa dịch vụ Android cần APK mới",
+  "ver": "1.0.3-beta.68",
+  "notes": "Hướng dẫn và từ điển ở cấp khóa học · Tạo văn bản bằng AI cho bài thiếu chữ",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.68",
+      "d": "31/10/2026",
+      "items": [
+        "Menu Hướng dẫn học và Từ điển khóa học chỉ ở cấp khóa học trong Thư viện, bỏ khỏi bài và thư mục con",
+        "Đổi Ghép văn bản vào bài (AI) thành Tạo văn bản bằng AI: tạo từ âm thanh cho file chưa có văn bản hoặc phụ đề, giữ nguyên bài đã có chữ"
+      ]
+    },
     {
       "v": "1.0.3-beta.67",
       "d": "31/10/2026",
