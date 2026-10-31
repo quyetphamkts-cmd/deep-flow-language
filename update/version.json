@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.70",
-  "notes": "Lịch ôn giữ thư mục bài học và các bài nghe bên trong, xử lý dữ liệu cũ bị xếp rời",
+  "ver": "1.0.3-beta.71",
+  "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.71",
+      "d": "31/10/2026",
+      "items": [
+        "Lịch ôn thêm dòng đầy đủ đường dẫn khóa học / thư mục bài học dưới tên mục, tự xuống dòng để đọc hết tên"
+      ]
+    },
     {
       "v": "1.0.3-beta.70",
       "d": "31/10/2026",
