@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.82",
+  "ver": "1.0.3-beta.83",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.83",
+      "d": "01/11/2026",
+      "items": [
+        "Sửa lỗi Gemini bị chặn cả ngày oan: lỗi giới hạn mỗi phút của gói miễn phí (câu báo luôn kèm chữ billing) bị đọc nhầm thành hết số dư → app ngừng dùng Gemini đến chiều hôm sau; nay chỉ chờ đúng số giây Google yêu cầu, và gỡ các lần chặn sai đang lưu",
+        "Màn hình nghe: khi mọi AI đều hết lượt thì báo rõ từng AI (ElevenLabs hết credits, Gemini chờ đến mấy giờ…); nút Thử lại gỡ chặn Gemini / ChatGPT và chạy lại ngay"
+      ]
+    },
     {
       "v": "1.0.3-beta.82",
       "d": "31/10/2026",
