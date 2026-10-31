@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.71",
+  "ver": "1.0.3-beta.72",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.72",
+      "d": "31/10/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng (Từ điển → Trò chơi từ vựng): chính điện 3D có ánh vàng, phát sáng, đổ bóng, khói hương, hoa sen bay; mỗi Phật tử mang 1 từ đang học, được gọi tên thì lên lễ 3 lạy, mỗi lạy đọc từ 1 lần; Bảng Công Đức bên trái; thẻ dưới màn hình hiện từ, phiên âm, nghĩa; nút ✓ Thuộc rồi → đánh dấu đã thuộc trong lịch ôn, người đó rời lễ đường và người mới vào thay cho đủ số người cài đặt (⚙ 16–40 người, nhịp gọi, đồ hoạ nhẹ cho máy yếu)"
+      ]
+    },
     {
       "v": "1.0.3-beta.71",
       "d": "31/10/2026",
