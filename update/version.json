@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.79",
+  "ver": "1.0.3-beta.80",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.80",
+      "d": "31/10/2026",
+      "items": [
+        "Sửa lỗi AI không nghe / không tạo phụ đề cho bài đang nghe mà không báo lý do: trước đây bấm Dừng AI thì dòng trạng thái biến mất, không còn chỗ bấm Tiếp tục → AI dừng mãi",
+        "Màn hình nghe luôn hiện lý do AI chưa xử lý bài đang nghe kèm nút sửa ngay: ▶ Tiếp tục AI · Bật tự tạo phụ đề · Cho dùng 4G (khi bật chỉ Wi-Fi) · Thử lại (AI đã lỗi 2 lần, hiện cả lỗi) · chưa có API key · mất mạng · AI hết lượt"
+      ]
+    },
     {
       "v": "1.0.3-beta.79",
       "d": "31/10/2026",
