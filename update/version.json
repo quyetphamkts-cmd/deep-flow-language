@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.81",
+  "ver": "1.0.3-beta.82",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.82",
+      "d": "31/10/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng đỡ nóng máy: mặc định 30 hình/giây (⚙ Khung hình có thể chọn 60); người ngồi yên không tính lại khung xương và không đổ bóng thật (chỉ người đang đi / lạy đổ bóng); bản đồ bóng chỉ vẽ lại khi có người cử động; giảm độ phân giải dựng hình; nhãn tên chỉ cập nhật khi thay đổi"
+      ]
+    },
     {
       "v": "1.0.3-beta.81",
       "d": "31/10/2026",
