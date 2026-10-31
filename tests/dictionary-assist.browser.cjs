@@ -17,5 +17,6 @@ try{const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[
   const edited=v.word==='afterward'&&v.mean==='sau đó'&&JSON.stringify(v.srs)===schedule&&!!S.delVoc[old];await deleteVocabulary67(v);askText=text;askConfirm=confirm;
   return {blocked,edited,deleted:!vocab.length&&!!S.delVoc[v.id],englishAllowed:!vietnameseLookup67('may','en',{en:'It may rain.'}),translationBlocked:vietnameseLookup67('Sau','en',{sourceLang:'vi'})};
  });assert.deepEqual(result67,{blocked:true,edited:true,deleted:true,englishAllowed:true,translationBlocked:true});
+ assert.deepEqual(await page.locator('#mainNav button').evaluateAll(es=>es.map(e=>e.dataset.v)),['vPlay','vLib','vVoc','vSet']);await page.evaluate(()=>{closeModals();showView('vVoc');});assert.equal(await page.locator('#dictRead69').isVisible(),true);await page.locator('#dictIPA69').click();assert.equal(await page.locator('#vPron').isVisible(),true);await page.locator('#ipaBack69').click();assert.equal(await page.locator('#vVoc').isVisible(),true);
  assert.deepEqual(errors,[]);console.log('OK: dictionary suggestions on demand, correction separate from original, cache/coalescing, stale result guard, safe HTML, missing AI.');
 }finally{await browser.close();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});

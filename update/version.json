@@ -1,7 +1,7 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.68",
-  "notes": "Hướng dẫn và từ điển ở cấp khóa học · Tạo văn bản bằng AI cho bài thiếu chữ",
+  "ver": "1.0.3-beta.69",
+  "notes": "IPA cạnh Đọc trong Từ điển · Thanh trang: Nghe, Thư viện, Từ điển, Cài đặt",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.69",
+      "d": "31/10/2026",
+      "items": [
+        "Chuyển Phát âm vào nút IPA cạnh Đọc trong Từ điển; có nút quay lại Từ điển",
+        "Thanh trang chỉ còn Nghe, Thư viện, Từ điển, Cài đặt theo đúng thứ tự"
+      ]
+    },
     {
       "v": "1.0.3-beta.68",
       "d": "31/10/2026",
