@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.83",
+  "ver": "1.0.3-beta.84",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.84",
+      "d": "01/11/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng có thêm kiểu Tranh vẽ 2D (mặc định): chính điện và phật tử vẽ tay rất đẹp, nhẹ máy, không nóng; được gọi tên thì đứng dậy đi lên lễ trước bàn thờ, lạy 3 lạy, mỗi lạy đọc từ 1 lần, xong lùi về chỗ; ✓ Thuộc rồi → lùi ra cửa, người mới đi vào ngồi thay",
+        "⚙ Kiểu chính điện: chọn Tranh vẽ 2D hoặc 3D, đổi là dựng lại ngay; tranh lấy từ dự án mã nguồn mở Chánh Điện Tịnh Tâm của Kent Juno (MIT), tải 1 lần ~0,5 MB"
+      ]
+    },
     {
       "v": "1.0.3-beta.83",
       "d": "01/11/2026",
