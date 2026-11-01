@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.97",
+  "ver": "1.0.3-beta.98",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.98",
+      "d": "02/11/2026",
+      "items": [
+        "📻 Bản tin nghe: sửa lỗi không tải được BBC 6 Minute English / BBC Global News (link BBC chuyển sang http bị Android chặn → xin bản https); kênh lâu chưa ra tập mới (vd. VOA) nay báo rõ thay vì im lặng; lỗi tải ghi rõ lý do"
+      ]
+    },
     {
       "v": "1.0.3-beta.97",
       "d": "02/11/2026",
