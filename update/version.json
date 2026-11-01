@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.2",
+  "ver": "1.0.4-beta.3",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.3",
+      "d": "02/11/2026",
+      "items": [
+        "📻 Bản tin: phân 2 nhóm ngữ điệu 🇬🇧 Anh-Anh và 🇺🇸 Anh-Mỹ — trong ⚙ Kênh chia 2 mục, trong Thư viện bản tin các khoá học (kênh) có cờ đầu tên và xếp nhóm Anh-Anh trước, Anh-Mỹ sau"
+      ]
+    },
     {
       "v": "1.0.4-beta.2",
       "d": "02/11/2026",
