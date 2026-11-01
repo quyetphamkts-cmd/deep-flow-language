@@ -1,16 +1,24 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.89",
+  "ver": "1.0.3-beta.90",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 32,
-    "versionName": "1.0.2-beta.64",
+    "versionCode": 33,
+    "versionName": "1.0.2-beta.65",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.90",
+      "d": "01/11/2026",
+      "items": [
+        "AI đối chiếu và khớp phụ đề với âm thanh chạy cả khi app ở nền (tắt màn hình, sang app khác, không phát): thanh thông báo hiện 'Khớp phụ đề các bài đang học', hết việc thì tự tắt — cần cài APK mới",
+        "Thứ tự xử lý: bài đang nghe → các bài còn lại trong thư mục đang học (từ bài đang nghe trở đi) → các thư mục đang học / sắp học tiếp theo; bài đang nghe chưa có phụ đề thì được làm trước hết"
+      ]
+    },
     {
       "v": "1.0.3-beta.89",
       "d": "01/11/2026",

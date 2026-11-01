@@ -36,7 +36,12 @@ public class AiWorkService extends Service {
     }
 
     static void stop(Context c, String doneText) {
-        try { c.stopService(new Intent(c, AiWorkService.class)); } catch (Exception ignored) {}
+        // còn việc nền (khớp phụ đề các bài đang học) thì giữ dịch vụ, chỉ báo xong việc vừa làm
+        if (!MainActivity.bgWork || MainActivity.isForeground) { try { c.stopService(new Intent(c, AiWorkService.class)); } catch (Exception ignored) {} }
+        notifyDone(c, doneText);
+    }
+
+    static void notifyDone(Context c, String doneText) {
         if (doneText != null && !doneText.isEmpty() && !MainActivity.isForeground) {
             try {
                 NotificationManager nm = (NotificationManager) c.getSystemService(NOTIFICATION_SERVICE);
@@ -63,7 +68,7 @@ public class AiWorkService extends Service {
         PendingIntent open = PendingIntent.getActivity(this, 1201, new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
             PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         Notification n = new NotificationCompat.Builder(this, CH_WORK).setSmallIcon(R.drawable.ic_stat_deepflow)
-            .setContentTitle("Đang tạo phụ đề" + (title == null || title.isEmpty() ? "" : " · " + title))
+            .setContentTitle(title == null || title.isEmpty() ? "Đang tạo phụ đề" : title.startsWith("Khớp") ? title : "Đang tạo phụ đề · " + title)
             .setContentText("Bạn có thể dừng nghe, tắt màn hình — xong sẽ báo").setOngoing(true).setProgress(0, 0, true)
             .setContentIntent(open).build();
         try {

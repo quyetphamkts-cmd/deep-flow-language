@@ -24,6 +24,8 @@ public class MainActivity extends BridgeActivity {
     public static volatile boolean bgPlay = true;
     /** AI đang tạo phụ đề (app web báo qua plugin Headset) → giữ WebView chạy tiếp dù đã dừng phát */
     public static volatile boolean working = false;
+    /** Còn việc AI chạy nền (khớp phụ đề các bài đang học) → rời app thì mở dịch vụ nổi để làm tiếp */
+    public static volatile boolean bgWork = false;
     private static volatile MainActivity live = null;
     static void keepAlive() { MainActivity a = live; if (a != null) a.runOnUiThread(a::keepWebViewAlive); }
     /** Phiên cũ vẫn đang phát sau khi người dùng vuốt tắt app */
@@ -207,6 +209,8 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onPause() {
         isForeground = false;
+        // lúc này app vẫn đang hiện nên Android cho mở dịch vụ nổi; mở rồi thì JavaScript được chạy tiếp ở nền
+        if ((bgWork || working) && !AiWorkService.running) AiWorkService.start(this, working ? "" : "Khớp phụ đề các bài đang học");
         Bridge old = suspendDisposedBridge();
         try { super.onPause(); } finally { bridge = old; }
         keepWebViewAlive();
@@ -231,13 +235,13 @@ public class MainActivity extends BridgeActivity {
         if (bridgeDisposed || rendererGone || bridge == null || Build.VERSION.SDK_INT < 26) return;
         runOnUiThread(() -> {
             if (bridgeDisposed || rendererGone || bridge == null) return;
-            try { bridge.getWebView().setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, !(playing || working)); } catch (Exception ignored) {}
+            try { bridge.getWebView().setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, !(playing || working || bgWork)); } catch (Exception ignored) {}
         });
     }
 
     /** Giữ JavaScript (hẹn giờ, lặp câu, chuyển bài) tiếp tục chạy khi app ở dưới nền */
     private void keepWebViewAlive() {
-        if (rendererGone || bridgeDisposed || bridge == null || !((playing && bgPlay) || working)) return;
+        if (rendererGone || bridgeDisposed || bridge == null || !((playing && bgPlay) || working || bgWork)) return;
         try { getBridge().getWebView().onResume(); getBridge().getWebView().resumeTimers(); } catch (Exception ignored) {}
     }
 

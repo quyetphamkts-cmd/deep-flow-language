@@ -134,6 +134,16 @@ public class HeadsetPlugin extends Plugin {
         call.resolve();
     }
 
+    /** App web báo còn / hết việc AI chạy nền (khớp phụ đề các bài trong thư mục đang học) */
+    @PluginMethod
+    public void setBgWork(PluginCall call) {
+        boolean on = call.getBoolean("pending", false);
+        MainActivity.bgWork = on;
+        if (!on && !MainActivity.working && AiWorkService.running) { try { getContext().stopService(new android.content.Intent(getContext(), AiWorkService.class)); } catch (Exception ignored) {} }
+        if (on && !MainActivity.isForeground) MainActivity.keepAlive();
+        call.resolve();
+    }
+
     @Override
     protected void handleOnDestroy() {
         if (inst == this) inst = null;
