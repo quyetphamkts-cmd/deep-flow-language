@@ -4608,7 +4608,19 @@ const gemVtx=(k=S.gemKey)=>/^AQ\./.test(k||'')&&S.gemVtx!==false;
 const GEM_VMAP={'gemini-flash-latest':'gemini-2.5-flash','gemini-flash-lite-latest':'gemini-2.5-flash-lite','gemini-pro-latest':'gemini-2.5-pro'};
 function gemUrl(m,k=S.gemKey){return gemVtx(k)?`https://aiplatform.googleapis.com/v1/publishers/google/models/${encodeURIComponent(GEM_VMAP[m]||m)}:generateContent?key=${encodeURIComponent(k)}`:`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(m)}:generateContent?key=${encodeURIComponent(k)}`;}
 function gemBody(b,k=S.gemKey){if(!gemVtx(k)||!b||!Array.isArray(b.contents))return b;return {...b,contents:b.contents.map(c=>c&&!c.role?{role:'user',...c}:c)};}
-const gemModels=()=>{const seen=new Set();return [gemMain(),...GEM_LITE].filter(m=>{const id=GEM_VMAP[m]||m;if(seen.has(id))return false;seen.add(id);return true;});};
+// Mỗi mô hình Gemini có hạn mức miễn phí theo ngày RIÊNG → mô hình chính hết lượt thì thử các mô hình flash / flash-lite khác mà key dùng được
+// (danh sách lấy thẳng từ Google, nhớ 1 ngày) thay vì báo hết lượt ngay.
+const gemModels=()=>{const seen=new Set(),vtx=gemVtx();const found=vtx?[]:((S.gemFound&&S.gemFound.list)||[]);
+  return [gemMain(),...(vtx?[]:['gemini-flash-lite-latest']),...found,...GEM_LITE].filter(m=>{const id=vtx?(GEM_VMAP[m]||m):m;if(seen.has(id))return false;seen.add(id);return true;});};
+let gemDiscBusy=false;
+async function gemDiscover(force){if(gemDiscBusy||!S.gemKey||gemVtx()||!navigator.onLine)return;const f=S.gemFound;if(!force&&f&&Date.now()-f.at<864e5)return;gemDiscBusy=true;
+  try{const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=300&key='+encodeURIComponent(S.gemKey));if(!r.ok)return;const j=await r.json();
+    const ver=n=>{const m=n.match(/gemini-(\d+(?:\.\d+)?)/);return m?+m[1]:0;};
+    const list=(j.models||[]).filter(x=>(x.supportedGenerationMethods||[]).includes('generateContent')).map(x=>String(x.name||'').replace(/^models\//,''))
+      .filter(n=>/^gemini-[\d.]+-flash(-lite)?(-\d{3}|-latest)?$/.test(n)&&!/preview|exp|image|tts|live|audio|think/.test(n))
+      .sort((a,b)=>(/lite/.test(a)-/lite/.test(b))||ver(b)-ver(a)).slice(0,8);
+    S.gemFound={at:Date.now(),list};save();dlog('ev','🔎 Gemini: key dùng được '+list.length+' mô hình dự phòng ('+list.join(', ')+')');}catch(e){}finally{gemDiscBusy=false;}}
+setTimeout(()=>gemDiscover(),15000);
 const gemAvail=lite=>{const l=gemModels().filter(m=>!(gemBlock[m]>Date.now()));return lite?[...l.filter(m=>/lite/i.test(m)),...l.filter(m=>!/lite/i.test(m))]:l;};
 function gemQuotaErr(){const until=Math.min(...gemModels().map(m=>Math.max(gemBlock[m]||0,Date.now()+gemSlotWait(m))));const why=gemWhy[gemMain()]||'Hàng đợi cục bộ hoặc nhà cung cấp đang tạm giới hạn';const e=new Error('Gemini: '+why+' · kiểm tra lại sau '+new Date(until).toLocaleTimeString('vi-VN'));e.code='GEM_QUOTA';return e;}
 function gemStatus(){if(typeof aiStatus==='function')aiStatus();}
@@ -4631,9 +4643,10 @@ async function gemPost(body,opts={}){
         const explicit=r.headers.has('retry-after')||r.headers.has('retry-after-ms');
         const delay=explicit?aiRetryDelay(r.headers,round):rd?Number(rd[1])*1000:day?6*3600e3:Math.max(8000,aiRetryDelay(r.headers,round));
         gemWhy[m]=aiLimitLabel(kind);
-        gemBlockSet(m,Date.now()+delay+300,day);
+        gemBlockSet(m,Date.now()+delay+300,day);if(day&&m===gemMain())await gemDiscover(true);
         gemStatus();continue;}
-      if(r.status===404&&m!==gemMain()){gemBlock[m]=Date.now()+24*3600e3;continue;}
+      if(r.status===404&&m!==gemMain()){gemBlock[m]=Date.now()+24*3600e3;dlog('warn','Gemini '+m+': Google không còn mô hình này cho key của bạn — bỏ qua');continue;}
+      if(r.status===403&&m!==gemMain()){gemBlock[m]=Date.now()+24*3600e3;dlog('warn','Gemini '+m+': key không được dùng mô hình này (403) — bỏ qua');continue;}
       if(r.status>=500){lastErr=new Error('Gemini ('+m+') đang quá tải ('+r.status+')');busy=true;continue;}
       if(!r.ok){let mm='';try{mm=(await r.json()).error.message;}catch(e){}throw new Error(dlogScrub(gemErr(r.status,mm)));}
       if(m!==gemMain())gemUsing('mô hình nhẹ '+m);
@@ -5210,8 +5223,10 @@ const walQ=[];let walBusy=false,walT=null;
 const walNeed=t=>!!(t&&t.subs&&(t.subs.main||t.subs.en)&&!walDone(t)&&!(t.wAl&&t.wAl.fail&&t.wAl.h===subH(t)));
 function walPush(t,front){if(!walNeed(t))return;const i=walQ.indexOf(t);if(i>=0)walQ.splice(i,1);front?walQ.unshift(t):walQ.push(t);walKick(4000);}
 function walKick(ms){clearTimeout(walT);walT=setTimeout(walRun,ms||15000);}
+// bài đang nghe chưa có phụ đề → để dành lượt AI cho bài đó, việc nền khác chờ
+const curNeedsSub=()=>!!(cur&&!cur.textOnly&&!(cur.subs&&(cur.subs.main||cur.subs.en)));
 async function walRun(){
-  if(walBusy||S.autoSub===false)return;
+  if(walBusy||S.autoSub===false)return;if(curNeedsSub()){walKick(120000);return;}
   if(document.hidden||aBusy||batchOn||trBusy||subChkBusy||!navigator.onLine||(typeof lvBusy!=='undefined'&&lvBusy)){walKick(60000);return;}
   if(!walQ.length){const st=new Map();for(const [a,l] of units())st.set(a,albumInfo(a,l).status);
     tracks.filter(x=>walNeed(x)&&st.get(unitKey(x))==='learn').slice(0,20).forEach(x=>walQ.push(x));if(cur&&walNeed(cur))walQ.unshift(cur);}
@@ -5640,7 +5655,7 @@ function upcoming(){const st=new Map();for(const [a,l] of units())st.set(a,album
   const ord=viewOrder().filter(t=>!(t.st&&t.st.done));const pr=t=>unitKey(t)===curU?0:st.get(unitKey(t))==='learn'?1:st.get(unitKey(t))==='new'?2:9;
   return ord.map((t,i)=>[t,i]).filter(([t])=>pr(t)<9).sort((x,y)=>pr(x[0])-pr(y[0])||x[1]-y[1]).map(x=>x[0]);}
 async function trDayRun(){
-  if(trDayBusy||S.autoTr===false)return;
+  if(trDayBusy||S.autoTr===false)return;if(typeof curNeedsSub==='function'&&curNeedsSub()){trDayKick(180000);return;}
   if(document.hidden||batchOn||aBusy||trBusy||walBusy||subChkBusy||!navigator.onLine){trDayKick(120000);return;}
   // chỉ bài đang học → bài kế tiếp (không dàn trải các bài sắp học); tạm dừng AI thì thôi
   if(S.aiPause){trDayKick(300000);return;}
