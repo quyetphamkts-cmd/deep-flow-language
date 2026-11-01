@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.84",
+  "ver": "1.0.3-beta.85",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.85",
+      "d": "01/11/2026",
+      "items": [
+        "Sửa lỗi bấm Tạo phụ đề bằng AI mà không chạy: khi AI đang làm nền cho bài khác (ví dụ căn từng từ bài dài 15 phút), nút Bắt đầu im lặng không làm gì; nay bấm là app dừng việc nền đó (hoặc bỏ qua nếu bị treo) và tạo phụ đề bài đang nghe ngay",
+        "Bấm ✨ Tạo phụ đề bằng AI là chạy luôn, không cần bấm thêm Bắt đầu; tự thử lại AI dù trước đó báo hết lượt",
+        "Màn hình Nghe báo AI đang bận với bài nào, kèm nút Làm bài này ngay"
+      ]
+    },
     {
       "v": "1.0.3-beta.84",
       "d": "01/11/2026",
