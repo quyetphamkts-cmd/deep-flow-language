@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.1",
+  "ver": "1.0.4-beta.2",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.2",
+      "d": "02/11/2026",
+      "items": [
+        "📻 Bản tin nghe thành chế độ riêng: bấm 📻 để chuyển Thư viện + trang Nghe sang bản tin (bấm lại / ‹ Bài học để quay về) — mỗi bên nhớ bài và vị trí đang nghe dở riêng · mỗi kênh là 1 khoá học, các tập xếp theo ngày phát hành cũ → mới, thao tác như Thư viện bài học · bỏ đánh dấu tick: app tự cập nhật 15 tập mới nhất của mỗi kênh, chạm tập nào thì tải tập đó · file đã tải tự xoá sau 1–30 ngày (giữ tiến độ, phụ đề)"
+      ]
+    },
     {
       "v": "1.0.4-beta.1",
       "d": "02/11/2026",
