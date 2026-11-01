@@ -943,6 +943,10 @@ body:not(.native) .nat-on{display:none!important}body.native .nat-off{display:no
       <li>Quay lại app, bấm <b>Nhập key</b> → <b>📋 Dán</b> → <b>OK</b>.</li>
      </ol><div class="mu">Gói miễn phí có giới hạn số lần gọi mỗi phút/ngày, đủ cho học cá nhân. Không chia sẻ key cho người khác.</div></details>
     </div>
+    <div class="keyrow" data-k="gemKey2">
+     <div class="kh"><b>Gemini API key 2</b><small>Key từ tài khoản Google khác · key 1 hết lượt thì app tự chuyển sang key này (mỗi tài khoản có hạn mức miễn phí riêng)</small></div>
+     <div class="kv"><span class="kval"></span><button class="btn kset">Nhập key</button><button class="btn kdel" hidden>Xoá</button></div>
+    </div>
     <div class="keyrow" data-k="clKey">
      <div class="kh"><b>Claude API key (Anthropic)</b><small>Dịch song ngữ, giải nghĩa từ, ví dụ — tự nhiên nhất. Trả phí theo lượt dùng</small></div>
      <div class="kv"><span class="kval"></span><button class="btn kset">Nhập key</button><button class="btn kdel" hidden>Xoá</button></div>
@@ -1264,7 +1268,7 @@ const APP_VER='1.0.3-beta.87';
 // ----- Nhật ký sử dụng: chỉ lưu trong máy (500 dòng gần nhất), không đồng bộ, không ghi API key / email -----
 const DLOG_KEY='dfl_log';let dlogBuf=null,dlogT=0;
 function dlogLoad(){if(!dlogBuf){try{dlogBuf=JSON.parse(localStorage.getItem(DLOG_KEY)||'[]');}catch(e){dlogBuf=[];}}return dlogBuf;}
-function dlogScrub(x){x=String(x==null?'':x);try{for(const k of ['gemKey','oaKey','clKey','gKey','elKey'])if(S[k])x=x.split(S[k]).join('[key]');}catch(_){}return x.replace(/AQ\.[0-9A-Za-z_.\-]{20,}/g,'[key]').replace(/((?:authorization|x-api-key)\s*[:=]\s*["']?)(?:Bearer\s+)?[^\s"',}]+/gi,'$1[ẩn]').replace(/AIza[0-9A-Za-z_\-]{20,}/g,'[key]').replace(/sk-(ant-)?[A-Za-z0-9_\-]{16,}/g,'[key]').replace(/([?&](key|access_token|token)=)[^&\s"']+/gi,'$1[ẩn]').replace(/ya29\.[0-9A-Za-z_\-.]+/g,'[token]').replace(/[\w.+-]+@[\w-]+\.[\w.]+/g,'[email]').slice(0,600);}
+function dlogScrub(x){x=String(x==null?'':x);try{for(const k of ['gemKey','gemKey2','oaKey','clKey','gKey','elKey'])if(S[k])x=x.split(S[k]).join('[key]');}catch(_){}return x.replace(/AQ\.[0-9A-Za-z_.\-]{20,}/g,'[key]').replace(/((?:authorization|x-api-key)\s*[:=]\s*["']?)(?:Bearer\s+)?[^\s"',}]+/gi,'$1[ẩn]').replace(/AIza[0-9A-Za-z_\-]{20,}/g,'[key]').replace(/sk-(ant-)?[A-Za-z0-9_\-]{16,}/g,'[key]').replace(/([?&](key|access_token|token)=)[^&\s"']+/gi,'$1[ẩn]').replace(/ya29\.[0-9A-Za-z_\-.]+/g,'[token]').replace(/[\w.+-]+@[\w-]+\.[\w.]+/g,'[email]').slice(0,600);}
 function dlog(lv,msg,extra,at){try{msg=String(msg==null?'':msg).replace(/\x1b\[[0-9;]*m|\[[0-9;]*m/g,'');if(/onnxruntime|VerifyEachNodeIsAssignedToAnEp|Unable to determine content-length/.test(msg))return;const b=dlogLoad();const e={t:at||Date.now(),l:lv,m:dlogScrub(msg)};if(extra)e.x=dlogScrub(extra);
   const last=b[b.length-1];if(last&&last.m===e.m&&last.l===e.l&&e.t-last.t<60000){last.n=(last.n||1)+1;last.t=e.t;}else b.push(e);
   if(at)b.sort((x,y)=>x.t-y.t);if(b.length>500)b.splice(0,b.length-500);clearTimeout(dlogT);dlogT=setTimeout(dlogSave,2000);if(lv==='err')setTimeout(()=>window.dlogDot&&dlogDot(),0);if(window._dlogLive)_dlogLive();}catch(_){}}
@@ -4606,12 +4610,13 @@ const gemMain=()=>S.gemModel||'gemini-flash-latest';
 // key AI Studio (AIza…) gọi generativelanguage.googleapis.com; key Vertex AI (AQ.…, chế độ Express) gọi aiplatform.googleapis.com
 const gemVtx=(k=S.gemKey)=>/^AQ\./.test(k||'')&&S.gemVtx!==false;
 const GEM_VMAP={'gemini-flash-latest':'gemini-2.5-flash','gemini-flash-lite-latest':'gemini-2.5-flash-lite','gemini-pro-latest':'gemini-2.5-pro'};
-function gemUrl(m,k=S.gemKey){return gemVtx(k)?`https://aiplatform.googleapis.com/v1/publishers/google/models/${encodeURIComponent(GEM_VMAP[m]||m)}:generateContent?key=${encodeURIComponent(k)}`:`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(m)}:generateContent?key=${encodeURIComponent(k)}`;}
+function gemUrl(m,k=S.gemKey){if(String(m).startsWith('k2:')){k=S.gemKey2;m=m.slice(3);}return gemVtx(k)?`https://aiplatform.googleapis.com/v1/publishers/google/models/${encodeURIComponent(GEM_VMAP[m]||m)}:generateContent?key=${encodeURIComponent(k)}`:`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(m)}:generateContent?key=${encodeURIComponent(k)}`;}
 function gemBody(b,k=S.gemKey){if(!gemVtx(k)||!b||!Array.isArray(b.contents))return b;return {...b,contents:b.contents.map(c=>c&&!c.role?{role:'user',...c}:c)};}
 // Mỗi mô hình Gemini có hạn mức miễn phí theo ngày RIÊNG → mô hình chính hết lượt thì thử các mô hình flash / flash-lite khác mà key dùng được
 // (danh sách lấy thẳng từ Google, nhớ 1 ngày) thay vì báo hết lượt ngay.
 const gemModels=()=>{const seen=new Set(),vtx=gemVtx();const found=vtx?[]:((S.gemFound&&S.gemFound.list)||[]);
-  return [gemMain(),...(vtx?[]:['gemini-flash-lite-latest']),...found,...GEM_LITE].filter(m=>{const id=vtx?(GEM_VMAP[m]||m):m;if(seen.has(id))return false;seen.add(id);return true;});};
+  const L=[gemMain(),...(vtx?[]:['gemini-flash-lite-latest']),...found,...GEM_LITE].filter(m=>{const id=vtx?(GEM_VMAP[m]||m):m;if(seen.has(id))return false;seen.add(id);return true;});
+  const s2=new Set(),k2=S.gemKey2&&S.gemKey2!==S.gemKey?['gemini-flash-latest','gemini-flash-lite-latest',...((S.gemFound&&S.gemFound.list)||[]),...GEM_LITE].filter(m=>!s2.has(m)&&s2.add(m)).map(m=>'k2:'+m):[];return [...L,...k2];};
 let gemDiscBusy=false;
 async function gemDiscover(force){if(gemDiscBusy||!S.gemKey||gemVtx()||!navigator.onLine)return;const f=S.gemFound;if(!force&&f&&Date.now()-f.at<864e5)return;gemDiscBusy=true;
   try{const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=300&key='+encodeURIComponent(S.gemKey));if(!r.ok)return;const j=await r.json();
@@ -5859,7 +5864,7 @@ const bakMsg=m=>$('#bakMsg').textContent=m,bakBar=p=>$('#bakBar').style.width=Ma
 $('#bBak').onclick=async()=>{bakMsg('');bakBar(0);let sz=0;for(const t of tracks)if(isLocal(t))sz+=t.size||0;$('#bakFullSz').textContent=sz?'– khoảng '+(sz/1048576).toFixed(0)+' MB':'';openModal('mBak');};
 function stamp(){const d=new Date();return d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');}
 function dlBlob(blob,name){if(window.dfSaveFile)return dfSaveFile(blob,name);const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),60000);}
-function bakData(){const s={...S};delete s.pos;delete s.gKey;delete s.gemKey;delete s.clKey;delete s.oaKey;delete s.elKey;delete s.keysAt;return {app:'DeepFlowLanguage',v:1,date:new Date().toISOString(),settings:s,pos:S.pos,vocab:typeof vocab!=='undefined'?vocab:[],tracks:tracks.map(t=>{const x={...t};delete x.asrPart;return x;})};}
+function bakData(){const s={...S};delete s.pos;delete s.gKey;delete s.gemKey;delete s.gemKey2;delete s.clKey;delete s.oaKey;delete s.elKey;delete s.keysAt;return {app:'DeepFlowLanguage',v:1,date:new Date().toISOString(),settings:s,pos:S.pos,vocab:typeof vocab!=='undefined'?vocab:[],tracks:tracks.map(t=>{const x={...t};delete x.asrPart;return x;})};}
 $('#bakData').onclick=()=>{dlBlob(new Blob([JSON.stringify(bakData())],{type:'application/json'}),'deepflow-dulieu-'+stamp()+'.json');bakMsg('Đã tạo file sao lưu dữ liệu (thư mục Tải xuống). Khi khôi phục, nạp lại các file âm thanh — app tự gắn vào đúng bài.');};
 $('#bakFull').onclick=async()=>{
   bakMsg('Đang gom âm thanh…');const data=bakData(),parts=[];let off=0;
@@ -5889,7 +5894,7 @@ async function restoreFrom(f){
       bakBar((i+1)/data.tracks.length);bakMsg(`Khôi phục ${i+1}/${data.tracks.length}…`);
     }
     if(Array.isArray(data.vocab)&&typeof vocab!=='undefined'){const have=new Set(vocab.map(v=>v.id));for(const v of data.vocab)if(!have.has(v.id))vocab.push(v);saveVocab();}
-    if(data.settings){const keep={gemKey:S.gemKey,gKey:S.gKey,clKey:S.clKey,oaKey:S.oaKey,elKey:S.elKey};Object.assign(S,data.settings);for(const k in keep)if(!S[k])S[k]=keep[k];S.pos=data.pos||S.pos||{};save();buildEqUI();trUI();applyMode();updChips();}
+    if(data.settings){const keep={gemKey:S.gemKey,gemKey2:S.gemKey2,gKey:S.gKey,clKey:S.clKey,oaKey:S.oaKey,elKey:S.elKey};Object.assign(S,data.settings);for(const k in keep)if(!S[k])S[k]=keep[k];S.pos=data.pos||S.pos||{};save();buildEqUI();trUI();applyMode();updChips();}
     tracks.sort((a,b)=>a.added-b.added);renderLib();
     bakMsg(`Xong! ${data.tracks.length} bài${noAud?` — ${noAud} bài thiếu âm thanh: bấm ＋📁 Thư mục và chọn lại các file đó, app tự gắn vào đúng bài.`:''}`);
     if(!cur&&tracks.length){const t=tracks.find(x=>!x.noAudio);if(t)loadTrack(t,false);}
@@ -8452,10 +8457,10 @@ $('#dictRead69').onclick=()=>nbOpen();$('#dictIPA69').onclick=()=>showView('vPro
 document.querySelectorAll('nav button').forEach(b=>{let t=0;b.addEventListener('pointerdown',()=>{clearTimeout(t);t=setTimeout(()=>{if(!S.navLbl)toast(b.getAttribute('aria-label')||'',1200);},500);});['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,()=>clearTimeout(t)));b.addEventListener('contextmenu',e=>e.preventDefault());});
 // ----- API key: nhập qua hộp thoại, hiển thị dạng khoá (không sửa trực tiếp) -----
 function aiRowsUI(){const rows=[...document.querySelectorAll('#aiCard .keyrow')];let hidden=0;
-  rows.forEach(r=>{const has=!!S[r.dataset.k];const show=has||S.aiShowAll||(!rows.some(x=>S[x.dataset.k])&&r.dataset.k==='gemKey');r.hidden=!show;if(!show)hidden++;});
+  rows.forEach(r=>{const has=!!S[r.dataset.k];const show=has||S.aiShowAll||(r.dataset.k==='gemKey2'&&!!S.gemKey)||(!rows.some(x=>S[x.dataset.k])&&r.dataset.k==='gemKey');r.hidden=!show;if(!show)hidden++;});
   const b=$('#aiAdd');if(b){b.hidden=!hidden;b.textContent='＋ Thêm AI khác ('+rows.filter(r=>r.hidden).map(r=>KEYN[r.dataset.k].replace(' API key','')).join(', ')+')';}}
-const KEYN={gemKey:'Gemini API key',gKey:'Google Drive API key',clKey:'Claude API key',oaKey:'ChatGPT API key',elKey:'ElevenLabs API key'};
-const KEYFMT={gemKey:[/^(AIza[0-9A-Za-z_\-]{35}|AQ\.[0-9A-Za-z_\-.]{30,})$/,'phải bắt đầu bằng AIza (key AI Studio, 39 ký tự) hoặc AQ. (key Vertex AI)'],gKey:[/^AIza[0-9A-Za-z_\-]{35}$/,'phải bắt đầu bằng AIza và dài 39 ký tự'],clKey:[/^sk-ant-[A-Za-z0-9_\-]{20,}$/,'phải bắt đầu bằng sk-ant-'],oaKey:[/^sk-[A-Za-z0-9_\-]{20,}$/,'phải bắt đầu bằng sk-'],elKey:[/^sk_[A-Za-z0-9]{20,}$/,'phải bắt đầu bằng sk_']};
+const KEYN={gemKey:'Gemini API key',gemKey2:'Gemini API key 2',gKey:'Google Drive API key',clKey:'Claude API key',oaKey:'ChatGPT API key',elKey:'ElevenLabs API key'};
+const KEYFMT={gemKey:[/^(AIza[0-9A-Za-z_\-]{35}|AQ\.[0-9A-Za-z_\-.]{30,})$/,'phải bắt đầu bằng AIza (key AI Studio, 39 ký tự) hoặc AQ. (key Vertex AI)'],gemKey2:[/^AIza[0-9A-Za-z_\-]{35}$/,'phải bắt đầu bằng AIza (key AI Studio, 39 ký tự)'],gKey:[/^AIza[0-9A-Za-z_\-]{35}$/,'phải bắt đầu bằng AIza và dài 39 ký tự'],clKey:[/^sk-ant-[A-Za-z0-9_\-]{20,}$/,'phải bắt đầu bằng sk-ant-'],oaKey:[/^sk-[A-Za-z0-9_\-]{20,}$/,'phải bắt đầu bằng sk-'],elKey:[/^sk_[A-Za-z0-9]{20,}$/,'phải bắt đầu bằng sk_']};
 $('#aiAdd').onclick=()=>{S.aiShowAll=true;save();aiRowsUI();};
 $('#aiPref').value=S.aiPref||'best';$('#aiPref').onchange=e=>{S.aiPref=e.target.value;save();toast(S.aiPref==='free'?'Ưu tiên AI miễn phí (Gemini) trước':'Ưu tiên AI mạnh nhất cho từng việc');};
 const maskKey=k=>k?k.slice(0,4)+'••••••'+k.slice(-4):'';
@@ -8469,6 +8474,8 @@ async function testKey(k,v){
       if(r.ok)return {ok:true};if(r.status===401)return {ok:false,msg:'Key ElevenLabs không đúng — kiểm tra lại đã copy đủ.'};return {ok:true,warn:'ElevenLabs báo '+r.status+' (key thiếu quyền xem gói cước vẫn dùng được để căn phụ đề)'};}
     if(k==='oaKey'){const r=await fetch('https://api.openai.com/v1/models',{headers:{Authorization:'Bearer '+v}});
       if(r.ok)return {ok:true};if(r.status===401)return {ok:false,msg:'Key ChatGPT không đúng — kiểm tra lại đã copy đủ.'};return {ok:true,warn:'OpenAI báo '+r.status};}
+    if(k==='gemKey2'){if(v===S.gemKey)return {ok:false,msg:'Key này trùng với key 1 — hãy tạo key bằng tài khoản Google khác.'};const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1&key='+encodeURIComponent(v));
+      if(r.ok)return {ok:true};let m='';try{m=(await r.json()).error.message;}catch(e){}return {ok:false,msg:gemErr(r.status,m)};}
     if(k==='gemKey'){const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1&key='+encodeURIComponent(v));
       if(r.ok){S.gemVtx=false;return {ok:true};}let m='';try{m=(await r.json()).error.message;}catch(e){}
       if(/^AQ\./.test(v)){const r2=await fetch(`https://aiplatform.googleapis.com/v1/publishers/google/models/gemini-2.5-flash-lite:generateContent?key=${encodeURIComponent(v)}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{role:'user',parts:[{text:'Say OK'}]}],generationConfig:{maxOutputTokens:5}})});
@@ -8487,7 +8494,7 @@ async function testKey(k,v){
 }
 // xoá trạng thái “tạm nghỉ do hết lượt” của một AI (khi đổi / nhập lại key, hoặc bấm Thử lại)
 function aiUnblock(p){if(p==='openai'||p==='claude'){for(const k of (p==='openai'?['openai','whisper']:['claude'])){delete aiCooldown[k];delete aiHits[k];}}if(p==='gemini'){for(const m in gemWhy)delete gemWhy[m];for(const m in gemBlock)delete gemBlock[m];S.gemBlk={};S.gemBlkWhy={};for(const m in gemHits)delete gemHits[m];}aiBlock[p]=0;delete aiWhy[p];if(S.aiBlk)delete S.aiBlk[p];if(S.aiBlkWhy)delete S.aiBlkWhy[p];try{gemStatus();}catch(e){}}
-function setKey(k,v){if(k==='elKey'&&v!==S.elKey){elBlockUntil=0;S.elBlk=0;S.elWhy='';}if(k==='oaKey')aiUnblock('openai');if(k==='clKey')aiUnblock('claude');if(k==='gemKey'){aiUnblock('gemini');if(/^AQ\./.test(v)&&S.gemVtx==null)S.gemVtx=true;}S[k]=v;S.keysAt=Date.now();save();keyUI();if(window.dfKeysChanged)dfKeysChanged();}
+function setKey(k,v){if(k==='elKey'&&v!==S.elKey){elBlockUntil=0;S.elBlk=0;S.elWhy='';}if(k==='oaKey')aiUnblock('openai');if(k==='clKey')aiUnblock('claude');if(k==='gemKey'||k==='gemKey2'){aiUnblock('gemini');if(k==='gemKey'&&/^AQ\./.test(v)&&S.gemVtx==null)S.gemVtx=true;}S[k]=v;S.keysAt=Date.now();save();keyUI();if(window.dfKeysChanged)dfKeysChanged();}
 document.querySelectorAll('.keyrow').forEach(r=>{const k=r.dataset.k;
   r.querySelector('.kset').onclick=()=>{$('#keyT').textContent='Nhập '+KEYN[k];$('#keyIn').value='';$('#keyMsg').textContent='Bấm 📋 Dán để dán key đã copy, rồi bấm OK.';$('#keyOk').disabled=false;openModal('mKey');
     $('#keyOk').onclick=async()=>{const v=$('#keyIn').value.replace(/\s+/g,'');
@@ -10032,7 +10039,7 @@ $('#videoApk59').onclick=()=>{$('#mVideo59').classList.remove('on');showView('vS
     const j=await (await api(`${UPL}?uploadType=multipart&fields=id`,{method:'POST',headers:{'Content-Type':'multipart/related; boundary='+b},body})).json();return j.id;
   }
   function payload(){
-    const s={...S};['pos','lastId','gKey','gemKey','clKey','oaKey','elKey','syncAt','hpAuto','wake'].forEach(k=>delete s[k]);
+    const s={...S};['pos','lastId','gKey','gemKey','gemKey2','clKey','oaKey','elKey','syncAt','hpAuto','wake'].forEach(k=>delete s[k]);
     return {app:'DeepFlowLanguage',v:1,at:Date.now(),settings:s,pos:S.pos||{},vocab,cdict:(typeof cdLoad==='function'?cdLoad():{}),tracks:[...tracks,...trashT].map(t=>{const x={...t};delete x.asrPart;delete x.noAudio;delete x.loc;delete x.peaks;return x;})};
   }
   async function merge(rem){
@@ -10098,8 +10105,8 @@ $('#videoApk59').onclick=()=>{$('#mVideo59').classList.remove('on');showView('vS
     const f=await findApp('deepflow-keys.json');let rem=null;
     if(f){try{rem=await (await api(`${DRV}/${f.id}?alt=media`)).json();}catch(e){}}
     const la=S.keysAt||0,ra=rem&&rem.at||0;
-    if(rem&&ra>la){S.gemKey=rem.gemKey||'';S.gKey=rem.gKey||'';S.clKey=rem.clKey||'';S.oaKey=rem.oaKey||'';S.elKey=rem.elKey||'';S.keysAt=ra;save();if(window.keyUI)keyUI();if(!la&&(S.gemKey||S.gKey))toast('🔑 Đã lấy API key từ tài khoản Google');}
-    else if(la>ra){await putApp('deepflow-keys.json',JSON.stringify({at:la,gemKey:S.gemKey||'',gKey:S.gKey||'',clKey:S.clKey||'',oaKey:S.oaKey||'',elKey:S.elKey||''}),f&&f.id);}
+    if(rem&&ra>la){S.gemKey=rem.gemKey||'';S.gemKey2=rem.gemKey2||'';S.gKey=rem.gKey||'';S.clKey=rem.clKey||'';S.oaKey=rem.oaKey||'';S.elKey=rem.elKey||'';S.keysAt=ra;save();if(window.keyUI)keyUI();if(!la&&(S.gemKey||S.gKey))toast('🔑 Đã lấy API key từ tài khoản Google');}
+    else if(la>ra){await putApp('deepflow-keys.json',JSON.stringify({at:la,gemKey:S.gemKey||'',gemKey2:S.gemKey2||'',gKey:S.gKey||'',clKey:S.clKey||'',oaKey:S.oaKey||'',elKey:S.elKey||''}),f&&f.id);}
   }
   window.dfKeysChanged=()=>{if(acc)syncKeys().catch(e=>toast('Lưu key lên tài khoản lỗi: '+e.message,5000));};
   async function sync(manual){
@@ -10120,7 +10127,7 @@ $('#videoApk59').onclick=()=>{$('#mVideo59').classList.remove('on');showView('vS
   $$('#gSign').onclick=async()=>{
     if(acc){if(!await askConfirm('Đăng xuất Google? Bài học và từ vựng trong máy vẫn giữ nguyên; API key sẽ được gỡ khỏi máy này (vẫn lưu trong tài khoản, đăng nhập lại là có).'))return;
       try{await syncKeys();}catch(e){}
-      await GD.signOut().catch(()=>{});acc=null;tok=null;S.gemKey='';S.gKey='';S.clKey='';S.oaKey='';S.elKey='';S.keysAt=0;save();if(window.keyUI)keyUI();accUI();return;}
+      await GD.signOut().catch(()=>{});acc=null;tok=null;S.gemKey='';S.gemKey2='';S.gKey='';S.clKey='';S.oaKey='';S.elKey='';S.keysAt=0;save();if(window.keyUI)keyUI();accUI();return;}
     try{const r=await GD.signIn();tok=r.accessToken;tokAt=Date.now();acc={email:r.email,name:r.name};accUI();toast('Đã đăng nhập '+r.email);sync(true);}
     catch(e){toast('Đăng nhập không thành công: '+(e.message||e)+'. Xem hướng dẫn tạo OAuth Client trong README của kho GitHub.',8000);}
   };
