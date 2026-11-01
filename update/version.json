@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.5",
+  "ver": "1.0.4-beta.6",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.6",
+      "d": "02/11/2026",
+      "items": [
+        "✨ Tạo phụ đề: bấm “Tạo phụ đề bằng AI” là chạy luôn — bỏ nút Bắt đầu thừa trong lúc AI đang làm (chỉ hiện ↻ Thử lại khi lần trước chưa xong), có nút Dừng / Ẩn"
+      ]
+    },
     {
       "v": "1.0.4-beta.5",
       "d": "02/11/2026",
