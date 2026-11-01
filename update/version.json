@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.14",
+  "ver": "1.0.4-beta.15",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.15",
+      "d": "02/11/2026",
+      "items": [
+        "📖 Từ điển → Từ vựng trong bài học: thêm dòng 🎙 Toàn bộ Podcast (số tập, số từ, đã thuộc, phân loại Đang học / Đã học / Chưa học theo trình độ, ôn tập); “Tất cả khoá học” nay chỉ tính bài trong Khoá học"
+      ]
+    },
     {
       "v": "1.0.4-beta.14",
       "d": "02/11/2026",
