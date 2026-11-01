@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.12",
+  "ver": "1.0.4-beta.13",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.13",
+      "d": "02/11/2026",
+      "items": [
+        "🎯 Đối chiếu khớp phụ đề chạy trước: bài đang mở được đối chiếu ngay từ đầu (không đợi bấm phát), các bài kế tiếp trong khoá học / podcast cũng được làm trước kể cả khi bài hiện tại còn chờ tạo phụ đề · 🎧 Sửa: cắm tai nghe tự phát tiếp nay mở đúng bài nghe gần nhất (Podcast hoặc Khoá học), không còn tự quay về bài học"
+      ]
+    },
     {
       "v": "1.0.4-beta.12",
       "d": "02/11/2026",
