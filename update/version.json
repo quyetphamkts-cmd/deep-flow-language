@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.91",
+  "ver": "1.0.3-beta.92",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.92",
+      "d": "01/11/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng (tranh 2D): phật tử quay mặt về lối giữa; tượng Phật đá theo mẫu 3D của bạn vẽ lại theo nét tranh; bỏ các tọa cụ thừa vẽ sẵn trên sàn — mỗi người 1 tọa cụ"
+      ]
+    },
     {
       "v": "1.0.3-beta.91",
       "d": "01/11/2026",
