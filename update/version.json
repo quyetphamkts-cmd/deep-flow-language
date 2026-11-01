@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.94",
+  "ver": "1.0.3-beta.95",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.95",
+      "d": "02/11/2026",
+      "items": [
+        "🛕 Nút Đọc cạnh IPA (Từ điển) đổi thành nút Chùa Từ Vựng · 📰 Tìm báo: gộp Bing + Google News, xếp bài mới nhất và nguồn uy tín (🛡 Reuters, AP, BBC, NPR, Guardian…) lên đầu, rồi mới đến độ khó hợp trình độ"
+      ]
+    },
     {
       "v": "1.0.3-beta.94",
       "d": "01/11/2026",
