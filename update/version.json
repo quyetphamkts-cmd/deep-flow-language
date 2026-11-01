@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.95",
+  "ver": "1.0.3-beta.96",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.96",
+      "d": "02/11/2026",
+      "items": [
+        "📻 Bản tin nghe hằng ngày (Thư viện): chọn kênh VOA As It Is, BBC 6 Minute English, NPR News Now, The Indicator, Up First, BBC Global News… hoặc dán link RSS bất kỳ; app tự tải tập mới nhất vào thư mục “📻 Bản tin nghe”, AI tạo phụ đề khi nghe, tập cũ tự xoá sau 1/3/7 ngày (chỉ tự tải khi có Wi-Fi)"
+      ]
+    },
     {
       "v": "1.0.3-beta.95",
       "d": "02/11/2026",
