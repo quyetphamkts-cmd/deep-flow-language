@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.88",
+  "ver": "1.0.3-beta.89",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.89",
+      "d": "01/11/2026",
+      "items": [
+        "Ô Gemini API key 2 nhận cả key dạng AQ. (key Vertex AI / Google Cloud): app tự nhận ra loại key và gọi đúng máy chủ"
+      ]
+    },
     {
       "v": "1.0.3-beta.88",
       "d": "01/11/2026",
