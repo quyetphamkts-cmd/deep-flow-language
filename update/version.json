@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.96",
+  "ver": "1.0.3-beta.97",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.97",
+      "d": "02/11/2026",
+      "items": [
+        "📻 Bản tin nghe: nút 📻 trên đầu app (cạnh nút đọc báo) · thẻ 🎧 Nghe liệt kê các tập đã tải, chạm là mở trình phát bài học (có phụ đề AI) · ⚙ Kênh → Tập › xem 10 tập gần nhất, chọn tập nào tải và nghe tập đó · giữ tập 1/3/5/7/14 ngày · sửa lỗi BBC Global News (link http) · mỗi kênh tự lấy tối đa 1 tập/ngày"
+      ]
+    },
     {
       "v": "1.0.3-beta.96",
       "d": "02/11/2026",
