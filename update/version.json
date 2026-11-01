@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.7",
+  "ver": "1.0.4-beta.8",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.8",
+      "d": "02/11/2026",
+      "items": [
+        "✨ Sửa lỗi “Gemini không trả kết quả” khi tạo phụ đề: đọc kết quả bền hơn (bỏ phần suy nghĩ của mô hình, chịu được kết quả bọc trong khối mã, kết quả bị cắt cụt vẫn lấy được các câu còn nguyên), tăng giới hạn độ dài trả về; nếu vẫn lỗi thì ghi rõ lý do vào nhật ký"
+      ]
+    },
     {
       "v": "1.0.4-beta.7",
       "d": "02/11/2026",
