@@ -22,6 +22,10 @@ public class MainActivity extends BridgeActivity {
     public static volatile boolean playing = false;
     /** Người dùng cho phép phát dưới nền khi rời app (Cài đặt → Chạy nền) */
     public static volatile boolean bgPlay = true;
+    /** AI đang tạo phụ đề (app web báo qua plugin Headset) → giữ WebView chạy tiếp dù đã dừng phát */
+    public static volatile boolean working = false;
+    private static volatile MainActivity live = null;
+    static void keepAlive() { MainActivity a = live; if (a != null) a.runOnUiThread(a::keepWebViewAlive); }
     /** Phiên cũ vẫn đang phát sau khi người dùng vuốt tắt app */
     private static MainActivity orphan = null;
     /** WebView bị Android đóng khi app ở nền → mở lại app thì dựng lại màn hình */
@@ -33,6 +37,7 @@ public class MainActivity extends BridgeActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        live = this;
         // lỗi Java làm app bị tắt: ghi lại tên lỗi + vài dòng vị trí vào nhật ký để lần sau xem được
         final Thread.UncaughtExceptionHandler prevH = Thread.getDefaultUncaughtExceptionHandler();
         if (!(prevH instanceof DfCrashHandler)) Thread.setDefaultUncaughtExceptionHandler(new DfCrashHandler(getApplicationContext(), prevH));
@@ -226,13 +231,13 @@ public class MainActivity extends BridgeActivity {
         if (bridgeDisposed || rendererGone || bridge == null || Build.VERSION.SDK_INT < 26) return;
         runOnUiThread(() -> {
             if (bridgeDisposed || rendererGone || bridge == null) return;
-            try { bridge.getWebView().setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, !playing); } catch (Exception ignored) {}
+            try { bridge.getWebView().setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, !(playing || working)); } catch (Exception ignored) {}
         });
     }
 
     /** Giữ JavaScript (hẹn giờ, lặp câu, chuyển bài) tiếp tục chạy khi app ở dưới nền */
     private void keepWebViewAlive() {
-        if (rendererGone || bridgeDisposed || bridge == null || !playing || !bgPlay) return;
+        if (rendererGone || bridgeDisposed || bridge == null || !((playing && bgPlay) || working)) return;
         try { getBridge().getWebView().onResume(); getBridge().getWebView().resumeTimers(); } catch (Exception ignored) {}
     }
 

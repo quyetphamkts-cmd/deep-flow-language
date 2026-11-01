@@ -1,16 +1,23 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.86",
+  "ver": "1.0.3-beta.87",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 31,
-    "versionName": "1.0.2-beta.63",
+    "versionCode": 32,
+    "versionName": "1.0.2-beta.64",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.87",
+      "d": "01/11/2026",
+      "items": [
+        "Dừng nghe, tắt màn hình hay chuyển sang app khác trong lúc AI đang tạo phụ đề thì app vẫn chạy tiếp đến khi xong (thanh thông báo hiện 'Đang tạo phụ đề…'); xong sẽ có thông báo, mở app là học được ngay — cần cài bản APK mới"
+      ]
+    },
     {
       "v": "1.0.3-beta.86",
       "d": "01/11/2026",

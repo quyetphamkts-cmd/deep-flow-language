@@ -123,6 +123,17 @@ public class HeadsetPlugin extends Plugin {
         call.resolve();
     }
 
+    /** App web báo AI bắt đầu / xong việc tạo phụ đề: giữ app chạy tiếp ở nền, xong thì báo */
+    @PluginMethod
+    public void setWorking(PluginCall call) {
+        boolean on = call.getBoolean("on", false);
+        MainActivity.working = on;
+        if (on) AiWorkService.start(getContext(), call.getString("title", ""));
+        else AiWorkService.stop(getContext(), call.getString("done", ""));
+        if (getActivity() instanceof MainActivity) ((MainActivity) getActivity()).updateRendererPriority();
+        call.resolve();
+    }
+
     @Override
     protected void handleOnDestroy() {
         if (inst == this) inst = null;
