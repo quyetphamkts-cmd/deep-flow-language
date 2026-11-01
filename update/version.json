@@ -1,6 +1,6 @@
 {
-  "web": "1.0.3",
-  "ver": "1.0.3-beta.99",
+  "web": "1.0.4",
+  "ver": "1.0.4-beta.1",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.1",
+      "d": "02/11/2026",
+      "items": [
+        "📻 Bản tin nghe: thêm 4 kênh giọng Anh-Anh 🇬🇧 — BBC Learning English Conversations, BBC Witness History, The Guardian Today in Focus (đã bật sẵn), BBC Newscast; mỗi kênh ghi rõ 🇬🇧 Anh-Anh / 🇺🇸 Anh-Mỹ"
+      ]
+    },
     {
       "v": "1.0.3-beta.99",
       "d": "02/11/2026",
