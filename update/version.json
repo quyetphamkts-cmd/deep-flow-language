@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.87",
+  "ver": "1.0.3-beta.88",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,15 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.88",
+      "d": "01/11/2026",
+      "items": [
+        "Thêm ô Gemini API key 2 (Cài đặt → AI online): nhập key của tài khoản Google thứ hai — key 1 hết lượt thì app tự chuyển sang key 2, mỗi tài khoản có hạn mức miễn phí riêng; key 2 cũng được đồng bộ qua tài khoản như key 1",
+        "Gemini hết hạn mức ngày ở mô hình chính thì tự thử các mô hình flash / flash-lite khác mà key dùng được (mỗi mô hình có hạn mức riêng) trước khi báo hết lượt",
+        "Bài đang nghe chưa có phụ đề: tạm hoãn dịch trước và căn chữ các bài khác để dành lượt AI cho bài này"
+      ]
+    },
     {
       "v": "1.0.3-beta.87",
       "d": "01/11/2026",
