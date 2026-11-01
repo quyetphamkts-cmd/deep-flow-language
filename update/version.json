@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.85",
+  "ver": "1.0.3-beta.86",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.86",
+      "d": "01/11/2026",
+      "items": [
+        "Tạo phụ đề bị gián đoạn (bấm Dừng, thoát app, Android đóng app, mất mạng) thì lần sau nghe tiếp từ đoạn 5 phút đang dở, không làm lại từ đầu (giữ 3 ngày)",
+        "Bài bạn đã bấm tạo phụ đề mà app bị đóng giữa chừng: mở lại app đúng bài đó là tự làm tiếp ngay, không phải bấm lại"
+      ]
+    },
     {
       "v": "1.0.3-beta.85",
       "d": "01/11/2026",
