@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.93",
+  "ver": "1.0.3-beta.94",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.94",
+      "d": "01/11/2026",
+      "items": [
+        "🛕 Chùa Từ Vựng: chọn 30 / 50 / 70 / 100 phật tử (đông thì xếp thêm hàng, người nhỏ lại, chỉ hiện chữ ở người được gọi); người thuộc từ đi ra là có người mới vào bù ngay, luôn đủ số; thêm ~80 từ thông dụng · ⚠️ Cảnh báo AI hết lượt gộp vào dòng trạng thái xử lý AI (bỏ dòng chữ vàng riêng), bấm Xem để đọc chi tiết"
+      ]
+    },
     {
       "v": "1.0.3-beta.93",
       "d": "01/11/2026",
