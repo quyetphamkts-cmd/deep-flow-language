@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.92",
+  "ver": "1.0.3-beta.93",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.93",
+      "d": "01/11/2026",
+      "items": [
+        "🛕 Vào Chùa Từ Vựng là bài nghe tự dừng (kể cả khi tai nghe/thông báo bấm phát), thoát chùa mới phát tiếp · 📝 Văn bản bài học: bỏ nút Dán, thêm nút ✨ Chính tả — AI soát lỗi chính tả, liệt kê từng chỗ sửa, có Hoàn tác"
+      ]
+    },
     {
       "v": "1.0.3-beta.92",
       "d": "01/11/2026",
