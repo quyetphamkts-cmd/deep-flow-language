@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.11",
+  "ver": "1.0.4-beta.12",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.12",
+      "d": "02/11/2026",
+      "items": [
+        "🎧 Mở lại app phát tiếp đúng bên bạn nghe gần nhất (Khoá học hoặc Podcast), đúng bài và vị trí; bên kia vẫn giữ bài + vị trí riêng để quay lại học tiếp"
+      ]
+    },
     {
       "v": "1.0.4-beta.11",
       "d": "02/11/2026",
