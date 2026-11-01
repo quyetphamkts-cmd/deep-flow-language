@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.13",
+  "ver": "1.0.4-beta.14",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.14",
+      "d": "02/11/2026",
+      "items": [
+        "⏩ Tốc độ phát lưu riêng cho từng bài (bài chưa chỉnh phát 1×) · mốc đặt sẵn mới: 0.75× 0.9× 1× 1.25× 1.5× (thanh trượt vẫn chỉnh từng 0,05×)"
+      ]
+    },
     {
       "v": "1.0.4-beta.13",
       "d": "02/11/2026",
