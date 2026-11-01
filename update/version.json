@@ -1,6 +1,6 @@
 {
   "web": "1.0.3",
-  "ver": "1.0.3-beta.90",
+  "ver": "1.0.3-beta.91",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,14 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.3-beta.91",
+      "d": "01/11/2026",
+      "items": [
+        "Dòng trạng thái AI trên màn hình Nghe gọn lại 1 dòng cố định, không còn nhảy hiện / ẩn làm phụ đề giật lên xuống; cuối dòng có Xem để mở chi tiết (lượt AI, nút tạm dừng)",
+        "Sửa lỗi 'Tải APK lỗi: đang tải': khi bản APK đang được tải sẵn (ví dụ app vừa tự cập nhật giao diện), bấm tải lại thì app chờ lượt tải đó xong rồi mở cài đặt, không báo lỗi nữa"
+      ]
+    },
     {
       "v": "1.0.3-beta.90",
       "d": "01/11/2026",
