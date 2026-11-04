@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.20",
+  "ver": "1.0.4-beta.21",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.21",
+      "d": "04/11/2026",
+      "items": [
+        "📝 Mở văn bản lúc đang phát: tự cuộn tới câu đang phát và đặt con trỏ ở đầu câu đó — bấm Sửa là sửa ngay chỗ đang nghe"
+      ]
+    },
     {
       "v": "1.0.4-beta.20",
       "d": "04/11/2026",
