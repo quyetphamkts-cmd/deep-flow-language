@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.17",
+  "ver": "1.0.4-beta.18",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.18",
+      "d": "04/11/2026",
+      "items": [
+        "📝 Lưu văn bản cho bài đang nghe là AI khớp văn bản với âm thanh ngay · menu ⋯ của bài: “Văn bản bài học” → “📄 Văn bản”; “Văn bản sai — AI nghe lại…” → “✨ Kiểm tra chính tả” (mở văn bản và cho AI soát chính tả như nút Chính tả)"
+      ]
+    },
     {
       "v": "1.0.4-beta.17",
       "d": "02/11/2026",
