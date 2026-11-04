@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.18",
+  "ver": "1.0.4-beta.19",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.19",
+      "d": "04/11/2026",
+      "items": [
+        "🌐 Sửa lỗi bản dịch lệch câu: Google Dịch nay ghép kết quả theo đúng câu gốc (dòng nào bị gộp với dòng bên cạnh thì dịch riêng), AI dịch theo số thứ tự từng dòng và không được dời chữ sang dòng khác · bản dịch máy cũ được xoá 1 lần để dịch lại cho khớp"
+      ]
+    },
     {
       "v": "1.0.4-beta.18",
       "d": "04/11/2026",
