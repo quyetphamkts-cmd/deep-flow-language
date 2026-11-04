@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.19",
+  "ver": "1.0.4-beta.20",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.20",
+      "d": "04/11/2026",
+      "items": [
+        "✨ Tạo văn bản bằng AI cho cả thư mục / khoá học: luôn bỏ qua bài bạn đã tự thêm văn bản (và bài đã có phụ đề), hiện rõ số bài được bỏ qua trước khi chạy"
+      ]
+    },
     {
       "v": "1.0.4-beta.19",
       "d": "04/11/2026",
