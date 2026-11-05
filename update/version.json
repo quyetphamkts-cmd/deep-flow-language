@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.25",
+  "ver": "1.0.4-beta.26",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.26",
+      "d": "05/11/2026",
+      "items": [
+        "📖 Thống kê từ vựng: kiểm tra chính tả nay tra thêm cả từ điển offline Anh–Việt + Anh–Anh (kể cả dạng biến đổi: -s, -ed, -ing, -ly…) thay vì chỉ 6.000 từ thông dụng → các từ đúng như animosity, towards, sidewalk, whisper, six… không còn bị đánh dấu; chỉ còn chữ bị tách đôi khi chép từ PDF (busi·ness, hospi·tal), gõ sai, từ rất hiếm"
+      ]
+    },
     {
       "v": "1.0.4-beta.25",
       "d": "05/11/2026",
