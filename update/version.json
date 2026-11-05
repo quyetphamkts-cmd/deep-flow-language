@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.28",
+  "ver": "1.0.4-beta.29",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.29",
+      "d": "06/11/2026",
+      "items": [
+        "🔋 Tuỳ chọn tiết kiệm pin (bật sẵn): không sạc thì AI chỉ làm bài đang mở / đang nghe và bài bạn bấm ✨, các bài tiếp theo trong khoá học + podcast đợi cắm sạc · 📖 Từ điển: bỏ ô Trò chơi từ vựng / Chùa / Chiến sĩ Thiện xạ · đổi chỗ: nút Từ điển lên góc trên, Đọc báo xuống thanh dưới · 🎯 đủ số ngày mục tiêu là bài / thư mục tự xếp ✅ Đã học xong, thống kê từ vựng đã học cập nhật theo"
+      ]
+    },
     {
       "v": "1.0.4-beta.28",
       "d": "05/11/2026",
