@@ -59,6 +59,30 @@ public class HeadsetPlugin extends Plugin {
         }
     }
 
+    /** Mạng hiện tại: Wi-Fi / dữ liệu di động (tính phí) — để app hạn chế tải dữ liệu khi không có Wi-Fi. */
+    @PluginMethod
+    public void netInfo(PluginCall call) {
+        JSObject r = new JSObject();
+        try {
+            android.net.ConnectivityManager cm = (android.net.ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            boolean online = false, wifi = false, cell = false, metered = true;
+            if (cm != null) {
+                metered = cm.isActiveNetworkMetered();
+                if (Build.VERSION.SDK_INT >= 23) {
+                    android.net.Network n = cm.getActiveNetwork();
+                    android.net.NetworkCapabilities c = n != null ? cm.getNetworkCapabilities(n) : null;
+                    if (c != null) {
+                        online = c.hasCapability(android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET);
+                        wifi = c.hasTransport(android.net.NetworkCapabilities.TRANSPORT_WIFI) || c.hasTransport(android.net.NetworkCapabilities.TRANSPORT_ETHERNET);
+                        cell = c.hasTransport(android.net.NetworkCapabilities.TRANSPORT_CELLULAR);
+                    }
+                }
+            }
+            r.put("online", online); r.put("wifi", wifi); r.put("cellular", cell); r.put("metered", metered); r.put("ok", true);
+        } catch (Exception e) { r.put("ok", false); }
+        call.resolve(r);
+    }
+
     /** Trạng thái đầu ra hiện tại: mở lại app khi tai nghe đã kết nối. */
     @PluginMethod
     public void getConnection(PluginCall call) {
