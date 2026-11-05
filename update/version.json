@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.22",
+  "ver": "1.0.4-beta.23",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.23",
+      "d": "05/11/2026",
+      "items": [
+        "📖 Thống kê từ vựng: chạm 1 lần để lưu / bỏ lưu từ vào Hộp từ vựng (tự thêm nghĩa), nhấn giữ để tra nghĩa — tra xong đóng lại là quay về bảng thống kê (tra từ ở đây không tự lưu)"
+      ]
+    },
     {
       "v": "1.0.4-beta.22",
       "d": "05/11/2026",
