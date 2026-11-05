@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.23",
+  "ver": "1.0.4-beta.24",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.24",
+      "d": "05/11/2026",
+      "items": [
+        "📖 Thống kê từ vựng: tách 🏷 tên riêng (đếm riêng, lọc “Không tính tên riêng” để biết đúng lượng từ vựng) · ⚠️ đánh dấu từ nghi sai chính tả (không có trong từ điển), nút ✨ AI kiểm tra xác nhận và gợi ý từ đúng · nhấn giữ tra từ: nút “Không lưu” đổi thành ⭐ Lưu / bỏ lưu"
+      ]
+    },
     {
       "v": "1.0.4-beta.23",
       "d": "05/11/2026",
