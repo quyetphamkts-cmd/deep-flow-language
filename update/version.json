@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.29",
+  "ver": "1.0.4-beta.30",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.30",
+      "d": "06/11/2026",
+      "items": [
+        "✅ Bỏ bước chấm điểm mức nhớ: bài học xong (đủ mục tiêu, đánh dấu tay hay ôn xong) mặc định là hiểu tối thiểu 80% — không còn hỏi; bài đã học xong trước đây chưa có mức nhớ cũng tính 80%"
+      ]
+    },
     {
       "v": "1.0.4-beta.29",
       "d": "06/11/2026",
