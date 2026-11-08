@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.30",
+  "ver": "1.0.4-beta.31",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.31",
+      "d": "08/11/2026",
+      "items": [
+        "🎯 Ước tính bạn biết bao nhiêu % từ của mỗi bài (theo trình độ đã chọn + bài đã học xong + từ đã thuộc; từ đang tra / chưa thuộc tính là chưa biết, bỏ tên riêng): nhãn 🟢 ≥95% vừa sức · 🟡 90–95% hơi khó · 🔴 khó cạnh tên bài trong Khoá học / Podcast, trong thống kê từ vựng và bài báo đang đọc · thẻ 🎯 Gợi ý bài vừa sức đầu Thư viện"
+      ]
+    },
     {
       "v": "1.0.4-beta.30",
       "d": "06/11/2026",
