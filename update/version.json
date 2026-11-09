@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.38",
+  "ver": "1.0.4-beta.39",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.39",
+      "d": "09/11/2026",
+      "items": [
+        "📖 Từ điển khi học tiếng Trung: tra bằng chữ Hán, pinyin không dấu (xuexi) hoặc âm Hán Việt (học tập / hoc tap) — gợi ý tức thì từ 5.000 từ HSK kèm pinyin màu, Hán Việt, cấp HSK · tra cả câu tiếng Trung (nhận câu không có dấu cách), phân tích kèm pinyin + Hán Việt và cấu trúc ngữ pháp · tìm câu chứa từ trong bài đúng với chữ Hán · bảng tra có link Hanzii Trung–Việt, MDBG, 汉典 · nút IPA thành “拼 Pinyin”: 4 thanh điệu (có đường cao độ), 21 thanh mẫu, vận mẫu, biến điệu — bấm để nghe"
+      ]
+    },
     {
       "v": "1.0.4-beta.38",
       "d": "09/11/2026",
