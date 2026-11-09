@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.39",
+  "ver": "1.0.4-beta.40",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.40",
+      "d": "09/11/2026",
+      "items": [
+        "🔍 Phóng to / thu nhỏ chữ ngôn ngữ đang học: chụm hoặc mở 2 ngón tay trên phụ đề ở trang Nghe (hoặc nút A− / A+ trong Cài đặt → Giao diện) — chỉ dòng ngôn ngữ học to lên, dòng tiếng Việt giữ nguyên; lưu riêng cho từng ngôn ngữ (tiếng Trung mặc định to hơn 25%) · chỉnh riêng cỡ pinyin (mặc định to hơn trước) · từ tiếng Trung không còn bị tách đôi xuống 2 dòng"
+      ]
+    },
     {
       "v": "1.0.4-beta.39",
       "d": "09/11/2026",
