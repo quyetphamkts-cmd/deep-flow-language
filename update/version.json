@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.34",
+  "ver": "1.0.4-beta.35",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.35",
+      "d": "09/11/2026",
+      "items": [
+        "🇨🇳 Podcast tiếng Trung: 5 kênh mới (Lazy Chinese, Slow Chinese, Dashu Mandarin, TeaTime News, TeaTime Chinese) xếp theo HSK, có giới thiệu ở nút (i) · trang Podcast tự đổi theo ngôn ngữ đang học: học tiếng Trung chỉ hiện & cập nhật kênh tiếng Trung, học tiếng Anh giữ nguyên các kênh Anh-Anh / Anh-Mỹ · kênh tự thêm được gắn theo ngôn ngữ đang học"
+      ]
+    },
     {
       "v": "1.0.4-beta.34",
       "d": "09/11/2026",
