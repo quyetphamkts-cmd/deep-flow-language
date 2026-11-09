@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.35",
+  "ver": "1.0.4-beta.36",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.36",
+      "d": "09/11/2026",
+      "items": [
+        "🌐 Mỗi ngôn ngữ học là 1 hồ sơ riêng: đổi ngôn ngữ học thì Khoá học, Podcast, bài đang nghe dở, Hộp từ vựng, bài báo đã lưu & lịch sử đọc, thời gian học, chuỗi ngày, quân hàm, huân chương, lịch ôn… đều chuyển theo; quay lại ngôn ngữ cũ vẫn còn nguyên · bài & khoá học có từ trước được tính là tiếng Anh · menu ⋯ của khoá học có thêm “Chuyển khoá học sang ngôn ngữ khác” · đọc báo: mức độ theo HSK khi học tiếng Trung"
+      ]
+    },
     {
       "v": "1.0.4-beta.35",
       "d": "09/11/2026",
