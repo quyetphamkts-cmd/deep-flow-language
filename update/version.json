@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.33",
+  "ver": "1.0.4-beta.34",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.34",
+      "d": "09/11/2026",
+      "items": [
+        "🇨🇳 Giao diện học tiếng Trung (chỉ bật khi chọn học tiếng Trung): pinyin trên từng chữ Hán ở phụ đề, văn bản bài học và đọc báo (đúng âm theo ngữ cảnh, biến điệu 一 不) · tô màu 4 thanh điệu · bảng tra từ hiện pinyin, âm Hán Việt từng chữ, cấp HSK, phồn thể · quân hàm theo bậc HSK 1–6 thay CEFR · Cài đặt có nút bật/tắt pinyin và màu thanh điệu"
+      ]
+    },
     {
       "v": "1.0.4-beta.33",
       "d": "09/11/2026",
