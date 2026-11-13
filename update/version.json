@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.41",
+  "ver": "1.0.4-beta.42",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.42",
+      "d": "13/11/2026",
+      "items": [
+        "📝 Nút Kiểm tra (góc trên bên phải): đề mới do AI soạn theo đúng cấu trúc đề thi thật — học tiếng Trung: HSK 1–6 (HSK 2.0: 听力 · 阅读 · 书写, đúng số phần, kiểu câu, thời gian, thang điểm 200/300 và điểm đạt; HSK 1–2 có pinyin như đề thật); học tiếng Anh: A1–C1 theo dạng Cambridge (Movers, KET, PET, FCE, CAE) · chọn Rút gọn (~40%) hoặc Đầy đủ · tính giờ từng phần, hết giờ tự sang phần sau · phần nghe tự đọc mỗi câu 2 lần (giọng nam/nữ khác nhau), không hiện chữ · phiếu trả lời để nhảy câu · xếp câu, điền chữ, viết bài (AI chấm theo tiêu chí kỳ thi) · bảng điểm 合格/不合格, chữa từng câu kèm lời đọc, giải thích tiếng Việt, bản dịch · gợi ý cấp nên làm, lịch sử bài làm, làm dở mở lại làm tiếp · thêm “Kiểm tra bài đã học” ra đề từ chính câu trong bài đã học xong"
+      ]
+    },
     {
       "v": "1.0.4-beta.41",
       "d": "09/11/2026",
