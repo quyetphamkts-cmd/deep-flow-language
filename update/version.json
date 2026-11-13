@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.44",
+  "ver": "1.0.4-beta.45",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.45",
+      "d": "14/11/2026",
+      "items": [
+        "📊 AI đã dùng (Cài đặt → AI → Xem): số lượt gọi, token vào/ra và chi phí ước tính (USD, VNĐ) hôm nay / 7 ngày / 30 ngày, chia theo việc (dịch, phụ đề, tra từ, soạn đề, đọc tài liệu…) và theo mô hình Gemini / Claude / ChatGPT; lô Batch tính 50%"
+      ]
+    },
     {
       "v": "1.0.4-beta.44",
       "d": "14/11/2026",
