@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.45",
+  "ver": "1.0.4-beta.46",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.46",
+      "d": "14/11/2026",
+      "items": [
+        "🎧 Phụ đề luôn chạy theo bài nghe: một lỗi bất ngờ khi cập nhật không còn làm chữ đứng yên (bắt lỗi, ghi vào nhật ký và chạy tiếp); vòng cập nhật bị máy tạm dừng (tiết kiệm pin, WebView) thì tự chạy lại theo thời gian phát"
+      ]
+    },
     {
       "v": "1.0.4-beta.45",
       "d": "14/11/2026",
