@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.43",
+  "ver": "1.0.4-beta.44",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.44",
+      "d": "14/11/2026",
+      "items": [
+        "📚 Nhập sách / tài liệu để đọc (Thêm bài học → 📚): PDF, Word, EPUB, TXT, Markdown, HTML → tự chia theo chương thành các bài đọc dài ngắn tuỳ chọn, tạo thành khoá học riêng của ngôn ngữ đang học; PDF scan (ảnh) thì nhờ Gemini đọc chữ · bài đọc: tiêu đề chương, pinyin khi học tiếng Trung, 🔊 Nghe đọc (máy đọc từng đoạn, tô sáng đoạn đang đọc), ✓ Đọc xong · bài sau ▶"
+      ]
+    },
     {
       "v": "1.0.4-beta.43",
       "d": "14/11/2026",
