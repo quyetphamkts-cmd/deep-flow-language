@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.42",
+  "ver": "1.0.4-beta.43",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.43",
+      "d": "14/11/2026",
+      "items": [
+        "🛡 Chống “lệnh ẩn”: mọi lượt gọi AI (Gemini, Claude, ChatGPT) kèm chỉ dẫn coi bài báo, transcript, văn bản bài học, tài liệu chỉ là dữ liệu — AI không làm theo câu lệnh cài trong nội dung · 🧺 Gemini Batch: khi Cách dịch là AI, các bài sắp học được gom thành 1 lô gửi Google (giá ~50%, kết quả về sau vài phút–vài giờ), bài đang học vẫn dịch ngay; key gói miễn phí chưa được Google nhận lô thì tự quay về cách thường — bật/tắt và xem trạng thái trong Cài đặt → AI"
+      ]
+    },
     {
       "v": "1.0.4-beta.42",
       "d": "13/11/2026",
