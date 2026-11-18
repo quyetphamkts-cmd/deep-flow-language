@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.48",
+  "ver": "1.0.4-beta.49",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.49",
+      "d": "18/11/2026",
+      "items": [
+        "📤 Xuất cho máy nghe nhạc có thêm ở thư mục lớn (thư mục chứa nhiều thư mục con): mỗi thư mục con thành 1 thư mục riêng đánh số 01, 02… theo đúng thứ tự trong app, bài trong từng thư mục đánh lại từ 001, thẻ Album = tên thư mục con; khoá học gồm nhiều thư mục cũng chia như vậy"
+      ]
+    },
     {
       "v": "1.0.4-beta.48",
       "d": "18/11/2026",
