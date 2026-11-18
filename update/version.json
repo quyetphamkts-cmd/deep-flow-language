@@ -1,16 +1,23 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.58",
+  "ver": "1.0.4-beta.59",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 34,
-    "versionName": "1.0.2-beta.66",
+    "versionCode": 35,
+    "versionName": "1.0.2-beta.67",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.59",
+      "d": "19/11/2026",
+      "items": [
+        "🔌 Chép thẳng vào máy nghe nhạc: cắm máy nghe nhạc (vd. M15) vào điện thoại bằng cáp USB-C OTG → khi xuất chọn “Chép thẳng vào máy nghe nhạc”, chọn ổ 1 lần là lần sau tự nhận · bài đã có trên máy được bỏ qua (chỉ cập nhật lời + bản đọc) · app nhớ các mục đã chép: lần sau cắm máy vào, app hỏi “Đồng bộ” để thêm bài mới chỉ bằng 1 chạm · Cài đặt → AI có mục 🎵 Máy nghe nhạc (Đồng bộ / Chọn ổ)"
+      ]
+    },
     {
       "v": "1.0.4-beta.58",
       "d": "19/11/2026",
