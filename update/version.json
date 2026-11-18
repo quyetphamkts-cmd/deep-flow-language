@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.57",
+  "ver": "1.0.4-beta.58",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.58",
+      "d": "19/11/2026",
+      "items": [
+        "📤 Xuất cho máy nghe nhạc theo đúng bộ nhớ máy M15: file zip chứa sẵn thư mục Music/ (bài nghe + lời .lrc) và E-Book/ (bản đọc .txt — máy chỉ tìm sách điện tử trong E-Book) → giải nén thẳng vào ổ máy nghe nhạc là xong"
+      ]
+    },
     {
       "v": "1.0.4-beta.57",
       "d": "18/11/2026",
