@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.46",
+  "ver": "1.0.4-beta.47",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.47",
+      "d": "18/11/2026",
+      "items": [
+        "📤 Xuất cho máy nghe nhạc (menu ⋯ của khoá học / thư mục): mỗi bài thành MP3 + file lời .lrc cùng tên — máy nghe nhạc (vd. MUSIC PLAYER M15) hiện từng câu chạy theo tiếng; chọn lời chỉ ngôn ngữ học, song ngữ, song ngữ tiếng Việt không dấu, hoặc chữ Hán + pinyin + Việt · âm thanh m4a/aac/ogg/webm tự chuyển sang MP3 ngay trên điện thoại · kèm file .txt để đọc bằng mục sách điện tử · tất cả gói trong 1 file .zip"
+      ]
+    },
     {
       "v": "1.0.4-beta.46",
       "d": "14/11/2026",
