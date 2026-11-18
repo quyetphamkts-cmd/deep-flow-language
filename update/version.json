@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.56",
+  "ver": "1.0.4-beta.57",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.57",
+      "d": "18/11/2026",
+      "items": [
+        "📤 Tên thư mục khi xuất cho máy nghe nhạc: mỗi thư mục bài học thành 1 thư mục nằm thẳng trong Music, tên = khoá gốc rút gọn + tên thư mục bài học (vd. “1.OriginalEffortlessEnglishLessons / Level 2 / 2.1.Bad choices” → “1.Original. 2.1.Bad choices”); bài bên trong mang số của thư mục (2.1-001, 2.1-002…) nên danh sách tất cả bài của máy vẫn đúng thứ tự"
+      ]
+    },
     {
       "v": "1.0.4-beta.56",
       "d": "18/11/2026",
