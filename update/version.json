@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.54",
+  "ver": "1.0.4-beta.55",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.55",
+      "d": "18/11/2026",
+      "items": [
+        "⏹ Nút Dừng khi xuất cho máy nghe nhạc: chạm 1 lần là dừng ngay, không làm tiếp — đang xuất thì lưu luôn các bài đã xong thành file zip; đang tạo phụ đề / dịch thì dừng (phụ đề đã tạo vẫn giữ trong app)"
+      ]
+    },
     {
       "v": "1.0.4-beta.54",
       "d": "18/11/2026",
