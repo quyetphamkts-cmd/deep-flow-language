@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.47",
+  "ver": "1.0.4-beta.48",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.48",
+      "d": "18/11/2026",
+      "items": [
+        "📤 Xuất cho máy nghe nhạc theo đúng sách hướng dẫn M15: đánh số 3 chữ số (001, 002…) vì máy xếp bài theo mã ASCII · gắn thẻ ID3 (tên bài, khoá học = Album, số thứ tự) để mục Album/Nghệ sĩ của máy xếp đúng · máy không phát WAV/M4A/WebM → tự chuyển MP3; giữ nguyên MP3, FLAC"
+      ]
+    },
     {
       "v": "1.0.4-beta.47",
       "d": "18/11/2026",
