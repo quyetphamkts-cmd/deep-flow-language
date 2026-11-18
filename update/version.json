@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.55",
+  "ver": "1.0.4-beta.56",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.56",
+      "d": "18/11/2026",
+      "items": [
+        "⏹ Dừng xuất cho máy nghe nhạc: không tạo file nữa — mọi phần đã làm được giữ trên điện thoại (bài đã tải về, phụ đề, bản dịch, và file MP3 đã chuyển được lưu sẵn); lần xuất sau chỉ làm tiếp phần còn lại, bài đã chuyển MP3 không phải chuyển lại"
+      ]
+    },
     {
       "v": "1.0.4-beta.55",
       "d": "18/11/2026",
