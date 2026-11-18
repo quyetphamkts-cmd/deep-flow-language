@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.50",
+  "ver": "1.0.4-beta.51",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.51",
+      "d": "18/11/2026",
+      "items": [
+        "📤 Xuất cho máy nghe nhạc tự tải về các bài chưa có âm thanh trên máy (Google Drive, Cloud, tập podcast) rồi xuất luôn — không cần tải trước; đang dùng 4G/5G thì hỏi trước (kèm dung lượng ước tính), mất mạng thì các bài đó chỉ có bản đọc .txt"
+      ]
+    },
     {
       "v": "1.0.4-beta.50",
       "d": "18/11/2026",
