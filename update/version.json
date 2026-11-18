@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.52",
+  "ver": "1.0.4-beta.53",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.53",
+      "d": "18/11/2026",
+      "items": [
+        "📤 Xuất cho máy nghe nhạc giữ màn hình luôn sáng trong suốt quá trình (tải bài, tạo phụ đề, chuyển MP3, đóng gói) để máy không tắt màn hình làm dừng giữa chừng"
+      ]
+    },
     {
       "v": "1.0.4-beta.52",
       "d": "18/11/2026",
