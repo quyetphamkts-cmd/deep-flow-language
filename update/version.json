@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.63",
+  "ver": "1.0.4-beta.64",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.64",
+      "d": "19/11/2026",
+      "items": [
+        "Bản dịch khớp đúng từng câu: AI chép lại đầu câu gốc để kiểm, câu lệch được dịch lại; tự phát hiện bài bị lệch và dịch lại; thêm “Dịch lại bài này” khi nhấn giữ nút Phụ đề"
+      ]
+    },
     {
       "v": "1.0.4-beta.63",
       "d": "19/11/2026",
