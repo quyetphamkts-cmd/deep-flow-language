@@ -48,26 +48,18 @@ public class KorvaPlugin extends Plugin {
 
     private File dir() { File d = new File(getContext().getFilesDir(), "korva"); d.mkdirs(); return d; }
 
-    private static final String[] NEED = {"duration_predictor.int8.onnx", "text_encoder.int8.onnx", "vocoder.int8.onnx", "tts.json", "unicode_indexer.json", "voices.json"};
-
-    private String vectorFile(String q) {
-        File hq = new File(dir(), "vector_estimator.onnx"), lq = new File(dir(), "vector_estimator.int8.onnx");
-        if ("hq".equals(q) && hq.exists()) return hq.getName();
-        if (lq.exists()) return lq.getName();
-        if (hq.exists()) return hq.getName();
-        return null;
-    }
+    /** bản gốc (fp32) của tác giả — không nén, giữ nguyên chất giọng */
+    private static final String[] NEED = {"duration_predictor.onnx", "text_encoder.onnx", "vector_estimator.onnx", "vocoder.onnx", "tts.json", "unicode_indexer.json", "voices.json"};
 
     @PluginMethod
     public void status(PluginCall call) {
         JSObject r = new JSObject();
         boolean ok = true; long size = 0;
         for (String f : NEED) { File x = new File(dir(), f); if (!x.exists()) ok = false; else size += x.length(); }
-        File hq = new File(dir(), "vector_estimator.onnx"), lq = new File(dir(), "vector_estimator.int8.onnx");
-        if (hq.exists()) size += hq.length();
-        if (lq.exists()) size += lq.length();
-        r.put("installed", ok && (hq.exists() || lq.exists()));
-        r.put("hq", hq.exists()); r.put("lq", lq.exists());
+        r.put("installed", ok);
+        long old = 0; File[] all = dir().listFiles();
+        if (all != null) for (File f : all) if (f.getName().contains(".int8.")) old += f.length();
+        r.put("oldInt8", old);
         r.put("size", size);
         r.put("loaded", engine != null);
         r.put("downloading", dlRunning);
@@ -104,6 +96,8 @@ public class KorvaPlugin extends Plugin {
                     done += fetch(f.getString("url"), dst, done, all, name);
                 }
                 synchronized (this) { if (engine != null) { engine.close(); engine = null; engineKey = ""; } }
+                // xoá bản nén int8 cũ (nếu đã tải trước đây)
+                File[] old = dir().listFiles(); if (old != null) for (File f : old) if (f.getName().contains(".int8.")) f.delete();
                 JSObject r = new JSObject(); r.put("ok", true); call.resolve(r);
             } catch (Exception e) {
                 call.reject(cancelDl ? "cancelled" : (e.getMessage() == null ? e.toString() : e.getMessage()));
@@ -157,15 +151,15 @@ public class KorvaPlugin extends Plugin {
     }
 
     private KorvaEngine eng(String q) throws Exception {
-        String vf = vectorFile(q);
-        if (vf == null) throw new IOException("not_installed");
+        for (String f : NEED) if (!new File(dir(), f).exists()) throw new IOException("not_installed");
+        String vf = "vector_estimator.onnx";
         int thr = Math.max(1, Math.min(4, Runtime.getRuntime().availableProcessors() - 1));
         String key = vf + "|" + thr;
         synchronized (this) {
             if (engine == null || !key.equals(engineKey)) {
                 if (engine != null) engine.close();
                 engine = null; cache.clear();
-                engine = new KorvaEngine(dir(), ".int8", vf, thr);
+                engine = new KorvaEngine(dir(), "", vf, thr);
                 engineKey = key;
             }
             return engine;
