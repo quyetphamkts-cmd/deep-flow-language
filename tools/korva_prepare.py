@@ -22,7 +22,7 @@ for p in sorted(src.rglob("*")):
 
 import onnx
 import onnxruntime as ort
-from onnxruntime.quantization import quantize_dynamic, QuantType
+import onnx.version_converter
 
 for name in ["duration_predictor", "text_encoder", "vector_estimator", "vocoder"]:
     m = onnx.load(str(src / "onnx" / f"{name}.onnx"), load_external_data=False)
@@ -31,7 +31,39 @@ for name in ["duration_predictor", "text_encoder", "vector_estimator", "vocoder"
     print(name, "inputs:", [(i.name, [d.dim_value or d.dim_param for d in i.type.tensor_type.shape.dim]) for i in m.graph.input],
           "outputs:", [o.name for o in m.graph.output], "ops:", dict(sorted(ops.items(), key=lambda x: -x[1])[:12]))
 
-# ---- int8 ----
+# ---- int8 "chỉ trọng số": trọng số Conv/MatMul/Gemm lưu int8 (theo từng kênh) + DequantizeLinear → file nhỏ ~4 lần,
+#      phép tính vẫn bằng float nên chất lượng gần như giữ nguyên ----
+from onnx import numpy_helper, helper, TensorProto
+def wq(srcf, dst):
+    m = onnx.load(str(srcf))
+    op = max([o.version for o in m.opset_import if o.domain in ("", "ai.onnx")] or [0])
+    if op < 13:
+        m = onnx.version_converter.convert_version(m, 13); op = 13
+    inits = {i.name: i for i in m.graph.initializer}
+    uses = {}
+    for n in m.graph.node:
+        for k, x in enumerate(n.input): uses.setdefault(x, []).append((n.op_type, k))
+    new_nodes, done, saved = [], 0, 0
+    for name, init in list(inits.items()):
+        u = uses.get(name, [])
+        if not u or not all((t in ("Conv", "ConvTranspose") and k == 1) or (t in ("MatMul", "Gemm") and k == 1) for t, k in u): continue
+        w = numpy_helper.to_array(init)
+        if w.dtype != np.float32 or w.size < 4096: continue
+        t0 = u[0][0]
+        axis = 0 if t0 == "Conv" else (1 if t0 == "ConvTranspose" else w.ndim - 1)
+        red = tuple(i for i in range(w.ndim) if i != axis)
+        mx = np.max(np.abs(w), axis=red)
+        sc = np.where(mx > 0, mx / 127.0, 1.0).astype(np.float32)
+        shp = [1] * w.ndim; shp[axis] = -1
+        qw = np.clip(np.round(w / sc.reshape(shp)), -127, 127).astype(np.int8)
+        m.graph.initializer.remove(init)
+        m.graph.initializer.extend([numpy_helper.from_array(qw, name + "_q"), numpy_helper.from_array(sc, name + "_s"), numpy_helper.from_array(np.zeros_like(sc, dtype=np.int8), name + "_z")])
+        new_nodes.append(helper.make_node("DequantizeLinear", [name + "_q", name + "_s", name + "_z"], [name], name=name + "_dq", axis=axis))
+        done += 1; saved += w.nbytes - qw.nbytes
+    for nd in reversed(new_nodes): m.graph.node.insert(0, nd)
+    onnx.save(m, str(dst))
+    print(f"int8w {srcf.name}: {done} weights, opset {op}, {srcf.stat().st_size/1e6:.1f} -> {dst.stat().st_size/1e6:.1f} MB")
+
 q = Path("q"); (q / "onnx").mkdir(parents=True, exist_ok=True)
 shutil.copytree(src / "voice_styles", q / "voice_styles", dirs_exist_ok=True)
 for f in (src / "onnx").iterdir():
@@ -39,10 +71,10 @@ for f in (src / "onnx").iterdir():
 for name in ["duration_predictor", "text_encoder", "vector_estimator", "vocoder"]:
     srcf = src / "onnx" / f"{name}.onnx"; dst = q / "onnx" / f"{name}.onnx"
     try:
-        quantize_dynamic(str(srcf), str(dst), weight_type=QuantType.QInt8, op_types_to_quantize=["MatMul", "Gemm"], per_channel=True)
-        print("int8", name, f"{srcf.stat().st_size/1e6:.1f} → {dst.stat().st_size/1e6:.1f} MB")
+        wq(srcf, dst)
+        ort.InferenceSession(str(dst), providers=["CPUExecutionProvider"])
     except Exception as e:
-        print("int8 FAILED", name, e); shutil.copy(srcf, dst)
+        print("int8w FAILED", name, repr(e)[:400]); shutil.copy(srcf, dst)
 
 from korvatts import TTS
 texts = ["Xin chào, hôm nay chúng ta học bài mới.", "Đó là lúc năm giờ và Allen đang đi mô tô ở San Francisco."]
@@ -69,13 +101,10 @@ for v in voices:
     wav, _ = t.synthesize("Xin chào! Mình là giọng đọc tiếng Việt. Hết mỗi câu tiếng Anh, mình sẽ đọc bản dịch cho bạn nghe.", voice=v, total_steps=16, seed=3)
     sf.write(SAMP / f"{v}.wav", wav, t.sample_rate)
 
-# ---- gói cho app ----
-for name in ["duration_predictor", "text_encoder", "vocoder"]:
-    a, b = src / "onnx" / f"{name}.onnx", q / "onnx" / f"{name}.onnx"
-    shutil.copy(a, OUT / f"{name}.onnx")            # phần nhỏ: giữ bản gốc cho chắc chất lượng
-    shutil.copy(b, OUT / f"{name}.int8.onnx")
-shutil.copy(src / "onnx" / "vector_estimator.onnx", OUT / "vector_estimator.onnx")
-shutil.copy(q / "onnx" / "vector_estimator.onnx", OUT / "vector_estimator.int8.onnx")
+# ---- gói cho app: bản int8 (nhẹ) cho cả 4 phần + bản gốc của vector_estimator (chất lượng cao, tuỳ chọn) ----
+for name in ["duration_predictor", "text_encoder", "vector_estimator", "vocoder"]:
+    shutil.copy(q / "onnx" / f"{name}.onnx", OUT / f"{name}.int8.onnx")
+    shutil.copy(src / "onnx" / f"{name}.onnx", OUT / f"{name}.onnx")
 for f in ["tts.json", "unicode_indexer.json"]: shutil.copy(src / "onnx" / f, OUT / f)
 allv = {}
 for v in voices:

@@ -37,7 +37,7 @@ public class KorvaEngine implements AutoCloseable {
     private final Map<String, float[][]> voices = new LinkedHashMap<>();
     private final long[] ttlShape, dpShape;
 
-    public KorvaEngine(File dir, String vectorFile, int threads) throws Exception {
+    public KorvaEngine(File dir, String suffix, String vectorFile, int threads) throws Exception {
         JSONObject cfg = new JSONObject(read(new File(dir, "tts.json")));
         sampleRate = cfg.getJSONObject("ae").getInt("sample_rate");
         baseChunk = cfg.getJSONObject("ae").getInt("base_chunk_size");
@@ -61,10 +61,10 @@ public class KorvaEngine implements AutoCloseable {
         OrtSession.SessionOptions o = new OrtSession.SessionOptions();
         if (threads > 0) o.setIntraOpNumThreads(threads);
         o.setOptimizationLevel(OrtSession.SessionOptions.OptLevel.ALL_OPT);
-        dp = env.createSession(new File(dir, "duration_predictor.onnx").getAbsolutePath(), o);
-        te = env.createSession(new File(dir, "text_encoder.onnx").getAbsolutePath(), o);
+        dp = env.createSession(new File(dir, "duration_predictor" + suffix + ".onnx").getAbsolutePath(), o);
+        te = env.createSession(new File(dir, "text_encoder" + suffix + ".onnx").getAbsolutePath(), o);
         ve = env.createSession(new File(dir, vectorFile).getAbsolutePath(), o);
-        voc = env.createSession(new File(dir, "vocoder.onnx").getAbsolutePath(), o);
+        voc = env.createSession(new File(dir, "vocoder" + suffix + ".onnx").getAbsolutePath(), o);
     }
 
     public List<String> voiceNames() { return new ArrayList<>(voices.keySet()); }
@@ -253,10 +253,10 @@ public class KorvaEngine implements AutoCloseable {
         for (OrtSession s : new OrtSession[]{dp, te, ve, voc}) try { if (s != null) s.close(); } catch (OrtException ignored) {}
     }
 
-    /** chạy thử trên máy tính: java KorvaEngine <thư mục> <file vector_estimator> <giọng> <số bước> "<câu>" <ra.wav> */
+    /** chạy thử trên máy tính: java KorvaEngine <thư mục> <"" hoặc ".int8"> <giọng> <số bước> "<câu>" <ra.wav> */
     public static void main(String[] a) throws Exception {
         long t0 = System.currentTimeMillis();
-        try (KorvaEngine e = new KorvaEngine(new File(a[0]), a[1], 4)) {
+        try (KorvaEngine e = new KorvaEngine(new File(a[0]), a[1], "vector_estimator" + a[1] + ".onnx", 4)) {
             long t1 = System.currentTimeMillis();
             System.out.println("voices=" + e.voiceNames() + " load_ms=" + (t1 - t0));
             System.out.println("norm=" + normalize(a[4], "vi") + " ids=" + e.ids(normalize(a[4], "vi")).length);
