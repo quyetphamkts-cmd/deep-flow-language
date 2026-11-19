@@ -1,9 +1,6 @@
 name: KorvaTTS bench
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['tools/korva/bench.py', '.github/workflows/korva-bench.yml']
 jobs:
   bench:
     runs-on: ubuntu-latest

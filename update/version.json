@@ -1,16 +1,23 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.61",
+  "ver": "1.0.4-beta.62",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 36,
-    "versionName": "1.0.2-beta.68",
+    "versionCode": 37,
+    "versionName": "1.0.2-beta.69",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.62",
+      "d": "19/11/2026",
+      "items": [
+        "10 giọng tiếng Việt KorvaTTS chạy ngay trên máy (tải 1 lần ~122 MB): Cài đặt → Giọng đọc tiếng Việt → Chọn giọng; đọc trước câu sắp tới"
+      ]
+    },
     {
       "v": "1.0.4-beta.61",
       "d": "19/11/2026",

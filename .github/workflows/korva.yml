@@ -3,13 +3,7 @@ name: KorvaTTS voices
 # Tải giọng tiếng Việt KorvaTTS (Apache-2.0) từ Hugging Face, lượng tử hoá int8, đo tốc độ / chất lượng,
 # chạy thử bản Java của app, rồi đưa các file lên GitHub Release "korva-v1" để app tải về máy.
 on:
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/korva_prepare.py'
-      - 'tools/korva/**'
-      - '.github/workflows/korva.yml'
+  workflow_dispatch:   # chạy tay khi cần làm lại bộ giọng
 
 permissions:
   contents: write
@@ -36,7 +30,7 @@ jobs:
           mkdir -p jl jb
           curl -sSL -o jl/ort.jar https://repo1.maven.org/maven2/com/microsoft/onnxruntime/onnxruntime/1.22.0/onnxruntime-1.22.0.jar
           curl -sSL -o jl/json.jar https://repo1.maven.org/maven2/org/json/json/20240303/json-20240303.jar
-          javac -cp "jl/*" -d jb tools/korva/KorvaEngine.java
+          javac -cp "jl/*" -d jb android/app/src/main/java/vn/vietan/deepflow/KorvaEngine.java
           for v in "" ".int8"; do
             echo "== fp32$v"; java -cp "jb:jl/*" vn.vietan.deepflow.KorvaEngine out "$v" khanh_vy 16 "Đó là lúc năm giờ và Allen đang đi mô tô ở San Francisco." samples/java$v.wav 2>&1 | tee -a java.log
           done

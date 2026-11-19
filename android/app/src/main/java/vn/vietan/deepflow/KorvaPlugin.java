@@ -48,7 +48,7 @@ public class KorvaPlugin extends Plugin {
 
     private File dir() { File d = new File(getContext().getFilesDir(), "korva"); d.mkdirs(); return d; }
 
-    private static final String[] NEED = {"duration_predictor.onnx", "text_encoder.onnx", "vocoder.onnx", "tts.json", "unicode_indexer.json", "voices.json"};
+    private static final String[] NEED = {"duration_predictor.int8.onnx", "text_encoder.int8.onnx", "vocoder.int8.onnx", "tts.json", "unicode_indexer.json", "voices.json"};
 
     private String vectorFile(String q) {
         File hq = new File(dir(), "vector_estimator.onnx"), lq = new File(dir(), "vector_estimator.int8.onnx");
@@ -165,7 +165,7 @@ public class KorvaPlugin extends Plugin {
             if (engine == null || !key.equals(engineKey)) {
                 if (engine != null) engine.close();
                 engine = null; cache.clear();
-                engine = new KorvaEngine(dir(), vf, thr);
+                engine = new KorvaEngine(dir(), ".int8", vf, thr);
                 engineKey = key;
             }
             return engine;
@@ -201,9 +201,14 @@ public class KorvaPlugin extends Plugin {
         worker.execute(() -> { synchronized (this) { if (engine != null) { engine.close(); engine = null; engineKey = ""; } } synchronized (cache) { cache.clear(); } call.resolve(); });
     }
 
+    private final AtomicInteger preGen = new AtomicInteger();
+
     @PluginMethod
     public void prefetch(PluginCall call) {
+        final int g = preGen.incrementAndGet();
         worker.execute(() -> {
+            // tua nhanh qua nhiều câu → bỏ các câu đọc trước đã cũ, chỉ giữ 2 câu mới nhất
+            if (preGen.get() - g >= 2) { call.resolve(); return; }
             try { long t = System.currentTimeMillis(); get(call, null); JSObject r = new JSObject(); r.put("ms", System.currentTimeMillis() - t); call.resolve(r); }
             catch (Throwable e) { call.reject(String.valueOf(e.getMessage())); }
         });
