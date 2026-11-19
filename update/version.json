@@ -1,16 +1,23 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.59",
+  "ver": "1.0.4-beta.60",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 35,
-    "versionName": "1.0.2-beta.67",
+    "versionCode": 36,
+    "versionName": "1.0.2-beta.68",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.60",
+      "d": "19/11/2026",
+      "items": [
+        "Giọng tiếng Việt: nghe song ngữ (hết câu → giọng Việt đọc bản dịch), đọc nghĩa từ, đọc lời giải bài kiểm tra, MP3 song ngữ cho máy nghe nhạc"
+      ]
+    },
     {
       "v": "1.0.4-beta.59",
       "d": "19/11/2026",
