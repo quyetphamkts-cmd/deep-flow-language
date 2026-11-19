@@ -1,0 +1,61 @@
+name: KorvaTTS voices
+
+# Tải giọng tiếng Việt KorvaTTS (Apache-2.0) từ Hugging Face, lượng tử hoá int8, đo tốc độ / chất lượng,
+# chạy thử bản Java của app, rồi đưa các file lên GitHub Release "korva-v1" để app tải về máy.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/korva_prepare.py'
+      - 'tools/korva/**'
+      - '.github/workflows/korva.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Cài thư viện
+        run: pip install korvatts==0.1.3 onnx onnxruntime==1.22.0 soundfile numpy huggingface_hub
+      - name: Tải, lượng tử hoá, đo
+        run: python tools/korva_prepare.py 2>&1 | tee prepare.log
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Chạy thử bản Java (giống trong app)
+        run: |
+          mkdir -p jl jb
+          curl -sSL -o jl/ort.jar https://repo1.maven.org/maven2/com/microsoft/onnxruntime/onnxruntime/1.22.0/onnxruntime-1.22.0.jar
+          curl -sSL -o jl/json.jar https://repo1.maven.org/maven2/org/json/json/20240303/json-20240303.jar
+          javac -cp "jl/*" -d jb tools/korva/KorvaEngine.java
+          for v in vector_estimator.onnx vector_estimator.int8.onnx; do
+            echo "== $v"; java -cp "jb:jl/*" vn.vietan.deepflow.KorvaEngine out $v khanh_vy 16 "Đó là lúc năm giờ và Allen đang đi mô tô ở San Francisco." samples/java_$v.wav 2>&1 | tee -a java.log
+          done
+      - name: Mẫu giọng MP3
+        run: |
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          for f in samples/*.wav; do ffmpeg -loglevel error -y -i "$f" -ac 1 -b:a 64k "${f%.wav}.mp3"; done
+          for f in samples/*.mp3; do b=$(basename "$f"); case "$b" in cmp_*|java_*) ;; *) cp "$f" "out/sample_$b";; esac; done
+          ls -la out samples
+      - uses: actions/upload-artifact@v4
+        with:
+          name: korva-report
+          path: |
+            prepare.log
+            java.log
+            samples/*.mp3
+      - name: Đưa lên GitHub Release korva-v1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view korva-v1 >/dev/null 2>&1 || gh release create korva-v1 --title "KorvaTTS voices (Apache-2.0)" --notes "Giọng đọc tiếng Việt KorvaTTS (https://huggingface.co/dogenthq/KorvaTTS, Apache-2.0; kiến trúc Supertonic, MIT) — bản ONNX gốc + bản int8 cho app Deep Flow. Xem các file KorvaTTS-LICENSE / NOTICE."
+          gh release upload korva-v1 out/* --clobber
