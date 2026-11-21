@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.80",
+  "ver": "1.0.4-beta.81",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.81",
+      "d": "22/11/2026",
+      "items": [
+        "Sửa lỗi bài thêm từ link web (Pháp thoại) bị coi là “không có âm thanh” và tự dọn vào thùng rác; tự khôi phục các bài đã bị dọn nhầm về đúng khoá / thư mục"
+      ]
+    },
     {
       "v": "1.0.4-beta.80",
       "d": "22/11/2026",
