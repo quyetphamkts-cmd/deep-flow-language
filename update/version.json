@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.83",
+  "ver": "1.0.4-beta.84",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.84",
+      "d": "22/11/2026",
+      "items": [
+        "Sửa lỗi khoá học mới tạo bị mất và bài bị đẩy về “Bài chưa sắp xếp”: đồng bộ Drive gộp theo từng khoá (không ghi đè cả danh sách), đồng bộ không tạo bản sao cũ của bài Pháp thoại / ngôn ngữ khác; tự khôi phục khoá học bị mất và trả bài về"
+      ]
+    },
     {
       "v": "1.0.4-beta.83",
       "d": "22/11/2026",
