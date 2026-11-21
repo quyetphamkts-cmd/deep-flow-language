@@ -1,16 +1,23 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.77",
+  "ver": "1.0.4-beta.78",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 38,
-    "versionName": "1.0.2-beta.70",
+    "versionCode": 39,
+    "versionName": "1.0.2-beta.71",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.78",
+      "d": "21/11/2026",
+      "items": [
+        "Gộp “chọn file” và “chọn thư mục” thành 1: 📂 Chọn từ máy — duyệt thư mục ngay trong app, tích chọn lẫn file và thư mục (1 hoặc nhiều, ở nhiều chỗ), giữ nguyên thư mục con"
+      ]
+    },
     {
       "v": "1.0.4-beta.77",
       "d": "21/11/2026",
