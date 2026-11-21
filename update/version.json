@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.82",
+  "ver": "1.0.4-beta.83",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.83",
+      "d": "22/11/2026",
+      "items": [
+        "Link Diệu Pháp Âm: đọc danh sách bài chắc chắn hơn (gửi kèm trang gốc, giải mã nội dung trả về dạng tệp), tên bài gọn (bỏ .mp3, dấu _); dán thẳng link danh sách .list cũng được"
+      ]
+    },
     {
       "v": "1.0.4-beta.82",
       "d": "22/11/2026",
