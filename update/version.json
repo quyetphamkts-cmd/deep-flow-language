@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.79",
+  "ver": "1.0.4-beta.80",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.80",
+      "d": "22/11/2026",
+      "items": [
+        "Thứ tự sắp xếp không còn bị nhảy: sắp xếp ở 1 mục không xoá thứ tự của mục khác (Khoá học / Podcast / Pháp thoại / ngôn ngữ khác); dọn dữ liệu không xoá nhầm thư mục của mục đang ẩn; đồng bộ Drive giữ thứ tự bạn sắp gần nhất"
+      ]
+    },
     {
       "v": "1.0.4-beta.79",
       "d": "22/11/2026",
