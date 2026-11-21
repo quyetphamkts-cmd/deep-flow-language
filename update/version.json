@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.64",
+  "ver": "1.0.4-beta.65",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.65",
+      "d": "21/11/2026",
+      "items": [
+        "Podcast: tập lạc trong “Bài chưa sắp xếp” tự về lại đúng kênh hoặc gom theo tên kênh; ẩn kênh thì hỏi xoá các tập chưa nghe"
+      ]
+    },
     {
       "v": "1.0.4-beta.64",
       "d": "19/11/2026",
