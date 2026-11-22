@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.96",
+  "ver": "1.0.4-beta.97",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.97",
+      "d": "23/11/2026",
+      "items": [
+        "Diệu Pháp Âm: 🔄 Đối chiếu cả danh mục (mọi trang) — thêm bù tác phẩm còn thiếu, báo tác phẩm lỗi + lý do, thử lại; sửa hộp xác nhận bị che dưới bảng"
+      ]
+    },
     {
       "v": "1.0.4-beta.96",
       "d": "23/11/2026",
