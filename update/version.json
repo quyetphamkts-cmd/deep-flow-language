@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.95",
+  "ver": "1.0.4-beta.96",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.96",
+      "d": "23/11/2026",
+      "items": [
+        "Diệu Pháp Âm: nhận đúng khoá Thiền / Tịnh độ… anh tự tạo (so tên không phân biệt kiểu gõ dấu, emoji), gộp khoá trùng app đã tạo vào khoá của anh, xếp các khoá theo thứ tự danh mục"
+      ]
+    },
     {
       "v": "1.0.4-beta.95",
       "d": "23/11/2026",
