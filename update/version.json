@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.88",
+  "ver": "1.0.4-beta.89",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.89",
+      "d": "22/11/2026",
+      "items": [
+        "Sửa lỗi tua bài nghe từ link web (Diệu Pháp Âm): máy chủ không cho tua khi phát trực tiếp → app tải bài về máy rồi tua đúng chỗ; tải nền xong tự chuyển sang bản trên máy để tua thoải mái"
+      ]
+    },
     {
       "v": "1.0.4-beta.88",
       "d": "22/11/2026",
