@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.89",
+  "ver": "1.0.4-beta.90",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.90",
+      "d": "22/11/2026",
+      "items": [
+        "Pháp thoại: duyệt thư viện Diệu Pháp Âm ngay trong app (chủ đề → danh sách tác phẩm → ＋ Thêm), chọn khoá / thư mục để thêm vào"
+      ]
+    },
     {
       "v": "1.0.4-beta.89",
       "d": "22/11/2026",
