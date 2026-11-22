@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.85",
+  "ver": "1.0.4-beta.86",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.86",
+      "d": "22/11/2026",
+      "items": [
+        "Pháp thoại: bỏ thanh tiến độ, % xong và dòng thông tin (i); “Đang học” → “Đang nghe”, bài chưa nghe không hiện nhãn"
+      ]
+    },
     {
       "v": "1.0.4-beta.85",
       "d": "22/11/2026",
