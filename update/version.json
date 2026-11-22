@@ -1,6 +1,6 @@
 {
   "web": "1.0.4",
-  "ver": "1.0.4-beta.90",
+  "ver": "1.0.4-beta.91",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.4-beta.91",
+      "d": "23/11/2026",
+      "items": [
+        "Pháp thoại: ẩn nút ⋯, nhấn giữ bài/khoá học/thư mục mở menu, mục ☑️ Chọn để di chuyển/sắp xếp (hiện ☰); số album · số bài cùng hàng tên khoá học. Diệu Pháp Âm: tạo sẵn khoá học theo danh mục, tự xếp bài vào đúng khoá, thêm cả trang"
+      ]
+    },
     {
       "v": "1.0.4-beta.90",
       "d": "22/11/2026",
