@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.1",
+  "ver": "1.0.5-beta.2",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.2",
+      "d": "23/11/2026",
+      "items": [
+        "Tìm kiếm: bấm bài / thư mục mở đúng chỗ chứa — kể cả bài bị gắn nhầm vào khoá của mục khác (nay hiện trong Bài chưa sắp xếp thay vì bị ẩn)"
+      ]
+    },
     {
       "v": "1.0.5-beta.1",
       "d": "23/11/2026",
