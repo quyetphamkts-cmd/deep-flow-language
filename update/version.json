@@ -1,6 +1,6 @@
 {
-  "web": "1.0.4",
-  "ver": "1.0.4-beta.99",
+  "web": "1.0.5",
+  "ver": "1.0.5-beta.1",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.1",
+      "d": "23/11/2026",
+      "items": [
+        "Pháp thoại: giao diện thư viện gọn — bỏ tam giác, số album · bài canh phải sát nút mở rộng, tên bài dài chạy chữ trên 1 dòng, khoảng cách nhỏ hơn, chỉ kẻ vạch khi mở rộng, thư mục con thụt lề"
+      ]
+    },
     {
       "v": "1.0.4-beta.99",
       "d": "23/11/2026",
