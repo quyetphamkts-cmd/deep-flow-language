@@ -1,16 +1,23 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.2",
+  "ver": "1.0.5-beta.3",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
   "apk": {
-    "versionCode": 39,
-    "versionName": "1.0.2-beta.71",
+    "versionCode": 40,
+    "versionName": "1.0.2-beta.72",
     "required": false,
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.3",
+      "d": "23/11/2026",
+      "items": [
+        "Pháp thoại: bài nghe từ web tải thẳng về máy (app Android mới) rồi tự tạo phụ đề, báo rõ khi không tải được; mở lại app đúng bài đang nghe; kéo thư mục: mục được kéo dính dưới ngón tay khi tự cuộn, chọn nhiều thì gom thành 1 chồng, chỗ thả mở khe đúng 1 ô"
+      ]
+    },
     {
       "v": "1.0.5-beta.2",
       "d": "23/11/2026",

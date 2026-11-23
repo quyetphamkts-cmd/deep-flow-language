@@ -39,6 +39,7 @@ import java.util.concurrent.Executors;
 public class LocalFilesPlugin extends Plugin {
     static final String PREFS = "deepflow", KEY = "lfRoots";
     private final ExecutorService io = Executors.newSingleThreadExecutor();
+    private final ExecutorService net = Executors.newFixedThreadPool(2);
 
     private SharedPreferences prefs() { return getContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE); }
 
@@ -162,6 +163,40 @@ public class LocalFilesPlugin extends Plugin {
                 }
                 JSObject r = new JSObject(); r.put("path", f.getAbsolutePath()); r.put("size", f.length()); call.resolve(r);
             } catch (Exception e) { call.reject("Không đọc được file: " + e.getMessage()); }
+        });
+    }
+
+    /** tải 1 file từ mạng thẳng vào bộ nhớ đệm của app (theo chuyển hướng, có tiến độ) → trả đường dẫn file; không chuyển dữ liệu lớn qua cầu nối */
+    @PluginMethod
+    public void download(PluginCall call) {
+        String url = call.getString("url"), name = call.getString("name", "audio"), ref = call.getString("referer", null);
+        net.execute(() -> {
+            java.net.HttpURLConnection c = null;
+            try {
+                File dir = new File(getContext().getCacheDir(), "lf"); dir.mkdirs();
+                File f = new File(dir, System.nanoTime() + "_" + name.replaceAll("[\\\\/:*?\"<>|]", "_"));
+                String u = url; int hops = 0;
+                while (true) {
+                    c = (java.net.HttpURLConnection) new java.net.URL(u).openConnection();
+                    c.setConnectTimeout(20000); c.setReadTimeout(60000); c.setInstanceFollowRedirects(false);
+                    c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Mobile Safari/537.36");
+                    if (ref != null) c.setRequestProperty("Referer", ref);
+                    int code = c.getResponseCode();
+                    if (code >= 300 && code < 400 && c.getHeaderField("Location") != null && hops++ < 8) { u = new java.net.URL(new java.net.URL(u), c.getHeaderField("Location")).toString(); c.disconnect(); continue; }
+                    if (code != 200) throw new Exception("máy chủ trả mã " + code);
+                    break;
+                }
+                long total = c.getContentLengthLong(), got = 0, lastEv = 0;
+                try (InputStream in = c.getInputStream(); OutputStream out = new FileOutputStream(f)) {
+                    byte[] buf = new byte[1 << 16]; int n;
+                    while ((n = in.read(buf)) > 0) {
+                        out.write(buf, 0, n); got += n;
+                        if (got - lastEv > (1 << 20)) { lastEv = got; JSObject ev = new JSObject(); ev.put("url", url); ev.put("loaded", got); ev.put("total", total); notifyListeners("dl", ev); }
+                    }
+                }
+                JSObject r = new JSObject(); r.put("path", f.getAbsolutePath()); r.put("size", f.length()); r.put("type", c.getContentType()); call.resolve(r);
+            } catch (Exception e) { call.reject("Không tải được: " + e.getMessage()); }
+            finally { if (c != null) c.disconnect(); }
         });
     }
 
