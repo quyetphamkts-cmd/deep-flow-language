@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.4",
+  "ver": "1.0.5-beta.5",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.5",
+      "d": "23/11/2026",
+      "items": [
+        "Không tự chạy lại 'thêm bài từ Cloud' mỗi lần mở app (thử lại 1 lần rồi báo mục lỗi); trả khoá học Pháp thoại bị đồng bộ nhầm sang mục Khoá học về đúng chỗ"
+      ]
+    },
     {
       "v": "1.0.5-beta.4",
       "d": "23/11/2026",
