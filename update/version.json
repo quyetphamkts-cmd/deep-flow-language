@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.12",
+  "ver": "1.0.5-beta.13",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.13",
+      "d": "23/11/2026",
+      "items": [
+        "Bản dịch lệch dòng: phát hiện thêm bằng độ dài câu (không cần tên riêng / số) → tự dịch lại; dịch lại thì bỏ cả bản dịch cũ gắn theo thời gian; lưu khớp thời gian không ghi đè bản dịch đúng"
+      ]
+    },
     {
       "v": "1.0.5-beta.12",
       "d": "23/11/2026",
