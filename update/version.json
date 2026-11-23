@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.3",
+  "ver": "1.0.5-beta.4",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.4",
+      "d": "23/11/2026",
+      "items": [
+        "Phát ở cấp nào tự động ở cấp đó: Phát cả khoá học → hết bài chuyển sang bài kế trong khoá (qua các thư mục); thư mục → trong thư mục; Pháp thoại tự tải trước + tạo phụ đề cho 2 bài sắp nghe trong phạm vi đang phát"
+      ]
+    },
     {
       "v": "1.0.5-beta.3",
       "d": "23/11/2026",
