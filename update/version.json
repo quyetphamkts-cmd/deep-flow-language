@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.14",
+  "ver": "1.0.5-beta.15",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.15",
+      "d": "23/11/2026",
+      "items": [
+        "Song ngữ: khớp lời với âm thanh trước rồi mới dịch — chờ đối chiếu xong mới dịch; câu bị sửa / tách / gộp khi khớp thì dịch lại đúng câu đó; bản dịch theo đúng câu luôn được ưu tiên hơn bản dịch gắn theo thời gian cũ"
+      ]
+    },
     {
       "v": "1.0.5-beta.14",
       "d": "23/11/2026",
