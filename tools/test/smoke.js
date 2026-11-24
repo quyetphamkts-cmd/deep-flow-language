@@ -60,6 +60,11 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
       S.viOnly=true;voStart();await new Promise(r=>setTimeout(r,9000));voStop();window.Audio=A0;S.viOnly=false;
       const st=_voT.filter(x=>x>0),en=_voT.filter(x=>x<0).map(x=>-x);const gaps=[];for(let k=0;k+1<st.length;k++)gaps.push(st[k+1]-en[k]);return {n:st.length,gaps};});
     check('chỉ nghe bản dịch: đọc đủ các câu',r.n>=4,'mới đọc '+r.n+' câu');console.log('   khoảng nghỉ giữa câu: '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));check('chỉ nghe bản dịch: không ngắt quãng (khoảng nghỉ < 0,45 s)',r.gaps.length&&Math.max(...r.gaps)<450,'khoảng nghỉ '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));}
+  // khoá API còn nguyên sau khi mở lại app / cập nhật, kể cả khi cài đặt bị ghi đè
+  await p.reload();await p.waitForTimeout(4000);check('khoá Google còn sau khi mở lại app',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
+  await p.evaluate(()=>{const o=JSON.parse(localStorage.getItem('engamp'));delete o.gcKey;localStorage.setItem('engamp',JSON.stringify(o));});await p.reload();await p.waitForTimeout(4000);
+  check('khoá Google còn khi cài đặt bị ghi đè',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
+  check('khoá Google hiện trong Cài đặt → AI',await p.evaluate(()=>{const r=document.querySelector('.keyrow[data-k="gcKey"] .kval');return !!r&&/AIza/.test(r.textContent);}));
   check('không có lỗi JS',errs.length===0,errs.join(' | '));
   console.log('✓ '+ok.length+' bước đạt');if(fails.length){console.log('✗ '+fails.length+' bước LỖI:\n  '+fails.join('\n  '));}
   await b.close();process.exit(fails.length?1:0);})();

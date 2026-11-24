@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.23",
+  "ver": "1.0.5-beta.24",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.24",
+      "d": "24/11/2026",
+      "items": [
+        "Khoá Google Cloud TTS: lưu như các API key khác (Cài đặt → AI, đồng bộ lên tài khoản Google, có bản lưu dự phòng trên máy) — không mất khi cập nhật / đồng bộ"
+      ]
+    },
     {
       "v": "1.0.5-beta.23",
       "d": "24/11/2026",
