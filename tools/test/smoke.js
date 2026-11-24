@@ -12,6 +12,7 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
     if(u.includes('texttospeech.googleapis.com/v1/voices'))return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({voices:[{name:'vi-VN-Chirp3-HD-Aoede',ssmlGender:'FEMALE'},{name:'vi-VN-Chirp3-HD-Charon',ssmlGender:'MALE'}]})});
     if(u.includes('text:synthesize'))return new Promise(res=>setTimeout(()=>res(r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({audioContent:wavS.toString('base64')})})),400));
     if(u.includes('media.test'))return r.fulfill({status:200,contentType:'audio/wav',body:wav});
+    if(u.includes('api.github.com')&&u.includes('korva'))return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({assets:['gia_bao','khanh_vy','bao_kim'].map(v=>({name:'sample_'+v+'.mp3',browser_download_url:'https://media.test/s_'+v+'.wav',size:1000}))})});
     return r.abort();});
   // phần tử ở giữa có thật sự hiện trên cùng (không bị bảng khác che)?
   const onTop=sel=>p.evaluate(s=>{const e=document.querySelector(s);if(!e||!e.offsetParent)return 'không hiện';const r=e.getBoundingClientRect();const t=document.elementFromPoint(r.left+r.width/2,r.top+Math.min(r.height/2,20));return t&&(t===e||e.contains(t))?true:'bị che bởi '+(t?(t.id||t.className||t.tagName):'?');},sel);
@@ -60,11 +61,34 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
       S.viOnly=true;voStart();await new Promise(r=>setTimeout(r,9000));voStop();window.Audio=A0;S.viOnly=false;
       const st=_voT.filter(x=>x>0),en=_voT.filter(x=>x<0).map(x=>-x);const gaps=[];for(let k=0;k+1<st.length;k++)gaps.push(st[k+1]-en[k]);return {n:st.length,gaps};});
     check('chỉ nghe bản dịch: đọc đủ các câu',r.n>=4,'mới đọc '+r.n+' câu');console.log('   khoảng nghỉ giữa câu: '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));check('chỉ nghe bản dịch: không ngắt quãng (khoảng nghỉ < 0,45 s)',r.gaps.length&&Math.max(...r.gaps)<450,'khoảng nghỉ '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));}
+  // KorvaTTS (giả lập đúng cách app Android chạy: 1 luồng tạo giọng — mỗi câu 400 ms, phát trên luồng riêng 600 ms)
+  await p.evaluate(()=>{const W=[];let busy=Promise.resolve();const cache=new Set();const q=f=>{const r=busy.then(f);busy=r.catch(()=>{});return r;};const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+    window._kvLog=[];window.dfKorva={status:async()=>({installed:true,size:4e8}),load:async()=>({ms:10}),stop:async()=>{},addListener:async()=>({remove(){}}),
+      prefetch:o=>q(async()=>{if(!cache.has(o.text)){await sleep(400);cache.add(o.text);}_kvLog.push(['pre',o.text,performance.now()]);}),
+      speak:o=>q(async()=>{if(!cache.has(o.text)){await sleep(400);cache.add(o.text);}}).then(async()=>{_kvLog.push(['play',o.text,performance.now(),o.voice]);await sleep(600);_kvLog.push(['end',o.text,performance.now()]);})};
+    KV.st={installed:true,size:4e8};KV.loading=null;});
+  await p.evaluate(()=>{showView('vSet');setTimeout(()=>viPickAll(),0);});await p.waitForTimeout(700);
+  if(await p.locator('[data-vp="kv:bao_kim"]').count()){await p.locator('[data-vp="kv:bao_kim"]').scrollIntoViewIfNeeded();await p.tap('[data-vp="kv:bao_kim"]');await p.waitForTimeout(1500);
+    const r=await p.evaluate(()=>({sel:S.viEng+':'+S.viVoice,open:document.querySelector('#mSheet').classList.contains('on'),ask:document.querySelector('#mAsk').classList.contains('on'),said:_kvLog.some(x=>x[0]==='play'&&x[3]==='bao_kim')}));
+    check('Korva (đã tải): chạm → nghe ngay + chọn, bảng vẫn mở, không hỏi',r.sel==='korva:bao_kim'&&r.open&&!r.ask&&r.said,JSON.stringify(r));}
+  await p.evaluate(()=>closeModals());
+  {const r=await p.evaluate(async()=>{const t=tracks.find(x=>x.id==='vo1');if(!t)return {n:0,gaps:[]};await loadTrack(t,false);audio.muted=true;_kvLog.length=0;S.viEng='korva';S.viVoice='bao_kim';S.viOnly=true;voStart();await new Promise(r=>setTimeout(r,6500));voStop();S.viOnly=false;
+      const pl=_kvLog.filter(x=>x[0]==='play'),en=_kvLog.filter(x=>x[0]==='end');const gaps=[];for(let k=0;k+1<pl.length;k++)gaps.push(pl[k+1][2]-en[k][2]);return {n:pl.length,gaps};});
+    console.log('   Korva — khoảng nghỉ giữa câu: '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));
+    check('Korva chỉ nghe bản dịch: không ngắt quãng (< 0,45 s)',r.n>=4&&Math.max(...r.gaps)<450,'đọc '+r.n+' câu, khoảng nghỉ '+r.gaps.map(x=>Math.round(x)).join(','));}
+  // Korva chưa tải: chạm chỉ nghe mẫu, không bật hộp hỏi
+  await p.evaluate(()=>{window.dfKorva.status=async()=>({installed:false});KV.st={installed:false};S.viEng='sys';setTimeout(()=>viPickAll(),0);});await p.waitForTimeout(700);
+  if(await p.locator('[data-vp="kv:gia_bao"]').count()){await p.locator('[data-vp="kv:gia_bao"]').scrollIntoViewIfNeeded();await p.tap('[data-vp="kv:gia_bao"]');await p.waitForTimeout(900);
+    const r=await p.evaluate(()=>({ask:document.querySelector('#mAsk').classList.contains('on'),open:document.querySelector('#mSheet').classList.contains('on'),dl:!!document.querySelector('[data-vpa="kvdl"]'),pv:!!document.querySelector('[data-vp="kv:gia_bao"].pv')}));
+    check('Korva (chưa tải): chạm → nghe mẫu tại chỗ, không hỏi, có nút tải',!r.ask&&r.open&&r.dl&&r.pv,JSON.stringify(r));}
+  await p.evaluate(()=>{closeModals();delete window.dfKorva;S.viEng='gcloud';});
   // khoá API còn nguyên sau khi mở lại app / cập nhật, kể cả khi cài đặt bị ghi đè
   await p.reload();await p.waitForTimeout(4000);check('khoá Google còn sau khi mở lại app',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
   await p.evaluate(()=>{const o=JSON.parse(localStorage.getItem('engamp'));delete o.gcKey;localStorage.setItem('engamp',JSON.stringify(o));});await p.reload();await p.waitForTimeout(4000);
   check('khoá Google còn khi cài đặt bị ghi đè',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
   check('khoá Google hiện trong Cài đặt → AI',await p.evaluate(()=>{const r=document.querySelector('.keyrow[data-k="gcKey"] .kval');return !!r&&/AIza/.test(r.textContent);}));
+  // mở app khi đang chọn giọng KorvaTTS: không lỗi khởi động
+  {const n0=errs.length;await p.evaluate(()=>{S.viEng='korva';S.viVoice='bao_kim';save();});await p.reload();await p.waitForTimeout(4000);check('mở app khi đang chọn giọng Korva',errs.length===n0,errs.slice(n0).join(' | '));}
   check('không có lỗi JS',errs.length===0,errs.join(' | '));
   console.log('✓ '+ok.length+' bước đạt');if(fails.length){console.log('✗ '+fails.length+' bước LỖI:\n  '+fails.join('\n  '));}
   await b.close();process.exit(fails.length?1:0);})();
