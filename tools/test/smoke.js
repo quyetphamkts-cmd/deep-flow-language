@@ -31,6 +31,13 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
     await tapSel('[data-vpa="gckey"]');await p.waitForTimeout(400);const t=await onTop('#askIn');check('ô nhập khoá hiện trên cùng',t===true,t);
     if(t===true){await p.fill('#askIn','AIzaTEST');await tapSel('#askOk');await p.waitForTimeout(1000);
       check('lưu khoá + hiện giọng Google',await p.evaluate(()=>S.gcKey==='AIzaTEST'&&document.querySelector('#sheetBox').innerText.includes('Aoede')));
+      // cuộn xuống rồi chạm 1 giọng ở dưới → danh sách phải giữ nguyên chỗ, không nhảy lên đầu
+      await p.evaluate(()=>{const sc=document.querySelector('#sheetBox .vpScroll');if(sc)sc.scrollTop=sc.scrollHeight;});await p.waitForTimeout(200);
+      const top0=await p.evaluate(()=>{const sc=document.querySelector('#sheetBox .vpScroll');return sc?sc.scrollTop:-1;});
+      const lastV=await p.evaluate(()=>{const r=[...document.querySelectorAll('#sheetBox [data-vp^="kv:"]')].pop();return r?r.dataset.vp:null;});
+      if(lastV){await p.tap('[data-vp="'+lastV+'"]',{timeout:5000}).catch(()=>{});await p.waitForTimeout(700);const top1=await p.evaluate(()=>{const sc=document.querySelector('#sheetBox .vpScroll');return sc?sc.scrollTop:-1;});
+        check('chạm nghe thử: danh sách giữ nguyên chỗ',top0>0&&Math.abs(top1-top0)<5,'trước '+top0+' sau '+top1);
+        await p.evaluate(()=>{document.querySelector('#mAsk').classList.remove('on');});}
       await tapSel('[data-vp="gc:vi-VN-Chirp3-HD-Aoede"]');await p.waitForTimeout(800);check('chạm giọng: chọn + bảng vẫn mở',await p.evaluate(()=>S.gcVoice==='vi-VN-Chirp3-HD-Aoede'&&document.querySelector('#mSheet').classList.contains('on')));}
     await p.evaluate(()=>closeModals());}
   // mọi hộp hỏi phải nằm trên bảng đang mở
