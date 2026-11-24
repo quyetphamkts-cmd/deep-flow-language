@@ -86,8 +86,13 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
     const r=await p.evaluate(()=>({ask:document.querySelector('#mAsk').classList.contains('on'),open:document.querySelector('#mSheet').classList.contains('on'),dl:!!document.querySelector('[data-vpa="kvdl"]'),pv:!!document.querySelector('[data-vp="kv:gia_bao"].pv')}));
     check('Korva (chưa tải): chạm → nghe mẫu tại chỗ, không hỏi, có nút tải',!r.ask&&r.open&&r.dl&&r.pv,JSON.stringify(r));}
   await p.evaluate(()=>{closeModals();delete window.dfKorva;S.viEng='gcloud';});
+  // giọng đã chọn được giữ: nghe thử giọng điện thoại rồi chọn ngay giọng khác → không bị trả về giọng cũ; mở lại app vẫn đúng giọng
+  {await p.evaluate(()=>{S.viEng='sys';save();window.dfTTS={speak:()=>new Promise(r=>setTimeout(r,1500)),stop:async()=>{}};setTimeout(()=>viPickAll(),0);});await p.waitForTimeout(800);
+   await p.tap('[data-vp="sys"]').catch(()=>{});await p.waitForTimeout(200);await p.locator('[data-vp="gc:vi-VN-Chirp3-HD-Charon"]').scrollIntoViewIfNeeded().catch(()=>{});await p.tap('[data-vp="gc:vi-VN-Chirp3-HD-Charon"]').catch(()=>{});await p.waitForTimeout(2500);
+   const a=await p.evaluate(()=>S.viEng+':'+S.gcVoice);await p.evaluate(()=>{closeModals();delete window.dfTTS;});
+   check('chọn giọng sau khi nghe thử giọng máy: giữ đúng giọng mới',a==='gcloud:vi-VN-Chirp3-HD-Charon',a);}
   // khoá API còn nguyên sau khi mở lại app / cập nhật, kể cả khi cài đặt bị ghi đè
-  await p.reload();await p.waitForTimeout(4000);check('khoá Google còn sau khi mở lại app',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
+  await p.reload();await p.waitForTimeout(4000);check('khoá Google còn sau khi mở lại app',await p.evaluate(()=>S.gcKey==='AIzaTEST'));check('giọng đã chọn còn sau khi mở lại app',await p.evaluate(()=>S.viEng==='gcloud'&&S.gcVoice==='vi-VN-Chirp3-HD-Charon'));
   await p.evaluate(()=>{const o=JSON.parse(localStorage.getItem('engamp'));delete o.gcKey;localStorage.setItem('engamp',JSON.stringify(o));});await p.reload();await p.waitForTimeout(4000);
   check('khoá Google còn khi cài đặt bị ghi đè',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
   check('khoá Google hiện trong Cài đặt → AI',await p.evaluate(()=>{const r=document.querySelector('.keyrow[data-k="gcKey"] .kval');return !!r&&/AIza/.test(r.textContent);}));
