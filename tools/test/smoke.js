@@ -12,6 +12,10 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
     if(u.includes('texttospeech.googleapis.com/v1/voices'))return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({voices:[{name:'vi-VN-Chirp3-HD-Aoede',ssmlGender:'FEMALE'},{name:'vi-VN-Chirp3-HD-Charon',ssmlGender:'MALE'}]})});
     if(u.includes('text:synthesize'))return new Promise(res=>setTimeout(()=>res(r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({audioContent:wavS.toString('base64')})})),400));
     if(u.includes('media.test'))return r.fulfill({status:200,contentType:'audio/wav',body:wav});
+    if(u.includes('generativelanguage.googleapis.com')&&r.request().method()==='POST'){let body={};try{body=JSON.parse(r.request().postData()||'{}');}catch(e){}const pr=((body.contents||[])[0]||{}).parts?.[0]?.text||'';
+      let out='{}';const m=pr.split('Văn bản:\n')[1];if(m){const segs=m.trim().match(/[^.?!]+[.?!]?/g).map(x=>x.trim()).filter(Boolean);out=JSON.stringify({s:segs});}
+      else if(/Dịch|dịch|translate/i.test(pr)){const L=(pr.match(/\[[\s\S]*\]/)||['[]'])[0];let arr=[];try{arr=JSON.parse(L);}catch(e){}out=JSON.stringify(arr.map(x=>'VI: '+x));}
+      return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({candidates:[{content:{parts:[{text:out}]}}]})});}
     if(u.includes('api.github.com')&&u.includes('korva'))return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({assets:['gia_bao','khanh_vy','bao_kim'].map(v=>({name:'sample_'+v+'.mp3',browser_download_url:'https://media.test/s_'+v+'.wav',size:1000}))})});
     return r.abort();});
   // phần tử ở giữa có thật sự hiện trên cùng (không bị bảng khác che)?
@@ -91,6 +95,14 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
   {const r=await p.evaluate(async()=>{setRate(1.25);let sent=null;const f0=window.fetch;window.fetch=function(u,o){if(String(u).includes('text:synthesize'))sent=JSON.parse(o.body).audioConfig.speakingRate;return f0.apply(this,arguments);};
      S.viEng='gcloud';GC.off=0;try{await gcBytes('Câu kiểm tra tốc độ '+Date.now(),undefined);}catch(e){}window.fetch=f0;setRate(1);return {sent,korva:kvOpt('x').speed};});
    check('giọng Việt đọc theo tốc độ trình phát (1.25×)',r.sent===1.25,JSON.stringify(r));}
+  // ✂️ phân đoạn tự nhiên: các mảnh bị cắt giữa câu được nối lại thành câu trọn vẹn, thời gian vẫn khớp
+  {const r=await p.evaluate(async()=>{S.gemKey='AIzaTESTGEMINI00000000000000000000000';S.autoTr=false;
+      const frag=['Hello everyone and','welcome to the lesson. Today we','will learn about','bad choices. Why do people','make the same mistakes','again and again? Let us','find out together.'];
+      const srt=frag.map((x,k)=>`${k+1}\n00:00:${String(k*2).padStart(2,'0')},000 --> 00:00:${String(k*2+1).padStart(2,'0')},900\n${x}\n`).join('\n');
+      const t={id:'ns1',name:'NS test',album:'NS',size:0,loc:true,subs:{main:srt},added:Date.now(),lg:effLg()};await putMeta0(t);tracks.push(t);
+      const ok=await natSeg(t);const C=buildCuesFrom(t);return {ok,n:C.length,first:C[0]&&C[0].en,firstS:C[0]&&C[0].s,lastE:C[C.length-1]&&C[C.length-1].e,how:t.natSeg,orig:!!t.subs.mainOrig};});
+    check('phân đoạn tự nhiên: nối mảnh thành câu trọn vẹn',r.ok&&r.n===4&&r.first==='Hello everyone and welcome to the lesson.'&&Math.abs(r.firstS-0)<0.01&&Math.abs(r.lastE-13.9)<0.01&&r.how===2&&r.orig,JSON.stringify(r));
+    const u=await p.evaluate(async()=>{const t=tracks.find(x=>x.id==='ns1');await natSegUndo(t);return buildCuesFrom(t).length;});check('phân đoạn: quay về gốc',u===1,'còn '+u+' đoạn');}
   // mở app khi đang chọn giọng KorvaTTS: không lỗi khởi động
   {const n0=errs.length;await p.evaluate(()=>{S.viEng='korva';S.viVoice='bao_kim';save();});await p.reload();await p.waitForTimeout(4000);check('mở app khi đang chọn giọng Korva',errs.length===n0,errs.slice(n0).join(' | '));}
   check('không có lỗi JS',errs.length===0,errs.join(' | '));

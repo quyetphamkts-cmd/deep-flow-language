@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.26",
+  "ver": "1.0.5-beta.27",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.27",
+      "d": "24/11/2026",
+      "items": [
+        "✂️ Phân đoạn tự nhiên: AI đọc cả bài, chia lại phụ đề thành từng câu / cụm ý trọn vẹn (giữ nguyên chữ + thời gian khớp âm thanh), làm tự động cho mọi bài trước khi dịch; không có AI thì chia theo dấu câu; menu Phụ đề có Phân đoạn lại / Về phân đoạn gốc"
+      ]
+    },
     {
       "v": "1.0.5-beta.26",
       "d": "24/11/2026",
