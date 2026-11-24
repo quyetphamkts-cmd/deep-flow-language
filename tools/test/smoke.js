@@ -87,6 +87,10 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
   await p.evaluate(()=>{const o=JSON.parse(localStorage.getItem('engamp'));delete o.gcKey;localStorage.setItem('engamp',JSON.stringify(o));});await p.reload();await p.waitForTimeout(4000);
   check('khoá Google còn khi cài đặt bị ghi đè',await p.evaluate(()=>S.gcKey==='AIzaTEST'));
   check('khoá Google hiện trong Cài đặt → AI',await p.evaluate(()=>{const r=document.querySelector('.keyrow[data-k="gcKey"] .kval');return !!r&&/AIza/.test(r.textContent);}));
+  // tốc độ giọng Việt theo tốc độ trình phát; menu Phụ đề không còn mục tốc độ riêng
+  {const r=await p.evaluate(async()=>{setRate(1.25);let sent=null;const f0=window.fetch;window.fetch=function(u,o){if(String(u).includes('text:synthesize'))sent=JSON.parse(o.body).audioConfig.speakingRate;return f0.apply(this,arguments);};
+     S.viEng='gcloud';GC.off=0;try{await gcBytes('Câu kiểm tra tốc độ '+Date.now(),undefined);}catch(e){}window.fetch=f0;setRate(1);return {sent,korva:kvOpt('x').speed};});
+   check('giọng Việt đọc theo tốc độ trình phát (1.25×)',r.sent===1.25,JSON.stringify(r));}
   // mở app khi đang chọn giọng KorvaTTS: không lỗi khởi động
   {const n0=errs.length;await p.evaluate(()=>{S.viEng='korva';S.viVoice='bao_kim';save();});await p.reload();await p.waitForTimeout(4000);check('mở app khi đang chọn giọng Korva',errs.length===n0,errs.slice(n0).join(' | '));}
   check('không có lỗi JS',errs.length===0,errs.join(' | '));
