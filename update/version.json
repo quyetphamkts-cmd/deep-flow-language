@@ -1,6 +1,6 @@
 {
   "web": "1.0.5",
-  "ver": "1.0.5-beta.17",
+  "ver": "1.0.5-beta.18",
   "notes": "Lịch ôn hiển thị đầy đủ đường dẫn khóa học và thư mục bài học",
   "minNative": 1,
   "url": "https://raw.githubusercontent.com/quyetphamkts-cmd/deep-flow-language/main/www/index.html",
@@ -11,6 +11,13 @@
     "url": "https://github.com/quyetphamkts-cmd/deep-flow-language/releases/latest/download/DeepFlowLanguage.apk"
   },
   "changelog": [
+    {
+      "v": "1.0.5-beta.18",
+      "d": "24/11/2026",
+      "items": [
+        "Giọng Google AI (Google Cloud Text-to-Speech · Chirp 3 HD tiếng Việt): chọn trong Giọng đọc tiếng Việt; mỗi câu gửi Google 1 lần rồi lưu trên máy; đọc trước câu sắp tới; dùng cho nghe song ngữ, đọc nghĩa từ, lời giải, xuất MP3; lỗi thì tự về giọng điện thoại"
+      ]
+    },
     {
       "v": "1.0.5-beta.17",
       "d": "24/11/2026",
