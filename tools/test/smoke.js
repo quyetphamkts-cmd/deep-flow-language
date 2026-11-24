@@ -6,10 +6,11 @@ const URL0=process.argv[2];if(!URL0){console.error('thiếu URL');process.exit(2
 const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(cond?'':' → '+(info||'')));};
 (async()=>{const b=await chromium.launch();const ctx=await b.newContext({...devices['Pixel 7']});const p=await ctx.newPage();const errs=[];
   p.on('pageerror',e=>errs.push(e.message));
-  const wav=Buffer.alloc(44+32000*4);wav.write('RIFF',0);wav.writeUInt32LE(36+32000*4,4);wav.write('WAVEfmt ',8);wav.writeUInt32LE(16,16);wav.writeUInt16LE(1,20);wav.writeUInt16LE(1,22);wav.writeUInt32LE(16000,24);wav.writeUInt32LE(32000,28);wav.writeUInt16LE(2,32);wav.writeUInt16LE(16,34);wav.write('data',36);wav.writeUInt32LE(32000*4,40);
+  const wav=Buffer.alloc(44+32000*4);/* 4 giây im lặng */wav.write('RIFF',0);wav.writeUInt32LE(36+32000*4,4);wav.write('WAVEfmt ',8);wav.writeUInt32LE(16,16);wav.writeUInt16LE(1,20);wav.writeUInt16LE(1,22);wav.writeUInt32LE(16000,24);wav.writeUInt32LE(32000,28);wav.writeUInt16LE(2,32);wav.writeUInt16LE(16,34);wav.write('data',36);wav.writeUInt32LE(32000*4,40);
+  const mkWav=sec=>{const n=Math.round(16000*sec)*2,w=Buffer.alloc(44+n);w.write('RIFF',0);w.writeUInt32LE(36+n,4);w.write('WAVEfmt ',8);w.writeUInt32LE(16,16);w.writeUInt16LE(1,20);w.writeUInt16LE(1,22);w.writeUInt32LE(16000,24);w.writeUInt32LE(32000,28);w.writeUInt16LE(2,32);w.writeUInt16LE(16,34);w.write('data',36);w.writeUInt32LE(n,40);for(let i=0;i<n/2;i++)w.writeInt16LE(Math.round(3000*Math.sin(i/8)),44+i*2);return w;};const wavS=mkWav(0.6);
   await ctx.route(/^https?:\/\/(?!127\.0\.0\.1)/,r=>{const u=r.request().url();
     if(u.includes('texttospeech.googleapis.com/v1/voices'))return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({voices:[{name:'vi-VN-Chirp3-HD-Aoede',ssmlGender:'FEMALE'},{name:'vi-VN-Chirp3-HD-Charon',ssmlGender:'MALE'}]})});
-    if(u.includes('text:synthesize'))return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({audioContent:wav.toString('base64')})});
+    if(u.includes('text:synthesize'))return new Promise(res=>setTimeout(()=>res(r.fulfill({status:200,contentType:'application/json',body:JSON.stringify({audioContent:wavS.toString('base64')})})),400));
     if(u.includes('media.test'))return r.fulfill({status:200,contentType:'audio/wav',body:wav});
     return r.abort();});
   // phần tử ở giữa có thật sự hiện trên cùng (không bị bảng khác che)?
@@ -51,6 +52,14 @@ const fails=[],ok=[];const check=(name,cond,info)=>{(cond?ok:fails).push(name+(c
   if(await p.locator('#miniWave').count()){const bb=await p.locator('#miniWave').boundingBox();if(bb){await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:bb.x+10,y:bb.y+bb.height/2}]});for(let k=1;k<=6;k++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:bb.x+10+k*bb.width/12,y:bb.y+bb.height/2}]});await p.waitForTimeout(20);}
     check('kéo tua hiện thời gian',await p.evaluate(()=>{const t=document.querySelector('#mwTip');return t&&t.style.display==='block';}));await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForTimeout(400);
     check('thả tay → tua tới giữa bài',await p.evaluate(()=>audio.currentTime>0.3));}}
+  // chỉ nghe bản dịch (giọng Google AI): các câu đọc liền nhau, không ngắt quãng
+  {const r=await p.evaluate(async()=>{const srt=[0,1,2,3,4].map(k=>`${k+1}\n00:00:0${k},000 --> 00:00:0${k},900\nSentence ${k}.\n`).join('\n');
+      const t={id:'vo1',name:'VO test',album:'VO',size:0,loc:true,subs:{main:srt},trans:Object.fromEntries([0,1,2,3,4].map(k=>['Sentence '+k+'.','Câu số '+k+'.'])),added:Date.now(),lg:effLg()};
+      await putMeta0(t);await putAudio('vo1',await getAudio(tracks[0].id));tracks.push(t);await loadTrack(t,false);audio.muted=true;
+      S.viEng='gcloud';S.gcKey='AIzaTEST';S.gcVoice='vi-VN-Chirp3-HD-Aoede';GC.off=0;window._voT=[];const A0=window.Audio;window.Audio=function(u){const a=new A0(u);a.muted=true;a.addEventListener('playing',()=>_voT.push(performance.now()));a.addEventListener('ended',()=>_voT.push(-performance.now()));return a;};
+      S.viOnly=true;voStart();await new Promise(r=>setTimeout(r,9000));voStop();window.Audio=A0;S.viOnly=false;
+      const st=_voT.filter(x=>x>0),en=_voT.filter(x=>x<0).map(x=>-x);const gaps=[];for(let k=0;k+1<st.length;k++)gaps.push(st[k+1]-en[k]);return {n:st.length,gaps};});
+    check('chỉ nghe bản dịch: đọc đủ các câu',r.n>=4,'mới đọc '+r.n+' câu');console.log('   khoảng nghỉ giữa câu: '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));check('chỉ nghe bản dịch: không ngắt quãng (khoảng nghỉ < 0,45 s)',r.gaps.length&&Math.max(...r.gaps)<450,'khoảng nghỉ '+r.gaps.map(x=>Math.round(x)+'ms').join(', '));}
   check('không có lỗi JS',errs.length===0,errs.join(' | '));
   console.log('✓ '+ok.length+' bước đạt');if(fails.length){console.log('✗ '+fails.length+' bước LỖI:\n  '+fails.join('\n  '));}
   await b.close();process.exit(fails.length?1:0);})();
